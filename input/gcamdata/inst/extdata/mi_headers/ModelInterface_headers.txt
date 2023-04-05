@@ -575,6 +575,7 @@ AgMkt, world/+{name}region, region/+{name}AgSupplySector, AgSupplySector/+market
 #####, POLICY
 
 PortfolioStd,world/+{name}region,region/+{name}policy-portfolio-standard, policy-portfolio-standard/+market, policy-portfolio-standard/+policyType, policy-portfolio-standard/+{year}constraint, policy-portfolio-standard/+constraint, policy-portfolio-standard/+price-unit, policy-portfolio-standard/+output-unit, scenario,scenario/world
+
 PortfolioStdConstraint,world/+{name}region,region/+{name}policy-portfolio-standard, policy-portfolio-standard/+market, policy-portfolio-standard/+policyType, policy-portfolio-standard/+{year}constraint, policy-portfolio-standard/+constraint,  scenario,scenario/world
 
 PortfolioStdMinPrice,world/+{name}region,region/+{name}policy-portfolio-standard, policy-portfolio-standard/+{year=1975;fillout=1}min-price, scenario,scenario/world
@@ -590,6 +591,12 @@ GHGConstrLink, world/+{name}region, region/+{name}linked-ghg-policy, linked-ghg-
 GHGConstrLinkAdj, world/+{name}region, region/+{name}linked-ghg-policy, linked-ghg-policy/+{year;fillout=1}price-adjust, linked-ghg-policy/+price-adjust, linked-ghg-policy/+{year;fillout=1}demand-adjust, linked-ghg-policy/+demand-adjust, scenario, scenario/world, world/region
 
 GHGConstrLinkMkt, world/+{name}region, region/+{name}linked-ghg-policy, linked-ghg-policy/+market, linked-ghg-policy/+linked-policy, scenario, scenario, scenario/world, world/region
+
+PortfolioStdConstraint,world/+{name}region,region/+{name}policy-portfolio-standard, policy-portfolio-standard/+market, policy-portfolio-standard/+policyType, policy-portfolio-standard/+{year}constraint, policy-portfolio-standard/+constraint,  scenario,scenario/world
+
+AfforestConstraintUnmgd, world/+{name}region, region/+{name}LandAllocatorRoot, LandAllocatorRoot/+{name}LandNode1, LandNode1/+{name}LandNode2, LandNode2/+{name}LandNode3, LandNode3/+{name}UnmanagedLandLeaf, UnmanagedLandLeaf/+land-constraint-policy, scenario, scenario/world
+
+AfforestConstraintMgd, world/+{name}region, region/+{name}LandAllocatorRoot, LandAllocatorRoot/+{name}LandNode1, LandNode1/+{name}LandNode2, LandNode2/+{name}LandNode3, LandNode3/+{name}LandLeaf, LandLeaf/+land-constraint-policy, scenario, scenario/world
 
 #####, LAND ALLOCATOR
 

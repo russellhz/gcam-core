@@ -1,0 +1,25 @@
+# File: A_Affor_Constraints.csv
+# Title: Afforestation floors by country
+# Units: Thous km2
+# Comments: Some regions include multiple countries, so we set filter to remove any LandNodes that aren't included in another country's policy
+# Column types: ccinc
+# ----------
+region,policy.portfolio.standard,year,constraint,LandNode1_filters
+Australia_NZ,afforestation,2020,128.55209,NewZealand
+Australia_NZ,afforestation,2025,128.55209,NewZealand
+Australia_NZ,afforestation,2030,128.55209,NewZealand
+Brazil,afforestation,2020,3076.773594,
+Brazil,afforestation,2025,3156.773594,
+Brazil,afforestation,2030,3156.773594,
+China,afforestation,2020,1481.348581,IndusR;Tibet;AmuDaryaR
+China,afforestation,2025,1574.279969,IndusR;Tibet;AmuDaryaR
+China,afforestation,2030,1667.211358,IndusR;Tibet;AmuDaryaR
+Colombia,afforestation,2020,465.073634,
+Colombia,afforestation,2025,465.073634,
+Colombia,afforestation,2030,465.073634,
+India,afforestation,2020,264.0865448,
+India,afforestation,2025,284.0865448,
+India,afforestation,2030,304.0865448,
+Mexico,afforestation,2020,65.06493204,
+Mexico,afforestation,2025,65.06493204,
+Mexico,afforestation,2030,65.06493204,
