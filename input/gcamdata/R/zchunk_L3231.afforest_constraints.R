@@ -1,6 +1,6 @@
 # Copyright 2019 Battelle Memorial Institute; see the LICENSE file.
 
-#' module_aglu_L3231.afforest_constraints
+#' module_policy_L3231.afforest_constraints
 #'
 #' Produce afforestation constraints for specified countries and years
 #'
@@ -13,9 +13,9 @@
 #' @importFrom assertthat assert_that
 #' @importFrom dplyr bind_rows distinct filter if_else left_join mutate select
 #' @author RLH April 20123
-module_aglu_L3231.afforest_constraints <- function(command, ...) {
+module_policy_L3231.afforest_constraints <- function(command, ...) {
   if(command == driver.DECLARE_INPUTS) {
-    return(c(FILE = "aglu/A_Affor_Constraints",
+    return(c(FILE = "policy/A_Affor_Constraints",
              "L2231.LN3_MgdAllocation_noncrop",
              "L2231.LN3_UnmgdAllocation"))
   } else if(command == driver.DECLARE_OUTPUTS) {
@@ -27,7 +27,7 @@ module_aglu_L3231.afforest_constraints <- function(command, ...) {
     all_data <- list(...)[[1]]
     
     # Load required inputs
-    A_Affor_Constraints <- get_data(all_data, "aglu/A_Affor_Constraints")
+    A_Affor_Constraints <- get_data(all_data, "policy/A_Affor_Constraints")
     L2231.LN3_MgdAllocation_noncrop <- get_data(all_data, "L2231.LN3_MgdAllocation_noncrop")
     L2231.LN3_UnmgdAllocation <- get_data(all_data, "L2231.LN3_UnmgdAllocation")
     
@@ -66,7 +66,7 @@ module_aglu_L3231.afforest_constraints <- function(command, ...) {
       select(-LandNode1_filters) %>% 
       add_title("Afforestation constraints by region/year", overwrite = T) %>%
       add_units("thous km2") %>%
-      add_precursors("aglu/A_Affor_Constraints") ->
+      add_precursors("policy/A_Affor_Constraints") ->
       L3231.affor_constraint
     
     L3231.affor_mngd_nodes %>%
@@ -74,7 +74,7 @@ module_aglu_L3231.afforest_constraints <- function(command, ...) {
       add_units("NA") %>%
       add_comments("Removed any nodes listed as nodes_to_remove in INPUT_FILE_TBD") %>%
       add_precursors("L2231.LN3_MgdAllocation_noncrop",
-                     "aglu/A_Affor_Constraints")  ->
+                     "policy/A_Affor_Constraints")  ->
       L3231.affor_mngd_nodes
     
     L3231.affor_unmngd_nodes %>%
@@ -82,7 +82,7 @@ module_aglu_L3231.afforest_constraints <- function(command, ...) {
       add_units("NA") %>%
       add_comments("Removed any nodes listed as nodes_to_remove in INPUT_FILE_TBD") %>%
       add_precursors("L2231.LN3_UnmgdAllocation",
-                     "aglu/A_Affor_Constraints")  ->
+                     "policy/A_Affor_Constraints")  ->
       L3231.affor_unmngd_nodes
  
     return_data(L3231.affor_mngd_nodes, L3231.affor_unmngd_nodes, L3231.affor_constraint)
