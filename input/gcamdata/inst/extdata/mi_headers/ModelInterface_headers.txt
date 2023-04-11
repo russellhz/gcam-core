@@ -598,6 +598,8 @@ AfforestConstraintUnmgd, world/+{name}region, region/+{name}LandAllocatorRoot, L
 
 AfforestConstraintMgd, world/+{name}region, region/+{name}LandAllocatorRoot, LandAllocatorRoot/+{name}LandNode1, LandNode1/+{name}LandNode2, LandNode2/+{name}LandNode3, LandNode3/+{name}LandLeaf, LandLeaf/+land-constraint-policy, scenario, scenario/world
 
+TechResSecOut, world/+{name}region, region/+{name}supplysector, supplysector/+{name}subsector, subsector/+{name}technology, technology/+{year}period, period/+{name}res-secondary-output, res-secondary-output/+output-ratio, scenario, scenario/world
+
 #####, LAND ALLOCATOR
 
 
