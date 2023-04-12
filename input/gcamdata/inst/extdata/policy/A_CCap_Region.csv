@@ -1,0 +1,9 @@
+# File: A_CCap_Region.csv
+# Title: Mappings between regions and market
+# Units: NA
+# Column types: ccc
+# ----------
+region,market,ghgpolicy
+EU-12,EU_ETS,CO2_ETS
+EU-15,EU_ETS,CO2_ETS
+South Korea,South Korea,CO2

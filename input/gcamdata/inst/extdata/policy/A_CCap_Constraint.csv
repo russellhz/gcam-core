@@ -1,0 +1,8 @@
+# File: A_CCap_Constraint.csv
+# Title: Carbon caps for specific industries
+# Units: MTC
+# Column types: ccnnni
+# ----------
+market,ghgpolicy,2020,2025,2030,year.fillout
+EU_ETS,CO2_ETS,533.2535324,396.6073147,259.961097,2030
+South Korea,CO2,182.22,174,,2025

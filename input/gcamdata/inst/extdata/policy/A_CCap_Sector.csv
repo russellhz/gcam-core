@@ -1,0 +1,27 @@
+# File: A_CCap_Sector.csv
+# Title: Mappings between CO2 market and sectors
+# Units: NA
+# Column types: cccc
+# ----------
+market,ghgpolicy,supplysector,tranSubsector
+EU_ETS,CO2_ETS,other industrial energy use,
+EU_ETS,CO2_ETS,other industrial feedstocks,
+EU_ETS,CO2_ETS,cement,
+EU_ETS,CO2_ETS,process heat cement,
+EU_ETS,CO2_ETS,N fertilizer,
+EU_ETS,CO2_ETS,chemical energy use,
+EU_ETS,CO2_ETS,chemical feedstocks,
+EU_ETS,CO2_ETS,alumina,
+EU_ETS,CO2_ETS,mining energy use,
+EU_ETS,CO2_ETS,iron and steel,
+EU_ETS,CO2_ETS,refining,
+EU_ETS,CO2_ETS,gas processing,
+EU_ETS,CO2_ETS,district heat,
+EU_ETS,CO2_ETS,trn_pass,Domestic Aviation
+EU_ETS,CO2_ETS,backup_electricity,
+EU_ETS,CO2_ETS,elec_coal (IGCC),
+EU_ETS,CO2_ETS,elec_coal (conv pul),
+EU_ETS,CO2_ETS,elec_refined liquids (CC),
+EU_ETS,CO2_ETS,elec_refined liquids (steam/CT),
+EU_ETS,CO2_ETS,elec_gas (CC),
+EU_ETS,CO2_ETS,elec_gas (steam/CT),

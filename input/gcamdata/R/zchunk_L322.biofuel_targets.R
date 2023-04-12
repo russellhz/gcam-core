@@ -12,7 +12,7 @@
 #' the generated outputs: \code{L322.biofuel_targets}
 #' @importFrom assertthat assert_that
 #' @importFrom dplyr bind_rows distinct filter if_else left_join mutate select
-#' @author RLH April 20123
+#' @author RLH April 2023
 module_policy_L322.biofuel_targets <- function(command, ...) {
   if(command == driver.DECLARE_INPUTS) {
     return(c(FILE = "policy/A_Biofuel_Targets",
