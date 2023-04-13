@@ -606,6 +606,8 @@ StubTechCO2, world/+{name}region, region/+{name}supplysector, supplysector/+{nam
 
 StubTranTechCO2, world/+{name}region, region/+{name}supplysector, supplysector/+{name}tranSubsector, tranSubsector/+{name}technology, technology/+{year}period, period/+{name}CO2, scenario, scenario/world
 
+ResTechCO2, world/+{name}region, region/+{name}resource, resource/+{name}reserve-subresource, reserve-subresource/+{name}resource-reserve-technology, resource-reserve-technology/+{year}period, period/+{name}CO2, scenario, scenario/world
+
 #####, LAND ALLOCATOR
 
 

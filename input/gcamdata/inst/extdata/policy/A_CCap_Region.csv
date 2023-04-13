@@ -7,3 +7,7 @@ region,market,ghgpolicy
 EU-12,EU_ETS,CO2_ETS
 EU-15,EU_ETS,CO2_ETS
 South Korea,South Korea,CO2
+South Korea,South Korea,CO2_building
+Canada,Canada,CO2_building
+China,China,CO2_industry
+Russia,Russia,CO2_4W

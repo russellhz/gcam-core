@@ -459,6 +459,8 @@ generate_level2_data_names <- function() {
   level2_data_names[["TechResSecOut"]] <- c(level2_data_names[["TechYr"]], "res.secondary.output", "output.ratio")
   level2_data_names[["StubTechCO2"]] <- c("region", "supplysector", "subsector", "stub.technology", "year", "CO2")
   level2_data_names[["StubTranTechCO2"]] <- c("region", "supplysector", "tranSubsector", "stub.technology", "year", "CO2")
+  level2_data_names[["ResTechCO2"]] <- c("region", "resource", "reserve.subresource", "resource.reserve.technology", "year", "CO2")
+
   level2_data_names
 }
 

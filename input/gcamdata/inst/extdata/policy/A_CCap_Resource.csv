@@ -1,0 +1,7 @@
+# File: A_CCap_Resource.csv
+# Title: Mappings between CO2 market and resource production
+# Units: NA
+# Column types: cccc
+# ----------
+market,ghgpolicy,resource,reserve.subresource
+China,CO2_industry,crude oil,unconventional oil
