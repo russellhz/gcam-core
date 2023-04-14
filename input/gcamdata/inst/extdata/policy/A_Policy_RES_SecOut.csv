@@ -1,0 +1,107 @@
+# File: A_Policy_RES_SecOut.csv
+# Title: Policy targets secondary outputs
+# Units: NA
+# Column types: cccccccc
+# ----------
+region,supplysector,subsector,technology,2015,2020,2025,2100
+Argentina,refining,biomass liquids,cellulosic ethanol,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+Argentina,refining,biomass liquids,cellulosic ethanol CCS level 1,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+Argentina,refining,biomass liquids,cellulosic ethanol CCS level 2,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+Argentina,refining,biomass liquids,FT biofuels,biodiesel-target,biodiesel-target,biodiesel-target,biodiesel-target
+Argentina,refining,biomass liquids,FT biofuels CCS level 1,biodiesel-target,biodiesel-target,biodiesel-target,biodiesel-target
+Argentina,refining,biomass liquids,FT biofuels CCS level 2,biodiesel-target,biodiesel-target,biodiesel-target,biodiesel-target
+Argentina,refining,biomass liquids,corn ethanol,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+Argentina,refining,biomass liquids,biodiesel,biodiesel-target,biodiesel-target,biodiesel-target,biodiesel-target
+Argentina,refining,biomass liquids,BTL with hydrogen,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+Brazil,refining,biomass liquids,cellulosic ethanol,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+Brazil,refining,biomass liquids,cellulosic ethanol CCS level 1,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+Brazil,refining,biomass liquids,cellulosic ethanol CCS level 2,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+Brazil,refining,biomass liquids,FT biofuels,biodiesel-target,biodiesel-target,biodiesel-target,biodiesel-target
+Brazil,refining,biomass liquids,FT biofuels CCS level 1,biodiesel-target,biodiesel-target,biodiesel-target,biodiesel-target
+Brazil,refining,biomass liquids,FT biofuels CCS level 2,biodiesel-target,biodiesel-target,biodiesel-target,biodiesel-target
+Brazil,refining,biomass liquids,sugar cane ethanol,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+Brazil,refining,biomass liquids,biodiesel,biodiesel-target,biodiesel-target,biodiesel-target,biodiesel-target
+Brazil,refining,biomass liquids,BTL with hydrogen,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+Canada,refining,biomass liquids,cellulosic ethanol,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+Canada,refining,biomass liquids,cellulosic ethanol CCS level 1,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+Canada,refining,biomass liquids,cellulosic ethanol CCS level 2,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+Canada,refining,biomass liquids,FT biofuels,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+Canada,refining,biomass liquids,FT biofuels CCS level 1,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+Canada,refining,biomass liquids,FT biofuels CCS level 2,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+Canada,refining,biomass liquids,corn ethanol,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+Canada,refining,biomass liquids,biodiesel,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+Canada,refining,biomass liquids,BTL with hydrogen,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+China,refining,biomass liquids,cellulosic ethanol,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+China,refining,biomass liquids,cellulosic ethanol CCS level 1,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+China,refining,biomass liquids,cellulosic ethanol CCS level 2,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+China,refining,biomass liquids,FT biofuels,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+China,refining,biomass liquids,FT biofuels CCS level 1,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+China,refining,biomass liquids,FT biofuels CCS level 2,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+China,refining,biomass liquids,corn ethanol,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+China,refining,biomass liquids,biodiesel,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+China,refining,biomass liquids,BTL with hydrogen,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+EU-12,refining,biomass liquids,cellulosic ethanol,biofuel-target,biofuel-target,adv-biofuel-target,adv-biofuel-target
+EU-12,refining,biomass liquids,cellulosic ethanol CCS level 1,biofuel-target,biofuel-target,adv-biofuel-target,adv-biofuel-target
+EU-12,refining,biomass liquids,cellulosic ethanol CCS level 2,biofuel-target,biofuel-target,adv-biofuel-target,adv-biofuel-target
+EU-12,refining,biomass liquids,FT biofuels,biofuel-target,biofuel-target,adv-biofuel-target,adv-biofuel-target
+EU-12,refining,biomass liquids,FT biofuels CCS level 1,biofuel-target,biofuel-target,adv-biofuel-target,adv-biofuel-target
+EU-12,refining,biomass liquids,FT biofuels CCS level 2,biofuel-target,biofuel-target,adv-biofuel-target,adv-biofuel-target
+EU-12,refining,biomass liquids,corn ethanol,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+EU-12,refining,biomass liquids,biodiesel,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+EU-12,refining,biomass liquids,BTL with hydrogen,biofuel-target,biofuel-target,adv-biofuel-target,adv-biofuel-target
+EU-12,refining,biomass liquids,sugar cane ethanol,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+EU-15,refining,biomass liquids,cellulosic ethanol,biofuel-target,biofuel-target,adv-biofuel-target,adv-biofuel-target
+EU-15,refining,biomass liquids,cellulosic ethanol CCS level 1,biofuel-target,biofuel-target,adv-biofuel-target,adv-biofuel-target
+EU-15,refining,biomass liquids,cellulosic ethanol CCS level 2,biofuel-target,biofuel-target,adv-biofuel-target,adv-biofuel-target
+EU-15,refining,biomass liquids,FT biofuels,biofuel-target,biofuel-target,adv-biofuel-target,adv-biofuel-target
+EU-15,refining,biomass liquids,FT biofuels CCS level 1,biofuel-target,biofuel-target,adv-biofuel-target,adv-biofuel-target
+EU-15,refining,biomass liquids,FT biofuels CCS level 2,biofuel-target,biofuel-target,adv-biofuel-target,adv-biofuel-target
+EU-15,refining,biomass liquids,corn ethanol,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+EU-15,refining,biomass liquids,biodiesel,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+EU-15,refining,biomass liquids,BTL with hydrogen,biofuel-target,biofuel-target,adv-biofuel-target,adv-biofuel-target
+EU-15,refining,biomass liquids,sugar cane ethanol,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+Indonesia,refining,biomass liquids,cellulosic ethanol,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+Indonesia,refining,biomass liquids,cellulosic ethanol CCS level 1,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+Indonesia,refining,biomass liquids,cellulosic ethanol CCS level 2,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+Indonesia,refining,biomass liquids,FT biofuels,biodiesel-target,biodiesel-target,biodiesel-target,biodiesel-target
+Indonesia,refining,biomass liquids,FT biofuels CCS level 1,biodiesel-target,biodiesel-target,biodiesel-target,biodiesel-target
+Indonesia,refining,biomass liquids,FT biofuels CCS level 2,biodiesel-target,biodiesel-target,biodiesel-target,biodiesel-target
+Indonesia,refining,biomass liquids,sugar cane ethanol,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+Indonesia,refining,biomass liquids,biodiesel,biodiesel-target,biodiesel-target,biodiesel-target,biodiesel-target
+Indonesia,refining,biomass liquids,BTL with hydrogen,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+India,refining,biomass liquids,cellulosic ethanol,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+India,refining,biomass liquids,cellulosic ethanol CCS level 1,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+India,refining,biomass liquids,cellulosic ethanol CCS level 2,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+India,refining,biomass liquids,FT biofuels,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+India,refining,biomass liquids,FT biofuels CCS level 1,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+India,refining,biomass liquids,FT biofuels CCS level 2,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+India,refining,biomass liquids,corn ethanol,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+India,refining,biomass liquids,biodiesel,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+India,refining,biomass liquids,BTL with hydrogen,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+South Korea,refining,biomass liquids,cellulosic ethanol,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+South Korea,refining,biomass liquids,cellulosic ethanol CCS level 1,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+South Korea,refining,biomass liquids,cellulosic ethanol CCS level 2,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+South Korea,refining,biomass liquids,FT biofuels,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+South Korea,refining,biomass liquids,FT biofuels CCS level 1,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+South Korea,refining,biomass liquids,FT biofuels CCS level 2,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+South Korea,refining,biomass liquids,corn ethanol,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+South Korea,refining,biomass liquids,biodiesel,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+South Korea,refining,biomass liquids,BTL with hydrogen,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+South Africa,refining,biomass liquids,cellulosic ethanol,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+South Africa,refining,biomass liquids,cellulosic ethanol CCS level 1,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+South Africa,refining,biomass liquids,cellulosic ethanol CCS level 2,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+South Africa,refining,biomass liquids,FT biofuels,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+South Africa,refining,biomass liquids,FT biofuels CCS level 1,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+South Africa,refining,biomass liquids,FT biofuels CCS level 2,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+South Africa,refining,biomass liquids,corn ethanol,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+South Africa,refining,biomass liquids,biodiesel,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+South Africa,refining,biomass liquids,BTL with hydrogen,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+USA,refining,biomass liquids,cellulosic ethanol,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+USA,refining,biomass liquids,cellulosic ethanol CCS level 1,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+USA,refining,biomass liquids,cellulosic ethanol CCS level 2,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+USA,refining,biomass liquids,FT biofuels,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+USA,refining,biomass liquids,FT biofuels CCS level 1,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+USA,refining,biomass liquids,FT biofuels CCS level 2,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+USA,refining,biomass liquids,corn ethanol,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+USA,refining,biomass liquids,biodiesel,biofuel-target,biofuel-target,biofuel-target,biofuel-target
+USA,refining,biomass liquids,BTL with hydrogen,biofuel-target,biofuel-target,biofuel-target,biofuel-target

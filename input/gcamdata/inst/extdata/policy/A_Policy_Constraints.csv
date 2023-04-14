@@ -1,0 +1,9 @@
+# File: A_Policy_Constraints.csv
+# Title: Policy floors/ceilings for tax/subsidy policies
+# Units: EJ (fe-constraint)
+# Column types: ccccnnnn
+# ----------
+region,market,policy.portfolio.standard,policyType,2020,2025,2030,2100
+EU-12,EU,fe-constraint,tax,49.62126404,45.6617665,41.70238039,41.70238039
+EU-15,EU,fe-constraint,tax,49.62126404,45.6617665,41.70238039,41.70238039
+Japan,Japan,fe-constraint,tax,,,13.1558332,13.1558332

@@ -1,0 +1,137 @@
+# Copyright 2019 Battelle Memorial Institute; see the LICENSE file.
+
+#' module_policy_L301.ceilings_floors
+#'
+#' Produce ceilings/floors and markets by region
+#'
+#'
+#' @param command API command to execute
+#' @param ... other optional parameters, depending on command
+#' @return Depends on \code{command}: either a vector of required inputs,
+#' a vector of output names, or (if \code{command} is "MAKE") all
+#' the generated outputs: \code{L301.policy_port_stnd}, \code{L301.policy_RES_coefs},
+#' \code{L301.RES_secout}, \code{L301.input_tax}
+#' @importFrom assertthat assert_that
+#' @importFrom dplyr bind_rows distinct filter if_else left_join mutate select
+#' @author RLH April 2023
+module_policy_L301.ceilings_floors <- function(command, ...) {
+  if(command == driver.DECLARE_INPUTS) {
+    return(c(FILE = "policy/A_Policy_Constraints",
+             FILE = "policy/A_Policy_Constraints_Techs",
+             FILE = "policy/A_Policy_RES_Coefs",
+             FILE = "policy/A_Policy_RES_SecOut"))
+  } else if(command == driver.DECLARE_OUTPUTS) {
+    return(c("L301.policy_port_stnd",
+             "L301.policy_RES_coefs",
+             "L301.RES_secout",
+             "L301.input_tax"))
+  } else if(command == driver.MAKE) {
+
+    all_data <- list(...)[[1]]
+
+    # Load required inputs
+    A_Policy_Constraints <- get_data(all_data, "policy/A_Policy_Constraints")
+    A_Policy_Constraints_Techs <- get_data(all_data, "policy/A_Policy_Constraints_Techs")
+    A_Policy_RES_Coefs <- get_data(all_data, "policy/A_Policy_RES_Coefs")
+    A_Policy_RES_SecOut <- get_data(all_data, "policy/A_Policy_RES_SecOut")
+
+    # 1. Extend targets to all desired years
+    # Filter out NA years and interpolate between non-NA years
+    L301.ceilings_floors_NA <- bind_rows(A_Policy_Constraints, A_Policy_RES_Coefs) %>%
+      gather_years(value_col = "constraint") %>%
+      filter(!is.na(constraint)) %>%
+      group_by(region, market, policy.portfolio.standard, policyType,
+               supplysector, subsector, technology) %>%
+      # Interpolates between min and max years for each region/policy combo
+      complete(nesting(region, market, policy.portfolio.standard, policyType,
+                       supplysector, subsector, technology),
+               year = seq(min(year), max(year), 5))
+
+    # Separate out groups with only 1 value since they get turned into NAs with approx_fun
+    L301.ceilings_floors_n1 <- L301.ceilings_floors_NA %>%
+      filter(dplyr::n() == 1) %>%
+      ungroup
+
+    L301.ceilings_floors <- L301.ceilings_floors_NA %>%
+      filter(dplyr::n() > 1)%>%
+      mutate(constraint = approx_fun(year, constraint)) %>%
+      ungroup %>%
+      bind_rows(L301.ceilings_floors_n1) %>%
+      arrange(region, policyType, year)
+
+    # 2. Create policy portfolio standard tables
+    L301.policy_port_stnd <- L301.ceilings_floors %>%
+      mutate(constraint = if_else(policyType == "RES",
+                                  1,
+                                  constraint)) %>%
+      select(LEVEL2_DATA_NAMES[["PortfolioStdConstraint"]])
+
+    # 3. Create RES coefficient tables
+    L301.policy_RES_coefs <- L301.ceilings_floors %>%
+      filter(policyType  == "RES") %>%
+      select(-market) %>%
+      rename(minicam.energy.input = policy.portfolio.standard,
+             coefficient = constraint)
+
+    # 4. Create secondary output tables - interpolate between years
+    L301.RES_secout <- A_Policy_RES_SecOut %>%
+      gather_years(value_col = "res.secondary.output") %>%
+      group_by(region, supplysector, subsector, technology) %>%
+      # Interpolates between min and max years for each region/output combo
+      complete(nesting(region, supplysector, subsector, technology),
+               year = seq(min(year), max(year), 5)) %>%
+      mutate(res.secondary.output =if_else(is.na(res.secondary.output),
+                                           res.secondary.output[year == max(year)],
+                                           res.secondary.output)) %>%
+      ungroup %>%
+      mutate(output.ratio = 1)
+
+    # 5. Create input tax tables - interpolate between years
+    L301.input_tax <- A_Policy_Constraints_Techs %>%
+      gather_years(value_col = "input.tax") %>%
+      group_by(region, supplysector, subsector, technology) %>%
+      # Interpolates between min and max years for each region/output combo
+      complete(nesting(region, supplysector, subsector, technology),
+               year = seq(min(year), max(year), 5)) %>%
+      mutate(input.tax = if_else(is.na(input.tax),
+                                input.tax[year == max(year)],
+                                input.tax)) %>%
+      ungroup
+
+
+    # Produce outputs
+    L301.policy_port_stnd %>%
+      add_title("Policy names and constraints", overwrite = T) %>%
+      add_units("EJ (for taxes) or NA (for RES)") %>%
+      add_precursors("policy/A_Policy_Constraints",
+                     "policy/A_Policy_RES_Coefs") ->
+      L301.policy_port_stnd
+
+    L301.policy_RES_coefs %>%
+      add_title("Coefficients for RES markets", overwrite = T) %>%
+      add_units("Proportion of supplysector/subsector/technology") %>%
+      add_precursors("policy/A_Policy_Constraints",
+                     "policy/A_Policy_RES_Coefs") ->
+      L301.policy_RES_coefs
+
+    L301.RES_secout %>%
+      add_title("Secondary output for RES markets", overwrite = T) %>%
+      add_units("NA") %>%
+      add_precursors("policy/A_Policy_RES_SecOut") ->
+      L301.RES_secout
+
+    L301.input_tax %>%
+      add_title("Technologies to apply constraint to", overwrite = T) %>%
+      add_units("NA") %>%
+      add_precursors("policy/A_Policy_RES_SecOut") ->
+      L301.input_tax
+
+    return_data(L301.policy_port_stnd,
+                L301.policy_RES_coefs,
+                L301.RES_secout,
+                L301.input_tax)
+  } else {
+    stop("Unknown command")
+  }
+}
+

@@ -457,6 +457,7 @@ generate_level2_data_names <- function() {
   level2_data_names[["AfforestConstraintUnmgd"]] <- c("region", "LandAllocatorRoot", "LandNode1", "LandNode2", "LandNode3", "UnmanagedLandLeaf", "land.constraint.policy")
   level2_data_names[["AfforestConstraintMgd"]] <- c("region", "LandAllocatorRoot", "LandNode1", "LandNode2", "LandNode3", "LandLeaf", "land.constraint.policy")
   level2_data_names[["TechResSecOut"]] <- c(level2_data_names[["TechYr"]], "res.secondary.output", "output.ratio")
+  level2_data_names[["TechInputTax"]] <- c(level2_data_names[["TechYr"]], "input.tax")
   level2_data_names[["StubTechCO2"]] <- c("region", "supplysector", "subsector", "stub.technology", "year", "CO2")
   level2_data_names[["StubTranTechCO2"]] <- c("region", "supplysector", "tranSubsector", "stub.technology", "year", "CO2")
   level2_data_names[["ResTechCO2"]] <- c("region", "resource", "reserve.subresource", "resource.reserve.technology", "year", "CO2")

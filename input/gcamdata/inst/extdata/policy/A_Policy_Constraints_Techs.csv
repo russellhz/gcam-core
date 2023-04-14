@@ -1,0 +1,42 @@
+# File: A_Policy_Constraints_Techs.csv
+# Title: Policy targets technologies
+# Units: NA
+# Column types: cccccc
+# ----------
+region,supplysector,subsector,technology,2015,2100
+EU-12,delivered biomass,delivered biomass,delivered biomass,fe-constraint,fe-constraint
+EU-12,delivered coal,delivered coal,delivered coal,fe-constraint,fe-constraint
+EU-12,elect_td_bld,elect_td_bld,elect_td_bld,fe-constraint,fe-constraint
+EU-12,elect_td_ind,elect_td_ind,elect_td_ind,fe-constraint,fe-constraint
+EU-12,elect_td_trn,elect_td_trn,elect_td_trn,fe-constraint,fe-constraint
+EU-12,wholesale gas,wholesale gas,wholesale gas,fe-constraint,fe-constraint
+EU-12,delivered gas,delivered gas,delivered gas,fe-constraint,fe-constraint
+EU-12,delivered gas transport,delivered gas transport,delivered gas transport,fe-constraint,fe-constraint
+EU-12,refined liquids enduse,refined liquids enduse,refined liquids enduse,fe-constraint,fe-constraint
+EU-12,refined liquids industrial,refined liquids industrial,refined liquids industrial,fe-constraint,fe-constraint
+EU-12,refined liquids transport,refined liquids transport,refined liquids transport,fe-constraint,fe-constraint
+EU-12,H2 wholesale delivery,H2 liquid truck,H2 liquid truck,fe-constraint,fe-constraint
+EU-12,H2 wholesale delivery,H2 pipeline,H2 pipeline,fe-constraint,fe-constraint
+EU-12,H2 industrial,forecourt production,electrolysis,fe-constraint,fe-constraint
+EU-12,H2 wholesale dispensing,H2 delivery,H2 liquid truck,fe-constraint,fe-constraint
+EU-12,H2 wholesale dispensing,H2 delivery,H2 pipeline,fe-constraint,fe-constraint
+EU-12,H2 wholesale dispensing,forecourt production,electrolysis,fe-constraint,fe-constraint
+EU-12,H2 wholesale dispensing,forecourt production,natural gas steam reforming,fe-constraint,fe-constraint
+EU-15,delivered biomass,delivered biomass,delivered biomass,fe-constraint,fe-constraint
+EU-15,delivered coal,delivered coal,delivered coal,fe-constraint,fe-constraint
+EU-15,elect_td_bld,elect_td_bld,elect_td_bld,fe-constraint,fe-constraint
+EU-15,elect_td_ind,elect_td_ind,elect_td_ind,fe-constraint,fe-constraint
+EU-15,elect_td_trn,elect_td_trn,elect_td_trn,fe-constraint,fe-constraint
+EU-15,wholesale gas,wholesale gas,wholesale gas,fe-constraint,fe-constraint
+EU-15,delivered gas,delivered gas,delivered gas,fe-constraint,fe-constraint
+EU-15,delivered gas transport,delivered gas transport,delivered gas transport,fe-constraint,fe-constraint
+EU-15,refined liquids enduse,refined liquids enduse,refined liquids enduse,fe-constraint,fe-constraint
+EU-15,refined liquids industrial,refined liquids industrial,refined liquids industrial,fe-constraint,fe-constraint
+EU-15,refined liquids transport,refined liquids transport,refined liquids transport,fe-constraint,fe-constraint
+EU-15,H2 wholesale delivery,H2 liquid truck,H2 liquid truck,fe-constraint,fe-constraint
+EU-15,H2 wholesale delivery,H2 pipeline,H2 pipeline,fe-constraint,fe-constraint
+EU-15,H2 industrial,forecourt production,electrolysis,fe-constraint,fe-constraint
+EU-15,H2 wholesale dispensing,H2 delivery,H2 liquid truck,fe-constraint,fe-constraint
+EU-15,H2 wholesale dispensing,H2 delivery,H2 pipeline,fe-constraint,fe-constraint
+EU-15,H2 wholesale dispensing,forecourt production,electrolysis,fe-constraint,fe-constraint
+EU-15,H2 wholesale dispensing,forecourt production,natural gas steam reforming,fe-constraint,fe-constraint
