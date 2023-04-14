@@ -608,6 +608,10 @@ StubTranTechCO2, world/+{name}region, region/+{name}supplysector, supplysector/+
 
 ResTechCO2, world/+{name}region, region/+{name}resource, resource/+{name}reserve-subresource, reserve-subresource/+{name}resource-reserve-technology, resource-reserve-technology/+{year}period, period/+{name}CO2, scenario, scenario/world
 
+GHGTax, world/+{name}region, region/+{name}ghgpolicy, ghgpolicy/+{name}market, ghgpolicy/+{year}fixedTax, ghgpolicy/+fixedTax, scenario, scenario/world, world/region
+
+GHGTaxFillout, world/+{name}region, region/+{name}ghgpolicy, ghgpolicy/+{name}market, ghgpolicy/+{year;fillout=1}fixedTax, ghgpolicy/+fixedTax, scenario, scenario/world, world/region
+
 #####, LAND ALLOCATOR
 
 

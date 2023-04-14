@@ -9,7 +9,7 @@
 #' @param ... other optional parameters, depending on command
 #' @return Depends on \code{command}: either a vector of required inputs,
 #' a vector of output names, or (if \code{command} is "MAKE") all
-#' the generated outputs: \code{L3221.CCap_constraint}, \code{L3221.CCap_no_constraint}, \code{L3221.CCap_tech}, \code{L3221.CCap_tranTech}
+#' the generated outputs: \code{L3221.CCap_constraint}, \code{L3221.CCap_no_constraint}, \code{L3221.CCap_tech}, \code{L3221.CCap_tranTech}, \code{L3221.CCap_resource}
 #' @importFrom assertthat assert_that
 #' @importFrom dplyr bind_rows distinct filter if_else left_join mutate select
 #' @author RLH April 2023
