@@ -9,7 +9,7 @@
 #' @param ... other optional parameters, depending on command
 #' @return Depends on \code{command}: either a vector of required inputs,
 #' a vector of output names, or (if \code{command} is "MAKE") all
-#' the generated outputs: \code{L3221.CCap_constraint}, \code{L3221.CCap_no_constraint}, \code{L3221.CCap_tech}, \code{L3221.CCap_tranTech}, \code{L3221.CCap_resource}
+#' the generated outputs: \code{L3221.CCap_constraint}, \code{L3221.CCap_link_regions}, \code{L3221.CCap_tech}, \code{L3221.CCap_tranTech}, \code{L3221.CCap_resource}
 #' @importFrom assertthat assert_that
 #' @importFrom dplyr bind_rows distinct filter if_else left_join mutate select
 #' @author RLH April 2023
@@ -37,7 +37,7 @@ module_policy_L3221.CCap <- function(command, ...) {
              ))
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(c("L3221.CCap_constraint",
-             "L3221.CCap_no_constraint",
+             "L3221.CCap_link_regions",
              "L3221.CCap_tech",
              "L3221.CCap_tranTech",
              "L3221.CCap_resource"))
@@ -72,10 +72,25 @@ module_policy_L3221.CCap <- function(command, ...) {
     # Write constraint to correct regions
     # When a constraint applies to more than one region, we don't need to write the
     # constraint to all regions, can just pass the ghg policy forward
-    constraint_regions <- A_CCap_Region %>%
-      group_by(market, ghgpolicy) %>%
-      filter(row_number() == 1) %>%
-      ungroup
+
+    # First if we have any multi-region constraints, get just the first region from each
+    if(nrow(A_CCap_Region) > 0){
+      region_to_map_market <- A_CCap_Region %>%
+        group_by(market, ghgpolicy) %>%
+        filter(row_number() == 1) %>%
+        ungroup
+    } else {
+      region_to_map_market <- tibble(market = character(),
+                                     ghgpolicy = character(),
+                                     region = character())
+    }
+
+    # Now join in the first region from multi-region constraints
+    # If single region constraint (region is NA), set region to market
+    constraint_regions <- A_CCap_Constraint %>%
+      select(market, ghgpolicy) %>%
+      left_join(region_to_map_market, by = c("market", "ghgpolicy")) %>%
+      mutate(region = if_else(is.na(region), market, region))
 
     L3221.CCap_constraint <- A_CCap_Constraint %>%
       gather_years() %>%
@@ -83,8 +98,15 @@ module_policy_L3221.CCap <- function(command, ...) {
       left_join_error_no_match(constraint_regions, by = c("market", "ghgpolicy")) %>%
       rename(constraint.year = year, constraint = value)
 
-    L3221.CCap_no_constraint <- A_CCap_Region %>%
+    L3221.CCap_link_regions <- A_CCap_Region %>%
       anti_join(L3221.CCap_constraint, by = c("region", "market", "ghgpolicy"))
+
+    # For technologies, we need all regions
+    tech_all_regions <- A_CCap_Constraint %>%
+      distinct(market, ghgpolicy) %>%
+      left_join(A_CCap_Region) %>%
+      mutate(region = if_else(is.na(region), market, region))
+
 
     # Add custom CO2 market to the associated regions/sectors
     # Need to add all techs for the given regions/sectors
@@ -92,7 +114,7 @@ module_policy_L3221.CCap <- function(command, ...) {
     L3221.CCap_tech <- A_CCap_Sector %>%
       filter(is.na(tranSubsector)) %>%
       select(-tranSubsector) %>%
-      left_join(A_CCap_Region, by = c("market", "ghgpolicy")) %>%
+      left_join(tech_all_regions, by = c("market", "ghgpolicy")) %>%
       # Remove district heat from EU-15
       filter(!(region == "EU-15" & supplysector == "district heat")) %>%
       left_join(L3221.StubTech_All, by = c("supplysector", "region")) %>%
@@ -105,7 +127,7 @@ module_policy_L3221.CCap <- function(command, ...) {
 
     L3221.CCap_tranTech <- A_CCap_Sector %>%
       filter(!is.na(tranSubsector)) %>%
-      left_join(A_CCap_Region, by = c("market", "ghgpolicy")) %>%
+      left_join(tech_all_regions, by = c("market", "ghgpolicy")) %>%
       left_join(L254.StubTranTech, by = c("supplysector", "region", "tranSubsector")) %>%
       rename(CO2 = ghgpolicy) %>%
       select(-market) %>%
@@ -115,7 +137,7 @@ module_policy_L3221.CCap <- function(command, ...) {
     stopifnot(!any(is.na(L3221.CCap_tranTech)))
 
     L3221.CCap_resource <- A_CCap_Resource %>%
-      left_join(A_CCap_Region, by = c("market", "ghgpolicy")) %>%
+      left_join(tech_all_regions, by = c("market", "ghgpolicy")) %>%
       left_join(L210.ResTech, by = c("resource", "reserve.subresource", "region")) %>%
       rename(CO2 = ghgpolicy) %>%
       select(-market) %>%
@@ -132,12 +154,12 @@ module_policy_L3221.CCap <- function(command, ...) {
                      "policy/A_CCap_Region") ->
       L3221.CCap_constraint
 
-    L3221.CCap_no_constraint %>%
+    L3221.CCap_link_regions %>%
       add_title("Linked regions to carbon constraints", overwrite = T) %>%
       add_units("NA") %>%
       add_precursors("policy/A_CCap_Constraint",
                      "policy/A_CCap_Region") ->
-      L3221.CCap_no_constraint
+      L3221.CCap_link_regions
 
     L3221.CCap_tech %>%
       add_title("Technology mapping to custom ghg policy", overwrite = T) %>%
@@ -175,7 +197,7 @@ module_policy_L3221.CCap <- function(command, ...) {
                      "L210.ResTechCoef") ->
       L3221.CCap_resource
 
-    return_data(L3221.CCap_constraint, L3221.CCap_no_constraint,
+    return_data(L3221.CCap_constraint, L3221.CCap_link_regions,
                 L3221.CCap_tech, L3221.CCap_tranTech, L3221.CCap_resource)
   } else {
     stop("Unknown command")

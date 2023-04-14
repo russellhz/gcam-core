@@ -12,7 +12,7 @@
 module_policy_CCap_xml <- function(command, ...) {
   if(command == driver.DECLARE_INPUTS) {
     return(c("L3221.CCap_constraint",
-             "L3221.CCap_no_constraint",
+             "L3221.CCap_link_regions",
              "L3221.CCap_tech",
              "L3221.CCap_tranTech",
              "L3221.CCap_resource"))
@@ -24,7 +24,7 @@ module_policy_CCap_xml <- function(command, ...) {
 
     # Load required inputs
     L3221.CCap_constraint <- get_data(all_data, "L3221.CCap_constraint")
-    L3221.CCap_no_constraint <- get_data(all_data, "L3221.CCap_no_constraint")
+    L3221.CCap_link_regions <- get_data(all_data, "L3221.CCap_link_regions")
     L3221.CCap_tech <- get_data(all_data, "L3221.CCap_tech")
     L3221.CCap_tranTech <- get_data(all_data, "L3221.CCap_tranTech")
     L3221.CCap_resource <- get_data(all_data, "L3221.CCap_resource")
@@ -41,12 +41,12 @@ module_policy_CCap_xml <- function(command, ...) {
     create_xml("policy_CCap.xml") %>%
       add_xml_data(L3221.CCap_constraint_noFillout, "GHGConstr") %>%
       add_xml_data(L3221.CCap_constraint_fillout, "GHGConstrFillout") %>%
-      add_xml_data(L3221.CCap_no_constraint, "GHGConstrMkt") %>%
+      add_xml_data(L3221.CCap_link_regions, "GHGConstrMkt") %>%
       add_xml_data(L3221.CCap_tech, "StubTechCO2") %>%
       add_xml_data(L3221.CCap_tranTech, "StubTranTechCO2") %>%
       add_xml_data(L3221.CCap_resource, "ResTechCO2") %>%
       add_precursors("L3221.CCap_constraint",
-                     "L3221.CCap_no_constraint",
+                     "L3221.CCap_link_regions",
                      "L3221.CCap_tech",
                      "L3221.CCap_tranTech",
                      "L3221.CCap_resource") ->
