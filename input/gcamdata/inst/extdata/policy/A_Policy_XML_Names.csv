@@ -1,0 +1,23 @@
+# File: A_Policy_XML_Names.csv
+# Title: XML Files for each policy
+# Units: NA
+# Comments: Default is to simply include in policy_ceiling_floors.xml
+# Column types: ccc
+# ----------
+market,policy.portfolio.standard,xml
+EU,fe-constraint,policy_fe_eu.xml
+Japan,fe-constraint,policy_fe_japan.xml
+Argentina,biofuel-target,policy_biofuel_arg.xml
+Argentina,biodiesel-target,policy_biofuel_arg.xml
+Brazil,biofuel-target,policy_biofuel_bra.xml
+Brazil,biodiesel-target,policy_biofuel_bra.xml
+Canada,biofuel-target,policy_biofuel_can.xml
+China,biofuel-target,policy_biofuel_can.xml
+EU,biofuel-target,policy_biofuel_eu.xml
+EU,adv-biofuel-target,policy_biofuel_eu.xml
+Indonesia,biofuel-target,policy_biofuel_idn.xml
+Indonesia,biodiesel-target,policy_biofuel_idn.xml
+India,biofuel-target,policy_biofuel_ind.xml
+South Korea,biofuel-target,policy_biofuel_kor.xml
+South Africa,biofuel-target,policy_biofuel_saf.xml
+USA,biofuel-target,policy_biofuel_usa.xml
