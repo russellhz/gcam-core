@@ -5,6 +5,7 @@
 # Column types: ccc
 # ----------
 market,policy.portfolio.standard,xml
+EU,FE_RES,policy_feres_eu.xml
 EU,fe-constraint,policy_fe_eu.xml
 Japan,fe-constraint,policy_fe_japan.xml
 Argentina,biofuel-target,policy_biofuel_arg.xml

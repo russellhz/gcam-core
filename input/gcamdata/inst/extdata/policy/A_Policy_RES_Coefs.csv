@@ -20,3 +20,37 @@ India,India,biofuel-target,RES,refined liquids enduse,refined liquids enduse,ref
 South Korea,South Korea,biofuel-target,RES,refined liquids enduse,refined liquids enduse,refined liquids enduse,0.013,0.013,0.013,0.013
 South Africa,South Africa,biofuel-target,RES,refined liquids enduse,refined liquids enduse,refined liquids enduse,0.025,0.05,0.05,0.05
 USA,USA,biofuel-target,RES,refined liquids enduse,refined liquids enduse,refined liquids enduse,0.1156,0.1156,0.1156,0.1156
+EU-12,EU,FE_RES,RES,delivered biomass,delivered biomass,delivered biomass,0.19,0.28,0.38,0.38
+EU-12,EU,FE_RES,RES,delivered coal,delivered coal,delivered coal,0.19,0.28,0.38,0.38
+EU-12,EU,FE_RES,RES,wholesale gas,wholesale gas,wholesale gas,0.19,0.28,0.38,0.38
+EU-12,EU,FE_RES,RES,delivered gas,delivered gas,delivered gas,0.19,0.28,0.38,0.38
+EU-12,EU,FE_RES,RES,refined liquids enduse,refined liquids enduse,refined liquids enduse,0.19,0.28,0.38,0.38
+EU-12,EU,FE_RES,RES,refined liquids industrial,refined liquids industrial,refined liquids industrial,0.19,0.28,0.38,0.38
+EU-12,EU,FE_RES,RES,H2 wholesale delivery,H2 liquid truck,H2 liquid truck,0.19,0.28,0.38,0.38
+EU-12,EU,FE_RES,RES,H2 wholesale delivery,H2 pipeline,H2 pipeline,0.19,0.28,0.38,0.38
+EU-12,EU,FE_RES,RES,H2 industrial,forecourt production,electrolysis,0.19,0.28,0.38,0.38
+EU-12,EU,FE_RES,RES,H2 wholesale dispensing,H2 delivery,H2 liquid truck,0.19,0.28,0.38,0.38
+EU-12,EU,FE_RES,RES,H2 wholesale dispensing,H2 delivery,H2 pipeline,0.19,0.28,0.38,0.38
+EU-12,EU,FE_RES,RES,H2 wholesale dispensing,forecourt production,electrolysis,0.19,0.28,0.38,0.38
+EU-12,EU,FE_RES,RES,H2 wholesale dispensing,forecourt production,natural gas steam reforming,0.19,0.28,0.38,0.38
+EU-12,EU,FE_RES,RES,elect_td_bld,elect_td_bld,elect_td_bld,0.19,0.28,0.38,0.38
+EU-12,EU,FE_RES,RES,elect_td_bld,rooftop_pv,rooftop_pv,0.19,0.28,0.38,0.38
+EU-12,EU,FE_RES,RES,elect_td_ind,elect_td_ind,elect_td_ind,0.19,0.28,0.38,0.38
+EU-12,EU,FE_RES,RES,elect_td_trn,elect_td_trn,elect_td_trn,0.19,0.28,0.38,0.38
+EU-15,EU,FE_RES,RES,delivered biomass,delivered biomass,delivered biomass,0.19,0.28,0.38,0.38
+EU-15,EU,FE_RES,RES,delivered coal,delivered coal,delivered coal,0.19,0.28,0.38,0.38
+EU-15,EU,FE_RES,RES,wholesale gas,wholesale gas,wholesale gas,0.19,0.28,0.38,0.38
+EU-15,EU,FE_RES,RES,delivered gas,delivered gas,delivered gas,0.19,0.28,0.38,0.38
+EU-15,EU,FE_RES,RES,refined liquids enduse,refined liquids enduse,refined liquids enduse,0.19,0.28,0.38,0.38
+EU-15,EU,FE_RES,RES,refined liquids industrial,refined liquids industrial,refined liquids industrial,0.19,0.28,0.38,0.38
+EU-15,EU,FE_RES,RES,H2 wholesale delivery,H2 liquid truck,H2 liquid truck,0.19,0.28,0.38,0.38
+EU-15,EU,FE_RES,RES,H2 wholesale delivery,H2 pipeline,H2 pipeline,0.19,0.28,0.38,0.38
+EU-15,EU,FE_RES,RES,H2 industrial,forecourt production,electrolysis,0.19,0.28,0.38,0.38
+EU-15,EU,FE_RES,RES,H2 wholesale dispensing,H2 delivery,H2 liquid truck,0.19,0.28,0.38,0.38
+EU-15,EU,FE_RES,RES,H2 wholesale dispensing,H2 delivery,H2 pipeline,0.19,0.28,0.38,0.38
+EU-15,EU,FE_RES,RES,H2 wholesale dispensing,forecourt production,electrolysis,0.19,0.28,0.38,0.38
+EU-15,EU,FE_RES,RES,H2 wholesale dispensing,forecourt production,natural gas steam reforming,0.19,0.28,0.38,0.38
+EU-15,EU,FE_RES,RES,elect_td_bld,elect_td_bld,elect_td_bld,0.19,0.28,0.38,0.38
+EU-15,EU,FE_RES,RES,elect_td_bld,rooftop_pv,rooftop_pv,0.19,0.28,0.38,0.38
+EU-15,EU,FE_RES,RES,elect_td_ind,elect_td_ind,elect_td_ind,0.19,0.28,0.38,0.38
+EU-15,EU,FE_RES,RES,elect_td_trn,elect_td_trn,elect_td_trn,0.19,0.28,0.38,0.38
