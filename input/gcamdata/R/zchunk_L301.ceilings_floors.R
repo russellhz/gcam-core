@@ -64,7 +64,8 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
       mutate(constraint = if_else(policyType == "RES",
                                   1,
                                   constraint)) %>%
-      select(LEVEL2_DATA_NAMES[["PortfolioStdConstraint"]])
+      select(LEVEL2_DATA_NAMES[["PortfolioStdConstraint"]]) %>%
+      distinct()
 
     # 3. Create RES coefficient tables
     L301.policy_RES_coefs <- L301.ceilings_floors %>%
@@ -74,17 +75,20 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
              coefficient = constraint)
 
     # 4. Create secondary output tables - interpolate between years
-    L301.RES_secout <- A_Policy_RES_SecOut %>%
+    L301.RES_secout <-  A_Policy_RES_SecOut %>%
+      # Add rowid column so that we can group by row once converted to long data
+      # Necessary because some regions have multiple policies and we don't want to combine them
+      tibble::rowid_to_column() %>%
       gather_years(value_col = "res.secondary.output") %>%
-      group_by(region, supplysector, subsector, technology) %>%
+      group_by(rowid, region, supplysector, subsector, technology, output.ratio) %>%
       # Interpolates between min and max years for each region/output combo
-      complete(nesting(region, supplysector, subsector, technology),
+      complete(nesting(rowid, region, supplysector, subsector, technology, output.ratio),
                year = seq(min(year), max(year), 5)) %>%
       mutate(res.secondary.output =if_else(is.na(res.secondary.output),
                                            res.secondary.output[year == max(year)],
                                            res.secondary.output)) %>%
       ungroup %>%
-      mutate(output.ratio = 1)
+      select(-rowid)
 
     # 5. Create input tax tables - interpolate between years
     L301.input_tax <- A_Policy_Constraints_Techs %>%

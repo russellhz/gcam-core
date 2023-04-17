@@ -44,18 +44,17 @@ module_policy_ceilings_floors_xml <- function(command, ...) {
 
     for (xml_name in all_xml_names){
       L301.policy_port_stnd_tmp <- L301.policy_port_stnd_xml %>%
-        filter(xml == xml_name) %>%
-        select(-xml)
+        filter(xml == xml_name)
 
       policy_rgn_tmp <- L301.policy_port_stnd_tmp %>%
-        distinct(region, policyType)
+        distinct(region, policy.portfolio.standard, policyType, xml)
 
       if ("RES" %in% policy_rgn_tmp$policyType){
         L301.policy_RES_coefs_tmp <- L301.policy_RES_coefs %>%
-          semi_join(policy_rgn_tmp, by = c("region", "policyType"))
+          semi_join(policy_rgn_tmp, by = c("region", "policyType", "minicam.energy.input" = "policy.portfolio.standard"))
 
         L301.RES_secout_tmp <- L301.RES_secout %>%
-          semi_join(select(policy_rgn_tmp, region), by = c("region"))
+          semi_join(policy_rgn_tmp, by = c("region", "res.secondary.output" = "policy.portfolio.standard"))
       } else {
         # If policy type not included, still need to include the tables
         # So just make them empty
@@ -65,7 +64,7 @@ module_policy_ceilings_floors_xml <- function(command, ...) {
 
       if ("tax" %in% policy_rgn_tmp$policyType){
         L301.input_tax_tmp <- L301.input_tax %>%
-          semi_join(select(policy_rgn_tmp, region), by = c("region"))
+          semi_join(policy_rgn_tmp, by = c("region", "input.tax" = "policy.portfolio.standard"))
       } else {
         # If policy type not included, still need to include the tables
         # So just make them empty
