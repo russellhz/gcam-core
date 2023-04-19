@@ -99,12 +99,14 @@ module_policy_L3221.CCap <- function(command, ...) {
       rename(constraint.year = year, constraint = value)
 
     L3221.CCap_link_regions <- A_CCap_Region %>%
+      left_join(select(A_CCap_Constraint, xml, market, ghgpolicy),
+                by = c("market", "ghgpolicy")) %>%
       anti_join(L3221.CCap_constraint, by = c("region", "market", "ghgpolicy"))
 
     # For technologies, we need all regions
     tech_all_regions <- A_CCap_Constraint %>%
       distinct(market, ghgpolicy) %>%
-      left_join(A_CCap_Region) %>%
+      left_join(A_CCap_Region, by = c("market", "ghgpolicy")) %>%
       mutate(region = if_else(is.na(region), market, region))
 
 

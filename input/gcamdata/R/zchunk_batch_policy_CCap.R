@@ -10,6 +10,8 @@
 #' a vector of output names, or (if \code{command} is "MAKE") all
 #' the generated outputs: \code{policy_CCap.xml}.
 module_policy_CCap_xml <- function(command, ...) {
+  all_xml_names <- get_xml_names("policy/A_CCap_Constraint.csv", "policy_CCap.xml")
+
   if(command == driver.DECLARE_INPUTS) {
     return(c("L3221.CCap_constraint",
              "L3221.CCap_link_regions",
@@ -17,7 +19,7 @@ module_policy_CCap_xml <- function(command, ...) {
              "L3221.CCap_tranTech",
              "L3221.CCap_resource"))
   } else if(command == driver.DECLARE_OUTPUTS) {
-    return(c(XML = "policy_CCap.xml"))
+    return(all_xml_names)
   } else if(command == driver.MAKE) {
 
     all_data <- list(...)[[1]]
@@ -38,21 +40,56 @@ module_policy_CCap_xml <- function(command, ...) {
       select(-year.fillout)
 
     # Produce outputs
-    create_xml("policy_CCap.xml") %>%
-      add_xml_data(L3221.CCap_constraint_noFillout, "GHGConstr") %>%
-      add_xml_data(L3221.CCap_constraint_fillout, "GHGConstrFillout") %>%
-      add_xml_data(L3221.CCap_link_regions, "GHGConstrMkt") %>%
-      add_xml_data(L3221.CCap_tech, "StubTechCO2") %>%
-      add_xml_data(L3221.CCap_tranTech, "StubTranTechCO2") %>%
-      add_xml_data(L3221.CCap_resource, "ResTechCO2") %>%
-      add_precursors("L3221.CCap_constraint",
-                     "L3221.CCap_link_regions",
-                     "L3221.CCap_tech",
-                     "L3221.CCap_tranTech",
-                     "L3221.CCap_resource") ->
-      policy_CCap.xml
+    for (xml_name in all_xml_names){
+      L3221.CCap_constraint_noFillout_tmp <- L3221.CCap_constraint_noFillout %>%
+        filter(xml == xml_name) %>%
+        select(-xml)
 
-    return_data(policy_CCap.xml)
+      L3221.CCap_constraint_fillout_tmp <- L3221.CCap_constraint_fillout %>%
+        filter(xml == xml_name) %>%
+        select(-xml)
+
+      L3221.CCap_link_regions_tmp <- L3221.CCap_link_regions %>%
+        filter(xml == xml_name) %>%
+        select(-xml)
+
+      tmp_market_region <- bind_rows(L3221.CCap_constraint_noFillout_tmp,
+                                     L3221.CCap_constraint_fillout_tmp,
+                                     L3221.CCap_link_regions_tmp) %>%
+        distinct(market, ghgpolicy, region)
+
+      L3221.CCap_tech_tmp <- L3221.CCap_tech %>%
+        semi_join(tmp_market_region, by = c("region", "CO2" = "ghgpolicy"))
+
+      L3221.CCap_tranTech_tmp <- L3221.CCap_tranTech %>%
+        semi_join(tmp_market_region, by = c("region", "CO2" = "ghgpolicy"))
+
+      L3221.CCap_resource_tmp <- L3221.CCap_resource %>%
+        semi_join(tmp_market_region, by = c("region", "CO2" = "ghgpolicy"))
+
+      # Produce outputs
+      assign(xml_name,
+             create_xml(xml_name) %>%
+               add_xml_data(L3221.CCap_constraint_noFillout_tmp, "GHGConstr") %>%
+               add_xml_data(L3221.CCap_constraint_fillout_tmp, "GHGConstrFillout") %>%
+               add_xml_data(L3221.CCap_link_regions_tmp, "GHGConstrMkt") %>%
+               add_xml_data(L3221.CCap_tech_tmp, "StubTechCO2") %>%
+               add_xml_data(L3221.CCap_tranTech_tmp, "StubTranTechCO2") %>%
+               add_xml_data(L3221.CCap_resource_tmp, "ResTechCO2") %>%
+               add_precursors("L3221.CCap_constraint",
+                              "L3221.CCap_link_regions",
+                              "L3221.CCap_tech",
+                              "L3221.CCap_tranTech",
+                              "L3221.CCap_resource")
+      )
+    }
+
+    # Need this for loop because having issues with lapply(all_xml_names, get)
+    list_of_xmls <- list()
+    for(xml_name in all_xml_names){
+      list_of_xmls[[xml_name]] <- get(xml_name)
+    }
+    return_multiple_xmls(list_of_xmls, all_xml_names)
   } else {
     stop("Unknown command")
   }

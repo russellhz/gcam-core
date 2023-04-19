@@ -60,6 +60,8 @@ module_policy_L3222.CTax <- function(command, ...) {
       rename(fixedTax = value)
 
     L3222.CTax_link_regions <- A_CTax_Region %>%
+      left_join(L3222.CTax, by = c("region", "market", "ghgpolicy")) %>%
+      select(xml, region, market, ghgpolicy) %>%
       anti_join(L3222.CTax, by = c("region", "market", "ghgpolicy"))
 
     # Produce outputs

@@ -1,10 +1,10 @@
 # File: A_CTax.csv
 # Title: Carbon taxes by region
 # Units: 1975$/MTC
-# Column types: ccinnnnnnnnnnnnnnnnn
+# Column types: cccinnnnnnnnnnnnnnnnn
 # ----------
-market,ghgpolicy,year.fillout,2020,2025,2030,2035,2040,2045,2050,2055,2060,2065,2070,2075,2080,2085,2090,2095,2100
-Argentina,GHG,,10.24217877,20.48435754,20.48435754,,,,,,,,,,,,,,
-Canada,GHG,,46.08980447,76.81634078,76.81634078,,,,,,,,,,,,,,
-South Africa,GHG,,5.735620112,17.20686034,17.20686034,,,,,,,,,,,,,,
-USA,GHG,,11.35591861,19.91641201,16.83068415,,,,,,,,,,,,,,
+xml,market,ghgpolicy,year.fillout,2020,2025,2030,2035,2040,2045,2050,2055,2060,2065,2070,2075,2080,2085,2090,2095,2100
+policy_ctax_arg.xml,Argentina,GHG,,10.24217877,20.48435754,20.48435754,,,,,,,,,,,,,,
+policy_ctax_can.xml,Canada,GHG,,46.08980447,76.81634078,76.81634078,,,,,,,,,,,,,,
+policy_ctax_saf.xml,South Africa,GHG,,5.735620112,17.20686034,17.20686034,,,,,,,,,,,,,,
+policy_ctax_usa.xml,USA,GHG,,11.35591861,19.91641201,16.83068415,,,,,,,,,,,,,,

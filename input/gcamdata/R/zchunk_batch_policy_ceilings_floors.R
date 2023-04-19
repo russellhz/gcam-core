@@ -10,6 +10,8 @@
 #' a vector of output names, or (if \code{command} is "MAKE") all
 #' the generated outputs: \code{policy_ceilings_floors.xml}.
 module_policy_ceilings_floors_xml <- function(command, ...) {
+  all_xml_names <- get_xml_names("policy/A_Policy_XML_Names.csv", "policy_ceilings_floors.xml")
+
   if(command == driver.DECLARE_INPUTS) {
     return(c("L301.policy_port_stnd",
              "L301.policy_RES_coefs",
@@ -17,14 +19,11 @@ module_policy_ceilings_floors_xml <- function(command, ...) {
              "L301.input_tax",
              FILE = "policy/A_Policy_XML_Names"))
   } else if(command == driver.DECLARE_OUTPUTS) {
-    # output files are unknown until we read in A_Policy_XML_Name
-    all_xml_names <- suppressMessages(readr::read_csv("inst/extdata/policy/A_Policy_XML_Names.csv", comment = "#"))
-    all_xml_names <- union(unique(all_xml_names$xml), "policy_ceilings_floors.xml")
-    names(all_xml_names) <- rep("XML", length(all_xml_names))
     return(all_xml_names)
   } else if(command == driver.MAKE) {
 
     all_data <- list(...)[[1]]
+
 
     # Load required inputs
     L301.policy_RES_coefs <- get_data(all_data, "L301.policy_RES_coefs")
@@ -39,7 +38,6 @@ module_policy_ceilings_floors_xml <- function(command, ...) {
       left_join(A_Policy_XML_Names, by = c("policy.portfolio.standard", "market")) %>%
       replace_na(list(xml = "policy_ceilings_floors.xml"))
 
-    all_xml_names <- union(unique(A_Policy_XML_Names$xml), "policy_ceilings_floors.xml")
     # ===================================================
 
     for (xml_name in all_xml_names){
@@ -87,11 +85,12 @@ module_policy_ceilings_floors_xml <- function(command, ...) {
     }
 
 
-    list_of_outputs <- lapply(all_xml_names, get)
-    names(list_of_outputs) <- all_xml_names
-    outlist <- sapply(list_of_outputs, return_data)
-    names(outlist) <- all_xml_names
-    return(outlist)
+    # Need this for loop because having issues with lapply(all_xml_names, get)
+    list_of_xmls <- list()
+    for(xml_name in all_xml_names){
+      list_of_xmls[[xml_name]] <- get(xml_name)
+    }
+    return_multiple_xmls(list_of_xmls, all_xml_names)
   } else {
     stop("Unknown command")
   }

@@ -10,11 +10,13 @@
 #' a vector of output names, or (if \code{command} is "MAKE") all
 #' the generated outputs: \code{policy_CTax.xml}.
 module_policy_CTax.xml <- function(command, ...) {
+  all_xml_names <- get_xml_names("policy/A_CTax.csv", "policy_CTax.xml")
+
   if(command == driver.DECLARE_INPUTS) {
     return(c("L3222.CTax",
              "L3222.CTax_link_regions"))
   } else if(command == driver.DECLARE_OUTPUTS) {
-    return(c(XML = "policy_CTax.xml"))
+    return(all_xml_names)
   } else if(command == driver.MAKE) {
 
     all_data <- list(...)[[1]]
@@ -32,15 +34,35 @@ module_policy_CTax.xml <- function(command, ...) {
       select(-year.fillout)
 
     # Produce outputs
-    create_xml("policy_CTax.xml") %>%
-      add_xml_data(L3222.CTax_noFillout, "GHGTax") %>%
-      add_xml_data(L3222.CTax_fillout, "GHGTaxFillout") %>%
-      add_xml_data(L3222.CTax_link_regions, "GHGConstrMkt") %>%
-      add_precursors("L3222.CTax",
-                     "L3222.CTax_link_regions") ->
-      policy_CTax.xml
+    for (xml_name in all_xml_names){
+      L3222.CTax_noFillout_tmp <- L3222.CTax_noFillout %>%
+        filter(xml == xml_name) %>%
+        select(-xml)
 
-    return_data(policy_CTax.xml)
+      L3222.CTax_fillout_tmp <- L3222.CTax_fillout %>%
+        filter(xml == xml_name) %>%
+        select(-xml)
+
+      L3222.CTax_link_regions_tmp <- L3222.CTax_link_regions %>%
+        filter(xml == xml_name) %>%
+        select(-xml)
+
+      assign(xml_name,
+             create_xml(xml_name) %>%
+               add_xml_data(L3222.CTax_noFillout_tmp, "GHGTax") %>%
+               add_xml_data(L3222.CTax_fillout_tmp, "GHGTaxFillout") %>%
+               add_xml_data(L3222.CTax_link_regions_tmp, "GHGConstrMkt") %>%
+               add_precursors("L3222.CTax",
+                              "L3222.CTax_link_regions")
+      )
+    }
+
+    # Need this for loop because having issues with lapply(all_xml_names, get)
+    list_of_xmls <- list()
+    for(xml_name in all_xml_names){
+      list_of_xmls[[xml_name]] <- get(xml_name)
+    }
+    return_multiple_xmls(list_of_xmls, all_xml_names)
   } else {
     stop("Unknown command")
   }

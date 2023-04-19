@@ -10,10 +10,12 @@
 #' a vector of output names, or (if \code{command} is "MAKE") all
 #' the generated outputs: \code{policy_FuelStandards.xml}.
 module_policy_FuelStandards_xml <- function(command, ...) {
+  all_xml_names <- get_xml_names("policy/A_FuelStandards.csv", "policy_FuelStandards.xml")
+
   if(command == driver.DECLARE_INPUTS) {
     return(c("L354.FuelStandards"))
   } else if(command == driver.DECLARE_OUTPUTS) {
-    return(c(XML = "policy_FuelStandards.xml"))
+    return(all_xml_names)
   } else if(command == driver.MAKE) {
 
     all_data <- list(...)[[1]]
@@ -23,13 +25,26 @@ module_policy_FuelStandards_xml <- function(command, ...) {
     # ===================================================
 
     # Produce outputs
-    create_xml("policy_FuelStandards.xml") %>%
-      add_xml_data(L354.FuelStandards, "StubTranTechCoef") %>%
-      add_precursors("L354.FuelStandards") ->
-      policy_FuelStandards.xml
+    for (xml_name in all_xml_names){
+      L354.FuelStandards_tmp <- L354.FuelStandards %>%
+        filter(xml == xml_name) %>%
+        select(-xml)
 
-    return_data(policy_FuelStandards.xml)
-  } else {
+      assign(xml_name,
+             create_xml(xml_name) %>%
+               add_xml_data(L354.FuelStandards, "StubTranTechCoef") %>%
+               add_precursors("L354.FuelStandards")
+      )
+    }
+
+    # Need this for loop because having issues with lapply(all_xml_names, get)
+    list_of_xmls <- list()
+    for(xml_name in all_xml_names){
+      list_of_xmls[[xml_name]] <- get(xml_name)
+    }
+    return_multiple_xmls(list_of_xmls, all_xml_names)
+
+      } else {
     stop("Unknown command")
   }
 }
