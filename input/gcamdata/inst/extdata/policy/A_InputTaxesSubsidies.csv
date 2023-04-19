@@ -1,0 +1,12 @@
+# File: A_InputTaxesSubsidies.csv
+# Title: Taxes/Subsidies for Specific Technologies
+# Units: 1975$/GJ
+# Comments: Positive for tax, negative for subsidy
+# Column types: ccccccnn
+# ----------
+xml,region,supplysector,subsector,stub.technology,minicam.non.energy.input,2020,2100
+policy_fueltax_aus.xml,Australia_NZ,refined liquids transport,refined liquids transport,refined liquids transport,fuel-tax,3.340659341,3.340659341
+policy_fueltax_eu.xml,EU-15,refined liquids transport,refined liquids transport,refined liquids transport,fuel-tax,5.05699581723094,5.05699581723094
+policy_fueltax_eu.xml,EU-15,delivered gas transport,delivered gas transport,delivered gas transport,fuel-tax,1.07371089107752,1.07371089107752
+policy_fueltax_eu.xml,EU-12,refined liquids transport,refined liquids transport,refined liquids transport,fuel-tax,3.50412466864624,3.50412466864624
+policy_fueltax_eu.xml,EU-12,delivered gas transport,delivered gas transport,delivered gas transport,fuel-tax,0.504987072981841,0.504987072981841
