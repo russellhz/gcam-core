@@ -22,3 +22,6 @@ India,biofuel-target,policy_biofuel_ind.xml
 South Korea,biofuel-target,policy_biofuel_kor.xml
 South Africa,biofuel-target,policy_biofuel_saf.xml
 USA,biofuel-target,policy_biofuel_usa.xml
+China,ind-constraint,policy_ind_chn.xml
+Japan,ind-constraint,policy_ind_jpn.xml
+Europe_Non_EU,ind-constraint,policy_ind_tur.xml

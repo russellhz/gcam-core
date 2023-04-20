@@ -10,3 +10,5 @@ policy_fueltax_eu.xml,EU-15,refined liquids transport,refined liquids transport,
 policy_fueltax_eu.xml,EU-15,delivered gas transport,delivered gas transport,delivered gas transport,fuel-tax,1.07371089107752,1.07371089107752
 policy_fueltax_eu.xml,EU-12,refined liquids transport,refined liquids transport,refined liquids transport,fuel-tax,3.50412466864624,3.50412466864624
 policy_fueltax_eu.xml,EU-12,delivered gas transport,delivered gas transport,delivered gas transport,fuel-tax,0.504987072981841,0.504987072981841
+policy_fueltax_jap.xml,Japan,refined liquids transport,refined liquids transport,refined liquids transport,fuel-tax,3.18881118881119,3.18881118881119
+policy_fueltax_jap.xml,Japan-12,delivered gas transport,delivered gas transport,delivered gas transport,fuel-tax,0.844982542350963,0.844982542350963
