@@ -29,16 +29,6 @@ module_policy_afforest_constraints_xml <- function(command, ...) {
     # ===================================================
 
     # Produce outputs
-    create_xml("policy_afforest_constraints.xml") %>%
-      add_xml_data(L3231.affor_constraint, "PortfolioStdConstraint") %>%
-      add_xml_data(L3231.affor_unmngd_nodes, "AfforestConstraintUnmgd") %>%
-      add_xml_data(L3231.affor_mngd_nodes, "AfforestConstraintMgd") %>%
-      add_rename_landnode_xml() %>%
-      add_precursors("L3231.affor_mngd_nodes",
-                     "L3231.affor_unmngd_nodes",
-                     "L3231.affor_constraint") ->
-      policy_afforest_constraints.xml
-
     for (xml_name in all_xml_names){
       L3231.affor_constraint_tmp <- L3231.affor_constraint %>%
         filter(xml == xml_name) %>%

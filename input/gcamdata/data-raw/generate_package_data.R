@@ -463,6 +463,8 @@ generate_level2_data_names <- function() {
   level2_data_names[["ResTechCO2"]] <- c("region", "resource", "reserve.subresource", "resource.reserve.technology", "year", "CO2")
   level2_data_names[["GHGTax"]] <- c("region", "ghgpolicy", "market", "year", "fixedTax")
   level2_data_names[["GHGTaxFillout"]] <- c(level2_data_names[["GHGTax"]], "year.fillout")
+  level2_data_names[["SubsectorDeleteInterp"]] <- c(level2_data_names[["Subsector"]], "apply.to", "from.year", "to.year", "delete", "interpolation.function")
+  level2_data_names[["StubTechDeleteInterp"]] <- c(level2_data_names[["StubTech"]], "apply.to", "from.year", "to.year",  "delete", "interpolation.function")
 
   level2_data_names
 }
