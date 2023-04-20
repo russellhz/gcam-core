@@ -596,9 +596,13 @@ GHGConstrLinkMkt, world/+{name}region, region/+{name}linked-ghg-policy, linked-g
 
 PortfolioStdConstraint,world/+{name}region,region/+{name}policy-portfolio-standard, policy-portfolio-standard/+market, policy-portfolio-standard/+policyType, policy-portfolio-standard/+{year}constraint, policy-portfolio-standard/+constraint,  scenario,scenario/world
 
-AfforestConstraintUnmgd, world/+{name}region, region/+{name}LandAllocatorRoot, LandAllocatorRoot/+{name}LandNode1, LandNode1/+{name}LandNode2, LandNode2/+{name}LandNode3, LandNode3/+{name}UnmanagedLandLeaf, UnmanagedLandLeaf/+land-constraint-policy, scenario, scenario/world
+LN2ConstraintUnmgd, world/+{name}region, region/+{name}LandAllocatorRoot, LandAllocatorRoot/+{name}LandNode1, LandNode1/+{name}LandNode2, LandNode2/+{name}UnmanagedLandLeaf, UnmanagedLandLeaf/+land-constraint-policy, scenario, scenario/world
 
-AfforestConstraintMgd, world/+{name}region, region/+{name}LandAllocatorRoot, LandAllocatorRoot/+{name}LandNode1, LandNode1/+{name}LandNode2, LandNode2/+{name}LandNode3, LandNode3/+{name}LandLeaf, LandLeaf/+land-constraint-policy, scenario, scenario/world
+LN2ConstraintMgd, world/+{name}region, region/+{name}LandAllocatorRoot, LandAllocatorRoot/+{name}LandNode1, LandNode1/+{name}LandNode2,  LandNode2/+{name}LandLeaf, LandLeaf/+land-constraint-policy, scenario, scenario/world
+
+LN3ConstraintUnmgd, world/+{name}region, region/+{name}LandAllocatorRoot, LandAllocatorRoot/+{name}LandNode1, LandNode1/+{name}LandNode2, LandNode2/+{name}LandNode3, LandNode3/+{name}UnmanagedLandLeaf, UnmanagedLandLeaf/+land-constraint-policy, scenario, scenario/world
+
+LN3ConstraintMgd, world/+{name}region, region/+{name}LandAllocatorRoot, LandAllocatorRoot/+{name}LandNode1, LandNode1/+{name}LandNode2, LandNode2/+{name}LandNode3, LandNode3/+{name}LandLeaf, LandLeaf/+land-constraint-policy, scenario, scenario/world
 
 TechResSecOut, world/+{name}region, region/+{name}supplysector, supplysector/+{name}subsector, subsector/+{name}technology, technology/+{year}period, period/+{name}res-secondary-output, res-secondary-output/+output-ratio, scenario, scenario/world
 
