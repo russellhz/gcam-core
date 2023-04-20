@@ -1,9 +1,9 @@
-# File: A_Shareweights.csv
-# Title: Shareweight Overwrites
-# Units: NA
-# Comments: Will write the last year forward to 2100
-# Column types: cccccnnnnnnnnnnnnnnnnn
-# ----------
+# File: A_Shareweights.csv,,,,,,,,,,,,,,,,,,,,,
+# Title: Shareweight Overwrites,,,,,,,,,,,,,,,,,,,,,
+# Units: NA,,,,,,,,,,,,,,,,,,,,,
+# Comments: Will write the last year forward to 2100,,,,,,,,,,,,,,,,,,,,,
+# Column types: cccccnnnnnnnnnnnnnnnnn,,,,,,,,,,,,,,,,,,,,,
+# ----------,,,,,,,,,,,,,,,,,,,,,
 xml,region,supplysector,subsector,stub.technology,2020,2025,2030,2035,2040,2045,2050,2055,2060,2065,2070,2075,2080,2085,2090,2095,2100
 policy_coalPhaseout_can.xml,Canada,electricity,coal,,0,,,,,,,,,,,,,,,,
 policy_coalPhaseout_eu.xml,EU-12,electricity,coal,,0,,,,,,,,,,,,,,,,
