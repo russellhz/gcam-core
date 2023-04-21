@@ -24,7 +24,8 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
     return(c("L301.policy_port_stnd",
              "L301.policy_RES_coefs",
              "L301.RES_secout",
-             "L301.input_tax"))
+             "L301.input_tax",
+             "L301.XML_policy_map"))
   } else if(command == driver.MAKE) {
 
     all_data <- list(...)[[1]]
@@ -40,10 +41,11 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
     L301.ceilings_floors_NA <- bind_rows(A_Policy_Constraints, A_Policy_RES_Coefs) %>%
       gather_years(value_col = "constraint") %>%
       filter(!is.na(constraint)) %>%
+      # Leaving grouped on purpose here
       group_by(region, market, policy.portfolio.standard, policyType,
                supplysector, subsector, technology) %>%
       # Interpolates between min and max years for each region/policy combo
-      complete(nesting(region, market, policy.portfolio.standard, policyType,
+      complete(nesting(xml, region, market, policy.portfolio.standard, policyType,
                        supplysector, subsector, technology),
                year = seq(min(year), max(year), 5))
 
@@ -57,7 +59,8 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
       mutate(constraint = approx_fun(year, constraint)) %>%
       ungroup %>%
       bind_rows(L301.ceilings_floors_n1) %>%
-      arrange(region, policyType, year)
+      arrange(region, policyType, year) %>%
+      select(-xml)
 
     # 2. Create policy portfolio standard tables
     L301.policy_port_stnd <- L301.ceilings_floors %>%
@@ -93,6 +96,7 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
     # 5. Create input tax tables - interpolate between years
     L301.input_tax <- A_Policy_Constraints_Techs %>%
       gather_years(value_col = "input.tax") %>%
+      filter(!is.na(input.tax)) %>%
       group_by(region, supplysector, subsector, technology) %>%
       # Interpolates between min and max years for each region/output combo
       complete(nesting(region, supplysector, subsector, technology),
@@ -102,6 +106,9 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
                                 input.tax)) %>%
       ungroup
 
+    # 6. Make mapping of policies to xml file names
+    L301.XML_policy_map <- distinct(A_Policy_Constraints, xml, policy.portfolio.standard, market) %>%
+      bind_rows(distinct(A_Policy_RES_Coefs, xml, policy.portfolio.standard, market))
 
     # Produce outputs
     L301.policy_port_stnd %>%
@@ -130,10 +137,18 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
       add_precursors("policy/A_Policy_RES_SecOut") ->
       L301.input_tax
 
+    L301.XML_policy_map %>%
+      add_title("Mapping of policy names to xml", overwrite = T) %>%
+      add_units("NA") %>%
+      add_precursors("policy/A_Policy_Constraints",
+                     "policy/A_Policy_RES_Coefs") ->
+      L301.XML_policy_map
+
     return_data(L301.policy_port_stnd,
                 L301.policy_RES_coefs,
                 L301.RES_secout,
-                L301.input_tax)
+                L301.input_tax,
+                L301.XML_policy_map)
   } else {
     stop("Unknown command")
   }

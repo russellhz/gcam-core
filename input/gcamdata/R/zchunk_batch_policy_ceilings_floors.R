@@ -10,14 +10,15 @@
 #' a vector of output names, or (if \code{command} is "MAKE") all
 #' the generated outputs: \code{policy_ceilings_floors.xml}.
 module_policy_ceilings_floors_xml <- function(command, ...) {
-  all_xml_names <- get_xml_names("policy/A_Policy_XML_Names.csv", "policy_ceilings_floors.xml")
-
+  all_xml_names <- union(get_xml_names("policy/A_Policy_Constraints.csv", "policy_ceilings_floors.xml"),
+                         get_xml_names("policy/A_Policy_RES_Coefs.csv", "policy_ceilings_floors.xml"))
+  names(all_xml_names) <- rep("XML", length(all_xml_names))
   if(command == driver.DECLARE_INPUTS) {
     return(c("L301.policy_port_stnd",
              "L301.policy_RES_coefs",
              "L301.RES_secout",
              "L301.input_tax",
-             FILE = "policy/A_Policy_XML_Names"))
+             "L301.XML_policy_map"))
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(all_xml_names)
   } else if(command == driver.MAKE) {
@@ -30,12 +31,12 @@ module_policy_ceilings_floors_xml <- function(command, ...) {
     L301.RES_secout <- get_data(all_data, "L301.RES_secout")
     L301.input_tax <- get_data(all_data, "L301.input_tax")
     L301.policy_port_stnd <- get_data(all_data, "L301.policy_port_stnd")
-    A_Policy_XML_Names <- get_data(all_data, "policy/A_Policy_XML_Names")
+    L301.XML_policy_map <- get_data(all_data, "L301.XML_policy_map")
 
     # Match XML names in A_Policy_XML_Names to policies
     # If no xml listed for given region/market/policy, assign to policy_ceilings_floors.xml
     L301.policy_port_stnd_xml <- L301.policy_port_stnd %>%
-      left_join(A_Policy_XML_Names, by = c("policy.portfolio.standard", "market")) %>%
+      left_join(L301.XML_policy_map, by = c("policy.portfolio.standard", "market")) %>%
       replace_na(list(xml = "policy_ceilings_floors.xml"))
 
     # ===================================================
