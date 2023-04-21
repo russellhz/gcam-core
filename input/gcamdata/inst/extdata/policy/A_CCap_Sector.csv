@@ -1,8 +1,9 @@
-# File: A_CCap_Sector.csv
-# Title: Mappings between CO2 market and sectors
-# Units: NA
-# Column types: cccc
-# ----------
+# File: A_CCap_Sector.csv,,,
+# Title: Mappings between CO2 market and sectors,,,
+# Units: NA,,,
+# Comments: only list supplysector; default is to include all technologies except biomass techs,,,
+# Column types: cccc,,,
+# ----------,,,
 market,ghgpolicy,supplysector,tranSubsector
 EU_ETS,CO2_ETS,other industrial energy use,
 EU_ETS,CO2_ETS,other industrial feedstocks,
