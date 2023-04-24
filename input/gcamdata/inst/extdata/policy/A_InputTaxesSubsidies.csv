@@ -1,14 +1,14 @@
-# File: A_InputTaxesSubsidies.csv
-# Title: Taxes/Subsidies for Specific Technologies
-# Units: 1975$/GJ
-# Comments: Positive for tax, negative for subsidy
-# Column types: ccccccnn
-# ----------
+# File: A_InputTaxesSubsidies.csv,,,,,,,
+# Title: Taxes/Subsidies for Specific Technologies,,,,,,,
+# Units: 1975$/GJ,,,,,,,
+# Comments: Positive for tax, negative for subsidy,,,,,,
+# Column types: ccccccnn,,,,,,,
+# ----------,,,,,,,
 xml,region,supplysector,subsector,stub.technology,minicam.non.energy.input,2020,2100
 policy_fueltax_aus.xml,Australia_NZ,refined liquids transport,refined liquids transport,refined liquids transport,fuel-tax,3.340659341,3.340659341
-policy_fueltax_eu.xml,EU-15,refined liquids transport,refined liquids transport,refined liquids transport,fuel-tax,5.05699581723094,5.05699581723094
-policy_fueltax_eu.xml,EU-15,delivered gas transport,delivered gas transport,delivered gas transport,fuel-tax,1.07371089107752,1.07371089107752
-policy_fueltax_eu.xml,EU-12,refined liquids transport,refined liquids transport,refined liquids transport,fuel-tax,3.50412466864624,3.50412466864624
-policy_fueltax_eu.xml,EU-12,delivered gas transport,delivered gas transport,delivered gas transport,fuel-tax,0.504987072981841,0.504987072981841
-policy_fueltax_jap.xml,Japan,refined liquids transport,refined liquids transport,refined liquids transport,fuel-tax,3.18881118881119,3.18881118881119
-policy_fueltax_jap.xml,Japan-12,delivered gas transport,delivered gas transport,delivered gas transport,fuel-tax,0.844982542350963,0.844982542350963
+policy_fueltax_eu.xml,EU-15,refined liquids transport,refined liquids transport,refined liquids transport,fuel-tax,5.056995817,5.056995817
+policy_fueltax_eu.xml,EU-15,delivered gas transport,delivered gas transport,delivered gas transport,fuel-tax,1.073710891,1.073710891
+policy_fueltax_eu.xml,EU-12,refined liquids transport,refined liquids transport,refined liquids transport,fuel-tax,3.504124669,3.504124669
+policy_fueltax_eu.xml,EU-12,delivered gas transport,delivered gas transport,delivered gas transport,fuel-tax,0.504987073,0.504987073
+policy_fueltax_jap.xml,Japan,refined liquids transport,refined liquids transport,refined liquids transport,fuel-tax,3.188811189,3.188811189
+policy_fueltax_jap.xml,Japan,delivered gas transport,delivered gas transport,delivered gas transport,fuel-tax,0.844982542,0.844982542
