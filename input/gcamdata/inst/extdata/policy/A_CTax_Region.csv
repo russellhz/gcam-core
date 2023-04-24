@@ -1,7 +1,0 @@
-# File: A_CTax_Region.csv
-# Title: Mappings between regions and market
-# Units: NA
-# Comments: Empty for a policy unless combining multiple regions
-# Column types: ccc
-# ----------
-region,market,ghgpolicy

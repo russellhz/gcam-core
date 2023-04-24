@@ -14,7 +14,8 @@ module_policy_CTax.xml <- function(command, ...) {
 
   if(command == driver.DECLARE_INPUTS) {
     return(c("L3222.CTax",
-             "L3222.CTax_link_regions"))
+             "L3222.CTax_GHG_Link",
+             "L3222.CTax_Region_Link"))
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(all_xml_names)
   } else if(command == driver.MAKE) {
@@ -23,7 +24,8 @@ module_policy_CTax.xml <- function(command, ...) {
 
     # Load required inputs
     L3222.CTax <- get_data(all_data, "L3222.CTax")
-    L3222.CTax_link_regions <- get_data(all_data, "L3222.CTax_link_regions")
+    L3222.CTax_GHG_Link <- get_data(all_data, "L3222.CTax_GHG_Link")
+    L3222.CTax_Region_Link <- get_data(all_data, "L3222.CTax_Region_Link")
     # ===================================================
     # Need to split L3222.CTax into years with fillout and years without
     L3222.CTax_fillout <- L3222.CTax %>%
@@ -43,17 +45,21 @@ module_policy_CTax.xml <- function(command, ...) {
         filter(xml == xml_name) %>%
         select(-xml)
 
-      L3222.CTax_link_regions_tmp <- L3222.CTax_link_regions %>%
+      L3222.CTax_Region_Link_tmp <- L3222.CTax_Region_Link %>%
         filter(xml == xml_name) %>%
         select(-xml)
+
+      L3222.CTax_GHG_Link_tmp <- L3222.CTax_GHG_Link %>%
+        semi_join(bind_rows(L3222.CTax_noFillout_tmp, L3222.CTax_fillout_tmp),
+                  by = c("linked.policy" = "ghgpolicy"  ))
 
       assign(xml_name,
              create_xml(xml_name) %>%
                add_xml_data(L3222.CTax_noFillout_tmp, "GHGTax") %>%
                add_xml_data(L3222.CTax_fillout_tmp, "GHGTaxFillout") %>%
-               add_xml_data(L3222.CTax_link_regions_tmp, "GHGConstrMkt") %>%
-               add_precursors("L3222.CTax",
-                              "L3222.CTax_link_regions")
+               add_xml_data(L3222.CTax_Region_Link_tmp, "GHGConstrMkt") %>%
+               add_xml_data(L3222.CTax_GHG_Link_tmp, "GHGConstrLink") %>%
+               add_precursors("L3222.CTax", "L3222.CTax_GHG_Link", "L3222.CTax_Region_Link")
       )
     }
 
