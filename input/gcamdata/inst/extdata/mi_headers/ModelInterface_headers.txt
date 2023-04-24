@@ -443,6 +443,7 @@ StubTranTechCost, world/+{name}region, region/+{name}supplysector, supplysector/
 
 StubTranTechProd, world/+{name}region, region/+{name}supplysector, supplysector/+{name}tranSubsector, tranSubsector/+{name}stub-technology, stub-technology/+{year}period, CalDataOutput/+calOutputValue, period/CalDataOutput, scenario, scenario/world
 
+StubTranTechShrwt, world/+{name}region, region/+{name}supplysector, supplysector/+{name}tranSubsector, tranSubsector/+{name}stub-technology, stub-technology/+{year}period, period/+share-weight, scenario, scenario/world
 
 #####, FINAL DEMAND
 
@@ -621,6 +622,10 @@ GHGTaxFillout, world/+{name}region, region/+{name}ghgpolicy, ghgpolicy/+{name}ma
 SubsectorDeleteInterp, world/+{name}region, region/+{name}supplysector, supplysector/+{name}subsector, subsector/+{apply-to}interpolation-rule, subsector/+{from-year}interpolation-rule, subsector/+{to-year}interpolation-rule,subsector/+{delete}interpolation-rule, interpolation-rule/+{name}interpolation-function, scenario/world, scenario
 
 StubTechDeleteInterp, world/+{name}region, region/+{name}supplysector, supplysector/+{name}subsector, subsector/+{name}stub-technology, stub-technology/+{apply-to}interpolation-rule, stub-technology/+{from-year}interpolation-rule, stub-technology/+{to-year}interpolation-rule,stub-technology/+{delete}interpolation-rule, interpolation-rule/+{name}interpolation-function, scenario, scenario/world
+
+TranSubsectorDeleteInterp, world/+{name}region, region/+{name}supplysector, supplysector/+{name}tranSubsector, tranSubsector/+{apply-to}interpolation-rule, tranSubsector/+{from-year}interpolation-rule, tranSubsector/+{to-year}interpolation-rule,tranSubsector/+{delete}interpolation-rule, interpolation-rule/+{name}interpolation-function, scenario/world, scenario
+
+TranStubTechDeleteInterp, world/+{name}region, region/+{name}supplysector, supplysector/+{name}tranSubsector, tranSubsector/+{name}stub-technology, stub-technology/+{apply-to}interpolation-rule, stub-technology/+{from-year}interpolation-rule, stub-technology/+{to-year}interpolation-rule,stub-technology/+{delete}interpolation-rule, interpolation-rule/+{name}interpolation-function, scenario, scenario/world
 
 #####, LAND ALLOCATOR
 

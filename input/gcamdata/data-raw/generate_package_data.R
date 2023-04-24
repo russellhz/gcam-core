@@ -248,6 +248,7 @@ generate_level2_data_names <- function() {
   level2_data_names[["StubTranTechCost"]] <- c("region", "supplysector", "tranSubsector", "stub.technology", "year", "minicam.non.energy.input", "input.cost")
   level2_data_names[["StubTranTechLoadFactor"]] <- c("region", "supplysector", "tranSubsector", "stub.technology", "year", "loadFactor")
   level2_data_names[["StubTranTechProd"]] <- c("region", "supplysector", "tranSubsector", "stub.technology", "year", "calOutputValue")
+  level2_data_names[["StubTranTechShrwt"]] <- c("region", "supplysector", "tranSubsector", "stub.technology", "year", "share.weight")
   level2_data_names[["DeleteStubTech"]] <- level2_data_names[["StubTech"]]
   level2_data_names[["StubTechSCurve"]] <- c("region", "supplysector", "subsector", "stub.technology", "year", "lifetime", "steepness", "half.life")
   level2_data_names[["StubTechLifetime"]] <- c("region", "supplysector", "subsector", "stub.technology", "year", "lifetime")
@@ -467,6 +468,8 @@ generate_level2_data_names <- function() {
   level2_data_names[["GHGTaxFillout"]] <- c(level2_data_names[["GHGTax"]], "year.fillout")
   level2_data_names[["SubsectorDeleteInterp"]] <- c(level2_data_names[["Subsector"]], "apply.to", "from.year", "to.year", "delete", "interpolation.function")
   level2_data_names[["StubTechDeleteInterp"]] <- c(level2_data_names[["StubTech"]], "apply.to", "from.year", "to.year",  "delete", "interpolation.function")
+  level2_data_names[["TranSubsectorDeleteInterp"]] <- c( "region", "supplysector", "tranSubsector" , "apply.to", "from.year", "to.year", "delete", "interpolation.function")
+  level2_data_names[["TranStubTechDeleteInterp"]] <- c(level2_data_names[["StubTranTech"]], "apply.to", "from.year", "to.year",  "delete", "interpolation.function")
 
   level2_data_names
 }

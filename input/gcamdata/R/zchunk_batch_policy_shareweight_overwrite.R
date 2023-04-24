@@ -14,7 +14,9 @@ module_policy_shareweight_overwrite_xml <- function(command, ...) {
 
   if(command == driver.DECLARE_INPUTS) {
     return(c("L303.shareweight_overwrite_subsector",
-             "L303.shareweight_overwrite_stubtech"))
+             "L303.shareweight_overwrite_stubtech",
+             "L303.shareweight_overwrite_trnSubsector",
+             "L303.shareweight_overwrite_trnStubtech"))
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(all_xml_names)
   } else if(command == driver.MAKE) {
@@ -24,6 +26,8 @@ module_policy_shareweight_overwrite_xml <- function(command, ...) {
     # Load required inputs
     L303.shareweight_overwrite_subsector <- get_data(all_data, "L303.shareweight_overwrite_subsector")
     L303.shareweight_overwrite_stubtech <- get_data(all_data, "L303.shareweight_overwrite_stubtech")
+    L303.shareweight_overwrite_trnSubsector <- get_data(all_data, "L303.shareweight_overwrite_trnSubsector")
+    L303.shareweight_overwrite_trnStubtech <- get_data(all_data, "L303.shareweight_overwrite_trnStubtech")
     # ===================================================
     # Produce outputs
     for (xml_name in all_xml_names){
@@ -43,14 +47,36 @@ module_policy_shareweight_overwrite_xml <- function(command, ...) {
         filter(xml == xml_name) %>%
         distinct(region, supplysector, subsector, stub.technology, from.year, to.year, apply.to, delete, interpolation.function)
 
+      L303.shareweight_trnSubsector_tmp <- L303.shareweight_overwrite_trnSubsector %>%
+        filter(xml == xml_name) %>%
+        select(region, supplysector, tranSubsector, year, share.weight)
+
+      L303.shareweight_trnSubsector_interp_tmp <- L303.shareweight_overwrite_trnSubsector %>%
+        filter(xml == xml_name) %>%
+        distinct(region, supplysector, tranSubsector, from.year, to.year, apply.to, delete, interpolation.function)
+
+      L303.shareweight_trnStubtech_tmp <- L303.shareweight_overwrite_trnStubtech %>%
+        filter(xml == xml_name) %>%
+        select(region, supplysector, tranSubsector, stub.technology, year, share.weight)
+
+      L303.shareweight_trnStubtech_interp_tmp <- L303.shareweight_overwrite_trnStubtech %>%
+        filter(xml == xml_name) %>%
+        distinct(region, supplysector, tranSubsector, stub.technology, from.year, to.year, apply.to, delete, interpolation.function)
+
       assign(xml_name,
              create_xml(xml_name) %>%
                add_xml_data(L303.shareweight_subsector_interp_tmp, "SubsectorDeleteInterp") %>%
                add_xml_data(L303.shareweight_subsector_tmp, "SubsectorShrwt") %>%
                add_xml_data(L303.shareweight_stubtech_interp_tmp, "StubTechDeleteInterp") %>%
                add_xml_data(L303.shareweight_stubtech_tmp, "StubTechShrwt") %>%
+               add_xml_data(L303.shareweight_trnSubsector_interp_tmp, "TranSubsectorDeleteInterp") %>%
+               add_xml_data(L303.shareweight_trnSubsector_tmp, "tranSubsectorShrwt") %>%
+               add_xml_data(L303.shareweight_trnStubtech_interp_tmp, "TranStubTechDeleteInterp") %>%
+               add_xml_data(L303.shareweight_trnStubtech_tmp, "StubTranTechShrwt") %>%
                add_precursors("L303.shareweight_overwrite_subsector",
-                              "L303.shareweight_overwrite_stubtech")
+                              "L303.shareweight_overwrite_stubtech",
+                              "L303.shareweight_overwrite_trnSubsector",
+                              "L303.shareweight_overwrite_trnStubtech")
       )
     }
 

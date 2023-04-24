@@ -19,7 +19,9 @@ module_policy_303.shareweight_overwrite <- function(command, ...) {
     ))
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(c("L303.shareweight_overwrite_subsector",
-             "L303.shareweight_overwrite_stubtech"))
+             "L303.shareweight_overwrite_trnSubsector",
+             "L303.shareweight_overwrite_stubtech",
+             "L303.shareweight_overwrite_trnStubtech"))
   } else if(command == driver.MAKE) {
 
     all_data <- list(...)[[1]]
@@ -39,6 +41,13 @@ module_policy_303.shareweight_overwrite <- function(command, ...) {
       ungroup %>%
       mutate(apply.to = "share-weight", to.year = max(MODEL_YEARS), delete = 1, interpolation.function = "fixed")
 
+    # If "trn_" in supplysector, change subsector to tranSubsector
+    L303.shareweight_interp_trn <- L303.shareweight_interp %>%
+      filter(grepl("trn", supplysector)) %>%
+      rename(tranSubsector = subsector)
+
+    L303.shareweight_interp <- L303.shareweight_interp %>%
+      filter(!grepl("trn", supplysector))
 
     # Produce outputs
     L303.shareweight_interp %>%
@@ -56,8 +65,25 @@ module_policy_303.shareweight_overwrite <- function(command, ...) {
       add_precursors("policy/A_Shareweights") ->
       L303.shareweight_overwrite_stubtech
 
+    L303.shareweight_interp_trn %>%
+      filter(is.na(stub.technology)) %>%
+      select(-stub.technology) %>%
+      add_title("tranSubsector shareweights to overwrite", overwrite = T) %>%
+      add_units("NA") %>%
+      add_precursors("policy/A_Shareweights") ->
+      L303.shareweight_overwrite_trnSubsector
+
+    L303.shareweight_interp_trn %>%
+      filter(!is.na(stub.technology))  %>%
+      add_title("tranStubtech shareweights to overwrite", overwrite = T) %>%
+      add_units("NA") %>%
+      add_precursors("policy/A_Shareweights") ->
+      L303.shareweight_overwrite_trnStubtech
+
     return_data(L303.shareweight_overwrite_subsector,
-                L303.shareweight_overwrite_stubtech)
+                L303.shareweight_overwrite_stubtech,
+                L303.shareweight_overwrite_trnSubsector,
+                L303.shareweight_overwrite_trnStubtech)
   } else {
     stop("Unknown command")
   }
