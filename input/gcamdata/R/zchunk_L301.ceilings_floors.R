@@ -43,10 +43,10 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
       filter(!is.na(constraint)) %>%
       # Leaving grouped on purpose here
       group_by(region, market, policy.portfolio.standard, policyType,
-               supplysector, subsector, technology) %>%
+               supplysector, subsector, stub.technology) %>%
       # Interpolates between min and max years for each region/policy combo
       complete(nesting(xml, region, market, policy.portfolio.standard, policyType,
-                       supplysector, subsector, technology),
+                       supplysector, subsector, stub.technology),
                year = seq(min(year), max(year), 5))
 
     # Separate out groups with only 1 value since they get turned into NAs with approx_fun
@@ -83,9 +83,9 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
       # Necessary because some regions have multiple policies and we don't want to combine them
       tibble::rowid_to_column() %>%
       gather_years(value_col = "res.secondary.output") %>%
-      group_by(rowid, region, supplysector, subsector, technology, output.ratio) %>%
+      group_by(rowid, region, supplysector, subsector, stub.technology, output.ratio) %>%
       # Interpolates between min and max years for each region/output combo
-      complete(nesting(rowid, region, supplysector, subsector, technology, output.ratio),
+      complete(nesting(rowid, region, supplysector, subsector, stub.technology, output.ratio),
                year = seq(min(year), max(year), 5)) %>%
       mutate(res.secondary.output =if_else(is.na(res.secondary.output),
                                            res.secondary.output[year == max(year)],
@@ -97,9 +97,9 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
     L301.input_tax <- A_Policy_Constraints_Techs %>%
       gather_years(value_col = "input.tax") %>%
       filter(!is.na(input.tax)) %>%
-      group_by(region, supplysector, subsector, technology) %>%
+      group_by(region, supplysector, subsector, stub.technology) %>%
       # Interpolates between min and max years for each region/output combo
-      complete(nesting(region, supplysector, subsector, technology),
+      complete(nesting(region, supplysector, subsector, stub.technology),
                year = seq(min(year), max(year), 5)) %>%
       mutate(input.tax = if_else(is.na(input.tax),
                                 input.tax[year == max(year)],

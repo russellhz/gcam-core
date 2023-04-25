@@ -3,7 +3,7 @@
 # Units: NA,,,,,,
 # Column types: ccccccc,,,,,,
 # ----------,,,,,,
-region,supplysector,subsector,technology,2015,2030,2100
+region,supplysector,subsector,stub.technology,2015,2030,2100
 EU-12,delivered biomass,delivered biomass,delivered biomass,fe-constraint,fe-constraint,fe-constraint
 EU-12,delivered coal,delivered coal,delivered coal,fe-constraint,fe-constraint,fe-constraint
 EU-12,elect_td_bld,elect_td_bld,elect_td_bld,fe-constraint,fe-constraint,fe-constraint

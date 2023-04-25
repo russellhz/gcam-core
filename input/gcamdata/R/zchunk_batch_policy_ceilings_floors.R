@@ -74,9 +74,9 @@ module_policy_ceilings_floors_xml <- function(command, ...) {
       assign(xml_name,
              create_xml(xml_name) %>%
                add_xml_data(L301.policy_port_stnd_tmp, "PortfolioStdConstraint") %>%
-               add_xml_data(L301.policy_RES_coefs_tmp, "StubTechCoefIndUrb") %>%
-               add_xml_data(L301.RES_secout_tmp, "TechResSecOut") %>%
-               add_xml_data(L301.input_tax_tmp, "TechInputTax") %>%
+               add_xml_data(L301.policy_RES_coefs_tmp, "StubTechCoef_NM") %>%
+               add_xml_data(L301.RES_secout_tmp, "StubTechResSecOut") %>%
+               add_xml_data(L301.input_tax_tmp, "StubTechInputTax") %>%
                add_precursors("L301.policy_port_stnd",
                               "L301.policy_RES_coefs",
                               "L301.RES_secout",

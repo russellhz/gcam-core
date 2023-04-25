@@ -3,7 +3,7 @@
 # Units: Refined liquid proportion (biofuel targets),,,,,,,,,,,
 # Column types: ccccccccnnnn,,,,,,,,,,,
 # ----------,,,,,,,,,,,
-xml,region,market,policy.portfolio.standard,policyType,supplysector,subsector,technology,2020,2025,2030,2100
+xml,region,market,policy.portfolio.standard,policyType,supplysector,subsector,stub.technology,2020,2025,2030,2100
 policy_biofuel_arg.xml,Argentina,Argentina,biofuel-target,RES,refined liquids transport,refined liquids transport,refined liquids transport,0.06,0.06,0.06,0.06
 policy_biofuel_arg.xml,Argentina,Argentina,biodiesel-target,RES,refined liquids transport,refined liquids transport,refined liquids transport,0.05,0.05,0.05,0.05
 policy_biofuel_bra.xml,Brazil,Brazil,biofuel-target,RES,refined liquids transport,refined liquids transport,refined liquids transport,0.135,0.135,0.135,0.135
