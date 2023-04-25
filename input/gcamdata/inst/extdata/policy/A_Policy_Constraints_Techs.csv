@@ -1,8 +1,8 @@
-# File: A_Policy_Constraints_Techs.csv
-# Title: Policy targets technologies
-# Units: NA
-# Column types: ccccccc
-# ----------
+# File: A_Policy_Constraints_Techs.csv,,,,,,
+# Title: Policy targets technologies,,,,,,
+# Units: NA,,,,,,
+# Column types: ccccccc,,,,,,
+# ----------,,,,,,
 region,supplysector,subsector,technology,2015,2030,2100
 EU-12,delivered biomass,delivered biomass,delivered biomass,fe-constraint,fe-constraint,fe-constraint
 EU-12,delivered coal,delivered coal,delivered coal,fe-constraint,fe-constraint,fe-constraint
@@ -65,13 +65,6 @@ China,agricultural energy use,stationary,coal,ind-constraint,ind-constraint,
 China,agricultural energy use,stationary,electricity,ind-constraint,ind-constraint,
 China,agricultural energy use,stationary,refined liquids,ind-constraint,ind-constraint,
 China,agricultural energy use,stationary,gas,ind-constraint,ind-constraint,
-China,alumina,coal,coal,ind-constraint,ind-constraint,
-China,alumina,coal,coal CCS,ind-constraint,ind-constraint,
-China,alumina,gas,gas,ind-constraint,ind-constraint,
-China,alumina,gas,gas CCS,ind-constraint,ind-constraint,
-China,alumina,refined liquids,refined liquids,ind-constraint,ind-constraint,
-China,alumina,refined liquids,refined liquids CCS,ind-constraint,ind-constraint,
-China,aluminum,electricity,electricity,ind-constraint,ind-constraint,
 China,chemical energy use,coal,coal,ind-constraint,ind-constraint,
 China,chemical energy use,electricity,electricity,ind-constraint,ind-constraint,
 China,chemical energy use,gas,gas,ind-constraint,ind-constraint,
@@ -86,12 +79,6 @@ China,construction energy use,stationary,electricity,ind-constraint,ind-constrai
 China,construction energy use,stationary,refined liquids,ind-constraint,ind-constraint,
 China,construction energy use,stationary,gas,ind-constraint,ind-constraint,
 China,construction feedstocks,refined liquids,refined liquids,ind-constraint,ind-constraint,
-China,iron and steel,BLASTFUR,BLASTFUR with hydrogen,ind-constraint,ind-constraint,
-China,iron and steel,BLASTFUR,Biomass-based,ind-constraint,ind-constraint,
-China,iron and steel,BLASTFUR,BLASTFUR,ind-constraint,ind-constraint,
-China,iron and steel,EAF with DRI,Hydrogen-based DRI,ind-constraint,ind-constraint,
-China,iron and steel,EAF with DRI,EAF with DRI,ind-constraint,ind-constraint,
-China,iron and steel,EAF with scrap,EAF with scrap,ind-constraint,ind-constraint,
 China,mining energy use,mobile,hydrogen,ind-constraint,ind-constraint,
 China,mining energy use,mobile,electricity,ind-constraint,ind-constraint,
 China,mining energy use,mobile,refined liquids,ind-constraint,ind-constraint,
@@ -117,11 +104,6 @@ Japan,agricultural energy use,mobile,electricity,ind-constraint,ind-constraint,i
 Japan,agricultural energy use,mobile,refined liquids,ind-constraint,ind-constraint,ind-constraint
 Japan,agricultural energy use,stationary,electricity,ind-constraint,ind-constraint,ind-constraint
 Japan,agricultural energy use,stationary,refined liquids,ind-constraint,ind-constraint,ind-constraint
-Japan,alumina,biomass,biomass,ind-constraint,ind-constraint,ind-constraint
-Japan,alumina,coal,coal,ind-constraint,ind-constraint,ind-constraint
-Japan,alumina,gas,gas,ind-constraint,ind-constraint,ind-constraint
-Japan,alumina,refined liquids,refined liquids,ind-constraint,ind-constraint,ind-constraint
-Japan,aluminum,electricity,electricity,ind-constraint,ind-constraint,ind-constraint
 Japan,chemical energy use,biomass,biomass,ind-constraint,ind-constraint,ind-constraint
 Japan,chemical energy use,coal,coal,ind-constraint,ind-constraint,ind-constraint
 Japan,chemical energy use,electricity,electricity,ind-constraint,ind-constraint,ind-constraint
@@ -136,12 +118,6 @@ Japan,construction energy use,stationary,electricity,ind-constraint,ind-constrai
 Japan,construction energy use,stationary,refined liquids,ind-constraint,ind-constraint,ind-constraint
 Japan,construction energy use,stationary,gas,ind-constraint,ind-constraint,ind-constraint
 Japan,construction feedstocks,refined liquids,refined liquids,ind-constraint,ind-constraint,ind-constraint
-Japan,iron and steel,BLASTFUR,BLASTFUR with hydrogen,ind-constraint,ind-constraint,ind-constraint
-Japan,iron and steel,BLASTFUR,Biomass-based,ind-constraint,ind-constraint,ind-constraint
-Japan,iron and steel,BLASTFUR,BLASTFUR,ind-constraint,ind-constraint,ind-constraint
-Japan,iron and steel,EAF with DRI,Hydrogen-based DRI,ind-constraint,ind-constraint,ind-constraint
-Japan,iron and steel,EAF with DRI,EAF with DRI,ind-constraint,ind-constraint,ind-constraint
-Japan,iron and steel,EAF with scrap,EAF with scrap,ind-constraint,ind-constraint,ind-constraint
 Japan,mining energy use,mobile,hydrogen,ind-constraint,ind-constraint,ind-constraint
 Japan,mining energy use,mobile,electricity,ind-constraint,ind-constraint,ind-constraint
 Japan,mining energy use,mobile,refined liquids,ind-constraint,ind-constraint,ind-constraint
@@ -167,12 +143,6 @@ Europe_Non_EU,agricultural energy use,stationary,coal,ind-constraint,ind-constra
 Europe_Non_EU,agricultural energy use,stationary,electricity,ind-constraint,ind-constraint,ind-constraint
 Europe_Non_EU,agricultural energy use,stationary,refined liquids,ind-constraint,ind-constraint,ind-constraint
 Europe_Non_EU,agricultural energy use,stationary,gas,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,alumina,biomass,biomass,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,alumina,coal,coal,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,alumina,gas,gas,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,alumina,gas,gas CCS,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,alumina,refined liquids,refined liquids,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,aluminum,electricity,electricity,ind-constraint,ind-constraint,ind-constraint
 Europe_Non_EU,chemical energy use,coal,coal,ind-constraint,ind-constraint,ind-constraint
 Europe_Non_EU,chemical energy use,electricity,electricity,ind-constraint,ind-constraint,ind-constraint
 Europe_Non_EU,chemical energy use,gas,gas,ind-constraint,ind-constraint,ind-constraint
@@ -185,12 +155,6 @@ Europe_Non_EU,construction energy use,stationary,electricity,ind-constraint,ind-
 Europe_Non_EU,construction energy use,stationary,refined liquids,ind-constraint,ind-constraint,ind-constraint
 Europe_Non_EU,construction energy use,stationary,gas,ind-constraint,ind-constraint,ind-constraint
 Europe_Non_EU,construction feedstocks,refined liquids,refined liquids,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,iron and steel,BLASTFUR,BLASTFUR with hydrogen,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,iron and steel,BLASTFUR,Biomass-based,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,iron and steel,BLASTFUR,BLASTFUR,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,iron and steel,EAF with DRI,Hydrogen-based DRI,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,iron and steel,EAF with DRI,EAF with DRI,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,iron and steel,EAF with scrap,EAF with scrap,ind-constraint,ind-constraint,ind-constraint
 Europe_Non_EU,mining energy use,mobile,refined liquids,ind-constraint,ind-constraint,ind-constraint
 Europe_Non_EU,mining energy use,stationary,coal,ind-constraint,ind-constraint,ind-constraint
 Europe_Non_EU,mining energy use,stationary,electricity,ind-constraint,ind-constraint,ind-constraint
