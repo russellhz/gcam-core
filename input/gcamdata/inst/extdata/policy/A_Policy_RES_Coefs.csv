@@ -55,3 +55,19 @@ policy_feres_eu.xml,EU-15,EU,FE_RES,RES,elect_td_bld,elect_td_bld,elect_td_bld,0
 policy_feres_eu.xml,EU-15,EU,FE_RES,RES,elect_td_bld,rooftop_pv,rooftop_pv,0.19,0.28,0.38,0.38
 policy_feres_eu.xml,EU-15,EU,FE_RES,RES,elect_td_ind,elect_td_ind,elect_td_ind,0.19,0.28,0.38,0.38
 policy_feres_eu.xml,EU-15,EU,FE_RES,RES,elect_td_trn,elect_td_trn,elect_td_trn,0.19,0.28,0.38,0.38
+policy_elecresid_rus.xml,Russia,Russia,elec_resid,RES,resid cooling,electricity,electricity,,,0.2,0.2
+policy_elecresid_rus.xml,Russia,Russia,elec_resid,RES,resid heating,electricity,electricity,,,0.2,0.2
+policy_elecresid_rus.xml,Russia,Russia,elec_resid,RES,resid heating,biomass,biomass,,,0.2,0.2
+policy_elecresid_rus.xml,Russia,Russia,elec_resid,RES,resid heating,coal,coal,,,0.2,0.2
+policy_elecresid_rus.xml,Russia,Russia,elec_resid,RES,resid heating,gas,gas,,,0.2,0.2
+policy_elecresid_rus.xml,Russia,Russia,elec_resid,RES,resid heating,gas,hydrogen,,,0.2,0.2
+policy_elecresid_rus.xml,Russia,Russia,elec_resid,RES,resid heating,refined liquids,refined liquids,,,0.2,0.2
+policy_elecresid_rus.xml,Russia,Russia,elec_resid,RES,resid heating,district heat,district heat,,,0.2,0.2
+policy_elecresid_rus.xml,Russia,Russia,elec_resid,RES,resid others,electricity,electricity,,,0.2,0.2
+policy_elecresid_rus.xml,Russia,Russia,elec_resid,RES,resid others,biomass,biomass,,,0.2,0.2
+policy_elecresid_rus.xml,Russia,Russia,elec_resid,RES,resid others,coal,coal,,,0.2,0.2
+policy_elecresid_rus.xml,Russia,Russia,elec_resid,RES,resid others,gas,gas,,,0.2,0.2
+policy_elecresid_rus.xml,Russia,Russia,elec_resid,RES,resid others,gas,hydrogen,,,0.2,0.2
+policy_elecresid_rus.xml,Russia,Russia,elec_resid,RES,resid others,refined liquids,refined liquids,,,0.2,0.2
+policy_elecresid_rus.xml,Russia,Russia,elec_resid,RES,resid others,district heat,district heat,,,0.2,0.2
+policy_res_arg.xml,Argentina,Argentina,RES-target,RES,electricity_net_ownuse,electricity_net_ownuse,electricity_net_ownuse,0.14,0.3,0.5,0.5

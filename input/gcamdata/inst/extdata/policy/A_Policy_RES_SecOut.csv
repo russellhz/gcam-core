@@ -1,9 +1,9 @@
-# File: A_Policy_RES_SecOut.csv
-# Title: Policy targets secondary outputs
-# Units: NA
-# Column types: ccccccccn
-# ----------
-region,supplysector,subsector,technology,2015,2020,2025,2100,output.ratio 
+# File: A_Policy_RES_SecOut.csv,,,,,,,,
+# Title: Policy targets secondary outputs,,,,,,,,
+# Units: NA,,,,,,,,
+# Column types: ccccccccn,,,,,,,,
+# ----------,,,,,,,,
+region,supplysector,subsector,stub.technology,2015,2020,2025,2100,output.ratio 
 Argentina,refining,biomass liquids,cellulosic ethanol,biofuel-target,biofuel-target,biofuel-target,biofuel-target,1
 Argentina,refining,biomass liquids,cellulosic ethanol CCS level 1,biofuel-target,biofuel-target,biofuel-target,biofuel-target,1
 Argentina,refining,biomass liquids,cellulosic ethanol CCS level 2,biofuel-target,biofuel-target,biofuel-target,biofuel-target,1
@@ -193,3 +193,36 @@ EU-15,refining,biomass liquids,biodiesel,FE_RES,FE_RES,FE_RES,FE_RES,1
 EU-15,refining,biomass liquids,BTL with hydrogen,FE_RES,FE_RES,FE_RES,FE_RES,1
 EU-15,refining,biomass liquids,sugar cane ethanol,FE_RES,FE_RES,FE_RES,FE_RES,1
 EU-15,gas processing,biomass gasification,biomass gasification,FE_RES,FE_RES,FE_RES,FE_RES,1
+Russia,resid cooling,electricity,electricity,elec_resid,elec_resid,elec_resid,elec_resid,1
+Russia,resid heating,electricity,electricity,elec_resid,elec_resid,elec_resid,elec_resid,1
+Russia,resid others,electricity,electricity,elec_resid,elec_resid,elec_resid,elec_resid,1
+Argentina,elect_td_bld,rooftop_pv,rooftop_pv,RES-target,RES-target,RES-target,RES-target,1
+Argentina,electricity,hydro,hydro,RES-target,RES-target,RES-target,RES-target,0.951615763
+Argentina,electricity,wind,wind,RES-target,RES-target,RES-target,RES-target,0.951615763
+Argentina,electricity,wind,wind_offshore,RES-target,RES-target,RES-target,RES-target,0.951615763
+Argentina,electricity,wind,wind_storage,RES-target,RES-target,RES-target,RES-target,0.951615763
+Argentina,electricity,solar,PV,RES-target,RES-target,RES-target,RES-target,0.951615763
+Argentina,electricity,solar,PV_storage,RES-target,RES-target,RES-target,RES-target,0.951615763
+Argentina,elec_geothermal,geothermal,geothermal (recirculating),RES-target,RES-target,RES-target,RES-target,0.951615763
+Argentina,elec_geothermal,geothermal,geothermal (dry_hybrid),RES-target,RES-target,RES-target,RES-target,0.951615763
+Argentina,elec_CSP,CSP,CSP (recirculating),RES-target,RES-target,RES-target,RES-target,0.951615763
+Argentina,elec_CSP,CSP,CSP (dry_hybrid),RES-target,RES-target,RES-target,RES-target,0.951615763
+Argentina,elec_CSP_storage,CSP_storage,CSP_storage (recirculating),RES-target,RES-target,RES-target,RES-target,0.951615763
+Argentina,elec_CSP_storage,CSP_storage,CSP_storage (dry_hybrid),RES-target,RES-target,RES-target,RES-target,0.951615763
+Argentina,elec_biomass (conv),biomass (conv),biomass (conv) (once through),RES-target,RES-target,RES-target,RES-target,0.951615763
+Argentina,elec_biomass (conv),biomass (conv),biomass (conv) (seawater),RES-target,RES-target,RES-target,RES-target,0.951615763
+Argentina,elec_biomass (conv),biomass (conv),biomass (conv) (recirculating),RES-target,RES-target,RES-target,RES-target,0.951615763
+Argentina,elec_biomass (conv),biomass (conv),biomass (conv) (cooling pond),RES-target,RES-target,RES-target,RES-target,0.951615763
+Argentina,elec_biomass (conv),biomass (conv),biomass (conv) (dry cooling),RES-target,RES-target,RES-target,RES-target,0.951615763
+Argentina,elec_biomass (IGCC),biomass (IGCC),biomass (IGCC) (once through),RES-target,RES-target,RES-target,RES-target,0.951615763
+Argentina,elec_biomass (IGCC),biomass (IGCC),biomass (IGCC) (seawater),RES-target,RES-target,RES-target,RES-target,0.951615763
+Argentina,elec_biomass (IGCC),biomass (IGCC),biomass (IGCC) (recirculating),RES-target,RES-target,RES-target,RES-target,0.951615763
+Argentina,elec_biomass (IGCC),biomass (IGCC),biomass (IGCC) (dry cooling),RES-target,RES-target,RES-target,RES-target,0.951615763
+Argentina,elec_biomass (conv CCS),biomass (conv CCS),biomass (conv CCS) (once through),RES-target,RES-target,RES-target,RES-target,0.951615763
+Argentina,elec_biomass (conv CCS),biomass (conv CCS),biomass (conv CCS) (seawater),RES-target,RES-target,RES-target,RES-target,0.951615763
+Argentina,elec_biomass (conv CCS),biomass (conv CCS),biomass (conv CCS) (recirculating),RES-target,RES-target,RES-target,RES-target,0.951615763
+Argentina,elec_biomass (conv CCS),biomass (conv CCS),biomass (conv CCS) (dry cooling),RES-target,RES-target,RES-target,RES-target,0.951615763
+Argentina,elec_biomass (IGCC CCS),biomass (IGCC CCS),biomass (IGCC CCS) (once through),RES-target,RES-target,RES-target,RES-target,0.951615763
+Argentina,elec_biomass (IGCC CCS),biomass (IGCC CCS),biomass (IGCC CCS) (seawater),RES-target,RES-target,RES-target,RES-target,0.951615763
+Argentina,elec_biomass (IGCC CCS),biomass (IGCC CCS),biomass (IGCC CCS) (recirculating),RES-target,RES-target,RES-target,RES-target,0.951615763
+Argentina,elec_biomass (IGCC CCS),biomass (IGCC CCS),biomass (IGCC CCS) (dry cooling),RES-target,RES-target,RES-target,RES-target,0.951615763
