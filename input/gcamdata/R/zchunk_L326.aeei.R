@@ -19,29 +19,29 @@ module_policy_L326.aeei <- function(command, ...) {
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(c("L326.aeei"))
   } else if(command == driver.MAKE) {
-    
+
     all_data <- list(...)[[1]]
-    
+
     # Load required inputs
     A_aeei <- get_data(all_data, "policy/A_aeei")
-    
+
     # Convert to long format and interpolate any missing years
-    L326.aeei <- A_aeei %>% 
-      gather_years() %>% 
+    L326.aeei <- A_aeei %>%
+      gather_years() %>%
       # Interpolates between min and max years in A_aeei
-      complete(nesting(region, energy.final.demand), year = seq(min(year), max(year), 5)) %>% 
-      group_by(region, energy.final.demand) %>%
-      mutate(value = approx_fun(year, value)) %>% 
-      ungroup %>% 
+      complete(nesting(xml, region, energy.final.demand), year = seq(min(year), max(year), 5)) %>%
+      group_by(xml, region, energy.final.demand) %>%
+      mutate(value = approx_fun(year, value)) %>%
+      ungroup %>%
       rename(aeei = value)
-    
+
     # Produce outputs
     L326.aeei %>%
       add_title("AEEI (autonomous energy efficiency improvement index) parameters by region and sector", overwrite = T) %>%
       add_units("Unitless") %>%
       add_precursors("policy/A_aeei") ->
       L326.aeei
-    
+
     return_data(L326.aeei)
   } else {
     stop("Unknown command")
