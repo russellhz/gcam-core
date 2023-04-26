@@ -631,6 +631,8 @@ TranSubsectorDeleteInterp, world/+{name}region, region/+{name}supplysector, supp
 
 TranStubTechDeleteInterp, world/+{name}region, region/+{name}supplysector, supplysector/+{name}tranSubsector, tranSubsector/+{name}stub-technology, stub-technology/+{apply-to}interpolation-rule, stub-technology/+{from-year}interpolation-rule, stub-technology/+{to-year}interpolation-rule,stub-technology/+{delete}interpolation-rule, interpolation-rule/+{name}interpolation-function, scenario, scenario/world
 
+StubTechCoef_NM_Policy, world/+{name}region, region/+{name}supplysector, supplysector/+{name}subsector, subsector/+{name}stub-technology, stub-technology/+{year}period, period/+{name}minicam-energy-input, minicam-energy-input/+coefficient, scenario, scenario/world
+
 #####, LAND ALLOCATOR
 
 

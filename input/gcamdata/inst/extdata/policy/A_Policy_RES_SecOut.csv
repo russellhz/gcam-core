@@ -226,3 +226,5 @@ Argentina,elec_biomass (IGCC CCS),biomass (IGCC CCS),biomass (IGCC CCS) (once th
 Argentina,elec_biomass (IGCC CCS),biomass (IGCC CCS),biomass (IGCC CCS) (seawater),RES-target,RES-target,RES-target,RES-target,0.951615763
 Argentina,elec_biomass (IGCC CCS),biomass (IGCC CCS),biomass (IGCC CCS) (recirculating),RES-target,RES-target,RES-target,RES-target,0.951615763
 Argentina,elec_biomass (IGCC CCS),biomass (IGCC CCS),biomass (IGCC CCS) (dry cooling),RES-target,RES-target,RES-target,RES-target,0.951615763
+China,regional natural gas,domestic natural gas,domestic natural gas,TPES_GAS,TPES_GAS,TPES_GAS,TPES_GAS,1
+China,regional natural gas,imported natural gas,imported natural gas,TPES_GAS,TPES_GAS,TPES_GAS,TPES_GAS,1

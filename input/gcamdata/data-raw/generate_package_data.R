@@ -472,6 +472,7 @@ generate_level2_data_names <- function() {
   level2_data_names[["StubTechDeleteInterp"]] <- c(level2_data_names[["StubTech"]], "apply.to", "from.year", "to.year",  "delete", "interpolation.function")
   level2_data_names[["TranSubsectorDeleteInterp"]] <- c( "region", "supplysector", "tranSubsector" , "apply.to", "from.year", "to.year", "delete", "interpolation.function")
   level2_data_names[["TranStubTechDeleteInterp"]] <- c(level2_data_names[["StubTranTech"]], "apply.to", "from.year", "to.year",  "delete", "interpolation.function")
+  level2_data_names[["StubTechCoef_NM_Policy"]] <- level2_data_names[["StubTechCoef_NM"]]
 
   level2_data_names
 }
