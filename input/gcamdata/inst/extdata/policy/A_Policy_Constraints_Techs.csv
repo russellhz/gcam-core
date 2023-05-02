@@ -1,180 +1,180 @@
 # File: A_Policy_Constraints_Techs.csv,,,,,,
 # Title: Policy targets technologies,,,,,,
 # Units: NA,,,,,,
-# Column types: ccccccc,,,,,,
+# Column types: cccccii,,,,,,
 # ----------,,,,,,
-region,supplysector,subsector,stub.technology,2015,2030,2100
-EU-12,delivered biomass,delivered biomass,delivered biomass,fe-constraint,fe-constraint,fe-constraint
-EU-12,delivered coal,delivered coal,delivered coal,fe-constraint,fe-constraint,fe-constraint
-EU-12,elect_td_bld,elect_td_bld,elect_td_bld,fe-constraint,fe-constraint,fe-constraint
-EU-12,elect_td_ind,elect_td_ind,elect_td_ind,fe-constraint,fe-constraint,fe-constraint
-EU-12,elect_td_trn,elect_td_trn,elect_td_trn,fe-constraint,fe-constraint,fe-constraint
-EU-12,wholesale gas,wholesale gas,wholesale gas,fe-constraint,fe-constraint,fe-constraint
-EU-12,delivered gas,delivered gas,delivered gas,fe-constraint,fe-constraint,fe-constraint
-EU-12,delivered gas transport,delivered gas transport,delivered gas transport,fe-constraint,fe-constraint,fe-constraint
-EU-12,refined liquids enduse,refined liquids enduse,refined liquids enduse,fe-constraint,fe-constraint,fe-constraint
-EU-12,refined liquids industrial,refined liquids industrial,refined liquids industrial,fe-constraint,fe-constraint,fe-constraint
-EU-12,refined liquids transport,refined liquids transport,refined liquids transport,fe-constraint,fe-constraint,fe-constraint
-EU-12,H2 wholesale delivery,H2 liquid truck,H2 liquid truck,fe-constraint,fe-constraint,fe-constraint
-EU-12,H2 wholesale delivery,H2 pipeline,H2 pipeline,fe-constraint,fe-constraint,fe-constraint
-EU-12,H2 industrial,forecourt production,electrolysis,fe-constraint,fe-constraint,fe-constraint
-EU-12,H2 wholesale dispensing,H2 delivery,H2 liquid truck,fe-constraint,fe-constraint,fe-constraint
-EU-12,H2 wholesale dispensing,H2 delivery,H2 pipeline,fe-constraint,fe-constraint,fe-constraint
-EU-12,H2 wholesale dispensing,forecourt production,electrolysis,fe-constraint,fe-constraint,fe-constraint
-EU-12,H2 wholesale dispensing,forecourt production,natural gas steam reforming,fe-constraint,fe-constraint,fe-constraint
-EU-15,delivered biomass,delivered biomass,delivered biomass,fe-constraint,fe-constraint,fe-constraint
-EU-15,delivered coal,delivered coal,delivered coal,fe-constraint,fe-constraint,fe-constraint
-EU-15,elect_td_bld,elect_td_bld,elect_td_bld,fe-constraint,fe-constraint,fe-constraint
-EU-15,elect_td_ind,elect_td_ind,elect_td_ind,fe-constraint,fe-constraint,fe-constraint
-EU-15,elect_td_trn,elect_td_trn,elect_td_trn,fe-constraint,fe-constraint,fe-constraint
-EU-15,wholesale gas,wholesale gas,wholesale gas,fe-constraint,fe-constraint,fe-constraint
-EU-15,delivered gas,delivered gas,delivered gas,fe-constraint,fe-constraint,fe-constraint
-EU-15,delivered gas transport,delivered gas transport,delivered gas transport,fe-constraint,fe-constraint,fe-constraint
-EU-15,refined liquids enduse,refined liquids enduse,refined liquids enduse,fe-constraint,fe-constraint,fe-constraint
-EU-15,refined liquids industrial,refined liquids industrial,refined liquids industrial,fe-constraint,fe-constraint,fe-constraint
-EU-15,refined liquids transport,refined liquids transport,refined liquids transport,fe-constraint,fe-constraint,fe-constraint
-EU-15,H2 wholesale delivery,H2 liquid truck,H2 liquid truck,fe-constraint,fe-constraint,fe-constraint
-EU-15,H2 wholesale delivery,H2 pipeline,H2 pipeline,fe-constraint,fe-constraint,fe-constraint
-EU-15,H2 industrial,forecourt production,electrolysis,fe-constraint,fe-constraint,fe-constraint
-EU-15,H2 wholesale dispensing,H2 delivery,H2 liquid truck,fe-constraint,fe-constraint,fe-constraint
-EU-15,H2 wholesale dispensing,H2 delivery,H2 pipeline,fe-constraint,fe-constraint,fe-constraint
-EU-15,H2 wholesale dispensing,forecourt production,electrolysis,fe-constraint,fe-constraint,fe-constraint
-EU-15,H2 wholesale dispensing,forecourt production,natural gas steam reforming,fe-constraint,fe-constraint,fe-constraint
-Japan,delivered biomass,delivered biomass,delivered biomass,fe-constraint,fe-constraint,fe-constraint
-Japan,delivered coal,delivered coal,delivered coal,fe-constraint,fe-constraint,fe-constraint
-Japan,elect_td_bld,elect_td_bld,elect_td_bld,fe-constraint,fe-constraint,fe-constraint
-Japan,elect_td_ind,elect_td_ind,elect_td_ind,fe-constraint,fe-constraint,fe-constraint
-Japan,elect_td_trn,elect_td_trn,elect_td_trn,fe-constraint,fe-constraint,fe-constraint
-Japan,wholesale gas,wholesale gas,wholesale gas,fe-constraint,fe-constraint,fe-constraint
-Japan,delivered gas,delivered gas,delivered gas,fe-constraint,fe-constraint,fe-constraint
-Japan,delivered gas transport,delivered gas transport,delivered gas transport,fe-constraint,fe-constraint,fe-constraint
-Japan,refined liquids enduse,refined liquids enduse,refined liquids enduse,fe-constraint,fe-constraint,fe-constraint
-Japan,refined liquids industrial,refined liquids industrial,refined liquids industrial,fe-constraint,fe-constraint,fe-constraint
-Japan,refined liquids transport,refined liquids transport,refined liquids transport,fe-constraint,fe-constraint,fe-constraint
-Japan,H2 wholesale delivery,H2 liquid truck,H2 liquid truck,fe-constraint,fe-constraint,fe-constraint
-Japan,H2 wholesale delivery,H2 pipeline,H2 pipeline,fe-constraint,fe-constraint,fe-constraint
-Japan,H2 industrial,forecourt production,electrolysis,fe-constraint,fe-constraint,fe-constraint
-Japan,H2 wholesale dispensing,H2 delivery,H2 liquid truck,fe-constraint,fe-constraint,fe-constraint
-Japan,H2 wholesale dispensing,H2 delivery,H2 pipeline,fe-constraint,fe-constraint,fe-constraint
-Japan,H2 wholesale dispensing,forecourt production,electrolysis,fe-constraint,fe-constraint,fe-constraint
-Japan,H2 wholesale dispensing,forecourt production,natural gas steam reforming,fe-constraint,fe-constraint,fe-constraint
-China,agricultural energy use,mobile,hydrogen,ind-constraint,ind-constraint,
-China,agricultural energy use,mobile,electricity,ind-constraint,ind-constraint,
-China,agricultural energy use,mobile,refined liquids,ind-constraint,ind-constraint,
-China,agricultural energy use,stationary,coal,ind-constraint,ind-constraint,
-China,agricultural energy use,stationary,electricity,ind-constraint,ind-constraint,
-China,agricultural energy use,stationary,refined liquids,ind-constraint,ind-constraint,
-China,agricultural energy use,stationary,gas,ind-constraint,ind-constraint,
-China,chemical energy use,coal,coal,ind-constraint,ind-constraint,
-China,chemical energy use,electricity,electricity,ind-constraint,ind-constraint,
-China,chemical energy use,gas,gas,ind-constraint,ind-constraint,
-China,chemical energy use,refined liquids,refined liquids,ind-constraint,ind-constraint,
-China,chemical feedstocks,gas,gas,ind-constraint,ind-constraint,
-China,chemical feedstocks,refined liquids,refined liquids,ind-constraint,ind-constraint,
-China,construction energy use,mobile,hydrogen,ind-constraint,ind-constraint,
-China,construction energy use,mobile,electricity,ind-constraint,ind-constraint,
-China,construction energy use,mobile,refined liquids,ind-constraint,ind-constraint,
-China,construction energy use,stationary,coal,ind-constraint,ind-constraint,
-China,construction energy use,stationary,electricity,ind-constraint,ind-constraint,
-China,construction energy use,stationary,refined liquids,ind-constraint,ind-constraint,
-China,construction energy use,stationary,gas,ind-constraint,ind-constraint,
-China,construction feedstocks,refined liquids,refined liquids,ind-constraint,ind-constraint,
-China,mining energy use,mobile,hydrogen,ind-constraint,ind-constraint,
-China,mining energy use,mobile,electricity,ind-constraint,ind-constraint,
-China,mining energy use,mobile,refined liquids,ind-constraint,ind-constraint,
-China,mining energy use,stationary,coal,ind-constraint,ind-constraint,
-China,mining energy use,stationary,electricity,ind-constraint,ind-constraint,
-China,mining energy use,stationary,refined liquids,ind-constraint,ind-constraint,
-China,mining energy use,stationary,gas,ind-constraint,ind-constraint,
-China,other industrial energy use,biomass,biomass,ind-constraint,ind-constraint,
-China,other industrial energy use,coal,coal,ind-constraint,ind-constraint,
-China,other industrial energy use,electricity,electricity,ind-constraint,ind-constraint,
-China,other industrial energy use,gas,gas,ind-constraint,ind-constraint,
-China,other industrial energy use,gas,gas cogen,ind-constraint,ind-constraint,
-China,other industrial energy use,hydrogen,hydrogen,ind-constraint,ind-constraint,
-China,other industrial energy use,hydrogen,hydrogen cogen,ind-constraint,ind-constraint,
-China,other industrial energy use,refined liquids,refined liquids,ind-constraint,ind-constraint,
-China,other industrial feedstocks,coal,coal,ind-constraint,ind-constraint,
-China,other industrial feedstocks,refined liquids,refined liquids,ind-constraint,ind-constraint,
-China,process heat cement,coal,coal,ind-constraint,ind-constraint,
-China,process heat cement,hydrogen,hydrogen,ind-constraint,ind-constraint,
-China,process heat cement,refined liquids,refined liquids,ind-constraint,ind-constraint,
-Japan,agricultural energy use,mobile,hydrogen,ind-constraint,ind-constraint,ind-constraint
-Japan,agricultural energy use,mobile,electricity,ind-constraint,ind-constraint,ind-constraint
-Japan,agricultural energy use,mobile,refined liquids,ind-constraint,ind-constraint,ind-constraint
-Japan,agricultural energy use,stationary,electricity,ind-constraint,ind-constraint,ind-constraint
-Japan,agricultural energy use,stationary,refined liquids,ind-constraint,ind-constraint,ind-constraint
-Japan,chemical energy use,biomass,biomass,ind-constraint,ind-constraint,ind-constraint
-Japan,chemical energy use,coal,coal,ind-constraint,ind-constraint,ind-constraint
-Japan,chemical energy use,electricity,electricity,ind-constraint,ind-constraint,ind-constraint
-Japan,chemical energy use,gas,gas,ind-constraint,ind-constraint,ind-constraint
-Japan,chemical energy use,refined liquids,refined liquids,ind-constraint,ind-constraint,ind-constraint
-Japan,chemical feedstocks,coal,coal,ind-constraint,ind-constraint,ind-constraint
-Japan,chemical feedstocks,refined liquids,refined liquids,ind-constraint,ind-constraint,ind-constraint
-Japan,construction energy use,mobile,hydrogen,ind-constraint,ind-constraint,ind-constraint
-Japan,construction energy use,mobile,electricity,ind-constraint,ind-constraint,ind-constraint
-Japan,construction energy use,mobile,refined liquids,ind-constraint,ind-constraint,ind-constraint
-Japan,construction energy use,stationary,electricity,ind-constraint,ind-constraint,ind-constraint
-Japan,construction energy use,stationary,refined liquids,ind-constraint,ind-constraint,ind-constraint
-Japan,construction energy use,stationary,gas,ind-constraint,ind-constraint,ind-constraint
-Japan,construction feedstocks,refined liquids,refined liquids,ind-constraint,ind-constraint,ind-constraint
-Japan,mining energy use,mobile,hydrogen,ind-constraint,ind-constraint,ind-constraint
-Japan,mining energy use,mobile,electricity,ind-constraint,ind-constraint,ind-constraint
-Japan,mining energy use,mobile,refined liquids,ind-constraint,ind-constraint,ind-constraint
-Japan,mining energy use,stationary,coal,ind-constraint,ind-constraint,ind-constraint
-Japan,mining energy use,stationary,electricity,ind-constraint,ind-constraint,ind-constraint
-Japan,mining energy use,stationary,refined liquids,ind-constraint,ind-constraint,ind-constraint
-Japan,mining energy use,stationary,gas,ind-constraint,ind-constraint,ind-constraint
-Japan,other industrial energy use,biomass,biomass,ind-constraint,ind-constraint,ind-constraint
-Japan,other industrial energy use,coal,coal,ind-constraint,ind-constraint,ind-constraint
-Japan,other industrial energy use,electricity,electricity,ind-constraint,ind-constraint,ind-constraint
-Japan,other industrial energy use,gas,gas,ind-constraint,ind-constraint,ind-constraint
-Japan,other industrial energy use,hydrogen,hydrogen,ind-constraint,ind-constraint,ind-constraint
-Japan,other industrial energy use,hydrogen,hydrogen cogen,ind-constraint,ind-constraint,ind-constraint
-Japan,other industrial energy use,refined liquids,refined liquids,ind-constraint,ind-constraint,ind-constraint
-Japan,other industrial feedstocks,coal,coal,ind-constraint,ind-constraint,ind-constraint
-Japan,other industrial feedstocks,refined liquids,refined liquids,ind-constraint,ind-constraint,ind-constraint
-Japan,process heat cement,coal,coal,ind-constraint,ind-constraint,ind-constraint
-Japan,process heat cement,hydrogen,hydrogen,ind-constraint,ind-constraint,ind-constraint
-Japan,process heat cement,refined liquids,refined liquids,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,agricultural energy use,mobile,refined liquids,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,agricultural energy use,stationary,biomass,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,agricultural energy use,stationary,coal,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,agricultural energy use,stationary,electricity,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,agricultural energy use,stationary,refined liquids,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,agricultural energy use,stationary,gas,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,chemical energy use,coal,coal,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,chemical energy use,electricity,electricity,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,chemical energy use,gas,gas,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,chemical energy use,refined liquids,refined liquids,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,chemical feedstocks,gas,gas,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,chemical feedstocks,refined liquids,refined liquids,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,construction energy use,mobile,refined liquids,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,construction energy use,stationary,coal,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,construction energy use,stationary,electricity,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,construction energy use,stationary,refined liquids,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,construction energy use,stationary,gas,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,construction feedstocks,refined liquids,refined liquids,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,mining energy use,mobile,refined liquids,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,mining energy use,stationary,coal,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,mining energy use,stationary,electricity,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,mining energy use,stationary,refined liquids,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,mining energy use,stationary,gas,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,other industrial energy use,biomass,biomass,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,other industrial energy use,biomass,biomass cogen,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,other industrial energy use,coal,coal,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,other industrial energy use,coal,coal cogen,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,other industrial energy use,electricity,electricity,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,other industrial energy use,gas,gas,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,other industrial energy use,gas,gas cogen,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,other industrial energy use,hydrogen,hydrogen,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,other industrial energy use,hydrogen,hydrogen cogen,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,other industrial energy use,refined liquids,refined liquids,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,other industrial energy use,refined liquids,refined liquids cogen,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,other industrial feedstocks,coal,coal,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,other industrial feedstocks,refined liquids,refined liquids,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,process heat cement,biomass,biomass,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,process heat cement,coal,coal,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,process heat cement,gas,gas,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,process heat cement,hydrogen,hydrogen,ind-constraint,ind-constraint,ind-constraint
-Europe_Non_EU,process heat cement,refined liquids,refined liquids,ind-constraint,ind-constraint,ind-constraint
+region,supplysector,subsector,stub.technology,input.tax,start.year,end.year
+EU-12,delivered biomass,delivered biomass,delivered biomass,fe-constraint,2020,2100
+EU-12,delivered coal,delivered coal,delivered coal,fe-constraint,2020,2100
+EU-12,elect_td_bld,elect_td_bld,elect_td_bld,fe-constraint,2020,2100
+EU-12,elect_td_ind,elect_td_ind,elect_td_ind,fe-constraint,2020,2100
+EU-12,elect_td_trn,elect_td_trn,elect_td_trn,fe-constraint,2020,2100
+EU-12,wholesale gas,wholesale gas,wholesale gas,fe-constraint,2020,2100
+EU-12,delivered gas,delivered gas,delivered gas,fe-constraint,2020,2100
+EU-12,delivered gas transport,delivered gas transport,delivered gas transport,fe-constraint,2020,2100
+EU-12,refined liquids enduse,refined liquids enduse,refined liquids enduse,fe-constraint,2020,2100
+EU-12,refined liquids industrial,refined liquids industrial,refined liquids industrial,fe-constraint,2020,2100
+EU-12,refined liquids transport,refined liquids transport,refined liquids transport,fe-constraint,2020,2100
+EU-12,H2 wholesale delivery,H2 liquid truck,H2 liquid truck,fe-constraint,2020,2100
+EU-12,H2 wholesale delivery,H2 pipeline,H2 pipeline,fe-constraint,2020,2100
+EU-12,H2 industrial,forecourt production,electrolysis,fe-constraint,2020,2100
+EU-12,H2 wholesale dispensing,H2 delivery,H2 liquid truck,fe-constraint,2020,2100
+EU-12,H2 wholesale dispensing,H2 delivery,H2 pipeline,fe-constraint,2020,2100
+EU-12,H2 wholesale dispensing,forecourt production,electrolysis,fe-constraint,2020,2100
+EU-12,H2 wholesale dispensing,forecourt production,natural gas steam reforming,fe-constraint,2020,2100
+EU-15,delivered biomass,delivered biomass,delivered biomass,fe-constraint,2020,2100
+EU-15,delivered coal,delivered coal,delivered coal,fe-constraint,2020,2100
+EU-15,elect_td_bld,elect_td_bld,elect_td_bld,fe-constraint,2020,2100
+EU-15,elect_td_ind,elect_td_ind,elect_td_ind,fe-constraint,2020,2100
+EU-15,elect_td_trn,elect_td_trn,elect_td_trn,fe-constraint,2020,2100
+EU-15,wholesale gas,wholesale gas,wholesale gas,fe-constraint,2020,2100
+EU-15,delivered gas,delivered gas,delivered gas,fe-constraint,2020,2100
+EU-15,delivered gas transport,delivered gas transport,delivered gas transport,fe-constraint,2020,2100
+EU-15,refined liquids enduse,refined liquids enduse,refined liquids enduse,fe-constraint,2020,2100
+EU-15,refined liquids industrial,refined liquids industrial,refined liquids industrial,fe-constraint,2020,2100
+EU-15,refined liquids transport,refined liquids transport,refined liquids transport,fe-constraint,2020,2100
+EU-15,H2 wholesale delivery,H2 liquid truck,H2 liquid truck,fe-constraint,2020,2100
+EU-15,H2 wholesale delivery,H2 pipeline,H2 pipeline,fe-constraint,2020,2100
+EU-15,H2 industrial,forecourt production,electrolysis,fe-constraint,2020,2100
+EU-15,H2 wholesale dispensing,H2 delivery,H2 liquid truck,fe-constraint,2020,2100
+EU-15,H2 wholesale dispensing,H2 delivery,H2 pipeline,fe-constraint,2020,2100
+EU-15,H2 wholesale dispensing,forecourt production,electrolysis,fe-constraint,2020,2100
+EU-15,H2 wholesale dispensing,forecourt production,natural gas steam reforming,fe-constraint,2020,2100
+Japan,delivered biomass,delivered biomass,delivered biomass,fe-constraint,2020,2100
+Japan,delivered coal,delivered coal,delivered coal,fe-constraint,2020,2100
+Japan,elect_td_bld,elect_td_bld,elect_td_bld,fe-constraint,2020,2100
+Japan,elect_td_ind,elect_td_ind,elect_td_ind,fe-constraint,2020,2100
+Japan,elect_td_trn,elect_td_trn,elect_td_trn,fe-constraint,2020,2100
+Japan,wholesale gas,wholesale gas,wholesale gas,fe-constraint,2020,2100
+Japan,delivered gas,delivered gas,delivered gas,fe-constraint,2020,2100
+Japan,delivered gas transport,delivered gas transport,delivered gas transport,fe-constraint,2020,2100
+Japan,refined liquids enduse,refined liquids enduse,refined liquids enduse,fe-constraint,2020,2100
+Japan,refined liquids industrial,refined liquids industrial,refined liquids industrial,fe-constraint,2020,2100
+Japan,refined liquids transport,refined liquids transport,refined liquids transport,fe-constraint,2020,2100
+Japan,H2 wholesale delivery,H2 liquid truck,H2 liquid truck,fe-constraint,2020,2100
+Japan,H2 wholesale delivery,H2 pipeline,H2 pipeline,fe-constraint,2020,2100
+Japan,H2 industrial,forecourt production,electrolysis,fe-constraint,2020,2100
+Japan,H2 wholesale dispensing,H2 delivery,H2 liquid truck,fe-constraint,2020,2100
+Japan,H2 wholesale dispensing,H2 delivery,H2 pipeline,fe-constraint,2020,2100
+Japan,H2 wholesale dispensing,forecourt production,electrolysis,fe-constraint,2020,2100
+Japan,H2 wholesale dispensing,forecourt production,natural gas steam reforming,fe-constraint,2020,2100
+China,agricultural energy use,mobile,hydrogen,ind-constraint,2020,2030
+China,agricultural energy use,mobile,electricity,ind-constraint,2020,2030
+China,agricultural energy use,mobile,refined liquids,ind-constraint,2020,2030
+China,agricultural energy use,stationary,coal,ind-constraint,2020,2030
+China,agricultural energy use,stationary,electricity,ind-constraint,2020,2030
+China,agricultural energy use,stationary,refined liquids,ind-constraint,2020,2030
+China,agricultural energy use,stationary,gas,ind-constraint,2020,2030
+China,chemical energy use,coal,coal,ind-constraint,2020,2030
+China,chemical energy use,electricity,electricity,ind-constraint,2020,2030
+China,chemical energy use,gas,gas,ind-constraint,2020,2030
+China,chemical energy use,refined liquids,refined liquids,ind-constraint,2020,2030
+China,chemical feedstocks,gas,gas,ind-constraint,2020,2030
+China,chemical feedstocks,refined liquids,refined liquids,ind-constraint,2020,2030
+China,construction energy use,mobile,hydrogen,ind-constraint,2020,2030
+China,construction energy use,mobile,electricity,ind-constraint,2020,2030
+China,construction energy use,mobile,refined liquids,ind-constraint,2020,2030
+China,construction energy use,stationary,coal,ind-constraint,2020,2030
+China,construction energy use,stationary,electricity,ind-constraint,2020,2030
+China,construction energy use,stationary,refined liquids,ind-constraint,2020,2030
+China,construction energy use,stationary,gas,ind-constraint,2020,2030
+China,construction feedstocks,refined liquids,refined liquids,ind-constraint,2020,2030
+China,mining energy use,mobile,hydrogen,ind-constraint,2020,2030
+China,mining energy use,mobile,electricity,ind-constraint,2020,2030
+China,mining energy use,mobile,refined liquids,ind-constraint,2020,2030
+China,mining energy use,stationary,coal,ind-constraint,2020,2030
+China,mining energy use,stationary,electricity,ind-constraint,2020,2030
+China,mining energy use,stationary,refined liquids,ind-constraint,2020,2030
+China,mining energy use,stationary,gas,ind-constraint,2020,2030
+China,other industrial energy use,biomass,biomass,ind-constraint,2020,2030
+China,other industrial energy use,coal,coal,ind-constraint,2020,2030
+China,other industrial energy use,electricity,electricity,ind-constraint,2020,2030
+China,other industrial energy use,gas,gas,ind-constraint,2020,2030
+China,other industrial energy use,gas,gas cogen,ind-constraint,2020,2030
+China,other industrial energy use,hydrogen,hydrogen,ind-constraint,2020,2030
+China,other industrial energy use,hydrogen,hydrogen cogen,ind-constraint,2020,2030
+China,other industrial energy use,refined liquids,refined liquids,ind-constraint,2020,2030
+China,other industrial feedstocks,coal,coal,ind-constraint,2020,2030
+China,other industrial feedstocks,refined liquids,refined liquids,ind-constraint,2020,2030
+China,process heat cement,coal,coal,ind-constraint,2020,2030
+China,process heat cement,hydrogen,hydrogen,ind-constraint,2020,2030
+China,process heat cement,refined liquids,refined liquids,ind-constraint,2020,2030
+Japan,agricultural energy use,mobile,hydrogen,ind-constraint,2020,2100
+Japan,agricultural energy use,mobile,electricity,ind-constraint,2020,2100
+Japan,agricultural energy use,mobile,refined liquids,ind-constraint,2020,2100
+Japan,agricultural energy use,stationary,electricity,ind-constraint,2020,2100
+Japan,agricultural energy use,stationary,refined liquids,ind-constraint,2020,2100
+Japan,chemical energy use,biomass,biomass,ind-constraint,2020,2100
+Japan,chemical energy use,coal,coal,ind-constraint,2020,2100
+Japan,chemical energy use,electricity,electricity,ind-constraint,2020,2100
+Japan,chemical energy use,gas,gas,ind-constraint,2020,2100
+Japan,chemical energy use,refined liquids,refined liquids,ind-constraint,2020,2100
+Japan,chemical feedstocks,coal,coal,ind-constraint,2020,2100
+Japan,chemical feedstocks,refined liquids,refined liquids,ind-constraint,2020,2100
+Japan,construction energy use,mobile,hydrogen,ind-constraint,2020,2100
+Japan,construction energy use,mobile,electricity,ind-constraint,2020,2100
+Japan,construction energy use,mobile,refined liquids,ind-constraint,2020,2100
+Japan,construction energy use,stationary,electricity,ind-constraint,2020,2100
+Japan,construction energy use,stationary,refined liquids,ind-constraint,2020,2100
+Japan,construction energy use,stationary,gas,ind-constraint,2020,2100
+Japan,construction feedstocks,refined liquids,refined liquids,ind-constraint,2020,2100
+Japan,mining energy use,mobile,hydrogen,ind-constraint,2020,2100
+Japan,mining energy use,mobile,electricity,ind-constraint,2020,2100
+Japan,mining energy use,mobile,refined liquids,ind-constraint,2020,2100
+Japan,mining energy use,stationary,coal,ind-constraint,2020,2100
+Japan,mining energy use,stationary,electricity,ind-constraint,2020,2100
+Japan,mining energy use,stationary,refined liquids,ind-constraint,2020,2100
+Japan,mining energy use,stationary,gas,ind-constraint,2020,2100
+Japan,other industrial energy use,biomass,biomass,ind-constraint,2020,2100
+Japan,other industrial energy use,coal,coal,ind-constraint,2020,2100
+Japan,other industrial energy use,electricity,electricity,ind-constraint,2020,2100
+Japan,other industrial energy use,gas,gas,ind-constraint,2020,2100
+Japan,other industrial energy use,hydrogen,hydrogen,ind-constraint,2020,2100
+Japan,other industrial energy use,hydrogen,hydrogen cogen,ind-constraint,2020,2100
+Japan,other industrial energy use,refined liquids,refined liquids,ind-constraint,2020,2100
+Japan,other industrial feedstocks,coal,coal,ind-constraint,2020,2100
+Japan,other industrial feedstocks,refined liquids,refined liquids,ind-constraint,2020,2100
+Japan,process heat cement,coal,coal,ind-constraint,2020,2100
+Japan,process heat cement,hydrogen,hydrogen,ind-constraint,2020,2100
+Japan,process heat cement,refined liquids,refined liquids,ind-constraint,2020,2100
+Europe_Non_EU,agricultural energy use,mobile,refined liquids,ind-constraint,2020,2100
+Europe_Non_EU,agricultural energy use,stationary,biomass,ind-constraint,2020,2100
+Europe_Non_EU,agricultural energy use,stationary,coal,ind-constraint,2020,2100
+Europe_Non_EU,agricultural energy use,stationary,electricity,ind-constraint,2020,2100
+Europe_Non_EU,agricultural energy use,stationary,refined liquids,ind-constraint,2020,2100
+Europe_Non_EU,agricultural energy use,stationary,gas,ind-constraint,2020,2100
+Europe_Non_EU,chemical energy use,coal,coal,ind-constraint,2020,2100
+Europe_Non_EU,chemical energy use,electricity,electricity,ind-constraint,2020,2100
+Europe_Non_EU,chemical energy use,gas,gas,ind-constraint,2020,2100
+Europe_Non_EU,chemical energy use,refined liquids,refined liquids,ind-constraint,2020,2100
+Europe_Non_EU,chemical feedstocks,gas,gas,ind-constraint,2020,2100
+Europe_Non_EU,chemical feedstocks,refined liquids,refined liquids,ind-constraint,2020,2100
+Europe_Non_EU,construction energy use,mobile,refined liquids,ind-constraint,2020,2100
+Europe_Non_EU,construction energy use,stationary,coal,ind-constraint,2020,2100
+Europe_Non_EU,construction energy use,stationary,electricity,ind-constraint,2020,2100
+Europe_Non_EU,construction energy use,stationary,refined liquids,ind-constraint,2020,2100
+Europe_Non_EU,construction energy use,stationary,gas,ind-constraint,2020,2100
+Europe_Non_EU,construction feedstocks,refined liquids,refined liquids,ind-constraint,2020,2100
+Europe_Non_EU,mining energy use,mobile,refined liquids,ind-constraint,2020,2100
+Europe_Non_EU,mining energy use,stationary,coal,ind-constraint,2020,2100
+Europe_Non_EU,mining energy use,stationary,electricity,ind-constraint,2020,2100
+Europe_Non_EU,mining energy use,stationary,refined liquids,ind-constraint,2020,2100
+Europe_Non_EU,mining energy use,stationary,gas,ind-constraint,2020,2100
+Europe_Non_EU,other industrial energy use,biomass,biomass,ind-constraint,2020,2100
+Europe_Non_EU,other industrial energy use,biomass,biomass cogen,ind-constraint,2020,2100
+Europe_Non_EU,other industrial energy use,coal,coal,ind-constraint,2020,2100
+Europe_Non_EU,other industrial energy use,coal,coal cogen,ind-constraint,2020,2100
+Europe_Non_EU,other industrial energy use,electricity,electricity,ind-constraint,2020,2100
+Europe_Non_EU,other industrial energy use,gas,gas,ind-constraint,2020,2100
+Europe_Non_EU,other industrial energy use,gas,gas cogen,ind-constraint,2020,2100
+Europe_Non_EU,other industrial energy use,hydrogen,hydrogen,ind-constraint,2020,2100
+Europe_Non_EU,other industrial energy use,hydrogen,hydrogen cogen,ind-constraint,2020,2100
+Europe_Non_EU,other industrial energy use,refined liquids,refined liquids,ind-constraint,2020,2100
+Europe_Non_EU,other industrial energy use,refined liquids,refined liquids cogen,ind-constraint,2020,2100
+Europe_Non_EU,other industrial feedstocks,coal,coal,ind-constraint,2020,2100
+Europe_Non_EU,other industrial feedstocks,refined liquids,refined liquids,ind-constraint,2020,2100
+Europe_Non_EU,process heat cement,biomass,biomass,ind-constraint,2020,2100
+Europe_Non_EU,process heat cement,coal,coal,ind-constraint,2020,2100
+Europe_Non_EU,process heat cement,gas,gas,ind-constraint,2020,2100
+Europe_Non_EU,process heat cement,hydrogen,hydrogen,ind-constraint,2020,2100
+Europe_Non_EU,process heat cement,refined liquids,refined liquids,ind-constraint,2020,2100

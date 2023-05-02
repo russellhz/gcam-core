@@ -79,32 +79,29 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
 
     # 4. Create secondary output tables - interpolate between years
     L301.RES_secout <-  A_Policy_RES_SecOut %>%
-      # Add rowid column so that we can group by row once converted to long data
-      # Necessary because some regions have multiple policies and we don't want to combine them
-      tibble::rowid_to_column() %>%
-      gather_years(value_col = "res.secondary.output") %>%
-      group_by(rowid, region, supplysector, subsector, stub.technology, output.ratio) %>%
+      tidyr::pivot_longer(start.year:end.year, names_to = "drop", values_to = "year") %>%
+      select(-drop) %>%
+      distinct() %>%
+      group_by(region, supplysector, subsector, stub.technology, res.secondary.output, output.ratio) %>%
       # Interpolates between min and max years for each region/output combo
-      complete(nesting(rowid, region, supplysector, subsector, stub.technology, output.ratio),
+      complete(nesting(region, supplysector, subsector, stub.technology, res.secondary.output, output.ratio),
                year = seq(min(year), max(year), 5)) %>%
-      mutate(res.secondary.output =if_else(is.na(res.secondary.output),
-                                           res.secondary.output[year == max(year)],
-                                           res.secondary.output)) %>%
       ungroup %>%
-      select(-rowid)
+      arrange(year)
+
 
     # 5. Create input tax tables - interpolate between years
     L301.input_tax <- A_Policy_Constraints_Techs %>%
-      gather_years(value_col = "input.tax") %>%
-      filter(!is.na(input.tax)) %>%
-      group_by(region, supplysector, subsector, stub.technology) %>%
+      tidyr::pivot_longer(start.year:end.year, names_to = "drop", values_to = "year") %>%
+      select(-drop) %>%
+      distinct() %>%
+      group_by(region, supplysector, subsector, stub.technology, input.tax) %>%
       # Interpolates between min and max years for each region/output combo
-      complete(nesting(region, supplysector, subsector, stub.technology),
+      complete(nesting(region, supplysector, subsector, stub.technology, input.tax),
                year = seq(min(year), max(year), 5)) %>%
-      mutate(input.tax = if_else(is.na(input.tax),
-                                input.tax[year == max(year)],
-                                input.tax)) %>%
-      ungroup
+      ungroup %>%
+      arrange(year)
+
 
     # 6. Make mapping of policies to xml file names
     L301.XML_policy_map <- distinct(A_Policy_Constraints, xml, policy.portfolio.standard, market) %>%

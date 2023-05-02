@@ -5,7 +5,7 @@
 # Column types: ccccinnnnnnnnnnnnnnnnn,,,,,,,,,,,,,,,,,,,,,
 # ----------,,,,,,,,,,,,,,,,,,,,,
 xml,region,market,ghgpolicy,year.fillout,2020,2025,2030,2035,2040,2045,2050,2055,2060,2065,2070,2075,2080,2085,2090,2095,2100
-policy_ccap_eu.xml,EU-12,EU_ETS,CO2_ETS,2030,533.2535324,396.6073147,259.961097,,,,,,,,,,,,,,
+policy_ccap_eu.xml,EU-12,EU_ETS,CO2_ETS,2030,533.2535324,405.0428975,265.4903025,,,,,,,,,,,,,,
 policy_ccap_eu.xml,EU-15,EU_ETS,CO2_ETS,,,,,,,,,,,,,,,,,,
 policy_ccap_kor.xml,South Korea,South Korea,CO2,2025,182.22,174,,,,,,,,,,,,,,,
 policy_ccapbuild_kor.xml,South Korea,South Korea,CO2_building,2030,,12.79493806,11.29493806,,,,,,,,,,,,,,
