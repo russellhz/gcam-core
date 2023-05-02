@@ -19,7 +19,9 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
     return(c(FILE = "policy/A_Policy_Constraints",
              FILE = "policy/A_Policy_Constraints_Techs",
              FILE = "policy/A_Policy_RES_Coefs",
-             FILE = "policy/A_Policy_RES_SecOut"))
+             FILE = "policy/A_Policy_RES_SecOut",
+             "L226.StubTechCoef_elecownuse",
+             "L226.StubTechCoef_electd"))
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(c("L301.policy_port_stnd",
              "L301.policy_RES_coefs",
@@ -35,6 +37,8 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
     A_Policy_Constraints_Techs <- get_data(all_data, "policy/A_Policy_Constraints_Techs")
     A_Policy_RES_Coefs <- get_data(all_data, "policy/A_Policy_RES_Coefs")
     A_Policy_RES_SecOut <- get_data(all_data, "policy/A_Policy_RES_SecOut")
+    L226.StubTechCoef_elecownuse <- get_data(all_data, "L226.StubTechCoef_elecownuse")
+    L226.StubTechCoef_electd <- get_data(all_data, "L226.StubTechCoef_electd")
 
     # 1. Extend targets to all desired years
     # Filter out NA years and interpolate between non-NA years
@@ -82,12 +86,45 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
       tidyr::pivot_longer(start.year:end.year, names_to = "drop", values_to = "year") %>%
       select(-drop) %>%
       distinct() %>%
-      group_by(region, supplysector, subsector, stub.technology, res.secondary.output, output.ratio) %>%
+      group_by(region, supplysector, subsector, stub.technology,
+               res.secondary.output, output.ratio, calculate_elec_losses) %>%
       # Interpolates between min and max years for each region/output combo
-      complete(nesting(region, supplysector, subsector, stub.technology, res.secondary.output, output.ratio),
+      complete(nesting(region, supplysector, subsector, stub.technology,
+                       res.secondary.output, output.ratio, calculate_elec_losses),
                year = seq(min(year), max(year), 5)) %>%
       ungroup %>%
       arrange(year)
+
+    # Calculate electricity losses if specified
+    secout_elec_losses <- L301.RES_secout %>%
+      filter(calculate_elec_losses == 1)
+
+    L301.RES_secout <- L301.RES_secout %>%
+      filter(is.na(calculate_elec_losses)) %>%
+      select(-calculate_elec_losses)
+
+    if (nrow(secout_elec_losses) > 0){
+      # This works because each region has just one coefficient per year
+      # If that changes, will need to change
+      # Just in case, we confirm first
+      elecownuse_coefs <- distinct(L226.StubTechCoef_elecownuse, region, year, coefficient)
+      stopifnot(dplyr::n_groups(group_by(elecownuse_coefs, region, year)) == nrow(elecownuse_coefs))
+
+      electd_coefs <- distinct(L226.StubTechCoef_electd, region, year, coefficient)
+      stopifnot(dplyr::n_groups(group_by(electd_coefs, region, year)) == nrow(electd_coefs))
+
+      elec_losses <- secout_elec_losses %>%
+        left_join_error_no_match(elecownuse_coefs,
+                  by = c("region", "year")) %>%
+        left_join_error_no_match(electd_coefs,
+                  by = c("region", "year")) %>%
+        mutate(output.ratio = 1 / (coefficient.x * coefficient.y)) %>%
+        select(-coefficient.x, -coefficient.y, -calculate_elec_losses)
+
+      L301.RES_secout <- L301.RES_secout %>%
+       bind_rows(elec_losses)
+    }
+
 
 
     # 5. Create input tax tables - interpolate between years
