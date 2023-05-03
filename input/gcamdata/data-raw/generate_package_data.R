@@ -473,6 +473,8 @@ generate_level2_data_names <- function() {
   level2_data_names[["TranSubsectorDeleteInterp"]] <- c( "region", "supplysector", "tranSubsector" , "apply.to", "from.year", "to.year", "delete", "interpolation.function")
   level2_data_names[["TranStubTechDeleteInterp"]] <- c(level2_data_names[["StubTranTech"]], "apply.to", "from.year", "to.year",  "delete", "interpolation.function")
   level2_data_names[["StubTechCoef_NM_Policy"]] <- level2_data_names[["StubTechCoef_NM"]]
+  level2_data_names[["StubTranTechCoef_NM"]] <- c("region", "supplysector", "tranSubsector", "stub.technology", "year", "minicam.energy.input", "coefficient")
+  level2_data_names[["StubTranTechRESOutput"]] <- c("region", "supplysector", "tranSubsector", "stub.technology", "year", "res.secondary.output", "output.ratio")
 
   level2_data_names
 }

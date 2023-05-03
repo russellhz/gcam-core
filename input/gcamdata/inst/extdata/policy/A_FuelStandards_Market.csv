@@ -1,0 +1,12 @@
+# File: A_FuelStandards_Market.csv,,,,,,,,,,,
+# Title: Fuel Standard Policies Market,,,,,,,,,,,
+# Comments: SSP_sce is the transport UCD scenario to use for the coefs,,,,,,,,,,,
+# Units: gCO2/vkm,,,,,,,,,,,
+# Column types: ccccccccnn,,,,,,,,,,,
+# ----------,,,,,,,,,,,
+xml,policy_name,market,SSP_sce,region,supplysector,tranSubsector,Units,2025,2030
+policy_fuelst_mkt_eu.xml,fuelst_mkt_eu,EU,CORE,EU-12,trn_pass_road_LDV_4W,Car,gCO2/vkm,150,120
+policy_fuelst_mkt_eu.xml,fuelst_mkt_eu,EU,CORE,EU-12,trn_pass_road_LDV_4W,Large Car and Truck,gCO2/vkm,150,120
+policy_fuelst_mkt_eu.xml,fuelst_mkt_eu,EU,CORE,EU-15,trn_pass_road_LDV_4W,Mini Car,gCO2/vkm,150,120
+policy_fuelst_mkt_eu.xml,fuelst_mkt_eu,EU,CORE,EU-15,trn_pass_road_LDV_4W,Car,gCO2/vkm,150,120
+policy_fuelst_mkt_eu.xml,fuelst_mkt_eu,EU,CORE,EU-15,trn_pass_road_LDV_4W,Large Car and Truck,gCO2/vkm,150,120

@@ -6,6 +6,8 @@
 region,supplysector,subsector,stub.technology,input.tax,start.year,end.year
 EU-12,delivered biomass,delivered biomass,delivered biomass,fe-constraint,2020,2100
 EU-12,delivered coal,delivered coal,delivered coal,fe-constraint,2020,2100
+EU-12,delivered biomass industry,delivered biomass industry,delivered biomass industry,fe-constraint,2020,2100
+EU-12,delivered coal industry,delivered coal industry,delivered coal industry,fe-constraint,2020,2100
 EU-12,elect_td_bld,elect_td_bld,elect_td_bld,fe-constraint,2020,2100
 EU-12,elect_td_ind,elect_td_ind,elect_td_ind,fe-constraint,2020,2100
 EU-12,elect_td_trn,elect_td_trn,elect_td_trn,fe-constraint,2020,2100
@@ -24,6 +26,8 @@ EU-12,H2 wholesale dispensing,forecourt production,electrolysis,fe-constraint,20
 EU-12,H2 wholesale dispensing,forecourt production,natural gas steam reforming,fe-constraint,2020,2100
 EU-15,delivered biomass,delivered biomass,delivered biomass,fe-constraint,2020,2100
 EU-15,delivered coal,delivered coal,delivered coal,fe-constraint,2020,2100
+EU-15,delivered biomass industry,delivered biomass industry,delivered biomass industry,fe-constraint,2020,2100
+EU-15,delivered coal industry,delivered coal industry,delivered coal industry,fe-constraint,2020,2100
 EU-15,elect_td_bld,elect_td_bld,elect_td_bld,fe-constraint,2020,2100
 EU-15,elect_td_ind,elect_td_ind,elect_td_ind,fe-constraint,2020,2100
 EU-15,elect_td_trn,elect_td_trn,elect_td_trn,fe-constraint,2020,2100
@@ -42,6 +46,8 @@ EU-15,H2 wholesale dispensing,forecourt production,electrolysis,fe-constraint,20
 EU-15,H2 wholesale dispensing,forecourt production,natural gas steam reforming,fe-constraint,2020,2100
 Japan,delivered biomass,delivered biomass,delivered biomass,fe-constraint,2020,2100
 Japan,delivered coal,delivered coal,delivered coal,fe-constraint,2020,2100
+Japan,delivered biomass industry,delivered biomass industry,delivered biomass industry,fe-constraint,2020,2100
+Japan,delivered coal industry,delivered coal industry,delivered coal industry,fe-constraint,2020,2100
 Japan,elect_td_bld,elect_td_bld,elect_td_bld,fe-constraint,2020,2100
 Japan,elect_td_ind,elect_td_ind,elect_td_ind,fe-constraint,2020,2100
 Japan,elect_td_trn,elect_td_trn,elect_td_trn,fe-constraint,2020,2100
