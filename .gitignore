@@ -76,3 +76,7 @@ xcuserdata
 *.xcuserstate
 .Rproj.user
 input/gcamdata/inst/extdata/emissions/CEDS/desktop.ini
+exe/run-gcam.bat
+input/gcamdata/.Rprofile
+output/modelinterface/modelinterface
+exe/configuration*.xml

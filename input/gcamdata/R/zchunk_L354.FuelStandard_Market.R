@@ -17,6 +17,7 @@ module_policy_L354.FuelStandards_Market <- function(command, ...) {
   if(command == driver.DECLARE_INPUTS) {
     return(c(FILE = "policy/A_FuelStandards_Market",
              "L254.StubTranTechCoef",
+             "L254.StubTranTechLoadFactor",
              FILE = "emissions/A_PrimaryFuelCCoef"
     ))
   } else if(command == driver.DECLARE_OUTPUTS) {
@@ -31,21 +32,31 @@ module_policy_L354.FuelStandards_Market <- function(command, ...) {
     A_FuelStandards_Market <- get_data(all_data, "policy/A_FuelStandards_Market")
     A_PrimaryFuelCCoef <- get_data(all_data, "emissions/A_PrimaryFuelCCoef")
     L254.StubTranTechCoef <- get_data(all_data, "L254.StubTranTechCoef")
+    L254.StubTranTechLoadFactor <- get_data(all_data, "L254.StubTranTechLoadFactor") %>%
+      distinct(region, supplysector, tranSubsector, year, loadFactor, sce)
+
+    # Need this so that coefficient will end up as vkm
+    BTU_per_EJ <- 1 / (CONV_KBTU_EJ/1000)
 
     # Convert to long
     A_FuelStandards_Market <- A_FuelStandards_Market %>%
       gather_years(value_col = "coefficient")
 
     L354.FuelStandards_Market <- A_FuelStandards_Market %>%
-      # Join in default GCAM coefficients and calculate coefficient and sec output for fuel market
+      # Join in default GCAM coefficients and load factors and calculate coefficient and sec output for fuel market
       left_join(L254.StubTranTechCoef,
                                by = c("region", "supplysector", "tranSubsector",
                                       "year","SSP_sce" = "sce")) %>%
+      # A few places where there are slight differences in loadfactor by tech (probably an error)
+      # so here just keep first since the differences are so small
+      left_join_keep_first_only(L254.StubTranTechLoadFactor,
+                by = c("region", "supplysector", "tranSubsector",
+                       "year","SSP_sce" = "sce")) %>%
       left_join(A_PrimaryFuelCCoef, by = c("minicam.energy.input" = "PrimaryFuelCO2Coef.name")) %>%
       # Every policy needs different name because we want this to apply to new cars only
       mutate(gCO2_per_vkm = coefficient.y * CONV_BTU_KJ / 1e3 * PrimaryFuelCO2Coef * 44 / 12,
-             coefficient = if_else(is.na(gCO2_per_vkm), 0, coefficient.y * gCO2_per_vkm / coefficient.x),
-             output.ratio = coefficient.y / CONV_MJ_BTU / 1e6 / 2.01,
+             coefficient = if_else(is.na(gCO2_per_vkm), 0, BTU_per_EJ * gCO2_per_vkm * loadFactor / coefficient.x / 1e6),
+             output.ratio = 1,
              policyType = "RES",
              # Every policy needs different name because we want this to apply to new cars only
              policy_name = paste0(policy_name, year))
@@ -55,7 +66,7 @@ module_policy_L354.FuelStandards_Market <- function(command, ...) {
       select(xml, region, supplysector, tranSubsector, stub.technology, year,
              minicam.energy.input = policy_name, coefficient) %>%
       add_title("Policy fuel coefficients", overwrite = T) %>%
-      add_units("BTU/vkm") %>%
+      add_units("BTU/EJ") %>%
       add_precursors("policy/A_FuelStandards_Market",
                      "L254.StubTranTechCoef",
                      "emissions/A_PrimaryFuelCCoef") ->
@@ -65,7 +76,7 @@ module_policy_L354.FuelStandards_Market <- function(command, ...) {
       select(xml, region, supplysector, tranSubsector, stub.technology, year,
              res.secondary.output = policy_name, output.ratio) %>%
       add_title("Policy fuel secondary output", overwrite = T) %>%
-      add_units("EJ/Mvkm") %>%
+      add_units("million vkm") %>%
       add_precursors("policy/A_FuelStandards_Market",
                      "L254.StubTranTechCoef",
                      "emissions/A_PrimaryFuelCCoef") ->
