@@ -244,8 +244,3 @@ Argentina,elec_biomass (IGCC CCS),biomass (IGCC CCS),biomass (IGCC CCS) (recircu
 Argentina,elec_biomass (IGCC CCS),biomass (IGCC CCS),biomass (IGCC CCS) (dry cooling),RES-target,,2020,2100,1
 China,regional natural gas,domestic natural gas,domestic natural gas,TPES_GAS,1,2020,2100,
 China,regional natural gas,imported natural gas,imported natural gas,TPES_GAS,1,2020,2100,
-EU-12,trn_pass_road_LDV_4W,Car,BEV,fuel_standard,3.70E-07,2025,2025,
-EU-12,trn_pass_road_LDV_4W,Car,FCEV,fuel_standard,5.40E-07,2025,2025,
-EU-12,trn_pass_road_LDV_4W,Car,Hybrid Liquids,fuel_standard,9.36E-07,2025,2025,
-EU-12,trn_pass_road_LDV_4W,Car,Liquids,fuel_standard,1.19E-06,2025,2025,
-EU-12,trn_pass_road_LDV_4W,Car,NG,fuel_standard,1.21E-06,2025,2025,
