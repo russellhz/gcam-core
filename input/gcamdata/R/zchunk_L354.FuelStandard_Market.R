@@ -38,9 +38,15 @@ module_policy_L354.FuelStandards_Market <- function(command, ...) {
     # Need this so that coefficient will end up as vkm
     BTU_per_EJ <- 1 / (CONV_KBTU_EJ/1000)
 
-    # Convert to long
+    # Convert to long and interpolate between model years
     A_FuelStandards_Market <- A_FuelStandards_Market %>%
-      gather_years(value_col = "coefficient")
+      gather_years(value_col = "coefficient") %>%
+      filter(!is.na(coefficient)) %>%
+      group_by(xml, policy_name, market, SSP_sce, region, supplysector, tranSubsector, Units) %>%
+      complete(nesting(xml, policy_name, market, SSP_sce, region, supplysector, tranSubsector, Units),
+               year = seq(min(year), max(year), 5)) %>%
+      mutate(coefficient = approx_fun(year, coefficient)) %>%
+      ungroup
 
     L354.FuelStandards_Market <- A_FuelStandards_Market %>%
       # Join in default GCAM coefficients and load factors and calculate coefficient and sec output for fuel market
