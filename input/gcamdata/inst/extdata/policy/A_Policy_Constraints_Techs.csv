@@ -184,3 +184,33 @@ Europe_Non_EU,process heat cement,coal,coal,ind-constraint,2020,2100
 Europe_Non_EU,process heat cement,gas,gas,ind-constraint,2020,2100
 Europe_Non_EU,process heat cement,hydrogen,hydrogen,ind-constraint,2020,2100
 Europe_Non_EU,process heat cement,refined liquids,refined liquids,ind-constraint,2020,2100
+Australia_NZ,regional biomass,regional biomass,regional biomass,energy-constraint,2030,2100
+Australia_NZ,regional coal,domestic coal,domestic coal,energy-constraint,2030,2100
+Australia_NZ,regional coal,imported coal,imported coal,energy-constraint,2030,2100
+Australia_NZ,regional natural gas,domestic natural gas,domestic natural gas,energy-constraint,2030,2100
+Australia_NZ,regional natural gas,imported natural gas,imported natural gas,energy-constraint,2030,2100
+Australia_NZ,regional oil,domestic crude oil,domestic crude oil,energy-constraint,2030,2100
+Australia_NZ,regional oil,imported crude oil,imported crude oil,energy-constraint,2030,2100
+Australia_NZ,regional biomassOil,regional biomassOil,OilCrop,energy-constraint,2030,2100
+Australia_NZ,regional corn for ethanol,regional corn for ethanol,regional corn for ethanol,energy-constraint,2030,2100
+Australia_NZ,elec_CSP,CSP,CSP (dry_hybrid),energy-constraint,2030,2100
+Australia_NZ,elec_CSP,CSP,CSP (recirculating),energy-constraint,2030,2100
+Australia_NZ,elec_CSP_storage,CSP_storage,CSP_storage (dry_hybrid),energy-constraint,2030,2100
+Australia_NZ,elec_CSP_storage,CSP_storage,CSP_storage (recirculating),energy-constraint,2030,2100
+Australia_NZ,elec_Gen_III,Gen_III,Gen_III (cooling pond),energy-constraint,2030,2100
+Australia_NZ,elec_Gen_III,Gen_III,Gen_III (once through),energy-constraint,2030,2100
+Australia_NZ,elec_Gen_III,Gen_III,Gen_III (recirculating),energy-constraint,2030,2100
+Australia_NZ,elec_Gen_III,Gen_III,Gen_III (seawater),energy-constraint,2030,2100
+Australia_NZ,elec_Gen_II_LWR,Gen_II_LWR,Gen_II_LWR (cooling pond),energy-constraint,2030,2100
+Australia_NZ,elec_Gen_II_LWR,Gen_II_LWR,Gen_II_LWR (once through),energy-constraint,2030,2100
+Australia_NZ,elec_Gen_II_LWR,Gen_II_LWR,Gen_II_LWR (recirculating),energy-constraint,2030,2100
+Australia_NZ,elec_Gen_II_LWR,Gen_II_LWR,Gen_II_LWR (seawater),energy-constraint,2030,2100
+Australia_NZ,elec_geothermal,geothermal,geothermal (dry_hybrid),energy-constraint,2030,2100
+Australia_NZ,elec_geothermal,geothermal,geothermal (recirculating),energy-constraint,2030,2100
+Australia_NZ,elect_td_bld,rooftop_pv,rooftop_pv,energy-constraint,2030,2100
+Australia_NZ,electricity,hydro,hydro,energy-constraint,2030,2100
+Australia_NZ,electricity,solar,PV,energy-constraint,2030,2100
+Australia_NZ,electricity,solar,PV_storage,energy-constraint,2030,2100
+Australia_NZ,electricity,wind,wind,energy-constraint,2030,2100
+Australia_NZ,electricity,wind,wind_offshore,energy-constraint,2030,2100
+Australia_NZ,electricity,wind,wind_storage,energy-constraint,2030,2100

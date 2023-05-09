@@ -1,12 +1,15 @@
-# File: A_FuelStandards_Market.csv,,,,,,,,,,
-# Title: Fuel Standard Policies Market,,,,,,,,,,
-# Comments: SSP_sce is the transport UCD scenario to use for the coefs; assuming that vans represent 15% of EU Large Cars and Trucks,,,,,,,,,,
-# Units: gCO2/vkm,,,,,,,,,,
-# Column types: ccccccccnnn,,,,,,,,,,
-# ----------,,,,,,,,,,
-xml,policy_name,market,SSP_sce,region,supplysector,tranSubsector,Units,2025,2030,2100
-policy_fuelst_mkt_eu.xml,fuelst_mkt_eu,EU,CORE,EU-12,trn_pass_road_LDV_4W,Car,gCO2/vkm,80.75,59.375,59.375
-policy_fuelst_mkt_eu.xml,fuelst_mkt_eu,EU,CORE,EU-12,trn_pass_road_LDV_4W,Large Car and Truck,gCO2/vkm,87.38,65.68325,65.68325
-policy_fuelst_mkt_eu.xml,fuelst_mkt_eu,EU,CORE,EU-15,trn_pass_road_LDV_4W,Mini Car,gCO2/vkm,80.75,59.375,59.375
-policy_fuelst_mkt_eu.xml,fuelst_mkt_eu,EU,CORE,EU-15,trn_pass_road_LDV_4W,Car,gCO2/vkm,80.75,59.375,59.375
-policy_fuelst_mkt_eu.xml,fuelst_mkt_eu,EU,CORE,EU-15,trn_pass_road_LDV_4W,Large Car and Truck,gCO2/vkm,87.38,65.68325,65.68325
+# File: A_FuelStandards_Market.csv,,,,,,,,,,,
+# Title: Fuel Standard Policies Market,,,,,,,,,,,
+# Comments: SSP_sce is the transport UCD scenario to use for the coefs; assuming that vans represent 15% of EU Large Cars and Trucks,,,,,,,,,,,
+# Units: gCO2/vkm,,,,,,,,,,,
+# Column types: ccccccccnnnn,,,,,,,,,,,
+# ----------,,,,,,,,,,,
+xml,policy_name,market,SSP_sce,region,supplysector,tranSubsector,Units,2020,2025,2030,2100
+policy_fuelst_mkt_eu.xml,fuelst_mkt_eu,EU,CORE,EU-12,trn_pass_road_LDV_4W,Car,gCO2/vkm,,80.75,59.375,59.375
+policy_fuelst_mkt_eu.xml,fuelst_mkt_eu,EU,CORE,EU-12,trn_pass_road_LDV_4W,Large Car and Truck,gCO2/vkm,,87.38,65.68325,65.68325
+policy_fuelst_mkt_eu.xml,fuelst_mkt_eu,EU,CORE,EU-15,trn_pass_road_LDV_4W,Mini Car,gCO2/vkm,,80.75,59.375,59.375
+policy_fuelst_mkt_eu.xml,fuelst_mkt_eu,EU,CORE,EU-15,trn_pass_road_LDV_4W,Car,gCO2/vkm,,80.75,59.375,59.375
+policy_fuelst_mkt_eu.xml,fuelst_mkt_eu,EU,CORE,EU-15,trn_pass_road_LDV_4W,Large Car and Truck,gCO2/vkm,,87.38,65.68325,65.68325
+policy_fuelst_mkt_bra.xml,fuelst_mkt_bra,Brazil,CORE,Brazil,trn_pass_road_LDV_4W,Mini Car,gCO2/vkm,85.5,,,
+policy_fuelst_mkt_bra.xml,fuelst_mkt_bra,Brazil,CORE,Brazil,trn_pass_road_LDV_4W,Car,gCO2/vkm,85.5,,,
+policy_fuelst_mkt_bra.xml,fuelst_mkt_bra,Brazil,CORE,Brazil,trn_pass_road_LDV_4W,Large Car and Truck,gCO2/vkm,85.5,,,
