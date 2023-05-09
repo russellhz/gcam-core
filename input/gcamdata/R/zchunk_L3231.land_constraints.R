@@ -39,12 +39,20 @@ module_policy_L3231.land_constraints <- function(command, ...) {
 
     L3231.landConstrain <- A_Land_Constraints %>%
       gather_years(value_col = "constraint") %>%
-      mutate(policyType = "subsidy",
+      filter(!is.na(constraint)) %>%
+      group_by(xml, region, LandLeafs, policy.portfolio.standard, LandNode1_to_remove) %>%
+      complete(nesting(xml, region, LandLeafs, policy.portfolio.standard, LandNode1_to_remove),
+               year = seq(min(year), max(year), 5)) %>%
+      # If group only has one, approx_fun doesn't work, so we use this workaround
+      mutate(constraint_NA = approx_fun(year, constraint)) %>%
+      ungroup %>%
+      mutate(constraint = if_else(!is.na(constraint_NA), constraint_NA, constraint),
+             policyType = "subsidy",
              market = region) %>%
-      filter(!is.na(constraint))
+      select(-constraint_NA)
 
     # Set filters for LandNode1s to remove and LandLeafs to keep
-    LandNode1_remove <- na.omit(distinct(L3231.landConstrain, LandNode1_to_remove))$LandNode1_to_remove
+    LandNode1_filters <- na.omit(distinct(L3231.landConstrain, LandNode1_to_remove))$LandNode1_to_remove
     LandNode1_remove <- strsplit(LandNode1_filters, ";") %>% unlist() %>% paste(collapse="|")
 
     LandLeafs_to_keep <- distinct(L3231.landConstrain, region, LandLeafs_to_keep = LandLeafs, policy.portfolio.standard) %>%
