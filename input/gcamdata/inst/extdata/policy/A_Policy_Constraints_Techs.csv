@@ -64,47 +64,47 @@ Japan,H2 wholesale dispensing,H2 delivery,H2 liquid truck,fe-constraint,2020,210
 Japan,H2 wholesale dispensing,H2 delivery,H2 pipeline,fe-constraint,2020,2100
 Japan,H2 wholesale dispensing,forecourt production,electrolysis,fe-constraint,2020,2100
 Japan,H2 wholesale dispensing,forecourt production,natural gas steam reforming,fe-constraint,2020,2100
-China,agricultural energy use,mobile,hydrogen,ind-constraint,2020,2030
-China,agricultural energy use,mobile,electricity,ind-constraint,2020,2030
-China,agricultural energy use,mobile,refined liquids,ind-constraint,2020,2030
-China,agricultural energy use,stationary,coal,ind-constraint,2020,2030
-China,agricultural energy use,stationary,electricity,ind-constraint,2020,2030
-China,agricultural energy use,stationary,refined liquids,ind-constraint,2020,2030
-China,agricultural energy use,stationary,gas,ind-constraint,2020,2030
-China,chemical energy use,coal,coal,ind-constraint,2020,2030
-China,chemical energy use,electricity,electricity,ind-constraint,2020,2030
-China,chemical energy use,gas,gas,ind-constraint,2020,2030
-China,chemical energy use,refined liquids,refined liquids,ind-constraint,2020,2030
-China,chemical feedstocks,gas,gas,ind-constraint,2020,2030
-China,chemical feedstocks,refined liquids,refined liquids,ind-constraint,2020,2030
-China,construction energy use,mobile,hydrogen,ind-constraint,2020,2030
-China,construction energy use,mobile,electricity,ind-constraint,2020,2030
-China,construction energy use,mobile,refined liquids,ind-constraint,2020,2030
-China,construction energy use,stationary,coal,ind-constraint,2020,2030
-China,construction energy use,stationary,electricity,ind-constraint,2020,2030
-China,construction energy use,stationary,refined liquids,ind-constraint,2020,2030
-China,construction energy use,stationary,gas,ind-constraint,2020,2030
-China,construction feedstocks,refined liquids,refined liquids,ind-constraint,2020,2030
-China,mining energy use,mobile,hydrogen,ind-constraint,2020,2030
-China,mining energy use,mobile,electricity,ind-constraint,2020,2030
-China,mining energy use,mobile,refined liquids,ind-constraint,2020,2030
-China,mining energy use,stationary,coal,ind-constraint,2020,2030
-China,mining energy use,stationary,electricity,ind-constraint,2020,2030
-China,mining energy use,stationary,refined liquids,ind-constraint,2020,2030
-China,mining energy use,stationary,gas,ind-constraint,2020,2030
-China,other industrial energy use,biomass,biomass,ind-constraint,2020,2030
-China,other industrial energy use,coal,coal,ind-constraint,2020,2030
-China,other industrial energy use,electricity,electricity,ind-constraint,2020,2030
-China,other industrial energy use,gas,gas,ind-constraint,2020,2030
-China,other industrial energy use,gas,gas cogen,ind-constraint,2020,2030
-China,other industrial energy use,hydrogen,hydrogen,ind-constraint,2020,2030
-China,other industrial energy use,hydrogen,hydrogen cogen,ind-constraint,2020,2030
-China,other industrial energy use,refined liquids,refined liquids,ind-constraint,2020,2030
-China,other industrial feedstocks,coal,coal,ind-constraint,2020,2030
-China,other industrial feedstocks,refined liquids,refined liquids,ind-constraint,2020,2030
-China,process heat cement,coal,coal,ind-constraint,2020,2030
-China,process heat cement,hydrogen,hydrogen,ind-constraint,2020,2030
-China,process heat cement,refined liquids,refined liquids,ind-constraint,2020,2030
+China,agricultural energy use,mobile,hydrogen,ind-constraint-OLD,2020,2030
+China,agricultural energy use,mobile,electricity,ind-constraint-OLD,2020,2030
+China,agricultural energy use,mobile,refined liquids,ind-constraint-OLD,2020,2030
+China,agricultural energy use,stationary,coal,ind-constraint-OLD,2020,2030
+China,agricultural energy use,stationary,electricity,ind-constraint-OLD,2020,2030
+China,agricultural energy use,stationary,refined liquids,ind-constraint-OLD,2020,2030
+China,agricultural energy use,stationary,gas,ind-constraint-OLD,2020,2030
+China,chemical energy use,coal,coal,ind-constraint-OLD,2020,2030
+China,chemical energy use,electricity,electricity,ind-constraint-OLD,2020,2030
+China,chemical energy use,gas,gas,ind-constraint-OLD,2020,2030
+China,chemical energy use,refined liquids,refined liquids,ind-constraint-OLD,2020,2030
+China,chemical feedstocks,gas,gas,ind-constraint-OLD,2020,2030
+China,chemical feedstocks,refined liquids,refined liquids,ind-constraint-OLD,2020,2030
+China,construction energy use,mobile,hydrogen,ind-constraint-OLD,2020,2030
+China,construction energy use,mobile,electricity,ind-constraint-OLD,2020,2030
+China,construction energy use,mobile,refined liquids,ind-constraint-OLD,2020,2030
+China,construction energy use,stationary,coal,ind-constraint-OLD,2020,2030
+China,construction energy use,stationary,electricity,ind-constraint-OLD,2020,2030
+China,construction energy use,stationary,refined liquids,ind-constraint-OLD,2020,2030
+China,construction energy use,stationary,gas,ind-constraint-OLD,2020,2030
+China,construction feedstocks,refined liquids,refined liquids,ind-constraint-OLD,2020,2030
+China,mining energy use,mobile,hydrogen,ind-constraint-OLD,2020,2030
+China,mining energy use,mobile,electricity,ind-constraint-OLD,2020,2030
+China,mining energy use,mobile,refined liquids,ind-constraint-OLD,2020,2030
+China,mining energy use,stationary,coal,ind-constraint-OLD,2020,2030
+China,mining energy use,stationary,electricity,ind-constraint-OLD,2020,2030
+China,mining energy use,stationary,refined liquids,ind-constraint-OLD,2020,2030
+China,mining energy use,stationary,gas,ind-constraint-OLD,2020,2030
+China,other industrial energy use,biomass,biomass,ind-constraint-OLD,2020,2030
+China,other industrial energy use,coal,coal,ind-constraint-OLD,2020,2030
+China,other industrial energy use,electricity,electricity,ind-constraint-OLD,2020,2030
+China,other industrial energy use,gas,gas,ind-constraint-OLD,2020,2030
+China,other industrial energy use,gas,gas cogen,ind-constraint-OLD,2020,2030
+China,other industrial energy use,hydrogen,hydrogen,ind-constraint-OLD,2020,2030
+China,other industrial energy use,hydrogen,hydrogen cogen,ind-constraint-OLD,2020,2030
+China,other industrial energy use,refined liquids,refined liquids,ind-constraint-OLD,2020,2030
+China,other industrial feedstocks,coal,coal,ind-constraint-OLD,2020,2030
+China,other industrial feedstocks,refined liquids,refined liquids,ind-constraint-OLD,2020,2030
+China,process heat cement,coal,coal,ind-constraint-OLD,2020,2030
+China,process heat cement,hydrogen,hydrogen,ind-constraint-OLD,2020,2030
+China,process heat cement,refined liquids,refined liquids,ind-constraint-OLD,2020,2030
 Japan,agricultural energy use,mobile,hydrogen,ind-constraint,2020,2100
 Japan,agricultural energy use,mobile,electricity,ind-constraint,2020,2100
 Japan,agricultural energy use,mobile,refined liquids,ind-constraint,2020,2100
@@ -214,3 +214,10 @@ Australia_NZ,electricity,solar,PV_storage,energy-constraint,2030,2100
 Australia_NZ,electricity,wind,wind,energy-constraint,2030,2100
 Australia_NZ,electricity,wind,wind_offshore,energy-constraint,2030,2100
 Australia_NZ,electricity,wind,wind_storage,energy-constraint,2030,2100
+China,elect_td_ind,elect_td_ind,elect_td_ind,ind-constraint,2020,2030
+China,refined liquids industrial,refined liquids industrial,refined liquids industrial,ind-constraint,2020,2030
+China,delivered coal industry,delivered coal industry,delivered coal industry,ind-constraint,2020,2030
+China,wholesale gas,wholesale gas,wholesale gas,ind-constraint,2020,2030
+China,delivered biomass industry,delivered biomass industry,delivered biomass industry,ind-constraint,2020,2030
+China,H2 industrial,H2 delivery,H2 delivery,ind-constraint,2020,2030
+China,H2 industrial,forecourt production,electrolysis,ind-constraint,2020,2030

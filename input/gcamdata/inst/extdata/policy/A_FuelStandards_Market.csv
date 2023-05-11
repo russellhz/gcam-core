@@ -10,6 +10,8 @@ policy_fuelst_mkt_eu.xml,fuelst_mkt_eu,EU,CORE,EU-12,trn_pass_road_LDV_4W,Large 
 policy_fuelst_mkt_eu.xml,fuelst_mkt_eu,EU,CORE,EU-15,trn_pass_road_LDV_4W,Mini Car,gCO2/vkm,,80.75,59.375,59.375
 policy_fuelst_mkt_eu.xml,fuelst_mkt_eu,EU,CORE,EU-15,trn_pass_road_LDV_4W,Car,gCO2/vkm,,80.75,59.375,59.375
 policy_fuelst_mkt_eu.xml,fuelst_mkt_eu,EU,CORE,EU-15,trn_pass_road_LDV_4W,Large Car and Truck,gCO2/vkm,,87.38,65.68325,65.68325
-policy_fuelst_mkt_bra.xml,fuelst_mkt_bra,Brazil,CORE,Brazil,trn_pass_road_LDV_4W,Mini Car,gCO2/vkm,85.5,,,
-policy_fuelst_mkt_bra.xml,fuelst_mkt_bra,Brazil,CORE,Brazil,trn_pass_road_LDV_4W,Car,gCO2/vkm,85.5,,,
-policy_fuelst_mkt_bra.xml,fuelst_mkt_bra,Brazil,CORE,Brazil,trn_pass_road_LDV_4W,Large Car and Truck,gCO2/vkm,85.5,,,
+policy_fuelst_mkt_bra.xml,fuelst_mkt_bra,Brazil,CORE,Brazil,trn_pass_road_LDV_4W,Mini Car,gCO2/vkm,156.4684,,,
+policy_fuelst_mkt_bra.xml,fuelst_mkt_bra,Brazil,CORE,Brazil,trn_pass_road_LDV_4W,Car,gCO2/vkm,156.4684,,,
+policy_fuelst_mkt_bra.xml,fuelst_mkt_bra,Brazil,CORE,Brazil,trn_pass_road_LDV_4W,Large Car and Truck,gCO2/vkm,156.4684,,,
+policy_fuelst_mkt_can.xml,fuelst_mkt_can,Canada,CORE,Canada,trn_pass_road_LDV_4W,Car,gCO2/vkm,158.7456391,122.8343495,,
+policy_fuelst_mkt_can.xml,fuelst_mkt_can,Canada,CORE,Canada,trn_pass_road_LDV_4W,Large Car and Truck,gCO2/vkm,158.7456391,122.8343495,,

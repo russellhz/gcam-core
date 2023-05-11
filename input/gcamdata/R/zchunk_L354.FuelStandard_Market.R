@@ -45,8 +45,12 @@ module_policy_L354.FuelStandards_Market <- function(command, ...) {
       group_by(xml, policy_name, market, SSP_sce, region, supplysector, tranSubsector, Units) %>%
       complete(nesting(xml, policy_name, market, SSP_sce, region, supplysector, tranSubsector, Units),
                year = seq(min(year), max(year), 5)) %>%
-      mutate(coefficient = approx_fun(year, coefficient)) %>%
-      ungroup
+      # If group only has one, approx_fun doesn't work, so we use this workaround
+      mutate(coefficient_NA = approx_fun(year, coefficient)) %>%
+      ungroup %>%
+      mutate(coefficient = if_else(!is.na(coefficient_NA), coefficient_NA, coefficient)) %>%
+      select(-coefficient_NA)
+
 
     L354.FuelStandards_Market <- A_FuelStandards_Market %>%
       # Join in default GCAM coefficients and load factors and calculate coefficient and sec output for fuel market
