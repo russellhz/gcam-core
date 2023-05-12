@@ -177,3 +177,6 @@ policy_tpesres_chn.xml,China,China,TPES_RES,RES,electricity,wind,wind_offshore,0
 policy_tpesres_chn.xml,China,China,TPES_RES,RES,electricity,wind,wind_storage,0.140370268,0.189065237,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275
 policy_tpesres_chn.xml,China,China,TPES_RES,RES,resid heating,traditional biomass,traditional biomass,0.140370268,0.189065237,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275
 policy_tpesres_chn.xml,China,China,TPES_RES,RES,resid others,traditional biomass,traditional biomass,0.140370268,0.189065237,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275
+policy_res_jap.xml,Japan,Japan,RES-target,RES,electricity_net_ownuse,electricity_net_ownuse,electricity_net_ownuse,0.18,0.275,0.37,0.37,0.37,0.37,0.37
+policy_res_kor.xml,South Korea,South Korea,RES-target,RES,electricity_net_ownuse,electricity_net_ownuse,electricity_net_ownuse,0.097,0.1985,0.3,0.3,0.3,0.3,0.3
+policy_res_mex.xml,Mexico,Mexico,RES-target,RES,electricity_net_ownuse,electricity_net_ownuse,electricity_net_ownuse,0.25,0.3,0.35,0.35,0.35,0.35,0.35

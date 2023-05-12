@@ -39,6 +39,7 @@ module_policy_L305.FixedOutputTech <- function(command, ...) {
       ungroup
 
     L305.GlbTechFixedOutput <- A_FixedOutputTech %>%
+      filter(create.tech == 1) %>%
       mutate(share.weight = 0,
              minicam.non.energy.input = "non-energy") %>%
       select(xml,

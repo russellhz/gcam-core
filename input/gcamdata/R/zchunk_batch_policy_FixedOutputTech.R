@@ -37,18 +37,29 @@ module_policy_FixedOutputTech_xml <- function(command, ...) {
         filter(xml == xml_name) %>%
         select(-xml)
 
-      assign(xml_name,
-             create_xml(xml_name) %>%
-               add_xml_data(L305.StubTechFixedOutput_tmp, "StubTechFixOutNoSW") %>%
-               add_xml_data(select(L305.GlbTechFixedOutput_tmp,
-                                   -minicam.non.energy.input, -input.cost),
-                            "GlobalTechShrwt") %>%
-               add_xml_data(select(L305.GlbTechFixedOutput_tmp,
-                                   -share.weight),
-                            "GlobalTechCost") %>%
-               add_precursors("L305.StubTechFixedOutput",
-                              "L305.GlbTechFixedOutput")
-      )
+      if (nrow(L305.GlbTechFixedOutput_tmp) == 0){
+        assign(xml_name,
+               create_xml(xml_name) %>%
+                 add_xml_data(L305.StubTechFixedOutput_tmp, "StubTechFixOutNoSW") %>%
+                 add_precursors("L305.StubTechFixedOutput")
+        )
+      } else {
+
+        assign(xml_name,
+               create_xml(xml_name) %>%
+                 add_xml_data(L305.StubTechFixedOutput_tmp, "StubTechFixOutNoSW") %>%
+                 add_xml_data(select(L305.GlbTechFixedOutput_tmp,
+                                     -minicam.non.energy.input, -input.cost),
+                              "GlobalTechShrwt") %>%
+                 add_xml_data(select(L305.GlbTechFixedOutput_tmp,
+                                     -share.weight),
+                              "GlobalTechCost") %>%
+                 add_precursors("L305.StubTechFixedOutput",
+                                "L305.GlbTechFixedOutput")
+        )
+      }
+
+
     }
 
     # Need this for loop because having issues with lapply(all_xml_names, get)

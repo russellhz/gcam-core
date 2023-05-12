@@ -1,10 +1,11 @@
-# File: A_FixedOutputTech.csv,,,,,,,,,
-# Title: Create a technology with a fixed output,,,,,,,,,
-# Units: 1975$/GJ;EJ,,,,,,,,,
-# Column types: cccccnnnnn,,,,,,,,,
-# ----------,,,,,,,,,
-xml,region,supplysector,subsector,stub.technology,non.energy.input.cost,2020,2025,2030,2100
-policy_ee_usa.xml,USA,comm others,electricity,EE,40.064,0.05997479,0.163292441,0.29977277,0.29977277
-policy_ee_usa.xml,USA,comm heating,gas,EE,1.034983582,0.025046239,0.07750752,0.16423458,0.16423458
-policy_ee_usa.xml,USA,resid others,electricity,EE,20,0.00846326,0.037803648,0.146241456,0.146241456
-policy_ee_usa.xml,USA,resid heating,gas,EE,2.262,0.006460294,0.027541186,0.081955804,0.081955804
+# File: A_FixedOutputTech.csv,,,,,,,,,,
+# Title: Create a technology with a fixed output,,,,,,,,,,
+# Units: 1975$/GJ;EJ,,,,,,,,,,
+# Column types: cccccinnnnn,,,,,,,,,,
+# ----------,,,,,,,,,,
+xml,region,supplysector,subsector,stub.technology,create.tech,non.energy.input.cost,2020,2025,2030,2100
+policy_ee_usa.xml,USA,comm others,electricity,EE,1,40.064,0.05997479,0.163292441,0.29977277,0.29977277
+policy_ee_usa.xml,USA,comm heating,gas,EE,1,1.034983582,0.025046239,0.07750752,0.16423458,0.16423458
+policy_ee_usa.xml,USA,resid others,electricity,EE,1,20,0.00846326,0.037803648,0.146241456,0.146241456
+policy_ee_usa.xml,USA,resid heating,gas,EE,1,2.262,0.006460294,0.027541186,0.081955804,0.081955804
+policy_hydro_fix_idn.xml,Indonesia,electricity,hydro,hydro,0,,0.071952873,0.071952873,0.071952873,0.071952873

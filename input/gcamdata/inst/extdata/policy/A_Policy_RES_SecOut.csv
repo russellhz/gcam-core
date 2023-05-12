@@ -385,3 +385,93 @@ China,electricity,wind,wind_offshore,TPES_RES,1,2015,2100,
 China,electricity,wind,wind_storage,TPES_RES,1,2015,2100,
 China,resid heating,traditional biomass,traditional biomass,TPES_RES,1,2015,2100,
 China,resid others,traditional biomass,traditional biomass,TPES_RES,1,2015,2100,
+Japan,elect_td_bld,rooftop_pv,rooftop_pv,RES-target,1,2020,2100,
+Japan,electricity,hydro,hydro,RES-target,,2020,2100,1
+Japan,electricity,wind,wind,RES-target,,2020,2100,1
+Japan,electricity,wind,wind_offshore,RES-target,,2020,2100,1
+Japan,electricity,wind,wind_storage,RES-target,,2020,2100,1
+Japan,electricity,solar,PV,RES-target,,2020,2100,1
+Japan,electricity,solar,PV_storage,RES-target,,2020,2100,1
+Japan,elec_geothermal,geothermal,geothermal (recirculating),RES-target,,2020,2100,1
+Japan,elec_geothermal,geothermal,geothermal (dry_hybrid),RES-target,,2020,2100,1
+Japan,elec_CSP,CSP,CSP (recirculating),RES-target,,2020,2100,1
+Japan,elec_CSP,CSP,CSP (dry_hybrid),RES-target,,2020,2100,1
+Japan,elec_CSP_storage,CSP_storage,CSP_storage (recirculating),RES-target,,2020,2100,1
+Japan,elec_CSP_storage,CSP_storage,CSP_storage (dry_hybrid),RES-target,,2020,2100,1
+Japan,elec_biomass (conv),biomass (conv),biomass (conv) (once through),RES-target,,2020,2100,1
+Japan,elec_biomass (conv),biomass (conv),biomass (conv) (seawater),RES-target,,2020,2100,1
+Japan,elec_biomass (conv),biomass (conv),biomass (conv) (recirculating),RES-target,,2020,2100,1
+Japan,elec_biomass (conv),biomass (conv),biomass (conv) (cooling pond),RES-target,,2020,2100,1
+Japan,elec_biomass (conv),biomass (conv),biomass (conv) (dry cooling),RES-target,,2020,2100,1
+Japan,elec_biomass (IGCC),biomass (IGCC),biomass (IGCC) (once through),RES-target,,2020,2100,1
+Japan,elec_biomass (IGCC),biomass (IGCC),biomass (IGCC) (seawater),RES-target,,2020,2100,1
+Japan,elec_biomass (IGCC),biomass (IGCC),biomass (IGCC) (recirculating),RES-target,,2020,2100,1
+Japan,elec_biomass (IGCC),biomass (IGCC),biomass (IGCC) (dry cooling),RES-target,,2020,2100,1
+Japan,elec_biomass (conv CCS),biomass (conv CCS),biomass (conv CCS) (once through),RES-target,,2020,2100,1
+Japan,elec_biomass (conv CCS),biomass (conv CCS),biomass (conv CCS) (seawater),RES-target,,2020,2100,1
+Japan,elec_biomass (conv CCS),biomass (conv CCS),biomass (conv CCS) (recirculating),RES-target,,2020,2100,1
+Japan,elec_biomass (conv CCS),biomass (conv CCS),biomass (conv CCS) (dry cooling),RES-target,,2020,2100,1
+Japan,elec_biomass (IGCC CCS),biomass (IGCC CCS),biomass (IGCC CCS) (once through),RES-target,,2020,2100,1
+Japan,elec_biomass (IGCC CCS),biomass (IGCC CCS),biomass (IGCC CCS) (seawater),RES-target,,2020,2100,1
+Japan,elec_biomass (IGCC CCS),biomass (IGCC CCS),biomass (IGCC CCS) (recirculating),RES-target,,2020,2100,1
+Japan,elec_biomass (IGCC CCS),biomass (IGCC CCS),biomass (IGCC CCS) (dry cooling),RES-target,,2020,2100,1
+South Korea,elect_td_bld,rooftop_pv,rooftop_pv,RES-target,1,2020,2100,
+South Korea,electricity,hydro,hydro,RES-target,,2020,2100,1
+South Korea,electricity,wind,wind,RES-target,,2020,2100,1
+South Korea,electricity,wind,wind_offshore,RES-target,,2020,2100,1
+South Korea,electricity,wind,wind_storage,RES-target,,2020,2100,1
+South Korea,electricity,solar,PV,RES-target,,2020,2100,1
+South Korea,electricity,solar,PV_storage,RES-target,,2020,2100,1
+South Korea,elec_geothermal,geothermal,geothermal (recirculating),RES-target,,2020,2100,1
+South Korea,elec_geothermal,geothermal,geothermal (dry_hybrid),RES-target,,2020,2100,1
+South Korea,elec_CSP,CSP,CSP (recirculating),RES-target,,2020,2100,1
+South Korea,elec_CSP,CSP,CSP (dry_hybrid),RES-target,,2020,2100,1
+South Korea,elec_CSP_storage,CSP_storage,CSP_storage (recirculating),RES-target,,2020,2100,1
+South Korea,elec_CSP_storage,CSP_storage,CSP_storage (dry_hybrid),RES-target,,2020,2100,1
+South Korea,elec_biomass (conv),biomass (conv),biomass (conv) (once through),RES-target,,2020,2100,1
+South Korea,elec_biomass (conv),biomass (conv),biomass (conv) (seawater),RES-target,,2020,2100,1
+South Korea,elec_biomass (conv),biomass (conv),biomass (conv) (recirculating),RES-target,,2020,2100,1
+South Korea,elec_biomass (conv),biomass (conv),biomass (conv) (cooling pond),RES-target,,2020,2100,1
+South Korea,elec_biomass (conv),biomass (conv),biomass (conv) (dry cooling),RES-target,,2020,2100,1
+South Korea,elec_biomass (IGCC),biomass (IGCC),biomass (IGCC) (once through),RES-target,,2020,2100,1
+South Korea,elec_biomass (IGCC),biomass (IGCC),biomass (IGCC) (seawater),RES-target,,2020,2100,1
+South Korea,elec_biomass (IGCC),biomass (IGCC),biomass (IGCC) (recirculating),RES-target,,2020,2100,1
+South Korea,elec_biomass (IGCC),biomass (IGCC),biomass (IGCC) (dry cooling),RES-target,,2020,2100,1
+South Korea,elec_biomass (conv CCS),biomass (conv CCS),biomass (conv CCS) (once through),RES-target,,2020,2100,1
+South Korea,elec_biomass (conv CCS),biomass (conv CCS),biomass (conv CCS) (seawater),RES-target,,2020,2100,1
+South Korea,elec_biomass (conv CCS),biomass (conv CCS),biomass (conv CCS) (recirculating),RES-target,,2020,2100,1
+South Korea,elec_biomass (conv CCS),biomass (conv CCS),biomass (conv CCS) (dry cooling),RES-target,,2020,2100,1
+South Korea,elec_biomass (IGCC CCS),biomass (IGCC CCS),biomass (IGCC CCS) (once through),RES-target,,2020,2100,1
+South Korea,elec_biomass (IGCC CCS),biomass (IGCC CCS),biomass (IGCC CCS) (seawater),RES-target,,2020,2100,1
+South Korea,elec_biomass (IGCC CCS),biomass (IGCC CCS),biomass (IGCC CCS) (recirculating),RES-target,,2020,2100,1
+South Korea,elec_biomass (IGCC CCS),biomass (IGCC CCS),biomass (IGCC CCS) (dry cooling),RES-target,,2020,2100,1
+Mexico,elect_td_bld,rooftop_pv,rooftop_pv,RES-target,1,2020,2100,
+Mexico,electricity,hydro,hydro,RES-target,,2020,2100,1
+Mexico,electricity,wind,wind,RES-target,,2020,2100,1
+Mexico,electricity,wind,wind_offshore,RES-target,,2020,2100,1
+Mexico,electricity,wind,wind_storage,RES-target,,2020,2100,1
+Mexico,electricity,solar,PV,RES-target,,2020,2100,1
+Mexico,electricity,solar,PV_storage,RES-target,,2020,2100,1
+Mexico,elec_geothermal,geothermal,geothermal (recirculating),RES-target,,2020,2100,1
+Mexico,elec_geothermal,geothermal,geothermal (dry_hybrid),RES-target,,2020,2100,1
+Mexico,elec_CSP,CSP,CSP (recirculating),RES-target,,2020,2100,1
+Mexico,elec_CSP,CSP,CSP (dry_hybrid),RES-target,,2020,2100,1
+Mexico,elec_CSP_storage,CSP_storage,CSP_storage (recirculating),RES-target,,2020,2100,1
+Mexico,elec_CSP_storage,CSP_storage,CSP_storage (dry_hybrid),RES-target,,2020,2100,1
+Mexico,elec_biomass (conv),biomass (conv),biomass (conv) (once through),RES-target,,2020,2100,1
+Mexico,elec_biomass (conv),biomass (conv),biomass (conv) (seawater),RES-target,,2020,2100,1
+Mexico,elec_biomass (conv),biomass (conv),biomass (conv) (recirculating),RES-target,,2020,2100,1
+Mexico,elec_biomass (conv),biomass (conv),biomass (conv) (cooling pond),RES-target,,2020,2100,1
+Mexico,elec_biomass (conv),biomass (conv),biomass (conv) (dry cooling),RES-target,,2020,2100,1
+Mexico,elec_biomass (IGCC),biomass (IGCC),biomass (IGCC) (once through),RES-target,,2020,2100,1
+Mexico,elec_biomass (IGCC),biomass (IGCC),biomass (IGCC) (seawater),RES-target,,2020,2100,1
+Mexico,elec_biomass (IGCC),biomass (IGCC),biomass (IGCC) (recirculating),RES-target,,2020,2100,1
+Mexico,elec_biomass (IGCC),biomass (IGCC),biomass (IGCC) (dry cooling),RES-target,,2020,2100,1
+Mexico,elec_biomass (conv CCS),biomass (conv CCS),biomass (conv CCS) (once through),RES-target,,2020,2100,1
+Mexico,elec_biomass (conv CCS),biomass (conv CCS),biomass (conv CCS) (seawater),RES-target,,2020,2100,1
+Mexico,elec_biomass (conv CCS),biomass (conv CCS),biomass (conv CCS) (recirculating),RES-target,,2020,2100,1
+Mexico,elec_biomass (conv CCS),biomass (conv CCS),biomass (conv CCS) (dry cooling),RES-target,,2020,2100,1
+Mexico,elec_biomass (IGCC CCS),biomass (IGCC CCS),biomass (IGCC CCS) (once through),RES-target,,2020,2100,1
+Mexico,elec_biomass (IGCC CCS),biomass (IGCC CCS),biomass (IGCC CCS) (seawater),RES-target,,2020,2100,1
+Mexico,elec_biomass (IGCC CCS),biomass (IGCC CCS),biomass (IGCC CCS) (recirculating),RES-target,,2020,2100,1
+Mexico,elec_biomass (IGCC CCS),biomass (IGCC CCS),biomass (IGCC CCS) (dry cooling),RES-target,,2020,2100,1

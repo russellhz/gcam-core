@@ -15,3 +15,18 @@ policy_fuelst_mkt_bra.xml,fuelst_mkt_bra,Brazil,CORE,Brazil,trn_pass_road_LDV_4W
 policy_fuelst_mkt_bra.xml,fuelst_mkt_bra,Brazil,CORE,Brazil,trn_pass_road_LDV_4W,Large Car and Truck,gCO2/vkm,156.4684,,,
 policy_fuelst_mkt_can.xml,fuelst_mkt_can,Canada,CORE,Canada,trn_pass_road_LDV_4W,Car,gCO2/vkm,158.7456391,122.8343495,,
 policy_fuelst_mkt_can.xml,fuelst_mkt_can,Canada,CORE,Canada,trn_pass_road_LDV_4W,Large Car and Truck,gCO2/vkm,158.7456391,122.8343495,,
+policy_fuelst_mkt_ind.xml,fuelst_mkt_ind,India,CORE,India,trn_pass_road_LDV_4W,Mini Car,gCO2/vkm,125,113,,
+policy_fuelst_mkt_ind.xml,fuelst_mkt_ind,India,CORE,India,trn_pass_road_LDV_4W,Car,gCO2/vkm,125,113,,
+policy_fuelst_mkt_ind.xml,fuelst_mkt_ind,India,CORE,India,trn_pass_road_LDV_4W,Large Car and Truck,gCO2/vkm,125,113,,
+policy_fuelst_mkt_eu.xml,fuelst_mkt_eu_lighttruck,EU,CORE,EU-12,trn_freight_road,Light truck,gCO2/vkm,,193,159,159
+policy_fuelst_mkt_eu.xml,fuelst_mkt_eu_lighttruck,EU,CORE,EU-15,trn_freight_road,Light truck,gCO2/vkm,,193,159,159
+policy_fuelst_mkt_eu.xml,fuelst_mkt_eu_medtruck,EU,CORE,EU-12,trn_freight_road,Medium truck,gCO2/vkm,,320.0199,263.5458,263.5458
+policy_fuelst_mkt_eu.xml,fuelst_mkt_eu_medtruck,EU,CORE,EU-15,trn_freight_road,Medium truck,gCO2/vkm,,294.14335,242.2357,242.2357
+policy_fuelst_mkt_eu.xml,fuelst_mkt_eu_heavytruck,EU,CORE,EU-12,trn_freight_road,Heavy truck,gCO2/vkm,,718.58065,591.7723,591.7723
+policy_fuelst_mkt_eu.xml,fuelst_mkt_eu_heavytruck,EU,CORE,EU-15,trn_freight_road,Heavy truck,gCO2/vkm,,770.3346,634.3932,634.3932
+policy_fuelst_mkt_jap.xml,fuelst_mkt_jap,Japan,CORE,Japan,trn_pass_road_LDV_4W,Mini Car,gCO2/vkm,159.986,147.587,135.188,
+policy_fuelst_mkt_jap.xml,fuelst_mkt_jap,Japan,CORE,Japan,trn_pass_road_LDV_4W,Car,gCO2/vkm,159.986,147.587,135.188,
+policy_fuelst_mkt_jap.xml,fuelst_mkt_jap,Japan,CORE,Japan,trn_pass_road_LDV_4W,Large Car and Truck,gCO2/vkm,159.986,147.587,135.188,
+policy_fuelst_mkt_kor.xml,fuelst_mkt_kor,South Korea,CORE,South Korea,trn_pass_road_LDV_4W,Mini Car,gCO2/vkm,97,83.5,70,
+policy_fuelst_mkt_kor.xml,fuelst_mkt_kor,South Korea,CORE,South Korea,trn_pass_road_LDV_4W,Car,gCO2/vkm,97,83.5,70,
+policy_fuelst_mkt_kor.xml,fuelst_mkt_kor,South Korea,CORE,South Korea,trn_pass_road_LDV_4W,Large Car and Truck,gCO2/vkm,97,83.5,70,
