@@ -18,6 +18,7 @@ module_policy_ceilings_floors_xml <- function(command, ...) {
              "L301.policy_RES_coefs",
              "L301.RES_secout",
              "L301.input_tax",
+             "L301.input_subsidy",
              "L301.XML_policy_map"))
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(all_xml_names)
@@ -30,6 +31,7 @@ module_policy_ceilings_floors_xml <- function(command, ...) {
     L301.policy_RES_coefs <- get_data(all_data, "L301.policy_RES_coefs")
     L301.RES_secout <- get_data(all_data, "L301.RES_secout")
     L301.input_tax <- get_data(all_data, "L301.input_tax")
+    L301.input_subsidy <- get_data(all_data, "L301.input_subsidy")
     L301.policy_port_stnd <- get_data(all_data, "L301.policy_port_stnd")
     L301.XML_policy_map <- get_data(all_data, "L301.XML_policy_map")
 
@@ -70,6 +72,15 @@ module_policy_ceilings_floors_xml <- function(command, ...) {
         L301.input_tax_tmp <- L301.input_tax[0,]
       }
 
+      if ("subsidy" %in% policy_rgn_tmp$policyType){
+        L301.input_subsidy_tmp <- L301.input_subsidy %>%
+          semi_join(policy_rgn_tmp, by = c("region", "input.subsidy" = "policy.portfolio.standard"))
+      } else {
+        # If policy type not included, still need to include the tables
+        # So just make them empty
+        L301.input_subsidy_tmp <- L301.input_subsidy[0,]
+      }
+
       # Produce output
       assign(xml_name,
              create_xml(xml_name) %>%
@@ -77,10 +88,12 @@ module_policy_ceilings_floors_xml <- function(command, ...) {
                add_xml_data(L301.policy_RES_coefs_tmp, "StubTechCoef_NM_Policy") %>%
                add_xml_data(L301.RES_secout_tmp, "StubTechResSecOut") %>%
                add_xml_data(L301.input_tax_tmp, "StubTechInputTax") %>%
+               add_xml_data(L301.input_subsidy_tmp, "StubTechInputSubsidy") %>%
                add_precursors("L301.policy_port_stnd",
                               "L301.policy_RES_coefs",
                               "L301.RES_secout",
-                              "L301.input_tax")
+                              "L301.input_tax",
+                              "L301.input_subsidy")
              )
 
     }

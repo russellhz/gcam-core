@@ -10,7 +10,7 @@
 #' @return Depends on \code{command}: either a vector of required inputs,
 #' a vector of output names, or (if \code{command} is "MAKE") all
 #' the generated outputs: \code{L301.policy_port_stnd}, \code{L301.policy_RES_coefs},
-#' \code{L301.RES_secout}, \code{L301.input_tax}
+#' \code{L301.RES_secout}, \code{L301.input_tax}, \code{L301.input_subsidy}
 #' @importFrom assertthat assert_that
 #' @importFrom dplyr bind_rows distinct filter if_else left_join mutate select
 #' @author RLH April 2023
@@ -27,6 +27,7 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
              "L301.policy_RES_coefs",
              "L301.RES_secout",
              "L301.input_tax",
+             "L301.input_subsidy",
              "L301.XML_policy_map"))
   } else if(command == driver.MAKE) {
 
@@ -129,6 +130,8 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
 
     # 5. Create input tax tables - interpolate between years
     L301.input_tax <- A_Policy_Constraints_Techs %>%
+      filter(!is.na(input.tax)) %>%
+      select(-input.subsidy) %>%
       tidyr::pivot_longer(start.year:end.year, names_to = "drop", values_to = "year") %>%
       select(-drop) %>%
       distinct() %>%
@@ -139,8 +142,22 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
       ungroup %>%
       arrange(year)
 
+    # 6. Create input subsidy tables - interpolate between years
+    L301.input_subsidy <- A_Policy_Constraints_Techs %>%
+      filter(!is.na(input.subsidy)) %>%
+      select(-input.tax) %>%
+      tidyr::pivot_longer(start.year:end.year, names_to = "drop", values_to = "year") %>%
+      select(-drop) %>%
+      distinct() %>%
+      group_by(region, supplysector, subsector, stub.technology, input.subsidy) %>%
+      # Interpolates between min and max years for each region/output combo
+      complete(nesting(region, supplysector, subsector, stub.technology, input.subsidy),
+               year = seq(min(year), max(year), 5)) %>%
+      ungroup %>%
+      arrange(year)
 
-    # 6. Make mapping of policies to xml file names
+
+    # 7. Make mapping of policies to xml file names
     L301.XML_policy_map <- distinct(A_Policy_Constraints, xml, policy.portfolio.standard, market) %>%
       bind_rows(distinct(A_Policy_RES_Coefs, xml, policy.portfolio.standard, market))
 
@@ -171,6 +188,12 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
       add_precursors("policy/A_Policy_RES_SecOut") ->
       L301.input_tax
 
+    L301.input_subsidy %>%
+      add_title("Technologies to apply constraint to", overwrite = T) %>%
+      add_units("NA") %>%
+      add_precursors("policy/A_Policy_RES_SecOut") ->
+      L301.input_subsidy
+
     L301.XML_policy_map %>%
       add_title("Mapping of policy names to xml", overwrite = T) %>%
       add_units("NA") %>%
@@ -182,6 +205,7 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
                 L301.policy_RES_coefs,
                 L301.RES_secout,
                 L301.input_tax,
+                L301.input_subsidy,
                 L301.XML_policy_map)
   } else {
     stop("Unknown command")
