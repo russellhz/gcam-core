@@ -29,3 +29,5 @@ policy_fuelst_mkt_jap.xml,fuelst_mkt_jap,Japan,CORE,Japan,trn_pass_road_LDV_4W,C
 policy_fuelst_mkt_jap.xml,fuelst_mkt_jap,Japan,CORE,Japan,trn_pass_road_LDV_4W,Large Car and Truck,gCO2/vkm,159.986,147.587,135.188,
 policy_fuelst_mkt_kor.xml,fuelst_mkt_kor,South Korea,CORE,South Korea,trn_pass_road_LDV_4W,Car,gCO2/vkm,97,83.5,70,
 policy_fuelst_mkt_kor.xml,fuelst_mkt_kor,South Korea,CORE,South Korea,trn_pass_road_LDV_4W,Large Car and Truck,gCO2/vkm,97,83.5,70,
+policy_fuelst_mkt_usa.xml,fuelst_mkt_usa,USA,CORE,USA,trn_pass_road_LDV_4W,Car,gCO2/vkm,97,83.5,70,
+policy_fuelst_mkt_usa.xml,fuelst_mkt_usa,USA,CORE,USA,trn_pass_road_LDV_4W,Large Car and Truck,gCO2/vkm,155.34,131.73,131.73,

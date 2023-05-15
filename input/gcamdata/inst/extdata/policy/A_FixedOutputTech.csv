@@ -11,3 +11,4 @@ policy_ee_usa.xml,USA,resid heating,gas,EE,1,2.262,0.006460294,0.027541186,0.081
 policy_hydro_fix_idn.xml,Indonesia,electricity,hydro,hydro,0,,0.071952873,0.071952873,0.071952873,0.071952873
 policy_hydro_fix_saf.xml,South Africa,electricity,hydro,hydro,0,,0.008621673,0.014359745,0.020097818,0.020097818
 policy_hydro_fix_tur.xml,Europe_Non_EU,electricity,hydro,hydro,0,,0.434081726,0.511569451,0.511569451,
+policy_hydro_fix_usa.xml,USA,electricity,hydro,hydro,0,,1.06020781,1.058987836,1.058987836,1.058987836
