@@ -105,47 +105,6 @@ China,other industrial feedstocks,refined liquids,refined liquids,ind-constraint
 China,process heat cement,coal,coal,ind-constraint-OLD,,2020,2030
 China,process heat cement,hydrogen,hydrogen,ind-constraint-OLD,,2020,2030
 China,process heat cement,refined liquids,refined liquids,ind-constraint-OLD,,2020,2030
-Europe_Non_EU,agricultural energy use,mobile,refined liquids,ind-constraint,,2020,2100
-Europe_Non_EU,agricultural energy use,stationary,biomass,ind-constraint,,2020,2100
-Europe_Non_EU,agricultural energy use,stationary,coal,ind-constraint,,2020,2100
-Europe_Non_EU,agricultural energy use,stationary,electricity,ind-constraint,,2020,2100
-Europe_Non_EU,agricultural energy use,stationary,refined liquids,ind-constraint,,2020,2100
-Europe_Non_EU,agricultural energy use,stationary,gas,ind-constraint,,2020,2100
-Europe_Non_EU,chemical energy use,coal,coal,ind-constraint,,2020,2100
-Europe_Non_EU,chemical energy use,electricity,electricity,ind-constraint,,2020,2100
-Europe_Non_EU,chemical energy use,gas,gas,ind-constraint,,2020,2100
-Europe_Non_EU,chemical energy use,refined liquids,refined liquids,ind-constraint,,2020,2100
-Europe_Non_EU,chemical feedstocks,gas,gas,ind-constraint,,2020,2100
-Europe_Non_EU,chemical feedstocks,refined liquids,refined liquids,ind-constraint,,2020,2100
-Europe_Non_EU,construction energy use,mobile,refined liquids,ind-constraint,,2020,2100
-Europe_Non_EU,construction energy use,stationary,coal,ind-constraint,,2020,2100
-Europe_Non_EU,construction energy use,stationary,electricity,ind-constraint,,2020,2100
-Europe_Non_EU,construction energy use,stationary,refined liquids,ind-constraint,,2020,2100
-Europe_Non_EU,construction energy use,stationary,gas,ind-constraint,,2020,2100
-Europe_Non_EU,construction feedstocks,refined liquids,refined liquids,ind-constraint,,2020,2100
-Europe_Non_EU,mining energy use,mobile,refined liquids,ind-constraint,,2020,2100
-Europe_Non_EU,mining energy use,stationary,coal,ind-constraint,,2020,2100
-Europe_Non_EU,mining energy use,stationary,electricity,ind-constraint,,2020,2100
-Europe_Non_EU,mining energy use,stationary,refined liquids,ind-constraint,,2020,2100
-Europe_Non_EU,mining energy use,stationary,gas,ind-constraint,,2020,2100
-Europe_Non_EU,other industrial energy use,biomass,biomass,ind-constraint,,2020,2100
-Europe_Non_EU,other industrial energy use,biomass,biomass cogen,ind-constraint,,2020,2100
-Europe_Non_EU,other industrial energy use,coal,coal,ind-constraint,,2020,2100
-Europe_Non_EU,other industrial energy use,coal,coal cogen,ind-constraint,,2020,2100
-Europe_Non_EU,other industrial energy use,electricity,electricity,ind-constraint,,2020,2100
-Europe_Non_EU,other industrial energy use,gas,gas,ind-constraint,,2020,2100
-Europe_Non_EU,other industrial energy use,gas,gas cogen,ind-constraint,,2020,2100
-Europe_Non_EU,other industrial energy use,hydrogen,hydrogen,ind-constraint,,2020,2100
-Europe_Non_EU,other industrial energy use,hydrogen,hydrogen cogen,ind-constraint,,2020,2100
-Europe_Non_EU,other industrial energy use,refined liquids,refined liquids,ind-constraint,,2020,2100
-Europe_Non_EU,other industrial energy use,refined liquids,refined liquids cogen,ind-constraint,,2020,2100
-Europe_Non_EU,other industrial feedstocks,coal,coal,ind-constraint,,2020,2100
-Europe_Non_EU,other industrial feedstocks,refined liquids,refined liquids,ind-constraint,,2020,2100
-Europe_Non_EU,process heat cement,biomass,biomass,ind-constraint,,2020,2100
-Europe_Non_EU,process heat cement,coal,coal,ind-constraint,,2020,2100
-Europe_Non_EU,process heat cement,gas,gas,ind-constraint,,2020,2100
-Europe_Non_EU,process heat cement,hydrogen,hydrogen,ind-constraint,,2020,2100
-Europe_Non_EU,process heat cement,refined liquids,refined liquids,ind-constraint,,2020,2100
 Australia_NZ,regional biomass,regional biomass,regional biomass,energy-constraint,,2030,2100
 Australia_NZ,regional coal,domestic coal,domestic coal,energy-constraint,,2030,2100
 Australia_NZ,regional coal,imported coal,imported coal,energy-constraint,,2030,2100
@@ -224,3 +183,19 @@ Russia,electricity,solar,PV,,PV-target,2020,2100
 Russia,electricity,solar,PV_storage,,PV-target,2020,2100
 Russia,electricity,wind,wind,,wind-target,2020,2100
 Russia,electricity,wind,wind_storage,,wind-target,2020,2100
+Europe_Non_EU,electricity,solar,PV,,PV-target,2020,2100
+Europe_Non_EU,electricity,solar,PV_storage,,PV-target,2020,2100
+Europe_Non_EU,electricity,wind,wind,,wind-target,2020,2100
+Europe_Non_EU,electricity,wind,wind_storage,,wind-target,2020,2100
+Europe_Non_EU,electricity,biomass,biomass (conv),,biom-target,2020,2100
+Europe_Non_EU,electricity,biomass,biomass (IGCC),,biom-target,2020,2100
+Europe_Non_EU,electricity,biomass,biomass (conv CCS),,biom-target,2020,2100
+Europe_Non_EU,electricity,biomass,biomass (conv CCS),,biom-target,2020,2100
+Europe_Non_EU,electricity,geothermal,geothermal,,geo-target,2020,2100
+Europe_Non_EU,elect_td_ind,elect_td_ind,elect_td_ind,ind-constraint,,2020,2100
+Europe_Non_EU,refined liquids industrial,refined liquids industrial,refined liquids industrial,ind-constraint,,2020,2100
+Europe_Non_EU,delivered coal industry,delivered coal industry,delivered coal industry,ind-constraint,,2020,2100
+Europe_Non_EU,wholesale gas,wholesale gas,wholesale gas,ind-constraint,,2020,2100
+Europe_Non_EU,delivered biomass industry,delivered biomass industry,delivered biomass industry,ind-constraint,,2020,2100
+Europe_Non_EU,H2 industrial,H2 delivery,H2 delivery,ind-constraint,,2020,2100
+Europe_Non_EU,H2 industrial,forecourt production,electrolysis,ind-constraint,,2020,2100

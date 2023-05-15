@@ -30,6 +30,7 @@ module_policy_L305.FixedOutputTech <- function(command, ...) {
     L305.StubTechFixedOutput <- A_FixedOutputTech %>%
       select(-non.energy.input.cost) %>%
       gather_years(value_col = "fixedOutput") %>%
+      filter(!is.na(fixedOutput)) %>%
       # Fill in missing years
       group_by(xml, region, supplysector, subsector, stub.technology) %>%
       # Interpolates between min and max years for each region/policy combo
