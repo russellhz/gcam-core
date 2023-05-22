@@ -1,6 +1,6 @@
 # File: A_FuelStandards_Market.csv,,,,,,,,,,,
 # Title: Fuel Standard Policies Market,,,,,,,,,,,
-# Comments: SSP_sce is the transport UCD scenario to use for the coefs; assuming that vans represent 15% of EU Large Cars and Trucks,,,,,,,,,,,
+# Comments: SSP_sce is the transport UCD scenario to use for the coefs for the years listed here but CORE will be used for all other years and techs; assuming that vans represent 15% of EU Large Cars and Trucks,,,,,,,,,,,
 # Units: gCO2/vkm,,,,,,,,,,,
 # Column types: ccccccccnnnn,,,,,,,,,,,
 # ----------,,,,,,,,,,,
@@ -24,10 +24,10 @@ policy_fuelst_mkt_eu.xml,fuelst_mkt_eu_medtruck,EU,CORE,EU-12,trn_freight_road,M
 policy_fuelst_mkt_eu.xml,fuelst_mkt_eu_medtruck,EU,CORE,EU-15,trn_freight_road,Medium truck,gCO2/vkm,,294.14335,242.2357,242.2357
 policy_fuelst_mkt_eu.xml,fuelst_mkt_eu_heavytruck,EU,CORE,EU-12,trn_freight_road,Heavy truck,gCO2/vkm,,718.58065,591.7723,591.7723
 policy_fuelst_mkt_eu.xml,fuelst_mkt_eu_heavytruck,EU,CORE,EU-15,trn_freight_road,Heavy truck,gCO2/vkm,,770.3346,634.3932,634.3932
-policy_fuelst_mkt_jap.xml,fuelst_mkt_jap,Japan,CORE,Japan,trn_pass_road_LDV_4W,Mini Car,gCO2/vkm,159.986,147.587,135.188,
-policy_fuelst_mkt_jap.xml,fuelst_mkt_jap,Japan,CORE,Japan,trn_pass_road_LDV_4W,Car,gCO2/vkm,159.986,147.587,135.188,
-policy_fuelst_mkt_jap.xml,fuelst_mkt_jap,Japan,CORE,Japan,trn_pass_road_LDV_4W,Large Car and Truck,gCO2/vkm,159.986,147.587,135.188,
+policy_fuelst_mkt_jap.xml,fuelst_mkt_jap,Japan,CORE,Japan,trn_pass_road_LDV_4W,Mini Car,gCO2/vkm,160.786332,147.98742,135.188,
+policy_fuelst_mkt_jap.xml,fuelst_mkt_jap,Japan,CORE,Japan,trn_pass_road_LDV_4W,Car,gCO2/vkm,160.786332,147.98742,135.188,
+policy_fuelst_mkt_jap.xml,fuelst_mkt_jap,Japan,CORE,Japan,trn_pass_road_LDV_4W,Large Car and Truck,gCO2/vkm,160.786332,147.98742,135.188,
 policy_fuelst_mkt_kor.xml,fuelst_mkt_kor,South Korea,CORE,South Korea,trn_pass_road_LDV_4W,Car,gCO2/vkm,97,83.5,70,
 policy_fuelst_mkt_kor.xml,fuelst_mkt_kor,South Korea,CORE,South Korea,trn_pass_road_LDV_4W,Large Car and Truck,gCO2/vkm,97,83.5,70,
-policy_fuelst_mkt_usa.xml,fuelst_mkt_usa,USA,CORE,USA,trn_pass_road_LDV_4W,Car,gCO2/vkm,97,83.5,70,
+policy_fuelst_mkt_usa.xml,fuelst_mkt_usa,USA,CORE,USA,trn_pass_road_LDV_4W,Car,gCO2/vkm,155.34,131.73,131.73,
 policy_fuelst_mkt_usa.xml,fuelst_mkt_usa,USA,CORE,USA,trn_pass_road_LDV_4W,Large Car and Truck,gCO2/vkm,155.34,131.73,131.73,

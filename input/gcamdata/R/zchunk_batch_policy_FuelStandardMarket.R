@@ -12,7 +12,8 @@
 module_policy_FuelStandardMarket_xml <- function(command, ...) {
   all_xml_names <- get_xml_names("policy/A_FuelStandards_Market.csv", "policy_FuelStandardMarket.xml")
   if(command == driver.DECLARE_INPUTS) {
-    return(c("L354.FuelStandards_coef",
+    return(c("L354.NewTrnCoefs",
+             "L354.FuelStandards_coef",
              "L354.FuelStandards_secout",
              "L354.FuelStandards_policy"))
   } else if(command == driver.DECLARE_OUTPUTS) {
@@ -23,6 +24,7 @@ module_policy_FuelStandardMarket_xml <- function(command, ...) {
 
 
     # Load required inputs
+    L354.NewTrnCoefs <- get_data(all_data, "L354.NewTrnCoefs")
     L354.FuelStandards_policy <- get_data(all_data, "L354.FuelStandards_policy")
     L354.FuelStandards_coef <- get_data(all_data, "L354.FuelStandards_coef")
     L354.FuelStandards_secout <- get_data(all_data, "L354.FuelStandards_secout")
@@ -42,6 +44,10 @@ module_policy_FuelStandardMarket_xml <- function(command, ...) {
         filter(xml == xml_name) %>%
         select(-xml)
 
+      L354.NewTrnCoefs_tmp <- L354.NewTrnCoefs %>%
+        semi_join(L354.FuelStandards_coef_tmp,
+                  by = c("region", "supplysector", "tranSubsector", "stub.technology"))
+
 
       # Produce output
       assign(xml_name,
@@ -49,9 +55,11 @@ module_policy_FuelStandardMarket_xml <- function(command, ...) {
                add_xml_data(L354.policy_port_stnd_tmp, "PortfolioStdConstraint") %>%
                add_xml_data(L354.FuelStandards_coef_tmp, "StubTranTechCoef_NM") %>%
                add_xml_data(L354.FuelStandards_secout_tmp, "StubTranTechRESOutput") %>%
+               add_xml_data(L354.NewTrnCoefs_tmp, "StubTranTechCoef") %>%
                add_precursors("L354.FuelStandards_coef",
                               "L354.FuelStandards_secout",
-                              "L354.FuelStandards_policy")
+                              "L354.FuelStandards_policy",
+                              "L354.NewTrnCoefs")
       )
 
     }
