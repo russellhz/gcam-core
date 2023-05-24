@@ -12,3 +12,6 @@ policy_hydro_fix_idn.xml,Indonesia,electricity,hydro,hydro,0,,0.071952873,0.0719
 policy_hydro_fix_saf.xml,South Africa,electricity,hydro,hydro,0,,0.008621673,0.014359745,0.020097818,0.020097818
 policy_hydro_fix_tur.xml,Europe_Non_EU,electricity,hydro,hydro,0,,0.434081726,0.511569451,0.511569451,0.511569451
 policy_hydro_fix_usa.xml,USA,electricity,hydro,hydro,0,,1.06020781,1.058987836,1.058987836,1.058987836
+policy_hydro_fix_bra.xml,Brazil,electricity,hydro,hydro,0,,1.544512374,1.793954748,1.793954748,1.793954748
+policy_hydro_fix_chn.xml,China,electricity,hydro,hydro,0,,4.873062143,4.873062143,4.873062143,4.873062143
+policy_hydro_fix_kor.xml,South Korea,electricity,hydro,hydro,0,,,,0.013822766,
