@@ -28,10 +28,6 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
              "L201.BaseGDP_Scen",
              paste0("L201.LaborProductivity_gSSP", seq(1, 5)),
              paste0("L201.Pop_gSSP", seq(1, 5)),
-             # "L239.Production_reg_imp",
-             # "L239.Production_reg_dom",
-             # "L222.StubTechProd_refining",
-             # "L2233.StubTechProd_elec_cool"
              FILE = "policy/A_OutputsByTech"
              ))
   } else if(command == driver.DECLARE_OUTPUTS) {

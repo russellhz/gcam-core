@@ -32,7 +32,11 @@ module_policy_L3221.CCap <- function(command, ...) {
              "L2325.StubTech_chemical",
              "L2326.StubTech_aluminum",
              "L244.StubTech_bld",
-             "L254.StubTranTech"
+             "L254.StubTranTech",
+             "L201.BaseGDP_Scen",
+             paste0("L201.LaborProductivity_gSSP", seq(1, 5)),
+             paste0("L201.Pop_gSSP", seq(1, 5)),
+             FILE = "policy/A_CO2ByTech"
              ))
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(c("L3221.CCap_constraint",
@@ -67,6 +71,12 @@ module_policy_L3221.CCap <- function(command, ...) {
                                       select(-sce)
     L210.ResTech <- get_data(all_data, "L210.ResTechCoef") %>%
       distinct(region, resource, reserve.subresource, resource.reserve.technology)
+
+    L201.BaseGDP_Scen <- get_data(all_data, "L201.BaseGDP_Scen")
+    L201.LaborProductivity <-  get_data(all_data, paste0("L201.LaborProductivity_g", socioeconomics.BASE_GDP_SCENARIO))
+    L201.Pop <-  get_data(all_data, paste0("L201.Pop_g", socioeconomics.BASE_GDP_SCENARIO))
+    A_CO2ByTech <- get_data(all_data, "policy/A_CO2ByTech") %>%
+      gather_years()
 
     # 1. Write constraint to correct regions
     # When a constraint applies to more than one region, we don't need to write the
@@ -146,8 +156,76 @@ module_policy_L3221.CCap <- function(command, ...) {
     # Check that there are no NAs
     stopifnot(!any(is.na(L3221.CCap_resource)))
 
+    # 5. Adjust any GDPIntensity targets
+    if (any(!is.na(L3221.CCap_constraint$GDPIntensity_BaseYear))){
+      GDP_Intensity_targets <- L3221.CCap_constraint %>%
+        filter(!is.na(GDPIntensity_BaseYear))
+
+      # First calculate GDP series - we have baseGDP, growth rate in perCapitaGDP and population
+      L3221.GDP <- L201.BaseGDP_Scen %>%
+        mutate(year = min(MODEL_BASE_YEARS)) %>%
+        bind_rows(L201.LaborProductivity) %>%
+        arrange(region, year) %>%
+        left_join_error_no_match(L201.Pop, by = c("region", "year")) %>%
+        mutate(baseGDPperCapita = baseGDP / totalPop) %>%
+        group_by(region) %>%
+        mutate(year_diff = year - lag(year),
+               multiplier = if_else(is.na(laborproductivity), 1,(laborproductivity + 1) ^ year_diff),
+               multiplier = cumprod(multiplier),
+               baseGDPperCapita = baseGDPperCapita[year == min(MODEL_BASE_YEARS)]) %>%
+        ungroup %>%
+        mutate(GDP = totalPop * baseGDPperCapita * multiplier) %>%
+        select(region, year, GDP)
+
+      # Next get the energy technologies that we want to constraint
+      L3221.emissions_techs <- bind_rows(L3221.CCap_tech,
+                                      rename(L3221.CCap_tranTech, subsector = tranSubsector),
+                                      rename(L3221.CCap_resource, supplysector = resource,
+                                             subsector = reserve.subresource,
+                                             stub.technology = resource.reserve.technology)) %>%
+        semi_join(GDP_Intensity_targets, by = c("region", "CO2" = "ghgpolicy", "year" = "constraint.year")) %>%
+        left_join_error_no_match(select(GDP_Intensity_targets, region, CO2 = ghgpolicy,
+                                        GDPIntensity_BaseYear, constraint, year = constraint.year),
+                                 by = c("region", "CO2", "year"))
+
+      # Calculate the CO2 emissions of the techs in the base year
+      L3221.baseEmissions <- L3221.emissions_techs %>%
+        select(-year, -constraint) %>%
+        distinct() %>%
+        left_join(A_CO2ByTech, by = c("region", "supplysector" = "sector", "subsector",
+                                                         "stub.technology" = "technology", "GDPIntensity_BaseYear" = "year")) %>%
+        group_by(region, CO2, GDPIntensity_BaseYear) %>%
+        summarise(value = sum(value, na.rm = T)) %>%
+        ungroup
+
+      # Add in GDP and calculate base GDP Intensity
+      L3221.baseIntensity <- L3221.baseEmissions %>%
+        left_join_error_no_match(L3221.GDP, by = c("region", "GDPIntensity_BaseYear" = "year")) %>%
+        mutate(GDP_intensity = value / GDP) %>%
+        select(region, CO2, GDPIntensity_BaseYear, GDP_intensity)
+
+      # Future GDP intensities
+      L3221.futureIntensity <- GDP_Intensity_targets %>%
+        left_join_error_no_match(L3221.baseIntensity,
+                                 by = c("region", "ghgpolicy" = "CO2", "GDPIntensity_BaseYear")) %>%
+        mutate(GDP_intensity = GDP_intensity * (100 + constraint) / 100)
+
+      # Calculate future energy constraints based on GDP intensities
+      L3221.futureEmissions <- L3221.futureIntensity %>%
+        left_join_error_no_match(L3221.GDP, by = c("region", "constraint.year" = "year")) %>%
+        mutate(constraint = GDP_intensity * GDP) %>%
+        select(xml, region, market, ghgpolicy, year.fillout, constraint.year, constraint)
+
+      L3221.CCap_constraint <- L3221.CCap_constraint %>%
+        filter(is.na(GDPIntensity_BaseYear)) %>%
+        bind_rows(L3221.futureEmissions)
+
+
+    }
+
     # Produce outputs
     L3221.CCap_constraint %>%
+      select(-GDPIntensity_BaseYear) %>%
       add_title("Custom carbon constraints", overwrite = T) %>%
       add_units("MTC") %>%
       add_precursors("policy/A_CCap_Constraint",
