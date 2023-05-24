@@ -13,3 +13,4 @@ policy_affor_col.xml,Colombia,Forest,afforestation,,465.073634,465.073634,465.07
 policy_affor_ind.xml,India,Forest,afforestation,,264.0865448,284.0865448,304.0865448,304.0865448
 policy_affor_mex.xml,Mexico,Forest,afforestation,,65.06493204,65.06493204,65.06493204,65.06493204
 policy_grassland_chn.xml,China,Grassland;Shrubland;UnmanagedPasture,grass-protect,,2498.656984,2498.656984,2498.656984,2498.656984
+policy_affor_grassland_chn.xml,China,Forest;Grassland;Shrubland;UnmanagedPasture,affor-grass-protect,,3980.005565,4072.936953,4165.868342,4165.868342
