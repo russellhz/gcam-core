@@ -462,6 +462,7 @@ generate_level2_data_names <- function() {
   level2_data_names[["LN3ConstraintMgd"]] <- c("region", "LandAllocatorRoot", "LandNode1", "LandNode2", "LandNode3", "LandLeaf", "land.constraint.policy")
   level2_data_names[["StubTechResSecOut"]] <- c("region", "supplysector", "subsector", "stub.technology", "year", "res.secondary.output", "output.ratio")
   level2_data_names[["TechResSecOut"]] <- c(level2_data_names[["TechYr"]], "res.secondary.output", "output.ratio")
+  level2_data_names[["StubTechResSecOutPMult"]] <- c("region", "supplysector", "subsector", "stub.technology", "year", "res.secondary.output", "pMultiplier")
   level2_data_names[["StubTechInputTax"]] <- c(level2_data_names[["StubTechYr"]], "input.tax")
   level2_data_names[["StubTechInputSubsidy"]] <- c(level2_data_names[["StubTechYr"]], "input.subsidy")
   level2_data_names[["StubTechCO2"]] <- c("region", "supplysector", "subsector", "stub.technology", "year", "CO2")

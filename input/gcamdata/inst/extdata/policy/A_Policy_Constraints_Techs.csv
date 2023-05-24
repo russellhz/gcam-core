@@ -199,3 +199,22 @@ Europe_Non_EU,wholesale gas,wholesale gas,wholesale gas,ind-constraint,,2020,210
 Europe_Non_EU,delivered biomass industry,delivered biomass industry,delivered biomass industry,ind-constraint,,2020,2100
 Europe_Non_EU,H2 industrial,H2 delivery,H2 delivery,ind-constraint,,2020,2100
 Europe_Non_EU,H2 industrial,forecourt production,electrolysis,ind-constraint,,2020,2100
+Indonesia,electricity,geothermal,geothermal,,geo-target,2020,2100
+India,electricity,solar,PV,,PV-target,2020,2025
+India,electricity,solar,PV_storage,,PV-target,2020,2025
+India,electricity,wind,wind,,wind-target,2020,2025
+India,electricity,wind,wind_storage,,wind-target,2020,2025
+India,electricity,biomass,biomass (conv),,biom-target,2020,2025
+India,electricity,biomass,biomass (IGCC),,biom-target,2020,2025
+India,electricity,biomass,biomass (conv CCS),,biom-target,2020,2025
+India,electricity,biomass,biomass (conv CCS),,biom-target,2020,2025
+India,elect_td_bld,rooftop_pv,rooftop_pv,,rooftop-target,2020,2025
+South Korea,electricity,solar,PV,,PV-target,2020,2030
+South Korea,electricity,solar,PV_storage,,PV-target,2020,2030
+South Korea,electricity,wind,wind,,wind-target,2030,2030
+South Korea,electricity,wind,wind_storage,,wind-target,2030,2030
+South Korea,electricity,biomass,biomass (conv),,biom-target,2030,2030
+South Korea,electricity,biomass,biomass (IGCC),,biom-target,2030,2030
+South Korea,electricity,biomass,biomass (conv CCS),,biom-target,2030,2030
+South Korea,electricity,biomass,biomass (conv CCS),,biom-target,2030,2030
+South Korea,elect_td_bld,wind,wind_offshore,,offshore-target,2020,2030

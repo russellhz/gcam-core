@@ -1,0 +1,14 @@
+# File: A_Policy_RES_PMultiplier.csv,,,,,,,,,,,,,,
+# Title: Policy RES price multipliers,,,,,,,,,,,,,,
+# Units: Refined liquid proportion (biofuel targets),,,,,,,,,,,,,,
+# Column types: ccccccccnnnnnnn,,,,,,,,,,,,,,
+# ----------,,,,,,,,,,,,,,
+xml,region,market,policy.portfolio.standard,policyType,supplysector,subsector,stub.technology,2020,2025,2030,2035,2040,2045,2100
+policy_tpesres_bra.xml,Brazil,Brazil,TPES_RES,RES,resid heating,traditional biomass,traditional biomass,,0.45,0.45,0.45,0.45,0.45,0.45
+policy_tpesres_bra.xml,Brazil,Brazil,TPES_RES,RES,resid others,traditional biomass,traditional biomass,,0.45,0.45,0.45,0.45,0.45,0.45
+policy_tpesres_chn.xml,China,China,TPES_RES,RES,chemical feedstocks,gas,gas,0,0,0,0,0,0,0
+policy_tpesres_chn.xml,China,China,TPES_RES,RES,chemical feedstocks,refined liquids,refined liquids,0,0,0,0,0,0,0
+policy_tpesres_chn.xml,China,China,TPES_RES,RES,construction feedstocks,refined liquids,refined liquids,0,0,0,0,0,0,0
+policy_tpesres_chn.xml,China,China,TPES_RES,RES,other industrial feedstocks,coal,coal,0,0,0,0,0,0,0
+policy_tpesres_chn.xml,China,China,TPES_RES,RES,other industrial feedstocks,refined liquids,refined liquids,0,0,0,0,0,0,0
+policy_tpesres_chn.xml,China,China,TPES_RES,RES,refined liquids bunkers,refined liquids bunkers,refined liquids bunkers,0,0,0,0,0,0,0

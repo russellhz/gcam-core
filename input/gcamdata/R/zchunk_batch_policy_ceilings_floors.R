@@ -17,6 +17,7 @@ module_policy_ceilings_floors_xml <- function(command, ...) {
     return(c("L301.policy_port_stnd",
              "L301.policy_RES_coefs",
              "L301.RES_secout",
+             "L301.pmultiplier",
              "L301.input_tax",
              "L301.input_subsidy",
              "L301.XML_policy_map"))
@@ -30,6 +31,7 @@ module_policy_ceilings_floors_xml <- function(command, ...) {
     # Load required inputs
     L301.policy_RES_coefs <- get_data(all_data, "L301.policy_RES_coefs")
     L301.RES_secout <- get_data(all_data, "L301.RES_secout")
+    L301.pmultiplier <-  get_data(all_data, "L301.pmultiplier")
     L301.input_tax <- get_data(all_data, "L301.input_tax")
     L301.input_subsidy <- get_data(all_data, "L301.input_subsidy")
     L301.policy_port_stnd <- get_data(all_data, "L301.policy_port_stnd")
@@ -56,11 +58,16 @@ module_policy_ceilings_floors_xml <- function(command, ...) {
 
         L301.RES_secout_tmp <- L301.RES_secout %>%
           semi_join(policy_rgn_tmp, by = c("region", "res.secondary.output" = "policy.portfolio.standard"))
+
+        L301.pmultiplier_tmp <- L301.pmultiplier %>%
+          semi_join(policy_rgn_tmp, by = c("region", "res.secondary.output" = "policy.portfolio.standard"))
+
       } else {
         # If policy type not included, still need to include the tables
         # So just make them empty
         L301.policy_RES_coefs_tmp <- L301.policy_RES_coefs[0,]
         L301.RES_secout_tmp <- L301.RES_secout[0,]
+        L301.pmultiplier_tmp <- L301.pmultiplier[0,]
       }
 
       if ("tax" %in% policy_rgn_tmp$policyType){
@@ -89,9 +96,11 @@ module_policy_ceilings_floors_xml <- function(command, ...) {
                add_xml_data(L301.RES_secout_tmp, "StubTechResSecOut") %>%
                add_xml_data(L301.input_tax_tmp, "StubTechInputTax") %>%
                add_xml_data(L301.input_subsidy_tmp, "StubTechInputSubsidy") %>%
+               add_xml_data(L301.pmultiplier_tmp, "StubTechResSecOutPMult") %>%
                add_precursors("L301.policy_port_stnd",
                               "L301.policy_RES_coefs",
                               "L301.RES_secout",
+                              "L301.pmultiplier",
                               "L301.input_tax",
                               "L301.input_subsidy")
              )
