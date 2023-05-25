@@ -1,0 +1,19 @@
+# File: A_FuelStandards_Market_OutputOverwrite.csv,,,,,,,
+# Title: Fuel Standard Policies Market Output Coefficient to Overwrite,,,,,,,
+# Comments: The EU has special counting rules for EV trucks,,,,,,,
+# Units: NA,,,,,,,
+# Column types: ccccccnn,,,,,,,
+# ----------,,,,,,,
+policy_name,market,region,supplysector,tranSubsector,stub.technology,2020,2025
+fuelst_mkt_eu_lighttruck,EU,EU-12,trn_freight_road,Light truck,BEV,,2
+fuelst_mkt_eu_lighttruck,EU,EU-12,trn_freight_road,Light truck,FCEV,,2
+fuelst_mkt_eu_lighttruck,EU,EU-15,trn_freight_road,Light truck,BEV,,2
+fuelst_mkt_eu_lighttruck,EU,EU-15,trn_freight_road,Light truck,FCEV,,2
+fuelst_mkt_eu_medtruck,EU,EU-12,trn_freight_road,Medium truck,BEV,,2
+fuelst_mkt_eu_medtruck,EU,EU-12,trn_freight_road,Medium truck,FCEV,,2
+fuelst_mkt_eu_medtruck,EU,EU-15,trn_freight_road,Medium truck,BEV,,2
+fuelst_mkt_eu_medtruck,EU,EU-15,trn_freight_road,Medium truck,FCEV,,2
+fuelst_mkt_eu_heavytruck,EU,EU-12,trn_freight_road,Heavy truck,BEV,,2
+fuelst_mkt_eu_heavytruck,EU,EU-12,trn_freight_road,Heavy truck,FCEV,,2
+fuelst_mkt_eu_heavytruck,EU,EU-15,trn_freight_road,Heavy truck,BEV,,2
+fuelst_mkt_eu_heavytruck,EU,EU-15,trn_freight_road,Heavy truck,FCEV,,2

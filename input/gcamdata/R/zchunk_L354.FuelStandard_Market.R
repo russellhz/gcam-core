@@ -18,7 +18,9 @@ module_policy_L354.FuelStandards_Market <- function(command, ...) {
     return(c(FILE = "policy/A_FuelStandards_Market",
              "L254.StubTranTechCoef",
              "L254.StubTranTechLoadFactor",
-             FILE = "emissions/A_PrimaryFuelCCoef"
+             FILE = "emissions/A_PrimaryFuelCCoef",
+             FILE = "policy/A_FuelStandards_Market_CoefOverwrite",
+             FILE = "policy/A_FuelStandards_Market_OutputOverwrite"
     ))
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(c("L354.NewTrnCoefs",
@@ -31,6 +33,8 @@ module_policy_L354.FuelStandards_Market <- function(command, ...) {
 
     # Load required inputs
     A_FuelStandards_Market <- get_data(all_data, "policy/A_FuelStandards_Market")
+    A_FuelStandards_Market_CoefOverwrite <- get_data(all_data, "policy/A_FuelStandards_Market_CoefOverwrite")
+    A_FuelStandards_Market_OutputOverwrite <- get_data(all_data, "policy/A_FuelStandards_Market_OutputOverwrite")
     A_PrimaryFuelCCoef <- get_data(all_data, "emissions/A_PrimaryFuelCCoef")
     L254.StubTranTechCoef <- get_data(all_data, "L254.StubTranTechCoef")
     L254.StubTranTechLoadFactor <- get_data(all_data, "L254.StubTranTechLoadFactor") %>%
@@ -91,22 +95,55 @@ module_policy_L354.FuelStandards_Market <- function(command, ...) {
       ungroup %>%
       select(region, supplysector, tranSubsector, stub.technology, year, minicam.energy.input, coefficient = new_coef, market.name)
 
-    # Ensure that future coefficients don't decrease from CORE scenario
-    L354.NewTrnCoefs_future <- L354.NewTrnCoefs %>%
-      # If new coefs go to 2100, we don't need to worry about them
-      group_by(region, supplysector, tranSubsector, stub.technology, minicam.energy.input, market.name) %>%
-      filter(max(year) < max(MODEL_FUTURE_YEARS)) %>%
-      # Filter to last year for each group
-      filter(year == max(year)) %>%
-      ungroup %>%
-      left_join(filter(L254.StubTranTechCoef, sce == "CORE"),
-                by = c("region", "supplysector", "tranSubsector", "stub.technology",
-                       "minicam.energy.input", "market.name")) %>%
-      filter(year.y > year.x,
-             coefficient.x < coefficient.y) %>%
-      select(region, supplysector, tranSubsector, stub.technology, year = year.y, minicam.energy.input, coefficient = coefficient.x, market.name)
+    # If there are any coefs to overwrite, do it here
+    if(nrow(A_FuelStandards_Market_CoefOverwrite) > 0){
+      CoefOverwrite <- A_FuelStandards_Market_CoefOverwrite %>%
+        gather_years(value_col = "coefficient") %>%
+        filter(!is.na(coefficient)) %>%
+        group_by(region, supplysector, tranSubsector, stub.technology) %>%
+        complete(nesting(region, supplysector, tranSubsector, stub.technology),
+                 year = seq(min(year), max(year), 5)) %>%
+        # If group only has one, approx_fun doesn't work, so we use this workaround
+        mutate(coefficient_NA = approx_fun(year, coefficient)) %>%
+        ungroup %>%
+        mutate(coefficient = if_else(!is.na(coefficient_NA), coefficient_NA, coefficient)) %>%
+        select(-coefficient_NA) %>%
+        mutate(market.name = region) %>%
+        left_join_error_no_match(L254.StubTranTechCoef, by = c("region", "supplysector", "tranSubsector",
+                                                               "stub.technology", "year", "market.name", "SSP_sce" = "sce")) %>%
+        select(region, supplysector, tranSubsector, stub.technology, year, minicam.energy.input, coefficient = coefficient.x, market.name)
 
-    L354.NewTrnCoefs <- bind_rows(L354.NewTrnCoefs, L354.NewTrnCoefs_future)
+      L354.NewTrnCoefs <- anti_join(L354.NewTrnCoefs, CoefOverwrite,
+                                    by = c("region", "supplysector", "tranSubsector", "stub.technology",
+                                           "year", "minicam.energy.input", "market.name")) %>%
+        bind_rows(CoefOverwrite)
+    }
+
+    # Ensure that future coefficients don't rebound
+    L354.NewTrnCoefs_future <- L354.NewTrnCoefs %>%
+      group_by(region, supplysector, tranSubsector, stub.technology, minicam.energy.input, market.name) %>%
+      complete(nesting(region, supplysector, tranSubsector, stub.technology, minicam.energy.input, market.name),
+               year = seq(min(year), max(MODEL_FUTURE_YEARS), 5)) %>%
+      left_join(filter(L254.StubTranTechCoef, sce == SSP_SCE),
+                by = c("region", "supplysector", "tranSubsector", "stub.technology",
+                       "minicam.energy.input", "market.name", "year")) %>%
+      # We want to know if there would be any increases in coefficient for the time series
+      mutate(coefficient = if_else(is.na(coefficient.x), coefficient.y, coefficient.x),
+             rebound = coefficient > lag(coefficient)) %>%
+      # Filter to the time series with rebounds
+      filter(any(rebound)) %>%
+      # Set the coefficient to the minimum of all previous values
+      mutate(coefficient = cummin(coefficient)) %>%
+      ungroup %>%
+      # We only need the values where that new coefficient would be less than the CORE scenario
+      filter(coefficient < coefficient.y) %>%
+      select(-coefficient.x, -coefficient.y, -rebound, -sce)
+
+
+    L354.NewTrnCoefs <- bind_rows(anti_join(L354.NewTrnCoefs, L354.NewTrnCoefs_future,
+                                            by = c("region", "supplysector", "tranSubsector", "stub.technology",
+                                                   "year", "minicam.energy.input", "market.name")),
+                                  L354.NewTrnCoefs_future)
 
     # Create CO2 based markets - first need the correct coefficients
     all_coefs <- L254.StubTranTechCoef %>%
@@ -135,6 +172,32 @@ module_policy_L354.FuelStandards_Market <- function(command, ...) {
              # Every policy needs different name because we want this to apply to new cars only
              policy_name = paste0(policy_name, year))
 
+    if(nrow(A_FuelStandards_Market_OutputOverwrite) > 0){
+      OutputOverwrite <- A_FuelStandards_Market_OutputOverwrite %>%
+        gather_years(value_col = "output.ratio") %>%
+        filter(!is.na(output.ratio)) %>%
+        group_by(policy_name, market, region, supplysector, tranSubsector, stub.technology) %>%
+        complete(nesting(policy_name, market, region, supplysector, tranSubsector, stub.technology),
+                 year = seq(min(year), max(year), 5)) %>%
+        # If group only has one, approx_fun doesn't work, so we use this workaround
+        mutate(output.ratio_NA = as.numeric(approx_fun(year, output.ratio))) %>%
+        ungroup %>%
+        mutate(output.ratio = if_else(is.na(output.ratio_NA), output.ratio, output.ratio_NA),
+               policy_name = paste0(policy_name, year)) %>%
+        select(-output.ratio_NA)
+
+      OutputOverwrite <- L354.FuelStandards_Market %>%
+        inner_join(OutputOverwrite, by = c("policy_name", "region", "supplysector", "market",
+                                           "tranSubsector", "year", "stub.technology")) %>%
+        mutate(output.ratio = output.ratio.y) %>%
+        select(-output.ratio.x, -output.ratio.y)
+
+      L354.FuelStandards_Market <- L354.FuelStandards_Market %>%
+        anti_join(OutputOverwrite, by = c("policy_name", "region", "supplysector", "market",
+                                          "tranSubsector", "year", "stub.technology")) %>%
+        bind_rows(OutputOverwrite)
+    }
+
     # Produce outputs
     L354.NewTrnCoefs %>%
       add_title("Calculated new fuel coefficients", overwrite = T) %>%
@@ -144,7 +207,7 @@ module_policy_L354.FuelStandards_Market <- function(command, ...) {
                      "emissions/A_PrimaryFuelCCoef") ->
     L354.NewTrnCoefs
 
-    L354.FuelStandards_Market %>%
+    L354.FuelStandards_Market  %>%
       select(xml, region, supplysector, tranSubsector, stub.technology, year,
              minicam.energy.input = policy_name, coefficient) %>%
       add_title("Policy fuel coefficients", overwrite = T) %>%
