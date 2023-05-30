@@ -104,7 +104,7 @@ module_policy_L354.FuelStandards_Market <- function(command, ...) {
         complete(nesting(region, supplysector, tranSubsector, stub.technology),
                  year = seq(min(year), max(year), 5)) %>%
         # If group only has one, approx_fun doesn't work, so we use this workaround
-        mutate(coefficient_NA = approx_fun(year, coefficient)) %>%
+        mutate(coefficient_NA = as.numeric(approx_fun(year, coefficient))) %>%
         ungroup %>%
         mutate(coefficient = if_else(!is.na(coefficient_NA), coefficient_NA, coefficient)) %>%
         select(-coefficient_NA) %>%

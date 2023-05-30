@@ -5,11 +5,6 @@
 # Column types: ccccccccnnnn,,,,,,,,,,,
 # ----------,,,,,,,,,,,
 xml,policy_name,market,SSP_sce,region,supplysector,tranSubsector,Units,2020,2025,2030,2100
-policy_fuelst_mkt_eu.xml,fuelst_mkt_eu,EU,CORE,EU-12,trn_pass_road_LDV_4W,Car,gCO2/vkm,,92.15,76.475,59.375
-policy_fuelst_mkt_eu.xml,fuelst_mkt_eu,EU,CORE,EU-12,trn_pass_road_LDV_4W,Large Car and Truck,gCO2/vkm,,104.76,87.41775,69.88875
-policy_fuelst_mkt_eu.xml,fuelst_mkt_eu,EU,CORE,EU-15,trn_pass_road_LDV_4W,Mini Car,gCO2/vkm,,92.15,76.475,59.375
-policy_fuelst_mkt_eu.xml,fuelst_mkt_eu,EU,CORE,EU-15,trn_pass_road_LDV_4W,Car,gCO2/vkm,,92.15,76.475,59.375
-policy_fuelst_mkt_eu.xml,fuelst_mkt_eu,EU,CORE,EU-15,trn_pass_road_LDV_4W,Large Car and Truck,gCO2/vkm,,104.76,87.41775,69.88875
 policy_fuelst_mkt_bra.xml,fuelst_mkt_bra,Brazil,CORE,Brazil,trn_pass_road_LDV_4W,Mini Car,gCO2/vkm,156.4684,,,
 policy_fuelst_mkt_bra.xml,fuelst_mkt_bra,Brazil,CORE,Brazil,trn_pass_road_LDV_4W,Car,gCO2/vkm,156.4684,,,
 policy_fuelst_mkt_bra.xml,fuelst_mkt_bra,Brazil,CORE,Brazil,trn_pass_road_LDV_4W,Large Car and Truck,gCO2/vkm,156.4684,,,
@@ -18,12 +13,6 @@ policy_fuelst_mkt_can.xml,fuelst_mkt_can,Canada,CORE,Canada,trn_pass_road_LDV_4W
 policy_fuelst_mkt_ind.xml,fuelst_mkt_ind,India,CORE,India,trn_pass_road_LDV_4W,Mini Car,gCO2/vkm,125,113,,
 policy_fuelst_mkt_ind.xml,fuelst_mkt_ind,India,CORE,India,trn_pass_road_LDV_4W,Car,gCO2/vkm,125,113,,
 policy_fuelst_mkt_ind.xml,fuelst_mkt_ind,India,CORE,India,trn_pass_road_LDV_4W,Large Car and Truck,gCO2/vkm,125,113,,
-policy_fuelst_mkt_eu.xml,fuelst_mkt_eu_lighttruck,EU,CORE,EU-12,trn_freight_road,Light truck,gCO2/vkm,,220.65657,186.53442,159.2367
-policy_fuelst_mkt_eu.xml,fuelst_mkt_eu_lighttruck,EU,CORE,EU-15,trn_freight_road,Light truck,gCO2/vkm,,365.19918,308.72508,263.5458
-policy_fuelst_mkt_eu.xml,fuelst_mkt_eu_medtruck,EU,CORE,EU-12,trn_freight_road,Medium truck,gCO2/vkm,,820.02733,693.21898,591.7723
-policy_fuelst_mkt_eu.xml,fuelst_mkt_eu_medtruck,EU,CORE,EU-15,trn_freight_road,Medium truck,gCO2/vkm,,220.79334,186.65004,159.3354
-policy_fuelst_mkt_eu.xml,fuelst_mkt_eu_heavytruck,EU,CORE,EU-12,trn_freight_road,Heavy truck,gCO2/vkm,,335.66947,283.76182,242.2357
-policy_fuelst_mkt_eu.xml,fuelst_mkt_eu_heavytruck,EU,CORE,EU-15,trn_freight_road,Heavy truck,gCO2/vkm,,879.08772,743.14632,634.3932
 policy_fuelst_mkt_jap.xml,fuelst_mkt_jap,Japan,CORE,Japan,trn_pass_road_LDV_4W,Mini Car,gCO2/vkm,160.786332,147.98742,135.188,
 policy_fuelst_mkt_jap.xml,fuelst_mkt_jap,Japan,CORE,Japan,trn_pass_road_LDV_4W,Car,gCO2/vkm,160.786332,147.98742,135.188,
 policy_fuelst_mkt_jap.xml,fuelst_mkt_jap,Japan,CORE,Japan,trn_pass_road_LDV_4W,Large Car and Truck,gCO2/vkm,160.786332,147.98742,135.188,
@@ -34,3 +23,14 @@ policy_fuelst_mkt_usa.xml,fuelst_mkt_usa,USA,CORE,USA,trn_pass_road_LDV_4W,Large
 policy_fuelst_mkt_ind.xml,fuelst_mkt_ind_lighttruck,India,CORE,India,trn_freight_road,Light truck,gCO2/vkm,223.67,186.11,186.11,
 policy_fuelst_mkt_ind.xml,fuelst_mkt_ind_medtruck,India,CORE,India,trn_freight_road,Medium truck,gCO2/vkm,401.1,351.59,351.59,
 policy_fuelst_mkt_ind.xml,fuelst_mkt_ind_heavytruck,India,CORE,India,trn_freight_road,Heavy truck,gCO2/vkm,595.78,498.78,498.78,
+policy_fuelst_mkt_eu.xml,fuelst_mkt_eu_lighttruck,EU,CORE,EU-12,trn_freight_road,Light truck,gCO2/vkm,,220.7623,186.6238,159.313
+policy_fuelst_mkt_eu.xml,fuelst_mkt_eu_medtruck,EU,CORE,EU-12,trn_freight_road,Medium truck,gCO2/vkm,,346.82059,293.18854,250.2829
+policy_fuelst_mkt_eu.xml,fuelst_mkt_eu_heavytruck,EU,CORE,EU-12,trn_freight_road,Heavy truck,gCO2/vkm,,863.1157,729.6442,622.867
+policy_fuelst_mkt_eu.xml,fuelst_mkt_eu_lighttruck,EU,CORE,EU-15,trn_freight_road,Light truck,gCO2/vkm,,220.7623,186.6238,159.313
+policy_fuelst_mkt_eu.xml,fuelst_mkt_eu_medtruck,EU,CORE,EU-15,trn_freight_road,Medium truck,gCO2/vkm,,346.82059,293.18854,250.2829
+policy_fuelst_mkt_eu.xml,fuelst_mkt_eu_heavytruck,EU,CORE,EU-15,trn_freight_road,Heavy truck,gCO2/vkm,,863.1157,729.6442,622.867
+policy_fuelst_mkt_eu.xml,fuelst_mkt_eu,EU,CORE,EU-12,trn_pass_road_LDV_4W,Car,gCO2/vkm,,92.15,76.475,59.375
+policy_fuelst_mkt_eu.xml,fuelst_mkt_eu,EU,CORE,EU-12,trn_pass_road_LDV_4W,Large Car and Truck,gCO2/vkm,,104.76,87.41775,69.88875
+policy_fuelst_mkt_eu.xml,fuelst_mkt_eu,EU,CORE,EU-15,trn_pass_road_LDV_4W,Mini Car,gCO2/vkm,,92.15,76.475,59.375
+policy_fuelst_mkt_eu.xml,fuelst_mkt_eu,EU,CORE,EU-15,trn_pass_road_LDV_4W,Car,gCO2/vkm,,92.15,76.475,59.375
+policy_fuelst_mkt_eu.xml,fuelst_mkt_eu,EU,CORE,EU-15,trn_pass_road_LDV_4W,Large Car and Truck,gCO2/vkm,,104.76,87.41775,69.88875
