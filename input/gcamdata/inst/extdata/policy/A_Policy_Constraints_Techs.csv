@@ -217,4 +217,4 @@ South Korea,electricity,biomass,biomass (conv),,biom-target,2030,2030
 South Korea,electricity,biomass,biomass (IGCC),,biom-target,2030,2030
 South Korea,electricity,biomass,biomass (conv CCS),,biom-target,2030,2030
 South Korea,electricity,biomass,biomass (conv CCS),,biom-target,2030,2030
-South Korea,elect_td_bld,wind,wind_offshore,,offshore-target,2020,2030
+South Korea,electricity,wind,wind_offshore,,offshore-target,2020,2030
