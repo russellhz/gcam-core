@@ -142,7 +142,7 @@ module_socioeconomics_L102.GDP <- function(command, ...) {
     # Load required inputs
     iso_GCAM_regID <- get_data(all_data, "common/iso_GCAM_regID")
     SSP_database_v9 <- get_data(all_data, "socioeconomics/SSP_database_v9")
-    IMF_GDP_growth <- get_data(all_data, "socioeconomics/IMF_GDP_growth")
+    IMF_GDP_growth <- get_data(all_data, "socioeconomics/IMF_GDP_growth_imfapr23")
     GCAM3_GDP <- get_data(all_data, "socioeconomics/GCAM3_GDP") %>%
       gather_years %>%
       mutate(value = as.numeric(value))
