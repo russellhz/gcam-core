@@ -83,4 +83,4 @@ policy_fuelst_eu_freight.xml,CORE,EU-12,trn_freight_road,Truck (>32t),Liquids,re
 policy_fuelst_ind_freight.xml,CORE,India,trn_freight_road,Truck (0-2t),Liquids,refined liquids transport,1,2172.503211,1806.095953,1806.095953,,
 policy_fuelst_ind_freight.xml,CORE,India,trn_freight_road,Truck (2-5t),Liquids,refined liquids transport,1,3728.923421,3103.112795,3103.112795,,
 policy_fuelst_ind_freight.xml,CORE,India,trn_freight_road,Truck (5-9t),Liquids,refined liquids transport,1,5290.090885,4637.363881,4637.363881,,
-policy_fuelst_ind_freight.xml,CORE,India,trn_freight_road,Truck (9-16t),Liquids,refined liquids transport,1,6160.83,5674.448684,5674.448684,,
+policy_fuelst_ind_freight.xml,CORE,India,trn_freight_road,Truck (9-16t),Liquids,refined liquids transport,1,7857.611939,6578.249828,6578.249828,,
