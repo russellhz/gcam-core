@@ -115,7 +115,7 @@ module_socioeconomics_L102.GDP <- function(command, ...) {
   if(command == driver.DECLARE_INPUTS) {
     return(c(FILE = "common/iso_GCAM_regID",
              FILE = "socioeconomics/SSP_database_v9",
-             FILE = "socioeconomics/IMF_GDP_growth",
+             FILE = "socioeconomics/IMF_GDP_growth_imfapr23",
              FILE = "socioeconomics/GCAM3_GDP",
              "L100.gdp_mil90usd_ctry_Yh",
              "L101.Pop_thous_GCAM3_R_Y",
