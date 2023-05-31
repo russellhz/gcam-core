@@ -12,4 +12,4 @@ policy_ccap_kor.xml,South Korea,South Korea,CO2,2025,,182.22,174,,,,,,,,,,,,,,,
 policy_ccapbuild_kor.xml,South Korea,South Korea,CO2_building,2030,,,12.79493806,11.29493806,,,,,,,,,,,,,,
 policy_ccapbuild_can.xml,Canada,Canada,CO2_building,2030,,19.9403927,19.9403927,19.9403927,,,,,,,,,,,,,,
 policy_ccapind_chn.xml,China,China,CO2_industry,,2015,-22,-40,-40,-40,-40,-40,-40,-40,-40,-40,-40,-40,-40,-40,-40,-40,-40
-policy_ccaptran_rus.xml,Russia,Russia,CO2_4W,,,,,18.955004,18.955004,18.955004,18.955004,18.955004,,,,,,,,,,
+policy_ccaptran_rus.xml,Russia,Russia,CO2_4W,2050,,,,18.955004,18.955004,18.955004,18.955004,18.955004,,,,,,,,,,
