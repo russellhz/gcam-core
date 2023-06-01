@@ -6,7 +6,7 @@
 # ----------,,,,,,,,,,,,,,,,,,,,,
 xml,region,supplysector,subsector,stub.technology,2020,2025,2030,2035,2040,2045,2050,2055,2060,2065,2070,2075,2080,2085,2090,2095,2100
 policy_coalPhaseout_can.xml,Canada,electricity,coal,,0,,,,,,,,,,,,,,,,
-policy_coalPhaseout_eu.xml,EU-12,electricity,coal,,0,,,,,,,,,,,,,,,,
+policy_coalPhaseout_eu.xml,EU-12,electricity,coal,,,0,,,,,,,,,,,,,,,
 policy_coalPhaseout_eu.xml,EU-15,electricity,coal,,0,,,,,,,,,,,,,,,,
 policy_coalPhaseout_mex.xml,Mexico,electricity,coal,,0,,,,,,,,,,,,,,,,
 policy_4Wfuel_po_eu.xml,EU-12,trn_pass_road_LDV_4W,Car,Liquids,,,,,0,0,0,,,,,,,,,,
