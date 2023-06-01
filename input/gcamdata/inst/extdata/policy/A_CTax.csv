@@ -7,9 +7,7 @@
 # ----------,,,,,,,,,,,,,,,,,,,,,,
 xml,link.type,market,region,ghgpolicy,year.fillout,2020,2025,2030,2035,2040,2045,2050,2055,2060,2065,2070,2075,2080,2085,2090,2095,2100
 policy_ctax_arg.xml,ALL_GHG,Argentina,Argentina,GHG_arg,,10.24217877,,,,,,,,,,,,,,,,
-policy_ctax_can_GHG.xml,ALL_GHG,Canada,Canada,GHG_can,,53.38914343,169.0656209,302.5384795,,,,,,,,,,,,,,
+policy_ctax_can_GHG.xml,ALL_GHG,Canada,Canada,GHG_can,,46.08980447,76.81634078,76.81634078,,,,,,,,,,,,,,
 policy_ctax_saf.xml,ALL_GHG,South Africa,South Africa,GHG_saf,,5.735620112,17.20686034,17.20686034,,,,,,,,,,,,,,
 policy_ctax_usa_2020.xml,ALL_GHG,USA,USA,GHG_usa,,11.35591861,,,,,,,,,,,,,,,,
 policy_ctax_usa.xml,ALL_GHG,USA,USA,GHG_usa,,11.35591861,19.91641201,16.83068415,,,,,,,,,,,,,,
-policy_ctax_eu.xml,ALL_GHG,EU,EU-12,GHG_eu,,5,6,7,,,,,,,,,,,,,,
-policy_ctax_eu.xml,ALL_GHG,EU,EU-15,GHG_eu,,,,,,,,,,,,,,,,,,
