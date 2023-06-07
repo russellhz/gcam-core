@@ -454,6 +454,8 @@ generate_level2_data_names <- function() {
   level2_data_names[["GHGConstr"]] <- c("region", "ghgpolicy", "market", "constraint.year", "constraint")
   level2_data_names[["GHGConstrFillout"]] <- c(level2_data_names[["GHGConstr"]], "year.fillout")
   level2_data_names[["GHGConstrLink"]] <- c("region", "linked.ghg.policy", "price.adjust", "demand.adjust", "market", "linked.policy", "price.unit", "output.unit")
+  level2_data_names[["GHGConstrLinkPriceAdjHist"]] <- c("region", "linked.ghg.policy", "year", "price.adjust")
+  level2_data_names[["GHGConstrLinkDemandAdjHist"]] <- c("region", "linked.ghg.policy", "year", "demand.adjust")
   level2_data_names[["GHGConstrLinkAdj"]] <- c("region", "linked.ghg.policy", "price.adjust.year.fillout", "price.adjust",  "demand.adjust.year.fillout", "demand.adjust")
   level2_data_names[["GHGConstrLinkMkt"]] <- c("region", "linked.ghg.policy", "market", "linked.policy")
   level2_data_names[["LN2ConstraintUnmgd"]] <- c("region", "LandAllocatorRoot", "LandNode1", "LandNode2", "UnmanagedLandLeaf", "land.constraint.policy")

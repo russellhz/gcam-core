@@ -45,6 +45,7 @@ module_policy_L3222.CTax <- function(command, ...) {
     # Get ghg link for each
     L3222.CTax_GHG_Link <- A_CTax %>%
       distinct(link.type, market, region, ghgpolicy) %>%
+      filter(!is.na(link.type)) %>%
       left_join(A_CTax_Link, by = "link.type") %>%
       rename(linked.policy = ghgpolicy) %>%
       select(-link.type)

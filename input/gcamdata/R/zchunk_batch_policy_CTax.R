@@ -53,11 +53,28 @@ module_policy_CTax.xml <- function(command, ...) {
         semi_join(bind_rows(L3222.CTax_noFillout_tmp, L3222.CTax_fillout_tmp),
                   by = c("linked.policy" = "ghgpolicy"  ))
 
+      L3222.CTax_GHG_Link_CO2_2020_tmp <- L3222.CTax_GHG_Link_tmp %>%
+        filter(linked.ghg.policy == "CO2") %>%
+        mutate(price.adjust = 1, demand.adjust = 1, year = 2020) %>%
+        select(region, linked.ghg.policy, year, price.adjust, demand.adjust)
+
+      L3222.CTax_GHG_Link_History_tmp <- L3222.CTax_GHG_Link_tmp %>%
+        select(region, linked.ghg.policy, price.adjust, demand.adjust)
+      L3222.CTax_GHG_Link_History_tmp$year <- as.numeric(NA)
+      if (nrow(L3222.CTax_GHG_Link_History_tmp) > 0){
+        L3222.CTax_GHG_Link_History_tmp <- L3222.CTax_GHG_Link_History_tmp %>%
+          mutate(price.adjust = 0, demand.adjust = 0, year = 1975)
+      }
+
       assign(xml_name,
              create_xml(xml_name) %>%
                add_xml_data(L3222.CTax_noFillout_tmp, "GHGTax") %>%
                add_xml_data(L3222.CTax_fillout_tmp, "GHGTaxFillout") %>%
                add_xml_data(L3222.CTax_Region_Link_tmp, "GHGConstrMkt") %>%
+               add_xml_data(L3222.CTax_GHG_Link_History_tmp, "GHGConstrLinkPriceAdjHist") %>%
+               add_xml_data(L3222.CTax_GHG_Link_History_tmp, "GHGConstrLinkDemandAdjHist") %>%
+               add_xml_data(L3222.CTax_GHG_Link_CO2_2020_tmp, "GHGConstrLinkPriceAdjHist") %>%
+               add_xml_data(L3222.CTax_GHG_Link_CO2_2020_tmp, "GHGConstrLinkDemandAdjHist") %>%
                add_xml_data(L3222.CTax_GHG_Link_tmp, "GHGConstrLink") %>%
                add_precursors("L3222.CTax", "L3222.CTax_GHG_Link", "L3222.CTax_Region_Link")
       )

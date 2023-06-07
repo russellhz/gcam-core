@@ -18,6 +18,7 @@ module_policy_L3221.CCap <- function(command, ...) {
     return(c(FILE = "policy/A_CCap_Constraint",
              FILE = "policy/A_CCap_Sector",
              FILE = "policy/A_CCap_Resource",
+             FILE = "policy/A_CTax_Link",
              "L210.ResTechCoef",
              "L221.StubTech_en",
              "L222.StubTech_en",
@@ -43,7 +44,8 @@ module_policy_L3221.CCap <- function(command, ...) {
              "L3221.CCap_link_regions",
              "L3221.CCap_tech",
              "L3221.CCap_tranTech",
-             "L3221.CCap_resource"))
+             "L3221.CCap_resource",
+             "L3221.CCap_GHG_Link"))
   } else if(command == driver.MAKE) {
 
     all_data <- list(...)[[1]]
@@ -52,6 +54,8 @@ module_policy_L3221.CCap <- function(command, ...) {
     A_CCap_Constraint <- get_data(all_data, "policy/A_CCap_Constraint")
     A_CCap_Sector <- get_data(all_data, "policy/A_CCap_Sector")
     A_CCap_Resource <- get_data(all_data, "policy/A_CCap_Resource")
+    A_CTax_Link <- get_data(all_data, "policy/A_CTax_Link")
+
     L3221.StubTech_All <- bind_rows(get_data(all_data, "L221.StubTech_en"),
                                     get_data(all_data, "L222.StubTech_en"),
                                     get_data(all_data, "L2233.StubTech_elec_cool"),
@@ -223,9 +227,17 @@ module_policy_L3221.CCap <- function(command, ...) {
 
     }
 
+    # 6. Get ghg link for each
+    L3221.CCap_GHG_Link <- A_CCap_Constraint %>%
+      distinct(link.type, market, region, ghgpolicy) %>%
+      filter(!is.na(link.type)) %>%
+      left_join(A_CTax_Link, by = "link.type") %>%
+      rename(linked.policy = ghgpolicy) %>%
+      select(-link.type)
+
     # Produce outputs
     L3221.CCap_constraint %>%
-      select(-GDPIntensity_BaseYear) %>%
+      select(-GDPIntensity_BaseYear, -link.type) %>%
       add_title("Custom carbon constraints", overwrite = T) %>%
       add_units("MTC") %>%
       add_precursors("policy/A_CCap_Constraint",
@@ -275,8 +287,16 @@ module_policy_L3221.CCap <- function(command, ...) {
                      "L210.ResTechCoef") ->
       L3221.CCap_resource
 
+    L3221.CCap_GHG_Link %>%
+      add_title("GHG Link for carbon/GHG caps", overwrite = T) %>%
+      add_units("NA") %>%
+      add_precursors("policy/A_CCap_Constraint",
+                     "policy/A_CTax_Link") ->
+    L3221.CCap_GHG_Link
+
     return_data(L3221.CCap_constraint, L3221.CCap_link_regions,
-                L3221.CCap_tech, L3221.CCap_tranTech, L3221.CCap_resource)
+                L3221.CCap_tech, L3221.CCap_tranTech, L3221.CCap_resource,
+                L3221.CCap_GHG_Link)
   } else {
     stop("Unknown command")
   }
