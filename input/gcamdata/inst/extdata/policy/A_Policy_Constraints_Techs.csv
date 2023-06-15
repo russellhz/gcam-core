@@ -1,0 +1,220 @@
+# File: A_Policy_Constraints_Techs.csv,,,,,,,
+# Title: Policy targets technologies,,,,,,,
+# Units: NA,,,,,,,
+# Column types: ccccccii,,,,,,,
+# ----------,,,,,,,
+region,supplysector,subsector,stub.technology,input.tax,input.subsidy,start.year,end.year
+EU-12,delivered biomass,delivered biomass,delivered biomass,fe-constraint,,2020,2100
+EU-12,delivered coal,delivered coal,delivered coal,fe-constraint,,2020,2100
+EU-12,delivered biomass industry,delivered biomass industry,delivered biomass industry,fe-constraint,,2020,2100
+EU-12,delivered coal industry,delivered coal industry,delivered coal industry,fe-constraint,,2020,2100
+EU-12,elect_td_bld,elect_td_bld,elect_td_bld,fe-constraint,,2020,2100
+EU-12,elect_td_ind,elect_td_ind,elect_td_ind,fe-constraint,,2020,2100
+EU-12,elect_td_trn,elect_td_trn,elect_td_trn,fe-constraint,,2020,2100
+EU-12,wholesale gas,wholesale gas,wholesale gas,fe-constraint,,2020,2100
+EU-12,delivered gas,delivered gas,delivered gas,fe-constraint,,2020,2100
+EU-12,delivered gas transport,delivered gas transport,delivered gas transport,fe-constraint,,2020,2100
+EU-12,refined liquids enduse,refined liquids enduse,refined liquids enduse,fe-constraint,,2020,2100
+EU-12,refined liquids industrial,refined liquids industrial,refined liquids industrial,fe-constraint,,2020,2100
+EU-12,refined liquids transport,refined liquids transport,refined liquids transport,fe-constraint,,2020,2100
+EU-12,H2 wholesale delivery,H2 liquid truck,H2 liquid truck,fe-constraint,,2020,2100
+EU-12,H2 wholesale delivery,H2 pipeline,H2 pipeline,fe-constraint,,2020,2100
+EU-12,H2 industrial,forecourt production,electrolysis,fe-constraint,,2020,2100
+EU-12,H2 wholesale dispensing,H2 delivery,H2 liquid truck,fe-constraint,,2020,2100
+EU-12,H2 wholesale dispensing,H2 delivery,H2 pipeline,fe-constraint,,2020,2100
+EU-12,H2 wholesale dispensing,forecourt production,electrolysis,fe-constraint,,2020,2100
+EU-12,H2 wholesale dispensing,forecourt production,natural gas steam reforming,fe-constraint,,2020,2100
+EU-15,delivered biomass,delivered biomass,delivered biomass,fe-constraint,,2020,2100
+EU-15,delivered coal,delivered coal,delivered coal,fe-constraint,,2020,2100
+EU-15,delivered biomass industry,delivered biomass industry,delivered biomass industry,fe-constraint,,2020,2100
+EU-15,delivered coal industry,delivered coal industry,delivered coal industry,fe-constraint,,2020,2100
+EU-15,elect_td_bld,elect_td_bld,elect_td_bld,fe-constraint,,2020,2100
+EU-15,elect_td_ind,elect_td_ind,elect_td_ind,fe-constraint,,2020,2100
+EU-15,elect_td_trn,elect_td_trn,elect_td_trn,fe-constraint,,2020,2100
+EU-15,wholesale gas,wholesale gas,wholesale gas,fe-constraint,,2020,2100
+EU-15,delivered gas,delivered gas,delivered gas,fe-constraint,,2020,2100
+EU-15,delivered gas transport,delivered gas transport,delivered gas transport,fe-constraint,,2020,2100
+EU-15,refined liquids enduse,refined liquids enduse,refined liquids enduse,fe-constraint,,2020,2100
+EU-15,refined liquids industrial,refined liquids industrial,refined liquids industrial,fe-constraint,,2020,2100
+EU-15,refined liquids transport,refined liquids transport,refined liquids transport,fe-constraint,,2020,2100
+EU-15,H2 wholesale delivery,H2 liquid truck,H2 liquid truck,fe-constraint,,2020,2100
+EU-15,H2 wholesale delivery,H2 pipeline,H2 pipeline,fe-constraint,,2020,2100
+EU-15,H2 industrial,forecourt production,electrolysis,fe-constraint,,2020,2100
+EU-15,H2 wholesale dispensing,H2 delivery,H2 liquid truck,fe-constraint,,2020,2100
+EU-15,H2 wholesale dispensing,H2 delivery,H2 pipeline,fe-constraint,,2020,2100
+EU-15,H2 wholesale dispensing,forecourt production,electrolysis,fe-constraint,,2020,2100
+EU-15,H2 wholesale dispensing,forecourt production,natural gas steam reforming,fe-constraint,,2020,2100
+Japan,delivered biomass,delivered biomass,delivered biomass,fe-constraint,,2020,2100
+Japan,delivered coal,delivered coal,delivered coal,fe-constraint,,2020,2100
+Japan,delivered biomass industry,delivered biomass industry,delivered biomass industry,fe-constraint,,2020,2100
+Japan,delivered coal industry,delivered coal industry,delivered coal industry,fe-constraint,,2020,2100
+Japan,elect_td_bld,elect_td_bld,elect_td_bld,fe-constraint,,2020,2100
+Japan,elect_td_ind,elect_td_ind,elect_td_ind,fe-constraint,,2020,2100
+Japan,elect_td_trn,elect_td_trn,elect_td_trn,fe-constraint,,2020,2100
+Japan,wholesale gas,wholesale gas,wholesale gas,fe-constraint,,2020,2100
+Japan,delivered gas,delivered gas,delivered gas,fe-constraint,,2020,2100
+Japan,delivered gas transport,delivered gas transport,delivered gas transport,fe-constraint,,2020,2100
+Japan,refined liquids enduse,refined liquids enduse,refined liquids enduse,fe-constraint,,2020,2100
+Japan,refined liquids industrial,refined liquids industrial,refined liquids industrial,fe-constraint,,2020,2100
+Japan,refined liquids transport,refined liquids transport,refined liquids transport,fe-constraint,,2020,2100
+Japan,H2 wholesale delivery,H2 liquid truck,H2 liquid truck,fe-constraint,,2020,2100
+Japan,H2 wholesale delivery,H2 pipeline,H2 pipeline,fe-constraint,,2020,2100
+Japan,H2 industrial,forecourt production,electrolysis,fe-constraint,,2020,2100
+Japan,H2 wholesale dispensing,H2 delivery,H2 liquid truck,fe-constraint,,2020,2100
+Japan,H2 wholesale dispensing,H2 delivery,H2 pipeline,fe-constraint,,2020,2100
+Japan,H2 wholesale dispensing,forecourt production,electrolysis,fe-constraint,,2020,2100
+Japan,H2 wholesale dispensing,forecourt production,natural gas steam reforming,fe-constraint,,2020,2100
+China,agricultural energy use,mobile,hydrogen,ind-constraint-OLD,,2020,2030
+China,agricultural energy use,mobile,electricity,ind-constraint-OLD,,2020,2030
+China,agricultural energy use,mobile,refined liquids,ind-constraint-OLD,,2020,2030
+China,agricultural energy use,stationary,coal,ind-constraint-OLD,,2020,2030
+China,agricultural energy use,stationary,electricity,ind-constraint-OLD,,2020,2030
+China,agricultural energy use,stationary,refined liquids,ind-constraint-OLD,,2020,2030
+China,agricultural energy use,stationary,gas,ind-constraint-OLD,,2020,2030
+China,chemical energy use,coal,coal,ind-constraint-OLD,,2020,2030
+China,chemical energy use,electricity,electricity,ind-constraint-OLD,,2020,2030
+China,chemical energy use,gas,gas,ind-constraint-OLD,,2020,2030
+China,chemical energy use,refined liquids,refined liquids,ind-constraint-OLD,,2020,2030
+China,chemical feedstocks,gas,gas,ind-constraint-OLD,,2020,2030
+China,chemical feedstocks,refined liquids,refined liquids,ind-constraint-OLD,,2020,2030
+China,construction energy use,mobile,hydrogen,ind-constraint-OLD,,2020,2030
+China,construction energy use,mobile,electricity,ind-constraint-OLD,,2020,2030
+China,construction energy use,mobile,refined liquids,ind-constraint-OLD,,2020,2030
+China,construction energy use,stationary,coal,ind-constraint-OLD,,2020,2030
+China,construction energy use,stationary,electricity,ind-constraint-OLD,,2020,2030
+China,construction energy use,stationary,refined liquids,ind-constraint-OLD,,2020,2030
+China,construction energy use,stationary,gas,ind-constraint-OLD,,2020,2030
+China,construction feedstocks,refined liquids,refined liquids,ind-constraint-OLD,,2020,2030
+China,mining energy use,mobile,hydrogen,ind-constraint-OLD,,2020,2030
+China,mining energy use,mobile,electricity,ind-constraint-OLD,,2020,2030
+China,mining energy use,mobile,refined liquids,ind-constraint-OLD,,2020,2030
+China,mining energy use,stationary,coal,ind-constraint-OLD,,2020,2030
+China,mining energy use,stationary,electricity,ind-constraint-OLD,,2020,2030
+China,mining energy use,stationary,refined liquids,ind-constraint-OLD,,2020,2030
+China,mining energy use,stationary,gas,ind-constraint-OLD,,2020,2030
+China,other industrial energy use,biomass,biomass,ind-constraint-OLD,,2020,2030
+China,other industrial energy use,coal,coal,ind-constraint-OLD,,2020,2030
+China,other industrial energy use,electricity,electricity,ind-constraint-OLD,,2020,2030
+China,other industrial energy use,gas,gas,ind-constraint-OLD,,2020,2030
+China,other industrial energy use,gas,gas cogen,ind-constraint-OLD,,2020,2030
+China,other industrial energy use,hydrogen,hydrogen,ind-constraint-OLD,,2020,2030
+China,other industrial energy use,hydrogen,hydrogen cogen,ind-constraint-OLD,,2020,2030
+China,other industrial energy use,refined liquids,refined liquids,ind-constraint-OLD,,2020,2030
+China,other industrial feedstocks,coal,coal,ind-constraint-OLD,,2020,2030
+China,other industrial feedstocks,refined liquids,refined liquids,ind-constraint-OLD,,2020,2030
+China,process heat cement,coal,coal,ind-constraint-OLD,,2020,2030
+China,process heat cement,hydrogen,hydrogen,ind-constraint-OLD,,2020,2030
+China,process heat cement,refined liquids,refined liquids,ind-constraint-OLD,,2020,2030
+Australia_NZ,regional biomass,regional biomass,regional biomass,energy-constraint,,2030,2100
+Australia_NZ,regional coal,domestic coal,domestic coal,energy-constraint,,2030,2100
+Australia_NZ,regional coal,imported coal,imported coal,energy-constraint,,2030,2100
+Australia_NZ,regional natural gas,domestic natural gas,domestic natural gas,energy-constraint,,2030,2100
+Australia_NZ,regional natural gas,imported natural gas,imported natural gas,energy-constraint,,2030,2100
+Australia_NZ,regional oil,domestic crude oil,domestic crude oil,energy-constraint,,2030,2100
+Australia_NZ,regional oil,imported crude oil,imported crude oil,energy-constraint,,2030,2100
+Australia_NZ,regional biomassOil,regional biomassOil,OilCrop,energy-constraint,,2030,2100
+Australia_NZ,regional corn for ethanol,regional corn for ethanol,regional corn for ethanol,energy-constraint,,2030,2100
+Australia_NZ,elec_CSP,CSP,CSP (dry_hybrid),energy-constraint,,2030,2100
+Australia_NZ,elec_CSP,CSP,CSP (recirculating),energy-constraint,,2030,2100
+Australia_NZ,elec_CSP_storage,CSP_storage,CSP_storage (dry_hybrid),energy-constraint,,2030,2100
+Australia_NZ,elec_CSP_storage,CSP_storage,CSP_storage (recirculating),energy-constraint,,2030,2100
+Australia_NZ,elec_Gen_III,Gen_III,Gen_III (cooling pond),energy-constraint,,2030,2100
+Australia_NZ,elec_Gen_III,Gen_III,Gen_III (once through),energy-constraint,,2030,2100
+Australia_NZ,elec_Gen_III,Gen_III,Gen_III (recirculating),energy-constraint,,2030,2100
+Australia_NZ,elec_Gen_III,Gen_III,Gen_III (seawater),energy-constraint,,2030,2100
+Australia_NZ,elec_Gen_II_LWR,Gen_II_LWR,Gen_II_LWR (cooling pond),energy-constraint,,2030,2100
+Australia_NZ,elec_Gen_II_LWR,Gen_II_LWR,Gen_II_LWR (once through),energy-constraint,,2030,2100
+Australia_NZ,elec_Gen_II_LWR,Gen_II_LWR,Gen_II_LWR (recirculating),energy-constraint,,2030,2100
+Australia_NZ,elec_Gen_II_LWR,Gen_II_LWR,Gen_II_LWR (seawater),energy-constraint,,2030,2100
+Australia_NZ,elec_geothermal,geothermal,geothermal (dry_hybrid),energy-constraint,,2030,2100
+Australia_NZ,elec_geothermal,geothermal,geothermal (recirculating),energy-constraint,,2030,2100
+Australia_NZ,elect_td_bld,rooftop_pv,rooftop_pv,energy-constraint,,2030,2100
+Australia_NZ,electricity,hydro,hydro,energy-constraint,,2030,2100
+Australia_NZ,electricity,solar,PV,energy-constraint,,2030,2100
+Australia_NZ,electricity,solar,PV_storage,energy-constraint,,2030,2100
+Australia_NZ,electricity,wind,wind,energy-constraint,,2030,2100
+Australia_NZ,electricity,wind,wind_offshore,energy-constraint,,2030,2100
+Australia_NZ,electricity,wind,wind_storage,energy-constraint,,2030,2100
+China,elect_td_ind,elect_td_ind,elect_td_ind,ind-constraint,,2020,2030
+China,refined liquids industrial,refined liquids industrial,refined liquids industrial,ind-constraint,,2020,2030
+China,delivered coal industry,delivered coal industry,delivered coal industry,ind-constraint,,2020,2030
+China,wholesale gas,wholesale gas,wholesale gas,ind-constraint,,2020,2030
+China,delivered biomass industry,delivered biomass industry,delivered biomass industry,ind-constraint,,2020,2030
+China,H2 industrial,H2 delivery,H2 delivery,ind-constraint,,2020,2030
+China,H2 industrial,forecourt production,electrolysis,ind-constraint,,2020,2030
+Japan,elect_td_ind,elect_td_ind,elect_td_ind,ind-constraint,,2020,2100
+Japan,refined liquids industrial,refined liquids industrial,refined liquids industrial,ind-constraint,,2020,2100
+Japan,delivered coal industry,delivered coal industry,delivered coal industry,ind-constraint,,2020,2100
+Japan,wholesale gas,wholesale gas,wholesale gas,ind-constraint,,2020,2100
+Japan,delivered biomass industry,delivered biomass industry,delivered biomass industry,ind-constraint,,2020,2100
+Japan,H2 industrial,H2 delivery,H2 delivery,ind-constraint,,2020,2100
+Japan,H2 industrial,forecourt production,electrolysis,ind-constraint,,2020,2100
+Mexico,regional biomass,regional biomass,regional biomass,energy-constraint,,2020,2020
+Mexico,regional coal,domestic coal,domestic coal,energy-constraint,,2020,2020
+Mexico,regional coal,imported coal,imported coal,energy-constraint,,2020,2020
+Mexico,regional natural gas,domestic natural gas,domestic natural gas,energy-constraint,,2020,2020
+Mexico,regional natural gas,imported natural gas,imported natural gas,energy-constraint,,2020,2020
+Mexico,regional oil,domestic crude oil,domestic crude oil,energy-constraint,,2020,2020
+Mexico,regional oil,imported crude oil,imported crude oil,energy-constraint,,2020,2020
+Mexico,regional biomassOil,regional biomassOil,OilCrop,energy-constraint,,2020,2020
+Mexico,regional corn for ethanol,regional corn for ethanol,regional corn for ethanol,energy-constraint,,2020,2020
+Mexico,elec_CSP,CSP,CSP (dry_hybrid),energy-constraint,,2020,2020
+Mexico,elec_CSP,CSP,CSP (recirculating),energy-constraint,,2020,2020
+Mexico,elec_CSP_storage,CSP_storage,CSP_storage (dry_hybrid),energy-constraint,,2020,2020
+Mexico,elec_CSP_storage,CSP_storage,CSP_storage (recirculating),energy-constraint,,2020,2020
+Mexico,elec_Gen_III,Gen_III,Gen_III (cooling pond),energy-constraint,,2020,2020
+Mexico,elec_Gen_III,Gen_III,Gen_III (once through),energy-constraint,,2020,2020
+Mexico,elec_Gen_III,Gen_III,Gen_III (recirculating),energy-constraint,,2020,2020
+Mexico,elec_Gen_III,Gen_III,Gen_III (seawater),energy-constraint,,2020,2020
+Mexico,elec_Gen_II_LWR,Gen_II_LWR,Gen_II_LWR (cooling pond),energy-constraint,,2020,2020
+Mexico,elec_Gen_II_LWR,Gen_II_LWR,Gen_II_LWR (once through),energy-constraint,,2020,2020
+Mexico,elec_Gen_II_LWR,Gen_II_LWR,Gen_II_LWR (recirculating),energy-constraint,,2020,2020
+Mexico,elec_Gen_II_LWR,Gen_II_LWR,Gen_II_LWR (seawater),energy-constraint,,2020,2020
+Mexico,elec_geothermal,geothermal,geothermal (dry_hybrid),energy-constraint,,2020,2020
+Mexico,elec_geothermal,geothermal,geothermal (recirculating),energy-constraint,,2020,2020
+Mexico,elect_td_bld,rooftop_pv,rooftop_pv,energy-constraint,,2020,2020
+Mexico,electricity,hydro,hydro,energy-constraint,,2020,2020
+Mexico,electricity,solar,PV,energy-constraint,,2020,2020
+Mexico,electricity,solar,PV_storage,energy-constraint,,2020,2020
+Mexico,electricity,wind,wind,energy-constraint,,2020,2020
+Mexico,electricity,wind,wind_offshore,energy-constraint,,2020,2020
+Mexico,electricity,wind,wind_storage,energy-constraint,,2020,2020
+Russia,electricity,solar,PV,,PV-target,2020,2100
+Russia,electricity,solar,PV_storage,,PV-target,2020,2100
+Russia,electricity,wind,wind,,wind-target,2020,2100
+Russia,electricity,wind,wind_storage,,wind-target,2020,2100
+Europe_Non_EU,electricity,solar,PV,,PV-target,2020,2100
+Europe_Non_EU,electricity,solar,PV_storage,,PV-target,2020,2100
+Europe_Non_EU,electricity,wind,wind,,wind-target,2020,2100
+Europe_Non_EU,electricity,wind,wind_storage,,wind-target,2020,2100
+Europe_Non_EU,electricity,biomass,biomass (conv),,biom-target,2020,2100
+Europe_Non_EU,electricity,biomass,biomass (IGCC),,biom-target,2020,2100
+Europe_Non_EU,electricity,biomass,biomass (conv CCS),,biom-target,2020,2100
+Europe_Non_EU,electricity,biomass,biomass (conv CCS),,biom-target,2020,2100
+Europe_Non_EU,electricity,geothermal,geothermal,,geo-target,2020,2100
+Europe_Non_EU,elect_td_ind,elect_td_ind,elect_td_ind,ind-constraint,,2020,2100
+Europe_Non_EU,refined liquids industrial,refined liquids industrial,refined liquids industrial,ind-constraint,,2020,2100
+Europe_Non_EU,delivered coal industry,delivered coal industry,delivered coal industry,ind-constraint,,2020,2100
+Europe_Non_EU,wholesale gas,wholesale gas,wholesale gas,ind-constraint,,2020,2100
+Europe_Non_EU,delivered biomass industry,delivered biomass industry,delivered biomass industry,ind-constraint,,2020,2100
+Europe_Non_EU,H2 industrial,H2 delivery,H2 delivery,ind-constraint,,2020,2100
+Europe_Non_EU,H2 industrial,forecourt production,electrolysis,ind-constraint,,2020,2100
+Indonesia,electricity,geothermal,geothermal,,geo-target,2020,2100
+India,electricity,solar,PV,,PV-target,2020,2025
+India,electricity,solar,PV_storage,,PV-target,2020,2025
+India,electricity,wind,wind,,wind-target,2020,2025
+India,electricity,wind,wind_storage,,wind-target,2020,2025
+India,electricity,biomass,biomass (conv),,biom-target,2020,2025
+India,electricity,biomass,biomass (IGCC),,biom-target,2020,2025
+India,electricity,biomass,biomass (conv CCS),,biom-target,2020,2025
+India,electricity,biomass,biomass (conv CCS),,biom-target,2020,2025
+India,elect_td_bld,rooftop_pv,rooftop_pv,,rooftop-target,2020,2025
+South Korea,electricity,solar,PV,,PV-target,2020,2030
+South Korea,electricity,solar,PV_storage,,PV-target,2020,2030
+South Korea,electricity,wind,wind,,wind-target,2030,2030
+South Korea,electricity,wind,wind_storage,,wind-target,2030,2030
+South Korea,electricity,biomass,biomass (conv),,biom-target,2030,2030
+South Korea,electricity,biomass,biomass (IGCC),,biom-target,2030,2030
+South Korea,electricity,biomass,biomass (conv CCS),,biom-target,2030,2030
+South Korea,electricity,biomass,biomass (conv CCS),,biom-target,2030,2030
+South Korea,electricity,wind,wind_offshore,,offshore-target,2020,2030

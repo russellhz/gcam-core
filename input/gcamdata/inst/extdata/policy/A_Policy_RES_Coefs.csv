@@ -1,0 +1,182 @@
+# File: A_Policy_RES_Coefs.csv,,,,,,,,,,,,,,,,,,,,,,,,
+# Title: Policy RES coefs for minimum proportion of market,,,,,,,,,,,,,,,,,,,,,,,,
+# Units: Refined liquid proportion (biofuel targets),,,,,,,,,,,,,,,,,,,,,,,,
+# Column types: ccccccccnnnnnnnnnnnnnnnnn,,,,,,,,,,,,,,,,,,,,,,,,
+# ----------,,,,,,,,,,,,,,,,,,,,,,,,
+xml,region,market,policy.portfolio.standard,policyType,supplysector,subsector,stub.technology,2020,2025,2030,2035,2040,2045,2050,2055,2060,2065,2070,2075,2080,2085,2090,2095,2100
+policy_biofuel_arg.xml,Argentina,Argentina,biofuel-target,RES,refined liquids transport,refined liquids transport,refined liquids transport,0.06,0.06,0.06,0.06,0.06,0.06,0.06,0.06,0.06,0.06,0.06,0.06,0.06,0.06,0.06,0.06,0.06
+policy_biofuel_arg.xml,Argentina,Argentina,biodiesel-target,RES,refined liquids transport,refined liquids transport,refined liquids transport,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05
+policy_biofuel_bra.xml,Brazil,Brazil,biofuel-target,RES,refined liquids transport,refined liquids transport,refined liquids transport,0.135,0.135,0.135,0.135,0.135,0.135,0.135,0.135,0.135,0.135,0.135,0.135,0.135,0.135,0.135,0.135,0.135
+policy_biofuel_bra.xml,Brazil,Brazil,biodiesel-target,RES,refined liquids transport,refined liquids transport,refined liquids transport,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05
+policy_biofuel_can.xml,Canada,Canada,biofuel-target,RES,refined liquids transport,refined liquids transport,refined liquids transport,0.037,0.037,0.037,0.037,0.037,0.037,0.037,0.037,0.037,0.037,0.037,0.037,0.037,0.037,0.037,0.037,0.037
+policy_biofuel_chn.xml,China,China,biofuel-target,RES,refined liquids transport,refined liquids transport,refined liquids transport,0.011,0.011,0.011,0.011,0.011,0.011,0.011,0.011,0.011,0.011,0.011,0.011,0.011,0.011,0.011,0.011,0.011
+policy_biofuel_eu.xml,EU-12,EU,biofuel-target,RES,refined liquids transport,refined liquids transport,refined liquids transport,0.06,,,,,,,,,,,,,,,,
+policy_biofuel_eu.xml,EU-12,EU,adv-biofuel-target,RES,refined liquids transport,refined liquids transport,refined liquids transport,,0.01,0.035,0.035,0.035,0.035,0.035,0.035,0.035,0.035,0.035,0.035,0.035,0.035,0.035,0.035,0.035
+policy_biofuel_eu.xml,EU-15,EU,biofuel-target,RES,refined liquids transport,refined liquids transport,refined liquids transport,0.06,,,,,,,,,,,,,,,,
+policy_biofuel_eu.xml,EU-15,EU,adv-biofuel-target,RES,refined liquids transport,refined liquids transport,refined liquids transport,,0.01,0.035,0.035,0.035,0.035,0.035,0.035,0.035,0.035,0.035,0.035,0.035,0.035,0.035,0.035,0.035
+policy_biofuel_idn.xml,Indonesia,Indonesia,biofuel-target,RES,refined liquids transport,refined liquids transport,refined liquids transport,0.05,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1
+policy_biofuel_idn.xml,Indonesia,Indonesia,biodiesel-target,RES,refined liquids transport,refined liquids transport,refined liquids transport,0.075,0.125,0.15,0.15,0.15,0.15,0.15,0.15,0.15,0.15,0.15,0.15,0.15,0.15,0.15,0.15,0.15
+policy_biofuel_ind.xml,India,India,biofuel-target,RES,refined liquids transport,refined liquids transport,refined liquids transport,0.042,0.042,0.042,0.042,0.042,0.042,0.042,0.042,0.042,0.042,0.042,0.042,0.042,0.042,0.042,0.042,0.042
+policy_biofuel_kor.xml,South Korea,South Korea,biofuel-target,RES,refined liquids transport,refined liquids transport,refined liquids transport,0.013,0.013,0.013,0.013,0.013,0.013,0.013,0.013,0.013,0.013,0.013,0.013,0.013,0.013,0.013,0.013,0.013
+policy_biofuel_saf.xml,South Africa,South Africa,biofuel-target,RES,refined liquids transport,refined liquids transport,refined liquids transport,0.025,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05
+policy_biofuel_usa.xml,USA,USA,biofuel-target,RES,refined liquids transport,refined liquids transport,refined liquids transport,0.1156,0.1156,0.1156,0.1156,0.1156,0.1156,0.1156,0.1156,0.1156,0.1156,0.1156,0.1156,0.1156,0.1156,0.1156,0.1156,0.1156
+policy_feres_eu.xml,EU-12,EU,FE_RES,RES,delivered biomass,delivered biomass,delivered biomass,0.19,0.28,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38
+policy_feres_eu.xml,EU-12,EU,FE_RES,RES,delivered coal,delivered coal,delivered coal,0.19,0.28,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38
+policy_feres_eu.xml,EU-12,EU,FE_RES,RES,delivered biomass industry,delivered biomass industry,delivered biomass industry,0.19,0.28,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38
+policy_feres_eu.xml,EU-12,EU,FE_RES,RES,delivered coal industry,delivered coal industry,delivered coal industry,0.19,0.28,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38
+policy_feres_eu.xml,EU-12,EU,FE_RES,RES,wholesale gas,wholesale gas,wholesale gas,0.19,0.28,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38
+policy_feres_eu.xml,EU-12,EU,FE_RES,RES,delivered gas,delivered gas,delivered gas,0.19,0.28,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38
+policy_feres_eu.xml,EU-12,EU,FE_RES,RES,delivered gas transport,delivered gas transport,delivered gas transport,0.19,0.28,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38
+policy_feres_eu.xml,EU-12,EU,FE_RES,RES,refined liquids enduse,refined liquids enduse,refined liquids enduse,0.19,0.28,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38
+policy_feres_eu.xml,EU-12,EU,FE_RES,RES,refined liquids transport,refined liquids transport,refined liquids transport,0.19,0.28,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38
+policy_feres_eu.xml,EU-12,EU,FE_RES,RES,refined liquids industrial,refined liquids industrial,refined liquids industrial,0.19,0.28,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38
+policy_feres_eu.xml,EU-12,EU,FE_RES,RES,H2 wholesale delivery,H2 liquid truck,H2 liquid truck,0.19,0.28,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38
+policy_feres_eu.xml,EU-12,EU,FE_RES,RES,H2 wholesale delivery,H2 pipeline,H2 pipeline,0.19,0.28,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38
+policy_feres_eu.xml,EU-12,EU,FE_RES,RES,H2 industrial,forecourt production,electrolysis,0.19,0.28,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38
+policy_feres_eu.xml,EU-12,EU,FE_RES,RES,H2 wholesale dispensing,H2 delivery,H2 liquid truck,0.19,0.28,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38
+policy_feres_eu.xml,EU-12,EU,FE_RES,RES,H2 wholesale dispensing,H2 delivery,H2 pipeline,0.19,0.28,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38
+policy_feres_eu.xml,EU-12,EU,FE_RES,RES,H2 wholesale dispensing,forecourt production,electrolysis,0.19,0.28,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38
+policy_feres_eu.xml,EU-12,EU,FE_RES,RES,H2 wholesale dispensing,forecourt production,natural gas steam reforming,0.19,0.28,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38
+policy_feres_eu.xml,EU-12,EU,FE_RES,RES,elect_td_bld,elect_td_bld,elect_td_bld,0.19,0.28,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38
+policy_feres_eu.xml,EU-12,EU,FE_RES,RES,elect_td_bld,rooftop_pv,rooftop_pv,0.19,0.28,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38
+policy_feres_eu.xml,EU-12,EU,FE_RES,RES,elect_td_ind,elect_td_ind,elect_td_ind,0.19,0.28,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38
+policy_feres_eu.xml,EU-12,EU,FE_RES,RES,elect_td_trn,elect_td_trn,elect_td_trn,0.19,0.28,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38
+policy_feres_eu.xml,EU-15,EU,FE_RES,RES,delivered biomass,delivered biomass,delivered biomass,0.19,0.28,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38
+policy_feres_eu.xml,EU-15,EU,FE_RES,RES,delivered coal,delivered coal,delivered coal,0.19,0.28,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38
+policy_feres_eu.xml,EU-15,EU,FE_RES,RES,delivered biomass industry,delivered biomass industry,delivered biomass industry,0.19,0.28,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38
+policy_feres_eu.xml,EU-15,EU,FE_RES,RES,delivered coal industry,delivered coal industry,delivered coal industry,0.19,0.28,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38
+policy_feres_eu.xml,EU-15,EU,FE_RES,RES,wholesale gas,wholesale gas,wholesale gas,0.19,0.28,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38
+policy_feres_eu.xml,EU-15,EU,FE_RES,RES,delivered gas,delivered gas,delivered gas,0.19,0.28,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38
+policy_feres_eu.xml,EU-15,EU,FE_RES,RES,delivered gas transport,delivered gas transport,delivered gas transport,0.19,0.28,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38
+policy_feres_eu.xml,EU-15,EU,FE_RES,RES,refined liquids enduse,refined liquids enduse,refined liquids enduse,0.19,0.28,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38
+policy_feres_eu.xml,EU-15,EU,FE_RES,RES,refined liquids transport,refined liquids transport,refined liquids transport,0.19,0.28,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38
+policy_feres_eu.xml,EU-15,EU,FE_RES,RES,refined liquids industrial,refined liquids industrial,refined liquids industrial,0.19,0.28,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38
+policy_feres_eu.xml,EU-15,EU,FE_RES,RES,H2 wholesale delivery,H2 liquid truck,H2 liquid truck,0.19,0.28,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38
+policy_feres_eu.xml,EU-15,EU,FE_RES,RES,H2 wholesale delivery,H2 pipeline,H2 pipeline,0.19,0.28,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38
+policy_feres_eu.xml,EU-15,EU,FE_RES,RES,H2 industrial,forecourt production,electrolysis,0.19,0.28,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38
+policy_feres_eu.xml,EU-15,EU,FE_RES,RES,H2 wholesale dispensing,H2 delivery,H2 liquid truck,0.19,0.28,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38
+policy_feres_eu.xml,EU-15,EU,FE_RES,RES,H2 wholesale dispensing,H2 delivery,H2 pipeline,0.19,0.28,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38
+policy_feres_eu.xml,EU-15,EU,FE_RES,RES,H2 wholesale dispensing,forecourt production,electrolysis,0.19,0.28,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38
+policy_feres_eu.xml,EU-15,EU,FE_RES,RES,H2 wholesale dispensing,forecourt production,natural gas steam reforming,0.19,0.28,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38
+policy_feres_eu.xml,EU-15,EU,FE_RES,RES,elect_td_bld,elect_td_bld,elect_td_bld,0.19,0.28,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38
+policy_feres_eu.xml,EU-15,EU,FE_RES,RES,elect_td_bld,rooftop_pv,rooftop_pv,0.19,0.28,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38
+policy_feres_eu.xml,EU-15,EU,FE_RES,RES,elect_td_ind,elect_td_ind,elect_td_ind,0.19,0.28,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38
+policy_feres_eu.xml,EU-15,EU,FE_RES,RES,elect_td_trn,elect_td_trn,elect_td_trn,0.19,0.28,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38,0.38
+policy_elecresid_rus.xml,Russia,Russia,elec_resid,RES,resid cooling,electricity,electricity,,,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2
+policy_elecresid_rus.xml,Russia,Russia,elec_resid,RES,resid heating,electricity,electricity,,,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2
+policy_elecresid_rus.xml,Russia,Russia,elec_resid,RES,resid heating,biomass,biomass,,,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2
+policy_elecresid_rus.xml,Russia,Russia,elec_resid,RES,resid heating,coal,coal,,,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2
+policy_elecresid_rus.xml,Russia,Russia,elec_resid,RES,resid heating,gas,gas,,,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2
+policy_elecresid_rus.xml,Russia,Russia,elec_resid,RES,resid heating,gas,hydrogen,,,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2
+policy_elecresid_rus.xml,Russia,Russia,elec_resid,RES,resid heating,refined liquids,refined liquids,,,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2
+policy_elecresid_rus.xml,Russia,Russia,elec_resid,RES,resid heating,district heat,district heat,,,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2
+policy_elecresid_rus.xml,Russia,Russia,elec_resid,RES,resid others,electricity,electricity,,,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2
+policy_elecresid_rus.xml,Russia,Russia,elec_resid,RES,resid others,biomass,biomass,,,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2
+policy_elecresid_rus.xml,Russia,Russia,elec_resid,RES,resid others,coal,coal,,,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2
+policy_elecresid_rus.xml,Russia,Russia,elec_resid,RES,resid others,gas,gas,,,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2
+policy_elecresid_rus.xml,Russia,Russia,elec_resid,RES,resid others,gas,hydrogen,,,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2
+policy_elecresid_rus.xml,Russia,Russia,elec_resid,RES,resid others,refined liquids,refined liquids,,,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2
+policy_elecresid_rus.xml,Russia,Russia,elec_resid,RES,resid others,district heat,district heat,,,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2
+policy_res_arg.xml,Argentina,Argentina,RES-target,RES,electricity_net_ownuse,electricity_net_ownuse,electricity_net_ownuse,0.14,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2
+policy_tpesgas_chn.xml,China,China,TPES_GAS,RES,regional biomass,regional biomass,regional biomass,0.085,0.117,0.15,0.15,0.15,0.15,,,,,,,,,,,
+policy_tpesgas_chn.xml,China,China,TPES_GAS,RES,regional biomassOil,regional biomassOil,Soybean,0.085,0.117,0.15,0.15,0.15,0.15,,,,,,,,,,,
+policy_tpesgas_chn.xml,China,China,TPES_GAS,RES,regional coal,domestic coal,domestic coal,0.085,0.117,0.15,0.15,0.15,0.15,,,,,,,,,,,
+policy_tpesgas_chn.xml,China,China,TPES_GAS,RES,regional coal,imported coal,imported coal,0.085,0.117,0.15,0.15,0.15,0.15,,,,,,,,,,,
+policy_tpesgas_chn.xml,China,China,TPES_GAS,RES,regional corn for ethanol,regional corn for ethanol,regional corn for ethanol,0.085,0.117,0.15,0.15,0.15,0.15,,,,,,,,,,,
+policy_tpesgas_chn.xml,China,China,TPES_GAS,RES,regional natural gas,domestic natural gas,domestic natural gas,0.085,0.117,0.15,0.15,0.15,0.15,,,,,,,,,,,
+policy_tpesgas_chn.xml,China,China,TPES_GAS,RES,regional natural gas,imported natural gas,imported natural gas,0.085,0.117,0.15,0.15,0.15,0.15,,,,,,,,,,,
+policy_tpesgas_chn.xml,China,China,TPES_GAS,RES,regional oil,domestic crude oil,domestic crude oil,0.085,0.117,0.15,0.15,0.15,0.15,,,,,,,,,,,
+policy_tpesgas_chn.xml,China,China,TPES_GAS,RES,regional oil,imported crude oil,imported crude oil,0.085,0.117,0.15,0.15,0.15,0.15,,,,,,,,,,,
+policy_tpesgas_chn.xml,China,China,TPES_GAS,RES,elec_CSP,CSP,CSP (dry_hybrid),0.085,0.117,0.15,0.15,0.15,0.15,,,,,,,,,,,
+policy_tpesgas_chn.xml,China,China,TPES_GAS,RES,elec_CSP,CSP,CSP (recirculating),0.085,0.117,0.15,0.15,0.15,0.15,,,,,,,,,,,
+policy_tpesgas_chn.xml,China,China,TPES_GAS,RES,elec_CSP_storage,CSP_storage,CSP_storage (dry_hybrid),0.085,0.117,0.15,0.15,0.15,0.15,,,,,,,,,,,
+policy_tpesgas_chn.xml,China,China,TPES_GAS,RES,elec_CSP_storage,CSP_storage,CSP_storage (recirculating),0.085,0.117,0.15,0.15,0.15,0.15,,,,,,,,,,,
+policy_tpesgas_chn.xml,China,China,TPES_GAS,RES,elec_Gen_III,Gen_III,Gen_III (cooling pond),0.085,0.117,0.15,0.15,0.15,0.15,,,,,,,,,,,
+policy_tpesgas_chn.xml,China,China,TPES_GAS,RES,elec_Gen_III,Gen_III,Gen_III (once through),0.085,0.117,0.15,0.15,0.15,0.15,,,,,,,,,,,
+policy_tpesgas_chn.xml,China,China,TPES_GAS,RES,elec_Gen_III,Gen_III,Gen_III (recirculating),0.085,0.117,0.15,0.15,0.15,0.15,,,,,,,,,,,
+policy_tpesgas_chn.xml,China,China,TPES_GAS,RES,elec_Gen_III,Gen_III,Gen_III (seawater),0.085,0.117,0.15,0.15,0.15,0.15,,,,,,,,,,,
+policy_tpesgas_chn.xml,China,China,TPES_GAS,RES,elec_Gen_II_LWR,Gen_II_LWR,Gen_II_LWR (cooling pond),0.085,0.117,0.15,0.15,0.15,0.15,,,,,,,,,,,
+policy_tpesgas_chn.xml,China,China,TPES_GAS,RES,elec_Gen_II_LWR,Gen_II_LWR,Gen_II_LWR (once through),0.085,0.117,0.15,0.15,0.15,0.15,,,,,,,,,,,
+policy_tpesgas_chn.xml,China,China,TPES_GAS,RES,elec_Gen_II_LWR,Gen_II_LWR,Gen_II_LWR (recirculating),0.085,0.117,0.15,0.15,0.15,0.15,,,,,,,,,,,
+policy_tpesgas_chn.xml,China,China,TPES_GAS,RES,elec_Gen_II_LWR,Gen_II_LWR,Gen_II_LWR (seawater),0.085,0.117,0.15,0.15,0.15,0.15,,,,,,,,,,,
+policy_tpesgas_chn.xml,China,China,TPES_GAS,RES,elec_geothermal,geothermal,geothermal (dry_hybrid),0.085,0.117,0.15,0.15,0.15,0.15,,,,,,,,,,,
+policy_tpesgas_chn.xml,China,China,TPES_GAS,RES,elec_geothermal,geothermal,geothermal (recirculating),0.085,0.117,0.15,0.15,0.15,0.15,,,,,,,,,,,
+policy_tpesgas_chn.xml,China,China,TPES_GAS,RES,elect_td_bld,rooftop_pv,rooftop_pv,0.085,0.117,0.15,0.15,0.15,0.15,,,,,,,,,,,
+policy_tpesgas_chn.xml,China,China,TPES_GAS,RES,electricity,hydro,hydro,0.085,0.117,0.15,0.15,0.15,0.15,,,,,,,,,,,
+policy_tpesgas_chn.xml,China,China,TPES_GAS,RES,electricity,solar,PV,0.085,0.117,0.15,0.15,0.15,0.15,,,,,,,,,,,
+policy_tpesgas_chn.xml,China,China,TPES_GAS,RES,electricity,solar,PV_storage,0.085,0.117,0.15,0.15,0.15,0.15,,,,,,,,,,,
+policy_tpesgas_chn.xml,China,China,TPES_GAS,RES,electricity,wind,wind,0.085,0.117,0.15,0.15,0.15,0.15,,,,,,,,,,,
+policy_tpesgas_chn.xml,China,China,TPES_GAS,RES,electricity,wind,wind_offshore,0.085,0.117,0.15,0.15,0.15,0.15,,,,,,,,,,,
+policy_tpesgas_chn.xml,China,China,TPES_GAS,RES,electricity,wind,wind_storage,0.085,0.117,0.15,0.15,0.15,0.15,,,,,,,,,,,
+policy_tpesgas_chn.xml,China,China,TPES_GAS,RES,resid heating,traditional biomass,traditional biomass,0.085,0.117,0.15,0.15,0.15,0.15,,,,,,,,,,,
+policy_tpesgas_chn.xml,China,China,TPES_GAS,RES,resid others,traditional biomass,traditional biomass,0.085,0.117,0.15,0.15,0.15,0.15,,,,,,,,,,,
+policy_res_aus.xml,Australia_NZ,Australia_NZ,RES-target,RES,electricity_net_ownuse,electricity_net_ownuse,electricity_net_ownuse,0.25,0.45,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75
+policy_res_bra.xml,Brazil,Brazil,RES-target,RES,electricity_net_ownuse,electricity_net_ownuse,electricity_net_ownuse,0.10201553,0.16,0.16,0.16,0.16,0.16,0.16,0.16,0.16,0.16,0.16,0.16,0.16,0.16,0.16,0.16,0.16
+policy_tpesres_bra.xml,Brazil,Brazil,TPES_RES,RES,regional biomass,regional biomass,regional biomass,,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45
+policy_tpesres_bra.xml,Brazil,Brazil,TPES_RES,RES,regional coal,domestic coal,domestic coal,,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45
+policy_tpesres_bra.xml,Brazil,Brazil,TPES_RES,RES,regional coal,imported coal,imported coal,,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45
+policy_tpesres_bra.xml,Brazil,Brazil,TPES_RES,RES,regional natural gas,domestic natural gas,domestic natural gas,,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45
+policy_tpesres_bra.xml,Brazil,Brazil,TPES_RES,RES,regional natural gas,imported natural gas,imported natural gas,,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45
+policy_tpesres_bra.xml,Brazil,Brazil,TPES_RES,RES,regional oil,domestic crude oil,domestic crude oil,,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45
+policy_tpesres_bra.xml,Brazil,Brazil,TPES_RES,RES,regional oil,imported crude oil,imported crude oil,,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45
+policy_tpesres_bra.xml,Brazil,Brazil,TPES_RES,RES,regional biomassOil,regional biomassOil,Soybean,,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45
+policy_tpesres_bra.xml,Brazil,Brazil,TPES_RES,RES,regional sugar for ethanol,regional sugar for ethanol,regional sugar for ethanol,,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45
+policy_tpesres_bra.xml,Brazil,Brazil,TPES_RES,RES,elec_CSP,CSP,CSP (dry_hybrid),,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45
+policy_tpesres_bra.xml,Brazil,Brazil,TPES_RES,RES,elec_CSP,CSP,CSP (recirculating),,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45
+policy_tpesres_bra.xml,Brazil,Brazil,TPES_RES,RES,elec_CSP_storage,CSP_storage,CSP_storage (dry_hybrid),,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45
+policy_tpesres_bra.xml,Brazil,Brazil,TPES_RES,RES,elec_CSP_storage,CSP_storage,CSP_storage (recirculating),,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45
+policy_tpesres_bra.xml,Brazil,Brazil,TPES_RES,RES,elec_Gen_III,Gen_III,Gen_III (cooling pond),,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45
+policy_tpesres_bra.xml,Brazil,Brazil,TPES_RES,RES,elec_Gen_III,Gen_III,Gen_III (once through),,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45
+policy_tpesres_bra.xml,Brazil,Brazil,TPES_RES,RES,elec_Gen_III,Gen_III,Gen_III (recirculating),,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45
+policy_tpesres_bra.xml,Brazil,Brazil,TPES_RES,RES,elec_Gen_III,Gen_III,Gen_III (seawater),,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45
+policy_tpesres_bra.xml,Brazil,Brazil,TPES_RES,RES,elec_Gen_II_LWR,Gen_II_LWR,Gen_II_LWR (cooling pond),,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45
+policy_tpesres_bra.xml,Brazil,Brazil,TPES_RES,RES,elec_Gen_II_LWR,Gen_II_LWR,Gen_II_LWR (once through),,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45
+policy_tpesres_bra.xml,Brazil,Brazil,TPES_RES,RES,elec_Gen_II_LWR,Gen_II_LWR,Gen_II_LWR (recirculating),,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45
+policy_tpesres_bra.xml,Brazil,Brazil,TPES_RES,RES,elec_Gen_II_LWR,Gen_II_LWR,Gen_II_LWR (seawater),,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45
+policy_tpesres_bra.xml,Brazil,Brazil,TPES_RES,RES,elec_geothermal,geothermal,geothermal (dry_hybrid),,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45
+policy_tpesres_bra.xml,Brazil,Brazil,TPES_RES,RES,elec_geothermal,geothermal,geothermal (recirculating),,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45
+policy_tpesres_bra.xml,Brazil,Brazil,TPES_RES,RES,elect_td_bld,rooftop_pv,rooftop_pv,,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45
+policy_tpesres_bra.xml,Brazil,Brazil,TPES_RES,RES,electricity,hydro,hydro,,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45
+policy_tpesres_bra.xml,Brazil,Brazil,TPES_RES,RES,electricity,solar,PV,,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45
+policy_tpesres_bra.xml,Brazil,Brazil,TPES_RES,RES,electricity,solar,PV_storage,,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45
+policy_tpesres_bra.xml,Brazil,Brazil,TPES_RES,RES,electricity,wind,wind,,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45
+policy_tpesres_bra.xml,Brazil,Brazil,TPES_RES,RES,electricity,wind,wind_offshore,,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45
+policy_tpesres_bra.xml,Brazil,Brazil,TPES_RES,RES,electricity,wind,wind_storage,,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45
+policy_tpesres_bra.xml,Brazil,Brazil,TPES_RES,RES,resid heating,traditional biomass,traditional biomass,,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45
+policy_tpesres_bra.xml,Brazil,Brazil,TPES_RES,RES,resid others,traditional biomass,traditional biomass,,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45,0.45
+policy_res_chn.xml,China,China,RES-target,RES,electricity_net_ownuse,electricity_net_ownuse,electricity_net_ownuse,0.265,0.265,0.265,0.265,0.265,0.265,0.265,0.265,0.265,0.265,0.265,0.265,0.265,0.265,0.265,0.265,0.265
+policy_tpesres_chn.xml,China,China,TPES_RES,RES,regional biomass,regional biomass,regional biomass,0.140370268,0.189065237,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275
+policy_tpesres_chn.xml,China,China,TPES_RES,RES,regional coal,domestic coal,domestic coal,0.140370268,0.189065237,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275
+policy_tpesres_chn.xml,China,China,TPES_RES,RES,regional coal,imported coal,imported coal,0.140370268,0.189065237,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275
+policy_tpesres_chn.xml,China,China,TPES_RES,RES,regional natural gas,domestic natural gas,domestic natural gas,0.140370268,0.189065237,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275
+policy_tpesres_chn.xml,China,China,TPES_RES,RES,regional natural gas,imported natural gas,imported natural gas,0.140370268,0.189065237,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275
+policy_tpesres_chn.xml,China,China,TPES_RES,RES,regional oil,domestic crude oil,domestic crude oil,0.140370268,0.189065237,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275
+policy_tpesres_chn.xml,China,China,TPES_RES,RES,regional oil,imported crude oil,imported crude oil,0.140370268,0.189065237,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275
+policy_tpesres_chn.xml,China,China,TPES_RES,RES,regional biomassOil,regional biomassOil,Soybean,0.140370268,0.189065237,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275
+policy_tpesres_chn.xml,China,China,TPES_RES,RES,regional corn for ethanol,regional corn for ethanol,regional corn for ethanol,0.140370268,0.189065237,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275,0.237883275
+policy_tpesres_chn.xml,China,China,TPES_RES,RES,elec_CSP,CSP,CSP (dry_hybrid),0.342366507,0.446962735,0.548118145,0.534569157,0.523971971,0.512679472,0.503989989,0.495590156,0.488466684,0.481545091,0.47576655,0.470125049,0.465525,0.461014099,0.456589779,0.453111,0.44968483
+policy_tpesres_chn.xml,China,China,TPES_RES,RES,elec_CSP,CSP,CSP (recirculating),0.342366507,0.446962735,0.548118145,0.534569157,0.523971971,0.512679472,0.503989989,0.495590156,0.488466684,0.481545091,0.47576655,0.470125049,0.465525,0.461014099,0.456589779,0.453111,0.44968483
+policy_tpesres_chn.xml,China,China,TPES_RES,RES,elec_CSP_storage,CSP_storage,CSP_storage (dry_hybrid),0.342366507,0.446962735,0.548118145,0.534569157,0.523971971,0.512679472,0.503989989,0.495590156,0.488466684,0.481545091,0.47576655,0.470125049,0.465525,0.461014099,0.456589779,0.453111,0.44968483
+policy_tpesres_chn.xml,China,China,TPES_RES,RES,elec_CSP_storage,CSP_storage,CSP_storage (recirculating),0.342366507,0.446962735,0.548118145,0.534569157,0.523971971,0.512679472,0.503989989,0.495590156,0.488466684,0.481545091,0.47576655,0.470125049,0.465525,0.461014099,0.456589779,0.453111,0.44968483
+policy_tpesres_chn.xml,China,China,TPES_RES,RES,elec_Gen_III,Gen_III,Gen_III (cooling pond),0.342366507,0.446962735,0.548118145,0.534569157,0.523971971,0.512679472,0.503989989,0.495590156,0.488466684,0.481545091,0.47576655,0.470125049,0.465525,0.461014099,0.456589779,0.453111,0.44968483
+policy_tpesres_chn.xml,China,China,TPES_RES,RES,elec_Gen_III,Gen_III,Gen_III (once through),0.342366507,0.446962735,0.548118145,0.534569157,0.523971971,0.512679472,0.503989989,0.495590156,0.488466684,0.481545091,0.47576655,0.470125049,0.465525,0.461014099,0.456589779,0.453111,0.44968483
+policy_tpesres_chn.xml,China,China,TPES_RES,RES,elec_Gen_III,Gen_III,Gen_III (recirculating),0.342366507,0.446962735,0.548118145,0.534569157,0.523971971,0.512679472,0.503989989,0.495590156,0.488466684,0.481545091,0.47576655,0.470125049,0.465525,0.461014099,0.456589779,0.453111,0.44968483
+policy_tpesres_chn.xml,China,China,TPES_RES,RES,elec_Gen_III,Gen_III,Gen_III (seawater),0.342366507,0.446962735,0.548118145,0.534569157,0.523971971,0.512679472,0.503989989,0.495590156,0.488466684,0.481545091,0.47576655,0.470125049,0.465525,0.461014099,0.456589779,0.453111,0.44968483
+policy_tpesres_chn.xml,China,China,TPES_RES,RES,elec_Gen_II_LWR,Gen_II_LWR,Gen_II_LWR (cooling pond),0.342366507,0.446962735,0.548118145,0.534569157,0.523971971,0.512679472,0.503989989,0.495590156,0.488466684,0.481545091,0.47576655,0.470125049,0.465525,0.461014099,0.456589779,0.453111,0.44968483
+policy_tpesres_chn.xml,China,China,TPES_RES,RES,elec_Gen_II_LWR,Gen_II_LWR,Gen_II_LWR (once through),0.342366507,0.446962735,0.548118145,0.534569157,0.523971971,0.512679472,0.503989989,0.495590156,0.488466684,0.481545091,0.47576655,0.470125049,0.465525,0.461014099,0.456589779,0.453111,0.44968483
+policy_tpesres_chn.xml,China,China,TPES_RES,RES,elec_Gen_II_LWR,Gen_II_LWR,Gen_II_LWR (recirculating),0.342366507,0.446962735,0.548118145,0.534569157,0.523971971,0.512679472,0.503989989,0.495590156,0.488466684,0.481545091,0.47576655,0.470125049,0.465525,0.461014099,0.456589779,0.453111,0.44968483
+policy_tpesres_chn.xml,China,China,TPES_RES,RES,elec_Gen_II_LWR,Gen_II_LWR,Gen_II_LWR (seawater),0.342366507,0.446962735,0.548118145,0.534569157,0.523971971,0.512679472,0.503989989,0.495590156,0.488466684,0.481545091,0.47576655,0.470125049,0.465525,0.461014099,0.456589779,0.453111,0.44968483
+policy_tpesres_chn.xml,China,China,TPES_RES,RES,elec_geothermal,geothermal,geothermal (dry_hybrid),0.342366507,0.446962735,0.548118145,0.534569157,0.523971971,0.512679472,0.503989989,0.495590156,0.488466684,0.481545091,0.47576655,0.470125049,0.465525,0.461014099,0.456589779,0.453111,0.44968483
+policy_tpesres_chn.xml,China,China,TPES_RES,RES,elec_geothermal,geothermal,geothermal (recirculating),0.342366507,0.446962735,0.548118145,0.534569157,0.523971971,0.512679472,0.503989989,0.495590156,0.488466684,0.481545091,0.47576655,0.470125049,0.465525,0.461014099,0.456589779,0.453111,0.44968483
+policy_tpesres_chn.xml,China,China,TPES_RES,RES,elect_td_bld,rooftop_pv,rooftop_pv,0.342366507,0.446962735,0.548118145,0.534569157,0.523971971,0.512679472,0.503989989,0.495590156,0.488466684,0.481545091,0.47576655,0.470125049,0.465525,0.461014099,0.456589779,0.453111,0.44968483
+policy_tpesres_chn.xml,China,China,TPES_RES,RES,electricity,hydro,hydro,0.342366507,0.446962735,0.548118145,0.534569157,0.523971971,0.512679472,0.503989989,0.495590156,0.488466684,0.481545091,0.47576655,0.470125049,0.465525,0.461014099,0.456589779,0.453111,0.44968483
+policy_tpesres_chn.xml,China,China,TPES_RES,RES,electricity,solar,PV,0.342366507,0.446962735,0.548118145,0.534569157,0.523971971,0.512679472,0.503989989,0.495590156,0.488466684,0.481545091,0.47576655,0.470125049,0.465525,0.461014099,0.456589779,0.453111,0.44968483
+policy_tpesres_chn.xml,China,China,TPES_RES,RES,electricity,solar,PV_storage,0.342366507,0.446962735,0.548118145,0.534569157,0.523971971,0.512679472,0.503989989,0.495590156,0.488466684,0.481545091,0.47576655,0.470125049,0.465525,0.461014099,0.456589779,0.453111,0.44968483
+policy_tpesres_chn.xml,China,China,TPES_RES,RES,electricity,wind,wind,0.342366507,0.446962735,0.548118145,0.534569157,0.523971971,0.512679472,0.503989989,0.495590156,0.488466684,0.481545091,0.47576655,0.470125049,0.465525,0.461014099,0.456589779,0.453111,0.44968483
+policy_tpesres_chn.xml,China,China,TPES_RES,RES,electricity,wind,wind_offshore,0.342366507,0.446962735,0.548118145,0.534569157,0.523971971,0.512679472,0.503989989,0.495590156,0.488466684,0.481545091,0.47576655,0.470125049,0.465525,0.461014099,0.456589779,0.453111,0.44968483
+policy_tpesres_chn.xml,China,China,TPES_RES,RES,electricity,wind,wind_storage,0.342366507,0.446962735,0.548118145,0.534569157,0.523971971,0.512679472,0.503989989,0.495590156,0.488466684,0.481545091,0.47576655,0.470125049,0.465525,0.461014099,0.456589779,0.453111,0.44968483
+policy_res_jap.xml,Japan,Japan,RES-target,RES,electricity_net_ownuse,electricity_net_ownuse,electricity_net_ownuse,0.18,0.275,0.37,0.37,0.37,0.37,0.37,0.37,0.37,0.37,0.37,0.37,0.37,0.37,0.37,0.37,0.37
+policy_res_kor.xml,South Korea,South Korea,RES-target,RES,electricity_net_ownuse,electricity_net_ownuse,electricity_net_ownuse,0.097,0.1985,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3
+policy_res_mex.xml,Mexico,Mexico,RES-target,RES,electricity_net_ownuse,electricity_net_ownuse,electricity_net_ownuse,0.25,0.3,0.35,0.35,0.35,0.35,0.35,0.35,0.35,0.35,0.35,0.35,0.35,0.35,0.35,0.35,0.35
+policy_res_saf.xml,South Africa,South Africa,RES-target,RES,electricity_net_ownuse,electricity_net_ownuse,electricity_net_ownuse,0.1,0.18,0.263,0.263,0.263,0.263,0.263,0.263,0.263,0.263,0.263,0.263,0.263,0.263,0.263,0.263,0.263
+policy_res_usa.xml,USA,USA,RES-target,RES,electricity_net_ownuse,electricity_net_ownuse,electricity_net_ownuse,0.2,0.295,0.345,0.345,0.345,0.345,0.345,0.345,0.345,0.345,0.345,0.345,0.345,0.345,0.345,0.345,0.345

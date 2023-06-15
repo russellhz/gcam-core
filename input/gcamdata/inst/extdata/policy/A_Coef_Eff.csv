@@ -1,0 +1,12 @@
+# File: A_Coef_Eff.csv,,,,,,,,,,,,
+# Title: Technology coefficients/efficiency add-ons,,,,,,,,,,,,
+# Comments: type should be either efficiency or coefficient,,,,,,,,,,,,
+# Units: Varied,,,,,,,,,,,,
+# Column types: cccccccnnnnnn,,,,,,,,,,,,
+# ----------,,,,,,,,,,,,
+xml,type,region,supplysector,subsector,stub.technology,minicam.energy.input,2020,2025,2030,2035,2040,2100
+policy_effcool_ind.xml,efficiency,India,resid cooling,electricity,electricity,elect_td_bld,,,2.7375,2.847,2.847,
+policy_tdloss_rus.xml,coefficient,Russia,elect_td_ind,elect_td_ind,elect_td_ind,electricity_net_ownuse,,1.098,1.085,1.085,1.085,1.085
+policy_tdloss_rus.xml,coefficient,Russia,elect_td_bld,elect_td_bld,elect_td_bld,electricity_net_ownuse,,1.098,1.085,1.085,1.085,1.085
+policy_tdloss_rus.xml,coefficient,Russia,elect_td_trn,elect_td_trn,elect_td_trn,electricity_net_ownuse,,1.098,1.085,1.085,1.085,1.085
+policy_tdloss_rus.xml,coefficient,Russia,elect_td_en,elect_td_en,elect_td_en,electricity_net_ownuse,,1.098,1.085,1.085,1.085,1.085
