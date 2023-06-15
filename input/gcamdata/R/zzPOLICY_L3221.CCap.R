@@ -34,8 +34,8 @@ module_policy_L3221.CCap <- function(command, ...) {
              "L2326.StubTech_aluminum",
              "L244.StubTech_bld",
              "L254.StubTranTech",
-             "L201.BaseGDP_Scen",
-             paste0("L201.LaborProductivity_gSSP", seq(1, 5)),
+             "L201.GDP_Scen",
+             paste0("L201.TotalFactorProductivity_gSSP", seq(1, 5)),
              paste0("L201.Pop_gSSP", seq(1, 5)),
              FILE = "policy/A_CO2ByTech"
              ))
