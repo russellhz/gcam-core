@@ -35,8 +35,6 @@ module_policy_L3221.CCap <- function(command, ...) {
              "L244.StubTech_bld",
              "L254.StubTranTech",
              "L201.GDP_Scen",
-             paste0("L201.TotalFactorProductivity_gSSP", seq(1, 5)),
-             paste0("L201.Pop_gSSP", seq(1, 5)),
              FILE = "policy/A_CO2ByTech"
              ))
   } else if(command == driver.DECLARE_OUTPUTS) {
@@ -76,9 +74,7 @@ module_policy_L3221.CCap <- function(command, ...) {
     L210.ResTech <- get_data(all_data, "L210.ResTechCoef") %>%
       distinct(region, resource, reserve.subresource, resource.reserve.technology)
 
-    L201.BaseGDP_Scen <- get_data(all_data, "L201.BaseGDP_Scen")
-    L201.LaborProductivity <-  get_data(all_data, paste0("L201.LaborProductivity_g", socioeconomics.BASE_GDP_SCENARIO))
-    L201.Pop <-  get_data(all_data, paste0("L201.Pop_g", socioeconomics.BASE_GDP_SCENARIO))
+    L201.GDP_Scen <- get_data(all_data, "L201.GDP_Scen")
     A_CO2ByTech <- get_data(all_data, "policy/A_CO2ByTech") %>%
       gather_years()
 
@@ -166,20 +162,8 @@ module_policy_L3221.CCap <- function(command, ...) {
         filter(!is.na(GDPIntensity_BaseYear))
 
       # First calculate GDP series - we have baseGDP, growth rate in perCapitaGDP and population
-      L3221.GDP <- L201.BaseGDP_Scen %>%
-        mutate(year = min(MODEL_BASE_YEARS)) %>%
-        bind_rows(L201.LaborProductivity) %>%
-        arrange(region, year) %>%
-        left_join_error_no_match(L201.Pop, by = c("region", "year")) %>%
-        mutate(baseGDPperCapita = baseGDP / totalPop) %>%
-        group_by(region) %>%
-        mutate(year_diff = year - lag(year),
-               multiplier = if_else(is.na(laborproductivity), 1,(laborproductivity + 1) ^ year_diff),
-               multiplier = cumprod(multiplier),
-               baseGDPperCapita = baseGDPperCapita[year == min(MODEL_BASE_YEARS)]) %>%
-        ungroup %>%
-        mutate(GDP = totalPop * baseGDPperCapita * multiplier) %>%
-        select(region, year, GDP)
+      L3221.GDP <- L201.GDP_Scen %>%
+        filter(scenario == paste0("g", socioeconomics.BASE_GDP_SCENARIO))
 
       # Next get the energy technologies that we want to constraint
       L3221.emissions_techs <- bind_rows(L3221.CCap_tech,

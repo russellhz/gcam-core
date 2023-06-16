@@ -25,9 +25,7 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
              "L226.StubTechCoef_electd",
              "L2233.GlobalTechEff_elec_cool",
              "L222.GlobalTechCoef_en",
-             "L201.BaseGDP_Scen",
-             paste0("L201.LaborProductivity_gSSP", seq(1, 5)),
-             paste0("L201.Pop_gSSP", seq(1, 5)),
+             "L201.GDP_Scen",
              FILE = "policy/A_OutputsByTech"
              ))
   } else if(command == driver.DECLARE_OUTPUTS) {
@@ -53,9 +51,7 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
     L222.GlobalTechCoef_en <- get_data(all_data, "L222.GlobalTechCoef_en")
     L2233.GlobalTechEff_elec_cool <- get_data(all_data, "L2233.GlobalTechEff_elec_cool")
 
-    L201.BaseGDP_Scen <- get_data(all_data, "L201.BaseGDP_Scen")
-    L201.LaborProductivity <-  get_data(all_data, paste0("L201.LaborProductivity_g", socioeconomics.BASE_GDP_SCENARIO))
-    L201.Pop <-  get_data(all_data, paste0("L201.Pop_g", socioeconomics.BASE_GDP_SCENARIO))
+    L201.GDP_Scen <- get_data(all_data, "L201.GDP_Scen")
     A_OutputsByTech <- get_data(all_data, "policy/A_OutputsByTech") %>%
       gather_years()
 
@@ -65,20 +61,8 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
         filter(!is.na(GDPIntensity_BaseYear))
 
       # First calculate GDP series - we have baseGDP, growth rate in perCapitaGDP and population
-      L301.GDP <- L201.BaseGDP_Scen %>%
-        mutate(year = min(MODEL_BASE_YEARS)) %>%
-        bind_rows(L201.LaborProductivity) %>%
-        arrange(region, year) %>%
-        left_join_error_no_match(L201.Pop, by = c("region", "year")) %>%
-        mutate(baseGDPperCapita = baseGDP / totalPop) %>%
-        group_by(region) %>%
-        mutate(year_diff = year - lag(year),
-               multiplier = if_else(is.na(laborproductivity), 1,(laborproductivity + 1) ^ year_diff),
-               multiplier = cumprod(multiplier),
-               baseGDPperCapita = baseGDPperCapita[year == min(MODEL_BASE_YEARS)]) %>%
-        ungroup %>%
-        mutate(GDP = totalPop * baseGDPperCapita * multiplier) %>%
-        select(region, year, GDP)
+      L301.GDP <- L201.GDP_Scen %>%
+        filter(scenario == paste0("g", socioeconomics.BASE_GDP_SCENARIO))
 
       # Next get the energy technologies that we want to constraint
       L301.energy_consumption <- A_Policy_Constraints_Techs %>%
