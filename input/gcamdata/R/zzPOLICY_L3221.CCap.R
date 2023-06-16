@@ -114,7 +114,7 @@ module_policy_L3221.CCap <- function(command, ...) {
              !grepl("bio", stub.technology, ignore.case = T)) %>%
       rename(CO2 = ghgpolicy) %>%
       select(-market) %>%
-      repeat_add_columns(tibble(year = MODEL_FUTURE_YEARS))
+      repeat_add_columns(tibble(year = MODEL_YEARS))
 
     L3221.CCap_tech_NAs <- L3221.CCap_tech %>%
       filter(is.na(stub.technology)) %>%
@@ -140,7 +140,7 @@ module_policy_L3221.CCap <- function(command, ...) {
       left_join(L254.StubTranTech, by = c("supplysector", "region", "tranSubsector")) %>%
       rename(CO2 = ghgpolicy) %>%
       select(-market) %>%
-      repeat_add_columns(tibble(year = MODEL_FUTURE_YEARS))
+      repeat_add_columns(tibble(year = MODEL_YEARS))
 
     # Check that there are no NAs
     stopifnot(!any(is.na(L3221.CCap_tranTech)))
@@ -151,7 +151,7 @@ module_policy_L3221.CCap <- function(command, ...) {
       left_join(L210.ResTech, by = c("resource", "reserve.subresource", "region")) %>%
       rename(CO2 = ghgpolicy) %>%
       select(-market) %>%
-      repeat_add_columns(tibble(year = MODEL_FUTURE_YEARS))
+      repeat_add_columns(tibble(year = MODEL_YEARS))
 
     # Check that there are no NAs
     stopifnot(!any(is.na(L3221.CCap_resource)))
