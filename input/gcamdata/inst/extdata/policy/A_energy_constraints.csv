@@ -1,0 +1,29 @@
+# File: A_energy_constraints.csv,,,,,,,,,,,,,,,,,,,,,,
+# Title: Policy floors/ceilings for tax/subsidy policies,,,,,,,,,,,,,,,,,,,,,,
+# Comments: If using GDP intensity base year  in GDPIntensity_BaseYear column (must be historical year); then percent change in year columns,,,,,,,,,,,,,,,,,,,,,,
+# Units: EJ (fe-constraint),,,,,,,,,,,,,,,,,,,,,,
+# Column types: ccccicnnnnnnnnnnnnnnnnn,,,,,,,,,,,,,,,,,,,,,,
+# ----------,,,,,,,,,,,,,,,,,,,,,,
+xml,market,policy.portfolio.standard,policyType,GDPIntensity_BaseYear,tech_mapping,2020,2025,2030,2035,2040,2045,2050,2055,2060,2065,2070,2075,2080,2085,2090,2095,2100
+policy_fe_eu_new,EU,fe-constraint,tax,,FE_NO_PV,49.62126404,45.6617665,41.70238039,41.70238039,41.70238039,41.70238039,41.70238039,41.70238039,41.70238039,41.70238039,41.70238039,41.70238039,41.70238039,41.70238039,41.70238039,41.70238039,41.70238039
+policy_fe_japan_new,Japan,fe-constraint,tax,,FE_NO_PV,,,13.1558332,13.1558332,13.1558332,13.1558332,13.1558332,13.1558332,13.1558332,13.1558332,13.1558332,13.1558332,13.1558332,13.1558332,13.1558332,13.1558332,13.1558332
+policy_ind_jpn_new,Japan,ind-constraint,tax,,IND_EN,6.021587591,5.726469884,5.445815881,5.445815881,5.445815881,5.445815881,5.445815881,5.445815881,5.445815881,5.445815881,5.445815881,5.445815881,5.445815881,5.445815881,5.445815881,5.445815881,5.445815881
+policy_ind_tur_new,Europe_Non_EU,ind-constraint,tax,2010,IND_EN,,-20,-20,-20,-20,-20,-20,-20,-20,-20,-20,-20,-20,-20,-20,-20,-20
+policy_tpes_aus_new,Australia_NZ,energy-constraint,tax,2015,PRIMARY_ENERGY,,,-28.6,-28.6,-28.6,-28.6,-28.6,-28.6,-28.6,-28.6,-28.6,-28.6,-28.6,-28.6,-28.6,-28.6,-28.6
+policy_ind_chn_new,China,ind-constraint,tax,2015,IND_EN,-18,,,,,,,,,,,,,,,,
+policy_tpes_mex_new,Mexico,energy-constraint,tax,,PRIMARY_ENERGY,8.595182,,,,,,,,,,,,,,,,
+policy_resfix_rus_new,Russia,PV-target,subsidy,,ELEC_PV,0.03054972,0.04502064,0.04502064,0.04502064,0.04502064,0.04502064,0.04502064,0.04502064,0.04502064,0.04502064,0.04502064,0.04502064,0.04502064,0.04502064,0.04502064,0.04502064,0.04502064
+policy_resfix_rus_new,Russia,wind-target,subsidy,,ELEC_WIND,0.09486306,0.090119907,0.090119907,0.090119907,0.090119907,0.090119907,0.090119907,0.090119907,0.090119907,0.090119907,0.090119907,0.090119907,0.090119907,0.090119907,0.090119907,0.090119907,0.090119907
+policy_RE_targets_tur_new,Europe_Non_EU,PV-target,subsidy,,ELEC_PV,0.0173448,0.0346896,0.0693792,0.0693792,0.0693792,0.0693792,0.0693792,0.0693792,0.0693792,0.0693792,0.0693792,0.0693792,0.0693792,0.0693792,0.0693792,0.0693792,0.0693792
+policy_RE_targets_tur_new,Europe_Non_EU,wind-target,subsidy,,ELEC_WIND,0.117453519,0.190054237,0.152,0.152,0.152,0.152,0.152,0.152,0.152,0.152,0.152,0.152,0.152,0.152,0.152,0.152,0.152
+policy_RE_targets_tur_new,Europe_Non_EU,biom-target,subsidy,,ELEC_BIO,0.013631395,0.0268056,0.0268056,0.0268056,0.0268056,0.0268056,0.0268056,0.0268056,0.0268056,0.0268056,0.0268056,0.0268056,0.0268056,0.0268056,0.0268056,0.0268056,0.0268056
+policy_RE_targets_tur_new,Europe_Non_EU,geo-target,subsidy,,ELEC_GEO,0.02035605,0.0283824,0.0283824,0.0283824,0.0283824,0.0283824,0.0283824,0.0283824,0.0283824,0.0283824,0.0283824,0.0283824,0.0283824,0.0283824,0.0283824,0.0283824,0.0283824
+policy_RE_targets_idn_new,Indonesia,geo-target,subsidy,,ELEC_GEO,0.0572736,0.0572736,0.0572736,0.0572736,0.0572736,0.0572736,0.0572736,0.0572736,0.0572736,0.0572736,0.0572736,0.0572736,0.0572736,0.0572736,0.0572736,0.0572736,0.0572736
+policy_RE_targets_ind_new,India,PV-target,subsidy,,ELEC_PV,0.289696634,0.445687129,,,,,,,,,,,,,,,
+policy_RE_targets_ind_new,India,wind-target,subsidy,,ELEC_WIND,0.213932597,0.329127072,,,,,,,,,,,,,,,
+policy_RE_targets_ind_new,India,biom-target,subsidy,,ELEC_BIO,0.18094315,0.268056,,,,,,,,,,,,,,,
+policy_RE_targets_ind_new,India,rooftop-target,subsidy,,ELEC_ROOFTOP_PV,0.170846733,0.297124752,,,,,,,,,,,,,,,
+policy_RE_targets_kor_new,South Korea,PV-target,subsidy,,ELEC_PV,0.0326239912536443<,0.050938483,0.069252974,,,,,,,,,,,,,,
+policy_RE_targets_kor_new,South Korea,wind-target,subsidy,,ELEC_WIND,,,0.007064064,,,,,,,,,,,,,,
+policy_RE_targets_kor_new,South Korea,biom-target,subsidy,,ELEC_BIO,,,0.00536112,,,,,,,,,,,,,,
+policy_RE_targets_kor_new,South Korea,offshore-target,subsidy,,ELEC_WIND_OFFSHORE,0.00336384,0.00672768,0.01009152,,,,,,,,,,,,,,

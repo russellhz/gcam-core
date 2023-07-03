@@ -10,9 +10,14 @@
 #' a vector of output names, or (if \code{command} is "MAKE") all
 #' the generated outputs: \code{policy_ceilings_floors.xml}.
 module_policy_ceilings_floors_xml <- function(command, ...) {
-  all_xml_names <- union(get_xml_names("policy/A_Policy_Constraints.csv", "policy_ceilings_floors.xml"),
-                         get_xml_names("policy/A_Policy_RES_Coefs.csv", "policy_ceilings_floors.xml"))
+  all_xml_names <- union(get_xml_names("policy/A_energy_constraints.csv", "policy_ceilings_floors.xml"),
+                         get_xml_names("policy/A_renewable_energy_standards.csv", "policy_ceilings_floors.xml"))
   names(all_xml_names) <- rep("XML", length(all_xml_names))
+  for(i in 1:length(all_xml_names)){
+    if (!grepl(".xml", all_xml_names[i])){
+      all_xml_names[i] <- paste0(all_xml_names[i], ".xml")
+    }
+  }
   if(command == driver.DECLARE_INPUTS) {
     return(c("L301.policy_port_stnd",
              "L301.policy_RES_coefs",
