@@ -16,9 +16,12 @@
 module_policy_L3221.CCap <- function(command, ...) {
   if(command == driver.DECLARE_INPUTS) {
     return(c(FILE = "policy/A_CCap_Constraint",
-             FILE = "policy/A_CCap_Sector",
-             FILE = "policy/A_CCap_Resource",
-             FILE = "policy/A_CTax_Link",
+             FILE = "policy/mappings/policy_sector_mappings",
+             FILE = "policy/mappings/policy_tranSubsector_mappings",
+             FILE = "policy/mappings/policy_resource_mappings",
+             FILE = "policy/mappings/ghg_link",
+             FILE = "policy/GCAM_results/CO2ByTech",
+             FILE = "policy/mappings/market_region_mappings",
              "L210.ResTechCoef",
              "L221.StubTech_en",
              "L222.StubTech_en",
@@ -34,8 +37,7 @@ module_policy_L3221.CCap <- function(command, ...) {
              "L2326.StubTech_aluminum",
              "L244.StubTech_bld",
              "L254.StubTranTech",
-             "L201.GDP_Scen",
-             FILE = "policy/A_CO2ByTech"
+             "L201.GDP_Scen"
              ))
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(c("L3221.CCap_constraint",
@@ -50,9 +52,15 @@ module_policy_L3221.CCap <- function(command, ...) {
 
     # Load required inputs
     A_CCap_Constraint <- get_data(all_data, "policy/A_CCap_Constraint")
-    A_CCap_Sector <- get_data(all_data, "policy/A_CCap_Sector")
-    A_CCap_Resource <- get_data(all_data, "policy/A_CCap_Resource")
-    A_CTax_Link <- get_data(all_data, "policy/A_CTax_Link")
+    policy_sector_mappings <- get_data(all_data, "policy/mappings/policy_sector_mappings")
+    policy_tranSubsector_mappings <- get_data(all_data, "policy/mappings/policy_tranSubsector_mappings")
+    policy_resource_mappings <- get_data(all_data, "policy/mappings/policy_resource_mappings")
+    policy_mappings <- bind_rows(policy_sector_mappings,
+                                 policy_tranSubsector_mappings,
+                                 policy_resource_mappings)
+    market_region_mappings <- get_data(all_data, "policy/mappings/market_region_mappings")
+    ghg_link <- get_data(all_data, "policy/mappings/ghg_link")
+
 
     L3221.StubTech_All <- bind_rows(get_data(all_data, "L221.StubTech_en"),
                                     get_data(all_data, "L222.StubTech_en"),
@@ -75,39 +83,43 @@ module_policy_L3221.CCap <- function(command, ...) {
       distinct(region, resource, reserve.subresource, resource.reserve.technology)
 
     L201.GDP_Scen <- get_data(all_data, "L201.GDP_Scen")
-    A_CO2ByTech <- get_data(all_data, "policy/A_CO2ByTech") %>%
+    CO2byTech <- get_data(all_data, "policy/GCAM_results/CO2ByTech") %>%
       gather_years()
 
     # 1. Write constraint to correct regions
     # When a constraint applies to more than one region, we don't need to write the
     # constraint to all regions, can just pass the ghg policy forward to the "linked" regions
+
     L3221.CCap_constraint <- A_CCap_Constraint %>%
       gather_years() %>%
       # Assumes that linked regions have no constraint listed
       filter(!is.na(value)) %>%
-      rename(constraint.year = year, constraint = value)
+      rename(constraint.year = year, constraint = value) %>%
+      left_join_keep_first_only(market_region_mappings, by = "market") %>%
+      mutate(region = if_else(!is.na(region), region, market))
 
-    L3221.CCap_link_regions <- A_CCap_Constraint %>%
-      gather_years() %>%
-      group_by(region, market, ghgpolicy) %>%
-      # Assumes that linked regions have no constraint listed
-      filter(all(is.na(value))) %>%
-      ungroup %>%
-      distinct(xml, region, market, ghgpolicy)
+    L3221.CCap_link_regions <- L3221.CCap_constraint %>%
+      # first filter to needed markets
+      semi_join(market_region_mappings, by = "market") %>%
+      # then add in all regions
+      left_join(market_region_mappings, by = "market") %>%
+      # filter out region where constraint is held
+      filter(region.x != region.y) %>%
+      distinct(xml, region = region.y, market, ghgpolicy, mapping.name)
 
     # 2. Add custom CO2 market to stub technologies
     # Note that we remove all biomass technologies since they shouldn't contribute to
     # CO2 constraints in most cases
     # For technologies, we need all regions
-    tech_all_regions <- A_CCap_Constraint %>%
-      distinct(market, region, ghgpolicy)
+    tech_all_regions <- bind_rows(L3221.CCap_constraint, L3221.CCap_link_regions)  %>%
+      distinct(market, region, ghgpolicy, mapping.name)
 
     # Need to add all techs for the given regions/sectors
     # First for non-transport techs, then for transport techs, then for resources
-    L3221.CCap_tech <- A_CCap_Sector %>%
-      filter(is.na(tranSubsector)) %>%
-      select(-tranSubsector) %>%
-      left_join(tech_all_regions, by = c("market", "ghgpolicy")) %>%
+    L3221.CCap_tech <- policy_mappings %>%
+      filter(is.na(tranSubsector), is.na(resource)) %>%
+      select(mapping.name, supplysector) %>%
+      left_join(tech_all_regions, by = c("mapping.name")) %>%
       left_join(L3221.StubTech_All, by = c("supplysector", "region")) %>%
       # Remove bio techs
       filter(!grepl("bio", subsector, ignore.case = T),
