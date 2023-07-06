@@ -29,9 +29,9 @@ module_energy_L113.atb_cost <- function(command, ...) {
              FILE = "energy/Muratori_globaltech_capital_low",
              FILE = "energy/Muratori_globaltech_OMfixed",
              FILE = "energy/Muratori_globaltech_OMvar",
-             FILE = "energy/NREL_ATB_capital_EU",
-             FILE = "energy/NREL_ATB_OMfixed_EU",
-             FILE = "energy/NREL_ATB_OMvar_EU",
+             FILE = "energy/NREL_ATB_capital",
+             FILE = "energy/NREL_ATB_OMfixed",
+             FILE = "energy/NREL_ATB_OMvar",
              FILE = "energy/mappings/atb_gcam_mapping"))
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(c("L113.globaltech_capital_ATB",
@@ -71,11 +71,11 @@ module_energy_L113.atb_cost <- function(command, ...) {
     Muratori_globaltech_OMvar <- get_data(all_data, "energy/Muratori_globaltech_OMvar")
 
     # NREL files
-    NREL_ATB_capital <- get_data(all_data, "energy/NREL_ATB_capital_EU") %>%
+    NREL_ATB_capital <- get_data(all_data, "energy/NREL_ATB_capital") %>%
       gather_years()
-    NREL_ATB_OMfixed <- get_data(all_data, "energy/NREL_ATB_OMfixed_EU") %>%
+    NREL_ATB_OMfixed <- get_data(all_data, "energy/NREL_ATB_OMfixed") %>%
       gather_years()
-    NREL_ATB_OMvar <- get_data(all_data, "energy/NREL_ATB_OMvar_EU") %>%
+    NREL_ATB_OMvar <- get_data(all_data, "energy/NREL_ATB_OMvar") %>%
       gather_years()
 
     # Mapping
