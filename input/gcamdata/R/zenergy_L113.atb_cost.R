@@ -32,7 +32,9 @@ module_energy_L113.atb_cost <- function(command, ...) {
              FILE = "energy/NREL_ATB_capital",
              FILE = "energy/NREL_ATB_OMfixed",
              FILE = "energy/NREL_ATB_OMvar",
-             FILE = "energy/mappings/atb_gcam_mapping"))
+             FILE = "energy/mappings/atb_gcam_mapping",
+             FILE = "energy/EURef2020_elec_params",
+             FILE = "energy/mappings/EURef2020_elec_gcam_mapping"))
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(c("L113.globaltech_capital_ATB",
              "L113.globaltech_capital_ATB_adv",
@@ -71,23 +73,69 @@ module_energy_L113.atb_cost <- function(command, ...) {
     Muratori_globaltech_OMvar <- get_data(all_data, "energy/Muratori_globaltech_OMvar")
 
     # NREL files
-    NREL_ATB_capital <- get_data(all_data, "energy/NREL_ATB_capital") %>%
-      gather_years()
-    NREL_ATB_OMfixed <- get_data(all_data, "energy/NREL_ATB_OMfixed") %>%
-      gather_years()
-    NREL_ATB_OMvar <- get_data(all_data, "energy/NREL_ATB_OMvar") %>%
-      gather_years()
+      NREL_ATB_capital <- get_data(all_data, "energy/NREL_ATB_capital") %>%
+        gather_years()
+      NREL_ATB_OMfixed <- get_data(all_data, "energy/NREL_ATB_OMfixed") %>%
+        gather_years()
+      NREL_ATB_OMvar <- get_data(all_data, "energy/NREL_ATB_OMvar") %>%
+        gather_years()
+      # Mapping
+      atb_gcam_mapping <- get_data(all_data, "energy/mappings/atb_gcam_mapping") %>%
+        select(-inferred)
 
-    # Mapping
-    atb_gcam_mapping <- get_data(all_data, "energy/mappings/atb_gcam_mapping") %>%
-      select(-inferred)
+    if (energy.ELEC_COST_SOURCE == "EUREF"){
+      # If using EUREF, we need to fill in 2015 costs using ATB, so still need to run much of the code with ATB
+      EURef_costs <- get_data(all_data, "energy/EURef2020_elec_params") %>%
+        filter(Units == "EUR/kW") %>%
+        gather_years() %>%
+        mutate(value = value * CONV_EURO_USD_2015,
+               Units = "2015USD/kW",
+               case = "central",
+               tech_detail = tech_type,
+               input = case_when(
+                 grepl("Overnight", variable) ~ "capital",
+                 grepl("Fixed", variable) ~ "OM-fixed",
+                 grepl("Variable", variable) ~ "OM-var"
+               ))
+
+      EUREF_years <- unique(EURef_costs$year)
+
+      # Taking battery costs from NREL
+      capital_battery <- NREL_ATB_capital %>%
+        filter(grepl("Battery", tech_detail),
+               year %in% EUREF_years)
+      OMfixed_battery <- NREL_ATB_OMfixed %>%
+        filter(grepl("Battery", tech_detail),
+               year %in% EUREF_years)
+      OMvar_battery <- NREL_ATB_OMvar %>%
+        filter(grepl("Battery", tech_detail),
+               year %in% EUREF_years)
+
+      EURef_costs <- EURef_costs %>%
+        bind_rows(capital_battery,
+                  OMfixed_battery,
+                  OMvar_battery) %>%
+        filter(case == "central") %>%
+        mutate(tech_detail = gsub(" - Mid", "", tech_detail),
+               tech_detail = gsub(" - Low", "", tech_detail),
+               tech_detail = gsub(" - High", "", tech_detail))
+
+      # Mapping
+      EURef_tech_mapping <- get_data(all_data, "energy/mappings/EURef2020_elec_gcam_mapping") %>%
+        select(-inferred) %>%
+        mutate(tech_detail = tech_type,
+               tech_type = if_else(tech_type == "Battery Storage", "Storage", tech_type))
+    }
+
+
+
 
     # ===================================================
 
     # Pre-process data so capital & OM costs can be processed together
     # Start with NREL cost data
     # For capital costs, we want central, advanced tech (low cost), and low tech (high / constant cost) scenarios
-    NREL_ATB_capital %>%
+      NREL_ATB_capital %>%
       # For O&M costs, we want central scenario only
       bind_rows(NREL_ATB_OMfixed %>%
                   filter(case == energy.COSTS_MID_CASE),
@@ -149,19 +197,19 @@ module_energy_L113.atb_cost <- function(command, ...) {
     # Isolate technologies which require a shadow technology to infer costs from ATB data set.
     atb_gcam_mapping %>%
       filter(!is.na(shadow_tech)) %>%
-      select(technology, shadow_tech) -> atb_gcam_mapping_ratios
+      select(technology, shadow_tech) -> gcam_tech_mapping_ratios
 
     # Build a list of costs for shadow techologies
     GCAM_legacy_cost_assumptions %>%
       # filter for technologies that are considered shadow techs
-      semi_join(atb_gcam_mapping_ratios, by = c("technology" = "shadow_tech")) %>%
+      semi_join(gcam_tech_mapping_ratios, by = c("technology" = "shadow_tech")) %>%
       select(shadow_tech = technology, year, shadow_tech_cost = value, input, case)  -> L113.cost_shadow
 
     # Calculate cost ratios for technologies which require a shadow tech to infer costs from ATB data
     GCAM_legacy_cost_assumptions %>%
       # filter for technologies which need a shadow tech to calculate a cost ratio
-      semi_join(atb_gcam_mapping_ratios, by = "technology") %>%
-      left_join_error_no_match(atb_gcam_mapping_ratios, by = "technology") %>%
+      semi_join(gcam_tech_mapping_ratios, by = "technology") %>%
+      left_join_error_no_match(gcam_tech_mapping_ratios, by = "technology") %>%
       left_join_error_no_match(L113.cost_shadow, by = c("shadow_tech", "year", "input", "case")) %>%
       mutate(cost_ratio = value / shadow_tech_cost) %>%
       # technologies with cost = 0 for tech & shadow tech (e.g. CSP OM-var) return NAN... reset to cost_ratio = 1
@@ -176,8 +224,10 @@ module_energy_L113.atb_cost <- function(command, ...) {
     NREL_ATB_cost_assumptions %>%
       # isolate technologies which map to GCAM technologies
       semi_join(atb_gcam_mapping, by = c("tech_type", "tech_detail")) %>%
-      # Convert to 1975$.  2015-2016 costs are in 2015$; 2017-2050 costs are in 2017$.
-      mutate(value = if_else(year %in% energy.ATB_2017_YEARS, value * gdp_deflator(1975, 2015), value * gdp_deflator(1975, 2017))) %>%
+      # Convert to 1975$.  2015-2016 costs are in 2015$; 2017-2050 costs are in 2017$. for ATB
+      # For EUREF, costs are all 2015$
+      mutate(value = if_else(year %in% energy.ATB_2017_YEARS,
+                             value * gdp_deflator(1975, 2015), value * gdp_deflator(1975, 2017))) %>%
       # some techs, like battery, don't have costs back to 2015
       # use approx_fun rule 2 to carry nearest year values backwards
       group_by(tech_type, tech_detail, input, case) %>%
@@ -195,8 +245,84 @@ module_energy_L113.atb_cost <- function(command, ...) {
       summarise(value = sum(value)) %>%
       ungroup() -> L113.costs_ATB
 
+    # Setting this here - will be overwritten with EUREF data if energy.ELEC_COST_SOURCE == "EUREF"
+    L113.costs_new <- L113.costs_ATB
+
+    if (energy.ELEC_COST_SOURCE == "EUREF"){
+      # rate of change in ATB from 2015 to 2020
+      ATB_2015_2020 <- L113.costs_ATB %>%
+        na.omit() %>%
+        filter(case == energy.COSTS_MID_CASE) %>%
+        group_by(technology, input) %>%
+        # leaving years hard-coded since this is very specific to this data set
+        # but may want to make more flexible in future
+        summarise(prop_2015_2020 = value[year == 2015] / value[year == 2020]) %>%
+        ungroup %>%
+        mutate(prop_2015_2020 = if_else(is.nan(prop_2015_2020), 1, prop_2015_2020))
+
+      # Now get missing costs and fill in 2015 values
+      # Isolate technologies which require a shadow technology to infer costs from ATB data set.
+      EURef_tech_mapping %>%
+        filter(!is.na(shadow_tech)) %>%
+        select(technology, shadow_tech) -> gcam_tech_mapping_ratios
+
+      # Build a list of costs for shadow techologies
+      GCAM_legacy_cost_assumptions %>%
+        # filter for technologies that are considered shadow techs
+        semi_join(gcam_tech_mapping_ratios, by = c("technology" = "shadow_tech")) %>%
+        select(shadow_tech = technology, year, shadow_tech_cost = value, input, case)  -> L113.cost_shadow
+
+      # Calculate cost ratios for technologies which require a shadow tech to infer costs from ATB data
+      GCAM_legacy_cost_assumptions %>%
+        # filter for technologies which need a shadow tech to calculate a cost ratio
+        semi_join(gcam_tech_mapping_ratios, by = "technology") %>%
+        left_join_error_no_match(gcam_tech_mapping_ratios, by = "technology") %>%
+        left_join_error_no_match(L113.cost_shadow, by = c("shadow_tech", "year", "input", "case")) %>%
+        mutate(cost_ratio = value / shadow_tech_cost) %>%
+        # technologies with cost = 0 for tech & shadow tech (e.g. CSP OM-var) return NAN... reset to cost_ratio = 1
+        mutate(cost_ratio = if_else(is.nan(cost_ratio), 1, cost_ratio)) %>%
+        select(technology, year, cost_ratio, input, case) %>%
+        # fill out for all ATB years
+        complete(nesting(technology, input, case), year = c(EUREF_years)) %>%
+        group_by(technology, input, case) %>%
+        mutate(cost_ratio = approx_fun(year, cost_ratio)) %>%
+        ungroup() -> L113.cost_shadow_ratio
+
+      EURef_costs %>%
+        # isolate technologies which map to GCAM technologies
+        semi_join(EURef_tech_mapping, by = c("tech_type", "tech_detail")) %>%
+        # For EUREF, costs are all 2015$
+        mutate(value = value * gdp_deflator(1975, 2015)) %>%
+        # some techs, like battery, don't have costs back to 2015
+        # use approx_fun rule 2 to carry nearest year values backwards
+        group_by(tech_type, tech_detail, input, case) %>%
+        mutate(value = approx_fun(year, value, rule = 2)) %>%
+        ungroup %>%
+        # join is intended to duplicate rows - some GCAM tech costs are composites of multiple ATB techs
+        # LJENM throws an error, left_join is used
+        left_join(EURef_tech_mapping, by = c("tech_type", "tech_detail")) %>%
+        # not every technology requires a shadow technology to compute costs from the ATB data set
+        # LJENM errors because of NAs (not all techs are in RHS), NAs are dealt with below, left_join is used
+        left_join(L113.cost_shadow_ratio, by = c("technology", "year", "input", "case")) %>%
+        mutate(conversion = if_else(is.na(conversion), cost_ratio, conversion),
+               value = value * conversion) %>%
+        group_by(technology, year, input, case) %>%
+        summarise(value = sum(value)) %>%
+        ungroup() -> L113.costs_EUREF_future
+
+      L113.costs_EUREF_2015 <- L113.costs_EUREF_future %>%
+        filter(year == 2020) %>%
+        left_join_error_no_match(ATB_2015_2020, by = c("technology", "input")) %>%
+        mutate(year = 2015,
+               value = value * prop_2015_2020) %>%
+        select(-prop_2015_2020)
+
+      L113.costs_new <- bind_rows(L113.costs_EUREF_2015, L113.costs_EUREF_future)
+
+    }
+
     # Calculate the improvement rate from 2015 to 2035 and from 2035 to 2050
-    L113.costs_ATB %>%
+    L113.costs_new %>%
       group_by(technology, input, case) %>%
       # calculate simple near term and mid term annual improvement rates as % reduction / # years
       mutate(initial_ATB_cost = value[year==energy.ATB_BASE_YEAR],
@@ -221,7 +347,7 @@ module_energy_L113.atb_cost <- function(command, ...) {
       # for technologies where costs increase (very marginal increases), reset this
       mutate(target_ATB_cost = if_else(target_ATB_cost > initial_ATB_cost, initial_ATB_cost, target_ATB_cost),
              improvement.max = if_else(improvement.max > 1, 1, improvement.max),
-             improvement.rate.base = if_else(improvement.rate.base < 0, 0, improvement.rate.base)) -> L113.costs_ATB_params
+             improvement.rate.base = if_else(improvement.rate.base < 0, 0, improvement.rate.base)) -> L113.costs_params
 
     # Setting up a functional form that replicates the function structure of cost generation. This has the following main components:
     # initial_ATB_cost: the base (2015) ATB value
@@ -233,7 +359,7 @@ module_energy_L113.atb_cost <- function(command, ...) {
     # Create a function for all technologies to determine the improvement rate that will
     # yield the desired capital cost (target_ATB_cost) in energy.ATB_TARGET_YEAR (default = 2035)
     calc_improvement_rate <- function(improvement.rate, tech, component, level) {
-      L113.costs_ATB_params %>%
+      L113.costs_params %>%
         filter(technology == tech,
                input == component,
                case == level) %>%
@@ -245,8 +371,8 @@ module_energy_L113.atb_cost <- function(command, ...) {
 
     # Loop the function for all technologies / input costs (component) / cases (level),
     # using uniroot to ensure that the correct improvement rate is found and entered in the main table
-    for (rn in rownames(L113.costs_ATB_params)) {
-      L113.costs_ATB_params %>%
+    for (rn in rownames(L113.costs_params)) {
+      L113.costs_params %>%
         filter(row_number() == rn) -> L113.TEMP
 
       tech <- L113.TEMP$technology
@@ -255,19 +381,19 @@ module_energy_L113.atb_cost <- function(command, ...) {
 
       solved.improvement.rate <- uniroot(calc_improvement_rate, c(0, 1), tech, component, level)
 
-      L113.costs_ATB_params %>%
+      L113.costs_params %>%
         mutate(improvement.rate.base = replace(improvement.rate.base,
                                                technology == tech & input == component & case == level,
-                                               solved.improvement.rate$root)) -> L113.costs_ATB_params
+                                               solved.improvement.rate$root)) -> L113.costs_params
 
     }
 
     # Clean up the ATB table in order to properly merge with the old globaltech_capital table.
-    L113.costs_ATB_params %>%
+    L113.costs_params %>%
       select(technology, input, case, value = initial_ATB_cost, improvement.max, improvement.rate = improvement.rate.base) %>%
       mutate(year = energy.ATB_BASE_YEAR,
              improvement.max = round(improvement.max, energy.DIGITS_CAPACITY_FACTOR),
-             improvement.rate = round(improvement.rate, energy.DIGITS_CAPACITY_FACTOR)) -> L113.globaltech_cost_atb
+             improvement.rate = round(improvement.rate, energy.DIGITS_CAPACITY_FACTOR)) -> L113.globaltech_cost_pre
 
     # Extract technologies from the original A23 file that have a valid 2015 data (i.e. not NAs).
     # These technologies will take priority over ATB technologies if there's a conflict.
@@ -288,27 +414,30 @@ module_energy_L113.atb_cost <- function(command, ...) {
                   mutate(case = energy.COSTS_MID_CASE)) %>%
       gather_years() -> A23.globaltech_cost
 
-    A23.globaltech_cost %>%
-      group_by(technology, input, case) %>%
-      filter(!is.na(value[year==energy.ATB_BASE_YEAR])) %>%
-      ungroup() -> A23.globaltech_cost_keep
+      A23.globaltech_cost %>%
+        group_by(technology, input, case) %>%
+        filter(!is.na(value[year==energy.ATB_BASE_YEAR])) %>%
+        ungroup() -> A23.globaltech_cost_keep
+
+
 
     # Filter out capital cost data from ATB if already present in A23.globaltech_capital_keep.
     # We also filter out battery technology because that will only be used in GCAM-USA.
-    L113.globaltech_cost_atb %>%
-      anti_join(A23.globaltech_cost_keep, by = c("technology", "input", "case")) -> L113.globaltech_cost_atb_temp
+    L113.globaltech_cost_pre %>%
+      anti_join(A23.globaltech_cost_keep, by = c("technology", "input", "case")) -> L113.globaltech_cost_temp
 
     # Merge ATB data with the original globaltech_capital file. Populate historical years with 2015 ATB data.
     # Proprerly format the column order and row order.
     A23.globaltech_cost %>%
       gather_years() %>%
-      filter(year==energy.ATB_BASE_YEAR) %>%
+      filter(year==energy.ATB_BASE_YEAR,
+             case %in% L113.globaltech_cost_temp$case) %>%
       group_by(technology, input, case) %>%
       # get rid of values that will be overridden by user defined values in A23 files
       filter(is.na(value[year==energy.ATB_BASE_YEAR])) %>%
       ungroup() %>%
       select(-year, -value, -improvement.max, -improvement.rate) %>%
-      left_join_error_no_match(L113.globaltech_cost_atb_temp, by = c("technology", "input", "case")) %>%
+      left_join_error_no_match(L113.globaltech_cost_temp, by = c("technology", "input", "case")) %>%
       # add in user defined values from A23 files
       bind_rows(A23.globaltech_cost_keep) %>%
       # fill out for all years in original A23. file
@@ -358,7 +487,7 @@ module_energy_L113.atb_cost <- function(command, ...) {
       select(-case) -> L113.globaltech_OMvar_ATB
 
     # Filter out battery technology data
-    L113.globaltech_cost_atb %>%
+    L113.globaltech_cost_pre %>%
       filter(technology == gcamusa.STORAGE_TECH,
              input %in% c(energy.CAPITAL_INPUT, energy.OM_FIXED_INPUT, energy.OM_VAR_INPUT),
              case == energy.COSTS_MID_CASE) %>%
