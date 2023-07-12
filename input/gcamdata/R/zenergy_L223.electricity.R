@@ -61,6 +61,9 @@ module_energy_L223.electricity <- function(command, ...) {
              FILE = "energy/A23.globaltech_co2capture",
              FILE = "water/EFW_mapping",
              FILE = "energy/A23.globaltech_eff",
+             FILE = "energy/EURef2020_elec_params",
+             FILE = "energy/mappings/EURef2020_elec_gcam_mapping",
+             "L126.IO_R_elecownuse_F_Yh",
              "L113.globaltech_capital_ATB",
              "L113.globaltech_capital_ATB_adv",
              "L113.globaltech_capital_ATB_low",
@@ -350,6 +353,48 @@ module_energy_L223.electricity <- function(command, ...) {
 
     # Extrapolate efficiency values to all model years and round to appropriate number of digits
     ### A23.globaltech_eff ASSUMPTION FILE HAS TWO ADDITIONAL ROWS IN OLD DATA SYSTEM (backup electricity for CSP and PV)
+    if (energy.ELEC_COST_SOURCE == "EUREF"){
+      # Want to overwrite GCAM assumptions with EU Reference scenario assumptions
+      EURef2020_elec_gcam_mapping <- get_data(all_data, "energy/mappings/EURef2020_elec_gcam_mapping") %>%
+        filter(tech_type != "Battery Storage")
+
+      # Interpolate for all GCAM years (within EU REF data range)
+      EURef2020_eff <- get_data(all_data, "energy/EURef2020_elec_params") %>%
+        filter(grepl("Efficiency", variable)) %>%
+        gather_years() %>%
+        # Interpolate for all years between 2020 and 2050 (data is every 10 years, not 5 years)
+        complete(nesting(tech_type, variable, Units),
+                 year = seq(min(year), max(year), 5)) %>%
+        group_by(tech_type, variable, Units) %>%
+        mutate(value = approx_fun(year, value)) %>%
+        ungroup
+
+      # Map techs to GCAM and add to A23.globaltech_eff
+      L223.GlobalTechEff_EUREF <- A23.globaltech_eff %>%
+        # Only repeated tech is for rooftop_pv and efficiency is just 1, so can use keep_first_only
+        left_join_keep_first_only(EURef2020_elec_gcam_mapping, by = "technology") %>%
+        filter(minicam.energy.input != "backup_electricity",
+               # don't want any techs that don't actually have values in EUREF
+               # we'll just use values from A23.globaltech_eff for those techs
+               is.na(shadow_tech),
+               technology != "Gen_II_LWR",
+               !grepl("_storage", technology)) %>%
+        select(supplysector, subsector, technology, minicam.energy.input, tech_type) %>%
+        left_join(EURef2020_eff, by = "tech_type") %>%
+        tidyr::pivot_wider(names_from = year) %>%
+        select(-tech_type, -variable, -Units)
+
+      year_cols <- names(L223.GlobalTechEff_EUREF)
+
+      A23.globaltech_eff <- A23.globaltech_eff %>%
+        left_join(L223.GlobalTechEff_EUREF,
+                  by = c("supplysector", "subsector", "technology", "minicam.energy.input")) %>%
+        dplyr::relocate(year_cols[grepl("^[0-9]", year_cols)], .before = `2100`) %>%
+        # if there is a value for 2050, we don't want to use the GCAM 2100 assumption
+        # hard-coded
+        mutate(`2100` = if_else(is.na(`2050`), `2100`, `2050`))
+      }
+
     A23.globaltech_eff %>%
       fill_exp_decay_extrapolate(MODEL_YEARS) %>%
       rename(sector.name = supplysector, subsector.name = subsector, efficiency = value) %>%
@@ -667,6 +712,40 @@ module_energy_L223.electricity <- function(command, ...) {
     # This section checks L223.globaltech_retirement for each of these functions and creates a subset for each option then removes any subsets with 0 rows
     # All of these options have different headers, and all are allowed.
     # Also, technologies that have an additional shutdown rate as a function of their profitability are also defined.
+
+    if (energy.ELEC_COST_SOURCE == "EUREF"){
+      # Want to overwrite GCAM assumptions with EU Reference scenario assumptions
+      EURef2020_elec_gcam_mapping <- get_data(all_data, "energy/mappings/EURef2020_elec_gcam_mapping") %>%
+        # Need to overwrite techs for wind_storage and PV_storage so that they have same lifetime as wind and PV
+        mutate(tech_type = case_when(
+          technology == "wind_storage" ~ "Wind onshore - medium resource area, medium height",
+          technology == "PV_storage" ~ "Solar PV - utility-scale - medium resource area",
+          TRUE   ~ tech_type
+        ))
+
+      EURef2020_retirement <- get_data(all_data, "energy/EURef2020_elec_params") %>%
+        filter(grepl("lifetime", variable)) %>%
+        gather_years() %>%
+        select(tech_type, variable, lifetime = value) %>%
+        distinct()
+
+      # Map techs to GCAM and add to A23.globaltech_retirement
+      L223.globaltech_retirement_EUREF <- A23.globaltech_retirement %>%
+        filter(technology != "Gen_II_LWR") %>%
+        left_join(EURef2020_elec_gcam_mapping, by = "technology") %>%
+        select(supplysector, subsector, technology, year, tech_type) %>%
+        left_join_error_no_match(EURef2020_retirement, by = "tech_type") %>%
+        select(-tech_type, -variable)
+
+      A23.globaltech_retirement <- A23.globaltech_retirement %>%
+        left_join(L223.globaltech_retirement_EUREF,
+                  by = c("supplysector", "subsector", "technology", "year")) %>%
+        # replace lifetimes where present and half.lives with half of lifetimes
+        mutate(lifetime.x = as.double(lifetime.x),
+               lifetime = if_else(!is.na(lifetime.y), lifetime.y, lifetime.x),
+               half.life = if_else(!is.na(half.life), lifetime / 2, half.life) ) %>%
+        select(-lifetime.x, -lifetime.y)
+    }
 
     # Replace years and prepare assumptions into correct format
     A23.globaltech_retirement %>%
