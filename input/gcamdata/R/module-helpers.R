@@ -594,6 +594,141 @@ fill_exp_decay_extrapolate <- function(d, out_years) {
     filter(year %in% out_years)
 }
 
+#' fill_exp_decay_extrapolate_region
+#'
+#' Takes a wide format tibble with years as columns, coverts to long format, and
+#' ensures values are filled in for all \code{out_years} using the following rules:
+#'   - Linearly interpolated for missing values that have end points
+#'   - Extrapolated using an exponential decay function paramaterized by the columns
+#'     \code{improvement.rate} and \code{improvement.max} using the following formulation
+#'     \code{v_0*max+(v_0-v_0*max)*(1-rate)^(y-y_0)}
+#'   - For rows that specify a char value in the column \code{improvement.shadow.technology}
+#'     exponential decay will be calculated on the difference between the values calculated
+#'     by left joining with itself on the column \code{improvement.shadow.technology} with
+#'     the column \code{technology}.  In other words for shadowing technologies the decay is
+#'     only applied to the difference in the values in the last year in which one was
+#'     specified. This is to allow for instance a Gas CC plant to have cost reductions at a
+#'     moderate pace but a Gas CC+CCS can have rapid cost reductions to the CCS portion of
+#'     the cost.
+#'
+#' @param d The wide format tibble with values under year columns that will be filled
+#' to ensure the given years are present using the rules mentioned above.
+#' @param out_years A vector of integers specifying which years must have values in the
+#' output data.
+#' @return The filled out data set in long format.  The years will be in the \code{year}
+#' column and will include all values in \code{out_years} and the filled in values will
+#' be in the \code{value} column.  All extrapolation parameters will be cleaned out.
+#' @importFrom tibble has_name
+#' @importFrom dplyr bind_rows filter mutate rename select ungroup
+#' @importFrom tidyr complete
+#' @importFrom assertthat assert_that
+#' @author Pralit Patel
+fill_exp_decay_extrapolate_region <- function(d, out_years) {
+  . <- value <- year <- improvement.rate <- improvement.max <-
+    improvement.shadow.technology <- technology <- year_base <-
+    value_base <- shadow.value <- NULL  # silence package check notes
+
+  # Some error checking first
+  assert_that(has_name(d, "improvement.rate"))
+  assert_that(has_name(d, "improvement.max"))
+  # either improvement.rate/max are both NA or neither are
+  assert_that(all(is.na(d$improvement.rate) == is.na(d$improvement.max)))
+
+  # Note we want to allow use of the improvement.shadow.technology feature to be
+  # optional so we will check if they have not provided the column and fill NAs
+  # if not to avoid error
+  if(!has_name(d, "improvement.shadow.technology")) {
+    d %>%
+      mutate(improvement.shadow.technology = as.character(NA)) ->
+      d
+  }
+
+  # The first step is to linearly interpolate missing values that are in between
+  # values which are specified (approx_fun rule=1)
+  d <- gather_years(d)
+
+  d %>%
+    # We just need to "complete" the years to include all years in d and out_years.
+    # However, finding a way to programmatically select columns for use in nest/nesting
+    # that is compatible across versions of tidyr is impossible.
+    # Instead we replicate the underlying steps of complete: expand, then left_join
+    # so we can directly use the basic dplyr/tidyr functions which have more
+    # reliable column select behavior.
+    select(-year, -value) %>%
+    distinct() %>%
+    repeat_add_columns(tibble(year=c(unique(c(d$year, out_years))))) %>%
+    left_join(d, by=names(.)) %>%
+    # for the purposes of interpolating (and later extrapolating) we would like
+    # to just group by everything except year and value
+    dplyr::group_by_at(dplyr::vars(-year, -value)) %>%
+    # we must also arrange for consistency with the old complete behavior
+    arrange(year, .by_group = TRUE) %>%
+    # finally do the linearly interpolation between values which are specified
+    mutate(value = approx_fun(year, value, rule = 1)) ->
+    d
+
+  # Rows in which improvement.max/rate is not specified should not be extrapolated,
+  # so split those out for now
+  d %>%
+    filter(is.na(improvement.max) | is.na(improvement.rate)) ->
+    d_no_extrap
+
+  d %>%
+    dplyr::setdiff(d_no_extrap) ->
+    d_extrap
+
+  # First partition the technologies that are not "shadowing" another technology
+  # and apply the exponential decay extrapolation to them
+  d_extrap %>%
+    filter(is.na(improvement.shadow.technology)) %>%
+    # figure out the last specified year from which we will be extrapolating
+    # (adding a -Inf in case there are no extrapolation years, to avoid a warning)
+    mutate(year_base = max(c(-Inf, year[!is.na(value)]))) %>%
+    # fill out the last specified value from which we will be extrapolating
+    mutate(value_base = value[year == year_base]) %>%
+    # calculate the exponential decay to extrapolate a new value from the last
+    # specified value
+    mutate(value = if_else(is.na(value),
+                           value_base * improvement.max + (value_base - value_base * improvement.max) *
+                             (1.0 - improvement.rate ) ^ (year - year_base),
+                           value)) %>%
+    select(-year_base, -value_base) %>%
+    ungroup() ->
+    d_nonshadowed
+
+  # Now we can calculate the exponential decay extrapolation for technologies that
+  # were shadowing another
+  d_nonshadowed %>%
+    # Merge the "shadow" technologies onto those that specified one in the "improvement.shadow.technology"
+    select(technology, region, year, value) %>%
+    rename(shadow.value = value) %>%
+    left_join_error_no_match(d_extrap %>% filter(!is.na(improvement.shadow.technology)), .,
+                             by = c("improvement.shadow.technology" = "technology", "year" = "year", "region")) %>%
+    # figure out the last specified year from which we will be extrapolating
+    # (adding a -Inf in case there are no extrapolation years, to avoid a warning)
+    mutate(year_base = max(c(-Inf, year[!is.na(value)])),
+           # for shadowing technologies the decay is only applied to the difference
+           # in the values in the last year in which one was specified
+           # this is to allow for instance a Gas CC plant to have cost reductions at
+           # a moderate pace but a Gas CC+CCS can have rapid cost reductions to
+           # the CCS portion of the cost
+           value_base = value - shadow.value,
+           value_base = value_base[year == year_base],
+           value = if_else(is.na(value),
+                           shadow.value +
+                             value_base * improvement.max + (value_base - value_base * improvement.max ) *
+                             (1.0 - improvement.rate) ^ (year - year_base),
+                           value)) %>%
+    # drop the extra columns created for the shadow / exp decay calculation
+    select(names(d_nonshadowed)) %>%
+    ungroup() ->
+    d_shadowed
+
+  # Pull all the data together and drop extrapolation parameters.
+  bind_rows(ungroup(d_no_extrap), d_nonshadowed, d_shadowed) %>%
+    select(-matches('improvement.')) %>%
+    filter(year %in% out_years)
+}
 
 #' downscale_FAO_country
 #'

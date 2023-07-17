@@ -191,7 +191,7 @@ module_energy_L223.electricity <- function(command, ...) {
     L1231.eff_R_elec_F_tech_Yh <- get_data(all_data, "L1231.eff_R_elec_F_tech_Yh")
     L1232.desalsecout_R_elec_F_tech <- get_data(all_data, "L1232.desalsecout_R_elec_F_tech", strip_attributes = TRUE)
     L102.gdp_mil90usd_GCAM3_ctry_Y <- get_data(all_data, "L102.gdp_mil90usd_GCAM3_ctry_Y")
-
+    L126.IO_R_elecownuse_F_Yh <- get_data(all_data, "L126.IO_R_elecownuse_F_Yh")
     # ============================
     # 2a. Supplysector information
     # ============================
@@ -350,7 +350,7 @@ module_energy_L223.electricity <- function(command, ...) {
 
     # Write energy inputs and coefficients, efficiency, of global electricity generation technologies in L223.GlobalTechEff_elec
     # --------------------------------------------------------------------------------------------------------------------------
-
+    L223.GlobalTechEff <- A23.globaltech_eff
     # Extrapolate efficiency values to all model years and round to appropriate number of digits
     ### A23.globaltech_eff ASSUMPTION FILE HAS TWO ADDITIONAL ROWS IN OLD DATA SYSTEM (backup electricity for CSP and PV)
     if (energy.ELEC_COST_SOURCE == "EUREF"){
@@ -358,19 +358,38 @@ module_energy_L223.electricity <- function(command, ...) {
       EURef2020_elec_gcam_mapping <- get_data(all_data, "energy/mappings/EURef2020_elec_gcam_mapping") %>%
         filter(tech_type != "Battery Storage")
 
+      # Netownuse is by region --- for global techs we are going to assume the EU-15 values
+      NetOwnUse_GCAM_R <- L126.IO_R_elecownuse_F_Yh %>%
+        filter(year == MODEL_FINAL_BASE_YEAR) %>%
+        select(GCAM_region_ID, NetOwnUse_GCAM = value)
+
       # Interpolate for all GCAM years (within EU REF data range)
+      # Also need the self consumption of electricity to add into efficiency
       EURef2020_eff <- get_data(all_data, "energy/EURef2020_elec_params") %>%
-        filter(grepl("Efficiency", variable)) %>%
+        filter(grepl("Efficiency|Self", variable)) %>%
         gather_years() %>%
         # Interpolate for all years between 2020 and 2050 (data is every 10 years, not 5 years)
         complete(nesting(tech_type, variable, Units),
                  year = seq(min(year), max(year), 5)) %>%
         group_by(tech_type, variable, Units) %>%
         mutate(value = approx_fun(year, value)) %>%
-        ungroup
+        ungroup %>%
+        select(-Units) %>%
+        mutate(variable = case_when(
+          grepl("Efficiency", variable) ~ "Efficiency",
+          grepl("Self", variable) ~ "NetOwnUse"
+        )) %>%
+        tidyr::pivot_wider(names_from = variable) %>%
+        tidyr::replace_na(list(NetOwnUse = 0)) %>%
+        repeat_add_columns(NetOwnUse_GCAM_R)  %>%
+        # Remove average netownuse in GCAM from these values
+        # Then multiply efficiency by 1 - NetOwnUse
+        mutate(NetOwnUse = NetOwnUse - (NetOwnUse_GCAM - 1),
+               Efficiency = Efficiency * (1 - NetOwnUse)) %>%
+        select(GCAM_region_ID, tech_type, year, value = Efficiency)
 
       # Map techs to GCAM and add to A23.globaltech_eff
-      L223.GlobalTechEff_EUREF <- A23.globaltech_eff %>%
+      L223.StubTechEff_EUREF <- A23.globaltech_eff %>%
         # Only repeated tech is for rooftop_pv and efficiency is just 1, so can use keep_first_only
         left_join_keep_first_only(EURef2020_elec_gcam_mapping, by = "technology") %>%
         filter(minicam.energy.input != "backup_electricity",
@@ -382,11 +401,18 @@ module_energy_L223.electricity <- function(command, ...) {
         select(supplysector, subsector, technology, minicam.energy.input, tech_type) %>%
         left_join(EURef2020_eff, by = "tech_type") %>%
         tidyr::pivot_wider(names_from = year) %>%
-        select(-tech_type, -variable, -Units)
+        left_join_error_no_match(GCAM_region_names, by = "GCAM_region_ID") %>%
+        select(-tech_type, -GCAM_region_ID) %>%
+        dplyr::relocate(region)
+
+      # for global techs we are going to assume the EU-15 values
+      L223.GlobalTechEff_EUREF <- L223.StubTechEff_EUREF %>%
+        filter(region == "EU-15") %>%
+        select(-region)
 
       year_cols <- names(L223.GlobalTechEff_EUREF)
 
-      A23.globaltech_eff <- A23.globaltech_eff %>%
+      L223.GlobalTechEff <- A23.globaltech_eff %>%
         left_join(L223.GlobalTechEff_EUREF,
                   by = c("supplysector", "subsector", "technology", "minicam.energy.input")) %>%
         dplyr::relocate(year_cols[grepl("^[0-9]", year_cols)], .before = `2100`) %>%
@@ -395,7 +421,7 @@ module_energy_L223.electricity <- function(command, ...) {
         mutate(`2100` = if_else(is.na(`2050`), `2100`, `2050`))
       }
 
-    A23.globaltech_eff %>%
+    L223.GlobalTechEff %>%
       fill_exp_decay_extrapolate(MODEL_YEARS) %>%
       rename(sector.name = supplysector, subsector.name = subsector, efficiency = value) %>%
       mutate(efficiency = round(efficiency, energy.DIGITS_EFFICIENCY)) ->
@@ -1001,6 +1027,38 @@ module_energy_L223.electricity <- function(command, ...) {
       mutate(value = round(value, energy.DIGITS_CALOUTPUT), market.name = region) %>% # old data system rounds to caloutput. should we round to efficiency?
       rename(stub.technology = technology, efficiency = value) ->
       L223.StubTechEff_elec
+
+    if (energy.ELEC_COST_SOURCE == "EUREF"){
+      # Going to add in elec eff for future techs by region
+      L223.StubTechEff_alltech <- A23.globaltech_eff %>%
+        left_join(L223.StubTechEff_EUREF,
+                  by = c("supplysector", "subsector", "technology", "minicam.energy.input"))
+
+      # techs where values are assumed to come from A23.globaltech_eff don't have regions
+      # Add them here
+      L223.StubTechEff_NAtech <- L223.StubTechEff_alltech %>%
+        filter(is.na(region)) %>%
+        select(-region) %>%
+        repeat_add_columns(tibble(region = unique(L223.StubTechEff_alltech$region))) %>%
+        filter(!is.na(region))
+
+      L223.StubTechEff_elec_fut <- L223.StubTechEff_alltech %>%
+        filter(!is.na(region)) %>%
+        bind_rows(L223.StubTechEff_NAtech) %>%
+        dplyr::relocate(year_cols[grepl("^[0-9]", year_cols)], .before = `2100`) %>%
+        # if there is a value for 2050, we don't want to use the GCAM 2100 assumption
+        # hard-coded
+        mutate(`2100` = if_else(is.na(`2050`), `2100`, `2050`))  %>%
+        fill_exp_decay_extrapolate_region(MODEL_YEARS) %>%
+        filter(year %in% MODEL_FUTURE_YEARS) %>%
+        rename(efficiency = value, stub.technology = technology) %>%
+        mutate(efficiency = round(efficiency, energy.DIGITS_EFFICIENCY),
+               market.name = region)
+
+      L223.StubTechEff_elec <- L223.StubTechEff_elec %>%
+        filter(year %in% MODEL_BASE_YEARS) %>%
+        bind_rows(L223.StubTechEff_elec_fut)
+    }
     L223.StubTechEff_elec <- L223.StubTechEff_elec[LEVEL2_DATA_NAMES[["StubTechEff"]]]
 
     # Make regional adjustments to wind capacity factors for L223.StubTechCapFactor_elec
