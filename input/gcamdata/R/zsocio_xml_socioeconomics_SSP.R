@@ -37,7 +37,7 @@ module_socio_SSP_xml <- function(command, ...) {
              XML = "socioeconomics_SSP3.xml",
              XML = "socioeconomics_SSP4.xml",
              XML = "socioeconomics_SSP5.xml",
-             XML = "socioeconomics_GCAM3.xml"))
+             XML = "socioeconomics_GCAM_iam_compact.xml"))
   } else if(command == driver.MAKE) {
 
     all_data <- list(...)[[1]]
@@ -78,14 +78,16 @@ module_socio_SSP_xml <- function(command, ...) {
       }
     }
 
-    # GCAM3 xml
-    create_xml("socioeconomics_GCAM3.xml") %>%
+
+    # GCAM_iam_compact xml
+    create_xml( "socioeconomics_GCAM_iam_compact.xml" ) %>%
       add_xml_data(L201.Pop_GCAM3, "Pop") %>%
       add_xml_data(L201.GDP_GCAM3, "GDP") %>%
       add_xml_data(L201.TotalFactorProductivity_GCAM3, "TotalFactorProductivity") %>%
       add_xml_data(L201.PPPConvert, "PPPConvert") %>%
       add_precursors("L201.Pop_GCAM3", "L201.GDP_GCAM3", "L201.TotalFactorProductivity_GCAM3", "L201.PPPConvert") ->
       socioeconomics_GCAM3.xml
+    assign('socioeconomics_GCAM_iam_compact.xml', socioeconomics_GCAM3.xml)
 
 
     return_data(socioeconomics_gSSP1.xml, socioeconomics_gSSP2.xml,
@@ -93,7 +95,7 @@ module_socio_SSP_xml <- function(command, ...) {
                 socioeconomics_gSSP5.xml, socioeconomics_SSP1.xml,
                 socioeconomics_SSP2.xml, socioeconomics_SSP3.xml,
                 socioeconomics_SSP4.xml, socioeconomics_SSP5.xml,
-                socioeconomics_GCAM3.xml)
+                socioeconomics_GCAM_iam_compact.xml)
   } else {
     stop("Unknown command")
   }

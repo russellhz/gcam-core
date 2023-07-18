@@ -116,22 +116,22 @@ module_socio_L101.Population <- function(command, ...) {
       ungroup() ->
       L101.Pop_thous_GCAM3_RG3_Y
 
-    # If necessary, extend GCAM 3.0 scenario to 2100 using SSPbase population ratios by GCAM 3.0 region
-    # TODO: see issue #234
-    if(2100 %in% FUTURE_YEARS & !(2100 %in% L101.Pop_thous_GCAM3_RG3_Y$year)) {
-      L101.Pop_thous_GCAM3_RG3_Y %>%
-        filter(year == 2095) %>%
-        left_join_error_no_match(L101.Pop_thous_SSPbase_RG3_Y, by = c("region_GCAM3", "year")) %>%
-        rename(SSPbase2095 = value.y) %>%
-        left_join_error_no_match(filter(L101.Pop_thous_SSPbase_RG3_Y, year == 2100), by = c("region_GCAM3")) %>%
-        rename(SSPbase2100 = value) %>%
-        # scale 2095 L101.Pop_thous_GCAM3_RG3_Y value by 2100/2095 L101.Pop_thous_SSPbase_RG3_Y ratio
-        mutate(value = value.x * SSPbase2100 / SSPbase2095) %>%
-        rename(year = year.y) %>%
-        select(-SSPbase2095, -SSPbase2100, -value.x, -year.x) %>%
-        bind_rows(L101.Pop_thous_GCAM3_RG3_Y, .) ->
-        L101.Pop_thous_GCAM3_RG3_Y
-    }
+    # # If necessary, extend GCAM 3.0 scenario to 2100 using SSPbase population ratios by GCAM 3.0 region
+    # # TODO: see issue #234
+    # if(2100 %in% FUTURE_YEARS & !(2100 %in% L101.Pop_thous_GCAM3_RG3_Y$year)) {
+    #   L101.Pop_thous_GCAM3_RG3_Y %>%
+    #     filter(year == 2095) %>%
+    #     left_join_error_no_match(L101.Pop_thous_SSPbase_RG3_Y, by = c("region_GCAM3", "year")) %>%
+    #     rename(SSPbase2095 = value.y) %>%
+    #     left_join_error_no_match(filter(L101.Pop_thous_SSPbase_RG3_Y, year == 2100), by = c("region_GCAM3")) %>%
+    #     rename(SSPbase2100 = value) %>%
+    #     # scale 2095 L101.Pop_thous_GCAM3_RG3_Y value by 2100/2095 L101.Pop_thous_SSPbase_RG3_Y ratio
+    #     mutate(value = value.x * SSPbase2100 / SSPbase2095) %>%
+    #     rename(year = year.y) %>%
+    #     select(-SSPbase2095, -SSPbase2100, -value.x, -year.x) %>%
+    #     bind_rows(L101.Pop_thous_GCAM3_RG3_Y, .) ->
+    #     L101.Pop_thous_GCAM3_RG3_Y
+    # }
 
     # Multiply these population numbers by the shares of each country within GCAM region
     L101.Popshares_ctryRG3_Y %>%
