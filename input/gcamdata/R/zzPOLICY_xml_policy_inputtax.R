@@ -20,7 +20,8 @@ module_policy_inputtax.xml <- function(command, ...) {
   }
   if(command == driver.DECLARE_INPUTS) {
     return(c("L302.InputTax",
-             "L302.InputCapitalFCR"))
+             "L302.InputCapitalFCR",
+             "L302.InputTranTax"))
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(all_xml_names)
   } else if(command == driver.MAKE) {
@@ -29,6 +30,7 @@ module_policy_inputtax.xml <- function(command, ...) {
 
     # Load required inputs
     L302.InputTax <- get_data(all_data, "L302.InputTax")
+    L302.InputTranTax <- get_data(all_data, "L302.InputTranTax")
     L302.InputCapitalFCR <- get_data(all_data, "L302.InputCapitalFCR")
     # ===================================================
 
@@ -36,6 +38,10 @@ module_policy_inputtax.xml <- function(command, ...) {
 
     for (xml_name in all_xml_names){
       L302.InputTax_tmp <- L302.InputTax %>%
+        filter(xml == xml_name) %>%
+        select(-xml)
+
+      L302.InputTranTax_tmp <- L302.InputTranTax %>%
         filter(xml == xml_name) %>%
         select(-xml)
 
@@ -47,8 +53,11 @@ module_policy_inputtax.xml <- function(command, ...) {
       assign(xml_name,
              create_xml(xml_name) %>%
                add_xml_data(L302.InputTax_tmp, "StubTechCost") %>%
+               add_xml_data(L302.InputTranTax_tmp, "StubTranTechCost") %>%
                add_xml_data(L302.InputCapitalFCR_tmp, "StubTechFCR") %>%
-               add_precursors("L302.InputTax")
+               add_precursors("L302.InputTax",
+                              "L302.InputTranTax",
+                              "L302.InputCapitalFCR")
              )
     }
 

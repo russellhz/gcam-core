@@ -20,6 +20,7 @@ module_policy_302.inputtaxsubsidy <- function(command, ...) {
     ))
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(c("L302.InputTax",
+             "L302.InputTranTax",
              "L302.InputCapitalFCR"))
   } else if(command == driver.MAKE) {
 
@@ -42,6 +43,13 @@ module_policy_302.inputtaxsubsidy <- function(command, ...) {
       mutate(input.cost = approx_fun(year, input.cost)) %>%
       ungroup
 
+    L302.InputTranTax <- L302.InputTax %>%
+      filter(grepl("^trn_", supplysector)) %>%
+      rename(tranSubsector = subsector)
+
+    L302.InputTax <- L302.InputTax %>%
+      filter(!grepl("^trn_", supplysector))
+
     L302.InputCapitalFCR <- A_InputCapitalFCR %>%
       gather_years() %>%
       mutate(value = as.numeric(value)) %>%
@@ -63,6 +71,12 @@ module_policy_302.inputtaxsubsidy <- function(command, ...) {
       add_precursors("policy/A_InputTaxesSubsidies") ->
       L302.InputTax
 
+    L302.InputTranTax %>%
+      add_title("Input taxes for tran techs", overwrite = T) %>%
+      add_units("$1975 (usually per GJ") %>%
+      add_precursors("policy/A_InputTaxesSubsidies") ->
+      L302.InputTranTax
+
     L302.InputCapitalFCR %>%
       add_title("fixed charge rate for capital costs", overwrite = T) %>%
       add_units("NA") %>%
@@ -71,6 +85,7 @@ module_policy_302.inputtaxsubsidy <- function(command, ...) {
 
 
     return_data(L302.InputTax,
+                L302.InputTranTax,
                 L302.InputCapitalFCR)
   } else {
     stop("Unknown command")
