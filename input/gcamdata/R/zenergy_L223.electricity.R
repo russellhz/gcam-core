@@ -78,7 +78,10 @@ module_energy_L223.electricity <- function(command, ...) {
              "L120.GridCost_offshore_wind",
              "L120.RegCapFactor_offshore_wind",
              "L1232.desalsecout_R_elec_F_tech",
-             "L102.gdp_mil90usd_GCAM3_ctry_Y"))
+             "L102.gdp_mil90usd_GCAM3_ctry_Y",
+             FILE = "energy/WEO2022_elec_params",
+             FILE = "energy/mappings/weo_region_mapping",
+             FILE = "energy/mappings/weo_elec_mapping"))
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(c("L223.Supplysector_elec",
              "L223.ElecReserve",
@@ -138,7 +141,10 @@ module_energy_L223.electricity <- function(command, ...) {
              "L223.GlobalIntTechCapital_wind_low",
              "L223.GlobalTechCapital_geo_low",
              "L223.GlobalTechCapital_nuc_low",
-             "L223.GlobalTechCapital_bio_low"))
+             "L223.GlobalTechCapital_bio_low",
+             "L223.StubTechCapital",
+             "L223.StubTechOMfixed",
+             "L223.StubTechOMvar"))
   } else if(command == driver.MAKE) {
 
     all_data <- list(...)[[1]]
@@ -192,6 +198,10 @@ module_energy_L223.electricity <- function(command, ...) {
     L1232.desalsecout_R_elec_F_tech <- get_data(all_data, "L1232.desalsecout_R_elec_F_tech", strip_attributes = TRUE)
     L102.gdp_mil90usd_GCAM3_ctry_Y <- get_data(all_data, "L102.gdp_mil90usd_GCAM3_ctry_Y")
     L126.IO_R_elecownuse_F_Yh <- get_data(all_data, "L126.IO_R_elecownuse_F_Yh")
+
+    WEO2022_elec_params <- get_data(all_data, "energy/WEO2022_elec_params")
+    weo_region_mapping <- get_data(all_data, "energy/mappings/weo_region_mapping")
+    weo_elec_mapping <- get_data(all_data, "energy/mappings/weo_elec_mapping")
     # ============================
     # 2a. Supplysector information
     # ============================
@@ -353,7 +363,7 @@ module_energy_L223.electricity <- function(command, ...) {
     L223.GlobalTechEff <- A23.globaltech_eff
     # Extrapolate efficiency values to all model years and round to appropriate number of digits
     ### A23.globaltech_eff ASSUMPTION FILE HAS TWO ADDITIONAL ROWS IN OLD DATA SYSTEM (backup electricity for CSP and PV)
-    if (energy.ELEC_COST_SOURCE == "EUREF"){
+    if (energy.ELEC_COST_SOURCE %in% c("EUREF", "WEO", "WEO-EUREF")){
       # Want to overwrite GCAM assumptions with EU Reference scenario assumptions
       EURef2020_elec_gcam_mapping <- get_data(all_data, "energy/mappings/EURef2020_elec_gcam_mapping") %>%
         filter(tech_type != "Battery Storage")
@@ -1059,6 +1069,86 @@ module_energy_L223.electricity <- function(command, ...) {
         filter(year %in% MODEL_BASE_YEARS) %>%
         bind_rows(L223.StubTechEff_elec_fut)
     }
+
+    if (energy.ELEC_COST_SOURCE %in% c("WEO", "WEO-EUREF")){
+      WEO2022_eff <- WEO2022_elec_params %>%
+        filter(grepl("Efficiency", Unit)) %>%
+        # NetZero doesn´t have value for 2021, so we fill it in
+        group_by(region, technology) %>%
+        mutate(`2021` = `2021`[scenario == "Stated.Policies"]) %>%
+        ungroup %>%
+        # Rewriting 2021 to 2020
+        rename(`2020` = `2021`) %>%
+        filter(scenario == energy.WEO_SCENARIO) %>%
+        select(-scenario, -subsector)
+
+      # Map techs to GCAM and add to A23.globaltech_eff
+      L223.StubTechEff_WEO <- A23.globaltech_eff %>%
+        left_join(weo_elec_mapping, by = "technology") %>%
+        filter(minicam.energy.input != "backup_electricity",
+               # don't want any techs that don't actually have values in WEO
+               # we'll just use values from A23.globaltech_eff for those techs
+               is.na(shadow_tech),
+               technology != "Gen_II_LWR",
+               !grepl("_storage", technology)) %>%
+        select(supplysector, subsector, technology, minicam.energy.input, tech_type) %>%
+        left_join(WEO2022_eff, by = c("tech_type" = "technology")) %>%
+        left_join(weo_region_mapping, by = c("region" = "WEO_region")) %>%
+        select(-tech_type, -GCAM_region_ID, -region) %>%
+        dplyr::relocate(region = GCAM_region)
+
+      # Some regions have NAs, use the average for those techs
+      L223.StubTechEff_WEO_avg <- L223.StubTechEff_WEO %>%
+        gather_years() %>%
+        group_by(supplysector, subsector, technology, year) %>%
+        summarise(value = mean(value, na.rm = T)) %>%
+        ungroup
+
+      L223.StubTechEff_WEO <- L223.StubTechEff_WEO %>%
+        gather_years() %>%
+        left_join(L223.StubTechEff_WEO_avg, by = c("supplysector", "subsector", "technology", "year")) %>%
+        mutate(value = if_else(is.na(value.x), value.y, value.x)) %>%
+        select(-value.x, -value.y) %>%
+        tidyr::pivot_wider(names_from = year)
+
+      # Going to add in elec eff for future techs by region
+      L223.StubTechEff_alltech <- A23.globaltech_eff %>%
+        left_join(L223.StubTechEff_WEO,
+                  by = c("supplysector", "subsector", "technology", "minicam.energy.input"))
+
+      # techs where values are assumed to come from A23.globaltech_eff don't have regions
+      # Add them here
+      L223.StubTechEff_NAtech <- L223.StubTechEff_alltech %>%
+        filter(is.na(region)) %>%
+        select(-region) %>%
+        repeat_add_columns(tibble(region = unique(L223.StubTechEff_alltech$region))) %>%
+        filter(!is.na(region))
+
+      year_cols_WEO <- names(WEO2022_eff)
+
+      L223.StubTechEff_elec_fut <- L223.StubTechEff_alltech %>%
+        filter(!is.na(region)) %>%
+        bind_rows(L223.StubTechEff_NAtech) %>%
+        dplyr::relocate(year_cols_WEO[grepl("^[0-9]", year_cols_WEO)], .before = `2100`) %>%
+        # if there is a value for 2050, we don't want to use the GCAM 2100 assumption
+        # hard-coded
+        mutate(`2100` = if_else(is.na(`2050`), `2100`, `2050`))  %>%
+        fill_exp_decay_extrapolate_region(MODEL_YEARS) %>%
+        filter(year %in% MODEL_FUTURE_YEARS) %>%
+        rename(efficiency = value, stub.technology = technology) %>%
+        mutate(efficiency = round(efficiency, energy.DIGITS_EFFICIENCY),
+               market.name = region)
+
+      # In this case, remove future EU values so that they take the global techs, which come from EUREF
+      if (energy.ELEC_COST_SOURCE == "WEO-EUREF"){
+        L223.StubTechEff_elec_fut <- L223.StubTechEff_elec_fut %>%
+          filter(!region %in% c("EU-15", "EU-12"))
+      }
+
+      L223.StubTechEff_elec <- L223.StubTechEff_elec %>%
+        filter(year %in% MODEL_BASE_YEARS) %>%
+        bind_rows(L223.StubTechEff_elec_fut)
+    }
     L223.StubTechEff_elec <- L223.StubTechEff_elec[LEVEL2_DATA_NAMES[["StubTechEff"]]]
 
     # Make regional adjustments to wind capacity factors for L223.StubTechCapFactor_elec
@@ -1152,6 +1242,67 @@ module_energy_L223.electricity <- function(command, ...) {
     L223.StubTechCapFactor_elec %>%
       bind_rows(L223.StubTechCapFactor_elec_offshore_wind) -> L223.StubTechCapFactor_elec
 
+    if (energy.ELEC_COST_SOURCE %in% c("WEO", "WEO-EUREF")){
+      WEO2022_CapFactor <- WEO2022_elec_params %>%
+        filter(grepl("Capacity", Unit)) %>%
+        # NetZero doesn´t have value for 2021, so we fill it in
+        group_by(region, technology) %>%
+        mutate(`2021` = `2021`[scenario == "Stated.Policies"]) %>%
+        ungroup %>%
+        # Rewriting 2021 to 2020
+        rename(`2020` = `2021`) %>%
+        filter(scenario == energy.WEO_SCENARIO) %>%
+        select(-scenario, -subsector)
+
+      # Map techs to GCAM
+      L223.StubTechCapFactor_WEO_NAs <- A23.globaltech_eff %>%
+        left_join(weo_elec_mapping, by = "technology") %>%
+        filter(minicam.energy.input != "backup_electricity",
+               # don't want any techs that don't actually have values in WEO
+               is.na(shadow_tech),
+               technology != "Gen_II_LWR",
+               !grepl("_storage", technology)) %>%
+        select(supplysector, subsector, stub.technology = technology, tech_type) %>%
+        left_join(WEO2022_CapFactor, by = c("tech_type" = "technology")) %>%
+        filter(!is.na(region)) %>%
+        left_join(weo_region_mapping, by = c("region" = "WEO_region")) %>%
+        select(-tech_type, -GCAM_region_ID, -region) %>%
+        dplyr::relocate(region = GCAM_region)
+
+      # Some regions have NAs, use the average for those techs
+      L223.StubTechCapFactor_WEO_avg <- L223.StubTechCapFactor_WEO_NAs %>%
+        gather_years() %>%
+        group_by(supplysector, subsector, stub.technology, year) %>%
+        summarise(value = mean(value, na.rm = T)) %>%
+        ungroup
+
+      L223.StubTechCapFactor_WEO <- L223.StubTechCapFactor_WEO_NAs %>%
+        gather_years() %>%
+        left_join(L223.StubTechCapFactor_WEO_avg, by = c("supplysector", "subsector", "stub.technology", "year")) %>%
+        mutate(value = if_else(is.na(value.x), value.y, value.x)) %>%
+        select(-value.x, -value.y, -Unit) %>%
+        # Linearly interpolate to 2100
+        complete(nesting(region, supplysector, subsector, stub.technology),
+                 year = MODEL_FUTURE_YEARS) %>%
+        group_by(region, supplysector, subsector, stub.technology) %>%
+        mutate(value = approx_fun(year, value, rule = 2)) %>%
+        ungroup %>%
+        rename(capacity.factor = value)
+
+      # Replace any values with WEO values, then add new values in
+      L223.StubTechCapFactor_elec_replace <- L223.StubTechCapFactor_elec %>%
+        left_join(L223.StubTechCapFactor_WEO, by = c("region", "supplysector",
+                                                     "subsector", "stub.technology", "year")) %>%
+        mutate(capacity.factor = if_else(is.na(capacity.factor.y), capacity.factor.x, capacity.factor.y)) %>%
+        select(-capacity.factor.x, -capacity.factor.y)
+
+      L223.StubTechCapFactor_WEO_new <- L223.StubTechCapFactor_WEO %>%
+        anti_join(L223.StubTechCapFactor_elec_replace, by = c("region", "supplysector", "subsector", "stub.technology", "year"))
+
+      L223.StubTechCapFactor_elec <- bind_rows(L223.StubTechCapFactor_elec_replace,
+                                               L223.StubTechCapFactor_WEO_new)
+    }
+
     # Regional non-energy cost adder for offshore wind grid connection cost
     gcam_regions <- unique(GCAM_region_names$region)
 
@@ -1167,6 +1318,117 @@ module_energy_L223.electricity <- function(command, ...) {
       mutate(input.cost = round(input.cost, energy.DIGITS_COST)) %>%
       select(region, supplysector, subsector, stub.technology = technology,
              year, minicam.non.energy.input, input.cost) -> L223.StubTechCost_offshore_wind
+
+    if (energy.ELEC_COST_SOURCE %in% c("WEO", "WEO-EUREF")){
+      # First combine all costs
+      WEO2022_Costs <- WEO2022_elec_params %>%
+        filter(grepl("cost|Cost", Unit)) %>%
+        # NetZero doesn´t have value for 2021, so we fill it in
+        group_by(region, technology, Unit) %>%
+        mutate(`2021` = `2021`[scenario == "Stated.Policies"]) %>%
+        ungroup %>%
+        # Rewriting 2021 to 2020
+        rename(`2020` = `2021`) %>%
+        filter(scenario == energy.WEO_SCENARIO) %>%
+        select(-scenario, -subsector)
+
+      # Map techs to GCAM
+      L223.StubTechCosts_WEO_NAs <- A23.globaltech_eff %>%
+        left_join(weo_elec_mapping, by = "technology") %>%
+        filter(minicam.energy.input != "backup_electricity",
+               # don't want any techs that don't actually have values in WEO
+               is.na(shadow_tech),
+               technology != "Gen_II_LWR",
+               !grepl("_storage", technology)) %>%
+        select(supplysector, subsector, stub.technology = technology, tech_type) %>%
+        left_join(WEO2022_Costs, by = c("tech_type" = "technology")) %>%
+        filter(!is.na(region)) %>%
+        left_join(weo_region_mapping, by = c("region" = "WEO_region")) %>%
+        select(-tech_type, -GCAM_region_ID, -region) %>%
+        dplyr::relocate(region = GCAM_region)
+
+      # Some regions have NAs, use the average for those techs
+      L223.StubTechCosts_WEO_avg <- L223.StubTechCosts_WEO_NAs %>%
+        gather_years() %>%
+        group_by(supplysector, subsector, stub.technology, year, Unit) %>%
+        summarise(value = mean(value, na.rm = T)) %>%
+        ungroup
+
+
+      L223.StubTechCosts <- L223.StubTechCosts_WEO_NAs %>%
+        gather_years() %>%
+        left_join(L223.StubTechCosts_WEO_avg,
+                  by = c("supplysector", "subsector", "stub.technology", "year", "Unit")) %>%
+        mutate(value = if_else(is.na(value.x), value.y, value.x)) %>%
+        select(-value.x, -value.y) %>%
+        # Linearly interpolate to 2100
+        complete(nesting(region, supplysector, subsector, stub.technology, Unit),
+                 year = MODEL_FUTURE_YEARS) %>%
+        group_by(region, supplysector, subsector, stub.technology, Unit) %>%
+        mutate(value = approx_fun(year, value, rule = 2),
+               value = value * gdp_deflator(1975, 2021)) %>%
+        ungroup
+
+      # Capital costs can just be taken directly
+      L223.StubTechCapital <- L223.StubTechCosts %>%
+        filter(grepl("Capital", Unit)) %>%
+        select(-Unit) %>%
+        mutate(input.capital = "capital") %>%
+        rename(capital.overnight = value) %>%
+        # Add in fixed charge rate
+        left_join_error_no_match(distinct(L113.globaltech_capital_ATB, supplysector, subsector, technology, fixed.charge.rate),
+                  by = c("supplysector", "subsector", "stub.technology" = "technology"))
+
+      # O&M costs need to be divided between fixed and variable
+      # Use the split in global tech db (mostly coming from EUREF scenario)
+      GlobalTechOMSplit <- bind_rows(
+        rename(L223.GlobalTechOMfixed_elec, cost.type = input.OM.fixed, cost = OM.fixed),
+        rename(L223.GlobalIntTechOMfixed_elec, technology = intermittent.technology,
+               cost.type = input.OM.fixed, cost = OM.fixed),
+        rename(L223.GlobalTechOMvar_elec, cost.type = input.OM.var, cost = OM.var),
+        rename(L223.GlobalIntTechOMvar_elec, technology = intermittent.technology,
+               cost.type = input.OM.var, cost = OM.var)
+        )  %>%
+        group_by(supplysector = sector.name, subsector = subsector.name,
+                 stub.technology = technology, year) %>%
+        summarise(fixed_ratio = cost[cost.type == "OM-fixed"] / sum(cost)) %>%
+        ungroup
+
+      L223.StubTechOMfixed <- L223.StubTechCosts %>%
+        filter(grepl("O&M", Unit)) %>%
+        left_join_error_no_match(GlobalTechOMSplit,
+                                 by = c("supplysector", "subsector", "stub.technology", "year")) %>%
+        mutate(OM.fixed = value * fixed_ratio,
+               input.OM.fixed = "OM-fixed") %>%
+        select(-value, -Unit, -fixed_ratio)
+
+      L223.StubTechOMvar <- L223.StubTechCosts %>%
+        filter(grepl("O&M", Unit)) %>%
+        left_join_error_no_match(GlobalTechOMSplit,
+                                 by = c("supplysector", "subsector", "stub.technology", "year")) %>%
+        mutate(OM.var = value * (1- fixed_ratio),
+               input.OM.var = "OM-var") %>%
+        filter(OM.var > 0) %>%
+        select(-value, -Unit, -fixed_ratio)
+
+      # Remove stubtech costs for EU if using WEO-EUREF
+      if (energy.ELEC_COST_SOURCE == "WEO-EUREF"){
+        L223.StubTechCapital <- L223.StubTechCapital %>%
+          filter(!region %in% c("EU-12", "EU-15"))
+        L223.StubTechOMfixed <- L223.StubTechOMfixed %>%
+          filter(!region %in% c("EU-12", "EU-15"))
+        L223.StubTechOMvar <- L223.StubTechOMvar %>%
+          filter(!region %in% c("EU-12", "EU-15"))
+      }
+
+    } else {
+      L223.StubTechCapital <-  tibble::tibble(!!!LEVEL2_DATA_NAMES[["StubTechCapital"]], .rows = 0,
+                                              .name_repair = ~ LEVEL2_DATA_NAMES[["StubTechCapital"]])
+      L223.StubTechOMfixed <-  tibble::tibble(!!!LEVEL2_DATA_NAMES[["StubTechOMfixed"]], .rows = 0,
+                                              .name_repair = ~ LEVEL2_DATA_NAMES[["StubTechOMfixed"]])
+      L223.StubTechOMvar <-  tibble::tibble(!!!LEVEL2_DATA_NAMES[["StubTechOMvar"]], .rows = 0,
+                                              .name_repair = ~ LEVEL2_DATA_NAMES[["StubTechOMvar"]])
+    }
 
     # L223.StubTechSecOut_desal: secondary output of desalinated seawater from electricity technologies
     # Note that this only applies in selected regions that have combined electric + desalination plants
@@ -1732,6 +1994,33 @@ module_energy_L223.electricity <- function(command, ...) {
       add_precursors("L113.globaltech_capital_ATB_low") ->
       L223.GlobalTechCapital_bio_low
 
+    L223.StubTechCapital %>%
+      add_title("Regional overnight capital costs from WEO") %>%
+      add_units("capital overnight - 1975USD/kW,  fixed.charge.rate - unitless") %>%
+      add_comments("Fixed charge rate - conversion from overnight capital cost to amortized annual payment") %>%
+      add_comments("Empty if not using WEO costs") %>%
+      add_precursors("energy/WEO2022_elec_params", "energy/mappings/weo_region_mapping",
+                     "energy/mappings/weo_elec_mapping", "energy/A23.globaltech_eff") ->
+      L223.StubTechCapital
+
+    L223.StubTechOMfixed  %>%
+      add_title("Regional OM fixed costs from WEO") %>%
+      add_units("1975USD/kW") %>%
+      add_comments("Empty if not using WEO costs") %>%
+      add_precursors("energy/WEO2022_elec_params", "energy/mappings/weo_region_mapping",
+                     "energy/mappings/weo_elec_mapping", "energy/A23.globaltech_eff",
+                     "L113.globaltech_OMfixed_ATB", "L113.globaltech_OMvar_ATB", "energy/A23.globalinttech") ->
+      L223.StubTechOMfixed
+
+    L223.StubTechOMvar %>%
+      add_title("Regional OM var costs from WEO") %>%
+      add_units("1975USD/kW") %>%
+      add_comments("Empty if not using WEO costs") %>%
+      add_precursors("energy/WEO2022_elec_params", "energy/mappings/weo_region_mapping",
+                     "energy/mappings/weo_elec_mapping", "energy/A23.globaltech_eff",
+                     "L113.globaltech_OMfixed_ATB", "L113.globaltech_OMvar_ATB", "energy/A23.globalinttech") ->
+      L223.StubTechOMvar
+
     return_data(L223.Supplysector_elec, L223.ElecReserve, L223.SectorUseTrialMarket_elec, L223.SubsectorLogit_elec, L223.SubsectorShrwt_elec,
      L223.SubsectorShrwtFllt_elec, L223.SubsectorShrwt_coal, L223.SubsectorShrwt_nuc, L223.SubsectorShrwt_renew,
       L223.SubsectorInterp_elec, L223.SubsectorInterpTo_elec, L223.StubTech_elec,
@@ -1750,7 +2039,7 @@ module_energy_L223.electricity <- function(command, ...) {
         L223.GlobalIntTechCapital_wind_adv, L223.GlobalTechCapital_geo_adv, L223.GlobalTechCapital_nuc_adv,
         L223.GlobalTechCapital_sol_low, L223.GlobalIntTechCapital_sol_low, L223.GlobalTechCapital_wind_low,
         L223.GlobalIntTechCapital_wind_low, L223.GlobalTechCapital_geo_low, L223.GlobalTechCapital_nuc_low,
-        L223.GlobalTechCapital_bio_low)
+        L223.GlobalTechCapital_bio_low, L223.StubTechCapital, L223.StubTechOMfixed, L223.StubTechOMvar)
   } else {
     stop("Unknown command")
   }

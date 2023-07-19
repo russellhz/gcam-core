@@ -238,6 +238,8 @@ generate_level2_data_names <- function() {
   level2_data_names[["StubTechProd"]] <- c(level2_data_names[["StubTechYr"]], "calOutputValue", "share.weight.year", "subs.share.weight", "tech.share.weight")
   level2_data_names[["StubTechCalInput"]] <- c(level2_data_names[["StubTechYr"]], "minicam.energy.input", "calibrated.value", "share.weight.year", "subs.share.weight", "tech.share.weight")
   level2_data_names[["StubTechCapital"]] <- c(level2_data_names[["StubTechYr"]], "input.capital", "capital.overnight", "fixed.charge.rate")
+  level2_data_names[["StubTechOMfixed"]] <- c(level2_data_names[["StubTechYr"]], "input.OM.fixed", "OM.fixed")
+  level2_data_names[["StubTechOMvar"]] <- c(level2_data_names[["StubTechYr"]], "input.OM.var", "OM.var")
   level2_data_names[["StubTechCost"]] <- c(level2_data_names[["StubTechYr"]], "minicam.non.energy.input", "input.cost")
   level2_data_names[["StubTechTrackCapital"]] <- c(level2_data_names[["StubTechYr"]], "minicam.non.energy.input", "capital.coef", "tracking.market", "depreciation.rate")
   level2_data_names[["StubTechFixOut"]] <- c(level2_data_names[["StubTechYr"]], "fixedOutput", "share.weight.year", "subs.share.weight", "tech.share.weight")

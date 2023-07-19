@@ -1,0 +1,3644 @@
+# File: WEO2022_elec_params.csv,,,,,,,
+# Title: Power technology assumptions of WEO2022,,,,,,,
+# Units: in file,,,,,,,
+# Source: WEO 2022 (https://www.iea.org/data-and-statistics/data-product/world-energy-outlook-2022-free-dataset#tables-for-scenario-projections),,,,,,,
+# Comments: WEO technologies are mapped to GCAM technologies in energy/mappings/weo_elec_mapping.csv. Regions are mapped in energy/mappings/weo_elec_mapping.csv,,,,,,,
+# Column types: cnnncccc,,,,,,,
+# ----------,,,,,,,
+region,2021,2030,2050,scenario,Unit,technology,subsector
+European Union,1700,1700,1700,Stated.Policies,"Capital costs
+(USD/kW)",Steam Coal - SUBCRITICAL,coal
+United States,1800,1800,1800,Stated.Policies,"Capital costs
+(USD/kW)",Steam Coal - SUBCRITICAL,coal
+Japan,2100,2100,2100,Stated.Policies,"Capital costs
+(USD/kW)",Steam Coal - SUBCRITICAL,coal
+Russia,1700,1700,1700,Stated.Policies,"Capital costs
+(USD/kW)",Steam Coal - SUBCRITICAL,coal
+China,600,600,600,Stated.Policies,"Capital costs
+(USD/kW)",Steam Coal - SUBCRITICAL,coal
+India,1000,1000,1000,Stated.Policies,"Capital costs
+(USD/kW)",Steam Coal - SUBCRITICAL,coal
+Middle East,1300,1300,1300,Stated.Policies,"Capital costs
+(USD/kW)",Steam Coal - SUBCRITICAL,coal
+Africa,1300,1300,1300,Stated.Policies,"Capital costs
+(USD/kW)",Steam Coal - SUBCRITICAL,coal
+Brazil,1300,1300,1300,Stated.Policies,"Capital costs
+(USD/kW)",Steam Coal - SUBCRITICAL,coal
+European Union,2000,2000,2000,Stated.Policies,"Capital costs
+(USD/kW)",Steam Coal - SUPERCRITICAL,coal
+United States,2100,2100,2100,Stated.Policies,"Capital costs
+(USD/kW)",Steam Coal - SUPERCRITICAL,coal
+Japan,2400,2400,2400,Stated.Policies,"Capital costs
+(USD/kW)",Steam Coal - SUPERCRITICAL,coal
+Russia,2000,2000,2000,Stated.Policies,"Capital costs
+(USD/kW)",Steam Coal - SUPERCRITICAL,coal
+China,700,700,700,Stated.Policies,"Capital costs
+(USD/kW)",Steam Coal - SUPERCRITICAL,coal
+India,1200,1200,1200,Stated.Policies,"Capital costs
+(USD/kW)",Steam Coal - SUPERCRITICAL,coal
+Middle East,1600,1600,1600,Stated.Policies,"Capital costs
+(USD/kW)",Steam Coal - SUPERCRITICAL,coal
+Africa,1600,1600,1600,Stated.Policies,"Capital costs
+(USD/kW)",Steam Coal - SUPERCRITICAL,coal
+Brazil,1600,1600,1600,Stated.Policies,"Capital costs
+(USD/kW)",Steam Coal - SUPERCRITICAL,coal
+European Union,2200,2200,2200,Stated.Policies,"Capital costs
+(USD/kW)",Steam Coal - ULTRASUPERCRITICAL,coal
+United States,2300,2300,2300,Stated.Policies,"Capital costs
+(USD/kW)",Steam Coal - ULTRASUPERCRITICAL,coal
+Japan,2600,2600,2600,Stated.Policies,"Capital costs
+(USD/kW)",Steam Coal - ULTRASUPERCRITICAL,coal
+Russia,2200,2200,2200,Stated.Policies,"Capital costs
+(USD/kW)",Steam Coal - ULTRASUPERCRITICAL,coal
+China,800,800,800,Stated.Policies,"Capital costs
+(USD/kW)",Steam Coal - ULTRASUPERCRITICAL,coal
+India,1400,1400,1400,Stated.Policies,"Capital costs
+(USD/kW)",Steam Coal - ULTRASUPERCRITICAL,coal
+Middle East,1600,1600,1600,Stated.Policies,"Capital costs
+(USD/kW)",Steam Coal - ULTRASUPERCRITICAL,coal
+Africa,1900,1900,1900,Stated.Policies,"Capital costs
+(USD/kW)",Steam Coal - ULTRASUPERCRITICAL,coal
+Brazil,1800,1800,1800,Stated.Policies,"Capital costs
+(USD/kW)",Steam Coal - ULTRASUPERCRITICAL,coal
+European Union,2500,2350,2300,Stated.Policies,"Capital costs
+(USD/kW)",IGCC,coal
+United States,2600,2450,2400,Stated.Policies,"Capital costs
+(USD/kW)",IGCC,coal
+Japan,2900,2750,2700,Stated.Policies,"Capital costs
+(USD/kW)",IGCC,coal
+Russia,2500,2350,2300,Stated.Policies,"Capital costs
+(USD/kW)",IGCC,coal
+China,1100,1000,900,Stated.Policies,"Capital costs
+(USD/kW)",IGCC,coal
+India,1600,1500,1500,Stated.Policies,"Capital costs
+(USD/kW)",IGCC,coal
+Middle East,2000,1900,1900,Stated.Policies,"Capital costs
+(USD/kW)",IGCC,coal
+Africa,2200,2100,2100,Stated.Policies,"Capital costs
+(USD/kW)",IGCC,coal
+Brazil,2000,1900,1900,Stated.Policies,"Capital costs
+(USD/kW)",IGCC,coal
+European Union,45,45,45,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Steam Coal - SUBCRITICAL,coal
+United States,45,45,45,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Steam Coal - SUBCRITICAL,coal
+Japan,55,55,55,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Steam Coal - SUBCRITICAL,coal
+Russia,50,50,50,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Steam Coal - SUBCRITICAL,coal
+China,20,20,20,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Steam Coal - SUBCRITICAL,coal
+India,35,35,35,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Steam Coal - SUBCRITICAL,coal
+Middle East,45,45,45,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Steam Coal - SUBCRITICAL,coal
+Africa,45,45,45,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Steam Coal - SUBCRITICAL,coal
+Brazil,45,45,45,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Steam Coal - SUBCRITICAL,coal
+European Union,60,60,60,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Steam Coal - SUPERCRITICAL,coal
+United States,65,65,65,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Steam Coal - SUPERCRITICAL,coal
+Japan,70,70,70,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Steam Coal - SUPERCRITICAL,coal
+Russia,70,70,70,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Steam Coal - SUPERCRITICAL,coal
+China,30,30,30,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Steam Coal - SUPERCRITICAL,coal
+India,50,50,50,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Steam Coal - SUPERCRITICAL,coal
+Middle East,65,65,65,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Steam Coal - SUPERCRITICAL,coal
+Africa,55,55,55,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Steam Coal - SUPERCRITICAL,coal
+Brazil,65,65,65,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Steam Coal - SUPERCRITICAL,coal
+European Union,65,65,65,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Steam Coal - ULTRASUPERCRITICAL,coal
+United States,70,70,70,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Steam Coal - ULTRASUPERCRITICAL,coal
+Japan,80,80,80,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Steam Coal - ULTRASUPERCRITICAL,coal
+Russia,65,65,65,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Steam Coal - ULTRASUPERCRITICAL,coal
+China,30,30,30,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Steam Coal - ULTRASUPERCRITICAL,coal
+India,55,55,55,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Steam Coal - ULTRASUPERCRITICAL,coal
+Middle East,65,65,65,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Steam Coal - ULTRASUPERCRITICAL,coal
+Africa,70,70,70,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Steam Coal - ULTRASUPERCRITICAL,coal
+Brazil,70,70,70,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Steam Coal - ULTRASUPERCRITICAL,coal
+European Union,90,85,80,Stated.Policies,"Annual O&M Costs
+(USD/kW)",IGCC,coal
+United States,90,85,85,Stated.Policies,"Annual O&M Costs
+(USD/kW)",IGCC,coal
+Japan,100,95,95,Stated.Policies,"Annual O&M Costs
+(USD/kW)",IGCC,coal
+Russia,90,85,80,Stated.Policies,"Annual O&M Costs
+(USD/kW)",IGCC,coal
+China,50,45,40,Stated.Policies,"Annual O&M Costs
+(USD/kW)",IGCC,coal
+India,70,70,70,Stated.Policies,"Annual O&M Costs
+(USD/kW)",IGCC,coal
+Middle East,90,85,85,Stated.Policies,"Annual O&M Costs
+(USD/kW)",IGCC,coal
+Africa,90,85,85,Stated.Policies,"Annual O&M Costs
+(USD/kW)",IGCC,coal
+Brazil,90,85,85,Stated.Policies,"Annual O&M Costs
+(USD/kW)",IGCC,coal
+European Union,0.39,0.39,0.39,Stated.Policies,"Efficiency
+(gross, LHV)",Steam Coal - SUBCRITICAL,coal
+United States,0.39,0.39,0.39,Stated.Policies,"Efficiency
+(gross, LHV)",Steam Coal - SUBCRITICAL,coal
+Japan,0.39,0.39,0.39,Stated.Policies,"Efficiency
+(gross, LHV)",Steam Coal - SUBCRITICAL,coal
+Russia,0.39,0.39,0.39,Stated.Policies,"Efficiency
+(gross, LHV)",Steam Coal - SUBCRITICAL,coal
+China,0.37,0.37,0.37,Stated.Policies,"Efficiency
+(gross, LHV)",Steam Coal - SUBCRITICAL,coal
+India,0.36,0.36,0.37,Stated.Policies,"Efficiency
+(gross, LHV)",Steam Coal - SUBCRITICAL,coal
+Middle East,0.37,0.37,0.37,Stated.Policies,"Efficiency
+(gross, LHV)",Steam Coal - SUBCRITICAL,coal
+Africa,0.35,0.35,0.35,Stated.Policies,"Efficiency
+(gross, LHV)",Steam Coal - SUBCRITICAL,coal
+Brazil,0.39,0.39,0.39,Stated.Policies,"Efficiency
+(gross, LHV)",Steam Coal - SUBCRITICAL,coal
+European Union,0.43,0.43,0.43,Stated.Policies,"Efficiency
+(gross, LHV)",Steam Coal - SUPERCRITICAL,coal
+United States,0.43,0.43,0.43,Stated.Policies,"Efficiency
+(gross, LHV)",Steam Coal - SUPERCRITICAL,coal
+Japan,0.43,0.43,0.43,Stated.Policies,"Efficiency
+(gross, LHV)",Steam Coal - SUPERCRITICAL,coal
+Russia,0.43,0.43,0.43,Stated.Policies,"Efficiency
+(gross, LHV)",Steam Coal - SUPERCRITICAL,coal
+China,0.41,0.41,0.41,Stated.Policies,"Efficiency
+(gross, LHV)",Steam Coal - SUPERCRITICAL,coal
+India,0.4,0.4,0.4,Stated.Policies,"Efficiency
+(gross, LHV)",Steam Coal - SUPERCRITICAL,coal
+Middle East,0.41,0.41,0.41,Stated.Policies,"Efficiency
+(gross, LHV)",Steam Coal - SUPERCRITICAL,coal
+Africa,0.39,0.39,0.39,Stated.Policies,"Efficiency
+(gross, LHV)",Steam Coal - SUPERCRITICAL,coal
+Brazil,0.43,0.43,0.43,Stated.Policies,"Efficiency
+(gross, LHV)",Steam Coal - SUPERCRITICAL,coal
+European Union,0.45,0.47,0.47,Stated.Policies,"Efficiency
+(gross, LHV)",Steam Coal - ULTRASUPERCRITICAL,coal
+United States,0.45,0.47,0.47,Stated.Policies,"Efficiency
+(gross, LHV)",Steam Coal - ULTRASUPERCRITICAL,coal
+Japan,0.45,0.47,0.47,Stated.Policies,"Efficiency
+(gross, LHV)",Steam Coal - ULTRASUPERCRITICAL,coal
+Russia,0.45,0.47,0.47,Stated.Policies,"Efficiency
+(gross, LHV)",Steam Coal - ULTRASUPERCRITICAL,coal
+China,0.44,0.46,0.47,Stated.Policies,"Efficiency
+(gross, LHV)",Steam Coal - ULTRASUPERCRITICAL,coal
+India,0.4,0.42,0.43,Stated.Policies,"Efficiency
+(gross, LHV)",Steam Coal - ULTRASUPERCRITICAL,coal
+Middle East,0.43,0.45,0.45,Stated.Policies,"Efficiency
+(gross, LHV)",Steam Coal - ULTRASUPERCRITICAL,coal
+Africa,0.42,0.43,0.44,Stated.Policies,"Efficiency
+(gross, LHV)",Steam Coal - ULTRASUPERCRITICAL,coal
+Brazil,0.45,0.47,0.47,Stated.Policies,"Efficiency
+(gross, LHV)",Steam Coal - ULTRASUPERCRITICAL,coal
+European Union,0.44,0.47,0.49,Stated.Policies,"Efficiency
+(gross, LHV)",IGCC,coal
+United States,0.44,0.47,0.49,Stated.Policies,"Efficiency
+(gross, LHV)",IGCC,coal
+Japan,0.44,0.47,0.49,Stated.Policies,"Efficiency
+(gross, LHV)",IGCC,coal
+Russia,0.44,0.47,0.49,Stated.Policies,"Efficiency
+(gross, LHV)",IGCC,coal
+China,0.43,0.46,0.49,Stated.Policies,"Efficiency
+(gross, LHV)",IGCC,coal
+India,0.41,0.44,0.47,Stated.Policies,"Efficiency
+(gross, LHV)",IGCC,coal
+Middle East,0.42,0.45,0.47,Stated.Policies,"Efficiency
+(gross, LHV)",IGCC,coal
+Africa,0.4,0.43,0.45,Stated.Policies,"Efficiency
+(gross, LHV)",IGCC,coal
+Brazil,0.44,0.47,0.49,Stated.Policies,"Efficiency
+(gross, LHV)",IGCC,coal
+European Union,NA,1700,1700,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Steam Coal - SUBCRITICAL,coal
+United States,NA,1800,1800,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Steam Coal - SUBCRITICAL,coal
+Japan,NA,2100,2100,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Steam Coal - SUBCRITICAL,coal
+Russia,NA,1700,1700,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Steam Coal - SUBCRITICAL,coal
+China,NA,600,600,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Steam Coal - SUBCRITICAL,coal
+India,NA,1000,1000,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Steam Coal - SUBCRITICAL,coal
+Middle East,NA,1300,1300,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Steam Coal - SUBCRITICAL,coal
+Africa,NA,1300,1300,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Steam Coal - SUBCRITICAL,coal
+Brazil,NA,1300,1300,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Steam Coal - SUBCRITICAL,coal
+European Union,NA,2000,2000,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Steam Coal - SUPERCRITICAL,coal
+United States,NA,2100,2100,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Steam Coal - SUPERCRITICAL,coal
+Japan,NA,2400,2400,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Steam Coal - SUPERCRITICAL,coal
+Russia,NA,2000,2000,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Steam Coal - SUPERCRITICAL,coal
+China,NA,700,700,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Steam Coal - SUPERCRITICAL,coal
+India,NA,1200,1200,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Steam Coal - SUPERCRITICAL,coal
+Middle East,NA,1600,1600,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Steam Coal - SUPERCRITICAL,coal
+Africa,NA,1600,1600,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Steam Coal - SUPERCRITICAL,coal
+Brazil,NA,1600,1600,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Steam Coal - SUPERCRITICAL,coal
+European Union,NA,2200,2200,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Steam Coal - ULTRASUPERCRITICAL,coal
+United States,NA,2300,2300,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Steam Coal - ULTRASUPERCRITICAL,coal
+Japan,NA,2600,2600,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Steam Coal - ULTRASUPERCRITICAL,coal
+Russia,NA,2200,2200,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Steam Coal - ULTRASUPERCRITICAL,coal
+China,NA,800,800,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Steam Coal - ULTRASUPERCRITICAL,coal
+India,NA,1400,1400,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Steam Coal - ULTRASUPERCRITICAL,coal
+Middle East,NA,1600,1600,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Steam Coal - ULTRASUPERCRITICAL,coal
+Africa,NA,1900,1900,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Steam Coal - ULTRASUPERCRITICAL,coal
+Brazil,NA,1800,1800,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Steam Coal - ULTRASUPERCRITICAL,coal
+European Union,NA,2350,2300,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",IGCC,coal
+United States,NA,2450,2400,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",IGCC,coal
+Japan,NA,2750,2700,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",IGCC,coal
+Russia,NA,2350,2300,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",IGCC,coal
+China,NA,1000,900,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",IGCC,coal
+India,NA,1500,1500,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",IGCC,coal
+Middle East,NA,1900,1900,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",IGCC,coal
+Africa,NA,2100,2100,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",IGCC,coal
+Brazil,NA,1900,1900,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",IGCC,coal
+European Union,NA,45,45,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Steam Coal - SUBCRITICAL,coal
+United States,NA,45,45,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Steam Coal - SUBCRITICAL,coal
+Japan,NA,55,55,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Steam Coal - SUBCRITICAL,coal
+Russia,NA,50,50,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Steam Coal - SUBCRITICAL,coal
+China,NA,20,20,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Steam Coal - SUBCRITICAL,coal
+India,NA,35,35,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Steam Coal - SUBCRITICAL,coal
+Middle East,NA,45,45,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Steam Coal - SUBCRITICAL,coal
+Africa,NA,45,45,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Steam Coal - SUBCRITICAL,coal
+Brazil,NA,45,45,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Steam Coal - SUBCRITICAL,coal
+European Union,NA,60,60,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Steam Coal - SUPERCRITICAL,coal
+United States,NA,65,65,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Steam Coal - SUPERCRITICAL,coal
+Japan,NA,70,70,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Steam Coal - SUPERCRITICAL,coal
+Russia,NA,70,70,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Steam Coal - SUPERCRITICAL,coal
+China,NA,30,30,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Steam Coal - SUPERCRITICAL,coal
+India,NA,50,50,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Steam Coal - SUPERCRITICAL,coal
+Middle East,NA,65,65,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Steam Coal - SUPERCRITICAL,coal
+Africa,NA,55,55,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Steam Coal - SUPERCRITICAL,coal
+Brazil,NA,65,65,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Steam Coal - SUPERCRITICAL,coal
+European Union,NA,65,65,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Steam Coal - ULTRASUPERCRITICAL,coal
+United States,NA,70,70,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Steam Coal - ULTRASUPERCRITICAL,coal
+Japan,NA,80,80,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Steam Coal - ULTRASUPERCRITICAL,coal
+Russia,NA,65,65,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Steam Coal - ULTRASUPERCRITICAL,coal
+China,NA,30,30,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Steam Coal - ULTRASUPERCRITICAL,coal
+India,NA,55,55,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Steam Coal - ULTRASUPERCRITICAL,coal
+Middle East,NA,65,65,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Steam Coal - ULTRASUPERCRITICAL,coal
+Africa,NA,70,70,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Steam Coal - ULTRASUPERCRITICAL,coal
+Brazil,NA,70,70,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Steam Coal - ULTRASUPERCRITICAL,coal
+European Union,NA,85,80,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",IGCC,coal
+United States,NA,85,85,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",IGCC,coal
+Japan,NA,95,95,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",IGCC,coal
+Russia,NA,85,80,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",IGCC,coal
+China,NA,45,40,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",IGCC,coal
+India,NA,70,70,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",IGCC,coal
+Middle East,NA,85,85,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",IGCC,coal
+Africa,NA,85,85,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",IGCC,coal
+Brazil,NA,85,85,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",IGCC,coal
+European Union,NA,0.39,0.39,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Steam Coal - SUBCRITICAL,coal
+United States,NA,0.39,0.39,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Steam Coal - SUBCRITICAL,coal
+Japan,NA,0.39,0.39,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Steam Coal - SUBCRITICAL,coal
+Russia,NA,0.39,0.39,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Steam Coal - SUBCRITICAL,coal
+China,NA,0.37,0.37,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Steam Coal - SUBCRITICAL,coal
+India,NA,0.36,0.37,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Steam Coal - SUBCRITICAL,coal
+Middle East,NA,0.37,0.37,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Steam Coal - SUBCRITICAL,coal
+Africa,NA,0.35,0.35,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Steam Coal - SUBCRITICAL,coal
+Brazil,NA,0.39,0.39,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Steam Coal - SUBCRITICAL,coal
+European Union,NA,0.43,0.43,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Steam Coal - SUPERCRITICAL,coal
+United States,NA,0.43,0.43,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Steam Coal - SUPERCRITICAL,coal
+Japan,NA,0.43,0.43,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Steam Coal - SUPERCRITICAL,coal
+Russia,NA,0.43,0.43,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Steam Coal - SUPERCRITICAL,coal
+China,NA,0.41,0.41,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Steam Coal - SUPERCRITICAL,coal
+India,NA,0.4,0.4,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Steam Coal - SUPERCRITICAL,coal
+Middle East,NA,0.41,0.41,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Steam Coal - SUPERCRITICAL,coal
+Africa,NA,0.39,0.39,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Steam Coal - SUPERCRITICAL,coal
+Brazil,NA,0.43,0.43,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Steam Coal - SUPERCRITICAL,coal
+European Union,NA,0.47,0.47,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Steam Coal - ULTRASUPERCRITICAL,coal
+United States,NA,0.47,0.47,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Steam Coal - ULTRASUPERCRITICAL,coal
+Japan,NA,0.47,0.47,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Steam Coal - ULTRASUPERCRITICAL,coal
+Russia,NA,0.47,0.47,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Steam Coal - ULTRASUPERCRITICAL,coal
+China,NA,0.46,0.47,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Steam Coal - ULTRASUPERCRITICAL,coal
+India,NA,0.42,0.43,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Steam Coal - ULTRASUPERCRITICAL,coal
+Middle East,NA,0.45,0.45,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Steam Coal - ULTRASUPERCRITICAL,coal
+Africa,NA,0.43,0.44,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Steam Coal - ULTRASUPERCRITICAL,coal
+Brazil,NA,0.47,0.47,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Steam Coal - ULTRASUPERCRITICAL,coal
+European Union,NA,0.47,0.49,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",IGCC,coal
+United States,NA,0.47,0.49,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",IGCC,coal
+Japan,NA,0.47,0.49,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",IGCC,coal
+Russia,NA,0.47,0.49,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",IGCC,coal
+China,NA,0.46,0.49,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",IGCC,coal
+India,NA,0.44,0.47,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",IGCC,coal
+Middle East,NA,0.45,0.47,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",IGCC,coal
+Africa,NA,0.43,0.45,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",IGCC,coal
+Brazil,NA,0.47,0.49,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",IGCC,coal
+European Union,1000,1000,1000,Stated.Policies,"Capital costs
+(USD/kW)",CCGT,gas
+United States,1000,1000,1000,Stated.Policies,"Capital costs
+(USD/kW)",CCGT,gas
+Japan,1100,1100,1100,Stated.Policies,"Capital costs
+(USD/kW)",CCGT,gas
+Russia,800,800,800,Stated.Policies,"Capital costs
+(USD/kW)",CCGT,gas
+China,560,560,560,Stated.Policies,"Capital costs
+(USD/kW)",CCGT,gas
+India,700,700,700,Stated.Policies,"Capital costs
+(USD/kW)",CCGT,gas
+Middle East,800,800,800,Stated.Policies,"Capital costs
+(USD/kW)",CCGT,gas
+Africa,700,700,700,Stated.Policies,"Capital costs
+(USD/kW)",CCGT,gas
+Brazil,700,700,700,Stated.Policies,"Capital costs
+(USD/kW)",CCGT,gas
+European Union,500,500,500,Stated.Policies,"Capital costs
+(USD/kW)",Gas turbine,gas
+United States,500,500,500,Stated.Policies,"Capital costs
+(USD/kW)",Gas turbine,gas
+Japan,500,500,500,Stated.Policies,"Capital costs
+(USD/kW)",Gas turbine,gas
+Russia,450,450,450,Stated.Policies,"Capital costs
+(USD/kW)",Gas turbine,gas
+China,350,350,350,Stated.Policies,"Capital costs
+(USD/kW)",Gas turbine,gas
+India,400,400,400,Stated.Policies,"Capital costs
+(USD/kW)",Gas turbine,gas
+Middle East,450,450,450,Stated.Policies,"Capital costs
+(USD/kW)",Gas turbine,gas
+Africa,400,400,400,Stated.Policies,"Capital costs
+(USD/kW)",Gas turbine,gas
+Brazil,400,400,400,Stated.Policies,"Capital costs
+(USD/kW)",Gas turbine,gas
+European Union,1300,1300,1300,Stated.Policies,"Capital costs
+(USD/kW)",CCGT - CHP,gas
+United States,1300,1300,1300,Stated.Policies,"Capital costs
+(USD/kW)",CCGT - CHP,gas
+Japan,1440,1440,1440,Stated.Policies,"Capital costs
+(USD/kW)",CCGT - CHP,gas
+Russia,1040,1040,1040,Stated.Policies,"Capital costs
+(USD/kW)",CCGT - CHP,gas
+China,720,720,720,Stated.Policies,"Capital costs
+(USD/kW)",CCGT - CHP,gas
+India,920,920,920,Stated.Policies,"Capital costs
+(USD/kW)",CCGT - CHP,gas
+Middle East,1040,1040,1040,Stated.Policies,"Capital costs
+(USD/kW)",CCGT - CHP,gas
+Africa,920,920,920,Stated.Policies,"Capital costs
+(USD/kW)",CCGT - CHP,gas
+Brazil,920,920,920,Stated.Policies,"Capital costs
+(USD/kW)",CCGT - CHP,gas
+European Union,5000,2500,2500,Stated.Policies,"Capital costs
+(USD/kW)",Fuel cell (distributed electricity generation),gas
+United States,5000,2500,2500,Stated.Policies,"Capital costs
+(USD/kW)",Fuel cell (distributed electricity generation),gas
+Japan,5000,2500,2500,Stated.Policies,"Capital costs
+(USD/kW)",Fuel cell (distributed electricity generation),gas
+Russia,5000,2500,2500,Stated.Policies,"Capital costs
+(USD/kW)",Fuel cell (distributed electricity generation),gas
+China,5000,2500,2500,Stated.Policies,"Capital costs
+(USD/kW)",Fuel cell (distributed electricity generation),gas
+India,5000,2500,2500,Stated.Policies,"Capital costs
+(USD/kW)",Fuel cell (distributed electricity generation),gas
+Middle East,5000,2500,2500,Stated.Policies,"Capital costs
+(USD/kW)",Fuel cell (distributed electricity generation),gas
+Africa,5000,2500,2500,Stated.Policies,"Capital costs
+(USD/kW)",Fuel cell (distributed electricity generation),gas
+Brazil,5000,2500,2500,Stated.Policies,"Capital costs
+(USD/kW)",Fuel cell (distributed electricity generation),gas
+European Union,25,25,25,Stated.Policies,"Annual O&M Costs
+(USD/kW)",CCGT,gas
+United States,25,25,25,Stated.Policies,"Annual O&M Costs
+(USD/kW)",CCGT,gas
+Japan,30,30,30,Stated.Policies,"Annual O&M Costs
+(USD/kW)",CCGT,gas
+Russia,30,30,30,Stated.Policies,"Annual O&M Costs
+(USD/kW)",CCGT,gas
+China,20,20,20,Stated.Policies,"Annual O&M Costs
+(USD/kW)",CCGT,gas
+India,25,25,25,Stated.Policies,"Annual O&M Costs
+(USD/kW)",CCGT,gas
+Middle East,30,30,30,Stated.Policies,"Annual O&M Costs
+(USD/kW)",CCGT,gas
+Africa,25,25,25,Stated.Policies,"Annual O&M Costs
+(USD/kW)",CCGT,gas
+Brazil,25,25,25,Stated.Policies,"Annual O&M Costs
+(USD/kW)",CCGT,gas
+European Union,20,20,20,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Gas turbine,gas
+United States,20,20,20,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Gas turbine,gas
+Japan,20,20,20,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Gas turbine,gas
+Russia,25,25,25,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Gas turbine,gas
+China,20,20,20,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Gas turbine,gas
+India,20,20,20,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Gas turbine,gas
+Middle East,25,25,25,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Gas turbine,gas
+Africa,20,20,20,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Gas turbine,gas
+Brazil,20,20,20,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Gas turbine,gas
+European Union,40,40,40,Stated.Policies,"Annual O&M Costs
+(USD/kW)",CCGT - CHP,gas
+United States,40,40,40,Stated.Policies,"Annual O&M Costs
+(USD/kW)",CCGT - CHP,gas
+Japan,45,45,45,Stated.Policies,"Annual O&M Costs
+(USD/kW)",CCGT - CHP,gas
+Russia,40,40,40,Stated.Policies,"Annual O&M Costs
+(USD/kW)",CCGT - CHP,gas
+China,30,30,30,Stated.Policies,"Annual O&M Costs
+(USD/kW)",CCGT - CHP,gas
+India,35,35,35,Stated.Policies,"Annual O&M Costs
+(USD/kW)",CCGT - CHP,gas
+Middle East,40,40,40,Stated.Policies,"Annual O&M Costs
+(USD/kW)",CCGT - CHP,gas
+Africa,35,35,35,Stated.Policies,"Annual O&M Costs
+(USD/kW)",CCGT - CHP,gas
+Brazil,35,35,35,Stated.Policies,"Annual O&M Costs
+(USD/kW)",CCGT - CHP,gas
+European Union,100,50,50,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Fuel cell (distributed electricity generation),gas
+United States,100,50,50,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Fuel cell (distributed electricity generation),gas
+Japan,100,50,50,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Fuel cell (distributed electricity generation),gas
+Russia,150,75,75,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Fuel cell (distributed electricity generation),gas
+China,150,75,75,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Fuel cell (distributed electricity generation),gas
+India,150,75,75,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Fuel cell (distributed electricity generation),gas
+Middle East,150,75,75,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Fuel cell (distributed electricity generation),gas
+Africa,150,75,75,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Fuel cell (distributed electricity generation),gas
+Brazil,150,75,75,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Fuel cell (distributed electricity generation),gas
+European Union,0.59,0.6,0.61,Stated.Policies,"Efficiency
+(gross, LHV)",CCGT,gas
+United States,0.59,0.6,0.61,Stated.Policies,"Efficiency
+(gross, LHV)",CCGT,gas
+Japan,0.59,0.6,0.61,Stated.Policies,"Efficiency
+(gross, LHV)",CCGT,gas
+Russia,0.57,0.58,0.58,Stated.Policies,"Efficiency
+(gross, LHV)",CCGT,gas
+China,0.57,0.58,0.59,Stated.Policies,"Efficiency
+(gross, LHV)",CCGT,gas
+India,0.56,0.57,0.58,Stated.Policies,"Efficiency
+(gross, LHV)",CCGT,gas
+Middle East,0.57,0.58,0.58,Stated.Policies,"Efficiency
+(gross, LHV)",CCGT,gas
+Africa,0.58,0.59,0.59,Stated.Policies,"Efficiency
+(gross, LHV)",CCGT,gas
+Brazil,0.58,0.59,0.59,Stated.Policies,"Efficiency
+(gross, LHV)",CCGT,gas
+European Union,0.4,0.41,0.42,Stated.Policies,"Efficiency
+(gross, LHV)",Gas turbine,gas
+United States,0.4,0.41,0.42,Stated.Policies,"Efficiency
+(gross, LHV)",Gas turbine,gas
+Japan,0.4,0.41,0.42,Stated.Policies,"Efficiency
+(gross, LHV)",Gas turbine,gas
+Russia,0.38,0.39,0.41,Stated.Policies,"Efficiency
+(gross, LHV)",Gas turbine,gas
+China,0.38,0.39,0.41,Stated.Policies,"Efficiency
+(gross, LHV)",Gas turbine,gas
+India,0.38,0.39,0.41,Stated.Policies,"Efficiency
+(gross, LHV)",Gas turbine,gas
+Middle East,0.38,0.39,0.41,Stated.Policies,"Efficiency
+(gross, LHV)",Gas turbine,gas
+Africa,0.38,0.39,0.41,Stated.Policies,"Efficiency
+(gross, LHV)",Gas turbine,gas
+Brazil,0.38,0.39,0.41,Stated.Policies,"Efficiency
+(gross, LHV)",Gas turbine,gas
+European Union,0.82,0.83,0.84,Stated.Policies,"Efficiency
+(gross, LHV)",CCGT - CHP,gas
+United States,0.82,0.83,0.84,Stated.Policies,"Efficiency
+(gross, LHV)",CCGT - CHP,gas
+Japan,0.82,0.83,0.84,Stated.Policies,"Efficiency
+(gross, LHV)",CCGT - CHP,gas
+Russia,0.8,0.81,0.82,Stated.Policies,"Efficiency
+(gross, LHV)",CCGT - CHP,gas
+China,0.8,0.81,0.82,Stated.Policies,"Efficiency
+(gross, LHV)",CCGT - CHP,gas
+India,0.79,0.8,0.81,Stated.Policies,"Efficiency
+(gross, LHV)",CCGT - CHP,gas
+Middle East,0.8,0.81,0.82,Stated.Policies,"Efficiency
+(gross, LHV)",CCGT - CHP,gas
+Africa,0.81,0.82,0.83,Stated.Policies,"Efficiency
+(gross, LHV)",CCGT - CHP,gas
+Brazil,0.81,0.82,0.83,Stated.Policies,"Efficiency
+(gross, LHV)",CCGT - CHP,gas
+European Union,0.46,0.54,0.6,Stated.Policies,"Efficiency
+(gross, LHV)",Fuel cell (distributed electricity generation),gas
+United States,0.46,0.54,0.6,Stated.Policies,"Efficiency
+(gross, LHV)",Fuel cell (distributed electricity generation),gas
+Japan,0.46,0.54,0.6,Stated.Policies,"Efficiency
+(gross, LHV)",Fuel cell (distributed electricity generation),gas
+Russia,0.46,0.54,0.6,Stated.Policies,"Efficiency
+(gross, LHV)",Fuel cell (distributed electricity generation),gas
+China,0.46,0.54,0.6,Stated.Policies,"Efficiency
+(gross, LHV)",Fuel cell (distributed electricity generation),gas
+India,0.46,0.54,0.6,Stated.Policies,"Efficiency
+(gross, LHV)",Fuel cell (distributed electricity generation),gas
+Middle East,0.46,0.54,0.6,Stated.Policies,"Efficiency
+(gross, LHV)",Fuel cell (distributed electricity generation),gas
+Africa,0.46,0.54,0.6,Stated.Policies,"Efficiency
+(gross, LHV)",Fuel cell (distributed electricity generation),gas
+Brazil,0.46,0.54,0.6,Stated.Policies,"Efficiency
+(gross, LHV)",Fuel cell (distributed electricity generation),gas
+European Union,NA,1000,1000,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",CCGT,gas
+United States,NA,1000,1000,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",CCGT,gas
+Japan,NA,1100,1100,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",CCGT,gas
+Russia,NA,800,800,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",CCGT,gas
+China,NA,560,560,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",CCGT,gas
+India,NA,700,700,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",CCGT,gas
+Middle East,NA,800,800,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",CCGT,gas
+Africa,NA,700,700,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",CCGT,gas
+Brazil,NA,700,700,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",CCGT,gas
+European Union,NA,500,500,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Gas turbine,gas
+United States,NA,500,500,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Gas turbine,gas
+Japan,NA,500,500,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Gas turbine,gas
+Russia,NA,450,450,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Gas turbine,gas
+China,NA,350,350,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Gas turbine,gas
+India,NA,400,400,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Gas turbine,gas
+Middle East,NA,450,450,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Gas turbine,gas
+Africa,NA,400,400,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Gas turbine,gas
+Brazil,NA,400,400,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Gas turbine,gas
+European Union,NA,1300,1300,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",CCGT - CHP,gas
+United States,NA,1300,1300,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",CCGT - CHP,gas
+Japan,NA,1440,1440,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",CCGT - CHP,gas
+Russia,NA,1040,1040,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",CCGT - CHP,gas
+China,NA,720,720,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",CCGT - CHP,gas
+India,NA,920,920,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",CCGT - CHP,gas
+Middle East,NA,1040,1040,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",CCGT - CHP,gas
+Africa,NA,920,920,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",CCGT - CHP,gas
+Brazil,NA,920,920,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",CCGT - CHP,gas
+European Union,NA,2500,2500,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Fuel cell (distributed electricity generation),gas
+United States,NA,2500,2500,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Fuel cell (distributed electricity generation),gas
+Japan,NA,2500,2500,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Fuel cell (distributed electricity generation),gas
+Russia,NA,2500,2500,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Fuel cell (distributed electricity generation),gas
+China,NA,2500,2500,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Fuel cell (distributed electricity generation),gas
+India,NA,2500,2500,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Fuel cell (distributed electricity generation),gas
+Middle East,NA,2500,2500,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Fuel cell (distributed electricity generation),gas
+Africa,NA,2500,2500,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Fuel cell (distributed electricity generation),gas
+Brazil,NA,2500,2500,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Fuel cell (distributed electricity generation),gas
+European Union,NA,25,25,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",CCGT,gas
+United States,NA,25,25,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",CCGT,gas
+Japan,NA,30,30,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",CCGT,gas
+Russia,NA,30,30,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",CCGT,gas
+China,NA,20,20,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",CCGT,gas
+India,NA,25,25,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",CCGT,gas
+Middle East,NA,30,30,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",CCGT,gas
+Africa,NA,25,25,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",CCGT,gas
+Brazil,NA,25,25,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",CCGT,gas
+European Union,NA,20,20,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Gas turbine,gas
+United States,NA,20,20,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Gas turbine,gas
+Japan,NA,20,20,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Gas turbine,gas
+Russia,NA,25,25,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Gas turbine,gas
+China,NA,20,20,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Gas turbine,gas
+India,NA,20,20,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Gas turbine,gas
+Middle East,NA,25,25,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Gas turbine,gas
+Africa,NA,20,20,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Gas turbine,gas
+Brazil,NA,20,20,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Gas turbine,gas
+European Union,NA,40,40,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",CCGT - CHP,gas
+United States,NA,40,40,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",CCGT - CHP,gas
+Japan,NA,45,45,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",CCGT - CHP,gas
+Russia,NA,40,40,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",CCGT - CHP,gas
+China,NA,30,30,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",CCGT - CHP,gas
+India,NA,35,35,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",CCGT - CHP,gas
+Middle East,NA,40,40,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",CCGT - CHP,gas
+Africa,NA,35,35,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",CCGT - CHP,gas
+Brazil,NA,35,35,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",CCGT - CHP,gas
+European Union,NA,50,50,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Fuel cell (distributed electricity generation),gas
+United States,NA,50,50,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Fuel cell (distributed electricity generation),gas
+Japan,NA,50,50,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Fuel cell (distributed electricity generation),gas
+Russia,NA,75,75,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Fuel cell (distributed electricity generation),gas
+China,NA,75,75,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Fuel cell (distributed electricity generation),gas
+India,NA,75,75,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Fuel cell (distributed electricity generation),gas
+Middle East,NA,75,75,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Fuel cell (distributed electricity generation),gas
+Africa,NA,75,75,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Fuel cell (distributed electricity generation),gas
+Brazil,NA,75,75,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Fuel cell (distributed electricity generation),gas
+European Union,NA,0.6,0.61,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",CCGT,gas
+United States,NA,0.6,0.61,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",CCGT,gas
+Japan,NA,0.6,0.61,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",CCGT,gas
+Russia,NA,0.58,0.58,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",CCGT,gas
+China,NA,0.58,0.58,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",CCGT,gas
+India,NA,0.57,0.58,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",CCGT,gas
+Middle East,NA,0.58,0.58,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",CCGT,gas
+Africa,NA,0.59,0.59,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",CCGT,gas
+Brazil,NA,0.59,0.59,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",CCGT,gas
+European Union,NA,0.41,0.42,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Gas turbine,gas
+United States,NA,0.41,0.42,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Gas turbine,gas
+Japan,NA,0.41,0.42,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Gas turbine,gas
+Russia,NA,0.39,0.41,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Gas turbine,gas
+China,NA,0.39,0.41,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Gas turbine,gas
+India,NA,0.39,0.41,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Gas turbine,gas
+Middle East,NA,0.39,0.41,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Gas turbine,gas
+Africa,NA,0.39,0.41,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Gas turbine,gas
+Brazil,NA,0.39,0.41,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Gas turbine,gas
+European Union,NA,0.83,0.84,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",CCGT - CHP,gas
+United States,NA,0.83,0.84,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",CCGT - CHP,gas
+Japan,NA,0.83,0.84,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",CCGT - CHP,gas
+Russia,NA,0.81,0.82,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",CCGT - CHP,gas
+China,NA,0.81,0.82,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",CCGT - CHP,gas
+India,NA,0.8,0.81,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",CCGT - CHP,gas
+Middle East,NA,0.81,0.82,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",CCGT - CHP,gas
+Africa,NA,0.82,0.83,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",CCGT - CHP,gas
+Brazil,NA,0.82,0.83,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",CCGT - CHP,gas
+European Union,NA,0.54,0.6,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Fuel cell (distributed electricity generation),gas
+United States,NA,0.54,0.6,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Fuel cell (distributed electricity generation),gas
+Japan,NA,0.54,0.6,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Fuel cell (distributed electricity generation),gas
+Russia,NA,0.54,0.6,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Fuel cell (distributed electricity generation),gas
+China,NA,0.54,0.6,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Fuel cell (distributed electricity generation),gas
+India,NA,0.54,0.6,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Fuel cell (distributed electricity generation),gas
+Middle East,NA,0.54,0.6,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Fuel cell (distributed electricity generation),gas
+Africa,NA,0.54,0.6,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Fuel cell (distributed electricity generation),gas
+Brazil,NA,0.54,0.6,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Fuel cell (distributed electricity generation),gas
+European Union,5500,5350,4000,Stated.Policies,"Capital costs
+(USD/kW)",Coal + CCS,fossil fuels equipped with ccus
+United States,5600,5450,4000,Stated.Policies,"Capital costs
+(USD/kW)",Coal + CCS,fossil fuels equipped with ccus
+Japan,5900,5750,4400,Stated.Policies,"Capital costs
+(USD/kW)",Coal + CCS,fossil fuels equipped with ccus
+Russia,5100,4950,3800,Stated.Policies,"Capital costs
+(USD/kW)",Coal + CCS,fossil fuels equipped with ccus
+China,3400,3250,2150,Stated.Policies,"Capital costs
+(USD/kW)",Coal + CCS,fossil fuels equipped with ccus
+India,3900,3750,2750,Stated.Policies,"Capital costs
+(USD/kW)",Coal + CCS,fossil fuels equipped with ccus
+Middle East,NA,NA,NA,Stated.Policies,"Capital costs
+(USD/kW)",Coal + CCS,fossil fuels equipped with ccus
+Africa,4500,4350,3250,Stated.Policies,"Capital costs
+(USD/kW)",Coal + CCS,fossil fuels equipped with ccus
+Brazil,NA,NA,NA,Stated.Policies,"Capital costs
+(USD/kW)",Coal + CCS,fossil fuels equipped with ccus
+European Union,5850,5550,4950,Stated.Policies,"Capital costs
+(USD/kW)",IGCC + CCS,fossil fuels equipped with ccus
+United States,5950,5650,4950,Stated.Policies,"Capital costs
+(USD/kW)",IGCC + CCS,fossil fuels equipped with ccus
+Japan,6250,5950,5350,Stated.Policies,"Capital costs
+(USD/kW)",IGCC + CCS,fossil fuels equipped with ccus
+Russia,5450,5200,4600,Stated.Policies,"Capital costs
+(USD/kW)",IGCC + CCS,fossil fuels equipped with ccus
+China,3650,3450,2850,Stated.Policies,"Capital costs
+(USD/kW)",IGCC + CCS,fossil fuels equipped with ccus
+India,4150,3950,3500,Stated.Policies,"Capital costs
+(USD/kW)",IGCC + CCS,fossil fuels equipped with ccus
+Middle East,NA,NA,NA,Stated.Policies,"Capital costs
+(USD/kW)",IGCC + CCS,fossil fuels equipped with ccus
+Africa,4850,4600,4150,Stated.Policies,"Capital costs
+(USD/kW)",IGCC + CCS,fossil fuels equipped with ccus
+Brazil,NA,NA,NA,Stated.Policies,"Capital costs
+(USD/kW)",IGCC + CCS,fossil fuels equipped with ccus
+European Union,3100,3000,2200,Stated.Policies,"Capital costs
+(USD/kW)",CCGT + CCS,fossil fuels equipped with ccus
+United States,3100,3000,2150,Stated.Policies,"Capital costs
+(USD/kW)",CCGT + CCS,fossil fuels equipped with ccus
+Japan,3200,3100,2300,Stated.Policies,"Capital costs
+(USD/kW)",CCGT + CCS,fossil fuels equipped with ccus
+Russia,2650,2550,1850,Stated.Policies,"Capital costs
+(USD/kW)",CCGT + CCS,fossil fuels equipped with ccus
+China,2200,2100,1450,Stated.Policies,"Capital costs
+(USD/kW)",CCGT + CCS,fossil fuels equipped with ccus
+India,2300,2200,1600,Stated.Policies,"Capital costs
+(USD/kW)",CCGT + CCS,fossil fuels equipped with ccus
+Middle East,2800,2700,1950,Stated.Policies,"Capital costs
+(USD/kW)",CCGT + CCS,fossil fuels equipped with ccus
+Africa,2450,2350,1700,Stated.Policies,"Capital costs
+(USD/kW)",CCGT + CCS,fossil fuels equipped with ccus
+Brazil,NA,NA,NA,Stated.Policies,"Capital costs
+(USD/kW)",CCGT + CCS,fossil fuels equipped with ccus
+European Union,165,160,120,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Coal + CCS,fossil fuels equipped with ccus
+United States,170,165,120,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Coal + CCS,fossil fuels equipped with ccus
+Japan,175,170,130,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Coal + CCS,fossil fuels equipped with ccus
+Russia,180,175,130,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Coal + CCS,fossil fuels equipped with ccus
+China,135,130,85,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Coal + CCS,fossil fuels equipped with ccus
+India,155,150,110,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Coal + CCS,fossil fuels equipped with ccus
+Middle East,NA,NA,NA,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Coal + CCS,fossil fuels equipped with ccus
+Africa,175,165,125,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Coal + CCS,fossil fuels equipped with ccus
+Brazil,NA,NA,NA,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Coal + CCS,fossil fuels equipped with ccus
+European Union,205,195,170,Stated.Policies,"Annual O&M Costs
+(USD/kW)",IGCC + CCS,fossil fuels equipped with ccus
+United States,210,200,175,Stated.Policies,"Annual O&M Costs
+(USD/kW)",IGCC + CCS,fossil fuels equipped with ccus
+Japan,220,210,185,Stated.Policies,"Annual O&M Costs
+(USD/kW)",IGCC + CCS,fossil fuels equipped with ccus
+Russia,190,180,160,Stated.Policies,"Annual O&M Costs
+(USD/kW)",IGCC + CCS,fossil fuels equipped with ccus
+China,165,155,130,Stated.Policies,"Annual O&M Costs
+(USD/kW)",IGCC + CCS,fossil fuels equipped with ccus
+India,185,175,160,Stated.Policies,"Annual O&M Costs
+(USD/kW)",IGCC + CCS,fossil fuels equipped with ccus
+Middle East,NA,NA,NA,Stated.Policies,"Annual O&M Costs
+(USD/kW)",IGCC + CCS,fossil fuels equipped with ccus
+Africa,210,200,180,Stated.Policies,"Annual O&M Costs
+(USD/kW)",IGCC + CCS,fossil fuels equipped with ccus
+Brazil,NA,NA,NA,Stated.Policies,"Annual O&M Costs
+(USD/kW)",IGCC + CCS,fossil fuels equipped with ccus
+European Union,80,75,55,Stated.Policies,"Annual O&M Costs
+(USD/kW)",CCGT + CCS,fossil fuels equipped with ccus
+United States,80,75,55,Stated.Policies,"Annual O&M Costs
+(USD/kW)",CCGT + CCS,fossil fuels equipped with ccus
+Japan,80,80,60,Stated.Policies,"Annual O&M Costs
+(USD/kW)",CCGT + CCS,fossil fuels equipped with ccus
+Russia,95,90,65,Stated.Policies,"Annual O&M Costs
+(USD/kW)",CCGT + CCS,fossil fuels equipped with ccus
+China,70,70,45,Stated.Policies,"Annual O&M Costs
+(USD/kW)",CCGT + CCS,fossil fuels equipped with ccus
+India,80,80,55,Stated.Policies,"Annual O&M Costs
+(USD/kW)",CCGT + CCS,fossil fuels equipped with ccus
+Middle East,100,95,70,Stated.Policies,"Annual O&M Costs
+(USD/kW)",CCGT + CCS,fossil fuels equipped with ccus
+Africa,85,85,60,Stated.Policies,"Annual O&M Costs
+(USD/kW)",CCGT + CCS,fossil fuels equipped with ccus
+Brazil,NA,NA,NA,Stated.Policies,"Annual O&M Costs
+(USD/kW)",CCGT + CCS,fossil fuels equipped with ccus
+European Union,0.36,0.37,0.37,Stated.Policies,"Efficiency
+(gross, LHV)",Coal + CCS,fossil fuels equipped with ccus
+United States,0.36,0.37,0.37,Stated.Policies,"Efficiency
+(gross, LHV)",Coal + CCS,fossil fuels equipped with ccus
+Japan,0.36,0.37,0.37,Stated.Policies,"Efficiency
+(gross, LHV)",Coal + CCS,fossil fuels equipped with ccus
+Russia,0.36,0.37,0.37,Stated.Policies,"Efficiency
+(gross, LHV)",Coal + CCS,fossil fuels equipped with ccus
+China,0.35,0.36,0.36,Stated.Policies,"Efficiency
+(gross, LHV)",Coal + CCS,fossil fuels equipped with ccus
+India,0.31,0.32,0.31,Stated.Policies,"Efficiency
+(gross, LHV)",Coal + CCS,fossil fuels equipped with ccus
+Middle East,NA,NA,NA,Stated.Policies,"Efficiency
+(gross, LHV)",Coal + CCS,fossil fuels equipped with ccus
+Africa,0.32,0.33,0.33,Stated.Policies,"Efficiency
+(gross, LHV)",Coal + CCS,fossil fuels equipped with ccus
+Brazil,NA,NA,NA,Stated.Policies,"Efficiency
+(gross, LHV)",Coal + CCS,fossil fuels equipped with ccus
+European Union,0.35,0.36,0.39,Stated.Policies,"Efficiency
+(gross, LHV)",IGCC + CCS,fossil fuels equipped with ccus
+United States,0.35,0.36,0.39,Stated.Policies,"Efficiency
+(gross, LHV)",IGCC + CCS,fossil fuels equipped with ccus
+Japan,0.35,0.36,0.39,Stated.Policies,"Efficiency
+(gross, LHV)",IGCC + CCS,fossil fuels equipped with ccus
+Russia,0.35,0.36,0.39,Stated.Policies,"Efficiency
+(gross, LHV)",IGCC + CCS,fossil fuels equipped with ccus
+China,0.34,0.35,0.38,Stated.Policies,"Efficiency
+(gross, LHV)",IGCC + CCS,fossil fuels equipped with ccus
+India,0.32,0.33,0.36,Stated.Policies,"Efficiency
+(gross, LHV)",IGCC + CCS,fossil fuels equipped with ccus
+Middle East,NA,NA,NA,Stated.Policies,"Efficiency
+(gross, LHV)",IGCC + CCS,fossil fuels equipped with ccus
+Africa,0.32,0.32,0.35,Stated.Policies,"Efficiency
+(gross, LHV)",IGCC + CCS,fossil fuels equipped with ccus
+Brazil,NA,NA,NA,Stated.Policies,"Efficiency
+(gross, LHV)",IGCC + CCS,fossil fuels equipped with ccus
+European Union,0.51,0.52,0.52,Stated.Policies,"Efficiency
+(gross, LHV)",CCGT + CCS,fossil fuels equipped with ccus
+United States,0.51,0.52,0.52,Stated.Policies,"Efficiency
+(gross, LHV)",CCGT + CCS,fossil fuels equipped with ccus
+Japan,0.51,0.52,0.52,Stated.Policies,"Efficiency
+(gross, LHV)",CCGT + CCS,fossil fuels equipped with ccus
+Russia,0.49,0.5,0.5,Stated.Policies,"Efficiency
+(gross, LHV)",CCGT + CCS,fossil fuels equipped with ccus
+China,0.49,0.5,0.5,Stated.Policies,"Efficiency
+(gross, LHV)",CCGT + CCS,fossil fuels equipped with ccus
+India,0.48,0.49,0.49,Stated.Policies,"Efficiency
+(gross, LHV)",CCGT + CCS,fossil fuels equipped with ccus
+Middle East,0.49,0.5,0.5,Stated.Policies,"Efficiency
+(gross, LHV)",CCGT + CCS,fossil fuels equipped with ccus
+Africa,0.5,0.51,0.51,Stated.Policies,"Efficiency
+(gross, LHV)",CCGT + CCS,fossil fuels equipped with ccus
+Brazil,NA,NA,NA,Stated.Policies,"Efficiency
+(gross, LHV)",CCGT + CCS,fossil fuels equipped with ccus
+European Union,NA,3600,3200,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Coal + CCS,fossil fuels equipped with ccus
+United States,NA,3650,3250,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Coal + CCS,fossil fuels equipped with ccus
+Japan,NA,3950,3550,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Coal + CCS,fossil fuels equipped with ccus
+Russia,NA,3450,3100,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Coal + CCS,fossil fuels equipped with ccus
+China,NA,1900,1600,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Coal + CCS,fossil fuels equipped with ccus
+India,NA,2450,2100,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Coal + CCS,fossil fuels equipped with ccus
+Middle East,NA,NA,NA,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Coal + CCS,fossil fuels equipped with ccus
+Africa,NA,3000,2600,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Coal + CCS,fossil fuels equipped with ccus
+Brazil,NA,NA,NA,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Coal + CCS,fossil fuels equipped with ccus
+European Union,NA,4200,3650,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",IGCC + CCS,fossil fuels equipped with ccus
+United States,NA,4200,3650,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",IGCC + CCS,fossil fuels equipped with ccus
+Japan,NA,4550,4000,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",IGCC + CCS,fossil fuels equipped with ccus
+Russia,NA,4000,3450,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",IGCC + CCS,fossil fuels equipped with ccus
+China,NA,2250,1850,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",IGCC + CCS,fossil fuels equipped with ccus
+India,NA,2900,2450,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",IGCC + CCS,fossil fuels equipped with ccus
+Middle East,NA,NA,NA,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",IGCC + CCS,fossil fuels equipped with ccus
+Africa,NA,3500,3100,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",IGCC + CCS,fossil fuels equipped with ccus
+Brazil,NA,NA,NA,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",IGCC + CCS,fossil fuels equipped with ccus
+European Union,NA,2000,1700,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",CCGT + CCS,fossil fuels equipped with ccus
+United States,NA,1950,1700,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",CCGT + CCS,fossil fuels equipped with ccus
+Japan,NA,2050,1800,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",CCGT + CCS,fossil fuels equipped with ccus
+Russia,NA,1700,1450,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",CCGT + CCS,fossil fuels equipped with ccus
+China,NA,1250,1100,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",CCGT + CCS,fossil fuels equipped with ccus
+India,NA,1450,1250,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",CCGT + CCS,fossil fuels equipped with ccus
+Middle East,NA,1750,1450,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",CCGT + CCS,fossil fuels equipped with ccus
+Africa,NA,1550,1300,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",CCGT + CCS,fossil fuels equipped with ccus
+Brazil,NA,NA,NA,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",CCGT + CCS,fossil fuels equipped with ccus
+European Union,NA,110,95,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Coal + CCS,fossil fuels equipped with ccus
+United States,NA,110,100,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Coal + CCS,fossil fuels equipped with ccus
+Japan,NA,120,105,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Coal + CCS,fossil fuels equipped with ccus
+Russia,NA,120,110,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Coal + CCS,fossil fuels equipped with ccus
+China,NA,75,65,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Coal + CCS,fossil fuels equipped with ccus
+India,NA,95,85,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Coal + CCS,fossil fuels equipped with ccus
+Middle East,NA,NA,NA,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Coal + CCS,fossil fuels equipped with ccus
+Africa,NA,110,95,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Coal + CCS,fossil fuels equipped with ccus
+Brazil,NA,NA,NA,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Coal + CCS,fossil fuels equipped with ccus
+European Union,NA,145,125,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",IGCC + CCS,fossil fuels equipped with ccus
+United States,NA,145,130,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",IGCC + CCS,fossil fuels equipped with ccus
+Japan,NA,160,140,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",IGCC + CCS,fossil fuels equipped with ccus
+Russia,NA,140,120,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",IGCC + CCS,fossil fuels equipped with ccus
+China,NA,100,80,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",IGCC + CCS,fossil fuels equipped with ccus
+India,NA,130,110,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",IGCC + CCS,fossil fuels equipped with ccus
+Middle East,NA,NA,NA,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",IGCC + CCS,fossil fuels equipped with ccus
+Africa,NA,150,135,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",IGCC + CCS,fossil fuels equipped with ccus
+Brazil,NA,NA,NA,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",IGCC + CCS,fossil fuels equipped with ccus
+European Union,NA,50,45,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",CCGT + CCS,fossil fuels equipped with ccus
+United States,NA,50,45,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",CCGT + CCS,fossil fuels equipped with ccus
+Japan,NA,50,45,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",CCGT + CCS,fossil fuels equipped with ccus
+Russia,NA,60,50,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",CCGT + CCS,fossil fuels equipped with ccus
+China,NA,40,35,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",CCGT + CCS,fossil fuels equipped with ccus
+India,NA,50,45,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",CCGT + CCS,fossil fuels equipped with ccus
+Middle East,NA,60,50,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",CCGT + CCS,fossil fuels equipped with ccus
+Africa,NA,55,45,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",CCGT + CCS,fossil fuels equipped with ccus
+Brazil,NA,NA,NA,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",CCGT + CCS,fossil fuels equipped with ccus
+European Union,NA,0.38,0.39,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Coal + CCS,fossil fuels equipped with ccus
+United States,NA,0.38,0.39,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Coal + CCS,fossil fuels equipped with ccus
+Japan,NA,0.38,0.39,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Coal + CCS,fossil fuels equipped with ccus
+Russia,NA,0.38,0.39,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Coal + CCS,fossil fuels equipped with ccus
+China,NA,0.37,0.38,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Coal + CCS,fossil fuels equipped with ccus
+India,NA,0.33,0.34,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Coal + CCS,fossil fuels equipped with ccus
+Middle East,NA,NA,NA,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Coal + CCS,fossil fuels equipped with ccus
+Africa,NA,0.34,0.35,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Coal + CCS,fossil fuels equipped with ccus
+Brazil,NA,NA,NA,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Coal + CCS,fossil fuels equipped with ccus
+European Union,NA,0.4,0.42,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",IGCC + CCS,fossil fuels equipped with ccus
+United States,NA,0.4,0.42,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",IGCC + CCS,fossil fuels equipped with ccus
+Japan,NA,0.4,0.42,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",IGCC + CCS,fossil fuels equipped with ccus
+Russia,NA,0.4,0.42,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",IGCC + CCS,fossil fuels equipped with ccus
+China,NA,0.39,0.42,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",IGCC + CCS,fossil fuels equipped with ccus
+India,NA,0.37,0.4,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",IGCC + CCS,fossil fuels equipped with ccus
+Middle East,NA,NA,NA,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",IGCC + CCS,fossil fuels equipped with ccus
+Africa,NA,0.36,0.38,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",IGCC + CCS,fossil fuels equipped with ccus
+Brazil,NA,NA,NA,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",IGCC + CCS,fossil fuels equipped with ccus
+European Union,NA,0.53,0.54,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",CCGT + CCS,fossil fuels equipped with ccus
+United States,NA,0.53,0.54,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",CCGT + CCS,fossil fuels equipped with ccus
+Japan,NA,0.53,0.54,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",CCGT + CCS,fossil fuels equipped with ccus
+Russia,NA,0.51,0.52,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",CCGT + CCS,fossil fuels equipped with ccus
+China,NA,0.51,0.52,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",CCGT + CCS,fossil fuels equipped with ccus
+India,NA,0.5,0.51,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",CCGT + CCS,fossil fuels equipped with ccus
+Middle East,NA,0.51,0.52,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",CCGT + CCS,fossil fuels equipped with ccus
+Africa,NA,0.52,0.53,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",CCGT + CCS,fossil fuels equipped with ccus
+Brazil,NA,NA,NA,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",CCGT + CCS,fossil fuels equipped with ccus
+European Union,6600,5100,4500,Stated.Policies,"Capital costs
+(USD/kW)",Nuclear,nuclear
+United States,5000,4800,4500,Stated.Policies,"Capital costs
+(USD/kW)",Nuclear,nuclear
+Japan,4200,4000,4000,Stated.Policies,"Capital costs
+(USD/kW)",Nuclear,nuclear
+Russia,3800,3800,3800,Stated.Policies,"Capital costs
+(USD/kW)",Nuclear,nuclear
+China,2800,2800,2500,Stated.Policies,"Capital costs
+(USD/kW)",Nuclear,nuclear
+India,2800,2800,2800,Stated.Policies,"Capital costs
+(USD/kW)",Nuclear,nuclear
+Middle East,3500,3500,3500,Stated.Policies,"Capital costs
+(USD/kW)",Nuclear,nuclear
+Africa,4000,4000,4000,Stated.Policies,"Capital costs
+(USD/kW)",Nuclear,nuclear
+Brazil,4000,4000,4000,Stated.Policies,"Capital costs
+(USD/kW)",Nuclear,nuclear
+European Union,160,160,160,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Nuclear,nuclear
+United States,175,175,175,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Nuclear,nuclear
+Japan,225,225,225,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Nuclear,nuclear
+Russia,160,160,160,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Nuclear,nuclear
+China,120,120,120,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Nuclear,nuclear
+India,140,140,140,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Nuclear,nuclear
+Middle East,160,160,160,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Nuclear,nuclear
+Africa,170,170,170,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Nuclear,nuclear
+Brazil,170,170,170,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Nuclear,nuclear
+European Union,0.33,0.33,0.33,Stated.Policies,"Efficiency
+(gross, LHV)",Nuclear,nuclear
+United States,0.33,0.33,0.33,Stated.Policies,"Efficiency
+(gross, LHV)",Nuclear,nuclear
+Japan,0.33,0.33,0.33,Stated.Policies,"Efficiency
+(gross, LHV)",Nuclear,nuclear
+Russia,0.33,0.33,0.33,Stated.Policies,"Efficiency
+(gross, LHV)",Nuclear,nuclear
+China,0.33,0.33,0.33,Stated.Policies,"Efficiency
+(gross, LHV)",Nuclear,nuclear
+India,0.33,0.33,0.33,Stated.Policies,"Efficiency
+(gross, LHV)",Nuclear,nuclear
+Middle East,0.33,0.33,0.33,Stated.Policies,"Efficiency
+(gross, LHV)",Nuclear,nuclear
+Africa,0.33,0.33,0.33,Stated.Policies,"Efficiency
+(gross, LHV)",Nuclear,nuclear
+Brazil,0.33,0.33,0.33,Stated.Policies,"Efficiency
+(gross, LHV)",Nuclear,nuclear
+European Union,NA,5100,4500,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Nuclear,nuclear
+United States,NA,4800,4500,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Nuclear,nuclear
+Japan,NA,4000,4000,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Nuclear,nuclear
+Russia,NA,3800,3800,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Nuclear,nuclear
+China,NA,2800,2500,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Nuclear,nuclear
+India,NA,2800,2800,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Nuclear,nuclear
+Middle East,NA,3500,3500,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Nuclear,nuclear
+Africa,NA,4000,4000,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Nuclear,nuclear
+Brazil,NA,4000,4000,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Nuclear,nuclear
+European Union,NA,160,160,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Nuclear,nuclear
+United States,NA,175,175,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Nuclear,nuclear
+Japan,NA,225,225,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Nuclear,nuclear
+Russia,NA,160,160,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Nuclear,nuclear
+China,NA,120,120,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Nuclear,nuclear
+India,NA,140,140,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Nuclear,nuclear
+Middle East,NA,160,160,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Nuclear,nuclear
+Africa,NA,170,170,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Nuclear,nuclear
+Brazil,NA,170,170,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Nuclear,nuclear
+European Union,NA,0.33,0.33,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Nuclear,nuclear
+United States,NA,0.33,0.33,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Nuclear,nuclear
+Japan,NA,0.33,0.33,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Nuclear,nuclear
+Russia,NA,0.33,0.33,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Nuclear,nuclear
+China,NA,0.33,0.33,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Nuclear,nuclear
+India,NA,0.33,0.33,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Nuclear,nuclear
+Middle East,NA,0.33,0.33,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Nuclear,nuclear
+Africa,NA,0.33,0.33,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Nuclear,nuclear
+Brazil,NA,0.33,0.33,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Nuclear,nuclear
+European Union,810,530,410,Stated.Policies,"Capital costs
+(USD/kW)",Solar photovoltaics - Large scale unit,renewables
+United States,1090,710,510,Stated.Policies,"Capital costs
+(USD/kW)",Solar photovoltaics - Large scale unit,renewables
+Japan,1690,1170,900,Stated.Policies,"Capital costs
+(USD/kW)",Solar photovoltaics - Large scale unit,renewables
+Russia,1700,1140,830,Stated.Policies,"Capital costs
+(USD/kW)",Solar photovoltaics - Large scale unit,renewables
+China,630,410,300,Stated.Policies,"Capital costs
+(USD/kW)",Solar photovoltaics - Large scale unit,renewables
+India,590,380,270,Stated.Policies,"Capital costs
+(USD/kW)",Solar photovoltaics - Large scale unit,renewables
+Middle East,1110,700,490,Stated.Policies,"Capital costs
+(USD/kW)",Solar photovoltaics - Large scale unit,renewables
+Africa,1240,780,560,Stated.Policies,"Capital costs
+(USD/kW)",Solar photovoltaics - Large scale unit,renewables
+Brazil,820,510,370,Stated.Policies,"Capital costs
+(USD/kW)",Solar photovoltaics - Large scale unit,renewables
+European Union,1120,760,600,Stated.Policies,"Capital costs
+(USD/kW)",Solar photovoltaics - Buildings,renewables
+United States,3380,2200,1590,Stated.Policies,"Capital costs
+(USD/kW)",Solar photovoltaics - Buildings,renewables
+Japan,1670,1180,940,Stated.Policies,"Capital costs
+(USD/kW)",Solar photovoltaics - Buildings,renewables
+Russia,2190,1480,1090,Stated.Policies,"Capital costs
+(USD/kW)",Solar photovoltaics - Buildings,renewables
+China,700,460,340,Stated.Policies,"Capital costs
+(USD/kW)",Solar photovoltaics - Buildings,renewables
+India,650,410,290,Stated.Policies,"Capital costs
+(USD/kW)",Solar photovoltaics - Buildings,renewables
+Middle East,1820,1130,780,Stated.Policies,"Capital costs
+(USD/kW)",Solar photovoltaics - Buildings,renewables
+Africa,1730,1050,730,Stated.Policies,"Capital costs
+(USD/kW)",Solar photovoltaics - Buildings,renewables
+Brazil,640,390,280,Stated.Policies,"Capital costs
+(USD/kW)",Solar photovoltaics - Buildings,renewables
+European Union,1590,1510,1450,Stated.Policies,"Capital costs
+(USD/kW)",Wind onshore,renewables
+United States,1380,1310,1250,Stated.Policies,"Capital costs
+(USD/kW)",Wind onshore,renewables
+Japan,3130,2940,2810,Stated.Policies,"Capital costs
+(USD/kW)",Wind onshore,renewables
+Russia,1580,1470,1390,Stated.Policies,"Capital costs
+(USD/kW)",Wind onshore,renewables
+China,1160,1090,1050,Stated.Policies,"Capital costs
+(USD/kW)",Wind onshore,renewables
+India,930,880,830,Stated.Policies,"Capital costs
+(USD/kW)",Wind onshore,renewables
+Middle East,1950,1810,1700,Stated.Policies,"Capital costs
+(USD/kW)",Wind onshore,renewables
+Africa,1810,1700,1600,Stated.Policies,"Capital costs
+(USD/kW)",Wind onshore,renewables
+Brazil,1150,1090,1040,Stated.Policies,"Capital costs
+(USD/kW)",Wind onshore,renewables
+European Union,3040,2000,1500,Stated.Policies,"Capital costs
+(USD/kW)",Wind offshore,renewables
+United States,4040,2460,1820,Stated.Policies,"Capital costs
+(USD/kW)",Wind offshore,renewables
+Japan,5560,3440,2540,Stated.Policies,"Capital costs
+(USD/kW)",Wind offshore,renewables
+Russia,4600,2940,2160,Stated.Policies,"Capital costs
+(USD/kW)",Wind offshore,renewables
+China,2860,1840,1380,Stated.Policies,"Capital costs
+(USD/kW)",Wind offshore,renewables
+India,2780,1820,1300,Stated.Policies,"Capital costs
+(USD/kW)",Wind offshore,renewables
+Middle East,4400,2860,2060,Stated.Policies,"Capital costs
+(USD/kW)",Wind offshore,renewables
+Africa,4260,2820,1980,Stated.Policies,"Capital costs
+(USD/kW)",Wind offshore,renewables
+Brazil,4440,2900,2100,Stated.Policies,"Capital costs
+(USD/kW)",Wind offshore,renewables
+European Union,2650,2650,2650,Stated.Policies,"Capital costs
+(USD/kW)",Hydropower - large-scale unit,renewables
+United States,2700,2700,2700,Stated.Policies,"Capital costs
+(USD/kW)",Hydropower - large-scale unit,renewables
+Japan,2400,2400,2400,Stated.Policies,"Capital costs
+(USD/kW)",Hydropower - large-scale unit,renewables
+Russia,2050,2050,2050,Stated.Policies,"Capital costs
+(USD/kW)",Hydropower - large-scale unit,renewables
+China,1600,1600,1600,Stated.Policies,"Capital costs
+(USD/kW)",Hydropower - large-scale unit,renewables
+India,2000,2000,2000,Stated.Policies,"Capital costs
+(USD/kW)",Hydropower - large-scale unit,renewables
+Middle East,2150,2150,2150,Stated.Policies,"Capital costs
+(USD/kW)",Hydropower - large-scale unit,renewables
+Africa,2100,2100,2100,Stated.Policies,"Capital costs
+(USD/kW)",Hydropower - large-scale unit,renewables
+Brazil,2100,2100,2100,Stated.Policies,"Capital costs
+(USD/kW)",Hydropower - large-scale unit,renewables
+European Union,3900,3900,3900,Stated.Policies,"Capital costs
+(USD/kW)",Hydropower - small-scale unit,renewables
+United States,4050,4050,4050,Stated.Policies,"Capital costs
+(USD/kW)",Hydropower - small-scale unit,renewables
+Japan,3550,3550,3550,Stated.Policies,"Capital costs
+(USD/kW)",Hydropower - small-scale unit,renewables
+Russia,3500,3500,3500,Stated.Policies,"Capital costs
+(USD/kW)",Hydropower - small-scale unit,renewables
+China,2000,2000,2000,Stated.Policies,"Capital costs
+(USD/kW)",Hydropower - small-scale unit,renewables
+India,3050,3050,3050,Stated.Policies,"Capital costs
+(USD/kW)",Hydropower - small-scale unit,renewables
+Middle East,3400,3400,3400,Stated.Policies,"Capital costs
+(USD/kW)",Hydropower - small-scale unit,renewables
+Africa,3300,3300,3250,Stated.Policies,"Capital costs
+(USD/kW)",Hydropower - small-scale unit,renewables
+Brazil,3350,3350,3350,Stated.Policies,"Capital costs
+(USD/kW)",Hydropower - small-scale unit,renewables
+European Union,2400,2350,2300,Stated.Policies,"Capital costs
+(USD/kW)",Bioenergy - Large scale unit,renewables
+United States,2500,2450,2350,Stated.Policies,"Capital costs
+(USD/kW)",Bioenergy - Large scale unit,renewables
+Japan,2350,2300,2250,Stated.Policies,"Capital costs
+(USD/kW)",Bioenergy - Large scale unit,renewables
+Russia,2250,2200,2100,Stated.Policies,"Capital costs
+(USD/kW)",Bioenergy - Large scale unit,renewables
+China,1600,1550,1500,Stated.Policies,"Capital costs
+(USD/kW)",Bioenergy - Large scale unit,renewables
+India,2150,2100,2050,Stated.Policies,"Capital costs
+(USD/kW)",Bioenergy - Large scale unit,renewables
+Middle East,2300,2150,2050,Stated.Policies,"Capital costs
+(USD/kW)",Bioenergy - Large scale unit,renewables
+Africa,2150,2100,2000,Stated.Policies,"Capital costs
+(USD/kW)",Bioenergy - Large scale unit,renewables
+Brazil,2200,2150,2100,Stated.Policies,"Capital costs
+(USD/kW)",Bioenergy - Large scale unit,renewables
+European Union,600,575,575,Stated.Policies,"Capital costs
+(USD/kW)",Bioenergy - Cofiring,renewables
+United States,625,600,600,Stated.Policies,"Capital costs
+(USD/kW)",Bioenergy - Cofiring,renewables
+Japan,600,575,575,Stated.Policies,"Capital costs
+(USD/kW)",Bioenergy - Cofiring,renewables
+Russia,575,550,525,Stated.Policies,"Capital costs
+(USD/kW)",Bioenergy - Cofiring,renewables
+China,400,400,375,Stated.Policies,"Capital costs
+(USD/kW)",Bioenergy - Cofiring,renewables
+India,550,525,525,Stated.Policies,"Capital costs
+(USD/kW)",Bioenergy - Cofiring,renewables
+Middle East,575,550,525,Stated.Policies,"Capital costs
+(USD/kW)",Bioenergy - Cofiring,renewables
+Africa,525,500,475,Stated.Policies,"Capital costs
+(USD/kW)",Bioenergy - Cofiring,renewables
+Brazil,550,525,525,Stated.Policies,"Capital costs
+(USD/kW)",Bioenergy - Cofiring,renewables
+European Union,3750,3650,3550,Stated.Policies,"Capital costs
+(USD/kW)",Bioenergy - Medium-scale CHP,renewables
+United States,4050,3950,3850,Stated.Policies,"Capital costs
+(USD/kW)",Bioenergy - Medium-scale CHP,renewables
+Japan,3900,3800,3700,Stated.Policies,"Capital costs
+(USD/kW)",Bioenergy - Medium-scale CHP,renewables
+Russia,3500,3400,3250,Stated.Policies,"Capital costs
+(USD/kW)",Bioenergy - Medium-scale CHP,renewables
+China,2500,2400,2350,Stated.Policies,"Capital costs
+(USD/kW)",Bioenergy - Medium-scale CHP,renewables
+India,2800,2750,2650,Stated.Policies,"Capital costs
+(USD/kW)",Bioenergy - Medium-scale CHP,renewables
+Middle East,2950,2750,2650,Stated.Policies,"Capital costs
+(USD/kW)",Bioenergy - Medium-scale CHP,renewables
+Africa,2850,2750,2650,Stated.Policies,"Capital costs
+(USD/kW)",Bioenergy - Medium-scale CHP,renewables
+Brazil,2900,2850,2750,Stated.Policies,"Capital costs
+(USD/kW)",Bioenergy - Medium-scale CHP,renewables
+European Union,5750,5550,4900,Stated.Policies,"Capital costs
+(USD/kW)",Bioenergy + CCUS,renewables
+United States,5850,5650,4900,Stated.Policies,"Capital costs
+(USD/kW)",Bioenergy + CCUS,renewables
+Japan,5700,5500,4850,Stated.Policies,"Capital costs
+(USD/kW)",Bioenergy + CCUS,renewables
+Russia,5200,5000,4400,Stated.Policies,"Capital costs
+(USD/kW)",Bioenergy + CCUS,renewables
+China,4150,4000,3450,Stated.Policies,"Capital costs
+(USD/kW)",Bioenergy + CCUS,renewables
+India,4700,4550,4050,Stated.Policies,"Capital costs
+(USD/kW)",Bioenergy + CCUS,renewables
+Middle East,5150,4850,4300,Stated.Policies,"Capital costs
+(USD/kW)",Bioenergy + CCUS,renewables
+Africa,4900,4700,4150,Stated.Policies,"Capital costs
+(USD/kW)",Bioenergy + CCUS,renewables
+Brazil,4550,4400,3900,Stated.Policies,"Capital costs
+(USD/kW)",Bioenergy + CCUS,renewables
+European Union,5650,4950,3850,Stated.Policies,"Capital costs
+(USD/kW)",Concentrating solar power,renewables
+United States,6500,5850,4550,Stated.Policies,"Capital costs
+(USD/kW)",Concentrating solar power,renewables
+Japan,NA,NA,NA,Stated.Policies,"Capital costs
+(USD/kW)",Concentrating solar power,renewables
+Russia,NA,NA,NA,Stated.Policies,"Capital costs
+(USD/kW)",Concentrating solar power,renewables
+China,4900,4300,3300,Stated.Policies,"Capital costs
+(USD/kW)",Concentrating solar power,renewables
+India,5700,5000,3750,Stated.Policies,"Capital costs
+(USD/kW)",Concentrating solar power,renewables
+Middle East,5250,4450,3400,Stated.Policies,"Capital costs
+(USD/kW)",Concentrating solar power,renewables
+Africa,5050,4450,3400,Stated.Policies,"Capital costs
+(USD/kW)",Concentrating solar power,renewables
+Brazil,5350,4600,3450,Stated.Policies,"Capital costs
+(USD/kW)",Concentrating solar power,renewables
+European Union,2850,2750,2550,Stated.Policies,"Capital costs
+(USD/kW)",Geothermal,renewables
+United States,2150,2100,1950,Stated.Policies,"Capital costs
+(USD/kW)",Geothermal,renewables
+Japan,2800,2700,2500,Stated.Policies,"Capital costs
+(USD/kW)",Geothermal,renewables
+Russia,2200,2100,1950,Stated.Policies,"Capital costs
+(USD/kW)",Geothermal,renewables
+China,2300,2200,2000,Stated.Policies,"Capital costs
+(USD/kW)",Geothermal,renewables
+India,3600,3450,3150,Stated.Policies,"Capital costs
+(USD/kW)",Geothermal,renewables
+Middle East,2200,2100,1950,Stated.Policies,"Capital costs
+(USD/kW)",Geothermal,renewables
+Africa,3050,2900,2700,Stated.Policies,"Capital costs
+(USD/kW)",Geothermal,renewables
+Brazil,NA,NA,NA,Stated.Policies,"Capital costs
+(USD/kW)",Geothermal,renewables
+European Union,6950,4850,2800,Stated.Policies,"Capital costs
+(USD/kW)",Marine,renewables
+United States,6850,4700,2700,Stated.Policies,"Capital costs
+(USD/kW)",Marine,renewables
+Japan,7000,4950,2800,Stated.Policies,"Capital costs
+(USD/kW)",Marine,renewables
+Russia,6650,5100,3050,Stated.Policies,"Capital costs
+(USD/kW)",Marine,renewables
+China,6600,4900,2850,Stated.Policies,"Capital costs
+(USD/kW)",Marine,renewables
+India,6500,4850,2800,Stated.Policies,"Capital costs
+(USD/kW)",Marine,renewables
+Middle East,6650,5100,3050,Stated.Policies,"Capital costs
+(USD/kW)",Marine,renewables
+Africa,6550,4900,2950,Stated.Policies,"Capital costs
+(USD/kW)",Marine,renewables
+Brazil,NA,NA,NA,Stated.Policies,"Capital costs
+(USD/kW)",Marine,renewables
+European Union,12,10,10,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Solar photovoltaics - Large scale unit,renewables
+United States,16,16,16,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Solar photovoltaics - Large scale unit,renewables
+Japan,26,24,22,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Solar photovoltaics - Large scale unit,renewables
+Russia,26,24,22,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Solar photovoltaics - Large scale unit,renewables
+China,12,10,10,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Solar photovoltaics - Large scale unit,renewables
+India,8,8,8,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Solar photovoltaics - Large scale unit,renewables
+Middle East,16,16,14,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Solar photovoltaics - Large scale unit,renewables
+Africa,18,16,16,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Solar photovoltaics - Large scale unit,renewables
+Brazil,12,12,10,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Solar photovoltaics - Large scale unit,renewables
+European Union,16,16,14,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Solar photovoltaics - Buildings,renewables
+United States,50,46,44,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Solar photovoltaics - Buildings,renewables
+Japan,26,24,22,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Solar photovoltaics - Buildings,renewables
+Russia,32,30,28,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Solar photovoltaics - Buildings,renewables
+China,12,12,12,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Solar photovoltaics - Buildings,renewables
+India,10,8,8,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Solar photovoltaics - Buildings,renewables
+Middle East,28,24,24,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Solar photovoltaics - Buildings,renewables
+Africa,26,24,22,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Solar photovoltaics - Buildings,renewables
+Brazil,10,8,8,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Solar photovoltaics - Buildings,renewables
+European Union,40,38,38,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Wind onshore,renewables
+United States,34,34,32,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Wind onshore,renewables
+Japan,78,74,72,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Wind onshore,renewables
+Russia,40,38,36,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Wind onshore,renewables
+China,30,28,26,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Wind onshore,renewables
+India,24,22,22,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Wind onshore,renewables
+Middle East,48,46,44,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Wind onshore,renewables
+Africa,46,44,42,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Wind onshore,renewables
+Brazil,28,28,26,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Wind onshore,renewables
+European Union,60,45,40,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Wind offshore,renewables
+United States,120,90,70,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Wind offshore,renewables
+Japan,140,95,80,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Wind offshore,renewables
+Russia,115,80,65,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Wind offshore,renewables
+China,70,50,40,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Wind offshore,renewables
+India,70,50,40,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Wind offshore,renewables
+Middle East,110,80,65,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Wind offshore,renewables
+Africa,105,80,60,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Wind offshore,renewables
+Brazil,110,80,65,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Wind offshore,renewables
+European Union,60,60,60,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Hydropower - large-scale unit,renewables
+United States,65,65,65,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Hydropower - large-scale unit,renewables
+Japan,60,60,60,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Hydropower - large-scale unit,renewables
+Russia,50,50,50,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Hydropower - large-scale unit,renewables
+China,40,40,40,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Hydropower - large-scale unit,renewables
+India,50,50,50,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Hydropower - large-scale unit,renewables
+Middle East,55,55,50,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Hydropower - large-scale unit,renewables
+Africa,50,50,50,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Hydropower - large-scale unit,renewables
+Brazil,55,50,50,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Hydropower - large-scale unit,renewables
+European Union,80,80,80,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Hydropower - small-scale unit,renewables
+United States,80,80,80,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Hydropower - small-scale unit,renewables
+Japan,70,70,70,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Hydropower - small-scale unit,renewables
+Russia,70,70,70,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Hydropower - small-scale unit,renewables
+China,40,40,40,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Hydropower - small-scale unit,renewables
+India,60,60,60,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Hydropower - small-scale unit,renewables
+Middle East,70,70,70,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Hydropower - small-scale unit,renewables
+Africa,65,65,65,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Hydropower - small-scale unit,renewables
+Brazil,65,65,65,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Hydropower - small-scale unit,renewables
+European Union,85,80,80,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Bioenergy - Large scale unit,renewables
+United States,85,85,85,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Bioenergy - Large scale unit,renewables
+Japan,75,80,80,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Bioenergy - Large scale unit,renewables
+Russia,80,75,75,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Bioenergy - Large scale unit,renewables
+China,55,55,55,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Bioenergy - Large scale unit,renewables
+India,75,75,70,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Bioenergy - Large scale unit,renewables
+Middle East,80,75,70,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Bioenergy - Large scale unit,renewables
+Africa,75,75,70,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Bioenergy - Large scale unit,renewables
+Brazil,75,75,75,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Bioenergy - Large scale unit,renewables
+European Union,25,20,20,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Bioenergy - Cofiring,renewables
+United States,25,25,25,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Bioenergy - Cofiring,renewables
+Japan,25,20,20,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Bioenergy - Cofiring,renewables
+Russia,20,20,20,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Bioenergy - Cofiring,renewables
+China,15,15,15,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Bioenergy - Cofiring,renewables
+India,20,20,20,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Bioenergy - Cofiring,renewables
+Middle East,20,20,20,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Bioenergy - Cofiring,renewables
+Africa,20,20,20,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Bioenergy - Cofiring,renewables
+Brazil,20,20,20,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Bioenergy - Cofiring,renewables
+European Union,140,135,130,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Bioenergy - Medium-scale CHP,renewables
+United States,150,150,145,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Bioenergy - Medium-scale CHP,renewables
+Japan,145,145,140,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Bioenergy - Medium-scale CHP,renewables
+Russia,130,130,120,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Bioenergy - Medium-scale CHP,renewables
+China,95,90,90,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Bioenergy - Medium-scale CHP,renewables
+India,105,100,100,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Bioenergy - Medium-scale CHP,renewables
+Middle East,110,105,100,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Bioenergy - Medium-scale CHP,renewables
+Africa,105,105,100,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Bioenergy - Medium-scale CHP,renewables
+Brazil,110,105,105,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Bioenergy - Medium-scale CHP,renewables
+European Union,200,190,170,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Bioenergy + CCUS,renewables
+United States,200,195,170,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Bioenergy + CCUS,renewables
+Japan,195,190,170,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Bioenergy + CCUS,renewables
+Russia,180,175,155,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Bioenergy + CCUS,renewables
+China,145,140,120,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Bioenergy + CCUS,renewables
+India,165,160,140,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Bioenergy + CCUS,renewables
+Middle East,180,170,150,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Bioenergy + CCUS,renewables
+Africa,170,165,145,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Bioenergy + CCUS,renewables
+Brazil,160,155,135,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Bioenergy + CCUS,renewables
+European Union,230,200,150,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Concentrating solar power,renewables
+United States,260,230,180,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Concentrating solar power,renewables
+Japan,NA,NA,NA,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Concentrating solar power,renewables
+Russia,NA,NA,NA,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Concentrating solar power,renewables
+China,200,170,130,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Concentrating solar power,renewables
+India,230,200,150,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Concentrating solar power,renewables
+Middle East,210,180,140,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Concentrating solar power,renewables
+Africa,200,180,140,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Concentrating solar power,renewables
+Brazil,210,180,140,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Concentrating solar power,renewables
+European Union,55,55,50,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Geothermal,renewables
+United States,45,40,40,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Geothermal,renewables
+Japan,55,55,50,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Geothermal,renewables
+Russia,45,40,40,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Geothermal,renewables
+China,45,45,40,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Geothermal,renewables
+India,70,70,65,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Geothermal,renewables
+Middle East,45,40,40,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Geothermal,renewables
+Africa,60,60,55,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Geothermal,renewables
+Brazil,NA,NA,NA,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Geothermal,renewables
+European Union,210,140,90,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Marine,renewables
+United States,210,140,80,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Marine,renewables
+Japan,210,160,90,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Marine,renewables
+Russia,200,150,90,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Marine,renewables
+China,200,150,90,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Marine,renewables
+India,200,150,80,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Marine,renewables
+Middle East,200,150,90,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Marine,renewables
+Africa,200,150,90,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Marine,renewables
+Brazil,NA,NA,NA,Stated.Policies,"Annual O&M Costs
+(USD/kW)",Marine,renewables
+European Union,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Solar photovoltaics - Large scale unit,renewables
+United States,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Solar photovoltaics - Large scale unit,renewables
+Japan,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Solar photovoltaics - Large scale unit,renewables
+Russia,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Solar photovoltaics - Large scale unit,renewables
+China,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Solar photovoltaics - Large scale unit,renewables
+India,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Solar photovoltaics - Large scale unit,renewables
+Middle East,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Solar photovoltaics - Large scale unit,renewables
+Africa,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Solar photovoltaics - Large scale unit,renewables
+Brazil,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Solar photovoltaics - Large scale unit,renewables
+European Union,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Solar photovoltaics - Buildings,renewables
+United States,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Solar photovoltaics - Buildings,renewables
+Japan,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Solar photovoltaics - Buildings,renewables
+Russia,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Solar photovoltaics - Buildings,renewables
+China,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Solar photovoltaics - Buildings,renewables
+India,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Solar photovoltaics - Buildings,renewables
+Middle East,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Solar photovoltaics - Buildings,renewables
+Africa,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Solar photovoltaics - Buildings,renewables
+Brazil,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Solar photovoltaics - Buildings,renewables
+European Union,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Wind onshore,renewables
+United States,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Wind onshore,renewables
+Japan,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Wind onshore,renewables
+Russia,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Wind onshore,renewables
+China,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Wind onshore,renewables
+India,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Wind onshore,renewables
+Middle East,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Wind onshore,renewables
+Africa,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Wind onshore,renewables
+Brazil,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Wind onshore,renewables
+European Union,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Wind offshore,renewables
+United States,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Wind offshore,renewables
+Japan,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Wind offshore,renewables
+Russia,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Wind offshore,renewables
+China,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Wind offshore,renewables
+India,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Wind offshore,renewables
+Middle East,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Wind offshore,renewables
+Africa,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Wind offshore,renewables
+Brazil,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Wind offshore,renewables
+European Union,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Hydropower - large-scale unit,renewables
+United States,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Hydropower - large-scale unit,renewables
+Japan,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Hydropower - large-scale unit,renewables
+Russia,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Hydropower - large-scale unit,renewables
+China,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Hydropower - large-scale unit,renewables
+India,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Hydropower - large-scale unit,renewables
+Middle East,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Hydropower - large-scale unit,renewables
+Africa,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Hydropower - large-scale unit,renewables
+Brazil,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Hydropower - large-scale unit,renewables
+European Union,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Hydropower - small-scale unit,renewables
+United States,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Hydropower - small-scale unit,renewables
+Japan,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Hydropower - small-scale unit,renewables
+Russia,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Hydropower - small-scale unit,renewables
+China,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Hydropower - small-scale unit,renewables
+India,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Hydropower - small-scale unit,renewables
+Middle East,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Hydropower - small-scale unit,renewables
+Africa,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Hydropower - small-scale unit,renewables
+Brazil,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Hydropower - small-scale unit,renewables
+European Union,0.35,0.35,0.35,Stated.Policies,"Efficiency
+(gross, LHV)",Bioenergy - Large scale unit,renewables
+United States,0.35,0.35,0.35,Stated.Policies,"Efficiency
+(gross, LHV)",Bioenergy - Large scale unit,renewables
+Japan,0.35,0.35,0.35,Stated.Policies,"Efficiency
+(gross, LHV)",Bioenergy - Large scale unit,renewables
+Russia,0.35,0.35,0.35,Stated.Policies,"Efficiency
+(gross, LHV)",Bioenergy - Large scale unit,renewables
+China,0.35,0.35,0.35,Stated.Policies,"Efficiency
+(gross, LHV)",Bioenergy - Large scale unit,renewables
+India,0.35,0.35,0.35,Stated.Policies,"Efficiency
+(gross, LHV)",Bioenergy - Large scale unit,renewables
+Middle East,0.35,0.35,0.35,Stated.Policies,"Efficiency
+(gross, LHV)",Bioenergy - Large scale unit,renewables
+Africa,0.35,0.35,0.35,Stated.Policies,"Efficiency
+(gross, LHV)",Bioenergy - Large scale unit,renewables
+Brazil,0.35,0.35,0.35,Stated.Policies,"Efficiency
+(gross, LHV)",Bioenergy - Large scale unit,renewables
+European Union,0.37,0.37,0.37,Stated.Policies,"Efficiency
+(gross, LHV)",Bioenergy - Cofiring,renewables
+United States,0.37,0.37,0.37,Stated.Policies,"Efficiency
+(gross, LHV)",Bioenergy - Cofiring,renewables
+Japan,0.37,0.37,0.37,Stated.Policies,"Efficiency
+(gross, LHV)",Bioenergy - Cofiring,renewables
+Russia,0.37,0.37,0.37,Stated.Policies,"Efficiency
+(gross, LHV)",Bioenergy - Cofiring,renewables
+China,0.37,0.37,0.37,Stated.Policies,"Efficiency
+(gross, LHV)",Bioenergy - Cofiring,renewables
+India,0.37,0.37,0.37,Stated.Policies,"Efficiency
+(gross, LHV)",Bioenergy - Cofiring,renewables
+Middle East,0.37,0.37,0.37,Stated.Policies,"Efficiency
+(gross, LHV)",Bioenergy - Cofiring,renewables
+Africa,0.37,0.37,0.37,Stated.Policies,"Efficiency
+(gross, LHV)",Bioenergy - Cofiring,renewables
+Brazil,0.37,0.37,0.37,Stated.Policies,"Efficiency
+(gross, LHV)",Bioenergy - Cofiring,renewables
+European Union,0.7,0.7,0.7,Stated.Policies,"Efficiency
+(gross, LHV)",Bioenergy - Medium-scale CHP,renewables
+United States,0.7,0.7,0.7,Stated.Policies,"Efficiency
+(gross, LHV)",Bioenergy - Medium-scale CHP,renewables
+Japan,0.7,0.7,0.7,Stated.Policies,"Efficiency
+(gross, LHV)",Bioenergy - Medium-scale CHP,renewables
+Russia,0.7,0.7,0.7,Stated.Policies,"Efficiency
+(gross, LHV)",Bioenergy - Medium-scale CHP,renewables
+China,0.7,0.7,0.7,Stated.Policies,"Efficiency
+(gross, LHV)",Bioenergy - Medium-scale CHP,renewables
+India,0.7,0.7,0.7,Stated.Policies,"Efficiency
+(gross, LHV)",Bioenergy - Medium-scale CHP,renewables
+Middle East,0.7,0.7,0.7,Stated.Policies,"Efficiency
+(gross, LHV)",Bioenergy - Medium-scale CHP,renewables
+Africa,0.7,0.7,0.7,Stated.Policies,"Efficiency
+(gross, LHV)",Bioenergy - Medium-scale CHP,renewables
+Brazil,0.7,0.7,0.7,Stated.Policies,"Efficiency
+(gross, LHV)",Bioenergy - Medium-scale CHP,renewables
+European Union,0.3,0.3,0.3,Stated.Policies,"Efficiency
+(gross, LHV)",Bioenergy + CCUS,renewables
+United States,0.3,0.3,0.3,Stated.Policies,"Efficiency
+(gross, LHV)",Bioenergy + CCUS,renewables
+Japan,0.3,0.3,0.3,Stated.Policies,"Efficiency
+(gross, LHV)",Bioenergy + CCUS,renewables
+Russia,0.3,0.3,0.3,Stated.Policies,"Efficiency
+(gross, LHV)",Bioenergy + CCUS,renewables
+China,0.3,0.3,0.3,Stated.Policies,"Efficiency
+(gross, LHV)",Bioenergy + CCUS,renewables
+India,0.3,0.3,0.3,Stated.Policies,"Efficiency
+(gross, LHV)",Bioenergy + CCUS,renewables
+Middle East,0.3,0.3,0.3,Stated.Policies,"Efficiency
+(gross, LHV)",Bioenergy + CCUS,renewables
+Africa,0.3,0.3,0.3,Stated.Policies,"Efficiency
+(gross, LHV)",Bioenergy + CCUS,renewables
+Brazil,0.3,0.3,0.3,Stated.Policies,"Efficiency
+(gross, LHV)",Bioenergy + CCUS,renewables
+European Union,0.4,0.4,0.4,Stated.Policies,"Efficiency
+(gross, LHV)",Concentrating solar power,renewables
+United States,0.4,0.4,0.4,Stated.Policies,"Efficiency
+(gross, LHV)",Concentrating solar power,renewables
+Japan,NA,NA,NA,Stated.Policies,"Efficiency
+(gross, LHV)",Concentrating solar power,renewables
+Russia,NA,NA,NA,Stated.Policies,"Efficiency
+(gross, LHV)",Concentrating solar power,renewables
+China,0.4,0.4,0.4,Stated.Policies,"Efficiency
+(gross, LHV)",Concentrating solar power,renewables
+India,0.4,0.4,0.4,Stated.Policies,"Efficiency
+(gross, LHV)",Concentrating solar power,renewables
+Middle East,0.4,0.4,0.4,Stated.Policies,"Efficiency
+(gross, LHV)",Concentrating solar power,renewables
+Africa,0.4,0.4,0.4,Stated.Policies,"Efficiency
+(gross, LHV)",Concentrating solar power,renewables
+Brazil,0.4,0.4,0.4,Stated.Policies,"Efficiency
+(gross, LHV)",Concentrating solar power,renewables
+European Union,0.1,0.1,0.1,Stated.Policies,"Efficiency
+(gross, LHV)",Geothermal,renewables
+United States,0.1,0.1,0.1,Stated.Policies,"Efficiency
+(gross, LHV)",Geothermal,renewables
+Japan,0.1,0.1,0.1,Stated.Policies,"Efficiency
+(gross, LHV)",Geothermal,renewables
+Russia,0.1,0.1,0.1,Stated.Policies,"Efficiency
+(gross, LHV)",Geothermal,renewables
+China,0.1,0.1,0.1,Stated.Policies,"Efficiency
+(gross, LHV)",Geothermal,renewables
+India,0.1,0.1,0.1,Stated.Policies,"Efficiency
+(gross, LHV)",Geothermal,renewables
+Middle East,0.1,0.1,0.1,Stated.Policies,"Efficiency
+(gross, LHV)",Geothermal,renewables
+Africa,0.1,0.1,0.1,Stated.Policies,"Efficiency
+(gross, LHV)",Geothermal,renewables
+Brazil,NA,NA,NA,Stated.Policies,"Efficiency
+(gross, LHV)",Geothermal,renewables
+European Union,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Marine,renewables
+United States,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Marine,renewables
+Japan,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Marine,renewables
+Russia,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Marine,renewables
+China,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Marine,renewables
+India,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Marine,renewables
+Middle East,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Marine,renewables
+Africa,1,1,1,Stated.Policies,"Efficiency
+(gross, LHV)",Marine,renewables
+Brazil,NA,NA,NA,Stated.Policies,"Efficiency
+(gross, LHV)",Marine,renewables
+European Union,0.14,0.14,0.14,Stated.Policies,"Capacity factor
+(%)",Solar photovoltaics - Large scale unit,renewables
+United States,0.21,0.22,0.23,Stated.Policies,"Capacity factor
+(%)",Solar photovoltaics - Large scale unit,renewables
+Japan,0.14,0.14,0.14,Stated.Policies,"Capacity factor
+(%)",Solar photovoltaics - Large scale unit,renewables
+Russia,0.13,0.13,0.14,Stated.Policies,"Capacity factor
+(%)",Solar photovoltaics - Large scale unit,renewables
+China,0.17,0.18,0.19,Stated.Policies,"Capacity factor
+(%)",Solar photovoltaics - Large scale unit,renewables
+India,0.2,0.21,0.22,Stated.Policies,"Capacity factor
+(%)",Solar photovoltaics - Large scale unit,renewables
+Middle East,0.25,0.25,0.26,Stated.Policies,"Capacity factor
+(%)",Solar photovoltaics - Large scale unit,renewables
+Africa,0.22,0.23,0.23,Stated.Policies,"Capacity factor
+(%)",Solar photovoltaics - Large scale unit,renewables
+Brazil,0.2,0.21,0.22,Stated.Policies,"Capacity factor
+(%)",Solar photovoltaics - Large scale unit,renewables
+European Union,0.13,0.13,0.14,Stated.Policies,"Capacity factor
+(%)",Solar photovoltaics - Buildings,renewables
+United States,0.16,0.17,0.17,Stated.Policies,"Capacity factor
+(%)",Solar photovoltaics - Buildings,renewables
+Japan,0.13,0.13,0.13,Stated.Policies,"Capacity factor
+(%)",Solar photovoltaics - Buildings,renewables
+Russia,0.09,0.1,0.11,Stated.Policies,"Capacity factor
+(%)",Solar photovoltaics - Buildings,renewables
+China,0.14,0.15,0.15,Stated.Policies,"Capacity factor
+(%)",Solar photovoltaics - Buildings,renewables
+India,0.16,0.17,0.18,Stated.Policies,"Capacity factor
+(%)",Solar photovoltaics - Buildings,renewables
+Middle East,0.18,0.19,0.2,Stated.Policies,"Capacity factor
+(%)",Solar photovoltaics - Buildings,renewables
+Africa,0.18,0.19,0.19,Stated.Policies,"Capacity factor
+(%)",Solar photovoltaics - Buildings,renewables
+Brazil,0.16,0.18,0.18,Stated.Policies,"Capacity factor
+(%)",Solar photovoltaics - Buildings,renewables
+European Union,0.29,0.3,0.3,Stated.Policies,"Capacity factor
+(%)",Wind onshore,renewables
+United States,0.42,0.43,0.44,Stated.Policies,"Capacity factor
+(%)",Wind onshore,renewables
+Japan,0.26,0.28,0.29,Stated.Policies,"Capacity factor
+(%)",Wind onshore,renewables
+Russia,0.26,0.29,0.31,Stated.Policies,"Capacity factor
+(%)",Wind onshore,renewables
+China,0.26,0.27,0.28,Stated.Policies,"Capacity factor
+(%)",Wind onshore,renewables
+India,0.26,0.28,0.3,Stated.Policies,"Capacity factor
+(%)",Wind onshore,renewables
+Middle East,0.35,0.35,0.36,Stated.Policies,"Capacity factor
+(%)",Wind onshore,renewables
+Africa,0.32,0.34,0.35,Stated.Policies,"Capacity factor
+(%)",Wind onshore,renewables
+Brazil,0.44,0.44,0.44,Stated.Policies,"Capacity factor
+(%)",Wind onshore,renewables
+European Union,0.51,0.56,0.59,Stated.Policies,"Capacity factor
+(%)",Wind offshore,renewables
+United States,0.42,0.46,0.49,Stated.Policies,"Capacity factor
+(%)",Wind offshore,renewables
+Japan,0.4,0.44,0.46,Stated.Policies,"Capacity factor
+(%)",Wind offshore,renewables
+Russia,0.39,0.42,0.44,Stated.Policies,"Capacity factor
+(%)",Wind offshore,renewables
+China,0.33,0.39,0.43,Stated.Policies,"Capacity factor
+(%)",Wind offshore,renewables
+India,0.33,0.37,0.39,Stated.Policies,"Capacity factor
+(%)",Wind offshore,renewables
+Middle East,0.34,0.37,0.39,Stated.Policies,"Capacity factor
+(%)",Wind offshore,renewables
+Africa,0.37,0.4,0.43,Stated.Policies,"Capacity factor
+(%)",Wind offshore,renewables
+Brazil,0.48,0.51,0.53,Stated.Policies,"Capacity factor
+(%)",Wind offshore,renewables
+European Union,0.4,0.4,0.4,Stated.Policies,"Capacity factor
+(%)",Hydropower - large-scale unit,renewables
+United States,0.4,0.4,0.4,Stated.Policies,"Capacity factor
+(%)",Hydropower - large-scale unit,renewables
+Japan,0.5,0.5,0.5,Stated.Policies,"Capacity factor
+(%)",Hydropower - large-scale unit,renewables
+Russia,0.4,0.4,0.4,Stated.Policies,"Capacity factor
+(%)",Hydropower - large-scale unit,renewables
+China,0.35,0.35,0.35,Stated.Policies,"Capacity factor
+(%)",Hydropower - large-scale unit,renewables
+India,0.4,0.4,0.4,Stated.Policies,"Capacity factor
+(%)",Hydropower - large-scale unit,renewables
+Middle East,0.15,0.15,0.15,Stated.Policies,"Capacity factor
+(%)",Hydropower - large-scale unit,renewables
+Africa,0.5,0.5,0.5,Stated.Policies,"Capacity factor
+(%)",Hydropower - large-scale unit,renewables
+Brazil,0.5,0.5,0.5,Stated.Policies,"Capacity factor
+(%)",Hydropower - large-scale unit,renewables
+European Union,0.25,0.25,0.25,Stated.Policies,"Capacity factor
+(%)",Hydropower - small-scale unit,renewables
+United States,0.3,0.3,0.3,Stated.Policies,"Capacity factor
+(%)",Hydropower - small-scale unit,renewables
+Japan,0.2,0.2,0.2,Stated.Policies,"Capacity factor
+(%)",Hydropower - small-scale unit,renewables
+Russia,0.4,0.4,0.4,Stated.Policies,"Capacity factor
+(%)",Hydropower - small-scale unit,renewables
+China,0.35,0.35,0.35,Stated.Policies,"Capacity factor
+(%)",Hydropower - small-scale unit,renewables
+India,0.35,0.35,0.35,Stated.Policies,"Capacity factor
+(%)",Hydropower - small-scale unit,renewables
+Middle East,0.15,0.15,0.15,Stated.Policies,"Capacity factor
+(%)",Hydropower - small-scale unit,renewables
+Africa,0.5,0.5,0.5,Stated.Policies,"Capacity factor
+(%)",Hydropower - small-scale unit,renewables
+Brazil,0.5,0.5,0.5,Stated.Policies,"Capacity factor
+(%)",Hydropower - small-scale unit,renewables
+European Union,0.6,0.6,0.6,Stated.Policies,"Capacity factor
+(%)",Bioenergy - Large scale unit,renewables
+United States,0.5,0.5,0.5,Stated.Policies,"Capacity factor
+(%)",Bioenergy - Large scale unit,renewables
+Japan,0.6,0.6,0.6,Stated.Policies,"Capacity factor
+(%)",Bioenergy - Large scale unit,renewables
+Russia,0.5,0.5,0.5,Stated.Policies,"Capacity factor
+(%)",Bioenergy - Large scale unit,renewables
+China,0.7,0.7,0.7,Stated.Policies,"Capacity factor
+(%)",Bioenergy - Large scale unit,renewables
+India,0.6,0.6,0.6,Stated.Policies,"Capacity factor
+(%)",Bioenergy - Large scale unit,renewables
+Middle East,0.8,0.8,0.8,Stated.Policies,"Capacity factor
+(%)",Bioenergy - Large scale unit,renewables
+Africa,0.5,0.5,0.5,Stated.Policies,"Capacity factor
+(%)",Bioenergy - Large scale unit,renewables
+Brazil,0.4,0.4,0.4,Stated.Policies,"Capacity factor
+(%)",Bioenergy - Large scale unit,renewables
+European Union,0.6,0.6,0.6,Stated.Policies,"Capacity factor
+(%)",Bioenergy - Cofiring,renewables
+United States,0.7,0.7,0.7,Stated.Policies,"Capacity factor
+(%)",Bioenergy - Cofiring,renewables
+Japan,0.8,0.8,0.8,Stated.Policies,"Capacity factor
+(%)",Bioenergy - Cofiring,renewables
+Russia,0.6,0.6,0.6,Stated.Policies,"Capacity factor
+(%)",Bioenergy - Cofiring,renewables
+China,0.8,0.8,0.8,Stated.Policies,"Capacity factor
+(%)",Bioenergy - Cofiring,renewables
+India,0.6,0.6,0.6,Stated.Policies,"Capacity factor
+(%)",Bioenergy - Cofiring,renewables
+Middle East,0.6,0.6,0.6,Stated.Policies,"Capacity factor
+(%)",Bioenergy - Cofiring,renewables
+Africa,0.4,0.4,0.4,Stated.Policies,"Capacity factor
+(%)",Bioenergy - Cofiring,renewables
+Brazil,0.7,0.7,0.7,Stated.Policies,"Capacity factor
+(%)",Bioenergy - Cofiring,renewables
+European Union,0.7,0.7,0.7,Stated.Policies,"Capacity factor
+(%)",Bioenergy - Medium-scale CHP,renewables
+United States,0.5,0.5,0.5,Stated.Policies,"Capacity factor
+(%)",Bioenergy - Medium-scale CHP,renewables
+Japan,0.6,0.6,0.6,Stated.Policies,"Capacity factor
+(%)",Bioenergy - Medium-scale CHP,renewables
+Russia,0.4,0.4,0.4,Stated.Policies,"Capacity factor
+(%)",Bioenergy - Medium-scale CHP,renewables
+China,0.6,0.6,0.6,Stated.Policies,"Capacity factor
+(%)",Bioenergy - Medium-scale CHP,renewables
+India,0.5,0.5,0.5,Stated.Policies,"Capacity factor
+(%)",Bioenergy - Medium-scale CHP,renewables
+Middle East,0.5,0.5,0.5,Stated.Policies,"Capacity factor
+(%)",Bioenergy - Medium-scale CHP,renewables
+Africa,0.5,0.5,0.5,Stated.Policies,"Capacity factor
+(%)",Bioenergy - Medium-scale CHP,renewables
+Brazil,0.5,0.5,0.5,Stated.Policies,"Capacity factor
+(%)",Bioenergy - Medium-scale CHP,renewables
+European Union,0.6,0.6,0.6,Stated.Policies,"Capacity factor
+(%)",Bioenergy + CCUS,renewables
+United States,0.5,0.5,0.5,Stated.Policies,"Capacity factor
+(%)",Bioenergy + CCUS,renewables
+Japan,0.6,0.6,0.6,Stated.Policies,"Capacity factor
+(%)",Bioenergy + CCUS,renewables
+Russia,0.5,0.5,0.5,Stated.Policies,"Capacity factor
+(%)",Bioenergy + CCUS,renewables
+China,0.7,0.7,0.7,Stated.Policies,"Capacity factor
+(%)",Bioenergy + CCUS,renewables
+India,0.6,0.6,0.6,Stated.Policies,"Capacity factor
+(%)",Bioenergy + CCUS,renewables
+Middle East,0.8,0.8,0.8,Stated.Policies,"Capacity factor
+(%)",Bioenergy + CCUS,renewables
+Africa,0.5,0.5,0.5,Stated.Policies,"Capacity factor
+(%)",Bioenergy + CCUS,renewables
+Brazil,0.4,0.4,0.4,Stated.Policies,"Capacity factor
+(%)",Bioenergy + CCUS,renewables
+European Union,0.3,0.36,0.42,Stated.Policies,"Capacity factor
+(%)",Concentrating solar power,renewables
+United States,0.28,0.34,0.4,Stated.Policies,"Capacity factor
+(%)",Concentrating solar power,renewables
+Japan,NA,NA,NA,Stated.Policies,"Capacity factor
+(%)",Concentrating solar power,renewables
+Russia,NA,NA,NA,Stated.Policies,"Capacity factor
+(%)",Concentrating solar power,renewables
+China,0.28,0.34,0.4,Stated.Policies,"Capacity factor
+(%)",Concentrating solar power,renewables
+India,0.26,0.3,0.36,Stated.Policies,"Capacity factor
+(%)",Concentrating solar power,renewables
+Middle East,0.3,0.36,0.42,Stated.Policies,"Capacity factor
+(%)",Concentrating solar power,renewables
+Africa,0.3,0.36,0.42,Stated.Policies,"Capacity factor
+(%)",Concentrating solar power,renewables
+Brazil,0.28,0.34,0.4,Stated.Policies,"Capacity factor
+(%)",Concentrating solar power,renewables
+European Union,0.85,0.85,0.85,Stated.Policies,"Capacity factor
+(%)",Geothermal,renewables
+United States,0.6,0.6,0.6,Stated.Policies,"Capacity factor
+(%)",Geothermal,renewables
+Japan,0.6,0.6,0.6,Stated.Policies,"Capacity factor
+(%)",Geothermal,renewables
+Russia,0.65,0.65,0.65,Stated.Policies,"Capacity factor
+(%)",Geothermal,renewables
+China,0.5,0.5,0.5,Stated.Policies,"Capacity factor
+(%)",Geothermal,renewables
+India,0.5,0.5,0.5,Stated.Policies,"Capacity factor
+(%)",Geothermal,renewables
+Middle East,0.8,0.8,0.8,Stated.Policies,"Capacity factor
+(%)",Geothermal,renewables
+Africa,0.8,0.8,0.8,Stated.Policies,"Capacity factor
+(%)",Geothermal,renewables
+Brazil,NA,NA,NA,Stated.Policies,"Capacity factor
+(%)",Geothermal,renewables
+European Union,0.25,0.25,0.25,Stated.Policies,"Capacity factor
+(%)",Marine,renewables
+United States,0.3,0.3,0.3,Stated.Policies,"Capacity factor
+(%)",Marine,renewables
+Japan,0.3,0.3,0.3,Stated.Policies,"Capacity factor
+(%)",Marine,renewables
+Russia,0.3,0.3,0.3,Stated.Policies,"Capacity factor
+(%)",Marine,renewables
+China,0.3,0.3,0.35,Stated.Policies,"Capacity factor
+(%)",Marine,renewables
+India,0.3,0.3,0.3,Stated.Policies,"Capacity factor
+(%)",Marine,renewables
+Middle East,0.3,0.3,0.3,Stated.Policies,"Capacity factor
+(%)",Marine,renewables
+Africa,0.3,0.3,0.3,Stated.Policies,"Capacity factor
+(%)",Marine,renewables
+Brazil,NA,NA,NA,Stated.Policies,"Capacity factor
+(%)",Marine,renewables
+European Union,1.5,1.5,1.5,Stated.Policies,"Construction Time
+(years)",Solar photovoltaics - Large scale unit,renewables
+United States,1.5,1.5,1.5,Stated.Policies,"Construction Time
+(years)",Solar photovoltaics - Large scale unit,renewables
+Japan,1.5,1.5,1.5,Stated.Policies,"Construction Time
+(years)",Solar photovoltaics - Large scale unit,renewables
+Russia,1.5,1.5,1.5,Stated.Policies,"Construction Time
+(years)",Solar photovoltaics - Large scale unit,renewables
+China,1.5,1.5,1.5,Stated.Policies,"Construction Time
+(years)",Solar photovoltaics - Large scale unit,renewables
+India,1.5,1.5,1.5,Stated.Policies,"Construction Time
+(years)",Solar photovoltaics - Large scale unit,renewables
+Middle East,1.5,1.5,1.5,Stated.Policies,"Construction Time
+(years)",Solar photovoltaics - Large scale unit,renewables
+Africa,1.5,1.5,1.5,Stated.Policies,"Construction Time
+(years)",Solar photovoltaics - Large scale unit,renewables
+Brazil,1.5,1.5,1.5,Stated.Policies,"Construction Time
+(years)",Solar photovoltaics - Large scale unit,renewables
+European Union,1,1,1,Stated.Policies,"Construction Time
+(years)",Solar photovoltaics - Buildings,renewables
+United States,1,1,1,Stated.Policies,"Construction Time
+(years)",Solar photovoltaics - Buildings,renewables
+Japan,1,1,1,Stated.Policies,"Construction Time
+(years)",Solar photovoltaics - Buildings,renewables
+Russia,1,1,1,Stated.Policies,"Construction Time
+(years)",Solar photovoltaics - Buildings,renewables
+China,1,1,1,Stated.Policies,"Construction Time
+(years)",Solar photovoltaics - Buildings,renewables
+India,1,1,1,Stated.Policies,"Construction Time
+(years)",Solar photovoltaics - Buildings,renewables
+Middle East,1,1,1,Stated.Policies,"Construction Time
+(years)",Solar photovoltaics - Buildings,renewables
+Africa,1,1,1,Stated.Policies,"Construction Time
+(years)",Solar photovoltaics - Buildings,renewables
+Brazil,1,1,1,Stated.Policies,"Construction Time
+(years)",Solar photovoltaics - Buildings,renewables
+European Union,1.5,1.5,1.5,Stated.Policies,"Construction Time
+(years)",Wind onshore,renewables
+United States,1.5,1.5,1.5,Stated.Policies,"Construction Time
+(years)",Wind onshore,renewables
+Japan,1.5,1.5,1.5,Stated.Policies,"Construction Time
+(years)",Wind onshore,renewables
+Russia,1.5,1.5,1.5,Stated.Policies,"Construction Time
+(years)",Wind onshore,renewables
+China,1.5,1.5,1.5,Stated.Policies,"Construction Time
+(years)",Wind onshore,renewables
+India,1.5,1.5,1.5,Stated.Policies,"Construction Time
+(years)",Wind onshore,renewables
+Middle East,1.5,1.5,1.5,Stated.Policies,"Construction Time
+(years)",Wind onshore,renewables
+Africa,1.5,1.5,1.5,Stated.Policies,"Construction Time
+(years)",Wind onshore,renewables
+Brazil,1.5,1.5,1.5,Stated.Policies,"Construction Time
+(years)",Wind onshore,renewables
+European Union,3,3,3,Stated.Policies,"Construction Time
+(years)",Wind offshore,renewables
+United States,3,3,3,Stated.Policies,"Construction Time
+(years)",Wind offshore,renewables
+Japan,3,3,3,Stated.Policies,"Construction Time
+(years)",Wind offshore,renewables
+Russia,3,3,3,Stated.Policies,"Construction Time
+(years)",Wind offshore,renewables
+China,3,3,3,Stated.Policies,"Construction Time
+(years)",Wind offshore,renewables
+India,3,3,3,Stated.Policies,"Construction Time
+(years)",Wind offshore,renewables
+Middle East,3,3,3,Stated.Policies,"Construction Time
+(years)",Wind offshore,renewables
+Africa,3,3,3,Stated.Policies,"Construction Time
+(years)",Wind offshore,renewables
+Brazil,3,3,3,Stated.Policies,"Construction Time
+(years)",Wind offshore,renewables
+European Union,4,4,4,Stated.Policies,"Construction Time
+(years)",Hydropower - large-scale unit,renewables
+United States,4,4,4,Stated.Policies,"Construction Time
+(years)",Hydropower - large-scale unit,renewables
+Japan,4,4,4,Stated.Policies,"Construction Time
+(years)",Hydropower - large-scale unit,renewables
+Russia,4,4,4,Stated.Policies,"Construction Time
+(years)",Hydropower - large-scale unit,renewables
+China,4,4,4,Stated.Policies,"Construction Time
+(years)",Hydropower - large-scale unit,renewables
+India,4,4,4,Stated.Policies,"Construction Time
+(years)",Hydropower - large-scale unit,renewables
+Middle East,4,4,4,Stated.Policies,"Construction Time
+(years)",Hydropower - large-scale unit,renewables
+Africa,4,4,4,Stated.Policies,"Construction Time
+(years)",Hydropower - large-scale unit,renewables
+Brazil,4,4,4,Stated.Policies,"Construction Time
+(years)",Hydropower - large-scale unit,renewables
+European Union,4,4,4,Stated.Policies,"Construction Time
+(years)",Hydropower - small-scale unit,renewables
+United States,4,4,4,Stated.Policies,"Construction Time
+(years)",Hydropower - small-scale unit,renewables
+Japan,4,4,4,Stated.Policies,"Construction Time
+(years)",Hydropower - small-scale unit,renewables
+Russia,4,4,4,Stated.Policies,"Construction Time
+(years)",Hydropower - small-scale unit,renewables
+China,4,4,4,Stated.Policies,"Construction Time
+(years)",Hydropower - small-scale unit,renewables
+India,4,4,4,Stated.Policies,"Construction Time
+(years)",Hydropower - small-scale unit,renewables
+Middle East,4,4,4,Stated.Policies,"Construction Time
+(years)",Hydropower - small-scale unit,renewables
+Africa,4,4,4,Stated.Policies,"Construction Time
+(years)",Hydropower - small-scale unit,renewables
+Brazil,4,4,4,Stated.Policies,"Construction Time
+(years)",Hydropower - small-scale unit,renewables
+European Union,3,3,3,Stated.Policies,"Construction Time
+(years)",Bioenergy - Large scale unit,renewables
+United States,3,3,3,Stated.Policies,"Construction Time
+(years)",Bioenergy - Large scale unit,renewables
+Japan,3,3,3,Stated.Policies,"Construction Time
+(years)",Bioenergy - Large scale unit,renewables
+Russia,3,3,3,Stated.Policies,"Construction Time
+(years)",Bioenergy - Large scale unit,renewables
+China,3,3,3,Stated.Policies,"Construction Time
+(years)",Bioenergy - Large scale unit,renewables
+India,3,3,3,Stated.Policies,"Construction Time
+(years)",Bioenergy - Large scale unit,renewables
+Middle East,3,3,3,Stated.Policies,"Construction Time
+(years)",Bioenergy - Large scale unit,renewables
+Africa,3,3,3,Stated.Policies,"Construction Time
+(years)",Bioenergy - Large scale unit,renewables
+Brazil,3,3,3,Stated.Policies,"Construction Time
+(years)",Bioenergy - Large scale unit,renewables
+European Union,2,2,2,Stated.Policies,"Construction Time
+(years)",Bioenergy - Cofiring,renewables
+United States,2,2,2,Stated.Policies,"Construction Time
+(years)",Bioenergy - Cofiring,renewables
+Japan,2,2,2,Stated.Policies,"Construction Time
+(years)",Bioenergy - Cofiring,renewables
+Russia,2,2,2,Stated.Policies,"Construction Time
+(years)",Bioenergy - Cofiring,renewables
+China,2,2,2,Stated.Policies,"Construction Time
+(years)",Bioenergy - Cofiring,renewables
+India,2,2,2,Stated.Policies,"Construction Time
+(years)",Bioenergy - Cofiring,renewables
+Middle East,2,2,2,Stated.Policies,"Construction Time
+(years)",Bioenergy - Cofiring,renewables
+Africa,2,2,2,Stated.Policies,"Construction Time
+(years)",Bioenergy - Cofiring,renewables
+Brazil,2,2,2,Stated.Policies,"Construction Time
+(years)",Bioenergy - Cofiring,renewables
+European Union,2,2,2,Stated.Policies,"Construction Time
+(years)",Bioenergy - Medium-scale CHP,renewables
+United States,2,2,2,Stated.Policies,"Construction Time
+(years)",Bioenergy - Medium-scale CHP,renewables
+Japan,2,2,2,Stated.Policies,"Construction Time
+(years)",Bioenergy - Medium-scale CHP,renewables
+Russia,2,2,2,Stated.Policies,"Construction Time
+(years)",Bioenergy - Medium-scale CHP,renewables
+China,2,2,2,Stated.Policies,"Construction Time
+(years)",Bioenergy - Medium-scale CHP,renewables
+India,2,2,2,Stated.Policies,"Construction Time
+(years)",Bioenergy - Medium-scale CHP,renewables
+Middle East,2,2,2,Stated.Policies,"Construction Time
+(years)",Bioenergy - Medium-scale CHP,renewables
+Africa,2,2,2,Stated.Policies,"Construction Time
+(years)",Bioenergy - Medium-scale CHP,renewables
+Brazil,2,2,2,Stated.Policies,"Construction Time
+(years)",Bioenergy - Medium-scale CHP,renewables
+European Union,3,3,3,Stated.Policies,"Construction Time
+(years)",Bioenergy + CCUS,renewables
+United States,3,3,3,Stated.Policies,"Construction Time
+(years)",Bioenergy + CCUS,renewables
+Japan,3,3,3,Stated.Policies,"Construction Time
+(years)",Bioenergy + CCUS,renewables
+Russia,3,3,3,Stated.Policies,"Construction Time
+(years)",Bioenergy + CCUS,renewables
+China,3,3,3,Stated.Policies,"Construction Time
+(years)",Bioenergy + CCUS,renewables
+India,3,3,3,Stated.Policies,"Construction Time
+(years)",Bioenergy + CCUS,renewables
+Middle East,3,3,3,Stated.Policies,"Construction Time
+(years)",Bioenergy + CCUS,renewables
+Africa,3,3,3,Stated.Policies,"Construction Time
+(years)",Bioenergy + CCUS,renewables
+Brazil,3,3,3,Stated.Policies,"Construction Time
+(years)",Bioenergy + CCUS,renewables
+European Union,3,3,3,Stated.Policies,"Construction Time
+(years)",Concentrating solar power,renewables
+United States,3,3,3,Stated.Policies,"Construction Time
+(years)",Concentrating solar power,renewables
+Japan,NA,NA,NA,Stated.Policies,"Construction Time
+(years)",Concentrating solar power,renewables
+Russia,NA,NA,NA,Stated.Policies,"Construction Time
+(years)",Concentrating solar power,renewables
+China,3,3,3,Stated.Policies,"Construction Time
+(years)",Concentrating solar power,renewables
+India,3,3,3,Stated.Policies,"Construction Time
+(years)",Concentrating solar power,renewables
+Middle East,3,3,3,Stated.Policies,"Construction Time
+(years)",Concentrating solar power,renewables
+Africa,3,3,3,Stated.Policies,"Construction Time
+(years)",Concentrating solar power,renewables
+Brazil,3,3,3,Stated.Policies,"Construction Time
+(years)",Concentrating solar power,renewables
+European Union,4,4,4,Stated.Policies,"Construction Time
+(years)",Geothermal,renewables
+United States,4,4,4,Stated.Policies,"Construction Time
+(years)",Geothermal,renewables
+Japan,4,4,4,Stated.Policies,"Construction Time
+(years)",Geothermal,renewables
+Russia,4,4,4,Stated.Policies,"Construction Time
+(years)",Geothermal,renewables
+China,4,4,4,Stated.Policies,"Construction Time
+(years)",Geothermal,renewables
+India,4,4,4,Stated.Policies,"Construction Time
+(years)",Geothermal,renewables
+Middle East,4,4,4,Stated.Policies,"Construction Time
+(years)",Geothermal,renewables
+Africa,4,4,4,Stated.Policies,"Construction Time
+(years)",Geothermal,renewables
+Brazil,4,4,4,Stated.Policies,"Construction Time
+(years)",Geothermal,renewables
+European Union,4,4,4,Stated.Policies,"Construction Time
+(years)",Marine,renewables
+United States,4,4,4,Stated.Policies,"Construction Time
+(years)",Marine,renewables
+Japan,4,4,4,Stated.Policies,"Construction Time
+(years)",Marine,renewables
+Russia,4,4,4,Stated.Policies,"Construction Time
+(years)",Marine,renewables
+China,4,4,4,Stated.Policies,"Construction Time
+(years)",Marine,renewables
+India,4,4,4,Stated.Policies,"Construction Time
+(years)",Marine,renewables
+Middle East,4,4,4,Stated.Policies,"Construction Time
+(years)",Marine,renewables
+Africa,4,4,4,Stated.Policies,"Construction Time
+(years)",Marine,renewables
+Brazil,4,4,4,Stated.Policies,"Construction Time
+(years)",Marine,renewables
+European Union,NA,470,340,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Solar photovoltaics - Large scale unit,renewables
+United States,NA,620,430,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Solar photovoltaics - Large scale unit,renewables
+Japan,NA,1030,760,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Solar photovoltaics - Large scale unit,renewables
+Russia,NA,990,690,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Solar photovoltaics - Large scale unit,renewables
+China,NA,360,250,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Solar photovoltaics - Large scale unit,renewables
+India,NA,320,210,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Solar photovoltaics - Large scale unit,renewables
+Middle East,NA,590,390,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Solar photovoltaics - Large scale unit,renewables
+Africa,NA,650,430,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Solar photovoltaics - Large scale unit,renewables
+Brazil,NA,450,320,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Solar photovoltaics - Large scale unit,renewables
+European Union,NA,670,510,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Solar photovoltaics - Buildings,renewables
+United States,NA,1940,1370,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Solar photovoltaics - Buildings,renewables
+Japan,NA,1050,800,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Solar photovoltaics - Buildings,renewables
+Russia,NA,1290,910,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Solar photovoltaics - Buildings,renewables
+China,NA,410,280,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Solar photovoltaics - Buildings,renewables
+India,NA,340,230,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Solar photovoltaics - Buildings,renewables
+Middle East,NA,940,600,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Solar photovoltaics - Buildings,renewables
+Africa,NA,850,550,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Solar photovoltaics - Buildings,renewables
+Brazil,NA,350,250,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Solar photovoltaics - Buildings,renewables
+European Union,NA,1470,1380,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Wind onshore,renewables
+United States,NA,1270,1190,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Wind onshore,renewables
+Japan,NA,2840,2670,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Wind onshore,renewables
+Russia,NA,1410,1300,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Wind onshore,renewables
+China,NA,1060,1000,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Wind onshore,renewables
+India,NA,840,790,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Wind onshore,renewables
+Middle East,NA,1710,1570,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Wind onshore,renewables
+Africa,NA,1630,1510,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Wind onshore,renewables
+Brazil,NA,1060,1000,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Wind onshore,renewables
+European Union,NA,1800,1240,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Wind offshore,renewables
+United States,NA,2200,1500,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Wind offshore,renewables
+Japan,NA,3000,2060,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Wind offshore,renewables
+Russia,NA,2680,1760,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Wind offshore,renewables
+China,NA,1640,1120,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Wind offshore,renewables
+India,NA,1560,1080,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Wind offshore,renewables
+Middle East,NA,2540,1680,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Wind offshore,renewables
+Africa,NA,2480,1660,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Wind offshore,renewables
+Brazil,NA,2600,1680,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Wind offshore,renewables
+European Union,NA,2650,2650,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Hydropower - large-scale unit,renewables
+United States,NA,2700,2700,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Hydropower - large-scale unit,renewables
+Japan,NA,2400,2400,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Hydropower - large-scale unit,renewables
+Russia,NA,2050,2050,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Hydropower - large-scale unit,renewables
+China,NA,1600,1600,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Hydropower - large-scale unit,renewables
+India,NA,2000,2000,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Hydropower - large-scale unit,renewables
+Middle East,NA,2150,2150,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Hydropower - large-scale unit,renewables
+Africa,NA,2100,2050,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Hydropower - large-scale unit,renewables
+Brazil,NA,2100,2100,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Hydropower - large-scale unit,renewables
+European Union,NA,3900,3850,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Hydropower - small-scale unit,renewables
+United States,NA,4050,4050,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Hydropower - small-scale unit,renewables
+Japan,NA,3550,3500,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Hydropower - small-scale unit,renewables
+Russia,NA,3500,3450,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Hydropower - small-scale unit,renewables
+China,NA,2000,2000,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Hydropower - small-scale unit,renewables
+India,NA,3050,3000,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Hydropower - small-scale unit,renewables
+Middle East,NA,3400,3350,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Hydropower - small-scale unit,renewables
+Africa,NA,3300,3250,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Hydropower - small-scale unit,renewables
+Brazil,NA,3350,3300,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Hydropower - small-scale unit,renewables
+European Union,NA,2300,2200,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Bioenergy - Large scale unit,renewables
+United States,NA,2400,2250,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Bioenergy - Large scale unit,renewables
+Japan,NA,2250,2150,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Bioenergy - Large scale unit,renewables
+Russia,NA,2150,2000,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Bioenergy - Large scale unit,renewables
+China,NA,1550,1450,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Bioenergy - Large scale unit,renewables
+India,NA,2050,1950,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Bioenergy - Large scale unit,renewables
+Middle East,NA,2150,2000,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Bioenergy - Large scale unit,renewables
+Africa,NA,2050,1900,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Bioenergy - Large scale unit,renewables
+Brazil,NA,2150,2000,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Bioenergy - Large scale unit,renewables
+European Union,NA,575,550,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Bioenergy - Cofiring,renewables
+United States,NA,600,575,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Bioenergy - Cofiring,renewables
+Japan,NA,575,550,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Bioenergy - Cofiring,renewables
+Russia,NA,550,500,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Bioenergy - Cofiring,renewables
+China,NA,375,350,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Bioenergy - Cofiring,renewables
+India,NA,525,500,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Bioenergy - Cofiring,renewables
+Middle East,NA,525,500,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Bioenergy - Cofiring,renewables
+Africa,NA,500,475,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Bioenergy - Cofiring,renewables
+Brazil,NA,525,500,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Bioenergy - Cofiring,renewables
+European Union,NA,3600,3450,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Bioenergy - Medium-scale CHP,renewables
+United States,NA,3900,3650,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Bioenergy - Medium-scale CHP,renewables
+Japan,NA,3750,3550,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Bioenergy - Medium-scale CHP,renewables
+Russia,NA,3300,3100,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Bioenergy - Medium-scale CHP,renewables
+China,NA,2400,2250,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Bioenergy - Medium-scale CHP,renewables
+India,NA,2700,2550,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Bioenergy - Medium-scale CHP,renewables
+Middle East,NA,2750,2550,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Bioenergy - Medium-scale CHP,renewables
+Africa,NA,2700,2550,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Bioenergy - Medium-scale CHP,renewables
+Brazil,NA,2800,2650,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Bioenergy - Medium-scale CHP,renewables
+European Union,NA,4150,3550,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Bioenergy + CCUS,renewables
+United States,NA,4100,3550,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Bioenergy + CCUS,renewables
+Japan,NA,4050,3450,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Bioenergy + CCUS,renewables
+Russia,NA,3750,3150,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Bioenergy + CCUS,renewables
+China,NA,2800,2400,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Bioenergy + CCUS,renewables
+India,NA,3450,2900,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Bioenergy + CCUS,renewables
+Middle East,NA,3700,3150,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Bioenergy + CCUS,renewables
+Africa,NA,3550,3000,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Bioenergy + CCUS,renewables
+Brazil,NA,3400,2950,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Bioenergy + CCUS,renewables
+European Union,NA,4250,3100,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Concentrating solar power,renewables
+United States,NA,4900,3600,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Concentrating solar power,renewables
+Japan,NA,NA,NA,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Concentrating solar power,renewables
+Russia,NA,NA,NA,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Concentrating solar power,renewables
+China,NA,3600,2550,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Concentrating solar power,renewables
+India,NA,4150,2950,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Concentrating solar power,renewables
+Middle East,NA,3700,2650,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Concentrating solar power,renewables
+Africa,NA,3650,2650,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Concentrating solar power,renewables
+Brazil,NA,3900,2750,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Concentrating solar power,renewables
+European Union,NA,2650,2400,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Geothermal,renewables
+United States,NA,2000,1850,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Geothermal,renewables
+Japan,NA,2600,2400,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Geothermal,renewables
+Russia,NA,2000,1850,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Geothermal,renewables
+China,NA,2100,1900,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Geothermal,renewables
+India,NA,3300,3050,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Geothermal,renewables
+Middle East,NA,2000,1900,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Geothermal,renewables
+Africa,NA,2800,2550,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Geothermal,renewables
+Brazil,NA,NA,NA,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Geothermal,renewables
+European Union,NA,3950,2600,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Marine,renewables
+United States,NA,3950,2550,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Marine,renewables
+Japan,NA,4100,2700,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Marine,renewables
+Russia,NA,4050,2700,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Marine,renewables
+China,NA,4050,2700,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Marine,renewables
+India,NA,4000,2700,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Marine,renewables
+Middle East,NA,4100,2700,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Marine,renewables
+Africa,NA,4100,2650,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Marine,renewables
+Brazil,NA,NA,NA,Net.Zero.Emissions.by.2050,"Capital costs
+(USD/kW)",Marine,renewables
+European Union,NA,10,10,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Solar photovoltaics - Large scale unit,renewables
+United States,NA,16,16,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Solar photovoltaics - Large scale unit,renewables
+Japan,NA,20,20,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Solar photovoltaics - Large scale unit,renewables
+Russia,NA,22,22,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Solar photovoltaics - Large scale unit,renewables
+China,NA,10,10,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Solar photovoltaics - Large scale unit,renewables
+India,NA,8,8,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Solar photovoltaics - Large scale unit,renewables
+Middle East,NA,14,14,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Solar photovoltaics - Large scale unit,renewables
+Africa,NA,16,16,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Solar photovoltaics - Large scale unit,renewables
+Brazil,NA,10,10,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Solar photovoltaics - Large scale unit,renewables
+European Union,NA,16,12,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Solar photovoltaics - Buildings,renewables
+United States,NA,46,44,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Solar photovoltaics - Buildings,renewables
+Japan,NA,20,20,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Solar photovoltaics - Buildings,renewables
+Russia,NA,30,28,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Solar photovoltaics - Buildings,renewables
+China,NA,10,8,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Solar photovoltaics - Buildings,renewables
+India,NA,8,8,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Solar photovoltaics - Buildings,renewables
+Middle East,NA,24,22,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Solar photovoltaics - Buildings,renewables
+Africa,NA,22,22,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Solar photovoltaics - Buildings,renewables
+Brazil,NA,8,8,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Solar photovoltaics - Buildings,renewables
+European Union,NA,38,36,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Wind onshore,renewables
+United States,NA,32,32,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Wind onshore,renewables
+Japan,NA,72,70,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Wind onshore,renewables
+Russia,NA,36,34,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Wind onshore,renewables
+China,NA,28,26,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Wind onshore,renewables
+India,NA,22,20,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Wind onshore,renewables
+Middle East,NA,44,42,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Wind onshore,renewables
+Africa,NA,42,40,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Wind onshore,renewables
+Brazil,NA,28,26,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Wind onshore,renewables
+European Union,NA,40,30,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Wind offshore,renewables
+United States,NA,75,60,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Wind offshore,renewables
+Japan,NA,90,70,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Wind offshore,renewables
+Russia,NA,75,60,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Wind offshore,renewables
+China,NA,45,35,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Wind offshore,renewables
+India,NA,45,35,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Wind offshore,renewables
+Middle East,NA,75,55,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Wind offshore,renewables
+Africa,NA,70,55,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Wind offshore,renewables
+Brazil,NA,75,55,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Wind offshore,renewables
+European Union,NA,60,60,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Hydropower - large-scale unit,renewables
+United States,NA,65,65,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Hydropower - large-scale unit,renewables
+Japan,NA,60,60,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Hydropower - large-scale unit,renewables
+Russia,NA,50,50,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Hydropower - large-scale unit,renewables
+China,NA,40,40,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Hydropower - large-scale unit,renewables
+India,NA,50,50,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Hydropower - large-scale unit,renewables
+Middle East,NA,50,50,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Hydropower - large-scale unit,renewables
+Africa,NA,50,50,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Hydropower - large-scale unit,renewables
+Brazil,NA,50,50,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Hydropower - large-scale unit,renewables
+European Union,NA,80,75,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Hydropower - small-scale unit,renewables
+United States,NA,80,80,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Hydropower - small-scale unit,renewables
+Japan,NA,70,70,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Hydropower - small-scale unit,renewables
+Russia,NA,70,70,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Hydropower - small-scale unit,renewables
+China,NA,40,40,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Hydropower - small-scale unit,renewables
+India,NA,60,60,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Hydropower - small-scale unit,renewables
+Middle East,NA,70,65,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Hydropower - small-scale unit,renewables
+Africa,NA,65,65,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Hydropower - small-scale unit,renewables
+Brazil,NA,65,65,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Hydropower - small-scale unit,renewables
+European Union,NA,80,75,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Bioenergy - Large scale unit,renewables
+United States,NA,85,80,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Bioenergy - Large scale unit,renewables
+Japan,NA,80,75,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Bioenergy - Large scale unit,renewables
+Russia,NA,75,70,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Bioenergy - Large scale unit,renewables
+China,NA,55,50,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Bioenergy - Large scale unit,renewables
+India,NA,75,70,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Bioenergy - Large scale unit,renewables
+Middle East,NA,75,70,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Bioenergy - Large scale unit,renewables
+Africa,NA,70,65,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Bioenergy - Large scale unit,renewables
+Brazil,NA,75,70,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Bioenergy - Large scale unit,renewables
+European Union,NA,20,20,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Bioenergy - Cofiring,renewables
+United States,NA,25,20,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Bioenergy - Cofiring,renewables
+Japan,NA,20,20,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Bioenergy - Cofiring,renewables
+Russia,NA,20,20,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Bioenergy - Cofiring,renewables
+China,NA,15,15,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Bioenergy - Cofiring,renewables
+India,NA,20,20,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Bioenergy - Cofiring,renewables
+Middle East,NA,20,20,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Bioenergy - Cofiring,renewables
+Africa,NA,20,20,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Bioenergy - Cofiring,renewables
+Brazil,NA,20,20,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Bioenergy - Cofiring,renewables
+European Union,NA,135,130,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Bioenergy - Medium-scale CHP,renewables
+United States,NA,145,140,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Bioenergy - Medium-scale CHP,renewables
+Japan,NA,140,135,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Bioenergy - Medium-scale CHP,renewables
+Russia,NA,125,115,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Bioenergy - Medium-scale CHP,renewables
+China,NA,90,85,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Bioenergy - Medium-scale CHP,renewables
+India,NA,100,95,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Bioenergy - Medium-scale CHP,renewables
+Middle East,NA,100,95,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Bioenergy - Medium-scale CHP,renewables
+Africa,NA,100,95,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Bioenergy - Medium-scale CHP,renewables
+Brazil,NA,105,100,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Bioenergy - Medium-scale CHP,renewables
+European Union,NA,145,125,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Bioenergy + CCUS,renewables
+United States,NA,145,125,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Bioenergy + CCUS,renewables
+Japan,NA,140,120,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Bioenergy + CCUS,renewables
+Russia,NA,130,110,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Bioenergy + CCUS,renewables
+China,NA,100,85,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Bioenergy + CCUS,renewables
+India,NA,120,100,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Bioenergy + CCUS,renewables
+Middle East,NA,130,110,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Bioenergy + CCUS,renewables
+Africa,NA,125,105,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Bioenergy + CCUS,renewables
+Brazil,NA,120,105,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Bioenergy + CCUS,renewables
+European Union,NA,170,120,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Concentrating solar power,renewables
+United States,NA,200,140,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Concentrating solar power,renewables
+Japan,NA,NA,NA,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Concentrating solar power,renewables
+Russia,NA,NA,NA,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Concentrating solar power,renewables
+China,NA,140,100,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Concentrating solar power,renewables
+India,NA,170,120,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Concentrating solar power,renewables
+Middle East,NA,150,110,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Concentrating solar power,renewables
+Africa,NA,150,110,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Concentrating solar power,renewables
+Brazil,NA,160,110,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Concentrating solar power,renewables
+European Union,NA,55,50,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Geothermal,renewables
+United States,NA,40,35,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Geothermal,renewables
+Japan,NA,50,50,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Geothermal,renewables
+Russia,NA,40,35,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Geothermal,renewables
+China,NA,40,40,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Geothermal,renewables
+India,NA,65,60,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Geothermal,renewables
+Middle East,NA,40,40,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Geothermal,renewables
+Africa,NA,55,50,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Geothermal,renewables
+Brazil,NA,NA,NA,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Geothermal,renewables
+European Union,NA,120,80,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Marine,renewables
+United States,NA,120,80,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Marine,renewables
+Japan,NA,120,80,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Marine,renewables
+Russia,NA,120,80,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Marine,renewables
+China,NA,120,80,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Marine,renewables
+India,NA,120,80,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Marine,renewables
+Middle East,NA,120,80,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Marine,renewables
+Africa,NA,120,80,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Marine,renewables
+Brazil,NA,NA,NA,Net.Zero.Emissions.by.2050,"Annual O&M Costs
+(USD/kW)",Marine,renewables
+European Union,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Solar photovoltaics - Large scale unit,renewables
+United States,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Solar photovoltaics - Large scale unit,renewables
+Japan,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Solar photovoltaics - Large scale unit,renewables
+Russia,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Solar photovoltaics - Large scale unit,renewables
+China,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Solar photovoltaics - Large scale unit,renewables
+India,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Solar photovoltaics - Large scale unit,renewables
+Middle East,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Solar photovoltaics - Large scale unit,renewables
+Africa,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Solar photovoltaics - Large scale unit,renewables
+Brazil,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Solar photovoltaics - Large scale unit,renewables
+European Union,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Solar photovoltaics - Buildings,renewables
+United States,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Solar photovoltaics - Buildings,renewables
+Japan,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Solar photovoltaics - Buildings,renewables
+Russia,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Solar photovoltaics - Buildings,renewables
+China,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Solar photovoltaics - Buildings,renewables
+India,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Solar photovoltaics - Buildings,renewables
+Middle East,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Solar photovoltaics - Buildings,renewables
+Africa,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Solar photovoltaics - Buildings,renewables
+Brazil,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Solar photovoltaics - Buildings,renewables
+European Union,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Wind onshore,renewables
+United States,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Wind onshore,renewables
+Japan,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Wind onshore,renewables
+Russia,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Wind onshore,renewables
+China,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Wind onshore,renewables
+India,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Wind onshore,renewables
+Middle East,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Wind onshore,renewables
+Africa,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Wind onshore,renewables
+Brazil,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Wind onshore,renewables
+European Union,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Wind offshore,renewables
+United States,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Wind offshore,renewables
+Japan,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Wind offshore,renewables
+Russia,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Wind offshore,renewables
+China,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Wind offshore,renewables
+India,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Wind offshore,renewables
+Middle East,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Wind offshore,renewables
+Africa,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Wind offshore,renewables
+Brazil,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Wind offshore,renewables
+European Union,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Hydropower - large-scale unit,renewables
+United States,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Hydropower - large-scale unit,renewables
+Japan,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Hydropower - large-scale unit,renewables
+Russia,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Hydropower - large-scale unit,renewables
+China,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Hydropower - large-scale unit,renewables
+India,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Hydropower - large-scale unit,renewables
+Middle East,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Hydropower - large-scale unit,renewables
+Africa,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Hydropower - large-scale unit,renewables
+Brazil,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Hydropower - large-scale unit,renewables
+European Union,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Hydropower - small-scale unit,renewables
+United States,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Hydropower - small-scale unit,renewables
+Japan,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Hydropower - small-scale unit,renewables
+Russia,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Hydropower - small-scale unit,renewables
+China,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Hydropower - small-scale unit,renewables
+India,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Hydropower - small-scale unit,renewables
+Middle East,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Hydropower - small-scale unit,renewables
+Africa,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Hydropower - small-scale unit,renewables
+Brazil,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Hydropower - small-scale unit,renewables
+European Union,NA,0.35,0.35,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Bioenergy - Large scale unit,renewables
+United States,NA,0.35,0.35,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Bioenergy - Large scale unit,renewables
+Japan,NA,0.35,0.35,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Bioenergy - Large scale unit,renewables
+Russia,NA,0.35,0.35,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Bioenergy - Large scale unit,renewables
+China,NA,0.35,0.35,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Bioenergy - Large scale unit,renewables
+India,NA,0.35,0.35,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Bioenergy - Large scale unit,renewables
+Middle East,NA,0.35,0.35,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Bioenergy - Large scale unit,renewables
+Africa,NA,0.35,0.35,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Bioenergy - Large scale unit,renewables
+Brazil,NA,0.35,0.35,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Bioenergy - Large scale unit,renewables
+European Union,NA,0.37,0.37,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Bioenergy - Cofiring,renewables
+United States,NA,0.37,0.37,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Bioenergy - Cofiring,renewables
+Japan,NA,0.37,0.37,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Bioenergy - Cofiring,renewables
+Russia,NA,0.37,0.37,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Bioenergy - Cofiring,renewables
+China,NA,0.37,0.37,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Bioenergy - Cofiring,renewables
+India,NA,0.37,0.37,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Bioenergy - Cofiring,renewables
+Middle East,NA,0.37,0.37,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Bioenergy - Cofiring,renewables
+Africa,NA,0.37,0.37,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Bioenergy - Cofiring,renewables
+Brazil,NA,0.37,0.37,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Bioenergy - Cofiring,renewables
+European Union,NA,0.7,0.7,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Bioenergy - Medium-scale CHP,renewables
+United States,NA,0.7,0.7,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Bioenergy - Medium-scale CHP,renewables
+Japan,NA,0.7,0.7,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Bioenergy - Medium-scale CHP,renewables
+Russia,NA,0.7,0.7,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Bioenergy - Medium-scale CHP,renewables
+China,NA,0.7,0.7,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Bioenergy - Medium-scale CHP,renewables
+India,NA,0.7,0.7,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Bioenergy - Medium-scale CHP,renewables
+Middle East,NA,0.7,0.7,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Bioenergy - Medium-scale CHP,renewables
+Africa,NA,0.7,0.7,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Bioenergy - Medium-scale CHP,renewables
+Brazil,NA,0.7,0.7,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Bioenergy - Medium-scale CHP,renewables
+European Union,NA,0.3,0.3,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Bioenergy + CCUS,renewables
+United States,NA,0.3,0.3,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Bioenergy + CCUS,renewables
+Japan,NA,0.3,0.3,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Bioenergy + CCUS,renewables
+Russia,NA,0.3,0.3,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Bioenergy + CCUS,renewables
+China,NA,0.3,0.3,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Bioenergy + CCUS,renewables
+India,NA,0.3,0.3,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Bioenergy + CCUS,renewables
+Middle East,NA,0.3,0.3,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Bioenergy + CCUS,renewables
+Africa,NA,0.3,0.3,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Bioenergy + CCUS,renewables
+Brazil,NA,0.3,0.3,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Bioenergy + CCUS,renewables
+European Union,NA,0.4,0.4,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Concentrating solar power,renewables
+United States,NA,0.4,0.4,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Concentrating solar power,renewables
+Japan,NA,NA,NA,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Concentrating solar power,renewables
+Russia,NA,NA,NA,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Concentrating solar power,renewables
+China,NA,0.4,0.4,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Concentrating solar power,renewables
+India,NA,0.4,0.4,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Concentrating solar power,renewables
+Middle East,NA,0.4,0.4,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Concentrating solar power,renewables
+Africa,NA,0.4,0.4,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Concentrating solar power,renewables
+Brazil,NA,0.4,0.4,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Concentrating solar power,renewables
+European Union,NA,0.1,0.1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Geothermal,renewables
+United States,NA,0.1,0.1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Geothermal,renewables
+Japan,NA,0.1,0.1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Geothermal,renewables
+Russia,NA,0.1,0.1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Geothermal,renewables
+China,NA,0.1,0.1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Geothermal,renewables
+India,NA,0.1,0.1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Geothermal,renewables
+Middle East,NA,0.1,0.1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Geothermal,renewables
+Africa,NA,0.1,0.1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Geothermal,renewables
+Brazil,NA,NA,NA,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Geothermal,renewables
+European Union,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Marine,renewables
+United States,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Marine,renewables
+Japan,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Marine,renewables
+Russia,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Marine,renewables
+China,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Marine,renewables
+India,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Marine,renewables
+Middle East,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Marine,renewables
+Africa,NA,1,1,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Marine,renewables
+Brazil,NA,NA,NA,Net.Zero.Emissions.by.2050,"Efficiency
+(gross, LHV)",Marine,renewables
+European Union,NA,0.14,0.14,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Solar photovoltaics - Large scale unit,renewables
+United States,NA,0.22,0.23,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Solar photovoltaics - Large scale unit,renewables
+Japan,NA,0.14,0.14,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Solar photovoltaics - Large scale unit,renewables
+Russia,NA,0.13,0.14,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Solar photovoltaics - Large scale unit,renewables
+China,NA,0.18,0.19,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Solar photovoltaics - Large scale unit,renewables
+India,NA,0.21,0.22,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Solar photovoltaics - Large scale unit,renewables
+Middle East,NA,0.25,0.26,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Solar photovoltaics - Large scale unit,renewables
+Africa,NA,0.23,0.23,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Solar photovoltaics - Large scale unit,renewables
+Brazil,NA,0.21,0.22,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Solar photovoltaics - Large scale unit,renewables
+European Union,NA,0.13,0.14,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Solar photovoltaics - Buildings,renewables
+United States,NA,0.17,0.17,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Solar photovoltaics - Buildings,renewables
+Japan,NA,0.13,0.13,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Solar photovoltaics - Buildings,renewables
+Russia,NA,0.1,0.11,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Solar photovoltaics - Buildings,renewables
+China,NA,0.15,0.15,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Solar photovoltaics - Buildings,renewables
+India,NA,0.17,0.18,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Solar photovoltaics - Buildings,renewables
+Middle East,NA,0.19,0.2,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Solar photovoltaics - Buildings,renewables
+Africa,NA,0.19,0.19,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Solar photovoltaics - Buildings,renewables
+Brazil,NA,0.18,0.18,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Solar photovoltaics - Buildings,renewables
+European Union,NA,0.3,0.3,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Wind onshore,renewables
+United States,NA,0.43,0.44,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Wind onshore,renewables
+Japan,NA,0.28,0.29,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Wind onshore,renewables
+Russia,NA,0.29,0.31,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Wind onshore,renewables
+China,NA,0.27,0.28,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Wind onshore,renewables
+India,NA,0.28,0.3,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Wind onshore,renewables
+Middle East,NA,0.35,0.36,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Wind onshore,renewables
+Africa,NA,0.33,0.34,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Wind onshore,renewables
+Brazil,NA,0.44,0.44,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Wind onshore,renewables
+European Union,NA,0.56,0.59,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Wind offshore,renewables
+United States,NA,0.46,0.49,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Wind offshore,renewables
+Japan,NA,0.44,0.46,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Wind offshore,renewables
+Russia,NA,0.42,0.44,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Wind offshore,renewables
+China,NA,0.39,0.43,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Wind offshore,renewables
+India,NA,0.37,0.39,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Wind offshore,renewables
+Middle East,NA,0.37,0.39,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Wind offshore,renewables
+Africa,NA,0.4,0.43,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Wind offshore,renewables
+Brazil,NA,0.51,0.53,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Wind offshore,renewables
+European Union,NA,0.4,0.4,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Hydropower - large-scale unit,renewables
+United States,NA,0.4,0.4,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Hydropower - large-scale unit,renewables
+Japan,NA,0.5,0.5,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Hydropower - large-scale unit,renewables
+Russia,NA,0.4,0.4,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Hydropower - large-scale unit,renewables
+China,NA,0.35,0.35,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Hydropower - large-scale unit,renewables
+India,NA,0.4,0.4,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Hydropower - large-scale unit,renewables
+Middle East,NA,0.15,0.15,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Hydropower - large-scale unit,renewables
+Africa,NA,0.5,0.5,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Hydropower - large-scale unit,renewables
+Brazil,NA,0.5,0.5,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Hydropower - large-scale unit,renewables
+European Union,NA,0.25,0.25,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Hydropower - small-scale unit,renewables
+United States,NA,0.3,0.3,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Hydropower - small-scale unit,renewables
+Japan,NA,0.2,0.2,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Hydropower - small-scale unit,renewables
+Russia,NA,0.4,0.4,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Hydropower - small-scale unit,renewables
+China,NA,0.35,0.35,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Hydropower - small-scale unit,renewables
+India,NA,0.35,0.35,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Hydropower - small-scale unit,renewables
+Middle East,NA,0.15,0.15,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Hydropower - small-scale unit,renewables
+Africa,NA,0.5,0.5,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Hydropower - small-scale unit,renewables
+Brazil,NA,0.5,0.5,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Hydropower - small-scale unit,renewables
+European Union,NA,0.6,0.6,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Bioenergy - Large scale unit,renewables
+United States,NA,0.5,0.5,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Bioenergy - Large scale unit,renewables
+Japan,NA,0.6,0.6,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Bioenergy - Large scale unit,renewables
+Russia,NA,0.5,0.5,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Bioenergy - Large scale unit,renewables
+China,NA,0.7,0.7,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Bioenergy - Large scale unit,renewables
+India,NA,0.6,0.6,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Bioenergy - Large scale unit,renewables
+Middle East,NA,0.8,0.8,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Bioenergy - Large scale unit,renewables
+Africa,NA,0.5,0.5,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Bioenergy - Large scale unit,renewables
+Brazil,NA,0.4,0.4,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Bioenergy - Large scale unit,renewables
+European Union,NA,0.6,0.6,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Bioenergy - Cofiring,renewables
+United States,NA,0.7,0.7,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Bioenergy - Cofiring,renewables
+Japan,NA,0.8,0.8,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Bioenergy - Cofiring,renewables
+Russia,NA,0.6,0.6,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Bioenergy - Cofiring,renewables
+China,NA,0.8,0.8,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Bioenergy - Cofiring,renewables
+India,NA,0.6,0.6,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Bioenergy - Cofiring,renewables
+Middle East,NA,0.6,0.6,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Bioenergy - Cofiring,renewables
+Africa,NA,0.4,0.4,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Bioenergy - Cofiring,renewables
+Brazil,NA,0.7,0.7,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Bioenergy - Cofiring,renewables
+European Union,NA,0.7,0.7,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Bioenergy - Medium-scale CHP,renewables
+United States,NA,0.5,0.5,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Bioenergy - Medium-scale CHP,renewables
+Japan,NA,0.6,0.6,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Bioenergy - Medium-scale CHP,renewables
+Russia,NA,0.4,0.4,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Bioenergy - Medium-scale CHP,renewables
+China,NA,0.6,0.6,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Bioenergy - Medium-scale CHP,renewables
+India,NA,0.5,0.5,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Bioenergy - Medium-scale CHP,renewables
+Middle East,NA,0.5,0.5,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Bioenergy - Medium-scale CHP,renewables
+Africa,NA,0.5,0.5,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Bioenergy - Medium-scale CHP,renewables
+Brazil,NA,0.5,0.5,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Bioenergy - Medium-scale CHP,renewables
+European Union,NA,0.6,0.6,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Bioenergy + CCUS,renewables
+United States,NA,0.5,0.5,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Bioenergy + CCUS,renewables
+Japan,NA,0.6,0.6,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Bioenergy + CCUS,renewables
+Russia,NA,0.5,0.5,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Bioenergy + CCUS,renewables
+China,NA,0.7,0.7,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Bioenergy + CCUS,renewables
+India,NA,0.6,0.6,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Bioenergy + CCUS,renewables
+Middle East,NA,0.8,0.8,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Bioenergy + CCUS,renewables
+Africa,NA,0.5,0.5,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Bioenergy + CCUS,renewables
+Brazil,NA,0.4,0.4,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Bioenergy + CCUS,renewables
+European Union,NA,0.36,0.42,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Concentrating solar power,renewables
+United States,NA,0.34,0.4,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Concentrating solar power,renewables
+Japan,NA,NA,NA,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Concentrating solar power,renewables
+Russia,NA,NA,NA,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Concentrating solar power,renewables
+China,NA,0.36,0.42,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Concentrating solar power,renewables
+India,NA,0.3,0.36,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Concentrating solar power,renewables
+Middle East,NA,0.36,0.42,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Concentrating solar power,renewables
+Africa,NA,0.36,0.42,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Concentrating solar power,renewables
+Brazil,NA,0.34,0.4,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Concentrating solar power,renewables
+European Union,NA,0.85,0.85,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Geothermal,renewables
+United States,NA,0.6,0.6,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Geothermal,renewables
+Japan,NA,0.6,0.6,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Geothermal,renewables
+Russia,NA,0.65,0.65,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Geothermal,renewables
+China,NA,0.5,0.5,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Geothermal,renewables
+India,NA,0.5,0.5,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Geothermal,renewables
+Middle East,NA,0.8,0.8,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Geothermal,renewables
+Africa,NA,0.8,0.8,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Geothermal,renewables
+Brazil,NA,NA,NA,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Geothermal,renewables
+European Union,NA,0.25,0.25,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Marine,renewables
+United States,NA,0.3,0.3,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Marine,renewables
+Japan,NA,0.3,0.3,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Marine,renewables
+Russia,NA,0.3,0.3,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Marine,renewables
+China,NA,0.35,0.35,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Marine,renewables
+India,NA,0.3,0.3,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Marine,renewables
+Middle East,NA,0.3,0.3,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Marine,renewables
+Africa,NA,0.3,0.3,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Marine,renewables
+Brazil,NA,NA,NA,Net.Zero.Emissions.by.2050,"Capacity factor
+(%)",Marine,renewables
+European Union,NA,1.5,1.5,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Solar photovoltaics - Large scale unit,renewables
+United States,NA,1.5,1.5,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Solar photovoltaics - Large scale unit,renewables
+Japan,NA,1.5,1.5,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Solar photovoltaics - Large scale unit,renewables
+Russia,NA,1.5,1.5,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Solar photovoltaics - Large scale unit,renewables
+China,NA,1.5,1.5,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Solar photovoltaics - Large scale unit,renewables
+India,NA,1.5,1.5,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Solar photovoltaics - Large scale unit,renewables
+Middle East,NA,1.5,1.5,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Solar photovoltaics - Large scale unit,renewables
+Africa,NA,1.5,1.5,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Solar photovoltaics - Large scale unit,renewables
+Brazil,NA,1.5,1.5,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Solar photovoltaics - Large scale unit,renewables
+European Union,NA,1,1,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Solar photovoltaics - Buildings,renewables
+United States,NA,1,1,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Solar photovoltaics - Buildings,renewables
+Japan,NA,1,1,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Solar photovoltaics - Buildings,renewables
+Russia,NA,1,1,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Solar photovoltaics - Buildings,renewables
+China,NA,1,1,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Solar photovoltaics - Buildings,renewables
+India,NA,1,1,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Solar photovoltaics - Buildings,renewables
+Middle East,NA,1,1,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Solar photovoltaics - Buildings,renewables
+Africa,NA,1,1,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Solar photovoltaics - Buildings,renewables
+Brazil,NA,1,1,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Solar photovoltaics - Buildings,renewables
+European Union,NA,1.5,1.5,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Wind onshore,renewables
+United States,NA,1.5,1.5,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Wind onshore,renewables
+Japan,NA,1.5,1.5,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Wind onshore,renewables
+Russia,NA,1.5,1.5,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Wind onshore,renewables
+China,NA,1.5,1.5,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Wind onshore,renewables
+India,NA,1.5,1.5,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Wind onshore,renewables
+Middle East,NA,1.5,1.5,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Wind onshore,renewables
+Africa,NA,1.5,1.5,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Wind onshore,renewables
+Brazil,NA,1.5,1.5,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Wind onshore,renewables
+European Union,NA,3,3,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Wind offshore,renewables
+United States,NA,3,3,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Wind offshore,renewables
+Japan,NA,3,3,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Wind offshore,renewables
+Russia,NA,3,3,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Wind offshore,renewables
+China,NA,3,3,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Wind offshore,renewables
+India,NA,3,3,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Wind offshore,renewables
+Middle East,NA,3,3,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Wind offshore,renewables
+Africa,NA,3,3,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Wind offshore,renewables
+Brazil,NA,3,3,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Wind offshore,renewables
+European Union,NA,4,4,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Hydropower - large-scale unit,renewables
+United States,NA,4,4,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Hydropower - large-scale unit,renewables
+Japan,NA,4,4,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Hydropower - large-scale unit,renewables
+Russia,NA,4,4,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Hydropower - large-scale unit,renewables
+China,NA,4,4,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Hydropower - large-scale unit,renewables
+India,NA,4,4,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Hydropower - large-scale unit,renewables
+Middle East,NA,4,4,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Hydropower - large-scale unit,renewables
+Africa,NA,4,4,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Hydropower - large-scale unit,renewables
+Brazil,NA,4,4,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Hydropower - large-scale unit,renewables
+European Union,NA,4,4,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Hydropower - small-scale unit,renewables
+United States,NA,4,4,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Hydropower - small-scale unit,renewables
+Japan,NA,4,4,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Hydropower - small-scale unit,renewables
+Russia,NA,4,4,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Hydropower - small-scale unit,renewables
+China,NA,4,4,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Hydropower - small-scale unit,renewables
+India,NA,4,4,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Hydropower - small-scale unit,renewables
+Middle East,NA,4,4,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Hydropower - small-scale unit,renewables
+Africa,NA,4,4,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Hydropower - small-scale unit,renewables
+Brazil,NA,4,4,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Hydropower - small-scale unit,renewables
+European Union,NA,3,3,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Bioenergy - Large scale unit,renewables
+United States,NA,3,3,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Bioenergy - Large scale unit,renewables
+Japan,NA,3,3,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Bioenergy - Large scale unit,renewables
+Russia,NA,3,3,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Bioenergy - Large scale unit,renewables
+China,NA,3,3,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Bioenergy - Large scale unit,renewables
+India,NA,3,3,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Bioenergy - Large scale unit,renewables
+Middle East,NA,3,3,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Bioenergy - Large scale unit,renewables
+Africa,NA,3,3,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Bioenergy - Large scale unit,renewables
+Brazil,NA,3,0,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Bioenergy - Large scale unit,renewables
+European Union,NA,2,2,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Bioenergy - Cofiring,renewables
+United States,NA,2,2,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Bioenergy - Cofiring,renewables
+Japan,NA,2,2,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Bioenergy - Cofiring,renewables
+Russia,NA,2,2,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Bioenergy - Cofiring,renewables
+China,NA,2,2,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Bioenergy - Cofiring,renewables
+India,NA,2,2,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Bioenergy - Cofiring,renewables
+Middle East,NA,2,2,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Bioenergy - Cofiring,renewables
+Africa,NA,2,2,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Bioenergy - Cofiring,renewables
+Brazil,NA,2,0,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Bioenergy - Cofiring,renewables
+European Union,NA,2,2,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Bioenergy - Medium-scale CHP,renewables
+United States,NA,2,2,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Bioenergy - Medium-scale CHP,renewables
+Japan,NA,2,2,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Bioenergy - Medium-scale CHP,renewables
+Russia,NA,2,2,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Bioenergy - Medium-scale CHP,renewables
+China,NA,2,2,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Bioenergy - Medium-scale CHP,renewables
+India,NA,2,2,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Bioenergy - Medium-scale CHP,renewables
+Middle East,NA,2,2,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Bioenergy - Medium-scale CHP,renewables
+Africa,NA,2,2,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Bioenergy - Medium-scale CHP,renewables
+Brazil,NA,2,2,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Bioenergy - Medium-scale CHP,renewables
+European Union,NA,3,3,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Bioenergy + CCUS,renewables
+United States,NA,3,3,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Bioenergy + CCUS,renewables
+Japan,NA,3,3,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Bioenergy + CCUS,renewables
+Russia,NA,3,3,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Bioenergy + CCUS,renewables
+China,NA,3,3,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Bioenergy + CCUS,renewables
+India,NA,3,3,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Bioenergy + CCUS,renewables
+Middle East,NA,3,3,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Bioenergy + CCUS,renewables
+Africa,NA,3,3,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Bioenergy + CCUS,renewables
+Brazil,NA,3,3,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Bioenergy + CCUS,renewables
+European Union,NA,3,3,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Concentrating solar power,renewables
+United States,NA,3,3,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Concentrating solar power,renewables
+Japan,NA,NA,NA,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Concentrating solar power,renewables
+Russia,NA,NA,NA,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Concentrating solar power,renewables
+China,NA,3,3,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Concentrating solar power,renewables
+India,NA,3,3,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Concentrating solar power,renewables
+Middle East,NA,3,3,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Concentrating solar power,renewables
+Africa,NA,3,3,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Concentrating solar power,renewables
+Brazil,NA,3,3,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Concentrating solar power,renewables
+European Union,NA,4,4,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Geothermal,renewables
+United States,NA,4,4,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Geothermal,renewables
+Japan,NA,4,4,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Geothermal,renewables
+Russia,NA,4,4,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Geothermal,renewables
+China,NA,4,4,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Geothermal,renewables
+India,NA,4,4,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Geothermal,renewables
+Middle East,NA,4,4,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Geothermal,renewables
+Africa,NA,4,4,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Geothermal,renewables
+Brazil,NA,4,4,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Geothermal,renewables
+European Union,NA,4,4,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Marine,renewables
+United States,NA,4,4,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Marine,renewables
+Japan,NA,4,4,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Marine,renewables
+Russia,NA,4,4,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Marine,renewables
+China,NA,4,4,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Marine,renewables
+India,NA,4,4,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Marine,renewables
+Middle East,NA,4,4,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Marine,renewables
+Africa,NA,4,4,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Marine,renewables
+Brazil,NA,4,4,Net.Zero.Emissions.by.2050,"Construction Time
+(years)",Marine,renewables

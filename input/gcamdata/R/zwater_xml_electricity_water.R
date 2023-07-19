@@ -65,7 +65,10 @@ module_water_electricity_water_xml <- function(command, ...) {
              "L2233.StubTechShrwt_elec_cool",
              "L2233.GlobalTechCapital_elec_cool",
              "L2233.GlobalIntTechCapital_elec_cool",
-             "L223.GlobalTechCapFac_elec"))
+             "L223.GlobalTechCapFac_elec",
+             "L2233.StubTechCapital_elecPassthru",
+             "L2233.StubTechOMfixed_elecPassthru",
+             "L2233.StubTechOMvar_elecPassthru"))
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(c(XML = "electricity_water.xml"))
   } else if(command == driver.MAKE) {
@@ -128,6 +131,9 @@ module_water_electricity_water_xml <- function(command, ...) {
     L2233.GlobalIntTechCapital_elec_cool <- get_data(all_data, "L2233.GlobalIntTechCapital_elec_cool")
     L223.GlobalTechCapFac_elec <- get_data(all_data, "L223.GlobalTechCapFac_elec")
 
+    L2233.StubTechCapital_elecPassthru <- get_data(all_data, "L2233.StubTechCapital_elecPassthru")
+    L2233.StubTechOMfixed_elecPassthru <- get_data(all_data, "L2233.StubTechOMfixed_elecPassthru")
+    L2233.StubTechOMvar_elecPassthru <- get_data(all_data, "L2233.StubTechOMvar_elecPassthru")
 
     # Silence package checks
     technology <- NULL
@@ -174,6 +180,11 @@ module_water_electricity_water_xml <- function(command, ...) {
       add_xml_data(L2233.PrimaryRenewKeywordInt_elec_cool, "PrimaryRenewKeywordInt") %>%
       add_xml_data(L2233.StubTech_elecPassthru, "StubTech") %>%
       add_xml_data(L2233.StubTechProd_elecPassthru, "StubTechProd") %>%
+
+      add_xml_data(L2233.StubTechCapital_elecPassthru, "StubTechCapital") %>%
+      add_xml_data(L2233.StubTechOMfixed_elecPassthru, "StubTechOMfixed") %>%
+      add_xml_data(L2233.StubTechOMvar_elecPassthru, "StubTechOMvar") %>%
+
       add_xml_data(L2233.GlobalPassThroughTech, "GlobalPassThroughTech") %>%
       add_xml_data(L2233.GlobalTechEff_elecPassthru, "GlobalTechEff") %>%
       add_xml_data(L2233.GlobalTechShrwt_elecPassthru, "GlobalTechShrwt") %>%

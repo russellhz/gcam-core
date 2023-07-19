@@ -83,7 +83,8 @@ module_energy_L113.atb_cost <- function(command, ...) {
       atb_gcam_mapping <- get_data(all_data, "energy/mappings/atb_gcam_mapping") %>%
         select(-inferred)
 
-    if (energy.ELEC_COST_SOURCE == "EUREF"){
+    # Regardless of whether we are using EUREF or WEO, we want global techs to come from EUREF scenario
+    if (energy.ELEC_COST_SOURCE %in% c("EUREF", "WEO", "WEO-EUREF")){
       # If using EUREF, we need to fill in 2015 costs using ATB, so still need to run much of the code with ATB
       EURef_costs <- get_data(all_data, "energy/EURef2020_elec_params") %>%
         filter(Units == "EUR/kW") %>%
@@ -248,7 +249,7 @@ module_energy_L113.atb_cost <- function(command, ...) {
     # Setting this here - will be overwritten with EUREF data if energy.ELEC_COST_SOURCE == "EUREF"
     L113.costs_new <- L113.costs_ATB
 
-    if (energy.ELEC_COST_SOURCE == "EUREF"){
+    if (energy.ELEC_COST_SOURCE %in% c("EUREF", "WEO", "WEO-EUREF")){
       # rate of change in ATB from 2015 to 2020
       ATB_2015_2020 <- L113.costs_ATB %>%
         na.omit() %>%

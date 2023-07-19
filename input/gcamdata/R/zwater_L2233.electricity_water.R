@@ -65,6 +65,9 @@ module_water_L2233.electricity_water <- function(command, ...) {
              "L223.StubTechSecOut_desal",
              "L223.StubTechCapFactor_elec",
              "L270.CreditInput_elec",
+             "L223.StubTechCapital",
+             "L223.StubTechOMfixed",
+             "L223.StubTechOMvar",
              paste0("L223.", L223_fileNames)
     ))
 
@@ -114,7 +117,10 @@ module_water_L2233.electricity_water <- function(command, ...) {
              "L2233.PrimaryRenewKeyword_elec_cool",
              "L2233.PrimaryRenewKeywordInt_elec_cool",
              "L2233.DeleteCreditInput_elec",
-             "L2233.CreditInput_elec"))
+             "L2233.CreditInput_elec",
+             "L2233.StubTechCapital_elecPassthru",
+             "L2233.StubTechOMfixed_elecPassthru",
+             "L2233.StubTechOMvar_elecPassthru"))
   } else if(command == driver.MAKE) {
 
     all_data <- list(...)[[1]]
@@ -147,6 +153,11 @@ module_water_L2233.electricity_water <- function(command, ...) {
     L223.StubTechSecOut_desal <- get_data(all_data, "L223.StubTechSecOut_desal", strip_attributes = TRUE)
     L223.StubTechCapFactor_elec <- get_data(all_data, "L223.StubTechCapFactor_elec", strip_attributes = TRUE)
     L270.CreditInput_elec <- get_data(all_data, "L270.CreditInput_elec",strip_attributes = TRUE)
+
+    L223.StubTechCapital <- get_data(all_data, "L223.StubTechCapital",strip_attributes = TRUE)
+    L223.StubTechOMfixed <- get_data(all_data, "L223.StubTechOMfixed",strip_attributes = TRUE)
+    L223.StubTechOMvar <- get_data(all_data, "L223.StubTechOMvar",strip_attributes = TRUE)
+
 
     # Use get_data function with sapply to read in all "L223." inputs at once
     get_data_rev <- function(name, all_data) get_data(all_data, name)
@@ -546,7 +557,7 @@ module_water_L2233.electricity_water <- function(command, ...) {
                                by = c("fuel", "technology", "cooling_system", "water_type")) %>%
       mutate(water_withdrawals = round(water_withdrawals / CONV_MWH_GJ, 7),
              water_consumption = round(water_consumption / CONV_MWH_GJ, 7)) %>%
-      gather(minicam.energy.input, coefficient,
+      tidyr::gather(minicam.energy.input, coefficient,
              -to.supplysector, -to.subsector, -to.technology, -fuel, -technology, -cooling_system, -water_type,
              -from.supplysector, -from.subsector, -from.technology) %>%
       select(-technology) %>%
@@ -579,6 +590,10 @@ module_water_L2233.electricity_water <- function(command, ...) {
 
     # Upstream electricity sector that includes pass-thru technologies for calling pass-thru sectors
     L223.StubTech_elec %>% mutate(region = region) -> L2233.StubTech_elecPassthru
+    L223.StubTechCapital %>% mutate(region = region) -> L2233.StubTechCapital_elecPassthru
+    L223.StubTechOMfixed %>% mutate(region = region) -> L2233.StubTechOMfixed_elecPassthru
+    L223.StubTechOMvar %>% mutate(region = region) -> L2233.StubTechOMvar_elecPassthru
+
 
     # PART 4: STUB TECHNOLOGY INFORMATION IN THE NEW SECTOR STRUCTURE
 
@@ -612,11 +627,12 @@ module_water_L2233.electricity_water <- function(command, ...) {
     # Calibrated efficiencies of the cooling system options
     L2233.TechMapYr %>%
       repeat_add_columns(GCAM_region_names) %>%
-      filter(from.supplysector %in% L223.StubTechEff_elec$supplysector,
-             from.subsector %in% L223.StubTechEff_elec$subsector,
-             from.technology %in% L223.StubTechEff_elec$stub.technology,
-             year %in% L223.StubTechEff_elec$year) %>%
-      left_join_error_no_match(L223.StubTechEff_elec,
+      semi_join(L223.StubTechEff_elec,
+                by = c("from.supplysector" = "supplysector",
+                       "from.subsector" = "subsector",
+                       "from.technology" = "stub.technology",
+                       "year" = "year")) %>%
+      left_join(L223.StubTechEff_elec %>% filter(),
                                by = c("region", "from.supplysector" = "supplysector",
                                       "from.subsector" = "subsector", "from.technology" = "stub.technology", "year")) %>%
       rename(supplysector = to.supplysector, subsector = to.subsector, stub.technology = to.technology) %>%
@@ -673,10 +689,9 @@ module_water_L2233.electricity_water <- function(command, ...) {
       # L223.StubTechCapFactor_elec already contains capacity factors for techs without cooling systems
       filter(from.supplysector != to.supplysector) %>%
       repeat_add_columns(GCAM_region_names) %>%
-      filter(from.supplysector %in% L223.StubTechCapFactor_elec$supplysector,
-             from.subsector %in% L223.StubTechCapFactor_elec$subsector,
-             from.technology %in% L223.StubTechCapFactor_elec$stub.technology,
-             year %in% L223.StubTechCapFactor_elec$year) %>%
+      semi_join(L223.StubTechCapFactor_elec,
+                by = c("from.supplysector" = "supplysector", "from.subsector" = "subsector",
+                       "from.technology" = "stub.technology", "year" = "year")) %>%
       left_join_error_no_match(L223.StubTechCapFactor_elec,
                                by = c("region", "from.supplysector" = "supplysector",
                                       "from.subsector" = "subsector", "from.technology" = "stub.technology", "year")) %>%
@@ -973,6 +988,24 @@ module_water_L2233.electricity_water <- function(command, ...) {
       add_precursors("L223.StubTech_elec") ->
       L2233.StubTech_elecPassthru
 
+    L2233.StubTechCapital_elecPassthru %>%
+      add_title("Stub technologies capital costs for electricity sector", overwrite = TRUE) %>%
+      add_units("1975$/kW") %>%
+      add_precursors("L223.StubTechCapital") ->
+      L2233.StubTechCapital_elecPassthru
+
+    L2233.StubTechOMfixed_elecPassthru %>%
+      add_title("Stub technologies OM fixed costs for electricity sector", overwrite = TRUE) %>%
+      add_units("1975$/kW") %>%
+      add_precursors("L223.StubTechOMfixed") ->
+      L2233.StubTechOMfixed_elecPassthru
+
+    L2233.StubTechOMvar_elecPassthru %>%
+      add_title("Stub technologies OM var costs for electricity sector", overwrite = TRUE) %>%
+      add_units("1975$/kW") %>%
+      add_precursors("L223.StubTechOMvar") ->
+      L2233.StubTechOMvar_elecPassthru
+
     L2233.StubTechTrackCapital_elec %>%
       add_title("Stub tech to treat capital tracking for rooftop_pv seperately") %>%
       add_units("1975$/GJ") %>%
@@ -1151,7 +1184,10 @@ module_water_L2233.electricity_water <- function(command, ...) {
                 L2233.PrimaryRenewKeyword_elec_cool,
                 L2233.PrimaryRenewKeywordInt_elec_cool,
                 L2233.DeleteCreditInput_elec,
-                L2233.CreditInput_elec)
+                L2233.CreditInput_elec,
+                L2233.StubTechCapital_elecPassthru,
+                L2233.StubTechOMfixed_elecPassthru,
+                L2233.StubTechOMvar_elecPassthru)
   } else {
     stop("Unknown command")
   }

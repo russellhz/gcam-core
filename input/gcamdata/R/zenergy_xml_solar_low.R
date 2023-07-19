@@ -28,7 +28,7 @@ module_energy_solar_low_xml <- function(command, ...) {
     L223.StubTechCapFactor_elec <- get_data(all_data, "L223.StubTechCapFactor_elec")
 
     # This xml is empty if using EUREF data
-    if (energy.ELEC_COST_SOURCE == "EUREF"){
+    if (energy.ELEC_COST_SOURCE %in% c("EUREF", "WEO", "WEO-EUREF")){
       create_xml("solar_low.xml") ->
         solar_low.xml
     } else {
