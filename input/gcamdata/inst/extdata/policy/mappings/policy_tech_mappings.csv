@@ -328,3 +328,5 @@ ELEC_BIO,electricity,biomass,biomass (conv CCS)
 ELEC_GEO,electricity,geothermal,geothermal
 ELEC_ROOFTOP_PV,elect_td_bld,rooftop_pv,rooftop_pv
 ELEC_WIND_OFFSHORE,electricity,wind,wind_offshore
+ELEC_COAL_NO_CCS,electricity,coal,coal (conv pul)
+ELEC_COAL_NO_CCS,electricity,coal,coal (IGCC)
