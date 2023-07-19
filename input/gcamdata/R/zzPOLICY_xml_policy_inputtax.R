@@ -10,14 +10,17 @@
 #' a vector of output names, or (if \code{command} is "MAKE") all
 #' the generated outputs: \code{policy_inputtax.xml}.
 module_policy_inputtax.xml <- function(command, ...) {
-  all_xml_names <- get_xml_names("policy/A_InputTaxesSubsidies.csv", "policy_inputtax.xml")
+  all_xml_names <- union(get_xml_names("policy/A_InputTaxesSubsidies.csv", "policy_inputtax.xml"),
+                         get_xml_names("policy/A_InputCapitalFCR.csv", "policy_inputtax.xml"))
+  names(all_xml_names) <- rep("XML", length(all_xml_names))
   for(i in 1:length(all_xml_names)){
     if (!grepl(".xml", all_xml_names[i])){
       all_xml_names[i] <- paste0(all_xml_names[i], ".xml")
     }
   }
   if(command == driver.DECLARE_INPUTS) {
-    return(c("L302.InputTax"))
+    return(c("L302.InputTax",
+             "L302.InputCapitalFCR"))
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(all_xml_names)
   } else if(command == driver.MAKE) {
@@ -26,6 +29,7 @@ module_policy_inputtax.xml <- function(command, ...) {
 
     # Load required inputs
     L302.InputTax <- get_data(all_data, "L302.InputTax")
+    L302.InputCapitalFCR <- get_data(all_data, "L302.InputCapitalFCR")
     # ===================================================
 
     # Produce outputs
@@ -35,9 +39,15 @@ module_policy_inputtax.xml <- function(command, ...) {
         filter(xml == xml_name) %>%
         select(-xml)
 
+      L302.InputCapitalFCR_tmp <- L302.InputCapitalFCR %>%
+        filter(xml == xml_name) %>%
+        select(-xml)
+
+
       assign(xml_name,
              create_xml(xml_name) %>%
                add_xml_data(L302.InputTax_tmp, "StubTechCost") %>%
+               add_xml_data(L302.InputCapitalFCR_tmp, "StubTechFCR") %>%
                add_precursors("L302.InputTax")
              )
     }
