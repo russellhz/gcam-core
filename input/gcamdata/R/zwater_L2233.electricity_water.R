@@ -635,6 +635,7 @@ module_water_L2233.electricity_water <- function(command, ...) {
       left_join(L223.StubTechEff_elec %>% filter(),
                                by = c("region", "from.supplysector" = "supplysector",
                                       "from.subsector" = "subsector", "from.technology" = "stub.technology", "year")) %>%
+      na.omit %>%
       rename(supplysector = to.supplysector, subsector = to.subsector, stub.technology = to.technology) %>%
       select(LEVEL2_DATA_NAMES[["StubTechEff"]]) ->
       L2233.StubTechEff_elec_cool  # --OUTPUT--
@@ -690,7 +691,7 @@ module_water_L2233.electricity_water <- function(command, ...) {
       filter(from.supplysector != to.supplysector) %>%
       repeat_add_columns(GCAM_region_names) %>%
       semi_join(L223.StubTechCapFactor_elec,
-                by = c("from.supplysector" = "supplysector", "from.subsector" = "subsector",
+                by = c("region", "from.supplysector" = "supplysector", "from.subsector" = "subsector",
                        "from.technology" = "stub.technology", "year" = "year")) %>%
       left_join_error_no_match(L223.StubTechCapFactor_elec,
                                by = c("region", "from.supplysector" = "supplysector",

@@ -1289,6 +1289,11 @@ module_energy_L223.electricity <- function(command, ...) {
         ungroup %>%
         rename(capacity.factor = value)
 
+      if (energy.ELEC_COST_SOURCE == "WEO-EUREF"){
+        L223.StubTechCapFactor_WEO <- L223.StubTechCapFactor_WEO %>%
+          filter(!region %in% c("EU-12", "EU-15"))
+      }
+
       # Replace any values with WEO values, then add new values in
       L223.StubTechCapFactor_elec_replace <- L223.StubTechCapFactor_elec %>%
         left_join(L223.StubTechCapFactor_WEO, by = c("region", "supplysector",
