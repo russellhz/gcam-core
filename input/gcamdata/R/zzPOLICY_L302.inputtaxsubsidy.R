@@ -24,14 +24,16 @@ module_policy_302.inputtaxsubsidy <- function(command, ...) {
     all_data <- list(...)[[1]]
 
     # Load required inputs
-    A_InputTaxesSubsidies <- get_data(all_data, "policy/A_InputTaxesSubsidies")
+    A_InputTaxesSubsidies <- get_data(all_data, "policy/A_InputTaxesSubsidies") %>%
+      mutate(xml = if_else(grepl(".xml", xml), xml, paste0(xml, ".xml")))
 
     # Convert to long
     L302.InputTax <- A_InputTaxesSubsidies %>%
       gather_years(value_col = "input.cost") %>%
+      na.omit() %>%
+      group_by(xml, region, supplysector, subsector, stub.technology, minicam.non.energy.input) %>%
       complete(nesting(xml, region, supplysector, subsector, stub.technology, minicam.non.energy.input),
                year = seq(min(year), max(year), 5)) %>%
-      group_by(xml, region, supplysector, subsector, stub.technology, minicam.non.energy.input) %>%
       mutate(input.cost = approx_fun(year, input.cost)) %>%
       ungroup
 

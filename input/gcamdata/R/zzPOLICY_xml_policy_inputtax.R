@@ -11,7 +11,11 @@
 #' the generated outputs: \code{policy_inputtax.xml}.
 module_policy_inputtax.xml <- function(command, ...) {
   all_xml_names <- get_xml_names("policy/A_InputTaxesSubsidies.csv", "policy_inputtax.xml")
-
+  for(i in 1:length(all_xml_names)){
+    if (!grepl(".xml", all_xml_names[i])){
+      all_xml_names[i] <- paste0(all_xml_names[i], ".xml")
+    }
+  }
   if(command == driver.DECLARE_INPUTS) {
     return(c("L302.InputTax"))
   } else if(command == driver.DECLARE_OUTPUTS) {

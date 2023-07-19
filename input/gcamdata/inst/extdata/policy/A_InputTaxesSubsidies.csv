@@ -1,14 +1,24 @@
-# File: A_InputTaxesSubsidies.csv,,,,,,,
-# Title: Taxes/Subsidies for Specific Technologies,,,,,,,
-# Units: 1975$/GJ,,,,,,,
-# Comments: Positive for tax, negative for subsidy,,,,,,
-# Column types: ccccccnn,,,,,,,
-# ----------,,,,,,,
-xml,region,supplysector,subsector,stub.technology,minicam.non.energy.input,2020,2100
-policy_fueltax_aus.xml,Australia_NZ,refined liquids transport,refined liquids transport,refined liquids transport,fuel-tax,3.340659341,3.340659341
-policy_fueltax_eu.xml,EU-15,refined liquids transport,refined liquids transport,refined liquids transport,fuel-tax,5.056995817,5.056995817
-policy_fueltax_eu.xml,EU-15,delivered gas transport,delivered gas transport,delivered gas transport,fuel-tax,1.073710891,1.073710891
-policy_fueltax_eu.xml,EU-12,refined liquids transport,refined liquids transport,refined liquids transport,fuel-tax,3.504124669,3.504124669
-policy_fueltax_eu.xml,EU-12,delivered gas transport,delivered gas transport,delivered gas transport,fuel-tax,0.504987073,0.504987073
-policy_fueltax_jap.xml,Japan,refined liquids transport,refined liquids transport,refined liquids transport,fuel-tax,3.188811189,3.188811189
-policy_fueltax_jap.xml,Japan,delivered gas transport,delivered gas transport,delivered gas transport,fuel-tax,0.844982542,0.844982542
+# File: A_InputTaxesSubsidies.csv,,,,,,,,,,
+# Title: Taxes/Subsidies for Specific Technologies,,,,,,,,,,
+# Units: 1975$/GJ,,,,,,,,,,
+# Comments: Positive for tax, negative for subsidy,,,,,,,,,
+# Column types: ccccccnnnnn,,,,,,,,,,
+# ----------,,,,,,,,,,
+xml,region,supplysector,subsector,stub.technology,minicam.non.energy.input,2020,2025,2030,2035,2100
+policy_fueltax_aus.xml,Australia_NZ,refined liquids transport,refined liquids transport,refined liquids transport,fuel-tax,3.340659341,3.340659341,3.340659341,3.340659341,3.340659341
+policy_fueltax_eu.xml,EU-15,refined liquids transport,refined liquids transport,refined liquids transport,fuel-tax,5.056995817,5.056995817,5.056995817,5.056995817,5.056995817
+policy_fueltax_eu.xml,EU-15,delivered gas transport,delivered gas transport,delivered gas transport,fuel-tax,1.073710891,1.073710891,1.073710891,1.073710891,1.073710891
+policy_fueltax_eu.xml,EU-12,refined liquids transport,refined liquids transport,refined liquids transport,fuel-tax,3.504124669,3.504124669,3.504124669,3.504124669,3.504124669
+policy_fueltax_eu.xml,EU-12,delivered gas transport,delivered gas transport,delivered gas transport,fuel-tax,0.504987073,0.504987073,0.504987073,0.504987073,0.504987073
+policy_fueltax_jap.xml,Japan,refined liquids transport,refined liquids transport,refined liquids transport,fuel-tax,3.188811189,3.188811189,3.188811189,3.188811189,3.188811189
+policy_fueltax_jap.xml,Japan,delivered gas transport,delivered gas transport,delivered gas transport,fuel-tax,0.844982542,0.844982542,0.844982542,0.844982542,0.844982542
+PTC_IRA,USA,electricity,biomass,biomass (conv),tax-credit,-0.86,-0.79,-0.79,-0.67,
+PTC_IRA,USA,electricity,biomass,biomas (IGCC),tax-credit,-0.86,-0.79,-0.79,-0.67,
+PTC_IRA,USA,electricity,geothermal,geothermal,tax-credit,-1.71,-1.58,-1.58,-1.33,
+PTC_IRA,USA,electricity,nuclear,Gen_III,tax-credit,0,-0.98,-0.98,-0.39,
+PTC_IRA,USA,electricity,solar,CSP,tax-credit,0,-1.58,-1.58,-1.33,
+PTC_IRA,USA,electricity,solar,CSP_storage,tax-credit,0,-1.58,-1.58,-1.33,
+PTC_IRA,USA,electricity,solar,PV,tax-credit,0,-1.58,-1.58,-1.33,
+PTC_IRA,USA,electricity,solar,PV_storage,tax-credit,0,-1.58,-1.58,-1.33,
+PTC_IRA,USA,electricity,wind,wind,tax-credit,-1.16,-1.58,-1.58,-1.33,
+PTC_IRA,USA,electricity,wind,wind_storage,tax-credit,-1.16,-1.58,-1.58,-1.33,
