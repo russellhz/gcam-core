@@ -27,7 +27,7 @@ module_socio_L102.GDP <- function(command, ...) {
   if(command == driver.DECLARE_INPUTS) {
     return(c(FILE = "common/iso_GCAM_regID",
              FILE = "socioeconomics/SSP_database_v9",
-             FILE = "socioeconomics/IMF_GDP_growth_imfapr23",
+             FILE = "socioeconomics/IMF_GDP_growth",
              FILE = "socioeconomics/GCAM3_GDP",
              "L100.gdp_mil90usd_ctry_Yh",
              "L101.Pop_thous_GCAM3_R_Y",
@@ -54,7 +54,7 @@ module_socio_L102.GDP <- function(command, ...) {
     # Load required inputs
     iso_GCAM_regID <- get_data(all_data, "common/iso_GCAM_regID")
     SSP_database_v9 <- get_data(all_data, "socioeconomics/SSP_database_v9")
-    IMF_GDP_growth <- get_data(all_data, "socioeconomics/IMF_GDP_growth_imfapr23")
+    IMF_GDP_growth <- get_data(all_data, "socioeconomics/IMF_GDP_growth")
     GCAM3_GDP <- get_data(all_data, "socioeconomics/GCAM3_GDP") %>%
       gather_years %>%
       mutate(value = as.numeric(value))
@@ -289,22 +289,22 @@ module_socio_L102.GDP <- function(command, ...) {
       left_join_error_no_match(gdp_mil90usd_GCAM3_RG3_Y, by = c("year", "region_GCAM3")) %>%
       transmute(iso, year, value = share * GCAM3_value)
 
-    # rebasing GDP to 2010 USD at country level
-    # Calculate the GDP ratios from the first year in the projections. Use this ratio to project GDP from historical dataset in final historical period
-    gdpRatio_GCAM3_ctry_Yfut <- gdp_mil90usd_GCAM3_ctry_Y %>%
-      group_by(iso) %>%
-      mutate(base = value[year == socioeconomics.FINAL_HIST_YEAR]) %>%
-      ungroup() %>%
-      filter(year %in% FUTURE_YEARS) %>%
-      transmute(iso, year, ratio = value / base)
-
-    # Use these ratios to build the GDP trajectories by old GCAM3
-    gdp_mil90usd_GCAM3_ctry_Y <- gdp_mil90usd_ctry_Yh %>%
-      left_join(gdpRatio_GCAM3_ctry_Yfut, by = c("iso", "year")) %>%
-      group_by(iso) %>%
-      mutate(value = if_else(year %in% FUTURE_YEARS, value[year == socioeconomics.FINAL_HIST_YEAR] * ratio, value)) %>%
-      ungroup() %>%
-      select(iso, year, value)
+    # # rebasing GDP to 2010 USD at country level
+    # # Calculate the GDP ratios from the first year in the projections. Use this ratio to project GDP from historical dataset in final historical period
+    # gdpRatio_GCAM3_ctry_Yfut <- gdp_mil90usd_GCAM3_ctry_Y %>%
+    #   group_by(iso) %>%
+    #   mutate(base = value[year == socioeconomics.FINAL_HIST_YEAR]) %>%
+    #   ungroup() %>%
+    #   filter(year %in% FUTURE_YEARS) %>%
+    #   transmute(iso, year, ratio = value / base)
+    #
+    # # Use these ratios to build the GDP trajectories by old GCAM3
+    # gdp_mil90usd_GCAM3_ctry_Y <- gdp_mil90usd_ctry_Yh %>%
+    #   left_join(gdpRatio_GCAM3_ctry_Yfut, by = c("iso", "year")) %>%
+    #   group_by(iso) %>%
+    #   mutate(value = if_else(year %in% FUTURE_YEARS, value[year == socioeconomics.FINAL_HIST_YEAR] * ratio, value)) %>%
+    #   ungroup() %>%
+    #   select(iso, year, value)
 
     # Aggregating by GCAM4 region
     gdp_mil90usd_GCAM3_R_Y <- gdp_mil90usd_GCAM3_ctry_Y %>%
