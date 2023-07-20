@@ -1,36 +1,40 @@
-# File: A_InputTaxesSubsidies.csv,,,,,,,,,,
-# Title: Taxes/Subsidies for Specific Technologies,,,,,,,,,,
-# Units: 1975$/GJ,,,,,,,,,,
-# Comments: Positive for tax, negative for subsidy,,,,,,,,,
-# Column types: ccccccnnnnn,,,,,,,,,,
-# ----------,,,,,,,,,,
-xml,region,supplysector,subsector,stub.technology,minicam.non.energy.input,2020,2025,2030,2035,2100
-policy_fueltax_aus.xml,Australia_NZ,refined liquids transport,refined liquids transport,refined liquids transport,fuel-tax,3.340659341,3.340659341,3.340659341,3.340659341,3.340659341
-policy_fueltax_eu.xml,EU-15,refined liquids transport,refined liquids transport,refined liquids transport,fuel-tax,5.056995817,5.056995817,5.056995817,5.056995817,5.056995817
-policy_fueltax_eu.xml,EU-15,delivered gas transport,delivered gas transport,delivered gas transport,fuel-tax,1.073710891,1.073710891,1.073710891,1.073710891,1.073710891
-policy_fueltax_eu.xml,EU-12,refined liquids transport,refined liquids transport,refined liquids transport,fuel-tax,3.504124669,3.504124669,3.504124669,3.504124669,3.504124669
-policy_fueltax_eu.xml,EU-12,delivered gas transport,delivered gas transport,delivered gas transport,fuel-tax,0.504987073,0.504987073,0.504987073,0.504987073,0.504987073
-policy_fueltax_jap.xml,Japan,refined liquids transport,refined liquids transport,refined liquids transport,fuel-tax,3.188811189,3.188811189,3.188811189,3.188811189,3.188811189
-policy_fueltax_jap.xml,Japan,delivered gas transport,delivered gas transport,delivered gas transport,fuel-tax,0.844982542,0.844982542,0.844982542,0.844982542,0.844982542
-IRA_PTC,USA,electricity,biomass,biomass (conv),tax-credit,-0.86,-0.79,-0.79,-0.67,
-IRA_PTC,USA,electricity,biomass,biomas (IGCC),tax-credit,-0.86,-0.79,-0.79,-0.67,
-IRA_PTC,USA,electricity,geothermal,geothermal,tax-credit,-1.71,-1.58,-1.58,-1.33,
-IRA_PTC,USA,electricity,nuclear,Gen_III,tax-credit,0,-0.98,-0.98,-0.39,
-IRA_PTC,USA,electricity,solar,CSP,tax-credit,0,-1.58,-1.58,-1.33,
-IRA_PTC,USA,electricity,solar,CSP_storage,tax-credit,0,-1.58,-1.58,-1.33,
-IRA_PTC,USA,electricity,solar,PV,tax-credit,0,-1.58,-1.58,-1.33,
-IRA_PTC,USA,electricity,solar,PV_storage,tax-credit,0,-1.58,-1.58,-1.33,
-IRA_PTC,USA,electricity,wind,wind,tax-credit,-1.16,-1.58,-1.58,-1.33,
-IRA_PTC,USA,electricity,wind,wind_storage,tax-credit,-1.16,-1.58,-1.58,-1.33,
-IRA_transport_tax_credits,USA,trn_pass_road_LDV_4W,Car,BEV,IRA_30D_EV_tax-credit_medium,,-0.007599,-0.015199,-0.00608,
-IRA_transport_tax_credits,USA,trn_pass_road_LDV_4W,Car,FCEV,IRA_30D_EV_tax-credit_medium,,-0.007599,-0.015199,-0.00608,
-IRA_transport_tax_credits,USA,trn_pass_road_LDV_4W,Large Car and Truck,BEV,IRA_30D_EV_tax-credit_medium,,-0.007599,-0.015199,-0.00608,
-IRA_transport_tax_credits,USA,trn_pass_road_LDV_4W,Large Car and Truck,FCEV,IRA_30D_EV_tax-credit_medium,,-0.007599,-0.015199,-0.00608,
-IRA_transport_tax_credits,USA,trn_freight_road,Light truck,BEV,IRA_45W_light-truck_tax-credit,,-0.03352,-0.03352,-0.013408,
-IRA_transport_tax_credits,USA,trn_freight_road,Medium truck,BEV,IRA_45W_medium-truck_tax-credit,,-0.030801,-0.030801,-0.01232,
-IRA_transport_tax_credits,USA,trn_freight_road,Heavy truck,BEV,IRA_45W_heavy-truck_tax-credit,,-0.048775,-0.048775,-0.01951,
-IRA_transport_tax_credits,USA,trn_pass_road,Bus,BEV,IRA_45W_bus_tax-credit,,-0.067676764,-0.067676764,-0.027071,
-IRA_transport_tax_credits,USA,trn_pass_road_LDV_4W,Car,BEV,IRA_alt_refuel_prop-credit_EV_charging,,-0.000793,-0.000793,-0.0003172,
-IRA_transport_tax_credits,USA,trn_pass_road_LDV_4W,Car,FCEV,IRA_alt_refuel_prop-credit_EV_charging,,-0.000793,-0.000793,-0.0003172,
-IRA_transport_tax_credits,USA,trn_pass_road_LDV_4W,Large Car and Truck,BEV,IRA_alt_refuel_prop-credit_EV_charging,,-0.000793,-0.000793,-0.0003172,
-IRA_transport_tax_credits,USA,trn_pass_road_LDV_4W,Large Car and Truck,FCEV,IRA_alt_refuel_prop-credit_EV_charging,,-0.000793,-0.000793,-0.0003172,
+# File: A_InputTaxesSubsidies.csv,,,,,,,,,,,,,
+# Title: Taxes/Subsidies for Specific Technologies,,,,,,,,,,,,,
+# Units: 1975$/GJ,,,,,,,,,,,,,
+# Comments: Positive for tax, negative for subsidy,,,,,,,,,,,,
+# Column types: ccccccnnnnnnnn,,,,,,,,,,,,,
+# ----------,,,,,,,,,,,,,
+xml,region,supplysector,subsector,stub.technology,minicam.non.energy.input,2020,2025,2030,2035,2040,2045,2050,2100
+policy_fueltax_aus.xml,Australia_NZ,refined liquids transport,refined liquids transport,refined liquids transport,fuel-tax,3.340659341,3.340659341,3.340659341,3.340659341,3.340659341,3.340659341,3.340659341,3.340659341
+policy_fueltax_eu.xml,EU-15,refined liquids transport,refined liquids transport,refined liquids transport,fuel-tax,5.056995817,5.056995817,5.056995817,5.056995817,5.056995817,5.056995817,5.056995817,5.056995817
+policy_fueltax_eu.xml,EU-15,delivered gas transport,delivered gas transport,delivered gas transport,fuel-tax,1.073710891,1.073710891,1.073710891,1.073710891,1.073710891,1.073710891,1.073710891,1.073710891
+policy_fueltax_eu.xml,EU-12,refined liquids transport,refined liquids transport,refined liquids transport,fuel-tax,3.504124669,3.504124669,3.504124669,3.504124669,3.504124669,3.504124669,3.504124669,3.504124669
+policy_fueltax_eu.xml,EU-12,delivered gas transport,delivered gas transport,delivered gas transport,fuel-tax,0.504987073,0.504987073,0.504987073,0.504987073,0.504987073,0.504987073,0.504987073,0.504987073
+policy_fueltax_jap.xml,Japan,refined liquids transport,refined liquids transport,refined liquids transport,fuel-tax,3.188811189,3.188811189,3.188811189,3.188811189,3.188811189,3.188811189,3.188811189,3.188811189
+policy_fueltax_jap.xml,Japan,delivered gas transport,delivered gas transport,delivered gas transport,fuel-tax,0.844982542,0.844982542,0.844982542,0.844982542,0.844982542,0.844982542,0.844982542,0.844982542
+IRA_PTC,USA,electricity,biomass,biomass (conv),tax-credit,-0.86,-0.79,-0.79,-0.67,,,,
+IRA_PTC,USA,electricity,biomass,biomas (IGCC),tax-credit,-0.86,-0.79,-0.79,-0.67,,,,
+IRA_PTC,USA,electricity,geothermal,geothermal,tax-credit,-1.71,-1.58,-1.58,-1.33,,,,
+IRA_PTC,USA,electricity,nuclear,Gen_III,tax-credit,0,-0.98,-0.98,-0.39,,,,
+IRA_PTC,USA,electricity,solar,CSP,tax-credit,0,-1.58,-1.58,-1.33,,,,
+IRA_PTC,USA,electricity,solar,CSP_storage,tax-credit,0,-1.58,-1.58,-1.33,,,,
+IRA_PTC,USA,electricity,solar,PV,tax-credit,0,-1.58,-1.58,-1.33,,,,
+IRA_PTC,USA,electricity,solar,PV_storage,tax-credit,0,-1.58,-1.58,-1.33,,,,
+IRA_PTC,USA,electricity,wind,wind,tax-credit,-1.16,-1.58,-1.58,-1.33,,,,
+IRA_PTC,USA,electricity,wind,wind_storage,tax-credit,-1.16,-1.58,-1.58,-1.33,,,,
+IRA_transport_tax_credits,USA,trn_pass_road_LDV_4W,Car,BEV,IRA_30D_EV_tax-credit_medium,,-0.007599,-0.015199,-0.00608,,,,
+IRA_transport_tax_credits,USA,trn_pass_road_LDV_4W,Car,FCEV,IRA_30D_EV_tax-credit_medium,,-0.007599,-0.015199,-0.00608,,,,
+IRA_transport_tax_credits,USA,trn_pass_road_LDV_4W,Large Car and Truck,BEV,IRA_30D_EV_tax-credit_medium,,-0.007599,-0.015199,-0.00608,,,,
+IRA_transport_tax_credits,USA,trn_pass_road_LDV_4W,Large Car and Truck,FCEV,IRA_30D_EV_tax-credit_medium,,-0.007599,-0.015199,-0.00608,,,,
+IRA_transport_tax_credits,USA,trn_freight_road,Light truck,BEV,IRA_45W_light-truck_tax-credit,,-0.03352,-0.03352,-0.013408,,,,
+IRA_transport_tax_credits,USA,trn_freight_road,Medium truck,BEV,IRA_45W_medium-truck_tax-credit,,-0.030801,-0.030801,-0.01232,,,,
+IRA_transport_tax_credits,USA,trn_freight_road,Heavy truck,BEV,IRA_45W_heavy-truck_tax-credit,,-0.048775,-0.048775,-0.01951,,,,
+IRA_transport_tax_credits,USA,trn_pass_road,Bus,BEV,IRA_45W_bus_tax-credit,,-0.067676764,-0.067676764,-0.027071,,,,
+IRA_transport_tax_credits,USA,trn_pass_road_LDV_4W,Car,BEV,IRA_alt_refuel_prop-credit_EV_charging,,-0.000793,-0.000793,-0.0003172,,,,
+IRA_transport_tax_credits,USA,trn_pass_road_LDV_4W,Car,FCEV,IRA_alt_refuel_prop-credit_EV_charging,,-0.000793,-0.000793,-0.0003172,,,,
+IRA_transport_tax_credits,USA,trn_pass_road_LDV_4W,Large Car and Truck,BEV,IRA_alt_refuel_prop-credit_EV_charging,,-0.000793,-0.000793,-0.0003172,,,,
+IRA_transport_tax_credits,USA,trn_pass_road_LDV_4W,Large Car and Truck,FCEV,IRA_alt_refuel_prop-credit_EV_charging,,-0.000793,-0.000793,-0.0003172,,,,
+IRA_transport_tax_credits,USA,trn_pass_road_LDV_4W,Car,BEV,state_EV_credits,,-0.0125,-0.0125,-0.0125,-0.0124,-0.0124,-0.0123,
+IRA_transport_tax_credits,USA,trn_pass_road_LDV_4W,Car,FCEV,state_EV_credits,,-0.0185,-0.0182,-0.0179,-0.0176,-0.0173,-0.017,
+IRA_transport_tax_credits,USA,trn_pass_road_LDV_4W,Large Car and Truck,BEV,state_EV_credits,,-0.0157,-0.0156,-0.0155,-0.0155,-0.0154,-0.0154,
+IRA_transport_tax_credits,USA,trn_pass_road_LDV_4W,Large Car and Truck,FCEV,state_EV_credits,,-0.0226,-0.0222,-0.0218,-0.0215,-0.0211,-0.0208,
