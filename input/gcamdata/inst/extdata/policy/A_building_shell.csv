@@ -1,0 +1,7 @@
+# File: A_building_shell.csv,,,,,,,,,,,,,,,,,,,
+# Title: Building shell conductance overwrite,,,,,,,,,,,,,,,,,,,
+# Units: Unitless,,,,,,,,,,,,,,,,,,,
+# Column types: cccnnnnnnnnnnnnnnnnn,,,,,,,,,,,,,,,,,,,
+# ----------,,,,,,,,,,,,,,,,,,,
+xml,region,gcam.consumer,2020,2025,2030,2035,2040,2045,2050,2055,2060,2065,2070,2075,2080,2085,2090,2095,2100
+IRA_building_eff_improvement_13304,USA,resid,0.89,0.86,0.83,0.8,0.78,0.778,0.775,0.772,0.77,0.768,0.765,0.762,0.76,0.758,0.755,0.752,0.75
