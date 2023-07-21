@@ -86,7 +86,7 @@ module_policy_L3221.CCap <- function(command, ...) {
     CO2byTech <- get_data(all_data, "policy/GCAM_results/CO2ByTech") %>%
       gather_years()
 
-    # 1. Write constraint to correct regions
+    # 1. Write constraint to correct regions ----------------------------
     # When a constraint applies to more than one region, we don't need to write the
     # constraint to all regions, can just pass the ghg policy forward to the "linked" regions
 
@@ -107,7 +107,7 @@ module_policy_L3221.CCap <- function(command, ...) {
       filter(region.x != region.y) %>%
       distinct(xml, region = region.y, market, ghgpolicy, mapping.name)
 
-    # 2. Add custom CO2 market to stub technologies
+    # 2. Add custom CO2 market to stub technologies ----------------------------
     # Note that we remove all biomass technologies since they shouldn't contribute to
     # CO2 constraints in most cases
     # For technologies, we need all regions
@@ -117,7 +117,8 @@ module_policy_L3221.CCap <- function(command, ...) {
     # Need to add all techs for the given regions/sectors
     # First for non-transport techs, then for transport techs, then for resources
     L3221.CCap_tech <- policy_mappings %>%
-      filter(is.na(tranSubsector), is.na(resource)) %>%
+      filter(is.na(tranSubsector), is.na(resource),
+             !grepl("^trn_", supplysector)) %>%
       select(mapping.name, supplysector) %>%
       left_join(tech_all_regions, by = c("mapping.name")) %>%
       left_join(L3221.StubTech_All, by = c("supplysector", "region")) %>%
@@ -145,11 +146,21 @@ module_policy_L3221.CCap <- function(command, ...) {
     # Shouldn't have any NAs left
     stopifnot(!any(is.na(L3221.CCap_tech)))
 
-    # 3. Add custom CO2 market to transportation technologies
-    L3221.CCap_tranTech <- A_CCap_Sector %>%
+    # 3. Add custom CO2 market to transportation technologies ----------------------------
+    L3221.CCap_tranTech_pre <- policy_mappings %>%
+      filter(!is.na(tranSubsector) | grepl("^trn_", supplysector)) %>%
+      select(-resource, -reserve.subresource) %>%
+      left_join(tech_all_regions, by = c("mapping.name"))
+
+    L3221.CCap_tranTech_sector <- L3221.CCap_tranTech_pre %>%
+      filter(is.na(tranSubsector)) %>%
+      select(-tranSubsector) %>%
+      left_join(L254.StubTranTech, by = c("supplysector", "region"))
+
+    L3221.CCap_tranTech <-  L3221.CCap_tranTech_pre %>%
       filter(!is.na(tranSubsector)) %>%
-      left_join(tech_all_regions, by = c("market", "ghgpolicy")) %>%
       left_join(L254.StubTranTech, by = c("supplysector", "region", "tranSubsector")) %>%
+      bind_rows(L3221.CCap_tranTech_sector) %>%
       rename(CO2 = ghgpolicy) %>%
       select(-market) %>%
       repeat_add_columns(tibble(year = MODEL_YEARS))
@@ -157,9 +168,11 @@ module_policy_L3221.CCap <- function(command, ...) {
     # Check that there are no NAs
     stopifnot(!any(is.na(L3221.CCap_tranTech)))
 
-    # 4. Add custom CO2 market to resource technologies
-    L3221.CCap_resource <- A_CCap_Resource %>%
-      left_join(tech_all_regions, by = c("market", "ghgpolicy")) %>%
+    # 4. Add custom CO2 market to resource technologies ------------------------------
+    L3221.CCap_resource <- policy_mappings %>%
+      filter(!is.na(resource)) %>%
+      select(-supplysector, -tranSubsector) %>%
+      left_join(tech_all_regions, by = c("mapping.name")) %>%
       left_join(L210.ResTech, by = c("resource", "reserve.subresource", "region")) %>%
       rename(CO2 = ghgpolicy) %>%
       select(-market) %>%
@@ -168,7 +181,7 @@ module_policy_L3221.CCap <- function(command, ...) {
     # Check that there are no NAs
     stopifnot(!any(is.na(L3221.CCap_resource)))
 
-    # 5. Adjust any GDPIntensity targets
+    # 5. Adjust any GDPIntensity targets -------------------------
     if (any(!is.na(L3221.CCap_constraint$GDPIntensity_BaseYear))){
       GDP_Intensity_targets <- L3221.CCap_constraint %>%
         filter(!is.na(GDPIntensity_BaseYear))
@@ -192,7 +205,7 @@ module_policy_L3221.CCap <- function(command, ...) {
       L3221.baseEmissions <- L3221.emissions_techs %>%
         select(-year, -constraint) %>%
         distinct() %>%
-        left_join(A_CO2ByTech, by = c("region", "supplysector" = "sector", "subsector",
+        left_join(CO2byTech, by = c("region", "supplysector" = "sector", "subsector",
                                                          "stub.technology" = "technology", "GDPIntensity_BaseYear" = "year")) %>%
         group_by(region, CO2, GDPIntensity_BaseYear) %>%
         summarise(value = sum(value, na.rm = T)) %>%
@@ -223,15 +236,17 @@ module_policy_L3221.CCap <- function(command, ...) {
 
     }
 
-    # 6. Get ghg link for each
+    # 6. Get ghg link for each -------------------------
     L3221.CCap_GHG_Link <- A_CCap_Constraint %>%
-      distinct(link.type, market, region, ghgpolicy) %>%
+      distinct(link.type, market, ghgpolicy) %>%
+      left_join(market_region_mappings, by = "market") %>%
+      mutate(region = if_else(!is.na(region), region, market)) %>%
       filter(!is.na(link.type)) %>%
-      left_join(A_CTax_Link, by = "link.type") %>%
+      left_join(ghg_link, by = "link.type") %>%
       rename(linked.policy = ghgpolicy) %>%
       select(-link.type)
 
-    # Produce outputs
+    # Produce outputs ------------------------------------
     L3221.CCap_constraint %>%
       select(-GDPIntensity_BaseYear, -link.type) %>%
       add_title("Custom carbon constraints", overwrite = T) %>%
