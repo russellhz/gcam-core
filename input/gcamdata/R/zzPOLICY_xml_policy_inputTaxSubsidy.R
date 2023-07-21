@@ -13,11 +13,7 @@ module_policy_inputTaxSubsidy.xml <- function(command, ...) {
   all_xml_names <- union(get_xml_names("policy/A_InputTaxesSubsidies.csv", "policy_inputtax.xml"),
                          get_xml_names("policy/A_InputCapitalFCR.csv", "policy_inputtax.xml"))
   names(all_xml_names) <- rep("XML", length(all_xml_names))
-  for(i in 1:length(all_xml_names)){
-    if (!grepl(".xml", all_xml_names[i])){
-      all_xml_names[i] <- paste0(all_xml_names[i], ".xml")
-    }
-  }
+
   if(command == driver.DECLARE_INPUTS) {
     return(c("L302.InputTax",
              "L302.InputCapitalFCR",

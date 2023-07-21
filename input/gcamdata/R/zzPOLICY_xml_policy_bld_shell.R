@@ -11,11 +11,7 @@
 #' the generated outputs: \code{policy_inputtax.xml}.
 module_policy_bld_shell.xml <- function(command, ...) {
   all_xml_names <- get_xml_names("policy/A_building_shell.csv", "policy_bld_shell.xml")
-  for(i in 1:length(all_xml_names)){
-    if (!grepl(".xml", all_xml_names[i])){
-      all_xml_names[i] <- paste0(all_xml_names[i], ".xml")
-    }
-  }
+
   if(command == driver.DECLARE_INPUTS) {
     return(c("L344.bld_shell"))
   } else if(command == driver.DECLARE_OUTPUTS) {

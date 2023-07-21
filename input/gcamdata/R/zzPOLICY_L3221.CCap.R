@@ -51,7 +51,8 @@ module_policy_L3221.CCap <- function(command, ...) {
     all_data <- list(...)[[1]]
 
     # Load required inputs
-    A_CCap_Constraint <- get_data(all_data, "policy/A_CCap_Constraint")
+    A_CCap_Constraint <- get_data(all_data, "policy/A_CCap_Constraint") %>%
+      mutate(xml = if_else(grepl(".xml", xml), xml, paste0(xml, ".xml")))
     policy_sector_mappings <- get_data(all_data, "policy/mappings/policy_sector_mappings")
     policy_tranSubsector_mappings <- get_data(all_data, "policy/mappings/policy_tranSubsector_mappings")
     policy_resource_mappings <- get_data(all_data, "policy/mappings/policy_resource_mappings")
