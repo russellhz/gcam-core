@@ -35,13 +35,16 @@ module_policy_302.inputtaxsubsidy <- function(command, ...) {
 
     # Convert to long
     L302.InputTax <- A_InputTaxesSubsidies %>%
-      gather_years(value_col = "input.cost") %>%
+      gather_years() %>%
       na.omit() %>%
       group_by(xml, region, supplysector, subsector, stub.technology, minicam.non.energy.input) %>%
       complete(nesting(xml, region, supplysector, subsector, stub.technology, minicam.non.energy.input),
                year = seq(min(year), max(year), 5)) %>%
-      mutate(input.cost = approx_fun(year, input.cost)) %>%
-      ungroup
+      # If group only has one, approx_fun doesn't work, so we use this workaround
+      mutate(value_NA = as.numeric(approx_fun(year, value))) %>%
+      ungroup %>%
+      mutate(input.cost = if_else(!is.na(value_NA), value_NA, value)) %>%
+      select(-value_NA, -value)
 
     L302.InputTranTax <- L302.InputTax %>%
       filter(grepl("^trn_", supplysector)) %>%

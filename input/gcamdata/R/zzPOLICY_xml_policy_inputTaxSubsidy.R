@@ -1,6 +1,6 @@
 # Copyright 2019 Battelle Memorial Institute; see the LICENSE file.
 
-#' module_policy_inputtax.xml
+#' module_policy_inputTaxSubsidy.xml
 #'
 #' Construct XML data structure for \code{policy_inputtax.xml}.
 #'
@@ -9,7 +9,7 @@
 #' @return Depends on \code{command}: either a vector of required inputs,
 #' a vector of output names, or (if \code{command} is "MAKE") all
 #' the generated outputs: \code{policy_inputtax.xml}.
-module_policy_inputtax.xml <- function(command, ...) {
+module_policy_inputTaxSubsidy.xml <- function(command, ...) {
   all_xml_names <- union(get_xml_names("policy/A_InputTaxesSubsidies.csv", "policy_inputtax.xml"),
                          get_xml_names("policy/A_InputCapitalFCR.csv", "policy_inputtax.xml"))
   names(all_xml_names) <- rep("XML", length(all_xml_names))
