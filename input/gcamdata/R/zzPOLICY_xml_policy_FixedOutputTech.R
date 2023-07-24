@@ -14,6 +14,7 @@ module_policy_FixedOutputTech_xml <- function(command, ...) {
 
   if(command == driver.DECLARE_INPUTS) {
     return(c("L305.StubTechFixedOutput",
+             "L305.StubTechLifetime",
              "L305.GlbTechFixedOutput"))
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(all_xml_names)
@@ -23,6 +24,7 @@ module_policy_FixedOutputTech_xml <- function(command, ...) {
 
     # Load required inputs
     L305.StubTechFixedOutput <- get_data(all_data, "L305.StubTechFixedOutput")
+    L305.StubTechLifetime <- get_data(all_data, "L305.StubTechLifetime")
     L305.GlbTechFixedOutput <- get_data(all_data, "L305.GlbTechFixedOutput")
 
     # ===================================================
@@ -33,6 +35,10 @@ module_policy_FixedOutputTech_xml <- function(command, ...) {
         filter(xml == xml_name) %>%
         select(-xml)
 
+      L305.StubTechLifetime_tmp <- L305.StubTechLifetime %>%
+        filter(xml == xml_name) %>%
+        select(-xml)
+
       L305.GlbTechFixedOutput_tmp <- L305.GlbTechFixedOutput %>%
         filter(xml == xml_name) %>%
         select(-xml)
@@ -40,6 +46,7 @@ module_policy_FixedOutputTech_xml <- function(command, ...) {
       if (nrow(L305.GlbTechFixedOutput_tmp) == 0){
         assign(xml_name,
                create_xml(xml_name) %>%
+                 add_xml_data(L305.StubTechLifetime_tmp, "StubTechLifetime") %>%
                  add_xml_data(L305.StubTechFixedOutput_tmp, "StubTechFixOutNoSW") %>%
                  add_precursors("L305.StubTechFixedOutput")
         )
@@ -47,6 +54,7 @@ module_policy_FixedOutputTech_xml <- function(command, ...) {
 
         assign(xml_name,
                create_xml(xml_name) %>%
+                 add_xml_data(L305.StubTechLifetime_tmp, "StubTechLifetime") %>%
                  add_xml_data(L305.StubTechFixedOutput_tmp, "StubTechFixOutNoSW") %>%
                  add_xml_data(select(L305.GlbTechFixedOutput_tmp,
                                      -minicam.non.energy.input, -input.cost),
