@@ -1,0 +1,13 @@
+# File: A_MAC_rename.csv,,,,
+# Title: Renaming of MAC curves,,,,
+# Units: NA,,,,
+# Column types: ccccc,,,,
+# ----------,,,,
+xml,region,supplysector,Non.CO2,new.market.name
+US_livestock_CH4_MAC,USA,Beef,CH4_AGR,CH4_livestock
+US_livestock_CH4_MAC,USA,Dairy,CH4_AGR,CH4_livestock
+US_livestock_CH4_MAC,USA,Pork,CH4_AGR,CH4_livestock
+US_livestock_CH4_MAC,USA,Poultry,CH4_AGR,CH4_livestock
+US_livestock_CH4_MAC,USA,SheepGoat,CH4_AGR,CH4_livestock
+US_resource_CH4_mac,USA,crude oil,CH4,CH4_resource
+US_resource_CH4_mac,USA,natural gas,CH4,CH4_resource

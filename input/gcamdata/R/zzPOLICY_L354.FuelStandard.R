@@ -18,7 +18,7 @@ module_policy_L354.FuelStandards <- function(command, ...) {
     return(c(FILE = "policy/A_FuelStandards",
              "L254.StubTranTechCoef",
              "UCD_trn_data",
-             FILE = "policy/UCD_addtl_subsector_mapping",
+             FILE = "policy/mappings/UCD_addtl_subsector_mapping",
              FILE = "energy/mappings/UCD_ctry",
              FILE = "common/GCAM_region_names",
              FILE = "common/iso_GCAM_regID"
@@ -33,7 +33,7 @@ module_policy_L354.FuelStandards <- function(command, ...) {
     A_FuelStandards <- get_data(all_data, "policy/A_FuelStandards")
     L254.StubTranTechCoef <- get_data(all_data, "L254.StubTranTechCoef")
     UCD_trn_data <- get_data(all_data, "UCD_trn_data")
-    UCD_addtl_subsector_mapping <- get_data(all_data, "policy/UCD_addtl_subsector_mapping")
+    UCD_addtl_subsector_mapping <- get_data(all_data, "policy/mappings/UCD_addtl_subsector_mapping")
     UCD_ctry <- get_data(all_data, "energy/mappings/UCD_ctry")
     GCAM_region_names <- get_data(all_data, "common/GCAM_region_names")
     iso_GCAM_regID <- get_data(all_data, "common/iso_GCAM_regID")
