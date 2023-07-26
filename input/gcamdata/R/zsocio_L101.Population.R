@@ -99,8 +99,8 @@ module_socio_L101.Population <- function(command, ...) {
 
     # Consider only years betwee 1971 and 2100. Match the GCAM_IC_population file with the GCAM7 regions
     GCAM_IC_population %>%
-      left_join(iso_GCAM_regID, by = 'iso') %>%
-      filter(year >= 1971) %>%
+      left_join_error_no_match(iso_GCAM_regID, by = 'iso') %>%
+      filter(year >= min(HISTORICAL_YEARS)) %>%
       select(-country_name) ->
       L101.Pop_thous_GCAM_IC_ctry_Y
 

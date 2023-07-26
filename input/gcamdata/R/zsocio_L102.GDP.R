@@ -128,7 +128,7 @@ module_socio_L102.GDP <- function(command, ...) {
       select(scenario, GCAM_region_ID, iso, year, gdp) %>%
       ungroup() %>%
       # The steps below write out the data to all future years, starting from the final socio historical year
-      complete(nesting(scenario, GCAM_region_ID), year = c(socioeconomics.FINAL_HIST_YEAR, FUTURE_YEARS)) %>%
+      complete(nesting(scenario, GCAM_region_ID, iso), year = c(socioeconomics.FINAL_HIST_YEAR, FUTURE_YEARS)) %>%
       group_by(scenario, GCAM_region_ID, iso) %>%
       mutate(gdp = approx_fun(year, gdp)) %>%
       ungroup()
@@ -267,9 +267,7 @@ module_socio_L102.GDP <- function(command, ...) {
       left_join(mer.rgn_ctry, ppp.rgn_ctry, by = c('GCAM_region_ID','iso')) %>%
       mutate(PPP_MER = PPP / MER)
 
-    # GDP by GCAM region from GCAM 3.0 GDPs.
-    # Downscaling GCAM 3.0 GDP by GCAM 3.0 region to countries, using SSP2 GDP scenario
-    # GDP by GCAM 3.0 region - downscale to country according to actual shares in the historical periods, and SSPbase in the future periods
+    # GDP by for IAM COMPACT
 
     # Future GDP
     gdp_bilusd_ctry_Yfut <- SSP_database_v9 %>%
@@ -301,13 +299,14 @@ module_socio_L102.GDP <- function(command, ...) {
                                  select(iso, region_GCAM3), by = "iso")
 
     # Consider all units as 1990 million USD
-    GCAM_IC_GDP <- GCAM_IC_GDP %>%
+    GCAM_IC_GDP_MER <- GCAM_IC_GDP %>%
+      change_iso_code('rou', 'rom') %>%
       left_join(iso_GCAM_regID, by = 'iso') %>%
       left_join(ppp.mer.rgn_ctry, by =  c('GCAM_region_ID','iso')) %>%
-      mutate(value = value * MER/PPP * gdp_deflator(2017,2005) * gdp_deflator(1990,2017) / 1e6)
+      mutate(value = value * MER/PPP * gdp_deflator(1990,2017) / 1e6)
 
     # Add GCAM IC GDP data all historical years
-    gdp_mil90usd_GCAM_IC_ctry_Y <- GCAM_IC_GDP %>%
+    gdp_mil90usd_GCAM_IC_ctry_Y <- GCAM_IC_GDP_MER %>%
       select(-c(MER,PPP,PPP_MER,GCAM_region_ID,country_name,region_GCAM3)) %>%
       full_join(gdp_mil90usd_ctry_Yh %>%
                   select(iso, year, historical_value = value), by = c("year", "iso")) %>%
