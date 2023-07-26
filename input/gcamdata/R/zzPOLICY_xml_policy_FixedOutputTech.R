@@ -15,7 +15,16 @@ module_policy_FixedOutputTech_xml <- function(command, ...) {
   if(command == driver.DECLARE_INPUTS) {
     return(c("L305.StubTechFixedOutput",
              "L305.StubTechLifetime",
-             "L305.GlbTechFixedOutput"))
+             "L305.GlbTechFixedOutput",
+             "L305.StubTranTechFixedOutput",
+             "L305.GlobalTranTechInterp",
+             "L305.GlobalTranTechShrwt",
+             "L305.GlobalTranTechSCurve",
+             "L305.StubTranTechLoadFactor",
+             "L305.StubTranTechCost",
+             "L305.StubTechTrackCapital",
+             "L305.StubTranTechCalInput",
+             "L305.StubTranTechCoef"))
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(all_xml_names)
   } else if(command == driver.MAKE) {
@@ -26,6 +35,15 @@ module_policy_FixedOutputTech_xml <- function(command, ...) {
     L305.StubTechFixedOutput <- get_data(all_data, "L305.StubTechFixedOutput")
     L305.StubTechLifetime <- get_data(all_data, "L305.StubTechLifetime")
     L305.GlbTechFixedOutput <- get_data(all_data, "L305.GlbTechFixedOutput")
+    L305.StubTranTechFixedOutput  <- get_data(all_data, "L305.StubTranTechFixedOutput")
+    L305.GlobalTranTechInterp <- get_data(all_data, "L305.GlobalTranTechInterp")
+    L305.GlobalTranTechShrwt <- get_data(all_data, "L305.GlobalTranTechShrwt")
+    L305.GlobalTranTechSCurve <- get_data(all_data, "L305.GlobalTranTechSCurve")
+    L305.StubTranTechLoadFactor <- get_data(all_data, "L305.StubTranTechLoadFactor")
+    L305.StubTranTechCost <- get_data(all_data, "L305.StubTranTechCost")
+    L305.StubTechTrackCapital <- get_data(all_data, "L305.StubTechTrackCapital")
+    L305.StubTranTechCalInput <- get_data(all_data, "L305.StubTranTechCalInput")
+    L305.StubTranTechCoef <- get_data(all_data, "L305.StubTranTechCoef")
 
     # ===================================================
 
@@ -40,6 +58,42 @@ module_policy_FixedOutputTech_xml <- function(command, ...) {
         select(-xml)
 
       L305.GlbTechFixedOutput_tmp <- L305.GlbTechFixedOutput %>%
+        filter(xml == xml_name) %>%
+        select(-xml)
+
+      L305.StubTranTechFixedOutput_tmp <- L305.StubTranTechFixedOutput %>%
+        filter(xml == xml_name) %>%
+        select(-xml)
+
+      L305.GlobalTranTechInterp_tmp <- L305.GlobalTranTechInterp %>%
+        filter(xml == xml_name) %>%
+        select(-xml)
+
+      L305.GlobalTranTechShrwt_tmp <- L305.GlobalTranTechShrwt %>%
+        filter(xml == xml_name) %>%
+        select(-xml)
+
+      L305.GlobalTranTechSCurve_tmp <- L305.GlobalTranTechSCurve %>%
+        filter(xml == xml_name) %>%
+        select(-xml)
+
+      L305.StubTranTechLoadFactor_tmp <- L305.StubTranTechLoadFactor %>%
+        filter(xml == xml_name) %>%
+        select(-xml)
+
+      L305.StubTranTechCost_tmp <- L305.StubTranTechCost %>%
+        filter(xml == xml_name) %>%
+        select(-xml)
+
+      L305.StubTechTrackCapital_tmp <- L305.StubTechTrackCapital %>%
+        filter(xml == xml_name) %>%
+        select(-xml)
+
+      L305.StubTranTechCalInput_tmp <- L305.StubTranTechCalInput %>%
+        filter(xml == xml_name) %>%
+        select(-xml)
+
+      L305.StubTranTechCoef_tmp <- L305.StubTranTechCoef %>%
         filter(xml == xml_name) %>%
         select(-xml)
 
