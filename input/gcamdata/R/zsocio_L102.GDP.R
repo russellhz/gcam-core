@@ -29,7 +29,13 @@ module_socio_L102.GDP <- function(command, ...) {
              FILE = "socioeconomics/SSP_database_v9",
              FILE = "socioeconomics/IMF_GDP_growth",
              FILE = "socioeconomics/gdp_iam_compact",
+             # region-specific deflators
+             FILE = "common/FAO_GDP_Deflators",
+             # area-iso mapping
+             FILE = "aglu/AGLU_ctry",
+             # historical GDP
              "L100.gdp_mil90usd_ctry_Yh",
+             # population data
              "L101.Pop_thous_GCAM_IC_R_Y",
              "L101.Pop_thous_GCAM_IC_ctry_Y",
              "L101.Pop_thous_R_Yh",
@@ -64,6 +70,8 @@ module_socio_L102.GDP <- function(command, ...) {
     L101.Pop_thous_GCAM_IC_ctry_Y <- get_data(all_data, "L101.Pop_thous_GCAM_IC_ctry_Y")
     L101.Pop_thous_R_Yh <- get_data(all_data, "L101.Pop_thous_R_Yh")
     L101.Pop_thous_Scen_R_Yfut <- get_data(all_data, "L101.Pop_thous_Scen_R_Yfut")
+    FAO_GDP_Deflators <- get_data(all_data, "common/FAO_GDP_Deflators")
+    AGLU_ctry <- get_data(all_data, "aglu/AGLU_ctry")
 
     ## iso--region lookup without extraneous data.  We'll use this several times.
     iso_region32_lookup <- select(iso_GCAM_regID, iso, GCAM_region_ID)
@@ -298,12 +306,30 @@ module_socio_L102.GDP <- function(command, ...) {
       left_join_error_no_match(iso_GCAM_regID %>%
                                  select(iso, region_GCAM3), by = "iso")
 
+    # Process region-specific GDP deflator ----
+    # used for deflating country GDP
+
+    L100.FAO_GDP_Deflators <-
+      FAO_GDP_Deflators %>% gather_years() %>%
+      group_by(area, area_code) %>%
+      mutate(currentUSD_per_baseyearUSD = (value / value[year == aglu.DEFLATOR_BASE_YEAR])) %>%
+      ungroup() %>%
+      select(area, area_code, year, currentUSD_per_baseyearUSD)
+
     # Consider all units as 1990 million USD
     GCAM_IC_GDP_MER <- GCAM_IC_GDP %>%
       change_iso_code('rou', 'rom') %>%
       left_join(iso_GCAM_regID, by = 'iso') %>%
       left_join(ppp.mer.rgn_ctry, by =  c('GCAM_region_ID','iso')) %>%
-      mutate(value = value * MER/PPP * gdp_deflator(1990,2017) / 1e6)
+      left_join(L100.FAO_GDP_Deflators %>%
+                  group_by(area) %>%
+                  # conversion factor by country to change US$2015 to US$1990
+                  mutate(value_1990_2015 = currentUSD_per_baseyearUSD[year == 1990]) %>% ungroup() %>%
+                  # map 'area' with 'iso' codes
+                  left_join(AGLU_ctry %>% select(area = FAO_country, iso), by = "area") %>%
+                  left_join(iso_GCAM_regID %>% select(iso, GCAM_region_ID), by = "iso"), by =  c('year','iso','GCAM_region_ID')) %>%
+      # transform PPP US$2017 value to MER US$2015, to US$1990, to million
+      mutate(value = value * MER/PPP / currentUSD_per_baseyearUSD * value_1990_2015 / 1e6)
 
     # Add GCAM IC GDP data all historical years
     gdp_mil90usd_GCAM_IC_ctry_Y <- GCAM_IC_GDP_MER %>%
