@@ -749,7 +749,7 @@ module_energy_L223.electricity <- function(command, ...) {
     # All of these options have different headers, and all are allowed.
     # Also, technologies that have an additional shutdown rate as a function of their profitability are also defined.
 
-    if (energy.ELEC_COST_SOURCE == "EUREF"){
+    if (energy.ELEC_COST_SOURCE %in% c("EUREF", "WEO", "WEO-EUREF")){
       # Want to overwrite GCAM assumptions with EU Reference scenario assumptions
       EURef2020_elec_gcam_mapping <- get_data(all_data, "energy/mappings/EURef2020_elec_gcam_mapping") %>%
         # Need to overwrite techs for wind_storage and PV_storage so that they have same lifetime as wind and PV
@@ -765,15 +765,21 @@ module_energy_L223.electricity <- function(command, ...) {
         select(tech_type, variable, lifetime = value) %>%
         distinct()
 
+      A23.globaltech_retirement_rooftop <- A23.globaltech_retirement %>%
+        # Need to add in rooftop_pv since it doesn't have lifetime by default
+        bind_rows(filter(A23.globaltech_retirement, technology == "PV") %>% mutate(supplysector = "elect_td_bld",
+                                                                                   subsector = "rooftop_pv",
+                                                                                   technology = "rooftop_pv"))
+
       # Map techs to GCAM and add to A23.globaltech_retirement
-      L223.globaltech_retirement_EUREF <- A23.globaltech_retirement %>%
+      L223.globaltech_retirement_EUREF <- A23.globaltech_retirement_rooftop %>%
         filter(technology != "Gen_II_LWR") %>%
-        left_join(EURef2020_elec_gcam_mapping, by = "technology") %>%
+        left_join_keep_first_only(EURef2020_elec_gcam_mapping, by = "technology") %>%
         select(supplysector, subsector, technology, year, tech_type) %>%
         left_join_error_no_match(EURef2020_retirement, by = "tech_type") %>%
         select(-tech_type, -variable)
 
-      A23.globaltech_retirement <- A23.globaltech_retirement %>%
+      A23.globaltech_retirement <- A23.globaltech_retirement_rooftop %>%
         left_join(L223.globaltech_retirement_EUREF,
                   by = c("supplysector", "subsector", "technology", "year")) %>%
         # replace lifetimes where present and half.lives with half of lifetimes

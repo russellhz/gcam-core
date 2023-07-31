@@ -411,12 +411,14 @@ module_water_L2233.electricity_water <- function(command, ...) {
       rename(minicam.non.energy.input = input.capital) ->
       L2233.StubTechTrackCapital_elec
     # now remove rooftop_pv from the global tech to avoid double accounting
-    L2233.GlobalIntTechCapital_elec %>%
-      filter(technology != "rooftop_pv") ->
-      L2233.GlobalIntTechCapital_elec
-    L2233.GlobalTechCapital_elecPassthru %>%
-      filter(technology != "rooftop_pv") ->
-      L2233.GlobalTechCapital_elecPassthru
+    if (energy.ELEC_COST_SOURCE == "ATB"){
+      L2233.GlobalIntTechCapital_elec %>%
+        filter(technology != "rooftop_pv") ->
+        L2233.GlobalIntTechCapital_elec
+      L2233.GlobalTechCapital_elecPassthru %>%
+        filter(technology != "rooftop_pv") ->
+        L2233.GlobalTechCapital_elecPassthru
+    }
 
     # OMfixed costs of intermittent technologies applied in the electricity sector
     GlobalTechOMfixed_elecPassthru %>%
@@ -593,6 +595,35 @@ module_water_L2233.electricity_water <- function(command, ...) {
     L223.StubTechCapital %>% mutate(region = region) -> L2233.StubTechCapital_elecPassthru
     L223.StubTechOMfixed %>% mutate(region = region) -> L2233.StubTechOMfixed_elecPassthru
     L223.StubTechOMvar %>% mutate(region = region) -> L2233.StubTechOMvar_elecPassthru
+
+
+    # if(nrow(L223.StubTechCapital) > 0){
+    #   L223.StubTechCapFactor_elec %>%
+    #     filter(stub.technology == "rooftop_pv") %>%
+    #     semi_join(L2233.StubTechCapital_elecPassthru, by = c("region", "year")) %>%
+    #     left_join_error_no_match(L2233.StubTechCapital_elecPassthru, by=c("region", "supplysector","subsector",
+    #                                                         "stub.technology", "year")) %>%
+    #     mutate(input.cost = capital.overnight * fixed.charge.rate / (capacity.factor * CONV_YEAR_HOURS * CONV_KWH_GJ),
+    #            capital.coef = 1 / fixed.charge.rate,
+    #            tracking.market = "capital",
+    #            depreciation.rate = 1 / 15) %>%
+    #     select(-capacity.factor, -capital.overnight, -fixed.charge.rate) %>%
+    #     rename(minicam.non.energy.input = input.capital) ->
+    #     L2233.StubTechTrackCapital_elec_adj
+    #
+    #   L2233.StubTechTrackCapital_elec <- bind_rows(L2233.StubTechTrackCapital_elec,
+    #                                                    L2233.StubTechTrackCapital_elec_adj)
+    #
+    #   L2233.StubTechCapital_elecPassthru <- L2233.StubTechCapital_elecPassthru %>%
+    #     filter(stub.technology != "rooftop_pv")
+    #
+    #   L2233.StubTechOMfixed_elecPassthru <- L2233.StubTechOMfixed_elecPassthru %>%
+    #     filter(stub.technology != "rooftop_pv")
+    #
+    #   L2233.StubTechOMvar_elecPassthru <- L2233.StubTechOMvar_elecPassthru %>%
+    #     filter(stub.technology != "rooftop_pv")
+    # }
+
 
 
     # PART 4: STUB TECHNOLOGY INFORMATION IN THE NEW SECTOR STRUCTURE

@@ -147,7 +147,6 @@ module_water_electricity_water_xml <- function(command, ...) {
     L2233.GlobalIntTechShrwt_elec_cool    <- rename(L2233.GlobalIntTechShrwt_elec_cool,  `intermittent.technology` = technology )
     L2233.GlobalIntTechCapFac_elec_cool   <- rename(L2233.GlobalIntTechCapFac_elec_cool,  `intermittent.technology` = technology )
 
-
     # Produce outputs
     create_xml("electricity_water.xml") %>%
       add_node_equiv_xml("sector") %>%
@@ -200,9 +199,15 @@ module_water_electricity_water_xml <- function(command, ...) {
       add_xml_data(L2233.ElecReserve_elec_cool, "ElecReserve") %>%
       add_xml_data(L2233.SubsectorShrwtFllt_elec_cool, "SubsectorShrwtFllt") %>%
       add_logit_tables_xml(L2233.SubsectorLogit_elec_cool, "SubsectorLogit") %>%
-      add_xml_data(L2233.StubTech_elec_cool, "StubTech") %>%
-      add_xml_data(L2233.StubTechTrackCapital_elec, "StubTechTrackCapital") %>%
-      add_xml_data(L2233.StubTechTrackCapital_elec, "StubTechCost") %>%
+      add_xml_data(L2233.StubTech_elec_cool, "StubTech") -> tmp
+
+    if (energy.ELEC_COST_SOURCE == "ATB"){
+      tmp <- tmp %>%
+        add_xml_data(L2233.StubTechTrackCapital_elec, "StubTechTrackCapital") %>%
+        add_xml_data(L2233.StubTechTrackCapital_elec, "StubTechCost")
+    }
+
+      tmp  %>%
       add_xml_data(L2233.StubTechEff_elec_cool, "StubTechEff") %>%
       add_xml_data(L2233.StubTechSecOut_desal_elec_cool, "StubTechSecOut") %>%
       add_xml_data(L2233.StubTechProd_elec_cool, "StubTechProd") %>%

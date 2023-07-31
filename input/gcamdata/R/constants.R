@@ -564,7 +564,7 @@ energy.TRAN_UCD_MODE<-'rev.mode'
 energy.TRAN_UCD_SIZE_CLASS<-'rev_size.class'
 
 # Constants related to ATB power sector technology costs
-energy.ELEC_COST_SOURCE <- "WEO" # Default is ATB, alternatives are EUREF, WEO, or WEO-EUREF (EU values from EUREF, rest of world from WEO)
+energy.ELEC_COST_SOURCE <- "WEO-EUREF" # Default is ATB, alternatives are EUREF, WEO, or WEO-EUREF (EU values from EUREF, rest of world from WEO)
 energy.WEO_SCENARIO <- "Stated.Policies" # Options are Stated.Policies and Net.Zero.Emissions.by.2050
 
 energy.ATB_2017_YEARS <- c(2015:2016)

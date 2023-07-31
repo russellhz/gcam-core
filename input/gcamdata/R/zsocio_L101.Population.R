@@ -39,6 +39,7 @@ module_socio_L101.Population <- function(command, ...) {
     iso_GCAM_regID <- get_data(all_data, "common/iso_GCAM_regID")
     get_data(all_data, "socioeconomics/population_iam_compact") %>%
       gather_years %>% mutate(iso = tolower(iso)) %>%
+      change_iso_code('rou', 'rom') %>%
       mutate(value = value/1000) ->   # unit: thousand persons
       GCAM_IC_population
     L100.Pop_thous_ctry_Yh <- get_data(all_data, "L100.Pop_thous_ctry_Yh")
