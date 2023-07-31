@@ -21,7 +21,16 @@ module_policy_L305.FixedOutputTech <- function(command, ...) {
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(c("L305.StubTechFixedOutput",
              "L305.GlbTechFixedOutput",
-             "L305.StubTechLifetime"))
+             "L305.StubTechLifetime",
+             "L305.StubTranTechFixedOutput",
+             "L305.GlobalTranTechInterp",
+             "L305.GlobalTranTechShrwt",
+             "L305.GlobalTranTechSCurve",
+             "L305.StubTranTechLoadFactor",
+             "L305.StubTranTechCost",
+             "L305.StubTechTrackCapital",
+             "L305.StubTranTechCalInput",
+             "L305.StubTranTechCoef"))
   } else if(command == driver.MAKE) {
 
     all_data <- list(...)[[1]]
@@ -88,7 +97,9 @@ module_policy_L305.FixedOutputTech <- function(command, ...) {
       semi_join(A_FixedOutputTranTech, by = c("sector.name" = "supplysector", "subsector.name" = "tranSubsector", "tranTechnology" = "tech.copy")) %>%
       left_join_error_no_match(distinct(A_FixedOutputTranTech, xml, supplysector, tranSubsector, tech.copy, stub.technology),
                                by = c("sector.name" = "supplysector", "subsector.name" = "tranSubsector", "tranTechnology" = "tech.copy")) %>%
-      mutate(tranTechnology = stub.technology) %>%
+      mutate(tranTechnology = stub.technology,
+             # ALWAYS WANT SHAREWEIGHT ZERO FOR THIS
+             share.weight = 0) %>%
       select(-stub.technology)
 
     L305.GlobalTranTechSCurve <- get_data(all_data, "L254.GlobalTranTechSCurve") %>%

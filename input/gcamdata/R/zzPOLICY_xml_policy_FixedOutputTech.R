@@ -10,7 +10,9 @@
 #' a vector of output names, or (if \code{command} is "MAKE") all
 #' the generated outputs: \code{policy_FixedOutputTech.xml}.
 module_policy_FixedOutputTech_xml <- function(command, ...) {
-  all_xml_names <- get_xml_names("policy/A_FixedOutputTech.csv", "policy_FixedOutputTech.xml")
+  all_xml_names <- union(get_xml_names("policy/A_FixedOutputTech.csv", "policy_FixedOutputTech.xml"),
+                         get_xml_names("policy/A_FixedOutputTranTech.csv", "policy_FixedOutputTech.xml"))
+  names(all_xml_names) <- rep("XML", length(all_xml_names))
 
   if(command == driver.DECLARE_INPUTS) {
     return(c("L305.StubTechFixedOutput",
@@ -45,6 +47,12 @@ module_policy_FixedOutputTech_xml <- function(command, ...) {
     L305.StubTranTechCalInput <- get_data(all_data, "L305.StubTranTechCalInput")
     L305.StubTranTechCoef <- get_data(all_data, "L305.StubTranTechCoef")
 
+    L305.GlbTechShrwt <- L305.GlbTechFixedOutput %>%
+      select(-minicam.non.energy.input, -input.cost)
+    L305.GlbTechCost <- L305.GlbTechFixedOutput %>%
+      select(-share.weight)
+
+
     # ===================================================
 
     # Produce outputs
@@ -57,7 +65,11 @@ module_policy_FixedOutputTech_xml <- function(command, ...) {
         filter(xml == xml_name) %>%
         select(-xml)
 
-      L305.GlbTechFixedOutput_tmp <- L305.GlbTechFixedOutput %>%
+      L305.GlbTechShrwt_tmp <- L305.GlbTechShrwt %>%
+        filter(xml == xml_name) %>%
+        select(-xml)
+
+      L305.GlbTechCost_tmp <- L305.GlbTechCost %>%
         filter(xml == xml_name) %>%
         select(-xml)
 
@@ -97,29 +109,26 @@ module_policy_FixedOutputTech_xml <- function(command, ...) {
         filter(xml == xml_name) %>%
         select(-xml)
 
-      if (nrow(L305.GlbTechFixedOutput_tmp) == 0){
-        assign(xml_name,
-               create_xml(xml_name) %>%
-                 add_xml_data(L305.StubTechLifetime_tmp, "StubTechLifetime") %>%
-                 add_xml_data(L305.StubTechFixedOutput_tmp, "StubTechFixOutNoSW") %>%
-                 add_precursors("L305.StubTechFixedOutput")
-        )
-      } else {
-
-        assign(xml_name,
-               create_xml(xml_name) %>%
-                 add_xml_data(L305.StubTechLifetime_tmp, "StubTechLifetime") %>%
-                 add_xml_data(L305.StubTechFixedOutput_tmp, "StubTechFixOutNoSW") %>%
-                 add_xml_data(select(L305.GlbTechFixedOutput_tmp,
-                                     -minicam.non.energy.input, -input.cost),
-                              "GlobalTechShrwt") %>%
-                 add_xml_data(select(L305.GlbTechFixedOutput_tmp,
-                                     -share.weight),
-                              "GlobalTechCost") %>%
-                 add_precursors("L305.StubTechFixedOutput",
-                                "L305.GlbTechFixedOutput")
-        )
-      }
+      assign(xml_name,
+             create_xml(xml_name) %>%
+               add_xml_data(L305.StubTechLifetime_tmp, "StubTechLifetime") %>%
+               add_xml_data(L305.StubTechFixedOutput_tmp, "StubTechFixOutNoSW") %>%
+               add_xml_data(L305.GlbTechShrwt_tmp, "GlobalTechShrwt") %>%
+               add_xml_data(L305.GlbTechCost_tmp,"GlobalTechCost") %>%
+               # add_node_equiv_xml("technology") %>%
+               # add_node_equiv_xml("input") %>%
+               add_xml_data(L305.StubTranTechFixedOutput_tmp, "StubTranTechFixedOutput") %>%
+               add_xml_data(L305.StubTranTechCalInput_tmp, "StubTranTechCalInput") %>%
+               add_xml_data(L305.StubTranTechLoadFactor_tmp, "StubTranTechLoadFactor") %>%
+               # add_node_equiv_xml("subsector") %>%
+               add_xml_data(L305.StubTechTrackCapital_tmp, "StubTechTrackCapital") %>%
+               add_xml_data(L305.StubTranTechCost_tmp, "StubTranTechCost") %>%
+               add_xml_data(L305.StubTranTechCoef_tmp, "StubTranTechCoef") %>%
+               add_xml_data(L305.GlobalTranTechInterp_tmp, "GlobalTranTechInterp") %>%
+               add_xml_data(L305.GlobalTranTechShrwt_tmp, "GlobalTranTechShrwt") %>%
+               add_xml_data(L305.GlobalTranTechSCurve_tmp, "GlobalTranTechSCurve") %>%
+               add_precursors("L305.StubTechFixedOutput",
+                              "L305.GlbTechFixedOutput"))
 
 
     }

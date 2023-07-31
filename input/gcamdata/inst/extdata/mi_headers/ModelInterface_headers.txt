@@ -484,6 +484,8 @@ StubTranTechProd, world/+{name}region, region/+{name}supplysector, supplysector/
 
 StubTranTechShrwt, world/+{name}region, region/+{name}supplysector, supplysector/+{name}tranSubsector, tranSubsector/+{name}stub-technology, stub-technology/+{year}period, period/+share-weight, scenario, scenario/world
 
+StubTranTechFixedOutput, world/+{name}region, region/+{name}supplysector, supplysector/+{name}tranSubsector, tranSubsector/+{name}stub-technology, stub-technology/+{year}period, period/+fixedOutput, scenario, scenario/world
+
 #####, FINAL DEMAND
 
 
