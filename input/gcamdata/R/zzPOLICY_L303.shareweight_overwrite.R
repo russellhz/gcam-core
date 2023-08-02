@@ -27,7 +27,8 @@ module_policy_303.shareweight_overwrite <- function(command, ...) {
     all_data <- list(...)[[1]]
 
     # Load required inputs
-    A_Shareweights <- get_data(all_data, "policy/A_Shareweights")
+    A_Shareweights <- get_data(all_data, "policy/A_Shareweights") %>%
+      mutate(xml = if_else(grepl(".xml", xml), xml, paste0(xml, ".xml")))
 
     # Convert to long and get rid of NA values
     L303.shareweight_overwrite <- A_Shareweights %>%

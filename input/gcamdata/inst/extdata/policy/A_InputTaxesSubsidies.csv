@@ -13,7 +13,7 @@ policy_fueltax_eu.xml,EU-12,delivered gas transport,delivered gas transport,deli
 policy_fueltax_jap.xml,Japan,refined liquids transport,refined liquids transport,refined liquids transport,fuel-tax,3.188811189,3.188811189,3.188811189,3.188811189,3.188811189,3.188811189,3.188811189,3.188811189
 policy_fueltax_jap.xml,Japan,delivered gas transport,delivered gas transport,delivered gas transport,fuel-tax,0.844982542,0.844982542,0.844982542,0.844982542,0.844982542,0.844982542,0.844982542,0.844982542
 IRA_PTC,USA,electricity,biomass,biomass (conv),tax-credit,-0.86,-0.79,-0.79,-0.67,,,,
-IRA_PTC,USA,electricity,biomass,biomas (IGCC),tax-credit,-0.86,-0.79,-0.79,-0.67,,,,
+IRA_PTC,USA,electricity,biomass,biomass (IGCC),tax-credit,-0.86,-0.79,-0.79,-0.67,,,,
 IRA_PTC,USA,electricity,geothermal,geothermal,tax-credit,-1.71,-1.58,-1.58,-1.33,,,,
 IRA_PTC,USA,electricity,nuclear,Gen_III,tax-credit,0,-0.98,-0.98,-0.39,,,,
 IRA_PTC,USA,electricity,solar,CSP,tax-credit,0,-1.58,-1.58,-1.33,,,,

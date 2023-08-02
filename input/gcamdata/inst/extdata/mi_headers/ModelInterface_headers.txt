@@ -693,6 +693,8 @@ StubTranTechCoef_NM, world/+{name}region, region/+{name}supplysector, supplysect
 
 StubTranTechRESOutput, world/+{name}region, region/+{name}supplysector, supplysector/+{name}tranSubsector, tranSubsector/+{name}stub-technology, stub-technology/+{year}period, period/+{name}res-secondary-output, res-secondary-output/+output-ratio, scenario, scenario/world
 
+ExoShutdown, world/+{name}region, region/+{name}supplysector, supplysector/+{name}subsector, subsector/+{name}stub-technology, stub-technology/+{year}period, period/+{name}exogenous-shutdown-decider, exogenous-shutdown-decider/+{year}output-scalar, exogenous-shutdown-decider/+output-scalar, scenario, scenario/world
+
 #####, LAND ALLOCATOR
 
 
