@@ -88,14 +88,14 @@ module_policy_L305.FixedOutputTech <- function(command, ...) {
     # Global tech - just replace technology name
     L305.GlobalTranTechInterp <- get_data(all_data, "L254.GlobalTranTechInterp") %>%
       semi_join(A_FixedOutputTranTech, by = c("sector.name" = "supplysector", "subsector.name" = "tranSubsector", "tranTechnology" = "tech.copy")) %>%
-      left_join_error_no_match(distinct(A_FixedOutputTranTech, xml, supplysector, tranSubsector, tech.copy, stub.technology),
+      left_join(distinct(A_FixedOutputTranTech, xml, supplysector, tranSubsector, tech.copy, stub.technology),
                 by = c("sector.name" = "supplysector", "subsector.name" = "tranSubsector", "tranTechnology" = "tech.copy")) %>%
       mutate(tranTechnology = stub.technology) %>%
       select(-stub.technology)
 
     L305.GlobalTranTechShrwt <- get_data(all_data, "L254.GlobalTranTechShrwt") %>%
       semi_join(A_FixedOutputTranTech, by = c("sector.name" = "supplysector", "subsector.name" = "tranSubsector", "tranTechnology" = "tech.copy")) %>%
-      left_join_error_no_match(distinct(A_FixedOutputTranTech, xml, supplysector, tranSubsector, tech.copy, stub.technology),
+      left_join(distinct(A_FixedOutputTranTech, xml, supplysector, tranSubsector, tech.copy, stub.technology),
                                by = c("sector.name" = "supplysector", "subsector.name" = "tranSubsector", "tranTechnology" = "tech.copy")) %>%
       mutate(tranTechnology = stub.technology,
              # ALWAYS WANT SHAREWEIGHT ZERO FOR THIS
@@ -104,7 +104,7 @@ module_policy_L305.FixedOutputTech <- function(command, ...) {
 
     L305.GlobalTranTechSCurve <- get_data(all_data, "L254.GlobalTranTechSCurve") %>%
       semi_join(A_FixedOutputTranTech, by = c("sector.name" = "supplysector", "subsector.name" = "tranSubsector", "tranTechnology" = "tech.copy")) %>%
-      left_join_error_no_match(distinct(A_FixedOutputTranTech, xml, supplysector, tranSubsector, tech.copy, stub.technology),
+      left_join(distinct(A_FixedOutputTranTech, xml, supplysector, tranSubsector, tech.copy, stub.technology),
                                by = c("sector.name" = "supplysector", "subsector.name" = "tranSubsector", "tranTechnology" = "tech.copy")) %>%
       mutate(tranTechnology = stub.technology) %>%
       select(-stub.technology)
@@ -113,7 +113,7 @@ module_policy_L305.FixedOutputTech <- function(command, ...) {
     L305.StubTranTechLoadFactor<- get_data(all_data, "L254.StubTranTechLoadFactor") %>%
       filter(sce == "CORE") %>%
       semi_join(A_FixedOutputTranTech, by = c("region", "supplysector", "tranSubsector", "stub.technology" = "tech.copy"))  %>%
-      left_join_error_no_match(distinct(A_FixedOutputTranTech, xml, region, supplysector, tranSubsector, tech.copy, stub.technology),
+      left_join(distinct(A_FixedOutputTranTech, xml, region, supplysector, tranSubsector, tech.copy, stub.technology),
                                by = c("region", "supplysector", "tranSubsector", "stub.technology" = "tech.copy")) %>%
       mutate(stub.technology = stub.technology.y) %>%
       select(-stub.technology.y)
@@ -121,7 +121,7 @@ module_policy_L305.FixedOutputTech <- function(command, ...) {
     L305.StubTranTechCost <- get_data(all_data, "L254.StubTranTechCost")  %>%
       filter(sce == "CORE") %>%
       semi_join(A_FixedOutputTranTech, by = c("region", "supplysector", "tranSubsector", "stub.technology" = "tech.copy"))  %>%
-      left_join_error_no_match(distinct(A_FixedOutputTranTech, xml, region, supplysector, tranSubsector, tech.copy, stub.technology),
+      left_join(distinct(A_FixedOutputTranTech, xml, region, supplysector, tranSubsector, tech.copy, stub.technology),
                                by = c("region", "supplysector", "tranSubsector", "stub.technology" = "tech.copy")) %>%
       mutate(stub.technology = stub.technology.y) %>%
       select(-stub.technology.y)
@@ -129,7 +129,7 @@ module_policy_L305.FixedOutputTech <- function(command, ...) {
     L305.StubTechTrackCapital <- get_data(all_data, "L254.StubTechTrackCapital")  %>%
       filter(sce == "CORE") %>%
       semi_join(A_FixedOutputTranTech, by = c("region", "supplysector", "subsector" = "tranSubsector", "stub.technology" = "tech.copy"))  %>%
-      left_join_error_no_match(distinct(A_FixedOutputTranTech, xml, region, supplysector, tranSubsector, tech.copy, stub.technology),
+      left_join(distinct(A_FixedOutputTranTech, xml, region, supplysector, tranSubsector, tech.copy, stub.technology),
                                by = c("region", "supplysector",  "subsector" ="tranSubsector", "stub.technology" = "tech.copy")) %>%
       mutate(stub.technology = stub.technology.y) %>%
       select(-stub.technology.y)
@@ -137,7 +137,7 @@ module_policy_L305.FixedOutputTech <- function(command, ...) {
     L305.StubTranTechCalInput <- get_data(all_data, "L254.StubTranTechCalInput")  %>%
       filter(sce == "CORE") %>%
       semi_join(A_FixedOutputTranTech, by = c("region", "supplysector", "tranSubsector", "stub.technology" = "tech.copy"))  %>%
-      left_join_error_no_match(distinct(A_FixedOutputTranTech, xml, region, supplysector, tranSubsector, tech.copy, stub.technology),
+      left_join(distinct(A_FixedOutputTranTech, xml, region, supplysector, tranSubsector, tech.copy, stub.technology),
                                by = c("region", "supplysector", "tranSubsector", "stub.technology" = "tech.copy")) %>%
       mutate(stub.technology = stub.technology.y,
              calibrated.value = 0) %>%
@@ -146,7 +146,7 @@ module_policy_L305.FixedOutputTech <- function(command, ...) {
     L305.StubTranTechCoef <- get_data(all_data, "L254.StubTranTechCoef") %>%
       filter(sce == "CORE") %>%
       semi_join(A_FixedOutputTranTech, by = c("region", "supplysector", "tranSubsector", "stub.technology" = "tech.copy"))  %>%
-      left_join_error_no_match(distinct(A_FixedOutputTranTech, xml, region, supplysector, tranSubsector, tech.copy, stub.technology),
+      left_join(distinct(A_FixedOutputTranTech, xml, region, supplysector, tranSubsector, tech.copy, stub.technology),
                                by = c("region", "supplysector", "tranSubsector", "stub.technology" = "tech.copy")) %>%
       mutate(stub.technology = stub.technology.y) %>%
       select(-stub.technology.y)

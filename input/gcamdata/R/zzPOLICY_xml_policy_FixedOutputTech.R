@@ -120,7 +120,7 @@ module_policy_FixedOutputTech_xml <- function(command, ...) {
                add_xml_data(L305.StubTranTechFixedOutput_tmp, "StubTranTechFixedOutput") %>%
                add_xml_data(L305.StubTranTechCalInput_tmp, "StubTranTechCalInput") %>%
                add_xml_data(L305.StubTranTechLoadFactor_tmp, "StubTranTechLoadFactor") %>%
-               # add_node_equiv_xml("subsector") %>%
+               add_node_equiv_xml("subsector") %>%
                add_xml_data(L305.StubTechTrackCapital_tmp, "StubTechTrackCapital") %>%
                add_xml_data(L305.StubTranTechCost_tmp, "StubTranTechCost") %>%
                add_xml_data(L305.StubTranTechCoef_tmp, "StubTranTechCoef") %>%
