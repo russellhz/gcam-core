@@ -11,7 +11,7 @@
 #' the generated outputs: \code{socioeconomics_gSSP1.xml}, \code{socioeconomics_gSSP2.xml}, \code{socioeconomics_gSSP3.xml},
 #' \code{socioeconomics_gSSP4.xml}, \code{socioeconomics_gSSP5.xml}, \code{socioeconomics_SSP1.xml},
 #' \code{socioeconomics_SSP2.xml}, \code{socioeconomics_SSP3.xml},
-#' \code{socioeconomics_SSP4.xml}, and \code{socioeconomics_SSP5.xml}.
+#' \code{socioeconomics_SSP4.xml}, and \code{socioeconomics_SSP5.xml}, and \code{socioeconomics_GCAM_iam_compact.xml}.
 module_socio_SSP_xml <- function(command, ...) {
 
   SSP_NUMS <- 1:5
@@ -45,7 +45,7 @@ module_socio_SSP_xml <- function(command, ...) {
     socioeconomics_gSSP1.xml <- socioeconomics_gSSP2.xml <- socioeconomics_gSSP3.xml <-
       socioeconomics_gSSP4.xml <- socioeconomics_gSSP5.xml <- socioeconomics_SSP1.xml <-
       socioeconomics_SSP2.xml <- socioeconomics_SSP3.xml <- socioeconomics_SSP4.xml <-
-      socioeconomics_SSP5.xml <- socioeconomics_GCAM3.xml <- NULL  # silence package check notes
+      socioeconomics_SSP5.xml <- socioeconomics_GCAM3.xml <- socioeconomics_GCAM_iam_compact.xml <- NULL  # silence package check notes
 
     # Load required inputs
     L201.GDP_Scen <- get_data(all_data, "L201.GDP_Scen")
