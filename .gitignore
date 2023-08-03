@@ -83,3 +83,4 @@ exe/configuration*.xml
 /exe/country-specific_config
 /exe/old
 input/*.xml
+*outputs*

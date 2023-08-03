@@ -65,7 +65,10 @@ module_water_electricity_water_xml <- function(command, ...) {
              "L2233.StubTechShrwt_elec_cool",
              "L2233.GlobalTechCapital_elec_cool",
              "L2233.GlobalIntTechCapital_elec_cool",
-             "L223.GlobalTechCapFac_elec"))
+             "L223.GlobalTechCapFac_elec",
+             "L2233.StubTechCapital_elecPassthru",
+             "L2233.StubTechOMfixed_elecPassthru",
+             "L2233.StubTechOMvar_elecPassthru"))
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(c(XML = "electricity_water.xml"))
   } else if(command == driver.MAKE) {
@@ -128,6 +131,9 @@ module_water_electricity_water_xml <- function(command, ...) {
     L2233.GlobalIntTechCapital_elec_cool <- get_data(all_data, "L2233.GlobalIntTechCapital_elec_cool")
     L223.GlobalTechCapFac_elec <- get_data(all_data, "L223.GlobalTechCapFac_elec")
 
+    L2233.StubTechCapital_elecPassthru <- get_data(all_data, "L2233.StubTechCapital_elecPassthru")
+    L2233.StubTechOMfixed_elecPassthru <- get_data(all_data, "L2233.StubTechOMfixed_elecPassthru")
+    L2233.StubTechOMvar_elecPassthru <- get_data(all_data, "L2233.StubTechOMvar_elecPassthru")
 
     # Silence package checks
     technology <- NULL
@@ -140,7 +146,6 @@ module_water_electricity_water_xml <- function(command, ...) {
     L2233.GlobalIntTechLifetime_elec_cool <- rename(L2233.GlobalIntTechLifetime_elec_cool, `intermittent.technology` = technology )
     L2233.GlobalIntTechShrwt_elec_cool    <- rename(L2233.GlobalIntTechShrwt_elec_cool,  `intermittent.technology` = technology )
     L2233.GlobalIntTechCapFac_elec_cool   <- rename(L2233.GlobalIntTechCapFac_elec_cool,  `intermittent.technology` = technology )
-
 
     # Produce outputs
     create_xml("electricity_water.xml") %>%
@@ -174,6 +179,11 @@ module_water_electricity_water_xml <- function(command, ...) {
       add_xml_data(L2233.PrimaryRenewKeywordInt_elec_cool, "PrimaryRenewKeywordInt") %>%
       add_xml_data(L2233.StubTech_elecPassthru, "StubTech") %>%
       add_xml_data(L2233.StubTechProd_elecPassthru, "StubTechProd") %>%
+
+      add_xml_data(L2233.StubTechCapital_elecPassthru, "StubTechCapital") %>%
+      add_xml_data(L2233.StubTechOMfixed_elecPassthru, "StubTechOMfixed") %>%
+      add_xml_data(L2233.StubTechOMvar_elecPassthru, "StubTechOMvar") %>%
+
       add_xml_data(L2233.GlobalPassThroughTech, "GlobalPassThroughTech") %>%
       add_xml_data(L2233.GlobalTechEff_elecPassthru, "GlobalTechEff") %>%
       add_xml_data(L2233.GlobalTechShrwt_elecPassthru, "GlobalTechShrwt") %>%
@@ -189,9 +199,15 @@ module_water_electricity_water_xml <- function(command, ...) {
       add_xml_data(L2233.ElecReserve_elec_cool, "ElecReserve") %>%
       add_xml_data(L2233.SubsectorShrwtFllt_elec_cool, "SubsectorShrwtFllt") %>%
       add_logit_tables_xml(L2233.SubsectorLogit_elec_cool, "SubsectorLogit") %>%
-      add_xml_data(L2233.StubTech_elec_cool, "StubTech") %>%
-      add_xml_data(L2233.StubTechTrackCapital_elec, "StubTechTrackCapital") %>%
-      add_xml_data(L2233.StubTechTrackCapital_elec, "StubTechCost") %>%
+      add_xml_data(L2233.StubTech_elec_cool, "StubTech") -> tmp
+
+    if (energy.ELEC_COST_SOURCE == "ATB"){
+      tmp <- tmp %>%
+        add_xml_data(L2233.StubTechTrackCapital_elec, "StubTechTrackCapital") %>%
+        add_xml_data(L2233.StubTechTrackCapital_elec, "StubTechCost")
+    }
+
+      tmp  %>%
       add_xml_data(L2233.StubTechEff_elec_cool, "StubTechEff") %>%
       add_xml_data(L2233.StubTechSecOut_desal_elec_cool, "StubTechSecOut") %>%
       add_xml_data(L2233.StubTechProd_elec_cool, "StubTechProd") %>%

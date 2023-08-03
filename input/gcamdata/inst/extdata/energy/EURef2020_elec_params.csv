@@ -1,0 +1,562 @@
+# File: EURef2020_elec_params.csv
+# Title: Technology cost assumptions by year from EU Reference Scenario 2020
+# Units: 2015 Euros or specified
+# Source: https://energy.ec.europa.eu/data-and-analysis/energy-modelling/eu-reference-scenario-2020_en
+# Users can specify how technologies are mapped to GCAM technologies in energy/mappings/EURef2020_elec_gcam_mapping.csv.
+# Column types: cccnnnn
+# ----------
+tech_type,variable,Units,2020,2030,2040,2050
+Steam turbine coal conventional,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,1450,1450,1450,1450
+Steam turbine coal conventional,"Fixed Operation and Maintenance costs, annually",EUR/kW,25.6,25.6,25.6,25.6
+Steam turbine coal conventional,Variable non fuel cost,EUR/kW,2.4,2.4,2.4,2.4
+Steam turbine coal conventional,"Electrical Efficiency (net) 
+in optimal load operation",ratio,0.3767106017191978,0.42,0.425,0.43
+Steam turbine coal conventional,Self Consumption of electricity,%,0.087,0.087,0.087,0.087
+Steam turbine coal conventional,Technical lifetime,Years,40,40,40,40
+Steam turbine lignite conventional,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,1700,1700,1700,1700
+Steam turbine lignite conventional,"Fixed Operation and Maintenance costs, annually",EUR/kW,32.5,32.5,32.5,32.5
+Steam turbine lignite conventional,Variable non fuel cost,EUR/kW,3,3,3,3
+Steam turbine lignite conventional,"Electrical Efficiency (net) 
+in optimal load operation",ratio,0.37,0.375,0.375,0.375
+Steam turbine lignite conventional,Self Consumption of electricity,%,0.115,0.115,0.115,0.115
+Steam turbine lignite conventional,Technical lifetime,Years,40,40,40,40
+Steam turbine coal supercritical,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,1650,1650,1650,1650
+Steam turbine coal supercritical,"Fixed Operation and Maintenance costs, annually",EUR/kW,41.482805,35.666084999999995,31.703444499999996,30.939999999999998
+Steam turbine coal supercritical,Variable non fuel cost,EUR/kW,3.63164315758331,3.51163876075309,3.37506943870731,3.34593495934959
+Steam turbine coal supercritical,"Electrical Efficiency (net) 
+in optimal load operation",ratio,0.44999999999999996,0.45500000000000007,0.465,0.47000000000000003
+Steam turbine coal supercritical,Self Consumption of electricity,%,0.07320000000000004,0.07320000000000004,0.07320000000000004,0.07320000000000004
+Steam turbine coal supercritical,Technical lifetime,Years,40,40,40,40
+Steam turbine lignite supercritical,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,1800,1800,1800,1800
+Steam turbine lignite supercritical,"Fixed Operation and Maintenance costs, annually",EUR/kW,46.769665344999986,42.376167665,39.38309737049999,38.80645079999999
+Steam turbine lignite supercritical,Variable non fuel cost,EUR/kW,4.15797058909997,4.01495451290251,2.85008442644866,2.695121951219509
+Steam turbine lignite supercritical,"Electrical Efficiency (net) 
+in optimal load operation",ratio,0.41000000000000003,0.42,0.43,0.43999999999999995
+Steam turbine lignite supercritical,Self Consumption of electricity,%,0.09499999999999997,0.09499999999999997,0.09499999999999997,0.09499999999999997
+Steam turbine lignite supercritical,Technical lifetime,Years,40,40,40,40
+Fluidized bed combustion coal,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,1900,1900,1900,1900
+Fluidized bed combustion coal,"Fixed Operation and Maintenance costs, annually",EUR/kW,35.150000000000006,35.150000000000006,35.150000000000006,35.150000000000006
+Fluidized bed combustion coal,Variable non fuel cost,EUR/kW,2.8338120547834977,2.8338120547834977,2.8338120547834977,2.8338120547834977
+Fluidized bed combustion coal,"Electrical Efficiency (net) 
+in optimal load operation",ratio,0.4,0.41000000000000003,0.415,0.42
+Fluidized bed combustion coal,Self Consumption of electricity,%,0.06320000000000003,0.06320000000000003,0.06320000000000003,0.06320000000000003
+Fluidized bed combustion coal,Technical lifetime,Years,40,40,40,40
+Fluidized bed combustion lignite,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,2100,2100,2100,2100
+Fluidized bed combustion lignite,"Fixed Operation and Maintenance costs, annually",EUR/kW,42.18000000000001,42.18000000000001,42.18000000000001,42.18000000000001
+Fluidized bed combustion lignite,Variable non fuel cost,EUR/kW,4.40406474702208,4.40406474702208,4.40406474702208,4.40406474702208
+Fluidized bed combustion lignite,"Electrical Efficiency (net) 
+in optimal load operation",ratio,0.37999999999999995,0.385,0.395,0.4
+Fluidized bed combustion lignite,Self Consumption of electricity,%,0.11499999999999996,0.11499999999999996,0.11499999999999996,0.11499999999999996
+Fluidized bed combustion lignite,Technical lifetime,Years,40,40,40,40
+Integrated gasification combined cycle coal,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,1950,1915,1907.5,1900
+Integrated gasification combined cycle coal,"Fixed Operation and Maintenance costs, annually",EUR/kW,46.8,44.85,43.875,41.925
+Integrated gasification combined cycle coal,Variable non fuel cost,EUR/kW,5.160968299381783,4.9601403120807355,4.778840098483287,4.604166666666675
+Integrated gasification combined cycle coal,"Electrical Efficiency (net) 
+in optimal load operation",ratio,0.46,0.48,0.49,0.5
+Integrated gasification combined cycle coal,Self Consumption of electricity,%,0.092,0.092,0.092,0.092
+Integrated gasification combined cycle coal,Technical lifetime,Years,30,30,30,30
+Gas turbine combined cycle gas conventional,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,550,536,533,530
+Gas turbine combined cycle gas conventional,"Fixed Operation and Maintenance costs, annually",EUR/kW,19.965000000000003,19.965000000000003,19.965000000000003,19.965000000000003
+Gas turbine combined cycle gas conventional,Variable non fuel cost,EUR/kW,2.312300664893617,2.312300664893617,2.312300664893617,2.312300664893617
+Gas turbine combined cycle gas conventional,"Electrical Efficiency (net) 
+in optimal load operation",ratio,0.57,0.58,0.59,0.59
+Gas turbine combined cycle gas conventional,Self Consumption of electricity,%,0.025,0.025,0.025,0.025
+Gas turbine combined cycle gas conventional,Technical lifetime,Years,30,30,30,30
+Gas turbine combined cycle gas advanced,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,600,579,574.5,570
+Gas turbine combined cycle gas advanced,"Fixed Operation and Maintenance costs, annually",EUR/kW,22,21,20,19.289830268741156
+Gas turbine combined cycle gas advanced,Variable non fuel cost,EUR/kW,1.9880715390851933,1.8981506058063078,1.812296817035444,1.7303262148904277
+Gas turbine combined cycle gas advanced,"Electrical Efficiency (net) 
+in optimal load operation",ratio,0.595,0.61,0.62,0.63
+Gas turbine combined cycle gas advanced,Self Consumption of electricity,%,0.02011994583091503,0.01920991605026186,0.01834104712603621,0.02011994583091503
+Gas turbine combined cycle gas advanced,Technical lifetime,Years,30,30,30,30
+Gas turbine with heat recovery,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,400,386,383,380
+Gas turbine with heat recovery,"Fixed Operation and Maintenance costs, annually",EUR/kW,11.91393773702542,11.68297690915426,11.635095654774096,11.587410635868745
+Gas turbine with heat recovery,Variable non fuel cost,EUR/kW,2.104239078350545,2.104239078350545,2.104239078350545,2.104239078350545
+Gas turbine with heat recovery,"Electrical Efficiency (net) 
+in optimal load operation",ratio,0.35,0.37,0.385,0.397
+Gas turbine with heat recovery,Self Consumption of electricity,%,0.01,0.01,0.01,0.01
+Gas turbine with heat recovery,Technical lifetime,Years,25,25,25,25
+Very small scale gas plant,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,350,350,350,350
+Very small scale gas plant,"Fixed Operation and Maintenance costs, annually",EUR/kW,23.488853921675325,19.965525833424028,18.754345891767297,17.6166404412565
+Very small scale gas plant,Variable non fuel cost,EUR/kW,0.7089551016664918,0.7089551016664918,0.7089551016664918,0.7089551016664918
+Very small scale gas plant,"Electrical Efficiency (net) 
+in optimal load operation",ratio,0.3548387096774194,0.3548387096774194,0.3548387096774194,0.3548387096774194
+Very small scale gas plant,Self Consumption of electricity,%,0.006804044211016422,0.006804044211016422,0.006804044211016422,0.006804044211016422
+Very small scale gas plant,Technical lifetime,Years,20,20,20,20
+Pulverised lignite supercritical CCS post combustion,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,3500,3340,3250,3150
+Pulverised lignite supercritical CCS post combustion,"Fixed Operation and Maintenance costs, annually",EUR/kW,68.58000000000001,64.98,61.58000000000001,60.58000000000001
+Pulverised lignite supercritical CCS post combustion,Variable non fuel cost,EUR/kW,5.301412501102462,5.1190670039507005,3.633857643722041,3.436280487804874
+Pulverised lignite supercritical CCS post combustion,"Electrical Efficiency (net) 
+in optimal load operation",ratio,0.32000000000000006,0.32999999999999996,0.33999999999999997,0.35
+Pulverised lignite supercritical CCS post combustion,Self Consumption of electricity,%,0.327429090230547,0.295758203418802,0.280626557497635,0.278163266301166
+Pulverised lignite supercritical CCS post combustion,Technical lifetime,Years,40,40,40,40
+Integrated gasification coal CCS pre combustion,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,3450,3270,3175,3075
+Integrated gasification coal CCS pre combustion,"Fixed Operation and Maintenance costs, annually",EUR/kW,69.8,65.85,63.875,61.925
+Integrated gasification coal CCS pre combustion,Variable non fuel cost,EUR/kW,6.580234581711774,6.324178897902938,6.0930211255661915,5.8703125000000105
+Integrated gasification coal CCS pre combustion,"Electrical Efficiency (net) 
+in optimal load operation",ratio,0.37,0.39,0.4,0.41000000000000003
+Integrated gasification coal CCS pre combustion,Self Consumption of electricity,%,0.323176222481741,0.274848650886336,0.251758811124087,0.248
+Integrated gasification coal CCS pre combustion,Technical lifetime,Years,40,40,40,40
+Integrated gasification lignitel CCS pre combustion,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,3600,3445,3360,3270
+Integrated gasification lignitel CCS pre combustion,"Fixed Operation and Maintenance costs, annually",EUR/kW,77.575,73.575,71.6,69.625
+Integrated gasification lignitel CCS pre combustion,Variable non fuel cost,EUR/kW,5.419265811779481,5.229010114151785,5.057485109785083,4.891586567498342
+Integrated gasification lignitel CCS pre combustion,"Electrical Efficiency (net) 
+in optimal load operation",ratio,0.34089504401185583,0.3671937098325002,0.37876331766187044,0.39276926965474973
+Integrated gasification lignitel CCS pre combustion,Self Consumption of electricity,%,0.346,0.2875,0.25955,0.255
+Integrated gasification lignitel CCS pre combustion,Technical lifetime,Years,40,40,40,40
+Pulverised coal supercritical CCS oxyfuel,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,3400,3150,2890,2850
+Pulverised coal supercritical CCS oxyfuel,"Fixed Operation and Maintenance costs, annually",EUR/kW,75.482805,64.666085,55.5034445,53.94
+Pulverised coal supercritical CCS oxyfuel,Variable non fuel cost,EUR/kW,5.155117462189508,4.984771220889011,4.790911068245026,4.749554674796744
+Pulverised coal supercritical CCS oxyfuel,"Electrical Efficiency (net) 
+in optimal load operation",ratio,0.36,0.3650000000000001,0.375,0.38
+Pulverised coal supercritical CCS oxyfuel,Self Consumption of electricity,%,0.320755696151925,0.268841320054259,0.244037784807596,0.24
+Pulverised coal supercritical CCS oxyfuel,Technical lifetime,Years,40,40,40,40
+Pulverised lignite supercritical CCS oxyfuel,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,3800,3550,3450,3350
+Pulverised lignite supercritical CCS oxyfuel,"Fixed Operation and Maintenance costs, annually",EUR/kW,72.58000000000001,67.58000000000001,63.58000000000001,62.58000000000001
+Pulverised lignite supercritical CCS oxyfuel,Variable non fuel cost,EUR/kW,5.902239251227408,5.699227931065113,4.045694843343872,3.825725609756092
+Pulverised lignite supercritical CCS oxyfuel,"Electrical Efficiency (net) 
+in optimal load operation",ratio,0.32000000000000006,0.32999999999999996,0.33999999999999997,0.35
+Pulverised lignite supercritical CCS oxyfuel,Self Consumption of electricity,%,0.341737442101005,0.279549086464645,0.24983687210505,0.245
+Pulverised lignite supercritical CCS oxyfuel,Technical lifetime,Years,40,40,40,40
+Gas combined cycle CCS post combustion,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,1750,1625,1500,1500
+Gas combined cycle CCS post combustion,"Fixed Operation and Maintenance costs, annually",EUR/kW,41,38.2,35,34.289830268741156
+Gas combined cycle CCS post combustion,Variable non fuel cost,EUR/kW,3.0955426375155475,2.989459316608833,2.882632183071168,2.7796224744425735
+Gas combined cycle CCS post combustion,"Electrical Efficiency (net) 
+in optimal load operation",ratio,0.42845243988153997,0.45899729959246827,0.47588584470433587,0.48605949062191506
+Gas combined cycle CCS post combustion,Self Consumption of electricity,%,0.216,0.18,0.1628,0.16
+Gas combined cycle CCS post combustion,Technical lifetime,Years,30,30,30,30
+Gas combined cycle CCS oxyfuel,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,2012.4999999999998,1820.0000000000002,1650.0000000000002,1627.5
+Gas combined cycle CCS oxyfuel,"Fixed Operation and Maintenance costs, annually",EUR/kW,46.25,42.10000000000001,38,36.83983026874115
+Gas combined cycle CCS oxyfuel,Variable non fuel cost,EUR/kW,3.4480066824383484,3.3361616996859067,3.202316101674779,3.0738403405359596
+Gas combined cycle CCS oxyfuel,"Electrical Efficiency (net) 
+in optimal load operation",ratio,0.4011276669299111,0.45619853557056295,0.48526486577172895,0.49763233563672266
+Gas combined cycle CCS oxyfuel,Self Consumption of electricity,%,0.266,0.185,0.1463,0.14
+Gas combined cycle CCS oxyfuel,Technical lifetime,Years,30,30,30,30
+Steam turbine biomass solid conventional,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,2000,1800,1700,1700
+Steam turbine biomass solid conventional,"Fixed Operation and Maintenance costs, annually",EUR/kW,47.4672897693768,40.07503499999999,39.21574606291291,38.374882
+Steam turbine biomass solid conventional,Variable non fuel cost,EUR/kW,3.5615090425531912,3.5615090425531912,3.5615090425531912,3.5615090425531912
+Steam turbine biomass solid conventional,"Electrical Efficiency (net) 
+in optimal load operation",ratio,0.34671060171919776,0.39,0.395,0.4
+Steam turbine biomass solid conventional,Self Consumption of electricity,%,0.095,0.095,0.095,0.095
+Steam turbine biomass solid conventional,Technical lifetime,Years,40,40,40,40
+Steam turbine biomass solid conventional w_ CCS,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,4050,3675,3305,3205
+Steam turbine biomass solid conventional w_ CCS,"Fixed Operation and Maintenance costs, annually",EUR/kW,81.46728976937679,69.075035,63.01574606291292,61.374882
+Steam turbine biomass solid conventional w_ CCS,Variable non fuel cost,EUR/kW,5.994709958134008,5.914307012257762,5.822805566487087,5.803285465317417
+Steam turbine biomass solid conventional w_ CCS,"Electrical Efficiency (net) 
+in optimal load operation",ratio,0.2667106017191978,0.31000000000000005,0.315,0.32
+Steam turbine biomass solid conventional w_ CCS,Self Consumption of electricity,%,0.34255569615192494,0.2906413200542589,0.26583778480759596,0.2617999999999999
+Steam turbine biomass solid conventional w_ CCS,Technical lifetime,Years,40,40,40,40
+Biogas plant with heat recovery,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,500,465,457.5,450
+Biogas plant with heat recovery,"Fixed Operation and Maintenance costs, annually",EUR/kW,28.830223768024577,24.3403875,23.81848088898487,23.307765000000003
+Biogas plant with heat recovery,Variable non fuel cost,EUR/kW,2.5553281942273225,2.5553281942273225,2.5553281942273225,2.5553281942273225
+Biogas plant with heat recovery,"Electrical Efficiency (net) 
+in optimal load operation",ratio,0.37560975609756103,0.38048780487804884,0.38536585365853665,0.3873170731707317
+Biogas plant with heat recovery,Self Consumption of electricity,%,0.03,0.03,0.03,0.03
+Biogas plant with heat recovery,Technical lifetime,Years,25,25,25,25
+Small waste burning plant,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,1650,1615,1607.5,1600
+Small waste burning plant,"Fixed Operation and Maintenance costs, annually",EUR/kW,52.30576803139635,44.459902826686886,41.76280669403494,39.22932602354725
+Small waste burning plant,Variable non fuel cost,EUR/kW,0.8152983669164655,0.8152983669164655,0.8152983669164655,0.8152983669164655
+Small waste burning plant,"Electrical Efficiency (net) 
+in optimal load operation",ratio,0.33159104488859953,0.33589742209494494,0.34020379930129035,0.34192635018382855
+Small waste burning plant,Self Consumption of electricity,%,0.007824650842668885,0.007824650842668885,0.007824650842668885,0.007824650842668885
+Small waste burning plant,Technical lifetime,Years,20,20,20,20
+Biomass gasification CC,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,2650,2405,2352.5,2300
+Biomass gasification CC,"Fixed Operation and Maintenance costs, annually",EUR/kW,27.100410341943103,22.87996425,22.389372035645774,21.9092991
+Biomass gasification CC,Variable non fuel cost,EUR/kW,2.764618299843278,2.764618299843278,2.764618299843278,2.764618299843278
+Biomass gasification CC,"Electrical Efficiency (net) 
+in optimal load operation",ratio,0.37414728682170545,0.42712389380530974,0.4727228207639569,0.48264999999999997
+Biomass gasification CC,Self Consumption of electricity,%,0.09,0.09,0.09,0.09
+Biomass gasification CC,Technical lifetime,Years,30,30,30,30
+MBW incinerator CHP,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,3750,3225,3112.5,3000
+MBW incinerator CHP,"Fixed Operation and Maintenance costs, annually",EUR/kW,40.49756404211849,32.21397139713971,28.25625491120541,27.61197548326261
+MBW incinerator CHP,Variable non fuel cost,EUR/kW,2.8397922926577936,2.6454777627627255,2.4644593237916186,2.8397922926577936
+MBW incinerator CHP,"Electrical Efficiency (net) 
+in optimal load operation",ratio,0.30692829457364346,0.33717931404284185,0.3704118904264884,0.42233333333333334
+MBW incinerator CHP,Self Consumption of electricity,%,0.095,0.095,0.095,0.095
+MBW incinerator CHP,Technical lifetime,Years,35,35,35,35
+Nuclear III gen_ (incl_ economies of scale),"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,4800,4500,4500,4500
+Nuclear III gen_ (incl_ economies of scale),"Fixed Operation and Maintenance costs, annually",EUR/kW,120,115,108,105
+Nuclear III gen_ (incl_ economies of scale),Variable non fuel cost,EUR/kW,6.4,7.4,7.6,7.8
+Nuclear III gen_ (incl_ economies of scale),"Electrical Efficiency (net) 
+in optimal load operation",ratio,0.37999999999999995,0.37999999999999995,0.37999999999999995,0.37999999999999995
+Nuclear III gen_ (incl_ economies of scale),Self Consumption of electricity,%,0.053,0.053,0.053,0.053
+Nuclear III gen_ (incl_ economies of scale),Technical lifetime,Years,60,60,60,60
+Nuclear III gen_ (no economies of scale),"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,6000,6000,6000,6000
+Nuclear III gen_ (no economies of scale),"Fixed Operation and Maintenance costs, annually",EUR/kW,120,115,108,105
+Nuclear III gen_ (no economies of scale),Variable non fuel cost,EUR/kW,6.4,7.4,7.6,7.8
+Nuclear III gen_ (no economies of scale),"Electrical Efficiency (net) 
+in optimal load operation",ratio,0.37999999999999995,0.37999999999999995,0.37999999999999995,0.37999999999999995
+Nuclear III gen_ (no economies of scale),Self Consumption of electricity,%,0.053,0.053,0.053,0.053
+Nuclear III gen_ (no economies of scale),Technical lifetime,Years,60,60,60,60
+Refurbishment of existing nuclear reactors,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,1175,1175,1175,1175
+Fuel cell gas (large scale),"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,3500,3090.467743007158,2871.4908574423575,2668.0297061932297
+Fuel cell gas (large scale),"Fixed Operation and Maintenance costs, annually",EUR/kW,66.70074265483075,46.357016145107366,43.07236286163537,40.02044559289844
+Fuel cell gas (large scale),Variable non fuel cost,EUR/kW,1.041961338991042,1.041961338991042,1.041961338991042,1.041961338991042
+Fuel cell gas (large scale),"Electrical Efficiency (net) 
+in optimal load operation",ratio,0.6816451197056198,0.6828447752046699,0.6840465420271562,0.6852504238888841
+Fuel cell gas (large scale),Technical lifetime,Years,20,20,20,20
+Fuel cell gas (small scale),"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,3500,3090.467743007158,2871.4908574423575,2668.0297061932297
+Fuel cell gas (small scale),"Fixed Operation and Maintenance costs, annually",EUR/kW,66.70074265483075,46.357016145107366,43.07236286163537,40.02044559289844
+Fuel cell gas (small scale),Variable non fuel cost,EUR/kW,1.041961338991042,1.041961338991042,1.041961338991042,1.041961338991042
+Fuel cell gas (small scale),"Electrical Efficiency (net) 
+in optimal load operation",ratio,0.6816451197056198,0.6828447752046699,0.6840465420271562,0.6852504238888841
+Fuel cell gas (small scale),Technical lifetime,Years,20,20,20,20
+"Wind onshore - low resource area, high hub height","Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,1200,1175,1150,1100
+"Wind onshore - low resource area, high hub height","Fixed Operation and Maintenance costs, annually",EUR/kW,13,13,12,12
+"Wind onshore - low resource area, high hub height",Variable non fuel cost,EUR/kW,0.15,0.15,0.15,0.15
+"Wind onshore - low resource area, high hub height","Electrical Efficiency (net) 
+in optimal load operation",ratio,1,1,1,1
+"Wind onshore - low resource area, high hub height",Technical lifetime,Years,30,30,30,30
+"Wind onshore - medium resource area, medium height","Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,1050,1000,950,925
+"Wind onshore - medium resource area, medium height","Fixed Operation and Maintenance costs, annually",EUR/kW,14,14,12,12
+"Wind onshore - medium resource area, medium height",Variable non fuel cost,EUR/kW,0.18,0.18,0.18,0.18
+"Wind onshore - medium resource area, medium height","Electrical Efficiency (net) 
+in optimal load operation",ratio,1,1,1,1
+"Wind onshore - medium resource area, medium height",Technical lifetime,Years,30,30,30,30
+"Wind onshore - high resource area, medium height","Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,1000,950,900,880
+"Wind onshore - high resource area, medium height","Fixed Operation and Maintenance costs, annually",EUR/kW,22,21,20,20
+"Wind onshore - high resource area, medium height",Variable non fuel cost,EUR/kW,0.25,0.25,0.25,0.25
+"Wind onshore - high resource area, medium height","Electrical Efficiency (net) 
+in optimal load operation",ratio,1,1,1,1
+"Wind onshore - high resource area, medium height",Technical lifetime,Years,30,30,30,30
+"Wind onshore - very high resource area, low hub height","Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,940,880,845,825
+"Wind onshore - very high resource area, low hub height","Fixed Operation and Maintenance costs, annually",EUR/kW,18,18,16,16
+"Wind onshore - very high resource area, low hub height",Variable non fuel cost,EUR/kW,0.23,0.23,0.23,0.23
+"Wind onshore - very high resource area, low hub height","Electrical Efficiency (net) 
+in optimal load operation",ratio,1,1,1,1
+"Wind onshore - very high resource area, low hub height",Technical lifetime,Years,30,30,30,30
+"Wind-offshore - shallow waters, near-shore, low resource area","Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,1792.180633688424,1650.346035752734,1577.4474769598644,1503.0749999999998
+"Wind-offshore - shallow waters, near-shore, low resource area","Fixed Operation and Maintenance costs, annually",EUR/kW,33,27,26,26
+"Wind-offshore - shallow waters, near-shore, low resource area",Variable non fuel cost,EUR/kW,0.393,0.393,0.393,0.393
+"Wind-offshore - shallow waters, near-shore, low resource area","Electrical Efficiency (net) 
+in optimal load operation",ratio,1,1,1,1
+"Wind-offshore - shallow waters, near-shore, low resource area",Technical lifetime,Years,30,30,30,30
+"Wind-offshore - shallow waters, near-shore, high resource area","Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,1750.2775724402827,1592.886787486415,1512.7317808895364,1431.5
+"Wind-offshore - shallow waters, near-shore, high resource area","Fixed Operation and Maintenance costs, annually",EUR/kW,33,27,26,26
+"Wind-offshore - shallow waters, near-shore, high resource area",Variable non fuel cost,EUR/kW,0.393,0.393,0.393,0.393
+"Wind-offshore - shallow waters, near-shore, high resource area","Electrical Efficiency (net) 
+in optimal load operation",ratio,1,1,1,1
+"Wind-offshore - shallow waters, near-shore, high resource area",Technical lifetime,Years,30,30,30,30
+"Wind-offshore - shallow waters, distant from shore, low resource area","Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,2000.8461727803615,1897.5580286028935,1843.241076902564,1786.8935847643133
+"Wind-offshore - shallow waters, distant from shore, low resource area","Fixed Operation and Maintenance costs, annually",EUR/kW,42,31,29,28
+"Wind-offshore - shallow waters, distant from shore, low resource area",Variable non fuel cost,EUR/kW,0.393,0.393,0.393,0.393
+"Wind-offshore - shallow waters, distant from shore, low resource area","Electrical Efficiency (net) 
+in optimal load operation",ratio,1,1,1,1
+"Wind-offshore - shallow waters, distant from shore, low resource area",Technical lifetime,Years,30,30,30,30
+"Wind-offshore - shallow waters, distant from shore, high resource area","Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,1975.8653897233535,1873.8668093100368,1820.2280106857424,1764.5840231427285
+"Wind-offshore - shallow waters, distant from shore, high resource area","Fixed Operation and Maintenance costs, annually",EUR/kW,42,31,29,28
+"Wind-offshore - shallow waters, distant from shore, high resource area",Variable non fuel cost,EUR/kW,0.393,0.393,0.393,0.393
+"Wind-offshore - shallow waters, distant from shore, high resource area","Electrical Efficiency (net) 
+in optimal load operation",ratio,1,1,1,1
+"Wind-offshore - shallow waters, distant from shore, high resource area",Technical lifetime,Years,30,30,30,30
+"Wind-offshore - deep waters, near-shore, low resource area","Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,2552.204843329653,2406.2418022607303,2329.8336067759824,2250.833103448276
+"Wind-offshore - deep waters, near-shore, low resource area","Fixed Operation and Maintenance costs, annually",EUR/kW,48,37,35,34
+"Wind-offshore - deep waters, near-shore, low resource area",Variable non fuel cost,EUR/kW,0.393,0.393,0.393,0.393
+"Wind-offshore - deep waters, near-shore, low resource area","Electrical Efficiency (net) 
+in optimal load operation",ratio,1,1,1,1
+"Wind-offshore - deep waters, near-shore, low resource area",Technical lifetime,Years,30,30,30,30
+"Wind-offshore - deep waters, near-shore, high resource area","Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,2420.0704747819173,2295.1410366674627,2229.4434068954247,2161.28979073697
+"Wind-offshore - deep waters, near-shore, high resource area","Fixed Operation and Maintenance costs, annually",EUR/kW,48,37,35,34
+"Wind-offshore - deep waters, near-shore, high resource area",Variable non fuel cost,EUR/kW,0.393,0.393,0.393,0.393
+"Wind-offshore - deep waters, near-shore, high resource area","Electrical Efficiency (net) 
+in optimal load operation",ratio,1,1,1,1
+"Wind-offshore - deep waters, near-shore, high resource area",Technical lifetime,Years,30,30,30,30
+"Wind-offshore - deep waters, distant from shore, low resource area","Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,2600.9966702997367,2466.727418249383,2396.118186797537,2322.8693576645746
+"Wind-offshore - deep waters, distant from shore, low resource area","Fixed Operation and Maintenance costs, annually",EUR/kW,55,43,40,39
+"Wind-offshore - deep waters, distant from shore, low resource area",Variable non fuel cost,EUR/kW,0.393,0.393,0.393,0.393
+"Wind-offshore - deep waters, distant from shore, low resource area","Electrical Efficiency (net) 
+in optimal load operation",ratio,1,1,1,1
+"Wind-offshore - deep waters, distant from shore, low resource area",Technical lifetime,Years,30,30,30,30
+"Wind-offshore - deep waters, distant from shore, high resource area","Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,2477.1396859997494,2349.264207856555,2282.0173207595585,2212.2565311091184
+"Wind-offshore - deep waters, distant from shore, high resource area","Fixed Operation and Maintenance costs, annually",EUR/kW,55,43,40,39
+"Wind-offshore - deep waters, distant from shore, high resource area",Variable non fuel cost,EUR/kW,0.393,0.393,0.393,0.393
+"Wind-offshore - deep waters, distant from shore, high resource area","Electrical Efficiency (net) 
+in optimal load operation",ratio,1,1,1,1
+"Wind-offshore - deep waters, distant from shore, high resource area",Technical lifetime,Years,30,30,30,30
+Solar PV - residential - low resource area,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,654.15,551.25,529.2,507.15000000000003
+Solar PV - residential - low resource area,"Fixed Operation and Maintenance costs, annually",EUR/kW,18.99,14.918903999999998,11.128223105999998,8.990918900963997
+Solar PV - residential - low resource area,Variable non fuel cost,EUR/kW,0,0,0,0
+Solar PV - residential - low resource area,"Electrical Efficiency (net) 
+in optimal load operation",ratio,1,1,1,1
+Solar PV - residential - low resource area,Technical lifetime,Years,30,30,30,30
+Solar PV - residential - medium resource area,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,644.805,543.375,521.64,499.905
+Solar PV - residential - medium resource area,"Fixed Operation and Maintenance costs, annually",EUR/kW,18.99,14.918903999999998,11.128223105999998,8.990918900963997
+Solar PV - residential - medium resource area,Variable non fuel cost,EUR/kW,0,0,0,0
+Solar PV - residential - medium resource area,"Electrical Efficiency (net) 
+in optimal load operation",ratio,1,1,1,1
+Solar PV - residential - medium resource area,Technical lifetime,Years,30,30,30,30
+Solar PV - residential - high resource area,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,635.46,535.5,514.08,492.66
+Solar PV - residential - high resource area,"Fixed Operation and Maintenance costs, annually",EUR/kW,18.99,14.918903999999998,11.128223105999998,8.990918900963997
+Solar PV - residential - high resource area,Variable non fuel cost,EUR/kW,0,0,0,0
+Solar PV - residential - high resource area,"Electrical Efficiency (net) 
+in optimal load operation",ratio,1,1,1,1
+Solar PV - residential - high resource area,Technical lifetime,Years,30,30,30,30
+Solar PV - residential - very high resource area,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,623,525,504,483
+Solar PV - residential - very high resource area,"Fixed Operation and Maintenance costs, annually",EUR/kW,18.99,14.918903999999998,11.128223105999998,8.990918900963997
+Solar PV - residential - very high resource area,Variable non fuel cost,EUR/kW,0,0,0,0
+Solar PV - residential - very high resource area,"Electrical Efficiency (net) 
+in optimal load operation",ratio,1,1,1,1
+Solar PV - residential - very high resource area,Technical lifetime,Years,30,30,30,30
+Solar PV - commercial and industrial - low resource area,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,536.55,469.8211875,455.52215625,441.22312500000004
+Solar PV - commercial and industrial - low resource area,"Fixed Operation and Maintenance costs, annually",EUR/kW,16.9345,13.689675999999999,10.325820705199996,8.529788271254247
+Solar PV - commercial and industrial - low resource area,Variable non fuel cost,EUR/kW,0,0,0,0
+Solar PV - commercial and industrial - low resource area,"Electrical Efficiency (net) 
+in optimal load operation",ratio,1,1,1,1
+Solar PV - commercial and industrial - low resource area,Technical lifetime,Years,30,30,30,30
+Solar PV - commercial and industrial - medium resource area,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,528.885,463.10945625,449.01469687499997,434.9199375
+Solar PV - commercial and industrial - medium resource area,"Fixed Operation and Maintenance costs, annually",EUR/kW,16.9345,13.689675999999999,10.325820705199996,8.529788271254247
+Solar PV - commercial and industrial - medium resource area,Variable non fuel cost,EUR/kW,0,0,0,0
+Solar PV - commercial and industrial - medium resource area,"Electrical Efficiency (net) 
+in optimal load operation",ratio,1,1,1,1
+Solar PV - commercial and industrial - medium resource area,Technical lifetime,Years,30,30,30,30
+Solar PV - commercial and industrial - high resource area,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,521.22,456.39772500000004,442.50723750000003,428.61675
+Solar PV - commercial and industrial - high resource area,"Fixed Operation and Maintenance costs, annually",EUR/kW,16.9345,13.689675999999999,10.325820705199996,8.529788271254247
+Solar PV - commercial and industrial - high resource area,Variable non fuel cost,EUR/kW,0,0,0,0
+Solar PV - commercial and industrial - high resource area,"Electrical Efficiency (net) 
+in optimal load operation",ratio,1,1,1,1
+Solar PV - commercial and industrial - high resource area,Technical lifetime,Years,30,30,30,30
+Solar PV - commercial and industrial - very high resource area,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,510.99999999999994,447.44875,433.83062500000005,420.21250000000003
+Solar PV - commercial and industrial - very high resource area,"Fixed Operation and Maintenance costs, annually",EUR/kW,16.9345,13.689675999999999,10.325820705199996,8.529788271254247
+Solar PV - commercial and industrial - very high resource area,Variable non fuel cost,EUR/kW,0,0,0,0
+Solar PV - commercial and industrial - very high resource area,"Electrical Efficiency (net) 
+in optimal load operation",ratio,1,1,1,1
+Solar PV - commercial and industrial - very high resource area,Technical lifetime,Years,30,30,30,30
+Solar PV - utility-scale - low resource area,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,478.48499999999996,400.25649999999996,383.49325,366.72999999999996
+Solar PV - utility-scale - low resource area,"Fixed Operation and Maintenance costs, annually",EUR/kW,15.015,12.570558,9.532035512999999,8.206169352981597
+Solar PV - utility-scale - low resource area,Variable non fuel cost,EUR/kW,0,0,0,0
+Solar PV - utility-scale - low resource area,"Electrical Efficiency (net) 
+in optimal load operation",ratio,1,1,1,1
+Solar PV - utility-scale - low resource area,Technical lifetime,Years,30,30,30,30
+Solar PV - utility-scale - medium resource area,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,463.04999999999995,387.345,371.12250000000006,354.90000000000003
+Solar PV - utility-scale - medium resource area,"Fixed Operation and Maintenance costs, annually",EUR/kW,15.015,12.570558,9.532035512999999,8.206169352981597
+Solar PV - utility-scale - medium resource area,Variable non fuel cost,EUR/kW,0,0,0,0
+Solar PV - utility-scale - medium resource area,"Electrical Efficiency (net) 
+in optimal load operation",ratio,1,1,1,1
+Solar PV - utility-scale - medium resource area,Technical lifetime,Years,30,30,30,30
+Solar PV - utility-scale - high resource area,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,454.22999999999996,379.967,364.0535,348.14
+Solar PV - utility-scale - high resource area,"Fixed Operation and Maintenance costs, annually",EUR/kW,15.015,12.570558,9.532035512999999,8.206169352981597
+Solar PV - utility-scale - high resource area,Variable non fuel cost,EUR/kW,0,0,0,0
+Solar PV - utility-scale - high resource area,"Electrical Efficiency (net) 
+in optimal load operation",ratio,1,1,1,1
+Solar PV - utility-scale - high resource area,Technical lifetime,Years,30,30,30,30
+Solar PV - utility-scale - very high resource area,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,441,368.9,353.45,338
+Solar PV - utility-scale - very high resource area,"Fixed Operation and Maintenance costs, annually",EUR/kW,15.015,12.570558,9.532035512999999,8.206169352981597
+Solar PV - utility-scale - very high resource area,Variable non fuel cost,EUR/kW,0,0,0,0
+Solar PV - utility-scale - very high resource area,"Electrical Efficiency (net) 
+in optimal load operation",ratio,1,1,1,1
+Solar PV - utility-scale - very high resource area,Technical lifetime,Years,30,30,30,30
+Solar thermal with 8 hours storage,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,3150,2625,2512.5,2400
+Solar thermal with 8 hours storage,"Fixed Operation and Maintenance costs, annually",EUR/kW,112.5,99.12326550292967,87.33708234634922,76.95232712594138
+Solar thermal with 8 hours storage,Variable non fuel cost,EUR/kW,0.1,0.1,0.1,0.1
+Solar thermal with 8 hours storage,"Electrical Efficiency (net) 
+in optimal load operation",ratio,1,1,1,1
+Solar thermal with 8 hours storage,Technical lifetime,Years,25,25,25,25
+Tidal and waves,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,4270,2663.5,2319.25,1975
+Tidal and waves,"Fixed Operation and Maintenance costs, annually",EUR/kW,39.63734087694484,33.31353135313532,28.006977840641213,23.536067892503535
+Tidal and waves,Variable non fuel cost,EUR/kW,0.10404896421845573,0.10404896421845573,0.10404896421845573,0.10404896421845573
+Tidal and waves,"Electrical Efficiency (net) 
+in optimal load operation",ratio,1,1,1,1
+Tidal and waves,Technical lifetime,Years,80,80,80,80
+Lakes,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,2100,2100,2100,2100
+Lakes,"Fixed Operation and Maintenance costs, annually",EUR/kW,25.500000000000004,25.500000000000004,25.500000000000004,25.500000000000004
+Lakes,Variable non fuel cost,EUR/kW,0.3216665577603118,0.3216665577603118,0.3216665577603118,0.3216665577603118
+Lakes,"Electrical Efficiency (net) 
+in optimal load operation",ratio,1,1,1,1
+Lakes,Technical lifetime,Years,60,60,60,60
+Run of river,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,1715,1669.5,1659.75,1650
+Run of river,"Fixed Operation and Maintenance costs, annually",EUR/kW,8.916689514449038,8.206539603960396,8.170387271328714,8.134394200848655
+Run of river,Variable non fuel cost,EUR/kW,0,0,0,0
+Run of river,"Electrical Efficiency (net) 
+in optimal load operation",ratio,1,1,1,1
+Run of river,Technical lifetime,Years,50,50,50,50
+Geothermal high enthalpy,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,3383,2661.09,2506.395,2351.7000000000003
+Geothermal high enthalpy,"Fixed Operation and Maintenance costs, annually",EUR/kW,110,95,100,105
+Geothermal high enthalpy,Variable non fuel cost,EUR/kW,0.13,0.13,0.13,0.13
+Geothermal high enthalpy,"Electrical Efficiency (net) 
+in optimal load operation",ratio,0.1,0.1,0.1,0.1
+Geothermal high enthalpy,Technical lifetime,Years,35,35,35,35
+Geothermal medium enthalpy,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,3131,2952.08,2913.74,2875.4
+Geothermal medium enthalpy,"Fixed Operation and Maintenance costs, annually",EUR/kW,95,95,92,92
+Geothermal medium enthalpy,Variable non fuel cost,EUR/kW,0.11,0.11,0.11,0.11
+Geothermal medium enthalpy,"Electrical Efficiency (net) 
+in optimal load operation",ratio,0.1,0.1,0.1,0.1
+Geothermal medium enthalpy,Technical lifetime,Years,30,30,30,30
+Boilers electricity,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,679,658.7,654.35,650
+Boilers electricity,"Fixed Operation and Maintenance costs, annually",EUR/kW,10,10,10,10
+Boilers electricity,Variable non fuel cost,EUR/kW,0.7,0.7,0.7,0.7
+Boilers electricity,"Electrical Efficiency (net) 
+in optimal load operation",ratio,1,1,1,1
+Boilers electricity,Technical lifetime,Years,25,25,25,25
+District heating boilers gas,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,137.1455435597424,158.24485795354894,158.24485795354894,158.24485795354894
+District heating boilers gas,"Fixed Operation and Maintenance costs, annually",EUR/kW,1.2062814536326172,1.2062814536326172,1.2062814536326172,1.2062814536326172
+District heating boilers gas,Variable non fuel cost,EUR/kW,0.442,0.442,0.442,0.442
+District heating boilers gas,"Electrical Efficiency (net) 
+in optimal load operation",ratio,0.8856509438851183,0.96,0.96,0.96
+District heating boilers gas,Technical lifetime,Years,25,25,25,25
+District heating boilers fuel oil,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,228.57590593290402,263.7414299225816,263.7414299225816,263.7414299225816
+District heating boilers fuel oil,"Fixed Operation and Maintenance costs, annually",EUR/kW,1.272626933582411,1.272626933582411,1.272626933582411,1.272626933582411
+District heating boilers fuel oil,Variable non fuel cost,EUR/kW,0.5304,0.5304,0.5304,0.5304
+District heating boilers fuel oil,"Electrical Efficiency (net) 
+in optimal load operation",ratio,0.8561271151223773,0.9500000000000001,0.9500000000000001,0.9500000000000001
+District heating boilers fuel oil,Technical lifetime,Years,25,25,25,25
+District heating boilers biomass,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,791.1680374212698,912.8861970245421,912.8861970245421,912.8861970245421
+District heating boilers biomass,"Fixed Operation and Maintenance costs, annually",EUR/kW,1.3269095989958792,1.3269095989958792,1.3269095989958792,1.3269095989958792
+District heating boilers biomass,Variable non fuel cost,EUR/kW,1.4144,1.4144,1.4144,1.4144
+District heating boilers biomass,"Electrical Efficiency (net) 
+in optimal load operation",ratio,0.8165510347608769,0.8999999999999999,0.8999999999999999,0.8999999999999999
+District heating boilers biomass,Technical lifetime,Years,25,25,25,25
+District heating boilers coal,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,351.1127694411092,405.1301185858952,405.1301185858952,405.1301185858952
+District heating boilers coal,"Fixed Operation and Maintenance costs, annually",EUR/kW,1.3269095989958792,1.3269095989958792,1.3269095989958792,1.3269095989958792
+District heating boilers coal,Variable non fuel cost,EUR/kW,1.4144,1.4144,1.4144,1.4144
+District heating boilers coal,"Electrical Efficiency (net) 
+in optimal load operation",ratio,0.8165510347608769,0.8999999999999999,0.8999999999999999,0.8999999999999999
+District heating boilers coal,Technical lifetime,Years,25,25,25,25
+District heating boilers lignite,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,418.9413726285962,483.39389149453405,483.39389149453405,483.39389149453405
+District heating boilers lignite,"Fixed Operation and Maintenance costs, annually",EUR/kW,1.4173807080183254,1.4173807080183254,1.4173807080183254,1.4173807080183254
+District heating boilers lignite,Variable non fuel cost,EUR/kW,1.5691,1.5691,1.5691,1.5691
+District heating boilers lignite,"Electrical Efficiency (net) 
+in optimal load operation",ratio,0.7872254274854784,0.8999999999999999,0.8999999999999999,0.8999999999999999
+District heating boilers lignite,Technical lifetime,Years,25,25,25,25
+MBW incinerator district heating,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,961.0041300518208,948.2570045496591,935.6789617844876,923.2677589783602
+MBW incinerator district heating,"Fixed Operation and Maintenance costs, annually",EUR/kW,16.594497579619034,16.157185782121307,15.731398383437888,15.316831683168314
+MBW incinerator district heating,Variable non fuel cost,EUR/kW,1.4144,1.4144,1.4144,1.4144
+MBW incinerator district heating,"Electrical Efficiency (net) 
+in optimal load operation",ratio,0.8165510347608769,0.8999999999999999,0.8999999999999999,0.8999999999999999
+MBW incinerator district heating,Technical lifetime,Years,35,35,35,35
+District heating electricity,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,850.0000000000001,850.0000000000001,850.0000000000001,850.0000000000001
+District heating electricity,"Fixed Operation and Maintenance costs, annually",EUR/kW,1.1,1.1,1.1,1.1
+District heating electricity,Variable non fuel cost,EUR/kW,0.5,0.5,0.5,0.5
+District heating electricity,"Electrical Efficiency (net) 
+in optimal load operation",ratio,0.99,0.99,0.99,0.99
+District heating electricity,Technical lifetime,Years,20,20,20,20
+District heating geothermal,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,1625,1537.5,1518.75,1500
+District heating geothermal,"Fixed Operation and Maintenance costs, annually",EUR/kW,77.79231040564373,80.43548886138615,88.66126853972474,97.56233977192362
+District heating geothermal,Variable non fuel cost,EUR/kW,1.1374174867456865,1.2223329194891848,1.353297160863026,1.4957494935854498
+District heating geothermal,"Electrical Efficiency (net) 
+in optimal load operation",ratio,0.1,0.1,0.1,0.1
+District heating geothermal,Technical lifetime,Years,25,25,25,25
+District heating heat pump,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,2113,2033.9,2016.95,2000
+District heating heat pump,"Fixed Operation and Maintenance costs, annually",EUR/kW,5,3.7,3.7,3.7
+District heating heat pump,Variable non fuel cost,EUR/kW,0,0,0,0
+District heating heat pump,"Electrical Efficiency (net) 
+in optimal load operation",ratio,2.5,3.3333333333333335,3.3333333333333335,3.3333333333333335
+District heating heat pump,Technical lifetime,Years,20,20,20,20
+District heating solar,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,700,650,600,500
+District heating solar,"Fixed Operation and Maintenance costs, annually",EUR/kW,10,10,10,10
+District heating solar,Variable non fuel cost,EUR/kW,0.7,0.7,0.7,0.7
+District heating solar,"Electrical Efficiency (net) 
+in optimal load operation",ratio,1,1,1,1
+District heating solar,Technical lifetime,Years,25,25,25,25
+Industrial boilers coal,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,340.30929961215196,372.7197090990236,372.7197090990236,372.7197090990236
+Industrial boilers coal,"Fixed Operation and Maintenance costs, annually",EUR/kW,1.3269095989958792,1.3269095989958792,1.3269095989958792,1.3269095989958792
+Industrial boilers coal,Variable non fuel cost,EUR/kW,1.4144,1.4144,1.4144,1.4144
+Industrial boilers coal,"Electrical Efficiency (net) 
+in optimal load operation",ratio,0.8246838420626502,0.92,0.92,0.92
+Industrial boilers coal,Technical lifetime,Years,25,25,25,25
+Industrial boilers lignite,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,406.05086885540857,444.72238017497125,444.72238017497125,444.72238017497125
+Industrial boilers lignite,"Fixed Operation and Maintenance costs, annually",EUR/kW,1.4173807080183254,1.4173807080183254,1.4173807080183254,1.4173807080183254
+Industrial boilers lignite,Variable non fuel cost,EUR/kW,1.5691,1.5691,1.5691,1.5691
+Industrial boilers lignite,"Electrical Efficiency (net) 
+in optimal load operation",ratio,0.7947818585038162,0.92,0.92,0.92
+Industrial boilers lignite,Technical lifetime,Years,25,25,25,25
+Industrial boilers gas,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,113.55184290874408,124.36630413814827,124.36630413814827,124.36630413814827
+Industrial boilers gas,"Fixed Operation and Maintenance costs, annually",EUR/kW,1.2062814536326172,1.2062814536326172,1.2062814536326172,1.2062814536326172
+Industrial boilers gas,Variable non fuel cost,EUR/kW,0.442,0.442,0.442,0.442
+Industrial boilers gas,"Electrical Efficiency (net) 
+in optimal load operation",ratio,0.8940675228123697,0.98,0.98,0.98
+Industrial boilers gas,Technical lifetime,Years,25,25,25,25
+Industrial boilers fuel oil,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,221.54280113496853,242.64211552877504,242.64211552877504,242.64211552877504
+Industrial boilers fuel oil,"Fixed Operation and Maintenance costs, annually",EUR/kW,1.272626933582411,1.272626933582411,1.272626933582411,1.272626933582411
+Industrial boilers fuel oil,Variable non fuel cost,EUR/kW,0.5304,0.5304,0.5304,0.5304
+Industrial boilers fuel oil,"Electrical Efficiency (net) 
+in optimal load operation",ratio,0.8601644512527603,0.96,0.96,0.96
+Industrial boilers fuel oil,Technical lifetime,Years,20,20,20,20
+Industrial boilers biomass,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,736.8071926315503,806.9793062155074,806.9793062155074,806.9793062155074
+Industrial boilers biomass,"Fixed Operation and Maintenance costs, annually",EUR/kW,1.3269095989958792,1.3269095989958792,1.3269095989958792,1.3269095989958792
+Industrial boilers biomass,Variable non fuel cost,EUR/kW,1.4144,1.4144,1.4144,1.4144
+Industrial boilers biomass,"Electrical Efficiency (net) 
+in optimal load operation",ratio,0.8165510347608769,0.8999999999999999,0.8999999999999999,0.8999999999999999
+Industrial boilers biomass,Technical lifetime,Years,25,25,25,25
+Biomass fired organic rankine cycle,"Overnight Investment Costs in a greenfield site, 
+excluding financial costs during construction time",EUR/kW,2700,2430,2295,2295
+Biomass fired organic rankine cycle,"Fixed Operation and Maintenance costs, annually",EUR/kW,64.08084118865868,54.101297249999995,52.94125718493244,51.806090700000006
+Biomass fired organic rankine cycle,Variable non fuel cost,EUR/kW,4.808037207446809,4.808037207446809,4.808037207446809,4.808037207446809
+Biomass fired organic rankine cycle,"Electrical Efficiency (net) 
+in optimal load operation",ratio,0.13,0.14,0.145,0.15
+Biomass fired organic rankine cycle,Self Consumption of electricity,%,0.095,0.095,0.095,0.095
+Biomass fired organic rankine cycle,Technical lifetime,Years,20,20,20,20
