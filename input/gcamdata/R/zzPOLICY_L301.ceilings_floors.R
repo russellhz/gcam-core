@@ -25,8 +25,23 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
              "L2233.GlobalTechEff_elec_cool",
              "L222.GlobalTechCoef_en",
              "L201.GDP_Scen",
-             FILE = "policy/A_OutputsByTech"
-    ))
+             FILE = "policy/A_OutputsByTech",
+             "L221.StubTech_en",
+             "L222.StubTech_en",
+             "L224.StubTech_heat",
+             "L223.StubTech_elec",
+             "L2233.StubTech_elec_cool",
+             "L226.StubTech_en",
+             "L232.StubTech_ind",
+             "L2321.StubTech_cement",
+             "L2322.StubTech_Fert",
+             "L2323.StubTech_iron_steel",
+             "L2324.StubTech_Off_road",
+             "L2325.StubTech_chemical",
+             "L2326.StubTech_aluminum",
+             "L244.StubTech_bld",
+             "L225.StubTech_h2",
+             "L239.PrimaryConsKeyword_en") )
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(c("L301.policy_port_stnd",
              "L301.policy_RES_coefs",
@@ -59,7 +74,28 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
     A_OutputsByTech <- get_data(all_data, "policy/A_OutputsByTech") %>%
       gather_years()
 
-    # 1a. Perform any gdp intensity calculations, if needed
+    L301.StubTech_All <- bind_rows(get_data(all_data, "L221.StubTech_en"),
+                                    get_data(all_data, "L222.StubTech_en"),
+                                   get_data(all_data, "L223.StubTech_elec"),
+                                    get_data(all_data, "L2233.StubTech_elec_cool"),
+                                    get_data(all_data, "L224.StubTech_heat"),
+                                    get_data(all_data, "L225.StubTech_h2"),
+                                    get_data(all_data, "L226.StubTech_en"),
+                                    get_data(all_data, "L232.StubTech_ind"),
+                                    get_data(all_data, "L2321.StubTech_cement"),
+                                    get_data(all_data, "L2322.StubTech_Fert"),
+                                    get_data(all_data, "L2323.StubTech_iron_steel"),
+                                    get_data(all_data, "L2324.StubTech_Off_road"),
+                                    get_data(all_data, "L2325.StubTech_chemical"),
+                                    get_data(all_data, "L2326.StubTech_aluminum"),
+                                    get_data(all_data, "L244.StubTech_bld"),
+                                    get_data(all_data, "L239.PrimaryConsKeyword_en") %>%
+                                     select(-primary.consumption, -year) %>%
+                                     distinct() %>%
+                                     rename(stub.technology = technology)
+                                   )
+
+    # 1a. Perform any gdp intensity calculations, if needed -------------------
     if (any(!is.na(A_energy_constraints$GDPIntensity_BaseYear))){
       GDP_Intensity_targets <- A_energy_constraints %>%
         filter(!is.na(GDPIntensity_BaseYear))
@@ -104,7 +140,7 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
 
     }
 
-    # 1b. Extend targets to all desired years
+    # 1b. Extend targets to all desired years --------------------
     # Filter out NA years and interpolate between non-NA years
     L301.ceilings_floors_NA <- A_renewable_energy_standards %>%  filter(variable == "input-coefficient") %>% select(-variable) %>%
       bind_rows(A_energy_constraints) %>%
@@ -138,7 +174,22 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
       left_join(policy_tech_mappings, by = "tech_mapping") %>%
       select(region, market, policy.portfolio.standard, policyType, supplysector, subsector, stub.technology, year, constraint)
 
-    # 2. Create policy portfolio standard tables
+    # Need to drop techs that don't exist, write them out here
+    tech_remove <- L301.ceilings_floors %>%
+      anti_join(L301.StubTech_All, by = c("region", "supplysector", "subsector", "stub.technology")) %>%
+      distinct(region, supplysector, subsector, stub.technology)
+
+    if (nrow(tech_remove) > 0){
+      print("Constraint removed for the following sectors:")
+      for(i in 1:nrow(tech_remove)){
+        print(paste(tech_remove[i,], collapse = "---"))
+      }
+      L301.ceilings_floors <- L301.ceilings_floors %>%
+        anti_join(tech_remove, by = c("region", "supplysector", "subsector", "stub.technology"))
+    }
+
+
+    # 2. Create policy portfolio standard tables --------------------
     L301.policy_port_stnd <- L301.ceilings_floors %>%
       mutate(constraint = if_else(policyType == "RES",
                                   1,
@@ -146,14 +197,14 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
       select(LEVEL2_DATA_NAMES[["PortfolioStdConstraint"]]) %>%
       distinct()
 
-    # 3. Create RES coefficient tables
+    # 3. Create RES coefficient tables --------------------
     L301.policy_RES_coefs <- L301.ceilings_floors %>%
       filter(policyType  == "RES") %>%
       select(-market) %>%
       rename(minicam.energy.input = policy.portfolio.standard,
              coefficient = constraint)
 
-    # 4. Create secondary output tables - interpolate between years
+    # 4. Create secondary output tables - interpolate between years --------------------
     L301.RES_secout <- A_renewable_energy_standards %>%
       select(- variable, -tech_mapping, -xml, -market) %>%
       tidyr::pivot_longer(cols = c(sec.out.1, sec.out.elecloss, sec.out.fosconv), names_to = "sec_out_type", values_to = "tech_mapping") %>%
@@ -163,6 +214,20 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
       # Default output is always 1
       # If that changes we'll need to rethink this part
       repeat_add_columns(tibble(year = seq(2015, 2100, 5), output.ratio = 1))
+
+    # Need to drop techs that don't exist, write them out here
+    tech_remove <- L301.RES_secout %>%
+      anti_join(L301.StubTech_All, by = c("region", "supplysector", "subsector", "stub.technology")) %>%
+      distinct(region, supplysector, subsector, stub.technology)
+
+    if (nrow(tech_remove) > 0){
+      print("Secondary output removed for the following sectors:")
+      for(i in 1:nrow(tech_remove)){
+        print(paste(tech_remove[i,], collapse = "---"))
+      }
+      L301.RES_secout <- L301.RES_secout %>%
+        anti_join(tech_remove, by = c("region", "supplysector", "subsector", "stub.technology"))
+    }
 
     # Calculate electricity losses if specified
     secout_elec_losses <- L301.RES_secout %>%
@@ -254,23 +319,21 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
     L301.RES_secout <- L301.RES_secout %>%
       select(region, res.secondary.output, supplysector, subsector, stub.technology, year, output.ratio)
 
-    # 5. Create input tax tables - apply to all model years because of vintages
-    L301.input_tax <- A_energy_constraints %>%
-      filter(policyType == "tax") %>%
-      distinct(region, input.tax  = policy.portfolio.standard, tech_mapping) %>%
-      repeat_add_columns(tibble(year = c(MODEL_FINAL_BASE_YEAR, MODEL_FUTURE_YEARS))) %>%
-      left_join(policy_tech_mappings, by = "tech_mapping") %>%
-      select(-tech_mapping)
+    # 5. Create input tax tables - apply to all model years because of vintages --------------------
+    L301.input_tax <- L301.ceilings_floors %>%
+      semi_join(A_energy_constraints %>% filter(policyType == "tax"),
+                by = c("region", "market", "policy.portfolio.standard", "policyType")) %>%
+      distinct(region, input.tax = policy.portfolio.standard, supplysector, subsector, stub.technology) %>%
+      repeat_add_columns(tibble(year = c(MODEL_FINAL_BASE_YEAR, MODEL_FUTURE_YEARS)))
 
-    # 6. Create input subsidy tables - apply to all model years because of vintages
-    L301.input_subsidy <- A_energy_constraints %>%
-      filter(policyType == "subsidy") %>%
-      distinct(region, input.subsidy  = policy.portfolio.standard, tech_mapping) %>%
-      repeat_add_columns(tibble(year = c(MODEL_FINAL_BASE_YEAR, MODEL_FUTURE_YEARS))) %>%
-      left_join(policy_tech_mappings, by = "tech_mapping") %>%
-      select(-tech_mapping)
+    # 6. Create input subsidy tables - apply to all model years because of vintages --------------------
+    L301.input_subsidy <- L301.ceilings_floors %>%
+      semi_join(A_energy_constraints %>% filter(policyType == "subsidy"),
+                by = c("region", "market", "policy.portfolio.standard", "policyType")) %>%
+      distinct(region, input.subsidy = policy.portfolio.standard, supplysector, subsector, stub.technology) %>%
+      repeat_add_columns(tibble(year = c(MODEL_FINAL_BASE_YEAR, MODEL_FUTURE_YEARS)))
 
-    # 7. Add price multipliers
+    # 7. Add price multipliers --------------------
     L301.pmultiplier <- A_renewable_energy_standards %>%
       filter(variable == "pMultiplier") %>%
       gather_years(value_col = "pMultiplier") %>%
@@ -285,7 +348,7 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
       left_join(policy_tech_mappings, by = "tech_mapping") %>%
       select(region, supplysector, subsector, stub.technology, res.secondary.output = policy.portfolio.standard, pMultiplier, year)
 
-    # 8. Make mapping of policies to xml file names
+    # 8. Make mapping of policies to xml file names --------------------
     L301.XML_policy_map <- distinct(A_energy_constraints, xml, policy.portfolio.standard, market) %>%
       bind_rows(distinct(A_renewable_energy_standards, xml, policy.portfolio.standard, market)) %>%
       mutate(xml = if_else(grepl(".xml", xml), xml, paste0(xml, ".xml")))

@@ -26,6 +26,7 @@ module_policy_L3221.CCap <- function(command, ...) {
              "L221.StubTech_en",
              "L222.StubTech_en",
              "L224.StubTech_heat",
+             "L223.StubTech_elec",
              "L2233.StubTech_elec_cool",
              "L226.StubTech_en",
              "L232.StubTech_ind",
@@ -36,6 +37,8 @@ module_policy_L3221.CCap <- function(command, ...) {
              "L2325.StubTech_chemical",
              "L2326.StubTech_aluminum",
              "L244.StubTech_bld",
+             "L225.StubTech_h2",
+             "L239.PrimaryConsKeyword_en",
              "L254.StubTranTech",
              "L201.GDP_Scen"
              ))
@@ -65,8 +68,10 @@ module_policy_L3221.CCap <- function(command, ...) {
 
     L3221.StubTech_All <- bind_rows(get_data(all_data, "L221.StubTech_en"),
                                     get_data(all_data, "L222.StubTech_en"),
+                                    get_data(all_data, "L223.StubTech_elec"),
                                     get_data(all_data, "L2233.StubTech_elec_cool"),
                                     get_data(all_data, "L224.StubTech_heat"),
+                                    get_data(all_data, "L225.StubTech_h2"),
                                     get_data(all_data, "L226.StubTech_en"),
                                     get_data(all_data, "L232.StubTech_ind"),
                                     get_data(all_data, "L2321.StubTech_cement"),
@@ -75,8 +80,12 @@ module_policy_L3221.CCap <- function(command, ...) {
                                     get_data(all_data, "L2324.StubTech_Off_road"),
                                     get_data(all_data, "L2325.StubTech_chemical"),
                                     get_data(all_data, "L2326.StubTech_aluminum"),
-                                    get_data(all_data, "L244.StubTech_bld")
-                                    )
+                                    get_data(all_data, "L244.StubTech_bld"),
+                                    get_data(all_data, "L239.PrimaryConsKeyword_en") %>%
+                                      select(-primary.consumption, -year) %>%
+                                      distinct() %>%
+                                      rename(stub.technology = technology))
+
     L254.StubTranTech <- get_data(all_data, "L254.StubTranTech") %>%
                                       filter(sce == "CORE") %>%
                                       select(-sce)
