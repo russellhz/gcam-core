@@ -10,3 +10,5 @@ policy_tdloss_rus.xml,coefficient,Russia,elect_td_ind,elect_td_ind,elect_td_ind,
 policy_tdloss_rus.xml,coefficient,Russia,elect_td_bld,elect_td_bld,elect_td_bld,electricity_net_ownuse,,1.098,1.085,1.085,1.085,1.085
 policy_tdloss_rus.xml,coefficient,Russia,elect_td_trn,elect_td_trn,elect_td_trn,electricity_net_ownuse,,1.098,1.085,1.085,1.085,1.085
 policy_tdloss_rus.xml,coefficient,Russia,elect_td_en,elect_td_en,elect_td_en,electricity_net_ownuse,,1.098,1.085,1.085,1.085,1.085
+policy_effcool_chn.xml,efficiency,China,resid cooling,electricity,electricity,elect_td_bld,,,3.13240325,3.13240325,3.13240325,
+policy_effcool_chn.xml,efficiency,China,resid cooling,electricity,electricity,elect_td_bld,,,3.251506,3.251506,3.251506,

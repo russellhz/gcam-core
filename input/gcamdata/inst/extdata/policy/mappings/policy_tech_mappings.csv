@@ -26,6 +26,14 @@ FE_RES,elect_td_bld,elect_td_bld,elect_td_bld
 FE_RES,elect_td_bld,rooftop_pv,rooftop_pv
 FE_RES,elect_td_ind,elect_td_ind,elect_td_ind
 FE_RES,elect_td_trn,elect_td_trn,elect_td_trn
+FE_RES,elect_td_h2,elect_td_h2,elect_td_h2
+FE_RES,elect_td_en,elect_td_en,elect_td_en
+FE_RES,district heat,biomass,biomass
+FE_RES,district heat,coal,coal
+FE_RES,district heat,gas,gas
+FE_RES,district heat,refined liquids,refined liquids
+FE_RES,resid heating,traditional biomass,traditional biomass
+FE_RES,resid others,traditional biomass,traditional biomass
 RESID,resid cooling,electricity,electricity
 RESID,resid heating,electricity,electricity
 RESID,resid heating,biomass,biomass
@@ -41,7 +49,12 @@ RESID,resid others,gas,gas
 RESID,resid others,gas,hydrogen
 RESID,resid others,refined liquids,refined liquids
 RESID,resid others,district heat,district heat
-ELEC_RES,electricity_net_ownuse,electricity_net_ownuse,electricity_net_ownuse
+ELEC_RES,elect_td_bld,elect_td_bld,elect_td_bld
+ELEC_RES,elect_td_bld,rooftop_pv,rooftop_pv
+ELEC_RES,elect_td_en,elect_td_en,elect_td_en
+ELEC_RES,elect_td_h2,elect_td_h2,elect_td_h2
+ELEC_RES,elect_td_ind,elect_td_ind,elect_td_ind
+ELEC_RES,elect_td_trn,elect_td_trn,elect_td_trn
 TPES_GAS,regional biomass,regional biomass,regional biomass
 TPES_GAS,regional biomassOil,regional biomassOil,Soybean
 TPES_GAS,regional biomassOil,regional biomassOil,OilCrop
@@ -330,3 +343,7 @@ ELEC_ROOFTOP_PV,elect_td_bld,rooftop_pv,rooftop_pv
 ELEC_WIND_OFFSHORE,electricity,wind,wind_offshore
 ELEC_COAL_NO_CCS,electricity,coal,coal (conv pul)
 ELEC_COAL_NO_CCS,electricity,coal,coal (IGCC)
+GREEN_H2,H2 central production,biomass,biomass to H2
+GREEN_H2,H2 central production,biomass,biomass to H2 CCS
+GREEN_H2,H2 central production,wind,electrolysis
+GREEN_H2,H2 central production,solar,electrolysis

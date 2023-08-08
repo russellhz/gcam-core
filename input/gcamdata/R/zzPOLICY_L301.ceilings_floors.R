@@ -25,6 +25,7 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
              "L2233.GlobalTechEff_elec_cool",
              "L222.GlobalTechCoef_en",
              "L201.GDP_Scen",
+             "L201.GDP_GCAM_IC",
              FILE = "policy/A_OutputsByTech",
              "L221.StubTech_en",
              "L222.StubTech_en",
@@ -41,15 +42,22 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
              "L2326.StubTech_aluminum",
              "L244.StubTech_bld",
              "L225.StubTech_h2",
-             "L239.PrimaryConsKeyword_en") )
+             "L239.PrimaryConsKeyword_en",
+             "L2392.PrimaryConsKeyword_en_NG") )
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(c("L301.policy_port_stnd",
+             "L301.XML_policy_map",
              "L301.policy_RES_coefs",
              "L301.RES_secout",
              "L301.pmultiplier",
              "L301.input_tax",
              "L301.input_subsidy",
-             "L301.XML_policy_map"))
+             "L301.policy_RES_coefs_NG",
+             "L301.RES_secout_NG",
+             "L301.pmultiplier_NG",
+             "L301.input_tax_NG",
+             "L301.input_subsidy_NG"
+             ))
   } else if(command == driver.MAKE) {
 
     all_data <- list(...)[[1]]
@@ -70,10 +78,11 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
     L222.GlobalTechCoef_en <- get_data(all_data, "L222.GlobalTechCoef_en")
     L2233.GlobalTechEff_elec_cool <- get_data(all_data, "L2233.GlobalTechEff_elec_cool")
 
-    L201.GDP_Scen <- get_data(all_data, "L201.GDP_Scen")
+    L201.GDP_GCAM_IC <- get_data(all_data, "L201.GDP_GCAM_IC")
     A_OutputsByTech <- get_data(all_data, "policy/A_OutputsByTech") %>%
       gather_years()
 
+    L2392.PrimaryConsKeyword_en_NG <- get_data(all_data, "L2392.PrimaryConsKeyword_en_NG")
     L301.StubTech_All <- bind_rows(get_data(all_data, "L221.StubTech_en"),
                                     get_data(all_data, "L222.StubTech_en"),
                                    get_data(all_data, "L223.StubTech_elec"),
@@ -101,8 +110,7 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
         filter(!is.na(GDPIntensity_BaseYear))
 
       # First calculate GDP series - we have baseGDP, growth rate in perCapitaGDP and population
-      L301.GDP <- L201.GDP_Scen %>%
-        filter(scenario == paste0("g", socioeconomics.BASE_GDP_SCENARIO))
+      L301.GDP <- L201.GDP_GCAM_IC
 
       # Next get the energy technologies that we want to constraint
       L301.energy_consumption <- select(GDP_Intensity_targets, region, policy.portfolio.standard, GDPIntensity_BaseYear, tech_mapping) %>%
@@ -187,7 +195,6 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
       L301.ceilings_floors <- L301.ceilings_floors %>%
         anti_join(tech_remove, by = c("region", "supplysector", "subsector", "stub.technology"))
     }
-
 
     # 2. Create policy portfolio standard tables --------------------
     L301.policy_port_stnd <- L301.ceilings_floors %>%
@@ -353,7 +360,76 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
       bind_rows(distinct(A_renewable_energy_standards, xml, policy.portfolio.standard, market)) %>%
       mutate(xml = if_else(grepl(".xml", xml), xml, paste0(xml, ".xml")))
 
-    # Produce outputs
+    # Produce NG outputs ------------
+
+    L301.PrimaryConsKeyword_en_NG <- L2392.PrimaryConsKeyword_en_NG %>%
+      select(-primary.consumption, -year) %>% distinct()
+
+    L301.RES_secout %>%
+      semi_join(L301.PrimaryConsKeyword_en_NG,
+                by = c("region", "supplysector", "subsector" = "subsector0")) %>%
+      left_join(L301.PrimaryConsKeyword_en_NG,
+                by = c("region", "supplysector", "subsector" = "subsector0")) %>%
+      rename(subsector0 = subsector, subsector = subsector.y) %>%
+      select(-stub.technology) %>%
+      add_title("Secondary output for RES markets", overwrite = T) %>%
+      add_units("NA") %>%
+      add_precursors("policy/A_renewable_energy_standards",
+                     "L222.GlobalTechCoef_en",
+                     "L2233.GlobalTechEff_elec_cool") ->
+      L301.RES_secout_NG
+
+    L301.policy_RES_coefs %>%
+      semi_join(L301.PrimaryConsKeyword_en_NG,
+                by = c("region", "supplysector", "subsector" = "subsector0")) %>%
+      left_join(L301.PrimaryConsKeyword_en_NG,
+                by = c("region", "supplysector", "subsector" = "subsector0")) %>%
+      rename(subsector0 = subsector, subsector = subsector.y) %>%
+      select(-stub.technology) %>%
+      add_title("Coefficients for RES markets (natural gas)", overwrite = T) %>%
+      add_units("Proportion of supplysector/subsector/technology") %>%
+      add_precursors("policy/A_energy_constraints",
+                     "policy/A_renewable_energy_standards") ->
+      L301.policy_RES_coefs_NG
+
+    L301.pmultiplier  %>%
+      semi_join(L301.PrimaryConsKeyword_en_NG,
+                by = c("region", "supplysector", "subsector" = "subsector0")) %>%
+      left_join(L301.PrimaryConsKeyword_en_NG,
+                by = c("region", "supplysector", "subsector" = "subsector0")) %>%
+      rename(subsector0 = subsector, subsector = subsector.y) %>%
+      select(-stub.technology) %>%
+      add_title("Price multipliers for RES markets", overwrite = T) %>%
+      add_units("NA") %>%
+      add_precursors("policy/A_renewable_energy_standards") ->
+      L301.pmultiplier_NG
+
+    L301.input_tax %>%
+      semi_join(L301.PrimaryConsKeyword_en_NG,
+                by = c("region", "supplysector", "subsector" = "subsector0")) %>%
+      left_join(L301.PrimaryConsKeyword_en_NG,
+                by = c("region", "supplysector", "subsector" = "subsector0")) %>%
+      rename(subsector0 = subsector, subsector = subsector.y) %>%
+      select(-stub.technology) %>%
+      add_title("Technologies to apply constraint to", overwrite = T) %>%
+      add_units("NA") %>%
+      add_precursors("policy/A_renewable_energy_standards") ->
+      L301.input_tax_NG
+
+    L301.input_subsidy %>%
+      semi_join(L301.PrimaryConsKeyword_en_NG,
+                by = c("region", "supplysector", "subsector" = "subsector0")) %>%
+      left_join(L301.PrimaryConsKeyword_en_NG,
+                by = c("region", "supplysector", "subsector" = "subsector0")) %>%
+      rename(subsector0 = subsector, subsector = subsector.y) %>%
+      select(-stub.technology) %>%
+      add_title("Technologies to apply constraint to", overwrite = T) %>%
+      add_units("NA") %>%
+      add_precursors("policy/A_renewable_energy_standards") ->
+      L301.input_subsidy_NG
+
+    # Produce other outputs ------------
+
     L301.policy_port_stnd %>%
       add_title("Policy names and constraints", overwrite = T) %>%
       add_units("EJ (for taxes) or NA (for RES)") %>%
@@ -362,6 +438,8 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
       L301.policy_port_stnd
 
     L301.policy_RES_coefs %>%
+      anti_join(L301.PrimaryConsKeyword_en_NG,
+                by = c("region", "supplysector", "subsector" = "subsector0")) %>%
       add_title("Coefficients for RES markets", overwrite = T) %>%
       add_units("Proportion of supplysector/subsector/technology") %>%
       add_precursors("policy/A_energy_constraints",
@@ -369,6 +447,8 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
       L301.policy_RES_coefs
 
     L301.RES_secout %>%
+      anti_join(L301.PrimaryConsKeyword_en_NG,
+                by = c("region", "supplysector", "subsector" = "subsector0")) %>%
       add_title("Secondary output for RES markets", overwrite = T) %>%
       add_units("NA") %>%
       add_precursors("policy/A_renewable_energy_standards",
@@ -377,18 +457,24 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
       L301.RES_secout
 
     L301.pmultiplier  %>%
+      anti_join(L301.PrimaryConsKeyword_en_NG,
+                by = c("region", "supplysector", "subsector" = "subsector0")) %>%
       add_title("Price multipliers for RES markets", overwrite = T) %>%
       add_units("NA") %>%
       add_precursors("policy/A_renewable_energy_standards") ->
       L301.pmultiplier
 
     L301.input_tax %>%
+      anti_join(L301.PrimaryConsKeyword_en_NG,
+                by = c("region", "supplysector", "subsector" = "subsector0")) %>%
       add_title("Technologies to apply constraint to", overwrite = T) %>%
       add_units("NA") %>%
       add_precursors("policy/A_renewable_energy_standards") ->
       L301.input_tax
 
     L301.input_subsidy %>%
+      anti_join(L301.PrimaryConsKeyword_en_NG,
+                by = c("region", "supplysector", "subsector" = "subsector0")) %>%
       add_title("Technologies to apply constraint to", overwrite = T) %>%
       add_units("NA") %>%
       add_precursors("policy/A_renewable_energy_standards") ->
@@ -407,7 +493,12 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
                 L301.pmultiplier,
                 L301.input_tax,
                 L301.input_subsidy,
-                L301.XML_policy_map)
+                L301.XML_policy_map,
+                L301.policy_RES_coefs_NG,
+                L301.RES_secout_NG,
+                L301.pmultiplier_NG,
+                L301.input_tax_NG,
+                L301.input_subsidy_NG)
   } else {
     stop("Unknown command")
   }

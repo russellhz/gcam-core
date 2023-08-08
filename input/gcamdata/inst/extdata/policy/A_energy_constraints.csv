@@ -29,3 +29,5 @@ policy_RE_targets_kor,South Korea,wind-target,subsidy,,ELEC_WIND,,,0.007064064,,
 policy_RE_targets_kor,South Korea,biom-target,subsidy,,ELEC_BIO,,,0.00536112,,,,,,,,,,,,,,
 policy_RE_targets_kor,South Korea,offshore-target,subsidy,,ELEC_WIND_OFFSHORE,0.00336384,0.00672768,0.01009152,,,,,,,,,,,,,,
 ELEC_coal_constraint_EIR,USA,coal_ceiling_EIR,tax,,ELEC_COAL_NO_CCS,,1.918,0.788,0.788,0.788,0.788,0.788,,,,,,,,,,
+policy_greenH2_chn.xml,China,green_H2,subsidy,,GREEN_H2,,0.0180315,0.0180315,0.0180315,0.0180315,0.0180315,0.0180315,,,,,,,,,,
+policy_tpes_chn,China,energy-constraint,tax,2015,PRIMARY_ENERGY,-15,-24,-24,-24,-24,-24,-24,-24,-24,-24,-24,-24,-24,-24,-24,-24,-24
