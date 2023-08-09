@@ -5,7 +5,7 @@
 # Column types: ccccicnnnnnnnnnnnnnnnnn,,,,,,,,,,,,,,,,,,,,,,
 # ----------,,,,,,,,,,,,,,,,,,,,,,
 xml,market,policy.portfolio.standard,policyType,GDPIntensity_BaseYear,tech_mapping,2020,2025,2030,2035,2040,2045,2050,2055,2060,2065,2070,2075,2080,2085,2090,2095,2100
-policy_fe_eu,EU,fe-constraint,tax,,FE_NO_PV,49.62126404,45.6617665,41.70238039,41.70238039,41.70238039,41.70238039,41.70238039,41.70238039,41.70238039,41.70238039,41.70238039,41.70238039,41.70238039,41.70238039,41.70238039,41.70238039,41.70238039
+policy_fe_eu,EU,fe-constraint,tax,,FE_NO_PV,49.62126404,40.78563202,31.95,31.95,31.95,31.95,31.95,31.95,31.95,31.95,31.95,31.95,31.95,31.95,31.95,31.95,31.95
 policy_fe_japan,Japan,fe-constraint,tax,,FE_NO_PV,,,13.1558332,13.1558332,13.1558332,13.1558332,13.1558332,13.1558332,13.1558332,13.1558332,13.1558332,13.1558332,13.1558332,13.1558332,13.1558332,13.1558332,13.1558332
 policy_ind_jpn,Japan,ind-constraint,tax,,IND_EN,6.021587591,5.726469884,5.445815881,5.445815881,5.445815881,5.445815881,5.445815881,5.445815881,5.445815881,5.445815881,5.445815881,5.445815881,5.445815881,5.445815881,5.445815881,5.445815881,5.445815881
 policy_ind_tur,Europe_Non_EU,ind-constraint,tax,2010,IND_EN,,-20,-20,-20,-20,-20,-20,-20,-20,-20,-20,-20,-20,-20,-20,-20,-20
@@ -31,3 +31,7 @@ policy_RE_targets_kor,South Korea,offshore-target,subsidy,,ELEC_WIND_OFFSHORE,0.
 ELEC_coal_constraint_EIR,USA,coal_ceiling_EIR,tax,,ELEC_COAL_NO_CCS,,1.918,0.788,0.788,0.788,0.788,0.788,,,,,,,,,,
 policy_greenH2_chn.xml,China,green_H2,subsidy,,GREEN_H2,,0.0180315,0.0180315,0.0180315,0.0180315,0.0180315,0.0180315,,,,,,,,,,
 policy_tpes_chn,China,energy-constraint,tax,2015,PRIMARY_ENERGY,-15,-24,-24,-24,-24,-24,-24,-24,-24,-24,-24,-24,-24,-24,-24,-24,-24
+policy_tpes_eu,EU,energy-constraint,tax,,PRIMARY_ENERGY,,,41.57,41.57,41.57,41.57,41.57,41.57,41.57,41.57,41.57,41.57,41.57,41.57,41.57,41.57,41.57
+policy_RE_targets_EU,EU,PV-target,subsidy,,ELEC_PV,,1.81,3.41,,,,,,,,,,,,,,
+policy_RE_targets_EU,EU,offshore-target,subsidy,,ELEC_WIND_OFFSHORE,,,0.76,1.515,2.27,3.025,3.78,,,,,,,,,,
+policy_RE_targets_EU,EU,wind-target,subsidy,,ELEC_WIND_ALL,,,5.23,5.23,5.23,5.23,5.23,,,,,,,,,,

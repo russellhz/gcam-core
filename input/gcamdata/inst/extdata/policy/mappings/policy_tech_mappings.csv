@@ -347,3 +347,28 @@ GREEN_H2,H2 central production,biomass,biomass to H2
 GREEN_H2,H2 central production,biomass,biomass to H2 CCS
 GREEN_H2,H2 central production,wind,electrolysis
 GREEN_H2,H2 central production,solar,electrolysis
+H2_ALL,H2 central production,coal,coal chemical
+H2_ALL,H2 central production,coal,coal chemical CCS
+H2_ALL,H2 central production,gas,natural gas steam reforming
+H2_ALL,H2 central production,gas,natural gas steam reforming CCS
+H2_ALL,H2 central production,biomass,biomass to H2
+H2_ALL,H2 central production,biomass,biomass to H2 CCS
+H2_ALL,H2 central production,nuclear,thermal splitting
+H2_ALL,H2 central production,electricity,electrolysis
+H2_ALL,H2 central production,wind,electrolysis
+H2_ALL,H2 central production,solar,electrolysis
+H2_ALL,H2 pipeline,H2 pipeline,H2 pipeline
+H2_ALL,H2 liquid truck,H2 liquid truck,H2 liquid truck
+H2_ALL,H2 wholesale delivery,H2 pipeline,H2 pipeline
+H2_ALL,H2 wholesale delivery,H2 liquid truck,H2 liquid truck
+H2_ALL,H2 industrial,H2 delivery,H2 delivery
+H2_ALL,H2 industrial,forecourt production,electrolysis
+H2_ALL,H2 retail delivery,H2 retail delivery,H2 retail delivery
+H2_ALL,H2 wholesale dispensing,H2 delivery,H2 pipeline
+H2_ALL,H2 wholesale dispensing,H2 delivery,H2 liquid truck
+H2_ALL,H2 wholesale dispensing,forecourt production,natural gas steam reforming
+H2_ALL,H2 wholesale dispensing,forecourt production,electrolysis
+H2_ALL,H2 retail dispensing,H2 retail dispensing,H2 retail dispensing
+ELEC_WIND_ALL,electricity,wind,wind
+ELEC_WIND_ALL,electricity,wind,wind_storage
+ELEC_WIND_ALL,electricity,wind,wind_offshore

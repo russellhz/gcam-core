@@ -6,7 +6,7 @@
 # Column types: ccccciinnnnnnnnnnnnnnnnn,,,,,,,,,,,,,,,,,,,,,,,
 # ----------,,,,,,,,,,,,,,,,,,,,,,,
 xml,market,ghgpolicy,link.type,mapping.name,year.fillout,GDPIntensity_BaseYear,2020,2025,2030,2035,2040,2045,2050,2055,2060,2065,2070,2075,2080,2085,2090,2095,2100
-policy_ccap_eu.xml,EU,CO2_ETS,,ETS,2030,,533.2535324,396.6073147,259.961097,,,,,,,,,,,,,,
+policy_ccap_eu.xml,EU,CO2_ETS,,ETS,2030,,533.2535324,387.8102662,242.367,,,,,,,,,,,,,,
 policy_ccap_kor.xml,South Korea,CO2,,,2025,,182.22,174,,,,,,,,,,,,,,,
 policy_ccapbuild_kor.xml,South Korea,CO2_building,,BUILD_SECTORS_NOCOOL,2030,,,12.79493806,11.29493806,,,,,,,,,,,,,,
 policy_ccapbuild_can.xml,Canada,CO2_building,,BUILD_SECTORS_NOCOOL,2030,,19.9403927,19.9403927,19.9403927,,,,,,,,,,,,,,
