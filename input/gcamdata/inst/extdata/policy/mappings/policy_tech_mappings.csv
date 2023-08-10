@@ -124,6 +124,9 @@ PRIMARY_ENERGY,electricity,wind,wind_offshore
 PRIMARY_ENERGY,electricity,wind,wind_storage
 PRIMARY_ENERGY,resid heating,traditional biomass,traditional biomass
 PRIMARY_ENERGY,resid others,traditional biomass,traditional biomass
+PRIMARY_ENERGY,H2 central production,solar,electrolysis
+PRIMARY_ENERGY,H2 central production,wind,electrolysis
+PRIMARY_ENERGY,H2 central production,nuclear,thermal splitting
 TPES_RES_primary,regional biomass,regional biomass,regional biomass
 TPES_RES_primary,regional coal,domestic coal,domestic coal
 TPES_RES_primary,regional coal,imported coal,imported coal
@@ -271,6 +274,9 @@ TPES_RENEWABLE,electricity,wind,wind_offshore
 TPES_RENEWABLE,electricity,wind,wind_storage
 TPES_RENEWABLE,resid heating,traditional biomass,traditional biomass
 TPES_RENEWABLE,resid others,traditional biomass,traditional biomass
+TPES_RENEWABLE,H2 central production,solar,electrolysis
+TPES_RENEWABLE,H2 central production,wind,electrolysis
+TPES_RENEWABLE,H2 central production,nuclear,thermal splitting
 TPES_BIO,regional biomass,regional biomass,regional biomass
 TPES_BIO,regional biomassOil,regional biomassOil,Soybean
 TPES_BIO,regional biomassOil,regional biomassOil,OilCrop
@@ -333,8 +339,8 @@ IND_EN,H2 industrial,H2 delivery,H2 delivery
 IND_EN,H2 industrial,forecourt production,electrolysis
 ELEC_PV,electricity,solar,PV
 ELEC_PV,electricity,solar,PV_storage
-ELEC_WIND,electricity,wind,wind
-ELEC_WIND,electricity,wind,wind_storage
+ELEC_WIND_ONSHORE,electricity,wind,wind
+ELEC_WIND_ONSHORE,electricity,wind,wind_storage
 ELEC_BIO,electricity,biomass,biomass (conv)
 ELEC_BIO,electricity,biomass,biomass (IGCC)
 ELEC_BIO,electricity,biomass,biomass (conv CCS)
@@ -372,3 +378,42 @@ H2_ALL,H2 retail dispensing,H2 retail dispensing,H2 retail dispensing
 ELEC_WIND_ALL,electricity,wind,wind
 ELEC_WIND_ALL,electricity,wind,wind_storage
 ELEC_WIND_ALL,electricity,wind,wind_offshore
+REF_LIQ_TRN_BUNKERS,refined liquids transport,refined liquids transport,refined liquids transport
+REF_LIQ_TRN_BUNKERS,refined liquids bunkers,refined liquids bunkers,refined liquids bunkers
+BIOFUEL_FOODFEED,refining,biomass liquids,corn ethanol
+BIOFUEL_FOODFEED,refining,biomass liquids,sugar cane ethanol
+BIOFUEL_FOODFEED,refining,biomass liquids,biodiesel
+GREEN_H2_ELECTROLYSIS,H2 central production,biomass,biomass to H2
+GREEN_H2_ELECTROLYSIS,H2 central production,biomass,biomass to H2 CCS
+GREEN_H2_ELECTROLYSIS,H2 central production,electricity,electrolysis
+GREEN_H2_ELECTROLYSIS,H2 central production,wind,electrolysis
+GREEN_H2_ELECTROLYSIS,H2 central production,solar,electrolysis
+GREEN_H2_ELECTROLYSIS,H2 industrial,forecourt production,electrolysis
+GREEN_H2_ELECTROLYSIS,H2 wholesale dispensing,forecourt production,electrolysis
+PRIMARY_ENERGY_FOSSIL,regional coal,domestic coal,domestic coal
+PRIMARY_ENERGY_FOSSIL,regional coal,imported coal,imported coal
+PRIMARY_ENERGY_FOSSIL,regional natural gas,domestic natural gas,domestic natural gas
+PRIMARY_ENERGY_FOSSIL,regional natural gas,imported natural gas,imported natural gas
+PRIMARY_ENERGY_FOSSIL,regional oil,domestic crude oil,domestic crude oil
+PRIMARY_ENERGY_FOSSIL,regional oil,imported crude oil,imported crude oil
+FE_BUNKERS_NO_PV,delivered biomass,delivered biomass,delivered biomass
+FE_BUNKERS_NO_PV,delivered coal,delivered coal,delivered coal
+FE_BUNKERS_NO_PV,delivered biomass industry,delivered biomass industry,delivered biomass industry
+FE_BUNKERS_NO_PV,delivered coal industry,delivered coal industry,delivered coal industry
+FE_BUNKERS_NO_PV,wholesale gas,wholesale gas,wholesale gas
+FE_BUNKERS_NO_PV,delivered gas,delivered gas,delivered gas
+FE_BUNKERS_NO_PV,delivered gas transport,delivered gas transport,delivered gas transport
+FE_BUNKERS_NO_PV,refined liquids enduse,refined liquids enduse,refined liquids enduse
+FE_BUNKERS_NO_PV,refined liquids transport,refined liquids transport,refined liquids transport
+FE_BUNKERS_NO_PV,refined liquids industrial,refined liquids industrial,refined liquids industrial
+FE_BUNKERS_NO_PV,refined liquids bunkers,refined liquids bunkers,refined liquids bunkers
+FE_BUNKERS_NO_PV,H2 wholesale delivery,H2 liquid truck,H2 liquid truck
+FE_BUNKERS_NO_PV,H2 wholesale delivery,H2 pipeline,H2 pipeline
+FE_BUNKERS_NO_PV,H2 industrial,forecourt production,electrolysis
+FE_BUNKERS_NO_PV,H2 wholesale dispensing,H2 delivery,H2 liquid truck
+FE_BUNKERS_NO_PV,H2 wholesale dispensing,H2 delivery,H2 pipeline
+FE_BUNKERS_NO_PV,H2 wholesale dispensing,forecourt production,electrolysis
+FE_BUNKERS_NO_PV,H2 wholesale dispensing,forecourt production,natural gas steam reforming
+FE_BUNKERS_NO_PV,elect_td_bld,elect_td_bld,elect_td_bld
+FE_BUNKERS_NO_PV,elect_td_ind,elect_td_ind,elect_td_ind
+FE_BUNKERS_NO_PV,elect_td_trn,elect_td_trn,elect_td_trn

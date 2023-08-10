@@ -43,7 +43,8 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
              "L244.StubTech_bld",
              "L225.StubTech_h2",
              "L239.PrimaryConsKeyword_en",
-             "L2392.PrimaryConsKeyword_en_NG") )
+             "L2392.PrimaryConsKeyword_en_NG",
+             "L221.StubTechCalInput_bioOil") )
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(c("L301.policy_port_stnd",
              "L301.XML_policy_map",
@@ -83,7 +84,9 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
       gather_years()
 
     L2392.PrimaryConsKeyword_en_NG <- get_data(all_data, "L2392.PrimaryConsKeyword_en_NG")
-    L301.StubTech_All <- bind_rows(get_data(all_data, "L221.StubTech_en"),
+    L301.StubTech_All <- bind_rows(distinct(bind_rows(get_data(all_data, "L221.StubTech_en"),
+                                   # Not all biomassOil techs are in the stubtech
+                                   get_data(all_data, "L221.StubTechCalInput_bioOil")), region, supplysector, subsector, stub.technology),
                                     get_data(all_data, "L222.StubTech_en"),
                                    get_data(all_data, "L223.StubTech_elec"),
                                     get_data(all_data, "L2233.StubTech_elec_cool"),
