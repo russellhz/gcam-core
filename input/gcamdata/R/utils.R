@@ -90,7 +90,7 @@ load_csv_files <- function(filenames, optionals, quiet = FALSE, dummy = NULL, ..
     # Read the file header and extract the column type info from it
     assert_that(file.exists(fqfn))
     header <- find_header(fqfn)
-    col_types <- extract_header_info(header, label = "Column types:", fqfn, required = TRUE)
+    col_types <- gsub(" ", "", extract_header_info(header, label = "Column types:", fqfn, required = TRUE))
 
     # Attempt the file read
     # Note `options(warn = 2)` forces all warnings to errors...
