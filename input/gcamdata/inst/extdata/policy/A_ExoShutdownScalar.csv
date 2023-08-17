@@ -9,3 +9,4 @@ USA_coal_exoshutdown,USA,elec_coal (conv pul),coal (conv pul),coal (conv pul) (s
 USA_coal_exoshutdown,USA,elec_coal (conv pul),coal (conv pul),coal (conv pul) (recirculating),2015,0.53,0.36,0.15,0.15,0.15,0.15,0.15,,,,,,,,,,
 USA_coal_exoshutdown,USA,elec_coal (conv pul),coal (conv pul),coal (conv pul) (cooling pond),2015,0.53,0.36,0.15,0.15,0.15,0.15,0.15,,,,,,,,,,
 USA_coal_exoshutdown,USA,elec_coal (conv pul),coal (conv pul),coal (conv pul) (dry cooling),2015,0.53,0.36,0.15,0.15,0.15,0.15,0.15,,,,,,,,,,
+policy_nuclear_jpn,Japan,elec_Gen_II_LWR,Gen_II_LWR,Gen_II_LWR (seawater),2015,1,1,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21

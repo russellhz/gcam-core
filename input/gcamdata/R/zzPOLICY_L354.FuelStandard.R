@@ -29,7 +29,7 @@ module_policy_L354.FuelStandards <- function(command, ...) {
 
     all_data <- list(...)[[1]]
 
-    # Load required inputs
+    # Load required inputs ---------------
     A_FuelStandards <- get_data(all_data, "policy/A_FuelStandards")
     L254.StubTranTechCoef <- get_data(all_data, "L254.StubTranTechCoef")
     UCD_trn_data <- get_data(all_data, "UCD_trn_data")
@@ -38,7 +38,7 @@ module_policy_L354.FuelStandards <- function(command, ...) {
     GCAM_region_names <- get_data(all_data, "common/GCAM_region_names")
     iso_GCAM_regID <- get_data(all_data, "common/iso_GCAM_regID")
 
-    # 1. Convert to long and interpolate
+    # 1. Convert to long and interpolate ---------------
     L354.FuelStandards_long <- A_FuelStandards %>%
       gather_years(value_col = "coefficient") %>%
       # Interpolate between years if needed
@@ -53,7 +53,8 @@ module_policy_L354.FuelStandards <- function(command, ...) {
       select(-coefficient_NA) %>%
       mutate(market.name = region)
 
-    # 2. Map coefficients to new classes
+
+    # 2. Map coefficients to new classes ---------------
     # Need historical UCD data to weight old classes
     UCD_hist_data <- UCD_trn_data %>%
       filter(variable == "energy")
@@ -95,17 +96,21 @@ module_policy_L354.FuelStandards <- function(command, ...) {
       select(-old_classes) %>%
       bind_rows(L354.FuelStandards_revised_classes)
 
-    # 3.Join in default GCAM coefficients and select the minimum coefficient
-    L354.FuelStandards_min <- L354.FuelStandards_new %>%
-      left_join_error_no_match(L254.StubTranTechCoef,
+    # 3.Join in lowest GCAM coefficients and select the higher coefficient ---------------
+    L254.StubTranTechCoef_min <- L254.StubTranTechCoef %>%
+      group_by(region, supplysector, tranSubsector, stub.technology,
+               year, minicam.energy.input, market.name) %>%
+      summarise(coefficient = min(coefficient)) %>%
+      ungroup
+    L354.FuelStandards_max <- L354.FuelStandards_new %>%
+      left_join_error_no_match(L254.StubTranTechCoef_min,
                                by = c("region", "supplysector", "tranSubsector", "stub.technology",
-                                      "minicam.energy.input", "year",  "market.name",
-                                      "SSP_sce" = "sce")) %>%
-      mutate(coefficient = pmin(coefficient.x, coefficient.y)) %>%
+                                      "minicam.energy.input", "year",  "market.name")) %>%
+      mutate(coefficient = pmax(coefficient.x, coefficient.y)) %>%
       select(xml, LEVEL2_DATA_NAMES[["StubTranTechCoef"]])
 
-    # 4.Make sure future coefficients don't increase
-    L354.FuelStandards_future <- L354.FuelStandards_min %>%
+    # 4.Make sure future coefficients don't increase ---------------
+    L354.FuelStandards_future <- L354.FuelStandards_max %>%
       group_by(xml, region, supplysector, tranSubsector, stub.technology, minicam.energy.input, market.name) %>%
       complete(nesting(xml, region, supplysector, tranSubsector, stub.technology, minicam.energy.input, market.name),
                year = seq(min(year), max(MODEL_FUTURE_YEARS), 5)) %>%
@@ -124,7 +129,7 @@ module_policy_L354.FuelStandards <- function(command, ...) {
       filter(coefficient < coefficient.y) %>%
       select(-coefficient.x, -coefficient.y, -rebound, -sce)
 
-    # Produce outputs
+    # Produce outputs ---------------
     L354.FuelStandards_future %>%
       add_title("Policy fuel standards", overwrite = T) %>%
       add_units("BTU/vkm") %>%
