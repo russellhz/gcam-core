@@ -8,7 +8,7 @@ COMMENT_CHAR             <- "#"
 UNDER_TIMESHIFT          <- FALSE
 YEAR_PATTERN             <- "^(1|2)[0-9]{3}$"   # a 1 or 2 followed by three digits, and nothing else
 LOGIT_TYPE_COLNAME       <- "logit.type"        # will be removed by test code before old-new comparison
-DISABLED_MODULES         <- "NONE"
+DISABLED_MODULES         <- "policy"
 
 
 # Flags ======================================================================
@@ -87,6 +87,9 @@ modeltime.HECTOR_INI_FILE        <- "../input/climate/hector-gcam.ini"
 
 # Conversion constants ======================================================================
 # The naming convention is CONV_(FROM-UNIT)_(TO-UNIT).
+
+# Currency
+CONV_EURO_USD_2015 <- 1.1095
 
 # Numeric (unitless)
 CONV_BIL_MIL    <- 1000
@@ -561,10 +564,19 @@ energy.TRAN_UCD_MODE<-'rev.mode'
 energy.TRAN_UCD_SIZE_CLASS<-'rev_size.class'
 
 # Constants related to ATB power sector technology costs
+energy.ELEC_COST_SOURCE <- "WEO-EUREF" # Default is ATB, alternatives are EUREF, WEO, or WEO-EUREF (EU values from EUREF, rest of world from WEO)
+energy.WEO_SCENARIO <- "Stated.Policies" # Options are Stated.Policies and Net.Zero.Emissions.by.2050
+
 energy.ATB_2017_YEARS <- c(2015:2016)
 energy.ATB_BASE_YEAR <- 2015
 energy.ATB_MID_YEAR <- 2035
 energy.ATB_TARGET_YEAR <- 2035
+if (energy.ELEC_COST_SOURCE %in% c("EUREF", "WEO", "WEO-EUREF")) {
+  energy.ATB_BASE_YEAR <- 2015
+  energy.ATB_MID_YEAR <- 2040
+  energy.ATB_TARGET_YEAR <- 2040
+  }
+
 gcamusa.STORAGE_TECH <- "battery"
 energy.COSTS_MID_CASE <- "central"
 energy.COSTS_ADV_CASE <- "adv tech"

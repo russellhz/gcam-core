@@ -53,7 +53,10 @@ module_energy_electricity_xml <- function(command, ...) {
               "L223.StubTechFixOut_hydro",
               "L223.StubTechProd_elec",
               "L223.StubTechEff_elec",
-              "L223.StubTechSecOut_desal"))
+              "L223.StubTechSecOut_desal",
+             "L223.StubTechCapital",
+             "L223.StubTechOMfixed",
+             "L223.StubTechOMvar"))
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(c(XML = "electricity.xml"))
   } else if(command == driver.MAKE) {
@@ -103,6 +106,10 @@ module_energy_electricity_xml <- function(command, ...) {
     L223.StubTechProd_elec <- get_data(all_data, "L223.StubTechProd_elec")
     L223.StubTechEff_elec <- get_data(all_data, "L223.StubTechEff_elec")
     L223.StubTechSecOut_desal <- get_data(all_data, "L223.StubTechSecOut_desal")
+
+    L223.StubTechCapital <- get_data(all_data, "L223.StubTechCapital")
+    L223.StubTechOMfixed <- get_data(all_data, "L223.StubTechOMfixed")
+    L223.StubTechOMvar <- get_data(all_data, "L223.StubTechOMvar")
 
     share.weight <- subsector.share.weight <- intermittent.technology <- NULL # silence package checks
 
@@ -158,6 +165,9 @@ module_energy_electricity_xml <- function(command, ...) {
       add_xml_data(L223.StubTechProd_elec, "StubTechProd") %>%
       add_xml_data(L223.StubTechEff_elec, "StubTechEff") %>%
       add_xml_data(L223.StubTechSecOut_desal, "StubTechSecOut") %>%
+      add_xml_data(L223.StubTechCapital, "StubTechCapital") %>%
+      add_xml_data(L223.StubTechOMfixed, "StubTechOMfixed") %>%
+      add_xml_data(L223.StubTechOMvar, "StubTechOMvar") %>%
       add_precursors("L223.Supplysector_elec",
                      "L223.ElecReserve",
                      "L223.SectorUseTrialMarket_elec",

@@ -27,6 +27,11 @@ module_energy_solar_low_xml <- function(command, ...) {
     L223.GlobalIntTechCapital_sol_low <- get_data(all_data, "L223.GlobalIntTechCapital_sol_low")
     L223.StubTechCapFactor_elec <- get_data(all_data, "L223.StubTechCapFactor_elec")
 
+    # This xml is empty if using EUREF data
+    if (energy.ELEC_COST_SOURCE %in% c("EUREF", "WEO", "WEO-EUREF")){
+      create_xml("solar_low.xml") ->
+        solar_low.xml
+    } else {
     # need to convert to standard non energy input for rooftop_pv for capital tracking purposes
     L223.StubTechCapFactor_elec %>%
       filter(stub.technology == "rooftop_pv") %>%
@@ -52,7 +57,7 @@ module_energy_solar_low_xml <- function(command, ...) {
       add_precursors("L223.GlobalTechCapital_sol_low", "L223.GlobalIntTechCapital_sol_low",
                      "L223.StubTechCapFactor_elec") ->
       solar_low.xml
-
+    }
     return_data(solar_low.xml)
   } else {
     stop("Unknown command")

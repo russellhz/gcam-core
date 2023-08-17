@@ -453,6 +453,10 @@ StubTechIntGainOutputRatio, world/+{name}region, region/+{name}supplysector, sup
 
 StubTechCapital, world/+{name}region, region/+{name}supplysector, supplysector/+{name}subsector, subsector/+{name}stub-technology, stub-technology/+{year}period, period/+{name}input-capital, input-capital/+capital-overnight, input-capital/+fixed-charge-rate, scenario, scenario/world
 
+StubTechOMfixed, world/+{name}region, region/+{name}supplysector, supplysector/+{name}subsector, subsector/+{name}stub-technology, stub-technology/+{year}period, period/+{name}input-OM-fixed, input-OM-fixed/+OM-fixed, scenario, scenario/world
+
+StubTechOMvar, world/+{name}region, region/+{name}supplysector, supplysector/+{name}subsector, subsector/+{name}stub-technology, stub-technology/+{year}period, period/+{name}input-OM-var, input-OM-var/+OM-var, scenario, scenario/world
+
 StubTechFractSecOut, world/+{name}region, region/+{name}supplysector, supplysector/+{name}subsector, subsector/+{name}stub-technology, stub-technology/+{year}period, period/+{name}fractional-secondary-output, fractional-secondary-output/+output-ratio, scenario, scenario/world
 
 StubTechFractProd, world/+{name}region, region/+{name}supplysector, supplysector/+{name}subsector, subsector/+{name}stub-technology, stub-technology/+{year}period, period/+{name}fractional-secondary-output, fractional-secondary-output/+{price}fraction-produced, fractional-secondary-output/+fraction-produced, scenario, scenario/world
