@@ -12,6 +12,7 @@ delivered biomass industry,delivered biomass industry,delivered biomass industry
 delivered coal,delivered coal,delivered coal,regional coal,1,1,1
 delivered coal industry,delivered coal industry,delivered coal industry,regional coal,1,1,1
 electricity_net_ownuse,electricity_net_ownuse,electricity_net_ownuse,electricity,1,1,1
+elect_td_bld,rooftop_pv,rooftop_pv,rooftop_pv,1,1,1
 elect_td_bld,elect_td_bld,elect_td_bld,electricity_net_ownuse,1,1,1
 elect_td_ind,elect_td_ind,elect_td_ind,electricity_net_ownuse,1,1,1
 elect_td_trn,elect_td_trn,elect_td_trn,electricity_net_ownuse,1,1,1

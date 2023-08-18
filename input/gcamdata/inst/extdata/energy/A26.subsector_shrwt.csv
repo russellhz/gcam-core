@@ -13,6 +13,7 @@ delivered biomass industry,delivered biomass industry,start-year,,1
 delivered coal,delivered coal,start-year,,1
 delivered coal industry,delivered coal industry,start-year,,1
 electricity_net_ownuse,electricity_net_ownuse,start-year,,1
+elect_td_bld,rooftop_pv,start-year,,0
 elect_td_bld,elect_td_bld,start-year,,1
 elect_td_ind,elect_td_ind,start-year,,1
 elect_td_trn,elect_td_trn,start-year,,1
