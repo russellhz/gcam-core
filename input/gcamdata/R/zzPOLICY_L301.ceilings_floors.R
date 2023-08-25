@@ -26,7 +26,7 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
              "L222.GlobalTechCoef_en",
              "L201.GDP_Scen",
              "L201.GDP_GCAM_IC",
-             FILE = "policy/A_OutputsByTech",
+             FILE = "policy/GCAM_results/OutputsByTech",
              "L221.StubTech_en",
              "L222.StubTech_en",
              "L224.StubTech_heat",
@@ -63,7 +63,7 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
 
     all_data <- list(...)[[1]]
 
-    # Load required inputs
+    # Load required inputs -------------------------
     market_region_mapping <- get_data(all_data, "policy/mappings/market_region_mappings")
 
     A_energy_constraints <- get_data(all_data, "policy/A_energy_constraints") %>%
@@ -80,7 +80,7 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
     L2233.GlobalTechEff_elec_cool <- get_data(all_data, "L2233.GlobalTechEff_elec_cool")
 
     L201.GDP_GCAM_IC <- get_data(all_data, "L201.GDP_GCAM_IC")
-    A_OutputsByTech <- get_data(all_data, "policy/A_OutputsByTech") %>%
+    A_OutputsByTech <- get_data(all_data, "policy/GCAM_results/OutputsByTech") %>%
       gather_years()
 
     L2392.PrimaryConsKeyword_en_NG <- get_data(all_data, "L2392.PrimaryConsKeyword_en_NG")
@@ -170,6 +170,7 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
       # Interpolates between min and max years for each region/policy combo
       complete(nesting(xml, region, market, policy.portfolio.standard, policyType, tech_mapping ),
                year = seq(min(year), max(year), 5))
+
 
     # Separate out groups with only 1 value since they get turned into NAs with approx_fun
     L301.ceilings_floors_n1 <- L301.ceilings_floors_NA %>%

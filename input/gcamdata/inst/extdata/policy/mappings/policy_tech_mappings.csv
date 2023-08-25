@@ -34,6 +34,9 @@ BIOFUEL_NODIESEL,refining,biomass liquids,cellulosic ethanol CCS level 2
 BIOFUEL_NODIESEL,refining,biomass liquids,corn ethanol
 BIOFUEL_NODIESEL,refining,biomass liquids,sugar cane ethanol
 BIOFUEL_NODIESEL,refining,biomass liquids,BTL with hydrogen
+CELLULOSIC_ETHANOL,refining,biomass liquids,cellulosic ethanol
+CELLULOSIC_ETHANOL,refining,biomass liquids,cellulosic ethanol CCS level 1
+CELLULOSIC_ETHANOL,refining,biomass liquids,cellulosic ethanol CCS level 2
 ELEC_BIO,electricity,biomass,biomass (conv)
 ELEC_BIO,electricity,biomass,biomass (IGCC)
 ELEC_BIO,electricity,biomass,biomass (conv CCS)
@@ -50,6 +53,12 @@ ELEC_RES,elect_td_en,elect_td_en,elect_td_en
 ELEC_RES,elect_td_h2,elect_td_h2,elect_td_h2
 ELEC_RES,elect_td_ind,elect_td_ind,elect_td_ind
 ELEC_RES,elect_td_trn,elect_td_trn,elect_td_trn
+ELEC_RES_CHINA,elect_td_bld,elect_td_bld,elect_td_bld
+ELEC_RES_CHINA,elect_td_bld,rooftop_pv,rooftop_pv
+ELEC_RES_CHINA,elect_td_en,elect_td_en,elect_td_en
+ELEC_RES_CHINA,elect_td_h2,elect_td_h2,elect_td_h2
+ELEC_RES_CHINA,elect_td_ind,elect_td_ind,elect_td_ind
+ELEC_RES_CHINA,elect_td_trn,elect_td_trn,elect_td_trn
 ELEC_ROOFTOP_PV,elect_td_bld,rooftop_pv,rooftop_pv
 ELEC_SOLAR_ALL,electricity,solar,PV
 ELEC_SOLAR_ALL,electricity,solar,PV_storage
@@ -62,6 +71,26 @@ ELEC_WIND_ALL,electricity,wind,wind_offshore
 ELEC_WIND_OFFSHORE,electricity,wind,wind_offshore
 ELEC_WIND_ONSHORE,electricity,wind,wind
 ELEC_WIND_ONSHORE,electricity,wind,wind_storage
+ELEC_NON_RENEWABLE,electricity,coal,coal (IGCC)
+ELEC_NON_RENEWABLE,electricity,coal,coal (conv pul)
+ELEC_NON_RENEWABLE,electricity,gas,gas (CC)
+ELEC_NON_RENEWABLE,electricity,gas,gas (steam/CT)
+ELEC_NON_RENEWABLE,electricity,refined liquids,refined liquids (CC)
+ELEC_NON_RENEWABLE,electricity,refined liquids,refined liquids (steam/CT)
+ELEC_NON_RENEWABLE,electricity,nuclear,Gen_III
+ELEC_NON_RENEWABLE,electricity,nuclear,Gen_II_LWR
+ELEC_RENEWABLE,electricity,biomass,biomass (IGCC)
+ELEC_RENEWABLE,electricity,biomass,biomass (conv)
+ELEC_RENEWABLE,elect_td_bld,rooftop_pv,rooftop_pv
+ELEC_RENEWABLE,electricity,solar,CSP
+ELEC_RENEWABLE,electricity,solar,CSP_storage
+ELEC_RENEWABLE,electricity,solar,PV
+ELEC_RENEWABLE,electricity,solar,PV_storage
+ELEC_RENEWABLE,electricity,wind,wind
+ELEC_RENEWABLE,electricity,wind,wind_offshore
+ELEC_RENEWABLE,electricity,wind,wind_storage
+ELEC_RENEWABLE,electricity,geothermal,geothermal
+ELEC_RENEWABLE,electricity,hydro,hydro
 EN_CARRIER_ELEC,electricity,hydro,hydro
 EN_CARRIER_ELEC,electricity,wind,wind
 EN_CARRIER_ELEC,electricity,wind,wind_offshore
@@ -229,6 +258,8 @@ PRIMARY_ENERGY,regional biomass,regional biomass,regional biomass
 PRIMARY_ENERGY,regional coal,domestic coal,domestic coal
 PRIMARY_ENERGY,regional coal,imported coal,imported coal
 PRIMARY_ENERGY,gas processing,natural gas,natural gas
+PRIMARY_ENERGY,H2 central production,gas,natural gas steam reforming
+PRIMARY_ENERGY,refining,gas to liquids,gas to liquids
 PRIMARY_ENERGY,regional oil,domestic crude oil,domestic crude oil
 PRIMARY_ENERGY,regional oil,imported crude oil,imported crude oil
 PRIMARY_ENERGY,regional biomassOil,regional biomassOil,Soybean

@@ -11,7 +11,7 @@ policy_ccap_kor.xml,South Korea,CO2,,,2025,,182.22,174,,,,,,,,,,,,,,,
 policy_ccapbuild_kor.xml,South Korea,CO2_building,,BUILD_SECTORS_NOCOOL,2030,,,12.79493806,11.29493806,,,,,,,,,,,,,,
 policy_ccapbuild_can.xml,Canada,CO2_building,,BUILD_SECTORS_NOCOOL,2030,,19.9403927,19.9403927,19.9403927,,,,,,,,,,,,,,
 policy_ccapind_chn.xml,China,CO2_industry,,CO2_CHINA_INDUSTRY,,2015,-22,-40,-40,-40,-40,-40,-40,-40,-40,-40,-40,-40,-40,-40,-40,-40,-40
-policy_ccaptran_rus.xml,Russia,CO2_4W,,TRN_4W,2050,,,,18.955004,18.955004,18.955004,18.955004,18.955004,,,,,,,,,,
+policy_ccaptran_rus.xml,Russia,CO2_4W,,TRN_4W,2050,,,,25,25,25,25,25,,,,,,,,,,
 policy_caps_CP_afforLUC.xml,Argentina,CO2,,,,,46.95519422,50.74835597,52.42378849,,,,,,,,,,,,,,
 policy_caps_CP_afforLUC.xml,Australia_NZ,CO2_FFI_LUC,FFI_LUC,,,,110.1157812,139.5907026,111.4639167,,,,,,,,,,,,,,
 policy_caps_CP_afforLUC.xml,Brazil,CO2_FFI_LUC,FFI_LUC,,,,184.2913185,244.730403,168.4907153,,,,,,,,,,,,,,
