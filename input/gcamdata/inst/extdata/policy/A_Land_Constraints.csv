@@ -7,6 +7,7 @@
 # ----------,,,,,,,,
 xml,region,LandLeafs,policy.portfolio.standard,LandNode1_to_remove,2020,2025,2030,2100
 policy_affor_aus.xml,Australia_NZ,Forest,afforestation,NewZealand,128.55209,128.55209,128.55209,128.55209
+policy_affor_arg.xml,Argentina,^Forest,afforestation,,,41.7,44.9,44.9
 policy_affor_bra.xml,Brazil,Forest,afforestation,,3076.773594,3156.773594,3156.773594,3156.773594
 policy_affor_chn.xml,China,Forest,afforestation,,1481.348581,1574.279969,1667.211358,1667.211358
 policy_affor_col.xml,Colombia,Forest,afforestation,,465.073634,465.073634,465.073634,465.073634
