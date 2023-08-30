@@ -16,6 +16,7 @@
 module_policy_L306.MAC_rename <- function(command, ...) {
   if(command == driver.DECLARE_INPUTS) {
     return(c(FILE = "policy/A_MAC_rename",
+             FILE = "common/GCAM_region_names",
              "L252.ResMAC_fos",
              "L252.MAC_higwp",
              "L252.AgMAC",
@@ -38,8 +39,20 @@ module_policy_L306.MAC_rename <- function(command, ...) {
     all_data <- list(...)[[1]]
 
     # Load required inputs
+    GCAM_region_names <- get_data(all_data, "common/GCAM_region_names")
     A_MAC_rename <- get_data(all_data, "policy/A_MAC_rename") %>%
       mutate(xml = if_else(grepl(".xml", xml), xml, paste0(xml, ".xml")))
+
+    if ("ALL" %in% A_MAC_rename$region){
+      A_MAC_rename_global <- A_MAC_rename %>%
+        filter(region == "ALL") %>%
+        select(-region) %>%
+        write_to_all_regions(c("xml", "region", "supplysector", "Non.CO2", "new.market.name"), GCAM_region_names)
+
+      A_MAC_rename<- A_MAC_rename %>%
+        filter(region != "ALL") %>%
+        bind_rows(A_MAC_rename_global)
+    }
 
     # For each MAC object, just need to filter it and rename Non-CO2
     L306.ResMAC_fos <- get_data(all_data, "L252.ResMAC_fos")  %>%

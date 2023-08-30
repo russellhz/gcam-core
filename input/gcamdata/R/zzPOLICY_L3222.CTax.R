@@ -21,7 +21,6 @@ module_policy_L3222.CTax <- function(command, ...) {
            )
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(c("L3222.CTax",
-             "L3222.CTax_Region_Link",
              "L3222.CTax_GHG_Link"))
   } else if(command == driver.MAKE) {
 
@@ -33,31 +32,21 @@ module_policy_L3222.CTax <- function(command, ...) {
     ghg_link <- get_data(all_data, "policy/mappings/ghg_link")
     market_region_mappings <- get_data(all_data, "policy/mappings/market_region_mappings")
 
-    # Write tax to correct regions
+    # Write tax to all regions (no reason not to and necessary sometimes)
     L3222.CTax <- A_CTax %>%
       gather_years(value_col = "fixedTax") %>%
       filter(!is.na(fixedTax)) %>%
       select(-link.type) %>%
-      left_join_keep_first_only(market_region_mappings, by = "market") %>%
-      mutate(region = if_else(!is.na(region), region, market))
-
-
-    # If any linked regions, pull out here
-    # Assumes linked regions have no taxes listed
-    L3222.CTax_Region_Link <- A_CTax %>%
-      # first filter to needed markets
-      semi_join(market_region_mappings, by = "market") %>%
-      # then add in all regions
       left_join(market_region_mappings, by = "market") %>%
-      # filter out region where constraint is held
-      anti_join(L3222.CTax, by = c("xml", "market", "region", "ghgpolicy", "year.fillout")) %>%
-      select(xml, LEVEL2_DATA_NAMES[["GHGConstrMkt"]])
-
+      mutate(region = if_else(!is.na(region), region, market),
+             market = if_else(market.overwrite == 1, region, market)) %>%
+      select(-market.overwrite)
 
     # Get ghg link for each
     L3222.CTax_GHG_Link <- A_CTax %>%
       left_join(market_region_mappings, by = "market") %>%
-      mutate(region = if_else(!is.na(region), region, market)) %>%
+      mutate(region = if_else(!is.na(region), region, market),
+             market = if_else(market.overwrite == 1, region, market)) %>%
       distinct(link.type, market, region, ghgpolicy) %>%
       filter(!is.na(link.type)) %>%
       left_join(ghg_link, by = "link.type") %>%
@@ -78,13 +67,7 @@ module_policy_L3222.CTax <- function(command, ...) {
                      "policy/mappings/ghg_link") ->
       L3222.CTax_GHG_Link
 
-    L3222.CTax_Region_Link %>%
-      add_title("Region links for carbon taxes", overwrite = T) %>%
-      add_units("Various") %>%
-      add_precursors("policy/A_CTax") ->
-      L3222.CTax_Region_Link
-
-    return_data(L3222.CTax, L3222.CTax_GHG_Link, L3222.CTax_Region_Link)
+    return_data(L3222.CTax, L3222.CTax_GHG_Link)
   } else {
     stop("Unknown command")
   }
