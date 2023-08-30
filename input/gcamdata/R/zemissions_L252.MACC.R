@@ -37,6 +37,7 @@ module_emissions_L252.MACC <- function(command, ...) {
              "L211.AGRBio",
              "L232.nonco2_prc",
              "L241.hfc_all",
+             "L241.hfc_future",
              "L241.pfc_all"))
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(c("L252.ResMAC_fos",
@@ -101,6 +102,7 @@ module_emissions_L252.MACC <- function(command, ...) {
     L211.AGRBio <- get_data(all_data, "L211.AGRBio", strip_attributes = TRUE)
     L232.nonco2_prc <- get_data(all_data, "L232.nonco2_prc", strip_attributes = TRUE)
     L241.hfc_all <- get_data(all_data, "L241.hfc_all", strip_attributes = TRUE)
+    L241.hfc_future <- get_data(all_data, "L241.hfc_future", strip_attributes = TRUE)
     L241.pfc_all <- get_data(all_data, "L241.pfc_all", strip_attributes = TRUE)
     EPA_MACC_PhaseInTime <- get_data(all_data, "emissions/EPA_MACC_PhaseInTime")
 
@@ -227,8 +229,8 @@ module_emissions_L252.MACC <- function(command, ...) {
 
     # L252.MAC_higwp: Abatement from HFCs, PFCs, and SF6
     # L252.MAC_higwp_full contains year-specific MACs for all future modeling periods till 2050
-    L252.MAC_higwp_full <- bind_rows(L241.hfc_all, L241.pfc_all) %>%
-      select(-input.emissions, -year) %>%
+    L252.MAC_higwp_full <- bind_rows(L241.hfc_all, L241.pfc_all, L241.hfc_future) %>%
+      select(region, supplysector, subsector, stub.technology, Non.CO2) %>%
       distinct() %>%
       # Add in mac.control
       # Using left_join b/c mac.control for "other industrial processes" is NA
@@ -670,7 +672,7 @@ module_emissions_L252.MACC <- function(command, ...) {
       add_comments("Category data from L241.hfc_all and L241.pfc_all given tax and mac.reduction data from L152.MAC_pct_R_S_Proc_EPA") %>%
       add_legacy_name("L252.MAC_higwp") %>%
       add_precursors("emissions/A_regions", "emissions/mappings/CEDS_sector_tech_proc", "emissions/mappings/CEDS_sector_tech_proc_revised",
-                     "L152.MAC_pct_R_S_Proc_EPA", "L241.hfc_all", "L241.pfc_all", "common/GCAM_region_names",
+                     "L152.MAC_pct_R_S_Proc_EPA", "L241.hfc_all", "L241.hfc_future", "L241.pfc_all", "common/GCAM_region_names",
                      "emissions/A_MACC_TechChange_omit") ->
       L252.MAC_higwp
 
