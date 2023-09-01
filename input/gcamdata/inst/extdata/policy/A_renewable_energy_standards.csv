@@ -7,7 +7,7 @@ xml,market,policy.portfolio.standard,variable,tech_mapping,sec.out.1,sec.out.ele
 policy_biofuel_arg,Argentina,biofuel-target,input-coefficient,REF_LIQ_TRN,BIOFUEL_NODIESEL,,,0.078,0.078,0.078,0.078,0.078,0.078,0.078,0.078,0.078,0.078,0.078,0.078,0.078,0.078,0.078,0.078,0.078
 policy_biofuel_arg,Argentina,biodiesel-target,input-coefficient,REF_LIQ_TRN,BIODIESEL,,,0.0175,0.0175,0.0175,0.0175,0.0175,0.0175,0.0175,0.0175,0.0175,0.0175,0.0175,0.0175,0.0175,0.0175,0.0175,0.0175,0.0175
 policy_res_arg,Argentina,RES-target,input-coefficient,ELEC_RES,ROOFTOP_PV,EN_CARRIER_ELEC,,0.14,0.2,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25
-policy_res_aus,Australia_NZ,RES-target,input-coefficient,ELEC_RES,ROOFTOP_PV,EN_CARRIER_ELEC,,0.23,0.45,0.82,0.82,0.82,0.82,0.82,0.82,0.82,0.82,0.82,0.82,0.82,0.82,0.82,0.82,0.82
+policy_res_aus,Australia_NZ,RES-target,input-coefficient,ELEC_RES,ROOFTOP_PV,EN_CARRIER_ELEC,,0.23,0.45,0.69,0.69,0.69,0.69,0.69,0.69,0.69,0.69,0.69,0.69,0.69,0.69,0.69,0.69,0.69
 policy_biofuel_bra,Brazil,biofuel-target,input-coefficient,REF_LIQ_TRN,BIOFUEL_NODIESEL,,,0.135,0.135,0.135,0.135,0.135,0.135,0.135,0.135,0.135,0.135,0.135,0.135,0.135,0.135,0.135,0.135,0.135
 policy_biofuel_bra,Brazil,biodiesel-target,input-coefficient,REF_LIQ_TRN,BIODIESEL,,,0.06,0.075,0.075,0.075,0.075,0.075,0.075,0.075,0.075,0.075,0.075,0.075,0.075,0.075,0.075,0.075,0.075
 policy_res_bra,Brazil,RES-target,input-coefficient,ELEC_RES,ROOFTOP_PV,EN_CARRIER_ELEC,,,0.84,0.84,0.84,0.84,0.84,0.84,0.84,0.84,0.84,0.84,0.84,0.84,0.84,0.84,0.84,0.84
@@ -34,7 +34,8 @@ policy_biofuel_ind,India,biofuel-target,input-coefficient,REF_LIQ_TRN,BIOFUEL_AL
 policy_biofuel_idn,Indonesia,biofuel-target,input-coefficient,REF_LIQ_TRN,BIOFUEL_NODIESEL,,,,0.085,0.17,0.17,0.17,0.17,0.17,0.17,0.17,0.17,0.17,0.17,0.17,0.17,0.17,0.17,0.17
 policy_biofuel_idn,Indonesia,biodiesel-target,input-coefficient,REF_LIQ_TRN,BIODIESEL,,,0.045,0.0525,0.0525,0.0525,0.0525,0.0525,0.0525,0.0525,0.0525,0.0525,0.0525,0.0525,0.0525,0.0525,0.0525,0.0525,0.0525
 policy_res_idn,Indonesia,RES-target,input-coefficient,ELEC_RES,ROOFTOP_PV,EN_CARRIER_ELEC,,,0.23,0.23,0.23,0.23,0.23,0.23,0.23,0.23,0.23,0.23,0.23,0.23,0.23,0.23,0.23,0.23
-policy_res_jap,Japan,RES-target,input-coefficient,ELEC_RES,ROOFTOP_PV,EN_CARRIER_ELEC,,0.18,0.275,0.37,0.37,0.37,0.37,0.37,0.37,0.37,0.37,0.37,0.37,0.37,0.37,0.37,0.37,0.37
+policy_res_jpn,Japan,RES-target,input-coefficient,ELEC_RES,ROOFTOP_PV,EN_CARRIER_ELEC,,0.18,0.275,0.37,0.37,0.37,0.37,0.37,0.37,0.37,0.37,0.37,0.37,0.37,0.37,0.37,0.37,0.37
+policy_coal_jpn,Japan,coal-target,input-coefficient,ELEC_RES,,ELEC_COAL_NO_CCS,,0.19,0.19,0.19,,,,,,,,,,,,,,
 policy_res_mex,Mexico,RES-target,input-coefficient,ELEC_RES,ROOFTOP_PV,EN_CARRIER_ELEC,,0.25,0.3,0.35,0.4,0.433,0.467,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5
 policy_res_saudi,Middle East,RES-target,input-coefficient,ELEC_RES,ROOFTOP_PV,EN_CARRIER_ELEC,,,0.2,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3
 policy_elecresid_rus,Russia,elec_resid,input-coefficient,RESID,RESID_ELEC,,,,,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2

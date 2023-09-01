@@ -5,6 +5,10 @@
 # Column types: ccccccnnnnnnnn,,,,,,,,,,,,,
 # ----------,,,,,,,,,,,,,
 xml,region,supplysector,subsector,stub.technology,minicam.non.energy.input,2020,2025,2030,2035,2040,2045,2050,2100
+policy_fueltax_arg.xml,Argentina,delivered coal industry,delivered coal industry,delivered coal industry,fuel-tax,0.032,0.111,0.159,0.159,0.159,0.159,0.159,0.159
+policy_fueltax_arg.xml,Argentina,refined liquids enduse,refined liquids enduse,refined liquids enduse,fuel-tax,0.023,0.08,0.114,0.114,0.114,0.114,0.114,0.114
+policy_fueltax_arg.xml,Argentina,refined liquids industrial,refined liquids industrial,refined liquids industrial,fuel-tax,0.023,0.08,0.114,0.114,0.114,0.114,0.114,0.114
+policy_fueltax_arg.xml,Argentina,refined liquids transport,refined liquids transport,refined liquids transport,fuel-tax,0.023,0.08,0.114,0.114,0.114,0.114,0.114,0.114
 policy_fueltax_aus.xml,Australia_NZ,refined liquids transport,refined liquids transport,refined liquids transport,fuel-tax,3.340659341,3.340659341,3.340659341,3.340659341,3.340659341,3.340659341,3.340659341,3.340659341
 policy_fueltax_eu.xml,EU-15,refined liquids transport,refined liquids transport,refined liquids transport,fuel-tax,5.056995817,5.056995817,5.056995817,5.056995817,5.056995817,5.056995817,5.056995817,5.056995817
 policy_fueltax_eu.xml,EU-15,delivered gas transport,delivered gas transport,delivered gas transport,fuel-tax,1.073710891,1.073710891,1.073710891,1.073710891,1.073710891,1.073710891,1.073710891,1.073710891
