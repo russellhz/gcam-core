@@ -9,7 +9,7 @@ xml,link.type,market,ghgpolicy,year.fillout,market.overwrite,2020,2025,2030,2035
 policy_ctax_arg.xml,ALL_GHG,Argentina,GHG_arg,2030,,9.170197435,18.34039487,18.34039487,,,,,,,,,,,,,,
 policy_ctax_arg_2020.xml,ALL_GHG,Argentina,GHG_arg,2030,,9.170197435,,,,,,,,,,,,,,,,
 policy_ctax_can_GHG.xml,ALL_GHG,Canada,GHG_can,2030,,27.5,130.625,233.75,,,,,,,,,,,,,,
-policy_ctax_jpn_GHG.xml,ALL_GHG,Japan,GHG_jap,2030,,1.4,1.4,1.4,,,,,,,,,,,,,,
+policy_ctax_jpn_GHG.xml,ALL_GHG,Japan,GHG_jpn,2030,,1.4,1.4,1.4,,,,,,,,,,,,,,
 policy_ctax_mex_GHG.xml,ALL_GHG,Mexico,GHG_mex,2030,,1.75,1.75,1.75,,,,,,,,,,,,,,
 policy_ctax_saf.xml,ALL_GHG,South Africa,GHG_saf,2030,,0.32,1.2,6.2,,,,,,,,,,,,,,
 policy_ctax_usa_2020.xml,ALL_GHG,USA,GHG_usa,2030,,11.35591861,,,,,,,,,,,,,,,,

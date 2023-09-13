@@ -38,6 +38,7 @@ module_policy_L3222.CTax <- function(command, ...) {
       filter(!is.na(fixedTax)) %>%
       select(-link.type) %>%
       left_join(market_region_mappings, by = "market") %>%
+      tidyr::replace_na(list(market.overwrite = 0)) %>%
       mutate(region = if_else(!is.na(region), region, market),
              market = if_else(market.overwrite == 1, region, market)) %>%
       select(-market.overwrite)
@@ -45,6 +46,7 @@ module_policy_L3222.CTax <- function(command, ...) {
     # Get ghg link for each
     L3222.CTax_GHG_Link <- A_CTax %>%
       left_join(market_region_mappings, by = "market") %>%
+      tidyr::replace_na(list(market.overwrite = 0)) %>%
       mutate(region = if_else(!is.na(region), region, market),
              market = if_else(market.overwrite == 1, region, market)) %>%
       distinct(link.type, market, region, ghgpolicy) %>%
