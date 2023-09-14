@@ -7,7 +7,7 @@
 # ----------,,,,,,,,,,,,,,,,,,,,,,,
 xml,market,ghgpolicy,link.type,mapping.name,year.fillout,GDPIntensity_BaseYear,2020,2025,2030,2035,2040,2045,2050,2055,2060,2065,2070,2075,2080,2085,2090,2095,2100
 policy_ccapbuild_can.xml,Canada,CO2_building,,BUILD_SECTORS_NOCOOL,2030,,19.9403927,19.9403927,19.9403927,,,,,,,,,,,,,,
-policy_ccapind_chn.xml,China,CO2_industry,,CO2_CHINA_INDUSTRY,,2015,-18,-32,-32,-32,-32,-32,-32,-32,-32,-32,-32,-32,-32,-32,-32,-32,-32
+policy_ccapind_chn.xml,China,CO2_industry,,CO2_CHINA_INDUSTRY,,2015,-12,-28,-28,-28,-28,-28,-28,-28,-28,-28,-28,-28,-28,-28,-28,-28,-28
 policy_ccap_eu.xml,EU,CO2_ETS,,ETS,2030,,533.2535324,387.8102662,242.367,,,,,,,,,,,,,,
 policy_fgas_eu.xml,EU,FGAS,FGAS,,2050,,69.9,48.5,27.1,13.4,6.6,3.3,1.7,,,,,,,,,,
 policy_ccap_iron_steel_cement_jpn.xml,Japan,CO2_ironsteel,,IRONSTEEL,2030,,,35.7,28.6,,,,,,,,,,,,,,
