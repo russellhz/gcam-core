@@ -13,7 +13,7 @@ policy_biofuel_bra,Brazil,biodiesel-target,input-coefficient,REF_LIQ_TRN,BIODIES
 policy_res_bra,Brazil,RES-target,input-coefficient,ELEC_RES,ROOFTOP_PV,EN_CARRIER_ELEC,,,0.84,0.84,0.84,0.84,0.84,0.84,0.84,0.84,0.84,0.84,0.84,0.84,0.84,0.84,0.84,0.84
 policy_tpesres_bra,Brazil,TPES_RES,input-coefficient,PRIMARY_ENERGY,TPES_RENEWABLE,,,,0.45,0.48,0.48,0.48,0.48,0.48,0.48,0.48,0.48,0.48,0.48,0.48,0.48,0.48,0.48,0.48
 policy_tpesres_bra,Brazil,TPES_RES,pMultiplier,TRAD_BIO,,,,,0.45,0.48,0.48,0.48,0.48,0.48,0.48,0.48,0.48,0.48,0.48,0.48,0.48,0.48,0.48,0.48
-policy_biofuel_can,Canada,biofuel-target,input-coefficient,REF_LIQ_TRN,BIOFUEL_ALL,,,,0.05,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1
+policy_biofuel_can,Canada,biofuel-target,input-coefficient,REF_LIQ_TRN,BIOFUEL_ALL_PLUS_H2,,,,0.085,0.17,0.17,0.17,0.17,0.17,0.17,0.17,0.17,0.17,0.17,0.17,0.17,0.17,0.17,0.17
 policy_biofuel_chn,China,biofuel-target,input-coefficient,REF_LIQ_TRN,BIOFUEL_ALL,,,0.011,0.011,0.011,0.011,0.011,0.011,0.011,0.011,0.011,0.011,0.011,0.011,0.011,0.011,0.011,0.011,0.011
 policy_res_chn,China,RES-target,input-coefficient,ELEC_RES,ROOFTOP_PV,EN_CARRIER_ELEC,,0.265,0.39,0.39,0.39,0.39,0.39,0.39,0.39,0.39,0.39,0.39,0.39,0.39,0.39,0.39,0.39,0.39
 policy_tpesgas_chn,China,TPES_GAS,input-coefficient,TPES_GAS,REG_NAT_GAS,,,0.085,0.117,0.15,0.15,0.15,0.15,,,,,,,,,,,

@@ -25,6 +25,20 @@ BIOFUEL_ALL,refining,biomass liquids,corn ethanol
 BIOFUEL_ALL,refining,biomass liquids,sugar cane ethanol
 BIOFUEL_ALL,refining,biomass liquids,biodiesel
 BIOFUEL_ALL,refining,biomass liquids,BTL with hydrogen
+BIOFUEL_ALL_PLUS_H2,refining,biomass liquids,cellulosic ethanol
+BIOFUEL_ALL_PLUS_H2,refining,biomass liquids,cellulosic ethanol CCS level 1
+BIOFUEL_ALL_PLUS_H2,refining,biomass liquids,cellulosic ethanol CCS level 2
+BIOFUEL_ALL_PLUS_H2,refining,biomass liquids,FT biofuels
+BIOFUEL_ALL_PLUS_H2,refining,biomass liquids,FT biofuels CCS level 1
+BIOFUEL_ALL_PLUS_H2,refining,biomass liquids,FT biofuels CCS level 2
+BIOFUEL_ALL_PLUS_H2,refining,biomass liquids,corn ethanol
+BIOFUEL_ALL_PLUS_H2,refining,biomass liquids,sugar cane ethanol
+BIOFUEL_ALL_PLUS_H2,refining,biomass liquids,biodiesel
+BIOFUEL_ALL_PLUS_H2,refining,biomass liquids,BTL with hydrogen
+BIOFUEL_ALL_PLUS_H2,H2 wholesale dispensing,H2 delivery,H2 liquid truck
+BIOFUEL_ALL_PLUS_H2,H2 wholesale dispensing,H2 delivery,H2 pipeline
+BIOFUEL_ALL_PLUS_H2,H2 wholesale dispensing,forecourt production,electrolysis
+BIOFUEL_ALL_PLUS_H2,H2 wholesale dispensing,forecourt production,natural gas steam reforming
 BIOFUEL_FOODFEED,refining,biomass liquids,corn ethanol
 BIOFUEL_FOODFEED,refining,biomass liquids,sugar cane ethanol
 BIOFUEL_FOODFEED,refining,biomass liquids,biodiesel
