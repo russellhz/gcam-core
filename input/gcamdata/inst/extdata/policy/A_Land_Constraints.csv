@@ -10,7 +10,7 @@ policy_affor_aus.xml,Australia_NZ,Forest,afforestation,NewZealand,128.55209,128.
 policy_affor_arg.xml,Argentina,^Forest,afforestation,,,41.32,43,44.5
 policy_affor_bra.xml,Brazil,Forest,afforestation,,3076.773594,3156.773594,3156.773594,3156.773594
 policy_affor_chn.xml,China,Forest,afforestation,,1481.348581,1574.279969,1667.211358,1667.211358
-policy_affor_col.xml,Colombia,Forest,afforestation,,465.073634,465.073634,465.073634,465.073634
+policy_affor_col.xml,Colombia,Forest,afforestation,,462.953634,464.013634,465.073634,465.073634
 policy_affor_ind.xml,India,Forest,afforestation,,264.0865448,284.0865448,304.0865448,304.0865448
 policy_affor_mex.xml,Mexico,Forest,afforestation,,65.06493204,65.06493204,65.06493204,65.06493204
 policy_grassland_chn.xml,China,Grassland;Shrubland;UnmanagedPasture,grass-protect,,2498.656984,2498.656984,2498.656984,2498.656984
