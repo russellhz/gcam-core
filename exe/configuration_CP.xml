@@ -106,18 +106,123 @@
 
 		<Value name = "solver">../input/solution/cal_broyden_config.xml</Value>
 
+        <Value name = "ARG_RES">../input/gcamdata/xml_policy/policy_res_arg.xml</Value>
+        <Value name = "ARG_FUEL_TAX">../input/gcamdata/xml_policy/policy_fueltax_arg.xml</Value>
+        <Value name = "ARG_BIO">../input/gcamdata/xml_policy/policy_biofuel_arg.xml</Value>
+        <!--Value name = "ARG_AFFOR">../input/gcamdata/xml_policy/policy_affor_arg.xml</Value-->
+
+        <Value name = "AUS_RES">../input/gcamdata/xml_policy/policy_res_aus.xml</Value>
+        <Value name = "AUS_TPES">../input/gcamdata/xml_policy/policy_tpes_aus.xml</Value>
+
+        <Value name = "BRA_RES">../input/gcamdata/xml_policy/policy_res_bra.xml</Value>
+        <Value name = "BRA_TPES">../input/gcamdata/xml_policy/policy_tpesres_bra.xml</Value>
+        <Value name = "BRA_BIO">../input/gcamdata/xml_policy/policy_biofuel_bra.xml</Value>
+
+        <Value name = "CAN_CTAX">../input/gcamdata/xml_policy/policy_ctax_can_GHG.xml</Value>
+        <Value name = "CAN_NOCOAL">../input/gcamdata/xml_policy/policy_coalPhaseout_can.xml</Value>
+        <Value name = "CAN_BLD">../input/gcamdata/xml_policy/policy_ccapbuild_can.xml</Value>
+        <Value name = "CAN_BIO">../input/gcamdata/xml_policy/policy_biofuel_can.xml</Value>
+
+        <Value name = "CHN_RES_ELEC">../input/gcamdata/xml_policy/policy_res_chn.xml</Value>
+        <Value name = "CHN_FE_ELEC">../input/gcamdata/xml_policy/policy_fe_elec_china.xml</Value>
+        <Value name = "CHN_GREENH2">../input/gcamdata/xml_policy/policy_greenH2_chn.xml</Value>
+        <Value name = "CHN_TPES">../input/gcamdata/xml_policy/policy_tpes_chn.xml</Value>
+        <!--Value name = "CHN_IND">../input/gcamdata/xml_policy/policy_ind_chn.xml</Value-->
+        <Value name = "CHN_HYDRO">../input/gcamdata/xml_policy/policy_hydro_fix_chn.xml</Value>
+        <Value name = "CHN_CCAP_IND">../input/gcamdata/xml_policy/policy_ccapind_chn.xml</Value>
+        <Value name = "CHN_FOREST">../input/gcamdata/xml_policy/policy_affor_grassland_chn.xml</Value>
+
+        <Value name = "COL_FOREST">../input/gcamdata/xml_policy/policy_affor_col.xml</Value>
+
+        <Value name = "EU_TPESRES">../input/gcamdata/xml_policy/policy_tpesRES_eu_UPDATE.xml</Value>
+        <Value name = "EU_ETS">../input/gcamdata/xml_policy/policy_ccap_eu.xml</Value>
+        <!--Value name = "EU_TPES">../input/gcamdata/xml_policy/policy_tpes_eu.xml</Value-->
+        <Value name = "EU_FE">../input/gcamdata/xml_policy/policy_fe_eu.xml</Value>
+        <Value name = "EU_H2">../input/gcamdata/xml_policy/policy_greenH2_eu.xml</Value>
+        <Value name = "EU_EV">../input/gcamdata/xml_policy/policy_4Wfuel_po_eu.xml</Value>
+        <Value name = "EU_RE">../input/gcamdata/xml_policy/policy_RE_targets_EU.xml</Value>
+        <Value name = "EU_BIO">../input/gcamdata/xml_policy/policy_biofuel_eu.xml</Value>
+        <Value name = "EU_NO_COAL">../input/gcamdata/xml_policy/policy_coalPhaseout_eu.xml</Value>
+        <Value name = "EU_EV_SHWTS">../input/gcamdata/xml_policy/policy_fuelst_mkt_eu_shwts.xml</Value>
+        <Value name = "EU_FUELST_LDV">../input/gcamdata/xml_policy/policy_fuelst_eu.xml</Value>
+        <Value name = "EU_FUELST_HDV">../input/gcamdata/xml_policy/policy_fuelst_eu_freight.xml</Value>
+
+        <Value name = "IDN_RES">../input/gcamdata/xml_policy/policy_res_idn.xml</Value>
+        <Value name = "IDN_CTAX">../input/gcamdata/xml_policy/policy_ctax_idn.xml</Value>
+        <Value name = "IDN_BIO">../input/gcamdata/xml_policy/policy_biofuel_idn.xml</Value>
+        <Value name = "IDN_HYDRO">../input/gcamdata/xml_policy/policy_hydro_fix_idn.xml</Value>
+        <Value name = "IDN_RE">../input/gcamdata/xml_policy/policy_RE_targets_idn.xml</Value>
+
+        <Value name = "IND_RE">../input/gcamdata/xml_policy/policy_RE_targets_ind.xml</Value>
+        <Value name = "IND_HYDRO">../input/gcamdata/xml_policy/policy_hydro_fix_ind.xml</Value>
+        <Value name = "IND_COOL">../input/gcamdata/xml_policy/policy_effcool_ind.xml</Value>
+        <Value name = "IND_BIO">../input/gcamdata/xml_policy/policy_biofuel_ind.xml</Value>
+        <Value name = "IND_H2">../input/gcamdata/xml_policy/policy_H2_targets_ind.xml</Value>
 
         <Value name = "JPN_CTAX">../input/gcamdata/xml_policy/policy_ctax_jpn_GHG.xml</Value>
         <Value name = "JPN_RES">../input/gcamdata/xml_policy/policy_res_jpn.xml</Value>
         <Value name = "JPN_H2">../input/gcamdata/xml_policy/policy_H2_jpn.xml</Value>
-
         <Value name = "JPN_CCAP">../input/gcamdata/xml_policy/policy_ccap_iron_steel_cement_jpn.xml</Value>
         <Value name = "JPN_NUC">../input/gcamdata/xml_policy/policy_nuclear_jpn.xml</Value>
         <Value name = "JPN_RES">../input/gcamdata/xml_policy/policy_RE_targets_jpn.xml</Value>
 
+        <Value name = "KOR_FE">../input/gcamdata/xml_policy/policy_fe_korea.xml</Value>
+        <Value name = "KOR_RES">../input/gcamdata/xml_policy/policy_res_kor.xml</Value>
+        <Value name = "KOR_H2">../input/gcamdata/xml_policy/policy_H2_korea.xml</Value>
+        <Value name = "KOR_BIO">../input/gcamdata/xml_policy/policy_biofuel_kor.xml</Value>
+
+        <Value name = "MEX_RES">../input/gcamdata/xml_policy/policy_res_mex.xml</Value>
+        <Value name = "MEX_CTAX">../input/gcamdata/xml_policy/policy_ctax_mex_GHG.xml</Value>
+
+        <Value name = "RUS_TPES">../input/gcamdata/xml_policy/policy_tpes_rus.xml</Value>
+        <Value name = "RUS_NUCEFF">../input/gcamdata/xml_policy/policy_nucEff_rus.xml</Value>
+        <Value name = "RUS_TDLOSS">../input/gcamdata/xml_policy/policy_tdloss_rus.xml</Value>
+
+        <Value name = "SAF_BIO">../input/gcamdata/xml_policy/policy_biofuel_saf.xml</Value>
+        <Value name = "SAF_CTAX">../input/gcamdata/xml_policy/policy_ctax_saf.xml</Value>
+        <Value name = "SAF_COAL">../input/gcamdata/xml_policy/policy_coal_cap_saf.xml</Value>
+        <Value name = "SAF_RENEW">../input/gcamdata/xml_policy/policy_RE_targets_saf.xml</Value>
+
+        <Value name = "SAUDI_RES">../input/gcamdata/xml_policy/policy_res_saudi.xml</Value>
+
+        <Value name = "TUR_RES">../input/gcamdata/xml_policy/policy_res_tur.xml</Value>
+        <Value name = "TUR_RE">../input/gcamdata/xml_policy/policy_RE_targets_tur.xml</Value>
+
+<!-------------------------------------USA---------------------------------------->
+        <Value name = "coal_shutdown">../input/gcamdata/xml_policy/USA_coal_exoshutdown.xml</Value>
+        <Value name = "no.new.coal.nuclear">../input/gcamdata/xml_policy/USA_no.new.coal.nuclear.xml</Value>
+        <Value name = "no.new.gas">../input/gcamdata/xml_policy/USA_no.new.gas2025_restart2040.xml</Value>
+        <Value name = "lowerBEVshrwt">../input/gcamdata/xml_policy/USA_LDV_EV_Shrwt.xml</Value>
+        <Value name = "dac">../input/gcamdata/xml/dac_ssp2.xml</Value>
+         <!--Small Carbon Price   THIS IS ONLY NEEDED IF THERE IS NO EMISSIONS CONSTRAINT LATER ON.  NEEDED TO GET CCS-->  
+         <Value name = "small_c_tax">../input/gcamdata/xml_policy/IRA_small_carbon_tax.xml</Value>
+      <!--IRA Provisions-->
+         <!--Elec-->
+         <Value name = "PTC">../input/gcamdata/xml_policy/IRA_PTC.xml</Value>
+         <Value name = "ITC">../input/gcamdata/xml_policy/IRA_ITC.xml</Value>
+         <Value name = "NuclearFixed">../input/gcamdata/xml_policy/IRA_nuclear_fixed.xml</Value>
+         <!--Transport-->
+         <Value name = "EV-tax-credit">../input/gcamdata/xml_policy/IRA_transport_tax_credits.xml</Value>
+		<Value name = "EV_fixedOutput">../input/gcamdata/xml_policy/USA_fixed_BEV_output.xml</Value>
+         <!--Buildings-->
+         <Value name = "45L_shell_eff">../input/gcamdata/xml_policy/IRA_building_eff_improvement_13304.xml</Value>
+         <!--Industry-->
+         <Value name = "hydrogen-subsidy">../input/gcamdata/xml_policy/IRA_H2_subsidy_mid.xml</Value>
+         <Value name = "45Q">../input/gcamdata/xml_policy/IRA_45Q.xml</Value>
+         <Value name = "biofuels">../input/gcamdata/xml_policy/IRA_biofuels.xml</Value>
+         <!--nonCO2-->
+         <Value name = "CH4_ag">../input/gcamdata/xml_policy/US_livestock_CH4_MAC.xml</Value>
+         <Value name = "CH4_ERP">../input/gcamdata/xml_policy/US_resource_CH4_mac.xml</Value>
+         <Value name = "CH4_Tax">../input/gcamdata/xml_policy/IRA_CH4_tax.xml</Value>
+<!-- END IRA -->
+         <Value name = "USA_RE">../input/gcamdata/xml_policy/policy_RE_targets_usa.xml</Value>
+<!-------------------------------------USA---------------------------------------->
+
+        <Value name = "kigali_MAC">../input/gcamdata/xml_policy/kigali_fgas_MAC.xml</Value>
+        <Value name = "kigali_tax">../input/gcamdata/xml_policy/Kigali_tax.xml</Value>
 	</ScenarioComponents>
 	<Strings>
-		<Value name="scenarioName">CP_JPN_WEO-EUREF</Value>
+		<Value name="scenarioName">CurrPol</Value>
 		<Value name="debug-region">USA</Value>
 		<Value name="MAGICC-input-dir">../input/magicc/inputs</Value>
 		<Value name="MAGICC-output-dir">../output</Value>
