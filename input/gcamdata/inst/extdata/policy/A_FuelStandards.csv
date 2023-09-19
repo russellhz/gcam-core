@@ -19,3 +19,9 @@ policy_fuelst_eu_freight.xml,CORE,EU-12,trn_freight_road,Medium truck,Liquids,re
 policy_fuelst_eu_freight.xml,CORE,EU-12,trn_freight_road,Medium truck,Hybrid Liquids,refined liquids transport,0,,0,0,0,0
 policy_fuelst_eu_freight.xml,CORE,EU-12,trn_freight_road,Heavy truck,Liquids,refined liquids transport,0,,0,0,0,0
 policy_fuelst_eu_freight.xml,CORE,EU-12,trn_freight_road,Heavy truck,Hybrid Liquids,refined liquids transport,0,,0,0,0,0
+policy_fuelst_eu_freight.xml,CORE,EU-15,trn_freight_road,Light truck,Liquids,refined liquids transport,0,,0,0,0,0
+policy_fuelst_eu_freight.xml,CORE,EU-15,trn_freight_road,Light truck,Hybrid Liquids,refined liquids transport,0,,0,0,0,0
+policy_fuelst_eu_freight.xml,CORE,EU-15,trn_freight_road,Medium truck,Liquids,refined liquids transport,0,,0,0,0,0
+policy_fuelst_eu_freight.xml,CORE,EU-15,trn_freight_road,Medium truck,Hybrid Liquids,refined liquids transport,0,,0,0,0,0
+policy_fuelst_eu_freight.xml,CORE,EU-15,trn_freight_road,Heavy truck,Liquids,refined liquids transport,0,,0,0,0,0
+policy_fuelst_eu_freight.xml,CORE,EU-15,trn_freight_road,Heavy truck,Hybrid Liquids,refined liquids transport,0,,0,0,0,0
