@@ -1,6 +1,6 @@
 # Copyright 2019 Battelle Memorial Institute; see the LICENSE file.
 
-#' module_policy_bld_shell.xml
+#' module_policy_bld_shell_size.xml
 #'
 #' Construct XML data structure for \code{policy_bld_shell.xml}.
 #'
@@ -9,11 +9,12 @@
 #' @return Depends on \code{command}: either a vector of required inputs,
 #' a vector of output names, or (if \code{command} is "MAKE") all
 #' the generated outputs: \code{policy_inputtax.xml}.
-module_policy_bld_shell.xml <- function(command, ...) {
-  all_xml_names <- get_xml_names("policy/A_building_shell.csv", "policy_bld_shell.xml")
+module_policy_bld_shell_size.xml <- function(command, ...) {
+  all_xml_names <- get_xml_names("policy/A_building_shell_size.csv", "policy_bld_shell.xml")
 
   if(command == driver.DECLARE_INPUTS) {
-    return(c("L344.bld_shell"))
+    return(c("L344.bld_shell",
+             "L344.bld_size"))
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(all_xml_names)
   } else if(command == driver.MAKE) {
@@ -22,6 +23,8 @@ module_policy_bld_shell.xml <- function(command, ...) {
 
     # Load required inputs
     L344.bld_shell <- get_data(all_data, "L344.bld_shell")
+    L344.bld_size <- get_data(all_data, "L344.bld_size")
+
     # ===================================================
 
     # Produce outputs
@@ -31,10 +34,15 @@ module_policy_bld_shell.xml <- function(command, ...) {
         filter(xml == xml_name) %>%
         select(-xml)
 
+      L344.bld_size_tmp <- L344.bld_size %>%
+        filter(xml == xml_name) %>%
+        select(-xml)
+
       assign(xml_name,
              create_xml(xml_name) %>%
                add_xml_data(L344.bld_shell_tmp, "ShellConductance") %>%
-               add_precursors("L344.bld_shell")
+               add_xml_data(L344.bld_size_tmp, "Floorspace") %>%
+               add_precursors("L344.bld_shell", "L344.bld_size")
       )
     }
 
