@@ -10,7 +10,7 @@ policy_ind_chn,China,ind-constraint,tax,2015,IND_EN,-18,,,,,,,,,,,,,,,,
 policy_greenH2_chn.xml,China,green_H2,subsidy,,GREEN_H2,,0.0180315,0.0180315,0.0180315,0.0180315,0.0180315,0.0180315,0.0180315,0.0180315,0.0180315,0.0180315,0.0180315,0.0180315,0.0180315,0.0180315,0.0180315,0.0180315
 policy_tpes_chn,China,energy-constraint,tax,2015,PRIMARY_ENERGY,-15,-24,-24,-24,-24,-24,-24,-24,-24,-24,-24,-24,-24,-24,-24,-24,-24
 policy_NUC_chn,China,nuclear-target,subsidy,,ELEC_NUCLEAR,,1.99,1.99,1.99,1.99,1.99,1.99,1.99,1.99,1.99,1.99,1.99,1.99,1.99,1.99,1.99,1.99
-policy_fe_eu,EU,fe-constraint,tax,,FE_BUNKERS_NO_PV,49.62126404,40.78563202,31.95,31.95,31.95,31.95,31.95,31.95,31.95,31.95,31.95,31.95,31.95,31.95,31.95,31.95,31.95
+policy_fe_eu,EU,fe-constraint,tax,,FE_BUNKERS_NO_PV,41.014,37.885,34.757,34.757,34.757,34.757,34.757,34.757,34.757,34.757,34.757,34.757,34.757,34.757,34.757,34.757,34.757
 policy_tpes_eu,EU,energy-constraint,tax,,PRIMARY_ENERGY,,,41.57,41.57,41.57,41.57,41.57,41.57,41.57,41.57,41.57,41.57,41.57,41.57,41.57,41.57,41.57
 policy_RE_targets_EU,EU,PV-target,subsidy,,ELEC_PV,,1.81,3.41,3.41,3.41,3.41,3.41,3.41,3.41,3.41,3.41,3.41,3.41,3.41,3.41,3.41,3.41
 policy_RE_targets_EU,EU,offshore-target,subsidy,,ELEC_WIND_OFFSHORE,,,0.76,1.515,2.27,3.025,3.78,3.78,3.78,3.78,3.78,3.78,3.78,3.78,3.78,3.78,3.78
