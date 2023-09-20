@@ -146,6 +146,8 @@
         <Value name = "EU_EV_SHWTS">../input/gcamdata/xml_policy/policy_fuelst_mkt_eu_shwts.xml</Value>
         <Value name = "EU_FUELST_LDV">../input/gcamdata/xml_policy/policy_fuelst_eu.xml</Value>
         <Value name = "EU_FUELST_HDV">../input/gcamdata/xml_policy/policy_fuelst_eu_freight.xml</Value>
+        <Value name = "EU_BUILDINGS">../input/gcamdata/xml_policy/policy_building_shell_size_eu.xml</Value>
+        <Value name = "EU_ELASTICITY">../input/gcamdata/xml_policy/policy_elasticity_eu.xml</Value>
 
         <Value name = "IDN_RES">../input/gcamdata/xml_policy/policy_res_idn.xml</Value>
         <Value name = "IDN_CTAX">../input/gcamdata/xml_policy/policy_ctax_idn.xml</Value>
@@ -222,7 +224,7 @@
         <Value name = "kigali_tax">../input/gcamdata/xml_policy/Kigali_tax.xml</Value>
 	</ScenarioComponents>
 	<Strings>
-		<Value name="scenarioName">CurrPol</Value>
+		<Value name="scenarioName">CP_WEO</Value>
 		<Value name="debug-region">USA</Value>
 		<Value name="MAGICC-input-dir">../input/magicc/inputs</Value>
 		<Value name="MAGICC-output-dir">../output</Value>
