@@ -6,4 +6,7 @@
 # Column types: ccccnnni
 # ----------
 supplysector,subsector,technology,minicam.energy.input,coefficient,input.cost,share.weight,traded
-traded iron and steel,traded iron and steel,traded iron and steel,iron and steel,1,0,1,1
+traded low-carbon iron and steel,traded low-carbon iron and steel,traded low-carbon iron and steel,iron and steel,1,0,1,1
+traded low-carbon iron and steel,traded low-carbon iron and steel,traded low-carbon iron and steel,Low-carbon iron and steel,1,0,1,1
+traded high-carbon iron and steel,traded high-carbon iron and steel,traded high-carbon iron and steel,iron and steel,1,0,1,1
+traded high-carbon iron and steel,traded high-carbon iron and steel,traded high-carbon iron and steel,High-carbon iron and steel,1,0,1,1
