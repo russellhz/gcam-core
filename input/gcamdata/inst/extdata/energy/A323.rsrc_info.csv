@@ -1,0 +1,8 @@
+# File: A323.rsrc_info.csv
+# Title: Name and characteristics of resource for secondary outputs from iron and steel
+# Units: 1975$/kg
+# Column types: cccc
+# ----------
+resource,market,output-unit,price-unit
+Low-carbon iron and steel,regional,Mt,1975$/kg
+High-carbon iron and steel,regional,Mt,1975$/kg
