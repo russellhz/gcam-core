@@ -122,7 +122,7 @@ module_policy_L3221.CCap <- function(command, ...) {
     # CO2 constraints in most cases
     # For technologies, we need all regions
     tech_all_regions <- bind_rows(L3221.CCap_constraint, L3221.CCap_link_regions)  %>%
-      distinct(market, region, ghgpolicy, mapping.name)
+      distinct(xml, market, region, ghgpolicy, mapping.name)
 
     # Need to add all techs for the given regions/sectors
     # First for non-transport techs, then for transport techs, then for resources
@@ -141,7 +141,7 @@ module_policy_L3221.CCap <- function(command, ...) {
 
     L3221.CCap_tech_NAs <- L3221.CCap_tech %>%
       filter(is.na(stub.technology)) %>%
-      distinct(CO2, region, supplysector)
+      distinct(xml, CO2, region, supplysector)
 
     # If there are NAs, we need to remove them, but here we print a message with any NA sectors
     if (nrow(L3221.CCap_tech_NAs) > 0){
@@ -248,7 +248,7 @@ module_policy_L3221.CCap <- function(command, ...) {
 
     # 6. Get ghg link for each -------------------------
     L3221.CCap_GHG_Link <- A_CCap_Constraint %>%
-      distinct(link.type, market, ghgpolicy) %>%
+      distinct(xml, link.type, market, ghgpolicy) %>%
       left_join(market_region_mappings, by = "market") %>%
       mutate(region = if_else(!is.na(region), region, market)) %>%
       filter(!is.na(link.type)) %>%

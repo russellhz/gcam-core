@@ -55,23 +55,22 @@ module_policy_CCap_xml <- function(command, ...) {
         filter(xml == xml_name) %>%
         select(-xml)
 
-      tmp_market_region <- bind_rows(L3221.CCap_constraint_noFillout_tmp,
-                                     L3221.CCap_constraint_fillout_tmp,
-                                     L3221.CCap_link_regions_tmp) %>%
-        distinct(market, ghgpolicy, region)
-
       L3221.CCap_tech_tmp <- L3221.CCap_tech %>%
-        semi_join(tmp_market_region, by = c("region", "CO2" = "ghgpolicy"))
+        filter(xml == xml_name) %>%
+        select(-xml)
 
       L3221.CCap_tranTech_tmp <- L3221.CCap_tranTech %>%
-        semi_join(tmp_market_region, by = c("region", "CO2" = "ghgpolicy"))
+        filter(xml == xml_name) %>%
+        select(-xml)
 
       L3221.CCap_resource_tmp <- L3221.CCap_resource %>%
-        semi_join(tmp_market_region, by = c("region", "CO2" = "ghgpolicy"))
+        filter(xml == xml_name) %>%
+        select(-xml)
+
 
       L3221.CCap_GHG_Link_tmp <- L3221.CCap_GHG_Link %>%
-        semi_join(tmp_market_region, by = c("region", "linked.policy" = "ghgpolicy"))
-
+        filter(xml == xml_name) %>%
+        select(-xml)
       # Produce outputs
       assign(xml_name,
              create_xml(xml_name) %>%
