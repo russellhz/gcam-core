@@ -118,7 +118,8 @@
         <Value name = "BRA_TPES">../input/gcamdata/xml_policy/policy_tpesres_bra.xml</Value>
         <Value name = "BRA_BIO">../input/gcamdata/xml_policy/policy_biofuel_bra.xml</Value>
 
-        <Value name = "CAN_CTAX">../input/gcamdata/xml_policy/policy_ctax_can_GHG.xml</Value>
+   <!----CHANGED CTAX TO STOP IN 2030 BECAUSE OF GHG CAP-->
+        <Value name = "CAN_CTAX">../input/gcamdata/xml_policy/policy_ctax_can_GHG_2030.xml</Value>
         <Value name = "CAN_NOCOAL">../input/gcamdata/xml_policy/policy_coalPhaseout_can.xml</Value>
         <Value name = "CAN_BLD">../input/gcamdata/xml_policy/policy_ccapbuild_can.xml</Value>
         <Value name = "CAN_BIO">../input/gcamdata/xml_policy/policy_biofuel_can.xml</Value>
@@ -161,7 +162,8 @@
         <Value name = "IND_BIO">../input/gcamdata/xml_policy/policy_biofuel_ind.xml</Value>
         <Value name = "IND_H2">../input/gcamdata/xml_policy/policy_H2_targets_ind.xml</Value>
 
-        <Value name = "JPN_CTAX">../input/gcamdata/xml_policy/policy_ctax_jpn_GHG.xml</Value>
+   <!----CHANGED CTAX TO STOP IN 2030 BECAUSE OF GHG CAP-->
+        <Value name = "JPN_CTAX">../input/gcamdata/xml_policy/policy_ctax_jpn_GHG_2030.xml</Value>
         <Value name = "JPN_RES">../input/gcamdata/xml_policy/policy_res_jpn.xml</Value>
         <Value name = "JPN_H2">../input/gcamdata/xml_policy/policy_H2_jpn.xml</Value>
         <Value name = "JPN_CCAP">../input/gcamdata/xml_policy/policy_ccap_iron_steel_cement_jpn.xml</Value>
@@ -197,7 +199,8 @@
         <Value name = "lowerBEVshrwt">../input/gcamdata/xml_policy/USA_LDV_EV_Shrwt.xml</Value>
         <Value name = "dac">../input/gcamdata/xml/dac_ssp2.xml</Value>
          <!--Small Carbon Price   THIS IS ONLY NEEDED IF THERE IS NO EMISSIONS CONSTRAINT LATER ON.  NEEDED TO GET CCS-->  
-         <Value name = "small_c_tax">../input/gcamdata/xml_policy/IRA_small_carbon_tax.xml</Value>
+   <!----CHANGED CTAX TO STOP IN 2030 BECAUSE OF GHG CAP-->
+         <Value name = "small_c_tax">../input/gcamdata/xml_policy/IRA_small_carbon_tax_2030.xml</Value>
       <!--IRA Provisions-->
          <!--Elec-->
          <Value name = "PTC">../input/gcamdata/xml_policy/IRA_PTC.xml</Value>
@@ -222,9 +225,12 @@
 
         <Value name = "kigali_MAC">../input/gcamdata/xml_policy/kigali_fgas_MAC.xml</Value>
         <Value name = "kigali_tax">../input/gcamdata/xml_policy/Kigali_tax.xml</Value>
+        <Value name = "nonCo2_MAC_price">../input/gcamdata/xml_policy/price_nonco2_mac_CP.xml</Value>
+        <Value name = "nonCo2_MAC_price_post2030">../input/gcamdata/xml_policy/price_nonco2_mac_CP_post2030.xml</Value>
+        <Value name = "GHG_caps_post2030">../input/gcamdata/xml_policy/policy_GHG_constraint_post2030_CP_nonzero_adjust2035.xml</Value>
 	</ScenarioComponents>
 	<Strings>
-		<Value name="scenarioName">CP_WEO</Value>
+		<Value name="scenarioName">CP_WEO_EI</Value>
 		<Value name="debug-region">USA</Value>
 		<Value name="MAGICC-input-dir">../input/magicc/inputs</Value>
 		<Value name="MAGICC-output-dir">../output</Value>
