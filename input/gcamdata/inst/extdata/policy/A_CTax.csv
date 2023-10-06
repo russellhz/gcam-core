@@ -6,8 +6,8 @@
 # Column types: cccciinnnnnnnnnnnnnnnnn,,,,,,,,,,,,,,,,,,,,,,
 # ----------,,,,,,,,,,,,,,,,,,,,,,
 xml,link.type,market,ghgpolicy,year.fillout,market.overwrite,2020,2025,2030,2035,2040,2045,2050,2055,2060,2065,2070,2075,2080,2085,2090,2095,2100
-policy_ctax_can_GHG_2030.xml,GHG_NO_LUC,Canada,GHG,,,27.5,130.625,233.75,,,,,,,,,,,,,,
-policy_ctax_can_GHG.xml,GHG_NO_LUC,Canada,GHG,2030,,27.5,130.625,233.75,,,,,,,,,,,,,,
+policy_ctax_can_GHG_2030.xml,ALL_GHG_LUC_PRICE_p0175,Canada,GHG,,,27.5,130.625,233.75,,,,,,,,,,,,,,
+policy_ctax_can_GHG.xml,ALL_GHG_LUC_PRICE_p0175,Canada,GHG,2030,,27.5,130.625,233.75,,,,,,,,,,,,,,
 policy_ctax_jpn_GHG_2030.xml,GHG_NO_LUC,Japan,GHG,,,1.4,1.4,1.4,,,,,,,,,,,,,,
 policy_ctax_jpn_GHG.xml,GHG_NO_LUC,Japan,GHG,2030,,1.4,1.4,1.4,,,,,,,,,,,,,,
 policy_ctax_mex_GHG_2030.xml,GHG_NO_LUC,Mexico,GHG,,,1.75,1.75,1.75,,,,,,,,,,,,,,
