@@ -44,8 +44,8 @@ module_policy_CTax.xml <- function(command, ...) {
         select(-xml)
 
       L3222.CTax_GHG_Link_tmp <- L3222.CTax_GHG_Link %>%
-        semi_join(bind_rows(L3222.CTax_noFillout_tmp, L3222.CTax_fillout_tmp),
-                  by = c("linked.policy" = "ghgpolicy"  ))
+        filter(xml == xml_name) %>%
+        select(-xml)
 
       L3222.CTax_GHG_Link_CO2_2020_tmp <- L3222.CTax_GHG_Link_tmp %>%
         filter(linked.ghg.policy == "CO2") %>%

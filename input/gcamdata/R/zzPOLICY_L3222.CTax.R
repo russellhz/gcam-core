@@ -49,7 +49,7 @@ module_policy_L3222.CTax <- function(command, ...) {
       tidyr::replace_na(list(market.overwrite = 0)) %>%
       mutate(region = if_else(!is.na(region), region, market),
              market = if_else(market.overwrite == 1, region, market)) %>%
-      distinct(link.type, market, region, ghgpolicy) %>%
+      distinct(xml, link.type, market, region, ghgpolicy) %>%
       filter(!is.na(link.type)) %>%
       left_join(ghg_link, by = "link.type") %>%
       rename(linked.policy = ghgpolicy) %>%
