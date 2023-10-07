@@ -90,34 +90,34 @@ policy_GHG_constraint_2030_NDC.xml,South Asia,GHG,GHG_NO_LUC,,,,469.4256244,526.
 policy_GHG_constraint_2030_NDC.xml,South Korea,GHG,GHG_NO_LUC,,,,747.2218341,592.1109171,437,,,,,,,,,,,,,,
 policy_GHG_constraint_2030_NDC.xml,Southeast Asia,GHG,GHG_NO_LUC,,,,2648.443387,2613.403045,2578.362703,,,,,,,,,,,,,,
 policy_GHG_constraint_2030_NDC.xml,USA,GHG,GHG_NO_LUC_DEMAND,,,,5893.503443,4834.201722,3774.9,,,,,,,,,,,,,,
-policy_GHG_constraint_2030_NDC_2020removals.xml,Africa_Eastern,nonCO2,ALL_GHG,,,,,880.3181858,998.8373524,,,,,,,,,,,,,,
-policy_GHG_constraint_2030_NDC_2020removals.xml,Africa_Northern,nonCO2,ALL_GHG,,,,,1045.671403,1162.679958,,,,,,,,,,,,,,
-policy_GHG_constraint_2030_NDC_2020removals.xml,Africa_Southern,nonCO2,ALL_GHG,,,,,653.4103983,587.205093,,,,,,,,,,,,,,
-policy_GHG_constraint_2030_NDC_2020removals.xml,Africa_Western,nonCO2,ALL_GHG,,,,,1455.233588,1385.581013,,,,,,,,,,,,,,
-policy_GHG_constraint_2030_NDC_2020removals.xml,Argentina,nonCO2,ALL_GHG,,,,,401.9143388,349,,,,,,,,,,,,,,
-policy_GHG_constraint_2030_NDC_2020removals.xml,Australia_NZ,nonCO2,ALL_GHG,,,,,559.4280203,362,,,,,,,,,,,,,,
-policy_GHG_constraint_2030_NDC_2020removals.xml,Brazil,nonCO2,ALL_GHG,,,,1689.550349,1432.775175,1176,,,,,,,,,,,,,,
-policy_GHG_constraint_2030_NDC_2020removals.xml,Canada,nonCO2,ALL_GHG,,,,556.2328906,497.1164453,438,,,,,,,,,,,,,,
-policy_GHG_constraint_2030_NDC_2020removals.xml,Central America and Caribbean,nonCO2,ALL_GHG,,,,,359.8988001,336.8569778,,,,,,,,,,,,,,
-policy_GHG_constraint_2030_NDC_2020removals.xml,Central Asia,nonCO2,ALL_GHG,,,,,807.5459166,837.1278718,,,,,,,,,,,,,,
+policy_GHG_constraint_2030_NDC_2020removals.xml,Africa_Eastern,GHG,ALL_GHG,,,,,880.3181858,998.8373524,,,,,,,,,,,,,,
+policy_GHG_constraint_2030_NDC_2020removals.xml,Africa_Northern,GHG,ALL_GHG,,,,,1045.671403,1162.679958,,,,,,,,,,,,,,
+policy_GHG_constraint_2030_NDC_2020removals.xml,Africa_Southern,GHG,ALL_GHG,,,,,653.4103983,587.205093,,,,,,,,,,,,,,
+policy_GHG_constraint_2030_NDC_2020removals.xml,Africa_Western,GHG,ALL_GHG,,,,,1455.233588,1385.581013,,,,,,,,,,,,,,
+policy_GHG_constraint_2030_NDC_2020removals.xml,Argentina,GHG,ALL_GHG,,,,,401.9143388,349,,,,,,,,,,,,,,
+policy_GHG_constraint_2030_NDC_2020removals.xml,Australia_NZ,GHG,ALL_GHG,,,,,559.4280203,362,,,,,,,,,,,,,,
+policy_GHG_constraint_2030_NDC_2020removals.xml,Brazil,GHG,ALL_GHG,,,,,1432.775175,1176,,,,,,,,,,,,,,
+policy_GHG_constraint_2030_NDC_2020removals.xml,Canada,GHG,ALL_GHG,,,,728,583,438,,,,,,,,,,,,,,
+policy_GHG_constraint_2030_NDC_2020removals.xml,Central America and Caribbean,GHG,ALL_GHG,,,,,359.8988001,336.8569778,,,,,,,,,,,,,,
+policy_GHG_constraint_2030_NDC_2020removals.xml,Central Asia,GHG,ALL_GHG,,,,,807.5459166,837.1278718,,,,,,,,,,,,,,
 policy_GHG_constraint_2030_NDC_2020removals.xml,China,GHG,CO2_FFI,,,,11889.25382,12026.30127,12163.34872,,,,,,,,,,,,,,
-policy_GHG_constraint_2030_NDC_2020removals.xml,Colombia,nonCO2,ALL_GHG,,,,245.350646,207.425323,169.5,,,,,,,,,,,,,,
-policy_GHG_constraint_2030_NDC_2020removals.xml,EU,nonCO2,ALL_GHG,,,,3688.88673,2995.443365,2302,,,,,,,,,,,,,,
-policy_GHG_constraint_2030_NDC_2020removals.xml,Europe_Eastern,nonCO2,ALL_GHG,,,,,514.4554728,479,,,,,,,,,,,,,,
-policy_GHG_constraint_2030_NDC_2020removals.xml,Europe_Non_EU,nonCO2,ALL_GHG,,,,704.8070007,742.4035004,780,,,,,,,,,,,,,,
-policy_GHG_constraint_2030_NDC_2020removals.xml,European Free Trade Association,nonCO2,ALL_GHG,,,,,436.8581541,312,,,,,,,,,,,,,,
-policy_GHG_constraint_2030_NDC_2020removals.xml,India,nonCO2,ALL_GHG,,,,4081.51297,4858.200248,5634.887525,,,,,,,,,,,,,,
-policy_GHG_constraint_2030_NDC_2020removals.xml,Indonesia,nonCO2,ALL_GHG,,,,1422.535839,1688.30587,1954.0759,,,,,,,,,,,,,,
-policy_GHG_constraint_2030_NDC_2020removals.xml,Japan,nonCO2,ALL_GHG,,,,1254.795845,1007.397923,760,,,,,,,,,,,,,,
-policy_GHG_constraint_2030_NDC_2020removals.xml,Mexico,nonCO2,ALL_GHG,,,,789.6861138,716.8430569,644,,,,,,,,,,,,,,
-policy_GHG_constraint_2030_NDC_2020removals.xml,Middle East,nonCO2,ALL_GHG,,,,2975.848582,2790.188322,2604.528063,,,,,,,,,,,,,,
-policy_GHG_constraint_2030_NDC_2020removals.xml,Russia,nonCO2,ALL_GHG,,,,2393.022665,2432.511332,2472,,,,,,,,,,,,,,
-policy_GHG_constraint_2030_NDC_2020removals.xml,South Africa,nonCO2,ALL_GHG,,,,602.0734092,551.0367046,500,,,,,,,,,,,,,,
-policy_GHG_constraint_2030_NDC_2020removals.xml,South America_Southern,nonCO2,ALL_GHG,,,,,561.6514076,479.5323977,,,,,,,,,,,,,,
-policy_GHG_constraint_2030_NDC_2020removals.xml,South Asia,nonCO2,ALL_GHG,,,,469.4256244,526.1401942,582.854764,,,,,,,,,,,,,,
-policy_GHG_constraint_2030_NDC_2020removals.xml,South Korea,nonCO2,ALL_GHG,,,,747.2218341,592.1109171,437,,,,,,,,,,,,,,
-policy_GHG_constraint_2030_NDC_2020removals.xml,Southeast Asia,nonCO2,ALL_GHG,,,,,2613.403045,2578.362703,,,,,,,,,,,,,,
-policy_GHG_constraint_2030_NDC_2020removals.xml,USA,nonCO2,GHG_NO_LUC_DEMAND,,,,5893.503443,4834.201722,3774.9,,,,,,,,,,,,,,
+policy_GHG_constraint_2030_NDC_2020removals.xml,Colombia,GHG,ALL_GHG,,,,245.350646,207.425323,169.5,,,,,,,,,,,,,,
+policy_GHG_constraint_2030_NDC_2020removals.xml,EU,GHG,ALL_GHG,,,,3688.88673,2995.443365,2302,,,,,,,,,,,,,,
+policy_GHG_constraint_2030_NDC_2020removals.xml,Europe_Eastern,GHG,ALL_GHG,,,,,514.4554728,479,,,,,,,,,,,,,,
+policy_GHG_constraint_2030_NDC_2020removals.xml,Europe_Non_EU,GHG,ALL_GHG,,,,704.8070007,742.4035004,780,,,,,,,,,,,,,,
+policy_GHG_constraint_2030_NDC_2020removals.xml,European Free Trade Association,GHG,ALL_GHG,,,,,436.8581541,312,,,,,,,,,,,,,,
+policy_GHG_constraint_2030_NDC_2020removals.xml,India,GHG,ALL_GHG,,,,4081.51297,4858.200248,5634.887525,,,,,,,,,,,,,,
+policy_GHG_constraint_2030_NDC_2020removalsNOINCLUDE.xml,Indonesia,GHG,ALL_GHG,,,,1422.535839,1688.30587,1954.0759,,,,,,,,,,,,,,
+policy_GHG_constraint_2030_NDC_2020removals.xml,Japan,GHG,ALL_GHG,,,,1254.795845,1007.397923,760,,,,,,,,,,,,,,
+policy_GHG_constraint_2030_NDC_2020removals.xml,Mexico,GHG,ALL_GHG,,,,789.6861138,716.8430569,644,,,,,,,,,,,,,,
+policy_GHG_constraint_2030_NDC_2020removals.xml,Middle East,GHG,ALL_GHG,,,,2975.848582,2790.188322,2604.528063,,,,,,,,,,,,,,
+policy_GHG_constraint_2030_NDC_2020removals.xml,Russia,GHG,ALL_GHG,,,,2393.022665,2432.511332,2472,,,,,,,,,,,,,,
+policy_GHG_constraint_2030_NDC_2020removals.xml,South Africa,GHG,ALL_GHG,,,,602.0734092,551.0367046,500,,,,,,,,,,,,,,
+policy_GHG_constraint_2030_NDC_2020removals.xml,South America_Southern,GHG,ALL_GHG,,,,,561.6514076,479.5323977,,,,,,,,,,,,,,
+policy_GHG_constraint_2030_NDC_2020removals.xml,South Asia,GHG,ALL_GHG,,,,469.4256244,526.1401942,582.854764,,,,,,,,,,,,,,
+policy_GHG_constraint_2030_NDC_2020removals.xml,South Korea,GHG,ALL_GHG,,,,747.2218341,592.1109171,437,,,,,,,,,,,,,,
+policy_GHG_constraint_2030_NDC_2020removals.xml,Southeast Asia,GHG,ALL_GHG,,,,,2613.403045,2578.362703,,,,,,,,,,,,,,
+policy_GHG_constraint_2030_NDC_2020removals.xml,USA,GHG,GHG_NO_LUC_DEMAND,,,,5893.503443,4834.201722,3774.9,,,,,,,,,,,,,,
 policy_GHG_constraint_post2030_CP_nonzero.xml,Argentina,GHG,ALL_GHG,,,,,,,509.3428936,527.2133264,535.5207368,539.4516943,542.1421457,543.4670255,542.876406,555.7899436,563.7279673,567.2118853,567.0443957,566.0015416,561.7316987,558.3511428
 policy_GHG_constraint_post2030_CP_nonzero.xml,Australia_NZ,GHG,ALL_GHG,,,,,,,675.1332345,659.4948865,640.174331,620.8236534,597.4327024,575.0108223,554.0237894,534.4231504,511.0764272,487.5782194,467.0529561,447.6294907,428.9333133,413.3703035
 policy_GHG_constraint_post2030_CP_nonzero.xml,Brazil,GHG,ALL_GHG,,,,,,,1986.309581,,,,,,,,,,,,,
@@ -156,31 +156,62 @@ policy_GHG_constraint_2030_NDC_withCP.xml,South Asia,GHG,ALL_GHG,,,,469.4256244,
 policy_GHG_constraint_2030_NDC_withCP.xml,South Korea,GHG,ALL_GHG,,,,747.2218341,592.1109171,437,,,,,,,,,,,,,,
 policy_GHG_constraint_2030_NDC_withCP.xml,Southeast Asia,GHG,ALL_GHG,,,,,2613.403045,2578.362703,,,,,,,,,,,,,,
 policy_GHG_constraint_2030_NDC_withCP.xml,USA,GHG,GHG_NO_LUC_DEMAND,,,,5893.503443,4834.201722,3774.9,,,,,,,,,,,,,,
-policy_GHG_constraint_post2030_NDC.xml,Africa_Eastern,GHG,ALL_GHG,,,,,880.3181858,998.8373524,,,,,,,,,,,,,,
-policy_GHG_constraint_post2030_NDC.xml,Africa_Northern,GHG,ALL_GHG,,,,,1045.671403,1162.679958,,,,,,,,,,,,,,
-policy_GHG_constraint_post2030_NDC.xml,Africa_Southern,GHG,ALL_GHG,,,,,653.4103983,587.205093,,,,,,,,,,,,,,
-policy_GHG_constraint_post2030_NDC.xml,Africa_Western,GHG,ALL_GHG,,,,,1455.233588,1385.581013,,,,,,,,,,,,,,
-policy_GHG_constraint_post2030_NDC.xml,Argentina,GHG,ALL_GHG,,,,,401.9143388,349,,,,,,,,,,,,,,
-policy_GHG_constraint_post2030_NDC.xml,Australia_NZ,GHG,ALL_GHG,,,,,559.4280203,362,,,,,,,,,,,,,,
-policy_GHG_constraint_post2030_NDC.xml,Brazil,GHG,ALL_GHG,,,,1689.550349,1432.775175,1176,,,,,,,,,,,,,,
-policy_GHG_constraint_post2030_NDC.xml,Canada,GHG,ALL_GHG,,,,556.2328906,497.1164453,438,,,,,,,,,,,,,,
-policy_GHG_constraint_post2030_NDC.xml,Central America and Caribbean,GHG,ALL_GHG,,,,,359.8988001,336.8569778,,,,,,,,,,,,,,
-policy_GHG_constraint_post2030_NDC.xml,Central Asia,GHG,ALL_GHG,,,,,807.5459166,837.1278718,,,,,,,,,,,,,,
-policy_GHG_constraint_post2030_NDC.xml,China,GHG,ALL_GHG,,,,11889.25382,12026.30127,12163.34872,,,,,,,,,,,,,,
-policy_GHG_constraint_post2030_NDC.xml,Colombia,GHG,ALL_GHG,,,,245.350646,207.425323,169.5,,,,,,,,,,,,,,
-policy_GHG_constraint_post2030_NDC.xml,EU,GHG,ALL_GHG,,,,3688.88673,2995.443365,2302,,,,,,,,,,,,,,
-policy_GHG_constraint_post2030_NDC.xml,Europe_Eastern,GHG,ALL_GHG,,,,,514.4554728,479,,,,,,,,,,,,,,
-policy_GHG_constraint_post2030_NDC.xml,Europe_Non_EU,GHG,ALL_GHG,,,,704.8070007,742.4035004,780,,,,,,,,,,,,,,
-policy_GHG_constraint_post2030_NDC.xml,European Free Trade Association,GHG,ALL_GHG,,,,,436.8581541,312,,,,,,,,,,,,,,
-policy_GHG_constraint_post2030_NDC.xml,India,GHG,ALL_GHG,,,,4081.51297,4858.200248,5634.887525,,,,,,,,,,,,,,
-policy_GHG_constraint_post2030_NDC.xml,Indonesia,GHG,ALL_GHG,,,,1422.535839,1688.30587,1954.0759,,,,,,,,,,,,,,
-policy_GHG_constraint_post2030_NDC.xml,Japan,GHG,ALL_GHG,,,,1254.795845,1007.397923,760,,,,,,,,,,,,,,
-policy_GHG_constraint_post2030_NDC.xml,Mexico,GHG,ALL_GHG,,,,789.6861138,716.8430569,644,,,,,,,,,,,,,,
-policy_GHG_constraint_post2030_NDC.xml,Middle East,GHG,ALL_GHG,,,,2975.848582,2790.188322,2604.528063,,,,,,,,,,,,,,
-policy_GHG_constraint_post2030_NDC.xml,Russia,GHG,ALL_GHG,,,,2393.022665,2432.511332,2472,,,,,,,,,,,,,,
-policy_GHG_constraint_post2030_NDC.xml,South Africa,GHG,ALL_GHG,,,,602.0734092,551.0367046,500,,,,,,,,,,,,,,
-policy_GHG_constraint_post2030_NDC.xml,South America_Southern,GHG,ALL_GHG,,,,,561.6514076,479.5323977,,,,,,,,,,,,,,
-policy_GHG_constraint_post2030_NDC.xml,South Asia,GHG,ALL_GHG,,,,469.4256244,526.1401942,582.854764,,,,,,,,,,,,,,
-policy_GHG_constraint_post2030_NDC.xml,South Korea,GHG,ALL_GHG,,,,747.2218341,592.1109171,437,,,,,,,,,,,,,,
-policy_GHG_constraint_post2030_NDC.xml,Southeast Asia,GHG,ALL_GHG,,,,,2613.403045,2578.362703,,,,,,,,,,,,,,
-policy_GHG_constraint_post2030_NDC.xml,USA,GHG,ALL_GHG,,,,5893.503443,4834.201722,3774.9,,,,,,,,,,,,,,
+policy_GHG_constraint_post2030_NDCREMOVE.xml,Africa_Eastern,GHG,ALL_GHG,,,,,,,1305.521841,1758.505836,2379.153248,3213.875241,4317.935775,5754.46216,7596.57483,9927.317707,12823.3802,16347.495,20543.91158,25449.19015,31163.23296,37714.18557
+policy_GHG_constraint_post2030_NDCREMOVE.xml,Africa_Northern,GHG,ALL_GHG,,,,,,,1461.180216,1854.610179,2295.793219,2793.856996,3357.607957,4016.846629,4788.540408,5653.308962,6573.467458,7543.667477,8578.17147,9669.371771,10756.92961,11880.06674
+policy_GHG_constraint_post2030_NDC.xml,Africa_Southern,GHG,ALL_GHG,,,,,,,605.2702126,616.6838192,638.1666396,669.8687935,709.4347347,752.2134008,794.5636726,832.9478766,865.7098803,889.7482435,903.2207841,905.0211897,895.1353048,873.7541655
+policy_GHG_constraint_post2030_NDC.xml,Africa_Western,GHG,ALL_GHG,,,,,,,1513.181101,1789.980197,2105.56327,2461.676156,2856.269377,3283.353308,3732.086073,4184.609149,4637.542585,5067.809309,5453.383672,5778.683135,6033.357596,6214.033991
+policy_GHG_constraint_post2030_NDC.xml,Argentina,GHG,ALL_GHG,,,,,,,140.0462159,121.039045,102.6581382,86.34707574,72.4579804,60.64908248,50.58595872,43.24318607,36.62305449,30.76863898,25.68372481,21.40605029,17.73886551,14.72252499
+policy_GHG_constraint_post2030_NDC.xml,Australia_NZ,GHG,ALL_GHG,,,,,,,249.0066526,169.1016374,114.1167919,76.93686225,51.47189101,34.44070783,23.06956369,15.47074214,10.28552946,6.821816241,4.542937503,3.026943018,2.016462961,1.350997866
+policy_GHG_constraint_post2030_NDC.xml,Brazil,GHG,ALL_GHG,,,,,,,424.304953,367.0200344,314.2268675,267.1504564,224.6288025,187.3655091,155.3817592,130.5745876,109.2440185,91.56090735,76.8154625,63.78741964,52.91747977,43.885002
+policy_GHG_constraint_post2030_NDC.xml,Canada,GHG,ALL_GHG,,,,,,,344.9697135,268.6946012,208.0736403,160.8393608,124.1017485,95.69237131,73.68157345,57.93582438,45.41371697,35.30882373,27.58255519,21.66843817,17.06043937,13.51290548
+policy_GHG_constraint_post2030_NDC.xml,Central America and Caribbean,GHG,ALL_GHG,,,,,,,325.1193495,313.4072965,299.7660926,285.459877,270.1821628,254.0998895,237.4861254,220.9593793,204.1914872,187.5029717,171.2480484,155.6629613,140.3355686,125.6811804
+policy_GHG_constraint_post2030_NDC.xml,Central Asia,GHG,ALL_GHG,,,,,,,588.3983354,665.749908,735.9149828,787.3896816,822.622075,851.0312943,885.4581678,927.4658763,966.9290664,994.5095134,1017.570394,1039.727478,1052.780098,1059.525954
+policy_GHG_constraint_post2030_NDC.xml,China,GHG,ALL_GHG,,,,,,,12881.05488,13421.15305,13263.61123,12748.67241,12038.90232,11401.04114,10726.6723,9992.663991,9244.128916,8559.753577,7833.63686,7082.074101,6246.554856,5526.737882
+policy_GHG_constraint_post2030_NDC.xml,Colombia,GHG,ALL_GHG,,,,,,,51.94407734,42.38029488,33.88922838,26.72448865,20.87439328,16.15657514,12.39611013,10.02810168,8.044432877,6.408584621,5.109956383,4.083372817,3.242029195,2.558345859
+policy_GHG_constraint_post2030_NDC.xml,EU,GHG,ALL_GHG,,,,,,,1832.508859,1440.972737,1142.05563,906.6120693,718.8984419,569.6521962,451.9603067,358.9518493,284.7269388,224.6559776,177.4811056,140.7168142,111.6832021,88.84565449
+policy_GHG_constraint_post2030_NDC.xml,Europe_Eastern,GHG,ALL_GHG,,,,,,,297.9804097,334.31357,364.9560184,391.7981476,414.0105794,435.4198541,458.0780808,482.6561933,509.707194,534.7827814,555.9251254,570.3126393,580.6107441,601.0079345
+policy_GHG_constraint_post2030_NDC.xml,Europe_Non_EU,GHG,ALL_GHG,,,,,,,846.3722149,910.6987766,951.2529834,979.4019261,999.9197874,1009.698162,1014.722871,1017.659299,1016.262138,1005.90126,991.7296479,973.6879478,948.3987334,918.4844789
+policy_GHG_constraint_post2030_NDC.xml,European Free Trade Association,GHG,ALL_GHG,,,,,,,233.0012974,171.851086,125.7310232,91.86611222,67.1240151,49.24856675,36.15247315,26.87271071,19.86489566,14.61322504,10.77158885,7.938537246,5.853034799,4.337285852
+policy_GHG_constraint_post2030_NDCREMOVE.xml,India,GHG,ALL_GHG,,,,,,,7460.717412,9363.595388,11193.8423,12975.41896,14742.89241,16595.92645,18577.88346,21035.15174,23536.68567,26038.92864,28498.01484,31004.27142,33527.79629,36124.73171
+policy_GHG_constraint_post2030_NDCREMOVE.xml,Indonesia,GHG,ALL_GHG,,,,,,,2453.136023,2941.112184,3439.853046,3952.439296,4479.201429,5019.561079,5580.824551,6389.345645,7216.917426,8053.28274,8971.292172,9892.878033,10813.28356,11779.99382
+policy_GHG_constraint_post2030_NDC.xml,Japan,GHG,ALL_GHG,,,,,,,588.8335524,457.3181315,352.5691054,271.1924456,207.7075447,159.9265058,124.4611109,97.09154237,75.61045744,58.69806151,45.61552279,35.70285832,28.10453152,22.25166223
+policy_GHG_constraint_post2030_NDC.xml,Mexico,GHG,ALL_GHG,,,,,,,604.1464852,569.5497511,529.551762,488.5698998,448.0276553,407.3320921,367.3917004,339.5059155,312.0100502,284.2141658,257.5908595,231.4610015,206.730148,184.9097905
+policy_GHG_constraint_post2030_NDC.xml,Middle East,GHG,ALL_GHG,,,,,,,2552.998859,2472.558715,2356.46399,2219.914129,2075.766181,1938.962409,1819.837163,1711.968894,1604.523576,1504.597319,1413.417771,1327.381304,1238.986857,1157.903154
+policy_GHG_constraint_post2030_NDCREMOVE.xml,Pakistan,GHG,ALL_GHG,,,,,,,823.200402,1070.553011,1395.014347,1818.77256,2356.235388,3021.721409,3825.202312,4792.49394,5945.746798,7275.232893,8721.336056,10331.28957,12100.16009,14077.6971
+policy_GHG_constraint_post2030_NDC.xml,Russia,GHG,ALL_GHG,,,,,,,2544.223639,2625.595077,2671.536772,2695.678172,2695.310888,2721.624247,2807.894494,2918.795516,3021.463671,3125.142444,3222.211671,3334.695608,3435.117834,3551.301119
+policy_GHG_constraint_post2030_NDC.xml,South Africa,GHG,ALL_GHG,,,,,,,479.7359735,482.8617892,481.0830543,471.1875402,459.994981,448.5085014,434.8285339,413.0145641,390.8617436,369.9454131,348.9732067,325.2230811,301.6411584,279.2892279
+policy_GHG_constraint_post2030_NDCREMOVE.xml,South America_Northern,GHG,ALL_GHG,,,,,,,720.5566326,840.3877191,964.6827599,1113.283163,1288.237322,1485.559564,1696.954857,1913.833471,2147.191033,2410.917012,2674.169541,2910.812264,3147.546779,3390.82746
+policy_GHG_constraint_post2030_NDC.xml,South America_Southern,GHG,ALL_GHG,,,,,,,420.0669569,370.0445264,323.3394197,280.2788147,241.4974468,207.1837428,176.6237618,151.4368408,128.9607344,109.1057639,91.96225055,76.86039404,63.68101128,52.58878174
+policy_GHG_constraint_post2030_NDCREMOVE.xml,South Asia,GHG,ALL_GHG,,,,,,,750.9152571,925.6120329,1134.655014,1376.506729,1644.669531,1950.464889,2294.302655,2670.36775,3080.071589,3516.9505,3961.565435,4414.400438,4912.215033,5431.412388
+policy_GHG_constraint_post2030_NDC.xml,South Korea,GHG,ALL_GHG,,,,,,,344.7989832,259.0822525,188.4931094,135.3446449,95.96467355,68.29259337,47.98536275,34.60085421,24.75296471,17.45760351,12.31582585,8.82497557,6.22241749,4.471241201
+policy_GHG_constraint_post2030_NDC.xml,Southeast Asia,GHG,ALL_GHG,,,,,,,2786.398102,2912.107276,3008.000285,3081.671401,3123.822862,3146.190115,3152.246526,3150.13315,3128.118902,3081.708208,3029.074217,2961.091204,2879.944022,2791.80884
+policy_GHG_constraint_post2030_NDCREMOVE.xml,Taiwan,GHG,ALL_GHG,,,,,,,534.9283327,576.4743595,614.3473224,643.5781615,662.1680769,672.1534803,681.6112434,713.8456558,745.835054,774.6929987,799.3814035,817.4759173,830.1811933,837.9464241
+policy_GHG_constraint_post2030_NDC.xml,USA,GHG,ALL_GHG,,,,,,,3218.435114,2702.387425,2240.667288,1855.900669,1535.575994,1271.095432,1049.341944,855.3634678,692.4271425,557.6575846,450.234102,364.2865132,294.9822125,240.0291021
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,

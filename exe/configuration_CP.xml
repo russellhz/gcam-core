@@ -106,9 +106,9 @@
 
 		<Value name = "solver">../input/solution/cal_broyden_config.xml</Value>
 
-        <Value name = "ARG_RES">../input/gcamdata/xml_policy/policy_res_arg.xml</Value>
+        <!--Value name = "ARG_RES">../input/gcamdata/xml_policy/policy_res_arg.xml</Value-->
         <Value name = "ARG_FUEL_TAX">../input/gcamdata/xml_policy/policy_fueltax_arg.xml</Value>
-        <Value name = "ARG_BIO">../input/gcamdata/xml_policy/policy_biofuel_arg.xml</Value>
+        <Value name = "ARG_BIO">../input/gcamdata/xml_policy/policy_biofuel_arg_2020.xml</Value>
         <!--Value name = "ARG_AFFOR">../input/gcamdata/xml_policy/policy_affor_arg.xml</Value-->
 
         <Value name = "AUS_RES">../input/gcamdata/xml_policy/policy_res_aus.xml</Value>
@@ -116,7 +116,7 @@
 
         <Value name = "BRA_RES">../input/gcamdata/xml_policy/policy_res_bra.xml</Value>
         <Value name = "BRA_TPES">../input/gcamdata/xml_policy/policy_tpesres_bra.xml</Value>
-        <Value name = "BRA_BIO">../input/gcamdata/xml_policy/policy_biofuel_bra.xml</Value>
+        <Value name = "BRA_BIO">../input/gcamdata/xml_policy/policy_biofuel_bra_2025.xml</Value>
 
    <!----CHANGED CTAX TO STOP IN 2030 BECAUSE OF GHG CAP-->
         <Value name = "CAN_CTAX">../input/gcamdata/xml_policy/policy_ctax_can_GHG_2030.xml</Value>
@@ -142,7 +142,7 @@
         <Value name = "EU_H2">../input/gcamdata/xml_policy/policy_greenH2_eu.xml</Value>
         <Value name = "EU_EV">../input/gcamdata/xml_policy/policy_4Wfuel_po_eu.xml</Value>
         <Value name = "EU_RE">../input/gcamdata/xml_policy/policy_RE_targets_EU.xml</Value>
-        <Value name = "EU_BIO">../input/gcamdata/xml_policy/policy_biofuel_eu.xml</Value>
+        <Value name = "EU_BIO">../input/gcamdata/xml_policy/policy_biofuel_eu_2030.xml</Value>
         <Value name = "EU_NO_COAL">../input/gcamdata/xml_policy/policy_coalPhaseout_eu.xml</Value>
         <Value name = "EU_EV_SHWTS">../input/gcamdata/xml_policy/policy_fuelst_mkt_eu_shwts.xml</Value>
         <Value name = "EU_FUELST_LDV">../input/gcamdata/xml_policy/policy_fuelst_eu.xml</Value>
@@ -156,7 +156,7 @@
         <Value name = "IDN_HYDRO">../input/gcamdata/xml_policy/policy_hydro_fix_idn.xml</Value>
         <Value name = "IDN_RE">../input/gcamdata/xml_policy/policy_RE_targets_idn.xml</Value>
 
-        <Value name = "IND_RE">../input/gcamdata/xml_policy/policy_RE_targets_ind.xml</Value>
+        <Value name = "IND_RE">../input/gcamdata/xml_policy/policy_RE_targets_ind_2030.xml</Value>
         <Value name = "IND_HYDRO">../input/gcamdata/xml_policy/policy_hydro_fix_ind.xml</Value>
         <Value name = "IND_COOL">../input/gcamdata/xml_policy/policy_effcool_ind.xml</Value>
         <Value name = "IND_BIO">../input/gcamdata/xml_policy/policy_biofuel_ind.xml</Value>
@@ -182,10 +182,10 @@
         <Value name = "RUS_NUCEFF">../input/gcamdata/xml_policy/policy_nucEff_rus.xml</Value>
         <Value name = "RUS_TDLOSS">../input/gcamdata/xml_policy/policy_tdloss_rus.xml</Value>
 
-        <Value name = "SAF_BIO">../input/gcamdata/xml_policy/policy_biofuel_saf.xml</Value>
+        <Value name = "SAF_BIO">../input/gcamdata/xml_policy/policy_biofuel_saf_2020.xml</Value>
         <Value name = "SAF_CTAX">../input/gcamdata/xml_policy/policy_ctax_saf.xml</Value>
         <Value name = "SAF_COAL">../input/gcamdata/xml_policy/policy_coal_cap_saf.xml</Value>
-        <Value name = "SAF_RENEW">../input/gcamdata/xml_policy/policy_RE_targets_saf.xml</Value>
+        <Value name = "SAF_RENEW">../input/gcamdata/xml_policy/policy_RE_targets_saf_2030.xml</Value>
 
         <Value name = "SAUDI_RES">../input/gcamdata/xml_policy/policy_res_saudi.xml</Value>
 
@@ -200,7 +200,7 @@
         <Value name = "dac">../input/gcamdata/xml/dac_ssp2.xml</Value>
          <!--Small Carbon Price   THIS IS ONLY NEEDED IF THERE IS NO EMISSIONS CONSTRAINT LATER ON.  NEEDED TO GET CCS-->  
    <!----CHANGED CTAX TO STOP IN 2030 BECAUSE OF GHG CAP-->
-         <Value name = "small_c_tax">../input/gcamdata/xml_policy/IRA_small_carbon_tax_2030_GHG.xml</Value>
+         <Value name = "small_c_tax">../input/gcamdata/xml_policy/IRA_small_carbon_tax_GHG_2030.xml</Value>
       <!--IRA Provisions-->
          <!--Elec-->
          <Value name = "PTC">../input/gcamdata/xml_policy/IRA_PTC.xml</Value>
@@ -220,14 +220,14 @@
          <Value name = "CH4_ERP">../input/gcamdata/xml_policy/US_resource_CH4_mac.xml</Value>
          <Value name = "CH4_Tax">../input/gcamdata/xml_policy/IRA_CH4_tax.xml</Value>
 <!-- END IRA -->
-         <Value name = "USA_RE">../input/gcamdata/xml_policy/policy_RE_targets_usa.xml</Value>
+         <Value name = "USA_RE">../input/gcamdata/xml_policy/policy_RE_targets_usa_noBio.xml</Value>
 <!-------------------------------------USA---------------------------------------->
 
         <Value name = "kigali_MAC">../input/gcamdata/xml_policy/kigali_fgas_MAC.xml</Value>
         <Value name = "kigali_tax">../input/gcamdata/xml_policy/Kigali_tax.xml</Value>
         <Value name = "nonCo2_MAC_price">../input/gcamdata/xml_policy/price_nonco2_mac_CP.xml</Value>
         <Value name = "nonCo2_MAC_price_post2030">../input/gcamdata/xml_policy/price_nonco2_mac_CP_post2030.xml</Value>
-        <Value name = "GHG_caps_post2030">../input/gcamdata/xml_policy/policy_GHG_constraint_post2030_CP_nonzero_adjust2035.xml</Value>
+        <Value name = "GHG_caps_post2030">../input/gcamdata/xml_policy/policy_GHG_constraint_post2030_CP_nonzero_adjust2035_NoAusBra2035.xml</Value>
 	</ScenarioComponents>
 	<Strings>
 		<Value name="scenarioName">CP_WEO_EI</Value>
