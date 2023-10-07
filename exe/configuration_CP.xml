@@ -200,7 +200,7 @@
         <Value name = "dac">../input/gcamdata/xml/dac_ssp2.xml</Value>
          <!--Small Carbon Price   THIS IS ONLY NEEDED IF THERE IS NO EMISSIONS CONSTRAINT LATER ON.  NEEDED TO GET CCS-->  
    <!----CHANGED CTAX TO STOP IN 2030 BECAUSE OF GHG CAP-->
-         <Value name = "small_c_tax">../input/gcamdata/xml_policy/IRA_small_carbon_tax_2030.xml</Value>
+         <Value name = "small_c_tax">../input/gcamdata/xml_policy/IRA_small_carbon_tax_2030_GHG.xml</Value>
       <!--IRA Provisions-->
          <!--Elec-->
          <Value name = "PTC">../input/gcamdata/xml_policy/IRA_PTC.xml</Value>
