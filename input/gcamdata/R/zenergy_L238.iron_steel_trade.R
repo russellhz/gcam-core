@@ -215,19 +215,25 @@ module_energy_L238.iron_steel_trade <- function(command, ...) {
     # L238.Production_reg_dom: Output (flow) of domestic
 
     #### DOMESTIC TECHNOLOGY OUTPUT = iron and steel PRODUCTION - GROSS EXPORTS
+    # Again use production share of high vs low carbon output to set domestic consumption
     L238.DomSup_Mt_R_Y <- left_join_error_no_match(LB1092.Tradebalance_iron_steel_Mt_R_Y %>%
                                                      filter(metric=="domestic_supply") %>%
                                                      mutate(minicam.energy.input="iron and steel")%>%
                                                      rename(DomSup_Mt=value,region=GCAM_region),
                                                    GCAM_region_names,
                                                    by = "region") %>%
-      select(region, GCAM_commodity, year, DomSup_Mt)
+      right_join(sec.out.prodShare, by = c("region", "year")) %>%
+      mutate(DomSup_Mt = DomSup_Mt * prodShare) %>%
+      select(region, minicam.energy.input = secondary.output, year, DomSup_Mt) %>%
+      left_join_error_no_match(A_irnstl_RegionalTechnology, by = "minicam.energy.input")  %>%
+      select(region, supplysector, subsector, technology, year, DomSup_Mt)
 
     L238.Production_reg_dom <- A_irnstl_RegionalTechnology_R_Y %>%
       filter(year %in% MODEL_BASE_YEARS,
-             grepl( "domestic", subsector)) %>%
+             grepl( "domestic", subsector),
+             minicam.energy.input == "iron and steel") %>%
       left_join_error_no_match(L238.DomSup_Mt_R_Y,
-                               by = c("region", minicam.energy.input, "year")) %>%
+                               by = c("region", "supplysector", "subsector", "technology", "year")) %>%
       mutate(calOutputValue = round(DomSup_Mt, energy.DIGITS_CALOUTPUT),
              share.weight.year = year,
              subs.share.weight = if_else(calOutputValue > 0, 1, 0),
