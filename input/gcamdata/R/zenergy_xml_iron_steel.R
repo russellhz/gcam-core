@@ -33,7 +33,8 @@ module_energy_iron_steel_xml <- function(command, ...) {
              "L2323.BaseService_iron_steel",
              "L2323.PriceElasticity_iron_steel",
              "L2323.Rsrc_iron_steel",
-             "L2323.RsrcPrice_iron_steel"))
+             "L2323.RsrcPrice_iron_steel",
+             "L2323.StubTechCalPrice_en"))
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(c(XML = "iron_steel.xml"))
   } else if(command == driver.MAKE) {
@@ -63,6 +64,7 @@ module_energy_iron_steel_xml <- function(command, ...) {
     L2323.PriceElasticity_iron_steel <- get_data(all_data, "L2323.PriceElasticity_iron_steel")
     L2323.Rsrc_iron_steel  <- get_data(all_data, "L2323.Rsrc_iron_steel")
     L2323.RsrcPrice_iron_steel <- get_data(all_data, "L2323.RsrcPrice_iron_steel")
+    L2323.StubTechCalPrice_en <- get_data(all_data, "L2323.StubTechCalPrice_en")
     # ===================================================
 
     # Produce outputs
@@ -85,6 +87,7 @@ module_energy_iron_steel_xml <- function(command, ...) {
       add_xml_data(L2323.StubTechCost_iron_steel, "StubTechCost") %>%
       add_xml_data(L2323.StubTechProd_iron_steel, "StubTechProd") %>%
       add_xml_data(L2323.StubTechCoef_iron_steel, "StubTechCoef") %>%
+      add_xml_data(L2323.StubTechCalPrice_en, "StubTechCalPrice") %>%
       add_xml_data(L2323.PerCapitaBased_iron_steel, "PerCapitaBased") %>%
       add_xml_data(L2323.BaseService_iron_steel, "BaseService") %>%
       add_xml_data(L2323.PriceElasticity_iron_steel, "PriceElasticity") %>%
@@ -99,7 +102,8 @@ module_energy_iron_steel_xml <- function(command, ...) {
                      "L2323.GlobalTechProfitShutdown_en", "L2323.StubTechProd_iron_steel",
                      "L2323.StubTechCoef_iron_steel", "L2323.PerCapitaBased_iron_steel", "L2323.BaseService_iron_steel",
                      "L2323.PriceElasticity_iron_steel","L2323.StubTechCost_iron_steel",
-                     "L2323.GlobalTechTrackCapital_iron_steel", "L2323.Rsrc_iron_steel", "L2323.RsrcPrice_iron_steel") ->
+                     "L2323.GlobalTechTrackCapital_iron_steel", "L2323.Rsrc_iron_steel", "L2323.RsrcPrice_iron_steel",
+                     "L2323.StubTechCalPrice_en") ->
       iron_steel.xml
     return_data(iron_steel.xml)
   } else {

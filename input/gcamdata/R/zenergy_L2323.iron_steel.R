@@ -75,7 +75,8 @@ module_energy_L2323.iron_steel <- function(command, ...) {
              "L2323.BaseService_iron_steel",
 			       "L2323.PriceElasticity_iron_steel",
 			       "L2323.Rsrc_iron_steel",
-			       "L2323.RsrcPrice_iron_steel"))
+			       "L2323.RsrcPrice_iron_steel",
+			       "L2323.StubTechCalPrice_en"))
   } else if(command == driver.MAKE) {
 
     all_data <- list(...)[[1]]
@@ -464,6 +465,14 @@ module_energy_L2323.iron_steel <- function(command, ...) {
       L2323.PriceElasticity_iron_steel
 
     # L2323.Rsrc_iron_steel: secondary output resource
+    # Only want price for resources that are used that year/region
+    resource_rgn_years <- L2323.StubTechProd_iron_steel %>%
+      filter(calOutputValue > 0) %>%
+      left_join_error_no_match(A323.globaltech_secout %>% dplyr::select_if(is.character),
+                               by = c("supplysector", "subsector", "stub.technology" = "technology")) %>%
+      distinct(region, year, secondary.output)
+
+
     A323.rsrc_info %>%
       repeat_add_columns(GCAM_region_names) %>%
       select(region, resource, output.unit = "output-unit", price.unit = "price-unit", market) %>%
@@ -473,15 +482,24 @@ module_energy_L2323.iron_steel <- function(command, ...) {
     L2323.Rsrc_iron_steel %>%
       select(region, resource) %>%
       repeat_add_columns(tibble(year = MODEL_BASE_YEARS)) %>%
-      mutate(price = 0.01)
-      select(region, resource = fractional.secondary.output, year, price = calPrice) ->
+      semi_join(resource_rgn_years, by = c("region", "year", "resource" = "secondary.output")) %>%
+      mutate(price = 0.01) ->
       L2323.RsrcPrice_iron_steel
+
+    L2323.StubTechCalPrice_en <- L2323.GlobalTechSecOut_iron_steel %>%
+      rename(supplysector = sector.name, subsector = subsector.name,
+             stub.technology = technology) %>%
+      mutate(calPrice = 0.01) %>%
+      select(-output.ratio) %>%
+      left_join(L2323.RsrcPrice_iron_steel %>% distinct(region, resource, year),
+                by = c("year", "secondary.output" = "resource")) %>%
+      na.omit()
 
 
     # ===================================================
     # Produce outputs
     L2323.Supplysector_iron_steel %>%
-      add_title("Supply sector information for iron and steel sector") %>%
+      add_title("Supply sector information for iron and steel sector", overwrite = T) %>%
       add_units("NA") %>%
       add_comments("For iron and steel sector, the supply sector information (output.unit, input.unit, price.unit, logit.year.fillout, logit.exponent) from A323.sector is expended into all GCAM regions") %>%
       add_legacy_name("L2323.Supplysector_iron_steel") %>%
@@ -680,16 +698,22 @@ module_energy_L2323.iron_steel <- function(command, ...) {
       L2323.PriceElasticity_iron_steel
 
     L2323.Rsrc_iron_steel %>%
-      add_title("Resource for high and low carbon iron and steel") %>%
+      add_title("Resource for high and low carbon iron and steel", overwrite = T) %>%
       add_units("Unitless") %>%
       add_precursors("energy/A323.rsrc_info", "common/GCAM_region_names") ->
       L2323.Rsrc_iron_steel
 
     L2323.RsrcPrice_iron_steel %>%
-      add_title("Resource prices for high and low carbon iron and steel") %>%
+      add_title("Resource prices for high and low carbon iron and steel", overwrite = T) %>%
       add_units("Unitless") %>%
       add_precursors("energy/A323.rsrc_info", "common/GCAM_region_names") ->
       L2323.RsrcPrice_iron_steel
+
+    L2323.StubTechCalPrice_en %>%
+      add_title("Resource prices for high and low carbon iron and steel", overwrite = T) %>%
+      add_units("Unitless") %>%
+      add_precursors("energy/A323.rsrc_info", "common/GCAM_region_names") ->
+      L2323.StubTechCalPrice_en
 
       return_data(L2323.Supplysector_iron_steel, L2323.FinalEnergyKeyword_iron_steel, L2323.SubsectorLogit_iron_steel,
                   L2323.SubsectorShrwtFllt_iron_steel,L2323.SubsectorInterp_iron_steel,
@@ -700,7 +724,7 @@ module_energy_L2323.iron_steel <- function(command, ...) {
                   L2323.PerCapitaBased_iron_steel, L2323.BaseService_iron_steel,
                   L2323.PriceElasticity_iron_steel,L2323.StubTechCost_iron_steel,
                   L2323.GlobalTechTrackCapital_iron_steel,
-                  L2323.Rsrc_iron_steel, L2323.RsrcPrice_iron_steel)
+                  L2323.Rsrc_iron_steel, L2323.RsrcPrice_iron_steel, L2323.StubTechCalPrice_en)
   } else {
     stop("Unknown command")
   }
