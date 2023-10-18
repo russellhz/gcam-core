@@ -1,15 +1,14 @@
-# File: A323.globaltech_secout.csv
-# Title: High or low carbon steel output of iron and steel production
-# Units: NA
-# Column types: ccccnn
-# ----------
-supplysector,subsector,technology,secondary.output,1975,2100
-iron and steel,BLASTFUR,Biomass-based,Low-carbon iron and steel,1,1
-iron and steel,BLASTFUR,BLASTFUR,High-carbon iron and steel,1,1
-iron and steel,BLASTFUR,BLASTFUR CCS,Low-carbon iron and steel,1,1
-iron and steel,EAF with DRI,EAF with DRI,Low-carbon iron and steel,1,1
-iron and steel,EAF with DRI,EAF with DRI CCS,Low-carbon iron and steel,1,1
-iron and steel,EAF with DRI,Hydrogen-based DRI,Low-carbon iron and steel,1,1
-iron and steel,EAF with scrap,EAF with scrap,Low-carbon iron and steel,1,1
-iron and steel,BLASTFUR,BLASTFUR with hydrogen,Low-carbon iron and steel,1,1
-iron and steel,BLASTFUR,BLASTFUR CCS with hydrogen,Low-carbon iron and steel,1,1
+# File: A323.globaltech_secout.csv,,,,,,,,,
+# Title: High or low carbon steel output of iron and steel production,,,,,,,,,
+# Units: NA,,,,,,,,,
+# Column types: ccccnnnnnn,,,,,,,,,
+# ----------,,,,,,,,,
+supplysector,subsector,technology,res.secondary.output,1975,2005,2010,2015,2020,2100
+iron and steel,BLASTFUR,Biomass-based,Low-carbon iron and steel,0,0,0,1,1,1
+iron and steel,BLASTFUR,BLASTFUR CCS,Low-carbon iron and steel,0,0,0,1,1,1
+iron and steel,EAF with DRI,EAF with DRI,Low-carbon iron and steel,0,0,0,1,1,1
+iron and steel,EAF with DRI,EAF with DRI CCS,Low-carbon iron and steel,0,0,0,1,1,1
+iron and steel,EAF with DRI,Hydrogen-based DRI,Low-carbon iron and steel,0,0,0,1,1,1
+iron and steel,EAF with scrap,EAF with scrap,Low-carbon iron and steel,0,0,0,1,1,1
+iron and steel,BLASTFUR,BLASTFUR with hydrogen,Low-carbon iron and steel,0,0,0,1,1,1
+iron and steel,BLASTFUR,BLASTFUR CCS with hydrogen,Low-carbon iron and steel,0,0,0,1,1,1

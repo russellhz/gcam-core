@@ -107,7 +107,9 @@ module_energy_L238.iron_steel_trade <- function(command, ...) {
       select(LEVEL2_DATA_NAMES[["TechCost"]])
 
     # L238.TechCoef_tra: Coefficient and market name of traded technologies
-    L238.TechCoef_tra <- select(A_irnstl_TradedTechnology_R_Y, LEVEL2_DATA_NAMES[["TechCoef"]])
+    L238.TechCoef_tra <- select(A_irnstl_TradedTechnology_R_Y, LEVEL2_DATA_NAMES[["TechCoef"]]) %>%
+      mutate(coefficient = if_else(year <= MODEL_FINAL_BASE_YEAR & minicam.energy.input != "iron and steel",
+                                   0, coefficient))
 
 
 
@@ -121,9 +123,11 @@ module_energy_L238.iron_steel_trade <- function(command, ...) {
 
     # Assume high-carbon/low-carbon export split is proportional to production
     sec.out.prodShare <- L2323.StubTechProd_iron_steel %>%
-      left_join_error_no_match(select(A323.globaltech_secout, supplysector, subsector, stub.technology = technology, secondary.output),
+      left_join(select(A323.globaltech_secout, supplysector, subsector, stub.technology = technology, res.secondary.output),
                                       by = c("supplysector", "subsector", "stub.technology")) %>%
-      group_by(region, year, secondary.output) %>%
+      # If no sec.out, still need to include in split, so rename to iron and steel
+      tidyr::replace_na(list(res.secondary.output = "iron and steel")) %>%
+      group_by(region, year, res.secondary.output) %>%
       summarise(calOutputValue = sum(calOutputValue)) %>%
       group_by(region, year) %>%
       mutate(prodShare = calOutputValue / sum(calOutputValue)) %>%
@@ -131,14 +135,19 @@ module_energy_L238.iron_steel_trade <- function(command, ...) {
       tidyr::replace_na(list(prodShare = 0)) %>%
       select(-calOutputValue)
 
+    # Multiply sec.out share by total exports
     L238.GrossExports_Mt_R_Y_carbonType <- L238.GrossExports_Mt_R_Y %>%
       filter(year %in% MODEL_BASE_YEARS) %>%
       left_join(sec.out.prodShare, by = c("region", "year")) %>%
       mutate(GrossExp_Mt = GrossExp_Mt * prodShare) %>%
-      rename(minicam.energy.input = secondary.output)
+      rename(minicam.energy.input = res.secondary.output)
 
-    L238.Production_tra <- filter(A_irnstl_TradedTechnology_R_Y, year %in% MODEL_BASE_YEARS,
-                                  minicam.energy.input != "iron and steel") %>%
+    L238.Production_tra <- A_irnstl_TradedTechnology_R_Y %>%
+      group_by(supplysector, subsector, technology, year) %>%
+      # If no sec.out, there will be only one group, otherwise it will be an input not named iron and steel
+      filter(dplyr::n() == 1 | minicam.energy.input != "iron and steel") %>%
+      ungroup %>%
+      filter(year %in% MODEL_BASE_YEARS) %>%
       left_join_error_no_match(L238.GrossExports_Mt_R_Y_carbonType,
                                by = c(market.name = "region", "year", "minicam.energy.input")) %>%
       rename(calOutputValue = GrossExp_Mt) %>%
@@ -174,7 +183,9 @@ module_energy_L238.iron_steel_trade <- function(command, ...) {
     L238.TechShrwt_reg <- select(A_irnstl_RegionalTechnology_R_Y, LEVEL2_DATA_NAMES[["TechShrwt"]])
 
     # L238.TechCoef_reg: Coefficient and market name of traded technologies
-    L238.TechCoef_reg <- select(A_irnstl_RegionalTechnology_R_Y, LEVEL2_DATA_NAMES[["TechCoef"]])
+    L238.TechCoef_reg <- select(A_irnstl_RegionalTechnology_R_Y, LEVEL2_DATA_NAMES[["TechCoef"]]) %>%
+      mutate(coefficient = if_else(year <= MODEL_FINAL_BASE_YEAR & minicam.energy.input != "iron and steel" & grepl("domestic", subsector),
+                                   0, coefficient))
 
     # L238.Production_reg_imp: Output (flow) of gross imports
     # Imports are equal to the gross imports calculated in LB1092
@@ -215,6 +226,13 @@ module_energy_L238.iron_steel_trade <- function(command, ...) {
     # L238.Production_reg_dom: Output (flow) of domestic
 
     #### DOMESTIC TECHNOLOGY OUTPUT = iron and steel PRODUCTION - GROSS EXPORTS
+
+    A_irnstl_RegionalTechnology_filtered <- A_irnstl_RegionalTechnology %>%
+      group_by(supplysector, subsector, technology) %>%
+      # If no sec.out, there will be only one group, otherwise it will be an input not named iron and steel
+      filter(dplyr::n() == 1 | minicam.energy.input != "iron and steel") %>%
+      ungroup
+
     # Again use production share of high vs low carbon output to set domestic consumption
     L238.DomSup_Mt_R_Y <- left_join_error_no_match(LB1092.Tradebalance_iron_steel_Mt_R_Y %>%
                                                      filter(metric=="domestic_supply") %>%
@@ -224,9 +242,11 @@ module_energy_L238.iron_steel_trade <- function(command, ...) {
                                                    by = "region") %>%
       right_join(sec.out.prodShare, by = c("region", "year")) %>%
       mutate(DomSup_Mt = DomSup_Mt * prodShare) %>%
-      select(region, minicam.energy.input = secondary.output, year, DomSup_Mt) %>%
-      left_join_error_no_match(A_irnstl_RegionalTechnology, by = "minicam.energy.input")  %>%
+      select(region, minicam.energy.input = res.secondary.output, year, DomSup_Mt) %>%
+      left_join_error_no_match(A_irnstl_RegionalTechnology_filtered, by = "minicam.energy.input")  %>%
+      # left_join_error_no_match(distinct(A_irnstl_RegionalTechnology, supplysector, subsector, minicam.energy.input), by = "minicam.energy.input")  %>%
       select(region, supplysector, subsector, technology, year, DomSup_Mt)
+      # select(region, supplysector, subsector, year, DomSup_Mt)
 
     L238.Production_reg_dom <- A_irnstl_RegionalTechnology_R_Y %>%
       filter(year %in% MODEL_BASE_YEARS,
@@ -234,10 +254,14 @@ module_energy_L238.iron_steel_trade <- function(command, ...) {
              minicam.energy.input == "iron and steel") %>%
       left_join_error_no_match(L238.DomSup_Mt_R_Y,
                                by = c("region", "supplysector", "subsector", "technology", "year")) %>%
+      # left_join_error_no_match(L238.DomSup_Mt_R_Y,
+      #                          by = c("region", "supplysector", "subsector", "year")) %>%
       mutate(calOutputValue = round(DomSup_Mt, energy.DIGITS_CALOUTPUT),
-             share.weight.year = year,
-             subs.share.weight = if_else(calOutputValue > 0, 1, 0),
-             tech.share.weight = subs.share.weight) %>%
+             share.weight.year = year) %>%
+      group_by(supplysector, region, year) %>%
+      mutate(subs.share.weight = if_else(any(calOutputValue) > 0, 1, 0)) %>%
+      ungroup %>%
+      mutate(tech.share.weight = if_else(calOutputValue > 0, 1, 0)) %>%
       select(LEVEL2_DATA_NAMES[["Production"]])
 
     # Produce outputs  ---------------------
