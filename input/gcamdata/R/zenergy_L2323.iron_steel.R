@@ -124,7 +124,6 @@ module_energy_L2323.iron_steel <- function(command, ...) {
     # The TZ steel cost database contains plant-level steel production costs across major producing countries
     # The costs are aggregated by primary production route, averaged across OECD and non-OECD regions, and mapped to the GCAM regions
     # ====================================================================
-
       TZ_steel_production_costs %>%
         # filter non-energy costs for GCAM model years
         filter(Model_Year %in% c(MODEL_BASE_YEARS)) %>%
@@ -135,7 +134,12 @@ module_energy_L2323.iron_steel <- function(command, ...) {
         # GCAM estimates cost of coke in energy costs
         filter(!(Component%in%c("Coke"))) %>%
         # map TZ countries with oecd classification
-        left_join(TZ_steel_cost_oecd_mapping,by=c("Country"))-> TZ_steel_production_costs
+        left_join(TZ_steel_cost_oecd_mapping,by=c("Country")) %>%
+        # if DRI is non-zero, set to EAF with DRI
+        mutate(subsector = if_else(Component == "DRI" & value > 0, "EAF with DRI", subsector)) %>%
+      group_by(Plant_ID) %>%
+      mutate(subsector = if_else(grepl("EAF", subsector) & any(subsector == "EAF with DRI"), "EAF with DRI", subsector)) %>%
+      ungroup -> TZ_steel_production_costs
 
     # Function to aggregate steel production data by Country or OECD regions
     aggregate_steel_production_costs <- function(data,agg_region) {
@@ -148,7 +152,8 @@ module_energy_L2323.iron_steel <- function(command, ...) {
         # calculate mean costs by country for EAF and BF-BOF
         group_by({{agg_region}},subsector,year)%>%
         summarize(value=mean(value)) %>%
-        mutate(subsector=ifelse(subsector=="EAF","EAF with scrap","BLASTFUR")) -> all_steel_production_costs
+        mutate(subsector=if_else(subsector=="EAF","EAF with scrap",subsector),
+               subsector=if_else(subsector=="BF-BOF","BLASTFUR",subsector)) -> all_steel_production_costs
 
       return(all_steel_production_costs)
     }
@@ -394,12 +399,12 @@ module_energy_L2323.iron_steel <- function(command, ...) {
     L1323.out_Mt_R_iron_steel_Yh %>%
       filter(year %in% MODEL_BASE_YEARS) %>%
       mutate(calOutputValue = round(value, energy.DIGITS_CALOUTPUT), sector = "iron and steel") %>%
-      left_join(calibrated_techs_export %>% select(sector,supplysector, subsector,technology), by = c("sector","subsector")) %>%
       left_join(GCAM_region_names, by = "GCAM_region_ID") %>%
       mutate(stub.technology = technology,
+             supplysector = "iron and steel",
              share.weight.year = year,
              subs.share.weight = 1,
-             tech.share.weight = if_else(subsector == technology , 1, 0),
+             tech.share.weight = if_else(technology %in% energy.CALIBRATED_STEEL_TECHS , 1, 0),
              calOutputValue = calOutputValue * tech.share.weight) %>%
       unique() %>%
       select(LEVEL2_DATA_NAMES[["StubTechProd"]]) ->
@@ -440,7 +445,7 @@ module_energy_L2323.iron_steel <- function(command, ...) {
       group_by(region, supplysector, subsector, stub.technology, minicam.energy.input) %>%
       mutate(coefficient = round(approx_fun(year, coefficient,rule = 2), energy.DIGITS_COEFFICIENT)) %>%
       ungroup() %>%
-      filter(year %in% MODEL_YEARS) ->   # drop the terminal coef year if it's outside of the model years
+      filter(year %in% MODEL_BASE_YEARS) ->   # drop the terminal coef year if it's outside of the model years
       L2323.StubTechCoef_iron_steel
 
     # L2323.PerCapitaBased_iron_steel: per-capita based flag for iron_steel exports final demand

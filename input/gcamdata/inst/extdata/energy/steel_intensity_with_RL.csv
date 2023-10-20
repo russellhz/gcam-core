@@ -8,6 +8,7 @@
 subsector,technology,fuel,value,Unit,ratio
 BLASTFUR,BF_BOF,gas,0.54,GJ/t,1
 BLASTFUR,BF_BOF,coal,19.48,GJ/t,1
+BLASTFUR,BF_BOF,refined liquids,0.01,GJ/t,1
 BLASTFUR,BF_BOF_CCS_73%,gas,0.54,GJ/t,1
 BLASTFUR,BF_BOF_CCS_73%,electricity,2.77,GJ/t,
 BLASTFUR,BF_BOF_CCS_73%,coal,19.48,GJ/t,1
@@ -29,6 +30,7 @@ Smelting reduction,SR_BOF_CCS,coal,12.7,GJ/t,1
 EAF with DRI,DRI_EAF_NG,gas,10.47,GJ/t,1
 EAF with DRI,DRI_EAF_NG,electricity,1.45,GJ/t,1
 EAF with DRI,DRI_EAF_NG,coal,0.07,GJ/t,1
+EAF with DRI,DRI_EAF_NG,refined liquids,0.01,GJ/t,1
 EAF with DRI,DRI_EAF_NG_CCS,gas,10.47,GJ/t,1
 EAF with DRI,DRI_EAF_NG_CCS,electricity,2.06,GJ/t,1.420689655
 EAF with DRI,DRI_EAF_NG_CCS,coal,0.07,GJ/t,1
@@ -56,6 +58,7 @@ EAF with scrap,EAF_scrap_fossil,gas,0.41,GJ/t,1
 EAF with scrap,EAF_scrap_fossil,electricity,2.06,GJ/t,1
 EAF with scrap,EAF_scrap_fossil,coal,0.37,GJ/t,1
 EAF with scrap,EAF_scrap_fossil,scrap,1100,GJ/t,1
+EAF with scrap,EAF_scrap_fossil,refined liquids,0.01,GJ/t,1
 EAF with scrap,EAF_scrap_bio,biomass,0.37,GJ/t,
 EAF with scrap,EAF_scrap_bio,electricity,2.46,GJ/t,1.194174757
 EAF with scrap,EAF_scrap_bio,scrap,1100,GJ/t,1

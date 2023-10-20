@@ -5,5 +5,8 @@
 # ----------
 supplysector,subsector,logit.exponent,logit.type
 iron and steel,BLASTFUR,-6,
+iron and steel,Smelting reduction,-6,
 iron and steel,EAF with DRI,-6,
+iron and steel,SAF with DRI,-6,
+iron and steel,Electrolysis,-6,
 iron and steel,EAF with scrap,-6,

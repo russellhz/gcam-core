@@ -1,15 +1,26 @@
-# File: A323.globaltech_shrwt.csv
-# Title: Iron and steel default shareweights
-# Units: Unitless
-# Column types: cccnnnnnn
-# ----------
-supplysector,subsector,technology,1971,2015,2020,2025,2050,2100
-iron and steel,BLASTFUR,BLASTFUR,1,1,1,1,1,1
-iron and steel,BLASTFUR,BLASTFUR CCS,0,0,0,0.2,1,1
-iron and steel,BLASTFUR,Biomass-based,0,0,0,0.1,0.2,0.2
-iron and steel,EAF with DRI,EAF with DRI,1,1,1,1,1,1
-iron and steel,EAF with DRI,EAF with DRI CCS,0,0,0,0.2,1,1
-iron and steel,EAF with DRI,Hydrogen-based DRI,0,0,0,0.1,0.2,0.2
-iron and steel,EAF with scrap,EAF with scrap,1,1,1,1,1,1
-iron and steel,BLASTFUR,BLASTFUR with hydrogen,0,0,0,0.1,0.2,0.2
-iron and steel,BLASTFUR,BLASTFUR CCS with hydrogen,0,0,0,0,0,0
+# File: A323.globaltech_shrwt.csv,,,,,,,,,,,
+# Title: Iron and steel default shareweights,,,,,,,,,,,
+# Units: Unitless,,,,,,,,,,,
+# Column types: cccnnnnnnnnn,,,,,,,,,,,
+# ----------,,,,,,,,,,,
+supplysector,subsector,technology,1971,2015,2020,2025,2030,2035,2040,2050,2100
+iron and steel,BLASTFUR,BF_BOF,1,1,1,1,1,1,1,1,1
+iron and steel,BLASTFUR,BF_BOF_CCS_73%,0,0,0,0,0.1,0.2,0.3,0.5,1
+iron and steel,BLASTFUR,BF_BOF_CCS_86%,0,0,0,0,0.1,0.2,0.3,0.5,1
+iron and steel,BLASTFUR,BF_BOF_BECCSmin,0,0,0,0,0.1,0.2,0.3,0.5,1
+iron and steel,BLASTFUR,BF_BOF_BECCSmax,0,0,0,0,0.1,0.2,0.3,0.5,1
+iron and steel,Smelting reduction,SR_BOF,0,0,0,0,0.05,0.1,0.2,0.4,1
+iron and steel,Smelting reduction,SR_BOF_CCS,0,0,0,0,0.05,0.1,0.2,0.4,1
+iron and steel,EAF with DRI,DRI_EAF_NG,1,1,1,1,1,1,1,1,1
+iron and steel,EAF with DRI,DRI_EAF_NG_CCS,0,0,0,0,0.1,0.2,0.3,0.5,1
+iron and steel,EAF with DRI,DRI_EAF_coal,1,1,1,1,1,1,1,1,1
+iron and steel,EAF with DRI,DRI_EAF_coal_CCS,0,0,0,0,0.1,0.2,0.3,0.5,1
+iron and steel,EAF with DRI,DRI_EAF_BECCS,0,0,0,0,0.1,0.2,0.3,0.5,1
+iron and steel,EAF with DRI,DRI_EAF_H2,0,0,0,0.1,0.2,0.3,0.4,0.6,1
+iron and steel,SAF with DRI,DRI_SAF_BOF_NG,0,0,0,0.1,0.2,0.3,0.4,0.6,1
+iron and steel,SAF with DRI,DRI_SAF_BOF_H2,0,0,0,0.1,0.2,0.3,0.4,0.6,1
+iron and steel,SAF with DRI,DRI_SAF_BOF_BECCS,0,0,0,0,0.1,0.2,0.3,0.5,1
+iron and steel,Electrolysis,AEL_EAF,0,0,0,0,0,0,0.1,0.2,1
+iron and steel,Electrolysis,MOE,0,0,0,0,0,0.1,0.2,0.4,1
+iron and steel,EAF with scrap,EAF_scrap_fossil,1,1,1,1,1,1,1,1,1
+iron and steel,EAF with scrap,EAF_scrap_bio,0,0,0,0.1,0.2,0.3,0.4,0.6,1

@@ -1,15 +1,27 @@
-# File: A323.globaltech_cost.csv
-# Title: IRONSTL default costs
-# Units: 1975$/kg for supplysector IRONSTL
-# Column types: ccccnnnn
-# ----------
+# File: A323.globaltech_cost.csv,,,,,,,
+# Title: IRONSTL default costs,,,,,,,
+# Comment: Using default GCAM cost for BF_BOF and then ratio of costs from Wuppertal data,,,,,,,
+# Units: 1975$/kg for supplysector IRONSTL,,,,,,,
+# Column types: ccccnnnn,,,,,,,
+# ----------,,,,,,,
 supplysector,subsector,technology,minicam.non.energy.input,1971,2010,2050,2100
-iron and steel,BLASTFUR,BLASTFUR,non-energy,0.08321,0.08321,0.08321,0.08321
-iron and steel,BLASTFUR,BLASTFUR CCS,non-energy,0.0901,0.0901,0.0901,0.0901
-iron and steel,BLASTFUR,Biomass-based,non-energy,0.08321,0.08321,0.08321,0.08321
-iron and steel,BLASTFUR,BLASTFUR with hydrogen,non-energy,0.08321,0.08321,0.08321,0.08321
-iron and steel,EAF with DRI,EAF with DRI,non-energy,0.097785,0.097785,0.097785,0.097785
-iron and steel,EAF with DRI,EAF with DRI CCS,non-energy,0.104675,0.104675,0.104675,0.104675
-iron and steel,EAF with DRI,Hydrogen-based DRI,non-energy,0.097785,0.097785,0.097785,0.097785
-iron and steel,EAF with scrap,EAF with scrap,non-energy,0.103085,0.103085,0.103085,0.103085
-iron and steel,BLASTFUR,BLASTFUR CCS with hydrogen,non-energy,0.0901,0.0901,0.0901,0.0901
+iron and steel,BLASTFUR,BF_BOF,non-energy,0.08321,0.08321,0.08321,0.08321
+iron and steel,BLASTFUR,BF_BOF_CCS_73%,non-energy,0.207334461,0.207334461,0.207334461,0.207334461
+iron and steel,BLASTFUR,BF_BOF_CCS_86%,non-energy,0.320532615,0.320532615,0.320532615,0.320532615
+iron and steel,BLASTFUR,BF_BOF_BECCSmin,non-energy,0.209406079,0.209406079,0.209406079,0.209406079
+iron and steel,BLASTFUR,BF_BOF_BECCSmax,non-energy,0.209406079,0.209406079,0.209406079,0.209406079
+iron and steel,Smelting reduction,SR_BOF,non-energy,0.143122441,0.143122441,0.143122441,0.143122441
+iron and steel,Smelting reduction,SR_BOF_CCS,non-energy,0.191695065,0.191695065,0.191695065,0.191695065
+iron and steel,EAF with DRI,DRI_EAF_NG,non-energy,0.291756517,0.291756517,0.291756517,0.291756517
+iron and steel,EAF with DRI,DRI_EAF_NG_CCS,non-energy,0.30439899,0.30439899,0.30439899,0.30439899
+iron and steel,EAF with DRI,DRI_EAF_coal,non-energy,0.291752905,0.291752905,0.291752905,0.291752905
+iron and steel,EAF with DRI,DRI_EAF_coal_CCS,non-energy,0.335256888,0.335256888,0.335256888,0.335256888
+iron and steel,EAF with DRI,DRI_EAF_BECCS,non-energy,0.335297437,0.335297437,0.335297437,0.335297437
+iron and steel,EAF with DRI,DRI_EAF_H2,non-energy,0.291756517,0.291756517,0.291756517,0.291756517
+iron and steel,SAF with DRI,DRI_SAF_BOF_NG,non-energy,0.370818534,0.370818534,0.370818534,0.370818534
+iron and steel,SAF with DRI,DRI_SAF_BOF_H2,non-energy,0.370818534,0.370818534,0.370818534,0.370818534
+iron and steel,SAF with DRI,DRI_SAF_BOF_BECCS,non-energy,0.399381244,0.399381244,0.399381244,0.399381244
+iron and steel,Electrolysis,AEL_EAF,non-energy,0.410410696,0.410410696,0.410410696,0.410410696
+iron and steel,Electrolysis,MOE,non-energy,0.332532929,0.332532929,0.332532929,0.332532929
+iron and steel,EAF with scrap,EAF_scrap_fossil,non-energy,0.090922027,0.090922027,0.090922027,0.090922027
+iron and steel,EAF with scrap,EAF_scrap_bio,non-energy,0.090922027,0.090922027,0.090922027,0.090922027

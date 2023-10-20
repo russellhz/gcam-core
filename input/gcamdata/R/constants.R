@@ -589,7 +589,8 @@ energy.IRON_STEEL.RESOURCES <- c("Other semi-finished iron and steel products","
                                  "Iron and steel wire","Iron and steel sections") #finished and semi-finished iron and steel resources
 energy.IRON_STEEL.DOMESTIC_SW <- c("Africa_Southern","Indonesia","Africa_Northern","Africa_Eastern","Africa_Western","South Asia","Southeast Asia")
 energy.IRON_STEEL.TRADED_SW <- c("Africa_Southern traded iron and steel","Indonesia traded iron and steel","Africa_Northern traded iron and steel","Africa_Eastern traded iron and steel","Africa_Western traded iron and steel","South Asia traded iron and steel","Southeast Asia traded iron and steel")
-
+energy.CALIBRATED_STEEL_TECHS <- c("BF_BOF", "DRI_EAF_NG", "EAF_scrap_fossil")
+energy.IRON_STEEL_CALCULATE_IO <- FALSE
 # Socioeconomics constants ======================================================================
 
 # Population years - note that these sequences shouldn't have any overlap,
