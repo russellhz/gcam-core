@@ -69,5 +69,5 @@ IRA_biofuels,USA,refining,biomass liquids,cellulosic ethanol CCS level 1,IRA sub
 IRA_biofuels,USA,refining,biomass liquids,cellulosic ethanol CCS level 2,IRA subsidy,,-1.8906,-1.8906,-1.8906,-1.8906,-1.8906,-1.8906,-1.8906
 IRA_biofuels,USA,refining,biomass liquids,FT biofuels CCS level 1,IRA subsidy,,-2.9188,-2.9188,-2.9188,-2.9188,-2.9188,-2.9188,-2.9188
 IRA_biofuels,USA,refining,biomass liquids,FT biofuels CCS level 2,IRA subsidy,,-2.9188,-2.9188,-2.9188,-2.9188,-2.9188,-2.9188,-2.9188
-CBAM_eu.xml,EU-15,regional iron and steel,imported iron and steel,imported high-carbon iron and steel,CBAM,0,0.05,0.05
-CBAM_eu.xml,EU-12,regional iron and steel,imported iron and steel,imported high-carbon iron and steel,CBAM,0,0.05,0.05
+CBAM_eu.xml,EU-15,regional iron and steel,imported iron and steel,imported high-carbon iron and steel,CBAM,0,0.05,0.05,0.05,0.05,0.05,0.05,0.05
+CBAM_eu.xml,EU-12,regional iron and steel,imported iron and steel,imported high-carbon iron and steel,CBAM,0,0.05,0.05,0.05,0.05,0.05,0.05,0.05
