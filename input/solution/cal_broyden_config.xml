@@ -72,8 +72,8 @@
         </broyden-solver-component>
     </user-configurable-solver>
     <user-configurable-solver year="2020" fillout="1">
-        <solution-tolerance>0.001</solution-tolerance>
-        <solution-floor>0.0001</solution-floor>
+        <solution-tolerance>0.005</solution-tolerance>
+        <solution-floor>0.0005</solution-floor>
         <calibration-tolerance>0.01</calibration-tolerance>
         <max-model-calcs>7500</max-model-calcs>
 
