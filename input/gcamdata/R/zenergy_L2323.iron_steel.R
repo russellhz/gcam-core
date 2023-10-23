@@ -165,22 +165,24 @@ module_energy_L2323.iron_steel <- function(command, ...) {
     # Calculate average steel production costs by sub sector for countries in transition zero database and combine
     # with OECD average data
     all_steel_production_costs <- rbind(aggregate_steel_production_costs(data=TZ_steel_production_costs,agg_region=Country),
-                                            oecd_steel_production_costs)
+                                            oecd_steel_production_costs) %>%
+      ungroup
 
     #add capital costs and CCS costs to estimate total production costs
     all_steel_production_costs <-  TZ_steel_cost_gcam_mapping%>%
       left_join(all_steel_production_costs,by=c("Country")) %>%
-      mutate(supplysector="iron and steel")%>%
+      mutate(supplysector="iron and steel") %>%
       left_join(A323.capital_cost_adders,by=c("subsector","supplysector"))%>%
       #multiply total OPEX, labor, and raw materials costs with capital cost fraction from IEA
-      mutate(value=value+(value*capital_cost_frac))%>%
-      left_join(A323.ccs_adders,by=c("subsector","supplysector"))%>%
+      mutate(value=value+(value*capital_cost_frac)) %>%
+      left_join_error_no_match(A323.ccs_adders,
+                               by=c("subsector","supplysector", "technology" = "stub.technology")) %>%
       mutate(value=((value/CONV_T_KG)+ccs_cost_adder)*gdp_deflator(1975,base_year=2015))%>%
-      select(supplysector,subsector,region,year,stub.technology,minicam.non.energy.input,value)
+      select(supplysector,subsector,region,year,stub.technology = technology,minicam.non.energy.input,value)
 
     #complete subsector and technology nesting across model years
     all_steel_production_costs %>%
-      rename(input.cost=value)%>%
+      rename(input.cost=value) %>%
       complete(nesting(supplysector, subsector, region,stub.technology,input.cost, minicam.non.energy.input), year = c(MODEL_BASE_YEARS, MODEL_FUTURE_YEARS))%>%
       select(region,supplysector, subsector, stub.technology,year,minicam.non.energy.input, input.cost) %>%
       mutate(input.cost = round(input.cost, energy.DIGITS_COST)) %>%
@@ -191,22 +193,6 @@ module_energy_L2323.iron_steel <- function(command, ...) {
 
     # ============================================================================
     # ============================================================================
-
-    # L2323.GlobalTechCost_iron_steel: Non-energy costs of global iron_steel manufacturing technologies
-    A323.globaltech_cost %>%
-      gather_years %>%
-      complete(nesting(supplysector, subsector, technology, minicam.non.energy.input), year = c(year, MODEL_BASE_YEARS, MODEL_FUTURE_YEARS)) %>%
-      arrange(supplysector, subsector, technology, minicam.non.energy.input, year) %>%
-      group_by(supplysector, subsector, technology, minicam.non.energy.input) %>%
-      mutate(input.cost = approx_fun(year, value, rule = 1),
-             input.cost = round(input.cost, energy.DIGITS_COST)) %>%
-      ungroup %>%
-      filter(year %in% c(MODEL_BASE_YEARS, MODEL_FUTURE_YEARS)) %>%
-      rename(sector.name = supplysector,
-             subsector.name = subsector) %>%
-      select(LEVEL2_DATA_NAMES[["GlobalTechCost"]]) ->
-      L2323.GlobalTechCost_iron_steel
-
     # ===================================================
     # 1. Perform computations
     # Create tables to delete technologies and subsectors in regions where heat is not modeled as a fuel
@@ -392,21 +378,25 @@ module_energy_L2323.iron_steel <- function(command, ...) {
     # L2323.StubTechProd_iron_steel: calibrated iron_steel production
     calibrated_techs %>%
       filter(calibration == "output") %>% # Only take the tech IDs where the calibration is identified as output
-      select(sector, supplysector, subsector, technology) %>%
-      distinct ->
+      select(sector, subsector, technology) %>%
+      distinct %>%
+      filter(sector == "iron and steel") %>%
+      repeat_add_columns(distinct(GCAM_region_names, region)) %>%
+      repeat_add_columns(tibble(year = MODEL_BASE_YEARS)) ->
       calibrated_techs_export # temporary tibble
 
     L1323.out_Mt_R_iron_steel_Yh %>%
       filter(year %in% MODEL_BASE_YEARS) %>%
       mutate(calOutputValue = round(value, energy.DIGITS_CALOUTPUT), sector = "iron and steel") %>%
       left_join(GCAM_region_names, by = "GCAM_region_ID") %>%
+      # add in all techs, set to zero if not included
+      right_join(calibrated_techs_export, by = c("region", "sector", "subsector", "technology", "year")) %>%
+      tidyr::replace_na(list(calOutputValue = 0)) %>%
       mutate(stub.technology = technology,
              supplysector = "iron and steel",
              share.weight.year = year,
              subs.share.weight = 1,
-             tech.share.weight = if_else(technology %in% energy.CALIBRATED_STEEL_TECHS , 1, 0),
-             calOutputValue = calOutputValue * tech.share.weight) %>%
-      unique() %>%
+             tech.share.weight = if_else(stub.technology %in% energy.CALIBRATED_STEEL_TECHS | calOutputValue > 0, 1, 0)) %>%
       select(LEVEL2_DATA_NAMES[["StubTechProd"]]) ->
       L2323.StubTechProd_iron_steel
 
@@ -419,6 +409,7 @@ module_energy_L2323.iron_steel <- function(command, ...) {
 
     L1323.IO_GJkg_R_iron_steel_F_Yh %>%
       left_join(GCAM_region_names, by = "GCAM_region_ID") %>%
+      mutate(fuel = stringr::str_to_lower(fuel)) %>%
       left_join(calibrated_techs, by = c("supplysector", "subsector", "technology", "fuel")) %>%
       mutate(coefficient = round(coefficient, energy.DIGITS_COEFFICIENT),
              stub.technology = technology,
@@ -511,8 +502,6 @@ module_energy_L2323.iron_steel <- function(command, ...) {
              output.unit = "Mt",
              market = region) %>%
       repeat_add_columns(tibble(policy.portfolio.standard = unique(A323.globaltech_secout$res.secondary.output)))
-
-
 
     # ===================================================
     # Produce outputs
