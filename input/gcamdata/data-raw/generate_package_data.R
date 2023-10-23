@@ -238,6 +238,9 @@ generate_level2_data_names <- function() {
   level2_data_names[["StubTechProd"]] <- c(level2_data_names[["StubTechYr"]], "calOutputValue", "share.weight.year", "subs.share.weight", "tech.share.weight")
   level2_data_names[["StubTechCalInput"]] <- c(level2_data_names[["StubTechYr"]], "minicam.energy.input", "calibrated.value", "share.weight.year", "subs.share.weight", "tech.share.weight")
   level2_data_names[["StubTechCapital"]] <- c(level2_data_names[["StubTechYr"]], "input.capital", "capital.overnight", "fixed.charge.rate")
+  level2_data_names[["StubTechFCR"]] <- c(level2_data_names[["StubTechYr"]], "input.capital", "fixed.charge.rate")
+  level2_data_names[["StubTechOMfixed"]] <- c(level2_data_names[["StubTechYr"]], "input.OM.fixed", "OM.fixed")
+  level2_data_names[["StubTechOMvar"]] <- c(level2_data_names[["StubTechYr"]], "input.OM.var", "OM.var")
   level2_data_names[["StubTechCost"]] <- c(level2_data_names[["StubTechYr"]], "minicam.non.energy.input", "input.cost")
   level2_data_names[["StubTechTrackCapital"]] <- c(level2_data_names[["StubTechYr"]], "minicam.non.energy.input", "capital.coef", "tracking.market", "depreciation.rate")
   level2_data_names[["StubTechFixOut"]] <- c(level2_data_names[["StubTechYr"]], "fixedOutput", "share.weight.year", "subs.share.weight", "tech.share.weight")
@@ -264,6 +267,7 @@ generate_level2_data_names <- function() {
   level2_data_names[["StubTranTechLoadFactor"]] <- c("region", "supplysector", "tranSubsector", "stub.technology", "year", "loadFactor")
   level2_data_names[["StubTranTechProd"]] <- c("region", "supplysector", "tranSubsector", "stub.technology", "year", "calOutputValue")
   level2_data_names[["StubTranTechShrwt"]] <- c("region", "supplysector", "tranSubsector", "stub.technology", "year", "share.weight")
+  level2_data_names[["StubTranTechFixedOutput"]] <- c("region", "supplysector", "tranSubsector", "stub.technology", "year", "fixedOutput")
   level2_data_names[["DeleteStubTech"]] <- level2_data_names[["StubTech"]]
   level2_data_names[["StubTechSCurve"]] <- c("region", "supplysector", "subsector", "stub.technology", "year", "lifetime", "steepness", "half.life")
   level2_data_names[["StubTechLifetime"]] <- c("region", "supplysector", "subsector", "stub.technology", "year", "lifetime")
@@ -499,6 +503,7 @@ generate_level2_data_names <- function() {
   level2_data_names[["StubTechCoef_NM_Policy"]] <- level2_data_names[["StubTechCoef_NM"]]
   level2_data_names[["StubTranTechCoef_NM"]] <- c("region", "supplysector", "tranSubsector", "stub.technology", "year", "minicam.energy.input", "coefficient")
   level2_data_names[["StubTranTechRESOutput"]] <- c("region", "supplysector", "tranSubsector", "stub.technology", "year", "res.secondary.output", "output.ratio")
+  level2_data_names[["ExoShutdown"]] <- c("region", "supplysector", "subsector", "stub.technology", "period", "exogenous.shutdown.decider", "year", "output.scalar")
 
   level2_data_names
 }
@@ -514,7 +519,6 @@ LEVEL2_DATA_NAMES <- generate_level2_data_names()
 usethis::use_data(LEVEL2_DATA_NAMES, overwrite = TRUE, internal = TRUE)
 rm(list = c("LEVEL2_DATA_NAMES"))
 
-# It is frequently the case that we need to refresh the LEVEL2_DATA_NAMES in order to have
 # a successful driver() run which is required to update the following so we will re-load
 # the package now so the updated LEVEL2_DATA_NAMES can take effect.
 devtools::load_all()

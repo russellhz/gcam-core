@@ -21,31 +21,31 @@
 # Column types: cccncc 
 # ----------
 technology,tech_type,tech_detail,conversion,shadow_tech,inferred
-coal (conv pul),Coal,coal (conv pul),1,,
-coal (conv pul CCS),Coal,coal (conv pul CCS),1,,
-coal (IGCC),Coal,coal (IGCC),1,,
-coal (IGCC CCS),Coal,coal (IGCC CCS),1,,
-gas (steam/CT),Gas,gas (steam/CT),1,,
-gas (CC),Gas,gas (CC),1,,
-gas (CC CCS),Gas,gas (CC CCS),1,,
-refined liquids (steam/CT),Gas,gas (steam/CT),,gas (steam/CT),x
-refined liquids (CC),Gas,gas (CC),,gas (CC),x
-refined liquids (CC CCS),Gas,gas (CC CCS),,gas (CC CCS),x
-biomass (conv),Biopower,biomass (conv),1,,
-biomass (conv CCS),Biopower,biomass (conv CCS),1,,
-biomass (IGCC),Biopower,biomass (IGCC),1,,
-biomass (IGCC CCS),Biopower,biomass (IGCC CCS),1,,
-Gen_III,Nuclear,Gen_III,1,,
-wind,Land-Based Wind,wind,1,,
-wind_storage,Land-Based Wind,wind,1,,x
+coal (conv pul),Coal,Coal-new-HighCF,1,,
+coal (conv pul CCS),Coal,Coal-CCS 90%-HighCF,1,,
+coal (IGCC),Coal,Coal-IGCC-HighCF,1,,
+coal (IGCC CCS),Coal,Coal-IGCC-HighCF,,coal (IGCC),x
+gas (steam/CT),Natural Gas,Gas-CT-HighCF,1,,
+gas (CC),Natural Gas,Gas-CC-HighCF,1,,
+gas (CC CCS),Natural Gas,Gas-CC-CCS-HighCF,1,,
+refined liquids (steam/CT),Natural Gas,Gas-CT-HighCF,,gas (steam/CT),x
+refined liquids (CC),Natural Gas,Gas-CC-HighCF,,gas (CC),x
+refined liquids (CC CCS),Natural Gas,Gas-CC-CCS-HighCF,,gas (CC CCS),x
+biomass (conv),Biopower,Dedicated,1,,
+biomass (conv CCS),Biopower,Dedicated,,biomass (conv),x
+biomass (IGCC),Biopower,Dedicated,,biomass (conv),x
+biomass (IGCC CCS),Biopower,Dedicated,,biomass (conv),x
+Gen_III,Nuclear,Nuclear,1,,
+wind,Land-Based Wind,TRG 5,1,,
+wind_storage,Land-Based Wind,TRG 5,1,,x
 wind_storage,Storage,Battery Storage,3,,x
-PV,Solar - Utility PV,PV,1.176,,
-PV_storage,Solar - Utility PV,PV,1.176,,x
+PV,Solar - Utility PV,Utility PV - Kansas City,1.176,,
+PV_storage,Solar - Utility PV,Utility PV - Kansas City,1.176,,x
 PV_storage,Storage,Battery Storage,3,,x
-CSP,Solar - CSP,CSP_storage,,CSP_storage,x
-CSP_storage,Solar - CSP,CSP_storage,1,,
-geothermal,Geothermal,geothermal,1,,
-rooftop_pv,Solar - PV dist. Comm,rooftop_pv_comm,0.588,,
-rooftop_pv,Solar - PV dist. Res,rooftop_pv_res,0.588,,
-wind_offshore,Offshore Wind,wind_offshore,1,,
+CSP,Solar - CSP,10hrs TES - Class 3,,CSP_storage,x
+CSP_storage,Solar - CSP,10hrs TES - Class 3,1,,
+geothermal,Geothermal,Hydro / Flash,1,,
+rooftop_pv,Solar - PV Dist. Comm,Comm PV - Kansas City,0.588,,
+rooftop_pv,Solar - PV Dist. Res,Res PV - Kansas City,0.588,,
+wind_offshore,Offshore Wind,TRG 4,1,,
 battery,Storage,Battery Storage,1.5,,

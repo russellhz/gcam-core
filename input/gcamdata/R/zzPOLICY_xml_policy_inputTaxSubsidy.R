@@ -1,6 +1,6 @@
 # Copyright 2019 Battelle Memorial Institute; see the LICENSE file.
 
-#' module_policy_inputtax.xml
+#' module_policy_inputTaxSubsidy.xml
 #'
 #' Construct XML data structure for \code{policy_inputtax.xml}.
 #'
@@ -9,11 +9,15 @@
 #' @return Depends on \code{command}: either a vector of required inputs,
 #' a vector of output names, or (if \code{command} is "MAKE") all
 #' the generated outputs: \code{policy_inputtax.xml}.
-module_policy_inputtax.xml <- function(command, ...) {
-  all_xml_names <- get_xml_names("policy/A_InputTaxesSubsidies.csv", "policy_inputtax.xml")
+module_policy_inputTaxSubsidy.xml <- function(command, ...) {
+  all_xml_names <- union(get_xml_names("policy/A_InputTaxesSubsidies.csv", "policy_inputtax.xml"),
+                         get_xml_names("policy/A_InputCapitalFCR.csv", "policy_inputtax.xml"))
+  names(all_xml_names) <- rep("XML", length(all_xml_names))
 
   if(command == driver.DECLARE_INPUTS) {
-    return(c("L302.InputTax"))
+    return(c("L302.InputTax",
+             "L302.InputCapitalFCR",
+             "L302.InputTranTax"))
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(all_xml_names)
   } else if(command == driver.MAKE) {
@@ -22,6 +26,8 @@ module_policy_inputtax.xml <- function(command, ...) {
 
     # Load required inputs
     L302.InputTax <- get_data(all_data, "L302.InputTax")
+    L302.InputTranTax <- get_data(all_data, "L302.InputTranTax")
+    L302.InputCapitalFCR <- get_data(all_data, "L302.InputCapitalFCR")
     # ===================================================
 
     # Produce outputs
@@ -31,10 +37,23 @@ module_policy_inputtax.xml <- function(command, ...) {
         filter(xml == xml_name) %>%
         select(-xml)
 
+      L302.InputTranTax_tmp <- L302.InputTranTax %>%
+        filter(xml == xml_name) %>%
+        select(-xml)
+
+      L302.InputCapitalFCR_tmp <- L302.InputCapitalFCR %>%
+        filter(xml == xml_name) %>%
+        select(-xml)
+
+
       assign(xml_name,
              create_xml(xml_name) %>%
                add_xml_data(L302.InputTax_tmp, "StubTechCost") %>%
-               add_precursors("L302.InputTax")
+               add_xml_data(L302.InputTranTax_tmp, "StubTranTechCost") %>%
+               add_xml_data(L302.InputCapitalFCR_tmp, "StubTechFCR") %>%
+               add_precursors("L302.InputTax",
+                              "L302.InputTranTax",
+                              "L302.InputCapitalFCR")
              )
     }
 

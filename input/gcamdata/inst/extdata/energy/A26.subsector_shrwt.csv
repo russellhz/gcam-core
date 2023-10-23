@@ -1,10 +1,10 @@
-# File: A26.subsector_shrwt.csv
-# Title: Final energy delivery subsector shareweights
-# Units: N/A
-# Description: Shareweights of the distribution of final energy delivery to energy distribution subsectors
-# Source: N/A
-# Column types: cccci 
-# ----------
+# File: A26.subsector_shrwt.csv,,,,
+# Title: Final energy delivery subsector shareweights,,,,
+# Units: N/A,,,,
+# Description: Shareweights of the distribution of final energy delivery to energy distribution subsectors,,,,
+# Source: N/A,,,,
+# Column types: cccci ,,,,
+# ----------,,,,
 supplysector,subsector,year.fillout,year,share.weight
 backup_electricity,gas,start-year,,1
 csp_backup,gas,start-year,,1
@@ -13,6 +13,7 @@ delivered biomass industry,delivered biomass industry,start-year,,1
 delivered coal,delivered coal,start-year,,1
 delivered coal industry,delivered coal industry,start-year,,1
 electricity_net_ownuse,electricity_net_ownuse,start-year,,1
+elect_td_bld,rooftop_pv,start-year,,0
 elect_td_bld,elect_td_bld,start-year,,1
 elect_td_ind,elect_td_ind,start-year,,1
 elect_td_trn,elect_td_trn,start-year,,1
@@ -27,3 +28,6 @@ refined liquids enduse,refined liquids enduse,start-year,,1
 refined liquids industrial,refined liquids industrial,start-year,,1
 refined liquids transport,refined liquids transport,start-year,,1
 refined liquids bunkers,refined liquids bunkers,start-year,,1
+wholesale gas feedstocks,wholesale gas feedstocks,start-year,,1
+refined liquids feedstocks,refined liquids feedstocks,start-year,,1
+delivered coal feedstocks,delivered coal feedstocks,start-year,,1

@@ -14,6 +14,11 @@ get_xml_names <- function(csv_name, default_xml) {
   all_xml_names <- suppressMessages(readr::read_csv(paste0("inst/extdata/", csv_name), comment = "#"))
   all_xml_names <- union(unique(all_xml_names$xml), default_xml)
   names(all_xml_names) <- rep("XML", length(all_xml_names))
+  for(i in 1:length(all_xml_names)){
+    if (!grepl(".xml", all_xml_names[i])){
+      all_xml_names[i] <- paste0(all_xml_names[i], ".xml")
+    }
+  }
   all_xml_names
 }
 
@@ -85,7 +90,7 @@ load_csv_files <- function(filenames, optionals, quiet = FALSE, dummy = NULL, ..
     # Read the file header and extract the column type info from it
     assert_that(file.exists(fqfn))
     header <- find_header(fqfn)
-    col_types <- extract_header_info(header, label = "Column types:", fqfn, required = TRUE)
+    col_types <- gsub(" |,", "", extract_header_info(header, label = "Column types:", fqfn, required = TRUE))
 
     # Attempt the file read
     # Note `options(warn = 2)` forces all warnings to errors...
