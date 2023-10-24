@@ -124,7 +124,7 @@ module_energy_L2323.iron_steel <- function(command, ...) {
     # The TZ steel cost database contains plant-level steel production costs across major producing countries
     # The costs are aggregated by primary production route, averaged across OECD and non-OECD regions, and mapped to the GCAM regions
     # ====================================================================
-      TZ_steel_production_costs %>%
+    TZ_steel_production_costs %>%
         # filter non-energy costs for GCAM model years
         filter(Model_Year %in% c(MODEL_BASE_YEARS)) %>%
         rename(year=Model_Year,subsector= Primary_Production_Route,value=Value)%>%
@@ -134,12 +134,7 @@ module_energy_L2323.iron_steel <- function(command, ...) {
         # GCAM estimates cost of coke in energy costs
         filter(!(Component%in%c("Coke"))) %>%
         # map TZ countries with oecd classification
-        left_join(TZ_steel_cost_oecd_mapping,by=c("Country")) %>%
-        # if DRI is non-zero, set to EAF with DRI
-        mutate(subsector = if_else(Component == "DRI" & value > 0, "EAF with DRI", subsector)) %>%
-      group_by(Plant_ID) %>%
-      mutate(subsector = if_else(grepl("EAF", subsector) & any(subsector == "EAF with DRI"), "EAF with DRI", subsector)) %>%
-      ungroup -> TZ_steel_production_costs
+        left_join(TZ_steel_cost_oecd_mapping,by=c("Country")) -> TZ_steel_production_costs
 
     # Function to aggregate steel production data by Country or OECD regions
     aggregate_steel_production_costs <- function(data,agg_region) {
@@ -169,15 +164,41 @@ module_energy_L2323.iron_steel <- function(command, ...) {
       ungroup
 
     #add capital costs and CCS costs to estimate total production costs
+    # Get ratio of costs compared to baseline techs
+    # First interpolate to all years
+    non_capital_cost_ratio <- A323.globaltech_cost %>%
+      filter(minicam.non.energy.input == "non-capital") %>%
+      gather_years() %>%
+      complete(nesting(supplysector, subsector, technology, minicam.non.energy.input), year = c(year, MODEL_BASE_YEARS, MODEL_FUTURE_YEARS)) %>%
+      arrange(supplysector, subsector, technology, minicam.non.energy.input, year) %>%
+      group_by(supplysector, subsector, technology, minicam.non.energy.input) %>%
+      mutate(input.cost = approx_fun(year, value, rule = 1),
+             input.cost = round(input.cost, energy.DIGITS_COST)) %>%
+      ungroup %>%
+      filter(year %in% c(MODEL_BASE_YEARS, MODEL_FUTURE_YEARS)) %>%
+      mutate(reference_subsector = if_else(subsector %in% c("EAF with DRI", "EAF with scrap"),
+                                           "EAF with scrap", "BLASTFUR")) %>%
+      # now get ratio to either BF_BOF or EAF_scrap_fossil
+      group_by(year) %>%
+      mutate(ratio = if_else(reference_subsector == "EAF with scrap",
+                             input.cost / input.cost[technology == "EAF_scrap_fossil"],
+                             input.cost / input.cost[technology == "BF_BOF"])) %>%
+      ungroup %>%
+      select(supplysector, subsector, technology, year, reference_subsector, ratio)
+
     all_steel_production_costs <-  TZ_steel_cost_gcam_mapping%>%
       left_join(all_steel_production_costs,by=c("Country")) %>%
       mutate(supplysector="iron and steel") %>%
-      left_join(A323.capital_cost_adders,by=c("subsector","supplysector"))%>%
+      right_join(non_capital_cost_ratio, by = c("year", "supplysector", "subsector" = "reference_subsector")) %>%
+      mutate(value = value * ratio  * gdp_deflator(2015, base_year = 2019)) %>%
+      select(-subsector, -ratio, -Country) %>%
+      rename(subsector = subsector.y) %>%
+      left_join_error_no_match(A323.capital_cost_adders,by=c("subsector","supplysector", "technology")) %>%
       #multiply total OPEX, labor, and raw materials costs with capital cost fraction from IEA
-      mutate(value=value+(value*capital_cost_frac)) %>%
+      mutate(value = value + (value * capital_cost_frac)) %>%
       left_join_error_no_match(A323.ccs_adders,
                                by=c("subsector","supplysector", "technology" = "stub.technology")) %>%
-      mutate(value=((value/CONV_T_KG)+ccs_cost_adder)*gdp_deflator(1975,base_year=2015))%>%
+      mutate(value=((value/CONV_T_KG)+ccs_cost_adder) * gdp_deflator(1975,base_year=2015))%>%
       select(supplysector,subsector,region,year,stub.technology = technology,minicam.non.energy.input,value)
 
     #complete subsector and technology nesting across model years
@@ -336,6 +357,7 @@ module_energy_L2323.iron_steel <- function(command, ...) {
 
     # L2323.GlobalTechCost_iron_steel: Non-energy costs of global iron_steel manufacturing technologies
     A323.globaltech_cost %>%
+      filter(minicam.non.energy.input == "non-energy") %>%
       gather_years %>%
       complete(nesting(supplysector, subsector, technology, minicam.non.energy.input), year = c(year, MODEL_BASE_YEARS, MODEL_FUTURE_YEARS)) %>%
       arrange(supplysector, subsector, technology, minicam.non.energy.input, year) %>%

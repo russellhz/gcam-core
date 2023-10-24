@@ -87,7 +87,7 @@ module_energy_iron_steel_xml <- function(command, ...) {
       add_xml_data(L2323.GlobalTechProfitShutdown_en, "GlobalTechProfitShutdown") %>%
       add_xml_data(L2323.GlobalTechSecOut_iron_steel, "GlobalTechRESSecOut") %>%
       # Don't want any stub tech costs
-      # add_xml_data(L2323.StubTechCost_iron_steel, "StubTechCost") %>%
+      add_xml_data(L2323.StubTechCost_iron_steel, "StubTechCost") %>%
       add_xml_data(L2323.StubTechProd_iron_steel, "StubTechProd") %>%
       add_xml_data(L2323.StubTechCoef_iron_steel, "StubTechCoef") %>%
       add_xml_data(L2323.CreditMkt, "PortfolioStd") %>%
