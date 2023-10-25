@@ -51,6 +51,7 @@ BIOFUEL_NODIESEL,refining,biomass liquids,BTL with hydrogen
 CELLULOSIC_ETHANOL,refining,biomass liquids,cellulosic ethanol
 CELLULOSIC_ETHANOL,refining,biomass liquids,cellulosic ethanol CCS level 1
 CELLULOSIC_ETHANOL,refining,biomass liquids,cellulosic ethanol CCS level 2
+COAL_IND,delivered coal industry,delivered coal industry,delivered coal industry
 ELEC_BIO,electricity,biomass,biomass (conv)
 ELEC_BIO,electricity,biomass,biomass (IGCC)
 ELEC_BIO,electricity,biomass,biomass (conv CCS)
@@ -61,6 +62,7 @@ ELEC_NUCLEAR,electricity,nuclear,Gen_III
 ELEC_NUCLEAR,electricity,nuclear,Gen_II_LWR
 ELEC_PV,electricity,solar,PV
 ELEC_PV,electricity,solar,PV_storage
+ELEC_PV,elect_td_bld,rooftop_pv,rooftop_pv
 ELEC_RES,elect_td_bld,elect_td_bld,elect_td_bld
 ELEC_RES,elect_td_bld,rooftop_pv,rooftop_pv
 ELEC_RES,elect_td_en,elect_td_en,elect_td_en
@@ -134,6 +136,43 @@ EN_CARRIER_ELEC,elec_biomass (IGCC CCS),biomass (IGCC CCS),biomass (IGCC CCS) (o
 EN_CARRIER_ELEC,elec_biomass (IGCC CCS),biomass (IGCC CCS),biomass (IGCC CCS) (seawater)
 EN_CARRIER_ELEC,elec_biomass (IGCC CCS),biomass (IGCC CCS),biomass (IGCC CCS) (recirculating)
 EN_CARRIER_ELEC,elec_biomass (IGCC CCS),biomass (IGCC CCS),biomass (IGCC CCS) (dry cooling)
+EN_CARRIER_ELEC_NF,electricity,hydro,hydro
+EN_CARRIER_ELEC_NF,electricity,wind,wind
+EN_CARRIER_ELEC_NF,electricity,wind,wind_offshore
+EN_CARRIER_ELEC_NF,electricity,wind,wind_storage
+EN_CARRIER_ELEC_NF,electricity,solar,PV
+EN_CARRIER_ELEC_NF,electricity,solar,PV_storage
+EN_CARRIER_ELEC_NF,elec_geothermal,geothermal,geothermal (recirculating)
+EN_CARRIER_ELEC_NF,elec_geothermal,geothermal,geothermal (dry_hybrid)
+EN_CARRIER_ELEC_NF,elec_CSP,CSP,CSP (recirculating)
+EN_CARRIER_ELEC_NF,elec_CSP,CSP,CSP (dry_hybrid)
+EN_CARRIER_ELEC_NF,elec_CSP_storage,CSP_storage,CSP_storage (recirculating)
+EN_CARRIER_ELEC_NF,elec_CSP_storage,CSP_storage,CSP_storage (dry_hybrid)
+EN_CARRIER_ELEC_NF,elec_biomass (conv),biomass (conv),biomass (conv) (once through)
+EN_CARRIER_ELEC_NF,elec_biomass (conv),biomass (conv),biomass (conv) (seawater)
+EN_CARRIER_ELEC_NF,elec_biomass (conv),biomass (conv),biomass (conv) (recirculating)
+EN_CARRIER_ELEC_NF,elec_biomass (conv),biomass (conv),biomass (conv) (cooling pond)
+EN_CARRIER_ELEC_NF,elec_biomass (conv),biomass (conv),biomass (conv) (dry cooling)
+EN_CARRIER_ELEC_NF,elec_biomass (IGCC),biomass (IGCC),biomass (IGCC) (once through)
+EN_CARRIER_ELEC_NF,elec_biomass (IGCC),biomass (IGCC),biomass (IGCC) (seawater)
+EN_CARRIER_ELEC_NF,elec_biomass (IGCC),biomass (IGCC),biomass (IGCC) (recirculating)
+EN_CARRIER_ELEC_NF,elec_biomass (IGCC),biomass (IGCC),biomass (IGCC) (dry cooling)
+EN_CARRIER_ELEC_NF,elec_biomass (conv CCS),biomass (conv CCS),biomass (conv CCS) (once through)
+EN_CARRIER_ELEC_NF,elec_biomass (conv CCS),biomass (conv CCS),biomass (conv CCS) (seawater)
+EN_CARRIER_ELEC_NF,elec_biomass (conv CCS),biomass (conv CCS),biomass (conv CCS) (recirculating)
+EN_CARRIER_ELEC_NF,elec_biomass (conv CCS),biomass (conv CCS),biomass (conv CCS) (dry cooling)
+EN_CARRIER_ELEC_NF,elec_biomass (IGCC CCS),biomass (IGCC CCS),biomass (IGCC CCS) (once through)
+EN_CARRIER_ELEC_NF,elec_biomass (IGCC CCS),biomass (IGCC CCS),biomass (IGCC CCS) (seawater)
+EN_CARRIER_ELEC_NF,elec_biomass (IGCC CCS),biomass (IGCC CCS),biomass (IGCC CCS) (recirculating)
+EN_CARRIER_ELEC_NF,elec_biomass (IGCC CCS),biomass (IGCC CCS),biomass (IGCC CCS) (dry cooling)
+EN_CARRIER_ELEC_NF,elec_Gen_III,Gen_III,Gen_III (cooling pond)
+EN_CARRIER_ELEC_NF,elec_Gen_III,Gen_III,Gen_III (once through)
+EN_CARRIER_ELEC_NF,elec_Gen_III,Gen_III,Gen_III (recirculating)
+EN_CARRIER_ELEC_NF,elec_Gen_III,Gen_III,Gen_III (seawater)
+EN_CARRIER_ELEC_NF,elec_Gen_II_LWR,Gen_II_LWR,Gen_II_LWR (cooling pond)
+EN_CARRIER_ELEC_NF,elec_Gen_II_LWR,Gen_II_LWR,Gen_II_LWR (once through)
+EN_CARRIER_ELEC_NF,elec_Gen_II_LWR,Gen_II_LWR,Gen_II_LWR (recirculating)
+EN_CARRIER_ELEC_NF,elec_Gen_II_LWR,Gen_II_LWR,Gen_II_LWR (seawater)
 EN_CARRIER_FUEL,H2 central production,biomass,biomass to H2
 EN_CARRIER_FUEL,H2 central production,biomass,biomass to H2 CCS
 EN_CARRIER_FUEL,H2 central production,wind,electrolysis
@@ -195,7 +234,6 @@ FE_NO_PV,elect_td_trn,elect_td_trn,elect_td_trn
 FE_RES,delivered biomass,delivered biomass,delivered biomass
 FE_RES,delivered coal,delivered coal,delivered coal
 FE_RES,delivered biomass industry,delivered biomass industry,delivered biomass industry
-FE_RES,delivered coal industry,delivered coal industry,delivered coal industry
 FE_RES,wholesale gas,wholesale gas,wholesale gas
 FE_RES,delivered gas,delivered gas,delivered gas
 FE_RES,delivered gas transport,delivered gas transport,delivered gas transport
@@ -219,8 +257,6 @@ FE_RES,district heat,biomass,biomass
 FE_RES,district heat,coal,coal
 FE_RES,district heat,gas,gas
 FE_RES,district heat,refined liquids,refined liquids
-FE_RES,resid heating,traditional biomass,traditional biomass
-FE_RES,resid others,traditional biomass,traditional biomass
 FEEDSTOCKS_BUNKERS,chemical feedstocks,gas,gas
 FEEDSTOCKS_BUNKERS,chemical feedstocks,refined liquids,refined liquids
 FEEDSTOCKS_BUNKERS,construction feedstocks,refined liquids,refined liquids
@@ -526,3 +562,4 @@ TPES_RES_primary,regional corn for ethanol,regional corn for ethanol,regional co
 TPES_RES_primary,regional sugar for ethanol,regional sugar for ethanol,regional sugar for ethanol
 TRAD_BIO,resid heating,traditional biomass,traditional biomass
 TRAD_BIO,resid others,traditional biomass,traditional biomass
+PALMOIL_IMP,regional oilpalm,imported oilpalm,imported oilpalm

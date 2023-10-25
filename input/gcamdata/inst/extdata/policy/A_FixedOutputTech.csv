@@ -14,7 +14,7 @@ policy_hydro_fix_saf.xml,South Africa,electricity,hydro,hydro,0,,,,0.008621673,0
 policy_hydro_fix_tur.xml,Europe_Non_EU,electricity,hydro,hydro,0,,,,0.434081726,0.511569451,0.511569451,0.511569451,0.511569451,0.511569451,0.511569451,0.511569451
 policy_hydro_fix_usa.xml,USA,electricity,hydro,hydro,0,,,,1.06020781,1.058987836,1.058987836,1.058987836,1.058987836,1.058987836,1.058987836,1.058987836
 policy_hydro_fix_bra.xml,Brazil,electricity,hydro,hydro,0,,,,1.544512374,1.793954748,1.793954748,1.793954748,1.793954748,1.793954748,1.793954748,1.793954748
-policy_hydro_fix_chn.xml,China,electricity,hydro,hydro,0,,,,4.873062143,4.873062143,4.873062143,4.873062143,4.873062143,4.873062143,4.873062143,4.873062143
+policy_hydro_fix_chn.xml,China,electricity,hydro,hydro,0,,,,4.873062143,5.647019071,6.406643464,6.406643464,6.406643464,6.406643464,6.406643464,6.406643464
 policy_hydro_fix_kor.xml,South Korea,electricity,hydro,hydro,0,,,,,,0.013822766,,,,,
 IRA_nuclear_fixed,USA,electricity,nuclear,Gen_II_LWR,0,,2015,2050,2.850336205,2.816243129,2.816243129,2.816243129,2.816243129,2.816243129,2.816243129,
 IRA_nuclear_fixed,USA,electricity,nuclear,Gen_III,0,,2015,2015,,,,,,,,
