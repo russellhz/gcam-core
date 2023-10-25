@@ -189,7 +189,8 @@ module_energy_L2323.iron_steel <- function(command, ...) {
     all_steel_production_costs <-  TZ_steel_cost_gcam_mapping%>%
       left_join(all_steel_production_costs,by=c("Country")) %>%
       mutate(supplysector="iron and steel") %>%
-      right_join(non_capital_cost_ratio, by = c("year", "supplysector", "subsector" = "reference_subsector")) %>%
+      right_join(non_capital_cost_ratio %>% filter(year %in% all_steel_production_costs$year),
+                 by = c("year", "supplysector", "subsector" = "reference_subsector")) %>%
       mutate(value = value * ratio  * gdp_deflator(2015, base_year = 2019)) %>%
       select(-subsector, -ratio, -Country) %>%
       rename(subsector = subsector.y) %>%
