@@ -80,7 +80,9 @@ module_policy_CCap_xml <- function(command, ...) {
                add_xml_data(L3221.CCap_tech_tmp, "StubTechCO2") %>%
                add_xml_data(L3221.CCap_tranTech_tmp, "StubTranTechCO2") %>%
                add_xml_data(L3221.CCap_resource_tmp, "ResTechCO2") %>%
-               add_xml_data(L3221.CCap_GHG_Link_tmp, "GHGConstrLink") %>%
+               add_xml_data(L3221.CCap_GHG_Link_tmp, "GHGConstrLinkPriceAdj") %>%
+               add_xml_data(L3221.CCap_GHG_Link_tmp, "GHGConstrLinkDemandAdj") %>%
+               add_xml_data(L3221.CCap_GHG_Link_tmp, "GHGConstrLinkMktUnits") %>%
                add_precursors("L3221.CCap_constraint",
                               "L3221.CCap_link_regions",
                               "L3221.CCap_tech",

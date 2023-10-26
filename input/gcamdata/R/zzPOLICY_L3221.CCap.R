@@ -248,9 +248,10 @@ module_policy_L3221.CCap <- function(command, ...) {
 
     # 6. Get ghg link for each -------------------------
     L3221.CCap_GHG_Link <- A_CCap_Constraint %>%
-      distinct(xml, link.type, market, ghgpolicy) %>%
+      distinct(xml, link.type, market, ghgpolicy, adjust.year) %>%
       left_join(market_region_mappings, by = "market") %>%
-      mutate(region = if_else(!is.na(region), region, market)) %>%
+      mutate(region = if_else(!is.na(region), region, market),
+             year = adjust.year) %>%
       filter(!is.na(link.type)) %>%
       left_join(ghg_link, by = "link.type") %>%
       rename(linked.policy = ghgpolicy) %>%
