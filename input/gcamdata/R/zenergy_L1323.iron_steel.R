@@ -227,8 +227,6 @@ module_energy_L1323.iron_steel <- function(command, ...) {
                 unique((L1323.index %>% filter(BLASTFUR == 0 |`EAF with scrap`== 0 |`EAF with DRI` == 0))$region))
         ] <- "linear"
 
-    # Decide whether to calculate IOs by scaling from IEA balance or just directly use provided IOS
-    if (energy.IRON_STEEL_CALCULATE_IO){
       # Get steel energy use from IEA energy balances
       L1012.en_bal_EJ_R_Si_Fi_Yh %>%
         filter(grepl("steel", sector)) %>%
@@ -279,7 +277,7 @@ module_energy_L1323.iron_steel <- function(command, ...) {
         select(GCAM_region_ID, year, subsector, technology, fuel, coefficient, Unit) ->
         Intensity_scaled
 
-      IO_iron_steel <- steel_intensity %>%
+      IO_iron_steel_calculated <- steel_intensity %>%
         select(subsector, technology, fuel,ratio) %>%
         distinct() %>%
         mutate(sector = "iron and steel") %>%
@@ -289,14 +287,22 @@ module_energy_L1323.iron_steel <- function(command, ...) {
         na.omit %>%
         mutate(coefficient=coefficient*ratio) %>%
         select(-ratio)
-    } else {
-      IO_iron_steel <- steel_intensity %>%
+
+      IO_iron_steel_Wuppertal <- steel_intensity %>%
         mutate(sector = "iron and steel",
                value = value * CONV_GJ_EJ / CONV_T_MT) %>%
         select(sector, subsector, technology, fuel, coefficient = value, Unit) %>%
         repeat_add_columns(select(iso_GCAM_regID, GCAM_region_ID) %>% distinct(GCAM_region_ID)) %>%
         repeat_add_columns(tibble::tibble(year = HISTORICAL_YEARS))
-    }
+
+      # Decide whether to use IOs by scaling from IEA balance or just directly
+      # use provided IOS
+      if (energy.IRON_STEEL_CALCULATE_IO){
+        IO_iron_steel <- IO_iron_steel_calculated
+      } else {
+        IO_iron_steel <- IO_iron_steel_Wuppertal
+
+      }
 
      # Use IO to calculate energy input
     L1323.out_Mt_R_iron_steel_Yh %>%
@@ -309,6 +315,7 @@ module_energy_L1323.iron_steel <- function(command, ...) {
       select(GCAM_region_ID, year, supplysector = "sector", subsector, technology, fuel, coefficient) ->
       L1323.IO_GJkg_R_iron_steel_F_Yh
 
+	 # FIRST ENERGY CALCULATION ---------------
 	# Subtract iron and steel energy use from other industrial energy use
     L1322.in_EJ_R_indenergy_F_Yh %>%
       rename(raw = value) %>%
@@ -324,6 +331,7 @@ module_energy_L1323.iron_steel <- function(command, ...) {
       mutate(value = if_else(value > 0 , value, 0)) ->
       L1323.in_EJ_R_indenergy_F_Yh
 
+    # FIRST IO ADJUSTMENT ---------------
     #Adjust negative energy use
 
     # Identify rows with negative energy use
@@ -332,12 +340,24 @@ module_energy_L1323.iron_steel <- function(command, ...) {
       select(-sector) ->
       negative
 
-    # revise IO coefficients to zero for rows with negative energy use
-    L1323.IO_GJkg_R_iron_steel_F_Yh %>%
-      left_join(negative,by = c("GCAM_region_ID", "year", "fuel")) %>%
-      mutate(coefficient = if_else(replace_na(value, 0) < 0, 0, coefficient),value = NULL) ->
-      L1323.IO_GJkg_R_iron_steel_F_Yh
-
+    # revise IO coefficients
+    if (energy.IRON_STEEL_CALCULATE_IO){
+      # If using calcuated IOs, switch to zero
+      L1323.IO_GJkg_R_iron_steel_F_Yh %>%
+        left_join(negative,by = c("GCAM_region_ID", "year", "fuel")) %>%
+        mutate(coefficient = if_else(replace_na(value, 0) < 0, 0, coefficient),value = NULL) ->
+        L1323.IO_GJkg_R_iron_steel_F_Yh
+    } else {
+      # Otherwise switch to calculated IOs
+      L1323.IO_GJkg_R_iron_steel_F_Yh %>%
+        left_join(negative,by = c("GCAM_region_ID", "year", "fuel")) %>%
+        left_join(IO_iron_steel_calculated,
+                                 by = c("GCAM_region_ID", "year", "subsector", "technology", "fuel")) %>%
+        mutate(coefficient = if_else(replace_na(value, 0) < 0 & !is.na(coefficient.y), coefficient.y, coefficient.x)) %>%
+        select(-value, -coefficient.x, -coefficient.y)->
+        L1323.IO_GJkg_R_iron_steel_F_Yh
+    }
+    # SECOND ENERGY CALCULATION ---------------
     #Recalculate
 
     # Recalculate the input steel energy with revised IO coefficients
@@ -356,7 +376,50 @@ module_energy_L1323.iron_steel <- function(command, ...) {
                   summarise(value = sum(value)), by = c("GCAM_region_ID", "year", "fuel")) %>%
       replace_na(list(value = 0)) %>%
       mutate(value = raw - value , raw = NULL) ->
+      L1323.in_EJ_R_indenergy_F_Yh_tmp
+
+    L1323.in_EJ_R_indenergy_F_Yh_tmp %>%
+      mutate(value = if_else(value > 0 , value, 0)) ->
       L1323.in_EJ_R_indenergy_F_Yh
+
+    # SECOND IO ADJUSTMENT ------------------
+    #Adjust negative energy use
+    # Identify rows with negative energy use
+    L1323.in_EJ_R_indenergy_F_Yh_tmp %>%
+      filter(value < 0) %>%
+      select(-sector) ->
+      negative
+
+    # revise IO coefficients
+      # set to zero, except in 2015, divide by 10
+      L1323.IO_GJkg_R_iron_steel_F_Yh %>%
+        left_join(negative,by = c("GCAM_region_ID", "year", "fuel")) %>%
+        mutate(coefficient = if_else(replace_na(value, 0) < 0,
+                                     0,
+                                     coefficient)) %>%
+        select(-value)->
+        L1323.IO_GJkg_R_iron_steel_F_Yh
+
+      # THIRD ENERGY CALCULATION ---------------
+      #Recalculate
+
+      # Recalculate the input steel energy with revised IO coefficients
+      L1323.out_Mt_R_iron_steel_Yh %>%
+        left_join(L1323.IO_GJkg_R_iron_steel_F_Yh,
+                  by = c("subsector", "technology", "GCAM_region_ID", "year")) %>%
+        mutate(value = value * coefficient) %>%
+        select(GCAM_region_ID, year, subsector, technology, fuel, value) ->
+        L1323.in_EJ_R_iron_steel_F_Y
+
+      # Redo the iron and steel energy use and other industrial energy use subtraction
+      L1322.in_EJ_R_indenergy_F_Yh %>%
+        rename(raw = value) %>%
+        left_join(L1323.in_EJ_R_iron_steel_F_Y %>%
+                    group_by(GCAM_region_ID, year, fuel) %>%
+                    summarise(value = sum(value)), by = c("GCAM_region_ID", "year", "fuel")) %>%
+        replace_na(list(value = 0)) %>%
+        mutate(value = raw - value , raw = NULL) ->
+        L1323.in_EJ_R_indenergy_F_Yh
 
     # ===================================================
     # Produce outputs
