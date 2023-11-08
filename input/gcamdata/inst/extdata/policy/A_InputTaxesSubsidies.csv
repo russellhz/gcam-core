@@ -69,3 +69,70 @@ IRA_biofuels,USA,refining,biomass liquids,cellulosic ethanol CCS level 1,IRA sub
 IRA_biofuels,USA,refining,biomass liquids,cellulosic ethanol CCS level 2,IRA subsidy,,-1.8906,-1.8906,-1.8906,-1.8906,-1.8906,-1.8906,-1.8906
 IRA_biofuels,USA,refining,biomass liquids,FT biofuels CCS level 1,IRA subsidy,,-2.9188,-2.9188,-2.9188,-2.9188,-2.9188,-2.9188,-2.9188
 IRA_biofuels,USA,refining,biomass liquids,FT biofuels CCS level 2,IRA subsidy,,-2.9188,-2.9188,-2.9188,-2.9188,-2.9188,-2.9188,-2.9188
+renewcorr_usa,USA,electricity,solar,PV,renew-calib,1,,,,,,,
+renewcorr_usa,USA,electricity,wind,wind,renew-calib,1,,,,,,,
+renewcorr_usa,USA,electricity,geothermal,geothermal,renew-calib,1,,,,,,,
+bldeleccorr_world,Africa_Eastern,elect_td_bld,elect_td_bld,elect_td_bld,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,Africa_Northern,elect_td_bld,elect_td_bld,elect_td_bld,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,Africa_Southern,elect_td_bld,elect_td_bld,elect_td_bld,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,Africa_Western,elect_td_bld,elect_td_bld,elect_td_bld,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,Argentina,elect_td_bld,elect_td_bld,elect_td_bld,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,Australia_NZ,elect_td_bld,elect_td_bld,elect_td_bld,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,Brazil,elect_td_bld,elect_td_bld,elect_td_bld,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,Canada,elect_td_bld,elect_td_bld,elect_td_bld,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,Central America and Caribbean,elect_td_bld,elect_td_bld,elect_td_bld,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,Central Asia,elect_td_bld,elect_td_bld,elect_td_bld,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,China,elect_td_bld,elect_td_bld,elect_td_bld,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,Colombia,elect_td_bld,elect_td_bld,elect_td_bld,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,EU-12,elect_td_bld,elect_td_bld,elect_td_bld,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,EU-15,elect_td_bld,elect_td_bld,elect_td_bld,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,Europe_Eastern,elect_td_bld,elect_td_bld,elect_td_bld,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,Europe_Non_EU,elect_td_bld,elect_td_bld,elect_td_bld,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,European Free Trade Association,elect_td_bld,elect_td_bld,elect_td_bld,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,India,elect_td_bld,elect_td_bld,elect_td_bld,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,Indonesia,elect_td_bld,elect_td_bld,elect_td_bld,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,Japan,elect_td_bld,elect_td_bld,elect_td_bld,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,Mexico,elect_td_bld,elect_td_bld,elect_td_bld,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,Middle East,elect_td_bld,elect_td_bld,elect_td_bld,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,Pakistan,elect_td_bld,elect_td_bld,elect_td_bld,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,Russia,elect_td_bld,elect_td_bld,elect_td_bld,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,South Africa,elect_td_bld,elect_td_bld,elect_td_bld,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,South America_Northern,elect_td_bld,elect_td_bld,elect_td_bld,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,South America_Southern,elect_td_bld,elect_td_bld,elect_td_bld,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,South Asia,elect_td_bld,elect_td_bld,elect_td_bld,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,South Korea,elect_td_bld,elect_td_bld,elect_td_bld,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,Southeast Asia,elect_td_bld,elect_td_bld,elect_td_bld,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,Taiwan,elect_td_bld,elect_td_bld,elect_td_bld,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,USA,elect_td_bld,elect_td_bld,elect_td_bld,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,Africa_Eastern,elect_td_bld,rooftop_pv,rooftop_pv,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,Africa_Northern,elect_td_bld,rooftop_pv,rooftop_pv,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,Africa_Southern,elect_td_bld,rooftop_pv,rooftop_pv,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,Africa_Western,elect_td_bld,rooftop_pv,rooftop_pv,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,Argentina,elect_td_bld,rooftop_pv,rooftop_pv,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,Australia_NZ,elect_td_bld,rooftop_pv,rooftop_pv,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,Brazil,elect_td_bld,rooftop_pv,rooftop_pv,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,Canada,elect_td_bld,rooftop_pv,rooftop_pv,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,Central America and Caribbean,elect_td_bld,rooftop_pv,rooftop_pv,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,Central Asia,elect_td_bld,rooftop_pv,rooftop_pv,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,China,elect_td_bld,rooftop_pv,rooftop_pv,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,Colombia,elect_td_bld,rooftop_pv,rooftop_pv,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,EU-12,elect_td_bld,rooftop_pv,rooftop_pv,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,EU-15,elect_td_bld,rooftop_pv,rooftop_pv,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,Europe_Eastern,elect_td_bld,rooftop_pv,rooftop_pv,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,Europe_Non_EU,elect_td_bld,rooftop_pv,rooftop_pv,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,European Free Trade Association,elect_td_bld,rooftop_pv,rooftop_pv,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,India,elect_td_bld,rooftop_pv,rooftop_pv,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,Indonesia,elect_td_bld,rooftop_pv,rooftop_pv,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,Japan,elect_td_bld,rooftop_pv,rooftop_pv,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,Mexico,elect_td_bld,rooftop_pv,rooftop_pv,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,Middle East,elect_td_bld,rooftop_pv,rooftop_pv,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,Pakistan,elect_td_bld,rooftop_pv,rooftop_pv,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,Russia,elect_td_bld,rooftop_pv,rooftop_pv,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,South Africa,elect_td_bld,rooftop_pv,rooftop_pv,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,South America_Northern,elect_td_bld,rooftop_pv,rooftop_pv,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,South America_Southern,elect_td_bld,rooftop_pv,rooftop_pv,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,South Asia,elect_td_bld,rooftop_pv,rooftop_pv,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,South Korea,elect_td_bld,rooftop_pv,rooftop_pv,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,Southeast Asia,elect_td_bld,rooftop_pv,rooftop_pv,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,Taiwan,elect_td_bld,rooftop_pv,rooftop_pv,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
+bldeleccorr_world,USA,elect_td_bld,rooftop_pv,rooftop_pv,elec-bld-calib,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
