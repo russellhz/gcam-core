@@ -1,10 +1,10 @@
-# File: A_demand_supplysector.csv
-# Title: Supply sectors of agricultural production
-# Unit: Various
-# Description: Generic information for supply sectors of agricultural production
-# Source: GCAM assumptions
-# Column types: cccccninnc 
-# ----------
+# File: A_demand_supplysector.csv,,,,,,,,,
+# Title: Supply sectors of agricultural production,,,,,,,,,
+# Unit: Various,,,,,,,,,
+# Description: Generic information for supply sectors of agricultural production,,,,,,,,,
+# Source: GCAM assumptions,,,,,,,,,
+# Column types: cccccninnc ,,,,,,,,,
+# ----------,,,,,,,,,
 supplysector,energy.final.demand,output.unit,input.unit,price.unit,logit.exponent,perCapitaBased,price.elasticity,income.elasticity,logit.type
 FoodDemand_Staples,,Pcal,Mt,1975$/Mcal,-0.25,,,,
 FoodDemand_NonStaples,,Pcal,Mt,1975$/Mcal,-0.25,,,,

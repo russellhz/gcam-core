@@ -323,8 +323,8 @@ module_energy_L232.other_industry <- function(command, ...) {
       L232.in_EJ_R_indenergy_F_Yh # intermediate tibble
 
     L232.in_EJ_R_indenergy_F_Yh %>%
-      left_join_error_no_match(distinct(select(A32.globaltech_eff, subsector, technology, minicam.energy.input)),
-                               by = c("subsector", "stub.technology" = "technology")) %>%
+      left_join_error_no_match(distinct(select(A32.globaltech_eff, supplysector, subsector, technology, minicam.energy.input)),
+                               by = c("supplysector", "subsector", "stub.technology" = "technology")) %>%
       mutate(calibrated.value = round(value, energy.DIGITS_CALOUTPUT),
              share.weight.year = year) %>%
       rename(calOutputValue = calibrated.value) %>%  # temporary column name change to accommodate function set_subsector_shrwt
@@ -345,8 +345,8 @@ module_energy_L232.other_industry <- function(command, ...) {
 
     L232.in_EJ_R_indfeed_F_Yh %>%
       select(LEVEL2_DATA_NAMES[["StubTechYr"]], "value") %>%
-      left_join(distinct(select(A32.globaltech_eff, subsector, technology, minicam.energy.input)),
-                by = c("subsector", "stub.technology" = "technology")) %>%
+      left_join_error_no_match(distinct(select(A32.globaltech_eff, supplysector, subsector, technology, minicam.energy.input)),
+                               by = c("supplysector","subsector", "stub.technology" = "technology")) %>%
       mutate(calibrated.value = round(value, energy.DIGITS_CALOUTPUT)) %>%
       select(-value) %>%
       mutate(share.weight.year = year) %>%
@@ -598,6 +598,7 @@ module_energy_L232.other_industry <- function(command, ...) {
     }
 
     # Now that we have industrial output, we can back out the appropriate income elasticities
+    # DV: income elasticities for other industry divided by 2 due to disproportional growth relative to historical periods
     L232.Output_ind %>%
       filter(year %in% MODEL_FUTURE_YEARS) %>%
       mutate(value = approx( x = A32.inc_elas_output[["pc.output_GJ"]],
@@ -605,6 +606,7 @@ module_energy_L232.other_industry <- function(command, ...) {
                              xout = value,
                              rule = 2)[["y"]]) %>%
       mutate(value = round(value, energy.DIGITS_INCELAS_IND)) %>%
+      mutate(value = value * 0.5) %>%
       rename(income.elasticity = value) %>%
       mutate(energy.final.demand = A32.demand[["energy.final.demand"]]) ->
       L232.IncomeElasticity_ind # intermediate tibble

@@ -14,5 +14,4 @@ electricity,hydro,start-year,,0
 electricity,wind,2100,,1
 electricity,solar,2100,,1
 electricity,geothermal,2100,,1
-elect_td_bld,rooftop_pv,start-year,,0
-elect_td_bld,rooftop_pv,2100,,1
+elect_td_bld,rooftop_pv,2050,,1

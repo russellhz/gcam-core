@@ -4,11 +4,12 @@
 
 OUTPUTS_DIR              <- "outputs/"
 XML_DIR                  <- "xml/"
+POLICY_XML_DIR           <- "xml_policy/"
 COMMENT_CHAR             <- "#"
 UNDER_TIMESHIFT          <- FALSE
 YEAR_PATTERN             <- "^(1|2)[0-9]{3}$"   # a 1 or 2 followed by three digits, and nothing else
 LOGIT_TYPE_COLNAME       <- "logit.type"        # will be removed by test code before old-new comparison
-DISABLED_MODULES         <- "policy"
+DISABLED_MODULES         <- "NONE"
 
 
 # Flags ======================================================================
@@ -564,7 +565,7 @@ energy.TRAN_UCD_MODE<-'rev.mode'
 energy.TRAN_UCD_SIZE_CLASS<-'rev_size.class'
 
 # Constants related to ATB power sector technology costs
-energy.ELEC_COST_SOURCE <- "WEO-EUREF" # Default is ATB, alternatives are EUREF, WEO, or WEO-EUREF (EU values from EUREF, rest of world from WEO)
+energy.ELEC_COST_SOURCE <- "WEO" # Default is ATB, alternatives are EUREF, WEO, or WEO-EUREF (EU values from EUREF, rest of world from WEO)
 energy.WEO_SCENARIO <- "Stated.Policies" # Options are Stated.Policies and Net.Zero.Emissions.by.2050
 
 energy.ATB_2017_YEARS <- c(2015:2016)
@@ -837,7 +838,7 @@ emissions.N2O.GWP.AR4 <- 298 # used for EPA non-CO2 scaling, the 2019 EPA non-CO
 emissions.COAL_SO2_THRESHOLD <- 0.1   # Tg/EJ (here referring to Tg SO2 per EJ of coal electricity)
 emissions.LOW_PCGDP          <- 2.75  # thousand 1990 USD
 emissions.MAC_TAXES          <- c(0, 2, 4, 6, 13, 27, 53, 100, 200, 450, 850, 2000, 3000, 5000) # Range of MAC curve costs to keep to read into GCAM; they are in EPA's units (2010USD_tCO2e)
-emissions.MAC_MARKET         <- "CO2mac" # Default market that MAC curves will look for
+emissions.MAC_MARKET         <- "nonCO2" # Default market that MAC curves will look for
 emissions.MAC_HIGHESTREDUCTION <- 0.95 # a high MAC reduction used to replace calculated values there are greater than 1
 
 emissions.AGR_SECTORS        <- c("rice", "fertilizer", "soil")

@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8"?><scenario name="CCSP450">
+    <world>
+<region name="European Free Trade Association">
+            <policy-portfolio-standard name="Bio_Policy">
+<policyType>tax</policyType>     <market>EFTA</market>
+
+<constraint year="2025">1.15</constraint>
+<constraint year="2030">1.4</constraint>
+<constraint year="2035">1.6</constraint>
+<constraint year="2040">1.8</constraint>
+<constraint year="2045">1.9</constraint>
+<constraint year="2050">2</constraint>
+<constraint year="2055">2.1</constraint>
+<constraint year="2060">2.2</constraint>
+<constraint year="2065">2.3</constraint>
+<constraint year="2070">2.4</constraint>
+<constraint year="2075">2.5</constraint>
+<constraint year="2080">2.5</constraint>
+<constraint year="2085">2.5</constraint>
+<constraint year="2090">2.5</constraint>
+<constraint year="2095">2.5</constraint>
+<constraint year="2100">2.5</constraint>
+            </policy-portfolio-standard>
+<supplysector name="regional biomass">
+<subsector name="regional biomass">
+                <technology name="regional biomass">
+                    <period year="1975">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="1990">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2005">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2010">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2015">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2020">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2025">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2030">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2035">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2040">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2045">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2050">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2055">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2060">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2065">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2070">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2075">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2080">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2085">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2090">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2095">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2100">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                </technology>
+            </subsector>
+            </supplysector>
+<supplysector name="regional sugar for ethanol">
+<subsector name="regional sugar for ethanol">
+                <technology name="regional sugar for ethanol">
+                    <period year="1975">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="1990">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2005">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2010">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2015">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2020">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2025">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2030">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2035">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2040">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2045">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2050">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2055">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2060">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2065">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2070">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2075">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2080">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2085">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2090">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2095">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2100">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                </technology>
+            </subsector>
+            </supplysector>
+<supplysector name="regional corn for ethanol">
+<subsector name="regional corn for ethanol">
+                <technology name="regional corn for ethanol">
+                    <period year="1975">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="1990">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2005">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2010">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2015">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2020">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2025">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2030">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2035">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2040">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2045">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2050">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2055">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2060">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2065">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2070">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2075">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2080">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2085">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2090">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2095">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2100">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                </technology>
+            </subsector>
+            </supplysector>
+   <supplysector name="regional biomassOil">
+<subsector name="regional biomassOil">             
+                <technology name="OilCrop">
+                    <period year="1975">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="1990">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2005">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2010">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2015">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2020">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2025">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2030">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2035">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2040">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2045">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2050">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2055">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2060">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2065">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2070">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2075">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2080">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2085">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2090">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2095">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2100">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                </technology>
+                <technology name="OilPalm">
+                    <period year="1975">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="1990">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2005">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2010">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2015">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2020">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2025">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2030">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2035">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2040">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2045">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2050">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2055">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2060">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2065">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2070">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2075">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2080">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2085">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2090">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2095">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2100">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                </technology>
+                <technology name="Soybean">
+                    <period year="1975">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="1990">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2005">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2010">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2015">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2020">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2025">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2030">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2035">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2040">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2045">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2050">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2055">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2060">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2065">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2070">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2075">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2080">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2085">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2090">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2095">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                    <period year="2100">
+ 
+<input-tax name="Bio_Policy"/>   </period>
+                </technology>
+            </subsector>
+            </supplysector>
+        </region>
+    </world>
+</scenario>

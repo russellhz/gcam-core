@@ -4,9 +4,9 @@
 # Column types: cn 
 # ----------
 supplysector,multiplier
-resid heating,1.1
-resid cooling,1.1
-resid others,1.3
-comm heating,1.1
-comm cooling,1.1
-comm others,1.3
+resid heating,1.075
+resid cooling,1.075
+resid others,1.15
+comm heating,1.075
+comm cooling,1.075
+comm others,1.15
