@@ -44,7 +44,8 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
              "L225.StubTech_h2",
              "L239.PrimaryConsKeyword_en",
              "L2392.PrimaryConsKeyword_en_NG",
-             "L221.StubTechCalInput_bioOil") )
+             "L221.StubTechCalInput_bioOil",
+             "L240.Production_reg_imp") )
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(c("L301.policy_port_stnd",
              "L301.XML_policy_map",
@@ -104,7 +105,9 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
                                     get_data(all_data, "L239.PrimaryConsKeyword_en") %>%
                                      select(-primary.consumption, -year) %>%
                                      distinct() %>%
-                                     rename(stub.technology = technology)
+                                     rename(stub.technology = technology),
+                                   get_data(all_data, "L240.Production_reg_imp") %>%
+                                     distinct(region, supplysector, subsector, stub.technology = technology)
                                    )
 
     # 1a. Perform any gdp intensity calculations, if needed -------------------
