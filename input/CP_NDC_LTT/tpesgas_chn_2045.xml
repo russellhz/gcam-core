@@ -1,0 +1,571 @@
+<scenario>
+   <world>
+      <region name="China">
+         <policy-portfolio-standard name="TPES_GAS">
+                                <market>China</market>
+            <policyType>RES</policyType>
+            <constraint year="2020">1</constraint>
+            <constraint year="2025">1</constraint>
+            <constraint year="2030">1</constraint>
+            <constraint year="2035">1</constraint>
+            <constraint year="2040">1</constraint>
+            <constraint year="2045">1</constraint>
+<fixedTax fillout="1" year="2050">0</fixedTax>
+         </policy-portfolio-standard>
+         <supplysector name="regional biomass">
+            <subsector name="regional biomass">
+               <technology name="regional biomass">
+                  <period year="2020"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.085</coefficient> </minicam-energy-input>    </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.117</coefficient> </minicam-energy-input>    </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+               </technology>
+            </subsector>
+        </supplysector>
+
+         <supplysector name="regional coal">
+            <subsector name="imported coal">
+               <technology name="imported coal">
+                  <period year="2020"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.085</coefficient> </minicam-energy-input>  </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.117</coefficient> </minicam-energy-input>  </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>  </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>  </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>  </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>  </period>
+             </technology>
+            </subsector>
+            <subsector name="domestic coal">
+               <technology name="domestic coal">
+                  <period year="2020"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.085</coefficient> </minicam-energy-input>  </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.117</coefficient> </minicam-energy-input>  </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>  </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>  </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>  </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>  </period>
+             </technology>
+            </subsector>
+        </supplysector>
+<supplysector name="regional natural gas">
+            <nesting-subsector name="imported natural gas">
+                    <subsector name="imported LNG">
+                        <technology name="imported LNG">
+                                    <period year="2020"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.085</coefficient> </minicam-energy-input>   <res-secondary-output name="TPES_GAS"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                                    <period year="2025"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.117</coefficient> </minicam-energy-input>   <res-secondary-output name="TPES_GAS"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                                    <period year="2030"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   <res-secondary-output name="TPES_GAS"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                                    <period year="2035"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   <res-secondary-output name="TPES_GAS"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                                    <period year="2040"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   <res-secondary-output name="TPES_GAS"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                                    <period year="2045"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   <res-secondary-output name="TPES_GAS"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+         </technology>       </subsector>   
+                    <subsector name="imported pipeline gas">
+                        <technology name="imported RUS pipeline gas">
+                                    <period year="2020"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.085</coefficient> </minicam-energy-input>   <res-secondary-output name="TPES_GAS"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                                    <period year="2025"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.117</coefficient> </minicam-energy-input>   <res-secondary-output name="TPES_GAS"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                                    <period year="2030"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   <res-secondary-output name="TPES_GAS"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                                    <period year="2035"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   <res-secondary-output name="TPES_GAS"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                                    <period year="2040"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   <res-secondary-output name="TPES_GAS"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                                    <period year="2045"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   <res-secondary-output name="TPES_GAS"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+          </technology>    
+                        <technology name="imported PAC pipeline gas">
+                                    <period year="2020"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.085</coefficient> </minicam-energy-input>   <res-secondary-output name="TPES_GAS"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                                    <period year="2025"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.117</coefficient> </minicam-energy-input>   <res-secondary-output name="TPES_GAS"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                                    <period year="2030"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   <res-secondary-output name="TPES_GAS"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                                    <period year="2035"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   <res-secondary-output name="TPES_GAS"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                                    <period year="2040"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   <res-secondary-output name="TPES_GAS"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                                    <period year="2045"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   <res-secondary-output name="TPES_GAS"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+          </technology>     </subsector> </nesting-subsector>
+            <nesting-subsector name="domestic natural gas">
+<subsector name="domestic natural gas">
+               <technology name="domestic natural gas">
+                                    <period year="2020"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.085</coefficient> </minicam-energy-input>   <res-secondary-output name="TPES_GAS"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                                    <period year="2025"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.117</coefficient> </minicam-energy-input>   <res-secondary-output name="TPES_GAS"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                                    <period year="2030"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   <res-secondary-output name="TPES_GAS"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                                    <period year="2035"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   <res-secondary-output name="TPES_GAS"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                                    <period year="2040"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   <res-secondary-output name="TPES_GAS"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                                    <period year="2045"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   <res-secondary-output name="TPES_GAS"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+          </technology>       </subsector>                 </nesting-subsector>
+        </supplysector>
+
+         <supplysector name="regional oil">
+            <subsector name="imported crude oil">
+               <technology name="imported crude oil">
+                  <period year="2020"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.085</coefficient> </minicam-energy-input>  </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.117</coefficient> </minicam-energy-input>  </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>  </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>  </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>  </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>  </period>
+               </technology>
+            </subsector>
+            <subsector name="domestic crude oil">
+               <technology name="domestic crude oil">
+                  <period year="2020"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.085</coefficient> </minicam-energy-input>  </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.117</coefficient> </minicam-energy-input>  </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>  </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>  </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>  </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>  </period>
+              </technology>
+            </subsector>
+        </supplysector>
+         <supplysector name="regional biomassOil">
+            <subsector name="regional biomassOil">
+               <technology name="Soybean">
+                  <period year="2020"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.085</coefficient> </minicam-energy-input>    </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.117</coefficient> </minicam-energy-input>    </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+
+               </technology>
+            </subsector>
+        </supplysector>
+         <supplysector name="regional corn for ethanol">
+            <subsector name="regional corn for ethanol">
+               <technology name="regional corn for ethanol">
+                  <period year="2020"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.085</coefficient> </minicam-energy-input>    </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.117</coefficient> </minicam-energy-input>    </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+
+               </technology>
+            </subsector>
+        </supplysector>
+         <supplysector name="regional sugar for ethanol">
+            <subsector name="regional sugar for ethanol">
+               <technology name="regional sugar for ethanol">
+                  <period year="2020"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.085</coefficient> </minicam-energy-input>    </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.117</coefficient> </minicam-energy-input>    </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+
+               </technology>
+            </subsector>
+        </supplysector>
+            <supplysector name="electricity">
+                
+                <subsector name="hydro">
+               <technology name="hydro">
+                  <period year="2020"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.085</coefficient> </minicam-energy-input>    </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.117</coefficient> </minicam-energy-input>    </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+
+               </technology>
+            </subsector>
+
+                <subsector name="wind">
+               <technology name="wind">
+                  <period year="2020"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.085</coefficient> </minicam-energy-input>    </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.117</coefficient> </minicam-energy-input>    </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+
+               </technology>
+               <technology name="wind_offshore">
+                  <period year="2020"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.085</coefficient> </minicam-energy-input>    </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.117</coefficient> </minicam-energy-input>    </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+
+               </technology>
+               <technology name="wind_storage">
+                  <period year="2020"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.085</coefficient> </minicam-energy-input>    </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.117</coefficient> </minicam-energy-input>    </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+
+               </technology>
+            </subsector>
+                <subsector name="solar">
+               <technology name="PV">
+                  <period year="2020"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.085</coefficient> </minicam-energy-input>    </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.117</coefficient> </minicam-energy-input>    </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+
+               </technology>
+
+               <technology name="PV_storage">
+                  <period year="2020"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.085</coefficient> </minicam-energy-input>    </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.117</coefficient> </minicam-energy-input>    </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+
+               </technology>
+
+            </subsector>
+        </supplysector>
+         <supplysector name="elect_td_bld">
+            <subsector name="rooftop_pv">
+               <technology name="rooftop_pv">
+                  <period year="2020"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.085</coefficient> </minicam-energy-input>    </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.117</coefficient> </minicam-energy-input>    </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+
+               </technology>
+            </subsector>
+        </supplysector>
+            <pass-through-sector name="elec_Gen_III">
+                <subsector name="Gen_III">
+<stub-technology name="Gen_III (once through)">
+                  <period year="2020"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.085</coefficient> </minicam-energy-input>    </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.117</coefficient> </minicam-energy-input>    </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+
+                    </stub-technology>
+                    <stub-technology name="Gen_III (seawater)">
+                  <period year="2020"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.085</coefficient> </minicam-energy-input>    </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.117</coefficient> </minicam-energy-input>    </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+
+                    </stub-technology>
+                    <stub-technology name="Gen_III (recirculating)">
+                  <period year="2020"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.085</coefficient> </minicam-energy-input>    </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.117</coefficient> </minicam-energy-input>    </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+
+                    </stub-technology>
+                    <stub-technology name="Gen_III (cooling pond)">
+                  <period year="2020"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.085</coefficient> </minicam-energy-input>    </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.117</coefficient> </minicam-energy-input>    </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+
+                    </stub-technology>
+                </subsector>
+            </pass-through-sector>
+            <pass-through-sector name="elec_geothermal">
+                <subsector name="geothermal">
+                    <stub-technology name="geothermal (recirculating)">
+                  <period year="2020"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.085</coefficient> </minicam-energy-input>    </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.117</coefficient> </minicam-energy-input>    </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                  </stub-technology>
+                    <stub-technology name="geothermal (dry_hybrid)">
+                  <period year="2020"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.085</coefficient> </minicam-energy-input>    </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.117</coefficient> </minicam-energy-input>    </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+
+                    </stub-technology>
+                </subsector>
+            </pass-through-sector>
+            <pass-through-sector name="elec_CSP">
+                <subsector name="CSP">
+                    <stub-technology name="CSP (recirculating)">
+                  <period year="2020"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.085</coefficient> </minicam-energy-input>    </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.117</coefficient> </minicam-energy-input>    </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+
+                    </stub-technology>
+                    <stub-technology name="CSP (dry_hybrid)">
+                  <period year="2020"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.085</coefficient> </minicam-energy-input>    </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.117</coefficient> </minicam-energy-input>    </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+
+                    </stub-technology>
+                </subsector>
+            </pass-through-sector>
+            <pass-through-sector name="elec_CSP_storage">
+                <subsector name="CSP_storage">
+                    <stub-technology name="CSP_storage (recirculating)">
+                  <period year="2020"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.085</coefficient> </minicam-energy-input>    </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.117</coefficient> </minicam-energy-input>    </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+
+                    </stub-technology>
+                    <stub-technology name="CSP_storage (dry_hybrid)">
+                  <period year="2020"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.085</coefficient> </minicam-energy-input>    </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.117</coefficient> </minicam-energy-input>    </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_GAS">   <coefficient>0.15</coefficient> </minicam-energy-input>   </period>
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+
+                    </stub-technology>
+                </subsector>
+            </pass-through-sector>
+    </region>
+        </world>
+</scenario>
+
+
+

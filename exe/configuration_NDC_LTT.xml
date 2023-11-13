@@ -137,8 +137,8 @@
         <Value name = "CHN_HYDRO">../input/gcamdata/xml_policy/policy_hydro_fix_chn.xml</Value>
         <Value name = "CHN_CCAP_IND">../input/gcamdata/xml_policy/policy_ccapind_chn.xml</Value>
         <Value name = "CHN_FOREST">../input/gcamdata/xml_policy/policy_affor_grassland_chn.xml</Value>
-        <Value name = "CHN_TPESRES">../input/gcamdata/xml_policy/tpesres_chn.xml</Value> <!----------added------------>
-        <Value name = "CHN_TPESGAS">../input/gcamdata/xml_policy/tpesgas_chn_2045.xml</Value> <!----------added------------>
+        <Value name = "CHN_TPESRES">../input/CP_NDC_LTT/tpesres_chn.xml</Value> <!----------added------------>
+        <Value name = "CHN_TPESGAS">../input/CP_NDC_LTT/tpesgas_chn_2045.xml</Value> <!----------added------------>
 
         <Value name = "COL_FOREST">../input/gcamdata/xml_policy/policy_affor_col.xml</Value>
 
@@ -259,8 +259,8 @@
         <Value name = "kigali_MAC">../input/gcamdata/xml_policy/kigali_fgas_MAC.xml</Value>
         <Value name = "kigali_tax">../input/gcamdata/xml_policy/Kigali_tax.xml</Value>
 
-		<Value name="policy-target-file">../input/policy/constraint_bio_efta.xml</Value>
-		<Value name="policy-target-file">../input/policy/constraint_bio_col.xml</Value>
+		<Value name="policy-target-file">../input/CP_NDC_LTT/constraint_bio_efta.xml</Value>
+		<Value name="policy-target-file">../input/CP_NDC_LTT/constraint_bio_col.xml</Value>
 	</ScenarioComponents>
 	<Strings>
 		<Value name="scenarioName">NDC_LTT</Value>
