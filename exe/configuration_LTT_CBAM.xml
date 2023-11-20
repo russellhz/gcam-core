@@ -5,7 +5,7 @@
 		<Value name="BatchFileName">batch_ag.xml</Value>
 		<Value name="policy-target-file">../input/policy/forcing_target_4p5.xml</Value>
 		<Value name="GHGInputFileName">../input/magicc/inputs/input_gases.emk</Value>
-		<Value write-output="1" append-scenario-name="0" name="xmldb-location">../output/database_basexdb_2030v3</Value>
+		<Value write-output="1" append-scenario-name="0" name="xmldb-location">../output/database_basexdb_2050v3</Value>
 		<Value write-output="1" append-scenario-name="0" name="restart">./restart/restart</Value>
 		<Value write-output="0" append-scenario-name="1" name="xmlDebugFileName">debug.xml</Value>
 		<Value write-output="1" append-scenario-name="0" name="climatFileName">gas.emk</Value>
@@ -132,7 +132,7 @@
         <Value name = "CHN_TPES">../input/gcamdata/xml_policy/policy_tpes_chn.xml</Value>
         <!--Value name = "CHN_IND">../input/gcamdata/xml_policy/policy_ind_chn.xml</Value-->
         <Value name = "CHN_HYDRO">../input/gcamdata/xml_policy/policy_hydro_fix_chn.xml</Value>
-        <Value name = "CHN_CCAP_IND">../input/gcamdata/xml_policy/policy_ccapind_chn.xml</Value>
+        <Value name = "CHN_CCAP_IND">../input/gcamdata/xml_policy/policy_ccapind_chn0.xml</Value> <!----------zeroPriceYears------------>
         <Value name = "CHN_FOREST">../input/gcamdata/xml_policy/policy_affor_grassland_chn.xml</Value>
         <Value name = "CHN_TPESRES">../input/gcamdata/xml_policy/tpesres_chn.xml</Value> <!----------added------------>
         <Value name = "CHN_TPESGAS">../input/gcamdata/xml_policy/tpesgas_chn_2045.xml</Value> <!----------added------------>
@@ -288,7 +288,7 @@
 		<Value name="climateOutputInterval">5</Value>
 		<Value name="parallel-grain-size">50</Value>
 		<Value name="stop-period">-1</Value>
-		<Value name="stop-year">2030</Value>
+		<Value name="stop-year">2050</Value>
 		<Value name="restart-period">-1</Value>
 		<Value name="restart-year">-1</Value>
 		<Value name="max-parallelism">-1</Value>

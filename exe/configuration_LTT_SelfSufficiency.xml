@@ -5,7 +5,7 @@
 		<Value name="BatchFileName">batch_ag.xml</Value>
 		<Value name="policy-target-file">../input/policy/forcing_target_4p5.xml</Value>
 		<Value name="GHGInputFileName">../input/magicc/inputs/input_gases.emk</Value>
-		<Value write-output="1" append-scenario-name="0" name="xmldb-location">../output/database_basexdb_2030v3</Value>
+		<Value write-output="1" append-scenario-name="0" name="xmldb-location">../output/database_basexdb_2050v3</Value>
 		<Value write-output="1" append-scenario-name="0" name="restart">./restart/restart</Value>
 		<Value write-output="0" append-scenario-name="1" name="xmlDebugFileName">debug.xml</Value>
 		<Value write-output="1" append-scenario-name="0" name="climatFileName">gas.emk</Value>
@@ -106,9 +106,9 @@
 
 		<Value name = "solver">../input/solution/cal_broyden_config.xml</Value>
 
-        <Value name = "ARG_RES">../input/gcamdata/xml_policy/policy_res_arg.xml</Value>
-        <Value name = "ARG_FUEL_TAX">../input/gcamdata/xml_policy/policy_fueltax_arg.xml</Value>
-        <Value name = "ARG_BIO">../input/gcamdata/xml_policy/policy_biofuel_arg.xml</Value>
+        <!--Value name = "ARG_RES">../input/gcamdata/xml_policy/policy_res_arg.xml</Value--> <!----------zeroPrice------------>
+        <Value name = "ARG_FUEL_TAX">../input/gcamdata/xml_policy/policy_fueltax_arg.xml</Value> 
+        <Value name = "ARG_BIO">../input/gcamdata/xml_policy/policy_biofuel_arg.xml</Value>  <!----------zeroPriceYears------------>
         <!--Value name = "ARG_AFFOR">../input/gcamdata/xml_policy/policy_affor_arg.xml</Value-->
 
         <Value name = "AUS_RES">../input/gcamdata/xml_policy/policy_res_aus.xml</Value>
@@ -122,7 +122,7 @@
         <Value name = "CAN_CTAX">../input/gcamdata/xml_policy/policy_ctax_can_GHG.xml</Value>
         <Value name = "CAN_NOCOAL">../input/gcamdata/xml_policy/policy_coalPhaseout_can.xml</Value>
         <Value name = "CAN_BLD">../input/gcamdata/xml_policy/policy_ccapbuild_can.xml</Value>
-        <Value name = "CAN_BIO">../input/gcamdata/xml_policy/policy_biofuel_can.xml</Value>
+        <!--Value name = "CAN_BIO">../input/gcamdata/xml_policy/policy_biofuel_can.xml</Value--> <!----------zeroPrice------------>
         <Value name = "CAN_AFFOR">../input/gcamdata/xml_policy/policy_affor_can.xml</Value>
 
 
@@ -132,7 +132,7 @@
         <Value name = "CHN_TPES">../input/gcamdata/xml_policy/policy_tpes_chn.xml</Value>
         <!--Value name = "CHN_IND">../input/gcamdata/xml_policy/policy_ind_chn.xml</Value-->
         <Value name = "CHN_HYDRO">../input/gcamdata/xml_policy/policy_hydro_fix_chn.xml</Value>
-        <Value name = "CHN_CCAP_IND">../input/gcamdata/xml_policy/policy_ccapind_chn.xml</Value>
+        <Value name = "CHN_CCAP_IND">../input/gcamdata/xml_policy/policy_ccapind_chn0.xml</Value> <!----------zeroPriceYears------------>
         <Value name = "CHN_FOREST">../input/gcamdata/xml_policy/policy_affor_grassland_chn.xml</Value>
         <Value name = "CHN_TPESRES">../input/gcamdata/xml_policy/tpesres_chn.xml</Value> <!----------added------------>
         <Value name = "CHN_TPESGAS">../input/gcamdata/xml_policy/tpesgas_chn_2045.xml</Value> <!----------added------------>
@@ -164,14 +164,14 @@
 
         <Value name = "IDN_RES">../input/gcamdata/xml_policy/policy_res_idn.xml</Value>
         <Value name = "IDN_CTAX">../input/gcamdata/xml_policy/policy_ctax_idn_2030.xml</Value>
-        <Value name = "IDN_BIO">../input/gcamdata/xml_policy/policy_biofuel_idn.xml</Value>
+        <Value name = "IDN_BIO">../input/gcamdata/xml_policy/policy_biofuel_idn_2020.xml</Value> <!----------zeroPriceYears------------>
         <Value name = "IDN_HYDRO">../input/gcamdata/xml_policy/policy_hydro_fix_idn.xml</Value>
-        <Value name = "IDN_RE">../input/gcamdata/xml_policy/policy_RE_targets_idn.xml</Value>
+        <Value name = "IDN_RE">../input/gcamdata/xml_policy/policy_RE_targets_idn_noPV.xml</Value>  <!----------zeroPriceYears------------>
 
-        <Value name = "IND_RE">../input/gcamdata/xml_policy/policy_RE_targets_ind.xml</Value>
+        <Value name = "IND_RE">../input/gcamdata/xml_policy/policy_RE_targets_ind_noWIND.xml</Value>  <!----------zeroPriceYears------------>
         <Value name = "IND_HYDRO">../input/gcamdata/xml_policy/policy_hydro_fix_ind.xml</Value>
         <Value name = "IND_COOL">../input/gcamdata/xml_policy/policy_effcool_ind.xml</Value>
-        <Value name = "IND_BIO">../input/gcamdata/xml_policy/policy_biofuel_ind.xml</Value>
+        <!--Value name = "IND_BIO">../input/gcamdata/xml_policy/policy_biofuel_ind.xml</Value--> <!----------zeroPriceYears------------>
         <Value name = "IND_H2">../input/gcamdata/xml_policy/policy_H2_targets_ind.xml</Value>
 
 <!-- stop at 2025 to not interfere with NDC-->
@@ -186,9 +186,9 @@
         <Value name = "KOR_FE">../input/gcamdata/xml_policy/policy_fe_korea.xml</Value>
         <Value name = "KOR_RES">../input/gcamdata/xml_policy/policy_res_kor.xml</Value>
         <Value name = "KOR_H2">../input/gcamdata/xml_policy/policy_H2_korea.xml</Value>
-        <Value name = "KOR_BIO">../input/gcamdata/xml_policy/policy_biofuel_kor.xml</Value>
+        <!--Value name = "KOR_BIO">../input/gcamdata/xml_policy/policy_biofuel_kor_nodiesel.xml</Value--> <!--------zeroPrice------------>
 
-        <Value name = "MEX_RES">../input/gcamdata/xml_policy/policy_res_mex.xml</Value>
+        <Value name = "MEX_RES">../input/gcamdata/xml_policy/policy_res_mex_2020.xml</Value> <!----------zeroPriceYears------------>
 <!-- stop at 2025 to not interfere with NDC-->
         <Value name = "MEX_CTAX">../input/gcamdata/xml_policy/policy_ctax_mex_GHG_2020.xml</Value>
 
@@ -196,11 +196,11 @@
         <Value name = "RUS_NUCEFF">../input/gcamdata/xml_policy/policy_nucEff_rus.xml</Value>
         <Value name = "RUS_TDLOSS">../input/gcamdata/xml_policy/policy_tdloss_rus.xml</Value>
 
-        <Value name = "SAF_BIO">../input/gcamdata/xml_policy/policy_biofuel_saf.xml</Value>
+        <Value name = "SAF_BIO">../input/gcamdata/xml_policy/policy_biofuel_saf_2020.xml</Value>   <!----------zeroPriceYears------------>
 <!-- stop at 2025 to not interfere with NDC-->
         <Value name = "SAF_CTAX">../input/gcamdata/xml_policy/policy_ctax_saf_2020.xml</Value>
         <Value name = "SAF_COAL">../input/gcamdata/xml_policy/policy_coal_cap_saf.xml</Value>
-        <Value name = "SAF_RENEW">../input/gcamdata/xml_policy/policy_RE_targets_saf.xml</Value>
+        <Value name = "SAF_RENEW">../input/gcamdata/xml_policy/policy_RE_targets_saf_noPV.xml</Value>  <!----------zeroPriceYears------------>
 
         <Value name = "SAUDI_RES">../input/gcamdata/xml_policy/policy_res_saudi.xml</Value>
 
@@ -235,7 +235,7 @@
          <Value name = "CH4_ERP">../input/gcamdata/xml_policy/US_resource_CH4_mac.xml</Value>
          <Value name = "CH4_Tax">../input/gcamdata/xml_policy/IRA_CH4_tax.xml</Value>
 <!-- END IRA -->
-         <Value name = "USA_RE">../input/gcamdata/xml_policy/policy_RE_targets_usa.xml</Value>
+         <!--Value name = "USA_RE">../input/gcamdata/xml_policy/policy_RE_targets_usa.xml</Value-->  <!----------zeroPrice------------>
 
         <Value name = "USA_LUC">../input/gcamdata/xml_policy/policy_ctax_usa_luc.xml</Value> <!----------added------------>
 <!-------------------------------------USA---------------------------------------->
@@ -286,7 +286,7 @@
 		<Value name="climateOutputInterval">5</Value>
 		<Value name="parallel-grain-size">50</Value>
 		<Value name="stop-period">-1</Value>
-		<Value name="stop-year">2030</Value>
+		<Value name="stop-year">2050</Value>
 		<Value name="restart-period">-1</Value>
 		<Value name="restart-year">-1</Value>
 		<Value name="max-parallelism">-1</Value>
