@@ -4,35 +4,36 @@
 # Column types: cnnn
 # ----------
 region,a,b,m
-Africa_Eastern,300,-2179,0.0088
-Africa_Northern,616,-4105,0.0088
-Africa_Southern,616,-3000,0.0088
-Africa_Western,100,-1500,0.0088
-Argentina,616,-11867,0.0088
-Australia_NZ,299,-6848,0.0088
-Brazil,616,-11585,0.0088
-Canada,574,-6848,0.0088
-Central America and Caribbean,616,-8636,0.0088
-Central Asia,616,-5638,0.0088
-China,1160,-2360,0.0030
-Colombia,616,-11311,0.0088
-EU-12,616,-4389,0.0088
-EU-15,428,-6848,0.0088
-Europe_Eastern,616,-3338,0.0088
-Europe_Non_EU,616,-3581,0.0088
-European Free Trade Association,375,-6848,0.0088
-India,616,-3106,0.0088
-Indonesia,616,-6632,0.0088
-Japan,668,-6848,0.0088
-Mexico,616,-7115,0.0088
-Middle East,350,-3000,0.0088
-Pakistan,350,-2268,0.0088
-Russia,616,-3895,0.0088
-South Africa,616,-9998,0.0088
-South America_Northern,616,-12495,0.0088
-South America_Southern,616,-9624,0.0088
-South Asia,500,-2525,0.0088
-South Korea,1627,-8222,0.0030
-Southeast Asia,616,-3652,0.0088
-Taiwan,1592,-6848,0.0088
-USA,373,-6848,0.0088
+Africa_Eastern,262.5,-1961.1,0.00968
+Africa_Northern,539,-3694.5,0.00968
+Africa_Southern,539,-2700,0.00968
+Africa_Western,87.5,-1350,0.00968
+Argentina,539,-10680.3,0.00968
+Australia_NZ,261.625,-6163.2,0.01056
+Brazil,539,-10426.5,0.00968
+Canada,502.25,-6163.2,0.01056
+Central America and Caribbean,539,-7772.4,0.00968
+Central Asia,539,-5074.2,0.00968
+China,1015,-2124,0.0033
+Colombia,539,-10179.9,0.00968
+EU-12,539,-3950.1,0.01056
+EU-15,374.5,-6163.2,0.01056
+Europe_Eastern,539,-3004.2,0.01056
+Europe_Non_EU,539,-3222.9,0.01056
+European Free Trade Association,328.125,-6163.2,0.01056
+India,539,-2795.4,0.00968
+Indonesia,539,-5968.8,0.00968
+Japan,584.5,-6163.2,0.01056
+Mexico,539,-6403.5,0.00968
+Middle East,306.25,-2700,0.00968
+Pakistan,306.25,-2041.2,0.00968
+Russia,539,-3505.5,0.00968
+South Africa,539,-8998.2,0.00968
+South America_Northern,539,-11245.5,0.00968
+South America_Southern,539,-8661.6,0.00968
+South Asia,437.5,-2272.5,0.00968
+South Korea,1423.625,-7399.8,0.0036
+Southeast Asia,539,-3286.8,0.00968
+Taiwan,1393,-6163.2,0.01012
+USA,326.375,-6163.2,0.01056
+
