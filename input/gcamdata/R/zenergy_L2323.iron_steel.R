@@ -211,7 +211,7 @@ module_energy_L2323.iron_steel <- function(command, ...) {
       ungroup() %>%
       filter(year %in% c(MODEL_BASE_YEARS, MODEL_FUTURE_YEARS)) %>%
       select(LEVEL2_DATA_NAMES[["StubTechCost"]]) ->
-      L2323.StubTechCost_iron_steel
+      L2323.StubTechCost_iron_steel_prelim
 
     # ============================================================================
     # ============================================================================
@@ -281,6 +281,7 @@ module_energy_L2323.iron_steel <- function(command, ...) {
              subsector.name = subsector) %>%
       select(LEVEL2_DATA_NAMES[["GlobalTechCoef"]]) ->
       L2323.GlobalTechCoef_iron_steel
+
 
     # Carbon capture rates from technologies with CCS
     # L2323.GlobalTechCapture_iron_steel: CO2 capture fractions from global iron_steel production technologies with CCS
@@ -461,6 +462,23 @@ module_energy_L2323.iron_steel <- function(command, ...) {
       ungroup() %>%
       filter(year %in% MODEL_BASE_YEARS) ->   # drop the terminal coef year if it's outside of the model years
       L2323.StubTechCoef_iron_steel
+
+    # Add in charcoal prices to L2323.StubTechCost_iron_steel
+    # Biomass prices don't account for charcoal being 3x more expensive, so we are going to calculate the
+    # GJ of charcoal per Mt of steel, then add 2x the average price of biomass in 2015 to non-energy costs
+    L2323.charcoal_cost_adder <- L2323.GlobalTechCoef_iron_steel %>%
+      left_join(filter(A323.globaltech_coef, !is.na(charcoal_prop)) %>%
+                         select(sector.name = supplysector, subsector.name = subsector, technology, minicam.energy.input, charcoal_prop),
+                       by = c("sector.name", "subsector.name", "technology" , "minicam.energy.input")) %>%
+      filter(!is.na(charcoal_prop)) %>%
+      mutate(charcoal_cost_adder = energy.CHARCOAL_PRICE_ADDER * coefficient * charcoal_prop) %>%
+      select(-coefficient, -charcoal_prop, -minicam.energy.input) %>%
+      rename(supplysector = sector.name, subsector = subsector.name, stub.technology = technology)
+
+    L2323.StubTechCost_iron_steel <- L2323.StubTechCost_iron_steel_prelim %>%
+      left_join(L2323.charcoal_cost_adder, by = c("supplysector", "subsector", "stub.technology", "year")) %>%
+      replace_na(list(charcoal_cost_adder = 0)) %>%
+      mutate(input.cost = input.cost + charcoal_cost_adder, .keep = "unused")
 
     # L2323.PerCapitaBased_iron_steel: per-capita based flag for iron_steel exports final demand
     A323.demand %>%

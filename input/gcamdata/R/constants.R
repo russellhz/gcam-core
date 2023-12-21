@@ -604,6 +604,7 @@ energy.IRON_STEEL.DOMESTIC_SW <- c("Africa_Southern","Indonesia","Africa_Norther
 energy.IRON_STEEL.TRADED_SW <- c("Africa_Southern traded iron and steel","Indonesia traded iron and steel","Africa_Northern traded iron and steel","Africa_Eastern traded iron and steel","Africa_Western traded iron and steel","South Asia traded iron and steel","Southeast Asia traded iron and steel")
 energy.CALIBRATED_STEEL_TECHS <- c("BF_BOF", "DRI_EAF_NG", "EAF_scrap_fossil")
 energy.IRON_STEEL_CALCULATE_IO <- FALSE
+energy.CHARCOAL_PRICE_ADDER <- 4.2 # average price of delivered biomass in 2015 is 2.1, so we add 2x since charcoal is 3x more expensive (1975$/GJ)
 # Socioeconomics constants ======================================================================
 
 # Population years - note that these sequences shouldn't have any overlap,
