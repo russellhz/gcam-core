@@ -22,5 +22,7 @@ iron and steel,SAF with DRI,DRI_SAF_BOF_H2,0,0,0,0.1,0.2,0.3,0.4,0.6,1
 iron and steel,SAF with DRI,DRI_SAF_BOF_BECCS,0,0,0,0,0.1,0.2,0.3,0.5,1
 iron and steel,Electrolysis,AEL_EAF,0,0,0,0,0,0,0.1,0.2,1
 iron and steel,Electrolysis,MOE,0,0,0,0,0,0.1,0.2,0.4,1
-iron and steel,EAF with scrap,EAF_scrap_fossil,1,1,1,1,1,1,1,1,1
-iron and steel,EAF with scrap,EAF_scrap_bio,0,0,0,0.1,0.2,0.3,0.4,0.6,1
+iron and steel,EAF with scrap,EAF_scrap_fossil_NG_finish,1,1,1,1,1,1,1,1,1
+iron and steel,EAF with scrap,EAF_scrap_bio_NG_finish,0,0,0,0.1,0.2,0.3,0.4,0.6,1
+iron and steel,EAF with scrap,EAF_scrap_fossil_elec_finish,0,0,0,0,0,0,0.2,0.4,1
+iron and steel,EAF with scrap,EAF_scrap_bio_elec_finish,0,0,0,0,0,0,0.2,0.4,1

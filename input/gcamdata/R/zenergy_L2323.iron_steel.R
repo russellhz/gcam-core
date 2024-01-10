@@ -181,7 +181,7 @@ module_energy_L2323.iron_steel <- function(command, ...) {
       # now get ratio to either BF_BOF or EAF_scrap_fossil
       group_by(year) %>%
       mutate(ratio = if_else(reference_subsector == "EAF with scrap",
-                             input.cost / input.cost[technology == "EAF_scrap_fossil"],
+                             input.cost / input.cost[technology == "EAF_scrap_fossil_NG_finish"],
                              input.cost / input.cost[technology == "BF_BOF"])) %>%
       ungroup %>%
       select(supplysector, subsector, technology, year, reference_subsector, ratio)
@@ -464,8 +464,8 @@ module_energy_L2323.iron_steel <- function(command, ...) {
       L2323.StubTechCoef_iron_steel
 
     # Add in charcoal prices to L2323.StubTechCost_iron_steel
-    # Biomass prices don't account for charcoal being 3x more expensive, so we are going to calculate the
-    # GJ of charcoal per Mt of steel, then add 2x the average price of biomass in 2015 to non-energy costs
+    # Biomass prices don't account for charcoal being 2.2x more expensive, so we are going to calculate the
+    # GJ of charcoal per Mt of steel, then add 1.2x the average price of biomass in 2015 to non-energy costs
     L2323.charcoal_cost_adder <- L2323.GlobalTechCoef_iron_steel %>%
       left_join(filter(A323.globaltech_coef, !is.na(charcoal_prop)) %>%
                          select(sector.name = supplysector, subsector.name = subsector, technology, minicam.energy.input, charcoal_prop),

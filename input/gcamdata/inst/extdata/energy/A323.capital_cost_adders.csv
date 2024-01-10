@@ -5,23 +5,25 @@
 # Column types: cccn,,,
 # ----------,,,
 supplysector,subsector,technology,capital_cost_frac
-iron and steel,BLASTFUR,BF_BOF,0.65
-iron and steel,BLASTFUR,BF_BOF_CCS_73%,1.54
-iron and steel,BLASTFUR,BF_BOF_CCS_86%,2.45
-iron and steel,BLASTFUR,BF_BOF_BECCSmin,1.51
-iron and steel,BLASTFUR,BF_BOF_BECCSmax,1.51
-iron and steel,Smelting reduction,SR_BOF,1.29
-iron and steel,Smelting reduction,SR_BOF_CCS,1.62
-iron and steel,EAF with DRI,DRI_EAF_NG,1.81
-iron and steel,EAF with DRI,DRI_EAF_NG_CCS,1.87
-iron and steel,EAF with DRI,DRI_EAF_coal,1.80
-iron and steel,EAF with DRI,DRI_EAF_coal_CCS,2.08
-iron and steel,EAF with DRI,DRI_EAF_BECCS,2.08
-iron and steel,EAF with DRI,DRI_EAF_H2,1.79
-iron and steel,SAF with DRI,DRI_SAF_BOF_NG,2.46
-iron and steel,SAF with DRI,DRI_SAF_BOF_H2,2.43
-iron and steel,SAF with DRI,DRI_SAF_BOF_BECCS,2.60
-iron and steel,Electrolysis,AEL_EAF,3.01
-iron and steel,Electrolysis,MOE,2.85
-iron and steel,EAF with scrap,EAF_scrap_fossil,0.58
-iron and steel,EAF with scrap,EAF_scrap_bio,0.58
+iron and steel,BLASTFUR,BF_BOF,0.9163674446439258
+iron and steel,BLASTFUR,BF_BOF_BECCSmax,1.9381415451107515
+iron and steel,BLASTFUR,BF_BOF_BECCSmin,1.9381415451107515
+iron and steel,BLASTFUR,BF_BOF_CCS_73%,1.9700713893465132
+iron and steel,BLASTFUR,BF_BOF_CCS_86%,3.060321350762527
+iron and steel,EAF with DRI,DRI_EAF_BECCS,2.631863380890618
+iron and steel,EAF with DRI,DRI_EAF_coal,2.2497828918801557
+iron and steel,EAF with DRI,DRI_EAF_coal_CCS,2.5751188932122786
+iron and steel,EAF with DRI,DRI_EAF_H2,2.2497828918801557
+iron and steel,EAF with DRI,DRI_EAF_NG,2.2497828918801557
+iron and steel,EAF with DRI,DRI_EAF_NG_CCS,2.331928231733679
+iron and steel,EAF with scrap,EAF_scrap_bio_elec_finish,0.8180792377131394
+iron and steel,EAF with scrap,EAF_scrap_bio_NG_finish,0.8180792377131394
+iron and steel,EAF with scrap,EAF_scrap_fossil_elec_finish,0.8180792377131394
+iron and steel,EAF with scrap,EAF_scrap_fossil_NG_finish,0.8180792377131394
+iron and steel,Electrolysis,AEL_EAF,4.190898517010759
+iron and steel,Electrolysis,MOE,3.497312630636011
+iron and steel,SAF with DRI,DRI_SAF_BOF_BECCS,3.2780320366132716
+iron and steel,SAF with DRI,DRI_SAF_BOF_H2,3.0659276546091023
+iron and steel,SAF with DRI,DRI_SAF_BOF_NG,3.020114942528736
+iron and steel,Smelting reduction,SR_BOF,2.3036253776435043
+iron and steel,Smelting reduction,SR_BOF_CCS,2.2637308263236022

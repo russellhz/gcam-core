@@ -1,64 +1,78 @@
-# File: steel_intensity.csv,,,,,
-# Title: IO in steel production by subsector and technology and ratio of IO coefficients relative to conventional tech,,,,,
-# Units: GJ/t,,,,,
-# Description: Energy coefficient in steel production,,,,,
-# Source: Literature,,,,,
-# Column types: cccncn,,,,,
-# ----------,,,,,
+# File: steel_intensity.csv
+# Title: IO in steel production by subsector and technology and ratio of IO coefficients relative to conventional tech
+# Units: GJ/t
+# Description: Energy coefficient in steel production
+# Source: Literature
+# Column types: cccncn
+# ----------
 subsector,technology,fuel,value,Unit,ratio
-BLASTFUR,BF_BOF,gas,0.54,GJ/t,1
-BLASTFUR,BF_BOF,coal,19.48,GJ/t,1
+BLASTFUR,BF_BOF,electricity,0.472936401,GJ/t,1
+BLASTFUR,BF_BOF,gas,1.282323615,GJ/t,1
+BLASTFUR,BF_BOF,coal,21.14541054,GJ/t,1
 BLASTFUR,BF_BOF,refined liquids,0.01,GJ/t,1
-BLASTFUR,BF_BOF_CCS_73%,gas,0.54,GJ/t,1
-BLASTFUR,BF_BOF_CCS_73%,electricity,2.77,GJ/t,
-BLASTFUR,BF_BOF_CCS_73%,coal,19.48,GJ/t,1
-BLASTFUR,BF_BOF_CCS_86%,gas,0.54,GJ/t,1
-BLASTFUR,BF_BOF_CCS_86%,electricity,3.13,GJ/t,
-BLASTFUR,BF_BOF_CCS_86%,coal,19.48,GJ/t,1
-BLASTFUR,BF_BOF_BECCSmin,biomass,5.95,GJ/t,
-BLASTFUR,BF_BOF_BECCSmin,gas,0.54,GJ/t,1
-BLASTFUR,BF_BOF_BECCSmin,electricity,2.78,GJ/t,
-BLASTFUR,BF_BOF_BECCSmin,coal,13,GJ/t,0.667351129
-BLASTFUR,BF_BOF_BECCSmax,biomass,7.02,GJ/t,
-BLASTFUR,BF_BOF_BECCSmax,gas,0.54,GJ/t,1
-BLASTFUR,BF_BOF_BECCSmax,electricity,2.79,GJ/t,
-BLASTFUR,BF_BOF_BECCSmax,coal,11.94,GJ/t,0.612936345
-Smelting reduction,SR_BOF,electricity,1.52,GJ/t,1
-Smelting reduction,SR_BOF,coal,12.7,GJ/t,1
-Smelting reduction,SR_BOF_CCS,electricity,2.32,GJ/t,1.526315789
-Smelting reduction,SR_BOF_CCS,coal,12.7,GJ/t,1
-EAF with DRI,DRI_EAF_NG,gas,10.47,GJ/t,1
-EAF with DRI,DRI_EAF_NG,electricity,1.45,GJ/t,1
-EAF with DRI,DRI_EAF_NG,coal,0.07,GJ/t,1
+BLASTFUR,BF_BOF_CCS_73%,electricity,3.481526129,GJ/t,7.361510176925459
+BLASTFUR,BF_BOF_CCS_73%,gas,1.282323615,GJ/t,1
+BLASTFUR,BF_BOF_CCS_73%,coal,21.14541054,GJ/t,1
+BLASTFUR,BF_BOF_CCS_86%,electricity,4.130651607,GJ/t,8.734053031794437
+BLASTFUR,BF_BOF_CCS_86%,gas,1.282323615,GJ/t,1
+BLASTFUR,BF_BOF_CCS_86%,coal,21.14541054,GJ/t,1
+BLASTFUR,BF_BOF_BECCSmin,electricity,3.490280102,GJ/t,7.380020008229393
+BLASTFUR,BF_BOF_BECCSmin,gas,3.193198322,GJ/t,2.4901657309024916
+BLASTFUR,BF_BOF_BECCSmin,coal,14.10988062,GJ/t,0.6672786320846718
+BLASTFUR,BF_BOF_BECCSmin,biomass,6.457983821,GJ/t,
+BLASTFUR,BF_BOF_BECCSmax,electricity,3.498084328,GJ/t,7.396521647738424
+BLASTFUR,BF_BOF_BECCSmax,gas,3.193198322,GJ/t,2.4901657309024916
+BLASTFUR,BF_BOF_BECCSmax,coal,12.95938266,GJ/t,0.6128697589240563
+BLASTFUR,BF_BOF_BECCSmax,biomass,7.619335534,GJ/t,
+Smelting reduction,SR_BOF,electricity,2.120395208,GJ/t,1
+Smelting reduction,SR_BOF,gas,1.838857852,GJ/t,1
+Smelting reduction,SR_BOF,coal,13.78426799,GJ/t,1
+Smelting reduction,SR_BOF_CCS,electricity,2.993666896,GJ/t,1.4118438320862305
+Smelting reduction,SR_BOF_CCS,gas,1.838857852,GJ/t,1
+Smelting reduction,SR_BOF_CCS,coal,13.78426799,GJ/t,1
+EAF with DRI,DRI_EAF_NG,electricity,2.046730778,GJ/t,1
+EAF with DRI,DRI_EAF_NG,gas,13.97395452,GJ/t,1
+EAF with DRI,DRI_EAF_NG,coal,0.079560695,GJ/t,1
 EAF with DRI,DRI_EAF_NG,refined liquids,0.01,GJ/t,1
-EAF with DRI,DRI_EAF_NG_CCS,gas,10.47,GJ/t,1
-EAF with DRI,DRI_EAF_NG_CCS,electricity,2.06,GJ/t,1.420689655
-EAF with DRI,DRI_EAF_NG_CCS,coal,0.07,GJ/t,1
-EAF with DRI,DRI_EAF_coal,electricity,3.64,GJ/t,2.510344828
-EAF with DRI,DRI_EAF_coal,coal,19.79,GJ/t,282.7142857
-EAF with DRI,DRI_EAF_coal_CCS,electricity,8.59,GJ/t,5.924137931
-EAF with DRI,DRI_EAF_coal_CCS,coal,19.79,GJ/t,282.7142857
-EAF with DRI,DRI_EAF_BECCS,biomass,13.14,GJ/t,
-EAF with DRI,DRI_EAF_BECCS,electricity,3.09,GJ/t,2.131034483
-EAF with DRI,DRI_EAF_H2,biomass,0.53,GJ/t,
-EAF with DRI,DRI_EAF_H2,electricity,2.06,GJ/t,1.420689655
-EAF with DRI,DRI_EAF_H2,Hydrogen,8.25,GJ/t,
-SAF with DRI,DRI_SAF_BOF_NG,gas,9.86,GJ/t,1
-SAF with DRI,DRI_SAF_BOF_NG,electricity,1.97,GJ/t,1
-SAF with DRI,DRI_SAF_BOF_NG,coal,0.1,GJ/t,1
-SAF with DRI,DRI_SAF_BOF_H2,biomass,1.43,GJ/t,
-SAF with DRI,DRI_SAF_BOF_H2,electricity,1.97,GJ/t,1
-SAF with DRI,DRI_SAF_BOF_H2,Hydrogen,7.55,GJ/t,
-SAF with DRI,DRI_SAF_BOF_BECCS,biomass,13.45,GJ/t,
-SAF with DRI,DRI_SAF_BOF_BECCS,electricity,5.1,GJ/t,2.588832487
-Electrolysis,AEL_EAF,biomass,0.37,GJ/t,1
-Electrolysis,AEL_EAF,electricity,13.37,GJ/t,1
-Electrolysis,MOE,electricity,14.76,GJ/t,1.103964099
-EAF with scrap,EAF_scrap_fossil,gas,0.41,GJ/t,1
-EAF with scrap,EAF_scrap_fossil,electricity,2.06,GJ/t,1
-EAF with scrap,EAF_scrap_fossil,coal,0.37,GJ/t,1
-EAF with scrap,EAF_scrap_fossil,scrap,1100,GJ/t,1
-EAF with scrap,EAF_scrap_fossil,refined liquids,0.01,GJ/t,1
-EAF with scrap,EAF_scrap_bio,biomass,0.37,GJ/t,
-EAF with scrap,EAF_scrap_bio,electricity,2.46,GJ/t,1.194174757
-EAF with scrap,EAF_scrap_bio,scrap,1100,GJ/t,1
+EAF with DRI,DRI_EAF_NG_CCS,electricity,2.708809791,GJ/t,1.323481241459105
+EAF with DRI,DRI_EAF_NG_CCS,gas,13.97395452,GJ/t,1
+EAF with DRI,DRI_EAF_NG_CCS,coal,0.079560695,GJ/t,1
+EAF with DRI,DRI_EAF_coal,electricity,4.423789804,GJ/t,2.1613931111754647
+EAF with DRI,DRI_EAF_coal,gas,2.609474409,GJ/t,0.1867384357996322
+EAF with DRI,DRI_EAF_coal,coal,21.47992712,GJ/t,269.9816425686075
+EAF with DRI,DRI_EAF_coal_CCS,electricity,9.796143774,GJ/t,4.786239538339517
+EAF with DRI,DRI_EAF_coal_CCS,gas,2.609474409,GJ/t,0.1867384357996322
+EAF with DRI,DRI_EAF_coal_CCS,coal,21.47992712,GJ/t,269.9816425686075
+EAF with DRI,DRI_EAF_BECCS,electricity,3.871924879,GJ/t,1.891760714510543
+EAF with DRI,DRI_EAF_BECCS,biomass,17.98528132,GJ/t,
+EAF with DRI,DRI_EAF_H2,electricity,2.703441608,GJ/t,1.32085843290133
+EAF with DRI,DRI_EAF_H2,hydrogen,11.56723176,GJ/t,
+EAF with DRI,DRI_EAF_H2,biomass,0.575128103,GJ/t,
+SAF with DRI,DRI_SAF_BOF_NG,electricity,2.606228715,GJ/t,1
+SAF with DRI,DRI_SAF_BOF_NG,gas,13.31394793,GJ/t,1
+SAF with DRI,DRI_SAF_BOF_NG,coal,0.110335525,GJ/t,1
+SAF with DRI,DRI_SAF_BOF_H2,electricity,2.606228715,GJ/t,1
+SAF with DRI,DRI_SAF_BOF_H2,hydrogen,10.80662041,GJ/t,
+SAF with DRI,DRI_SAF_BOF_H2,biomass,1.549519035,GJ/t,
+SAF with DRI,DRI_SAF_BOF_BECCS,electricity,6.054223404,GJ/t,2.3229823879827833
+SAF with DRI,DRI_SAF_BOF_BECCS,biomass,17.22826623,GJ/t,
+Electrolysis,AEL_EAF,electricity,17.59040714,GJ/t,1
+Electrolysis,AEL_EAF,biomass,0.406538222,GJ/t,1
+Electrolysis,MOE,electricity,19.10255219,GJ/t,1.085964187068839
+EAF with scrap,EAF_scrap_fossil_NG_finish,electricity,2.705708719,GJ/t,1
+EAF with scrap,EAF_scrap_fossil_NG_finish,gas,3.051005135,GJ/t,1
+EAF with scrap,EAF_scrap_fossil_NG_finish,coal,0.405062111,GJ/t,1
+EAF with scrap,EAF_scrap_fossil_NG_finish,refined liquids,0.01,GJ/t,1
+EAF with scrap,EAF_scrap_fossil_NG_finish,scrap,1100,GJ/t,1
+EAF with scrap,EAF_scrap_bio_NG_finish,electricity,3.147239444,GJ/t,1.1631848697901173
+EAF with scrap,EAF_scrap_bio_NG_finish,gas,2.609474409,GJ/t,0.8552835192130872
+EAF with scrap,EAF_scrap_bio_NG_finish,biomass,0.406538222,GJ/t,
+EAF with scrap,EAF_scrap_bio_NG_finish,scrap,1100,GJ/t,1
+EAF with scrap,EAF_scrap_fossil_elec_finish,electricity,5.315183128,GJ/t,1.964432863994478
+EAF with scrap,EAF_scrap_fossil_elec_finish,gas,0.441530726,GJ/t,0.14471648078691285
+EAF with scrap,EAF_scrap_fossil_elec_finish,coal,0.405062111,GJ/t,1
+EAF with scrap,EAF_scrap_fossil_elec_finish,refined liquids,0.01,GJ/t,1
+EAF with scrap,EAF_scrap_fossil_elec_finish,scrap,1100,GJ/t,1
+EAF with scrap,EAF_scrap_bio_elec_finish,electricity,5.756713853,GJ/t,2.127617733784595
+EAF with scrap,EAF_scrap_bio_elec_finish,biomass,0.406538222,GJ/t,
+EAF with scrap,EAF_scrap_bio_elec_finish,scrap,1100,GJ/t,1

@@ -68,6 +68,15 @@ module_energy_L101.en_bal_IEA <- function(command, ...) {
         na.omit() ->
         L101.IEA_en_bal_ctry_hist
 
+      ## FOR STEEL STUDY ONLY
+      # Rewrite to Iron and Steel coal consumption all Coke oven gas/coke and Blast furnace gas in
+      # AUTOHEAT,AUTOELEC,AUTOCHP,ELAUTOE,ELAUTOC
+      coke_blast_products <- c("Coke oven gas", "Coke oven coke", "Blast furnace gas")
+      iron_stl_ownuse_flows <- c("AUTOHEAT", "AUTOELEC", "AUTOCHP", "ELAUTOE", "ELAUTOC")
+      L101.IEA_en_bal_ctry_hist <- L101.IEA_en_bal_ctry_hist %>%
+        mutate(sector = if_else(PRODUCT %in% coke_blast_products & FLOW %in% iron_stl_ownuse_flows, "net_industry_energy_iron and steel", sector))
+
+
       # The IEA commodity "Primary solid biomass" (i.e., wood, dung, straw, etc) consumed by the
       # residential sector is assigned to the GCAM commodity "traditional biomass" in selected regions,
       # indicated in A_regions. (48-65)
