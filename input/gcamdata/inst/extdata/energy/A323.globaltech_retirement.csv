@@ -28,8 +28,10 @@ iron and steel,SAF with DRI,DRI_SAF_BOF_H2,final-calibration-year,25,,12.5,0.3,-
 iron and steel,SAF with DRI,DRI_SAF_BOF_BECCS,final-calibration-year,25,,12.5,0.3,-0.5,6
 iron and steel,Electrolysis,AEL_EAF,final-calibration-year,25,,12.5,0.3,-0.5,6
 iron and steel,Electrolysis,MOE,final-calibration-year,25,,12.5,0.3,-0.5,6
-iron and steel,EAF with scrap,EAF_scrap_fossil,final-calibration-year,25,,12.5,0.3,-0.5,6
-iron and steel,EAF with scrap,EAF_scrap_bio,final-calibration-year,25,,12.5,0.3,-0.5,6
+iron and steel,EAF with scrap,EAF_scrap_fossil_NG_finish,final-calibration-year,25,,12.5,0.3,-0.5,6
+iron and steel,EAF with scrap,EAF_scrap_bio_NG_finish,final-calibration-year,25,,12.5,0.3,-0.5,6
+iron and steel,EAF with scrap,EAF_scrap_fossil_elec_finish,final-calibration-year,25,,12.5,0.3,-0.5,6
+iron and steel,EAF with scrap,EAF_scrap_bio_elec_finish,final-calibration-year,25,,12.5,0.3,-0.5,6
 iron and steel,BLASTFUR,BF_BOF,initial-future-year,25,,12.5,0.3,-0.5,6
 iron and steel,BLASTFUR,BF_BOF_CCS_73%,initial-future-year,25,,12.5,0.3,-0.5,6
 iron and steel,BLASTFUR,BF_BOF_CCS_86%,initial-future-year,25,,12.5,0.3,-0.5,6
