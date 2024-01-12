@@ -1,162 +1,73 @@
-# File: A323.globaltech_coef.csv,,,,,,
-# Title: IRONSTL production default coefficients,,,,,,
-# Units: scrap input is unitless (Mt scrap per Mt IRONSTL); all others are GJ per kg (EJ of energy per Mt of IRONSTL),,,,,,
-# Comments: charcoal_prop is the proportion of bioenergy that comes from charcoal
-# Column types: ccccnnnn,,,,,,
-# ----------,,,,,,
+# File: A323.globaltech_coef.csv,,,,,,,
+# Title: IRONSTL production default coefficients,,,,,,,
+# Units: scrap input is unitless (Mt scrap per Mt IRONSTL); all others are GJ per kg (EJ of energy per Mt of IRONSTL),,,,,,,
+# Comments: charcoal_prop is the proportion of bioenergy that comes from charcoal,,,,,,,
+# Column types: ccccnnnn,,,,,,,
+# ----------,,,,,,,
 supplysector,subsector,technology,minicam.energy.input,charcoal_prop,1971,2010,2100
 iron and steel,BLASTFUR,BF_BOF,elect_td_ind,,4.73E-04,4.73E-04,4.73E-04
 iron and steel,BLASTFUR,BF_BOF,wholesale gas,,0.001282324,0.001282324,0.001282324
 iron and steel,BLASTFUR,BF_BOF,delivered coal industry,,0.021145411,0.021145411,0.021145411
-iron and steel,BLASTFUR,BF_BOF,H2 industrial,,0,0,0
-iron and steel,BLASTFUR,BF_BOF,delivered biomass industry,,0,0,0
-iron and steel,BLASTFUR,BF_BOF,refined liquids industrial,,1.00E-05,1.00E-05,1.00E-05
-iron and steel,BLASTFUR,BF_BOF,scrap,,0,0,0
 iron and steel,BLASTFUR,BF_BOF_CCS_73%,elect_td_ind,,0.003481526,0.003481526,0.003481526
 iron and steel,BLASTFUR,BF_BOF_CCS_73%,wholesale gas,,0.001282324,0.001282324,0.001282324
 iron and steel,BLASTFUR,BF_BOF_CCS_73%,delivered coal industry,,0.021145411,0.021145411,0.021145411
-iron and steel,BLASTFUR,BF_BOF_CCS_73%,H2 industrial,,0,0,0
-iron and steel,BLASTFUR,BF_BOF_CCS_73%,delivered biomass industry,,0,0,0
-iron and steel,BLASTFUR,BF_BOF_CCS_73%,refined liquids industrial,,0,0,0
-iron and steel,BLASTFUR,BF_BOF_CCS_73%,scrap,,0,0,0
 iron and steel,BLASTFUR,BF_BOF_CCS_86%,elect_td_ind,,0.004130652,0.004130652,0.004130652
 iron and steel,BLASTFUR,BF_BOF_CCS_86%,wholesale gas,,0.001282324,0.001282324,0.001282324
 iron and steel,BLASTFUR,BF_BOF_CCS_86%,delivered coal industry,,0.021145411,0.021145411,0.021145411
-iron and steel,BLASTFUR,BF_BOF_CCS_86%,H2 industrial,,0,0,0
-iron and steel,BLASTFUR,BF_BOF_CCS_86%,delivered biomass industry,,0,0,0
-iron and steel,BLASTFUR,BF_BOF_CCS_86%,refined liquids industrial,,0,0,0
-iron and steel,BLASTFUR,BF_BOF_CCS_86%,scrap,,0,0,0
 iron and steel,BLASTFUR,BF_BOF_BECCSmin,elect_td_ind,,0.00349028,0.00349028,0.00349028
 iron and steel,BLASTFUR,BF_BOF_BECCSmin,wholesale gas,,0.003193198,0.003193198,0.003193198
 iron and steel,BLASTFUR,BF_BOF_BECCSmin,delivered coal industry,,0.014109881,0.014109881,0.014109881
-iron and steel,BLASTFUR,BF_BOF_BECCSmin,H2 industrial,,0,0,0
 iron and steel,BLASTFUR,BF_BOF_BECCSmin,delivered biomass industry,0.669139151,0.006457984,0.006457984,0.006457984
-iron and steel,BLASTFUR,BF_BOF_BECCSmin,refined liquids industrial,,0,0,0
-iron and steel,BLASTFUR,BF_BOF_BECCSmin,scrap,,0,0,0
 iron and steel,BLASTFUR,BF_BOF_BECCSmax,elect_td_ind,,0.003498084,0.003498084,0.003498084
 iron and steel,BLASTFUR,BF_BOF_BECCSmax,wholesale gas,,0.003193198,0.003193198,0.003193198
 iron and steel,BLASTFUR,BF_BOF_BECCSmax,delivered coal industry,,0.012959383,0.012959383,0.012959383
-iron and steel,BLASTFUR,BF_BOF_BECCSmax,H2 industrial,,0,0,0
 iron and steel,BLASTFUR,BF_BOF_BECCSmax,delivered biomass industry,0.704676224,0.007619336,0.007619336,0.007619336
-iron and steel,BLASTFUR,BF_BOF_BECCSmax,refined liquids industrial,,0,0,0
-iron and steel,BLASTFUR,BF_BOF_BECCSmax,scrap,,0,0,0
 iron and steel,Smelting reduction,SR_BOF,elect_td_ind,,0.002120395,0.002120395,0.002120395
 iron and steel,Smelting reduction,SR_BOF,wholesale gas,,0.001838858,0.001838858,0.001838858
 iron and steel,Smelting reduction,SR_BOF,delivered coal industry,,0.013784268,0.013784268,0.013784268
-iron and steel,Smelting reduction,SR_BOF,H2 industrial,,0,0,0
-iron and steel,Smelting reduction,SR_BOF,delivered biomass industry,,0,0,0
-iron and steel,Smelting reduction,SR_BOF,refined liquids industrial,,0,0,0
-iron and steel,Smelting reduction,SR_BOF,scrap,,0,0,0
 iron and steel,Smelting reduction,SR_BOF_CCS,elect_td_ind,,0.002993667,0.002993667,0.002993667
 iron and steel,Smelting reduction,SR_BOF_CCS,wholesale gas,,0.001838858,0.001838858,0.001838858
 iron and steel,Smelting reduction,SR_BOF_CCS,delivered coal industry,,0.013784268,0.013784268,0.013784268
-iron and steel,Smelting reduction,SR_BOF_CCS,H2 industrial,,0,0,0
-iron and steel,Smelting reduction,SR_BOF_CCS,delivered biomass industry,,0,0,0
-iron and steel,Smelting reduction,SR_BOF_CCS,refined liquids industrial,,0,0,0
-iron and steel,Smelting reduction,SR_BOF_CCS,scrap,,0,0,0
 iron and steel,EAF with DRI,DRI_EAF_NG,elect_td_ind,,0.002046731,0.002046731,0.002046731
 iron and steel,EAF with DRI,DRI_EAF_NG,wholesale gas,,0.013973955,0.013973955,0.013973955
 iron and steel,EAF with DRI,DRI_EAF_NG,delivered coal industry,,7.96E-05,7.96E-05,7.96E-05
-iron and steel,EAF with DRI,DRI_EAF_NG,H2 industrial,,0,0,0
-iron and steel,EAF with DRI,DRI_EAF_NG,delivered biomass industry,,0,0,0
-iron and steel,EAF with DRI,DRI_EAF_NG,refined liquids industrial,,1.00E-05,1.00E-05,1.00E-05
-iron and steel,EAF with DRI,DRI_EAF_NG,scrap,,0,0,0
 iron and steel,EAF with DRI,DRI_EAF_NG_CCS,elect_td_ind,,0.00270881,0.00270881,0.00270881
 iron and steel,EAF with DRI,DRI_EAF_NG_CCS,wholesale gas,,0.013973955,0.013973955,0.013973955
 iron and steel,EAF with DRI,DRI_EAF_NG_CCS,delivered coal industry,,7.96E-05,7.96E-05,7.96E-05
-iron and steel,EAF with DRI,DRI_EAF_NG_CCS,H2 industrial,,0,0,0
-iron and steel,EAF with DRI,DRI_EAF_NG_CCS,delivered biomass industry,,0,0,0
-iron and steel,EAF with DRI,DRI_EAF_NG_CCS,refined liquids industrial,,0,0,0
-iron and steel,EAF with DRI,DRI_EAF_NG_CCS,scrap,,0,0,0
 iron and steel,EAF with DRI,DRI_EAF_coal,elect_td_ind,,0.00442379,0.00442379,0.00442379
 iron and steel,EAF with DRI,DRI_EAF_coal,wholesale gas,,0.002609474,0.002609474,0.002609474
 iron and steel,EAF with DRI,DRI_EAF_coal,delivered coal industry,,0.021479927,0.021479927,0.021479927
-iron and steel,EAF with DRI,DRI_EAF_coal,H2 industrial,,0,0,0
-iron and steel,EAF with DRI,DRI_EAF_coal,delivered biomass industry,,0,0,0
-iron and steel,EAF with DRI,DRI_EAF_coal,refined liquids industrial,,0,0,0
-iron and steel,EAF with DRI,DRI_EAF_coal,scrap,,0,0,0
 iron and steel,EAF with DRI,DRI_EAF_coal_CCS,elect_td_ind,,0.009796144,0.009796144,0.009796144
 iron and steel,EAF with DRI,DRI_EAF_coal_CCS,wholesale gas,,0.002609474,0.002609474,0.002609474
 iron and steel,EAF with DRI,DRI_EAF_coal_CCS,delivered coal industry,,0.021479927,0.021479927,0.021479927
-iron and steel,EAF with DRI,DRI_EAF_coal_CCS,H2 industrial,,0,0,0
-iron and steel,EAF with DRI,DRI_EAF_coal_CCS,delivered biomass industry,,0,0,0
-iron and steel,EAF with DRI,DRI_EAF_coal_CCS,refined liquids industrial,,0,0,0
-iron and steel,EAF with DRI,DRI_EAF_coal_CCS,scrap,,0,0,0
 iron and steel,EAF with DRI,DRI_EAF_BECCS,elect_td_ind,,0.003871925,0.003871925,0.003871925
-iron and steel,EAF with DRI,DRI_EAF_BECCS,wholesale gas,,0,0,0
-iron and steel,EAF with DRI,DRI_EAF_BECCS,delivered coal industry,,0,0,0
-iron and steel,EAF with DRI,DRI_EAF_BECCS,H2 industrial,,0,0,0
 iron and steel,EAF with DRI,DRI_EAF_BECCS,delivered biomass industry,1,0.017985281,0.017985281,0.017985281
-iron and steel,EAF with DRI,DRI_EAF_BECCS,refined liquids industrial,,0,0,0
-iron and steel,EAF with DRI,DRI_EAF_BECCS,scrap,,0,0,0
 iron and steel,EAF with DRI,DRI_EAF_H2,elect_td_ind,,0.002703442,0.002703442,0.002703442
-iron and steel,EAF with DRI,DRI_EAF_H2,wholesale gas,,0,0,0
-iron and steel,EAF with DRI,DRI_EAF_H2,delivered coal industry,,0,0,0
 iron and steel,EAF with DRI,DRI_EAF_H2,H2 industrial,,0.011567232,0.011567232,0.011567232
 iron and steel,EAF with DRI,DRI_EAF_H2,delivered biomass industry,1,5.75E-04,5.75E-04,5.75E-04
-iron and steel,EAF with DRI,DRI_EAF_H2,refined liquids industrial,,0,0,0
-iron and steel,EAF with DRI,DRI_EAF_H2,scrap,,0,0,0
 iron and steel,SAF with DRI,DRI_SAF_BOF_NG,elect_td_ind,,0.002606229,0.002606229,0.002606229
 iron and steel,SAF with DRI,DRI_SAF_BOF_NG,wholesale gas,,0.013313948,0.013313948,0.013313948
 iron and steel,SAF with DRI,DRI_SAF_BOF_NG,delivered coal industry,,1.10E-04,1.10E-04,1.10E-04
-iron and steel,SAF with DRI,DRI_SAF_BOF_NG,H2 industrial,,0,0,0
-iron and steel,SAF with DRI,DRI_SAF_BOF_NG,delivered biomass industry,,0,0,0
-iron and steel,SAF with DRI,DRI_SAF_BOF_NG,refined liquids industrial,,0,0,0
-iron and steel,SAF with DRI,DRI_SAF_BOF_NG,scrap,,0,0,0
 iron and steel,SAF with DRI,DRI_SAF_BOF_H2,elect_td_ind,,0.002606229,0.002606229,0.002606229
-iron and steel,SAF with DRI,DRI_SAF_BOF_H2,wholesale gas,,0,0,0
-iron and steel,SAF with DRI,DRI_SAF_BOF_H2,delivered coal industry,,0,0,0
 iron and steel,SAF with DRI,DRI_SAF_BOF_H2,H2 industrial,,0.01080662,0.01080662,0.01080662
 iron and steel,SAF with DRI,DRI_SAF_BOF_H2,delivered biomass industry,1,0.001549519,0.001549519,0.001549519
-iron and steel,SAF with DRI,DRI_SAF_BOF_H2,refined liquids industrial,,0,0,0
-iron and steel,SAF with DRI,DRI_SAF_BOF_H2,scrap,,0,0,0
 iron and steel,SAF with DRI,DRI_SAF_BOF_BECCS,elect_td_ind,,0.006054223,0.006054223,0.006054223
-iron and steel,SAF with DRI,DRI_SAF_BOF_BECCS,wholesale gas,,0,0,0
-iron and steel,SAF with DRI,DRI_SAF_BOF_BECCS,delivered coal industry,,0,0,0
-iron and steel,SAF with DRI,DRI_SAF_BOF_BECCS,H2 industrial,,0,0,0
 iron and steel,SAF with DRI,DRI_SAF_BOF_BECCS,delivered biomass industry,1,0.017228266,0.017228266,0.017228266
-iron and steel,SAF with DRI,DRI_SAF_BOF_BECCS,refined liquids industrial,,0,0,0
-iron and steel,SAF with DRI,DRI_SAF_BOF_BECCS,scrap,,0,0,0
 iron and steel,Electrolysis,AEL_EAF,elect_td_ind,,0.017590407,0.017590407,0.017590407
-iron and steel,Electrolysis,AEL_EAF,wholesale gas,,0,0,0
-iron and steel,Electrolysis,AEL_EAF,delivered coal industry,,0,0,0
-iron and steel,Electrolysis,AEL_EAF,H2 industrial,,0,0,0
 iron and steel,Electrolysis,AEL_EAF,delivered biomass industry,1,4.07E-04,4.07E-04,4.07E-04
-iron and steel,Electrolysis,AEL_EAF,refined liquids industrial,,0,0,0
-iron and steel,Electrolysis,AEL_EAF,scrap,,0,0,0
 iron and steel,Electrolysis,MOE,elect_td_ind,,0.019102552,0.019102552,0.019102552
-iron and steel,Electrolysis,MOE,wholesale gas,,0,0,0
-iron and steel,Electrolysis,MOE,delivered coal industry,,0,0,0
-iron and steel,Electrolysis,MOE,H2 industrial,,0,0,0
-iron and steel,Electrolysis,MOE,delivered biomass industry,,0,0,0
-iron and steel,Electrolysis,MOE,refined liquids industrial,,0,0,0
-iron and steel,Electrolysis,MOE,scrap,,0,0,0
 iron and steel,EAF with scrap,EAF_scrap_fossil_NG_finish,elect_td_ind,,0.002705709,0.002705709,0.002705709
 iron and steel,EAF with scrap,EAF_scrap_fossil_NG_finish,wholesale gas,,0.003051005,0.003051005,0.003051005
 iron and steel,EAF with scrap,EAF_scrap_fossil_NG_finish,delivered coal industry,,4.05E-04,4.05E-04,4.05E-04
-iron and steel,EAF with scrap,EAF_scrap_fossil_NG_finish,H2 industrial,,0,0,0
-iron and steel,EAF with scrap,EAF_scrap_fossil_NG_finish,delivered biomass industry,,0,0,0
-iron and steel,EAF with scrap,EAF_scrap_fossil_NG_finish,refined liquids industrial,,1.00E-05,1.00E-05,1.00E-05
 iron and steel,EAF with scrap,EAF_scrap_fossil_NG_finish,scrap,,1.1,1.1,1.1
 iron and steel,EAF with scrap,EAF_scrap_bio_NG_finish,elect_td_ind,,0.003147239,0.003147239,0.003147239
 iron and steel,EAF with scrap,EAF_scrap_bio_NG_finish,wholesale gas,,0.002609474,0.002609474,0.002609474
-iron and steel,EAF with scrap,EAF_scrap_bio_NG_finish,delivered coal industry,,0,0,0
-iron and steel,EAF with scrap,EAF_scrap_bio_NG_finish,H2 industrial,,0,0,0
 iron and steel,EAF with scrap,EAF_scrap_bio_NG_finish,delivered biomass industry,1,4.07E-04,4.07E-04,4.07E-04
-iron and steel,EAF with scrap,EAF_scrap_bio_NG_finish,refined liquids industrial,,0,0,0
 iron and steel,EAF with scrap,EAF_scrap_bio_NG_finish,scrap,,1.1,1.1,1.1
 iron and steel,EAF with scrap,EAF_scrap_fossil_elec_finish,elect_td_ind,,0.005315183,0.005315183,0.005315183
 iron and steel,EAF with scrap,EAF_scrap_fossil_elec_finish,wholesale gas,,4.42E-04,4.42E-04,4.42E-04
 iron and steel,EAF with scrap,EAF_scrap_fossil_elec_finish,delivered coal industry,,4.05E-04,4.05E-04,4.05E-04
-iron and steel,EAF with scrap,EAF_scrap_fossil_elec_finish,H2 industrial,,0,0,0
-iron and steel,EAF with scrap,EAF_scrap_fossil_elec_finish,delivered biomass industry,,0,0,0
-iron and steel,EAF with scrap,EAF_scrap_fossil_elec_finish,refined liquids industrial,,1.00E-05,1.00E-05,1.00E-05
 iron and steel,EAF with scrap,EAF_scrap_fossil_elec_finish,scrap,,1.1,1.1,1.1
 iron and steel,EAF with scrap,EAF_scrap_bio_elec_finish,elect_td_ind,,0.005756714,0.005756714,0.005756714
-iron and steel,EAF with scrap,EAF_scrap_bio_elec_finish,wholesale gas,,0,0,0
-iron and steel,EAF with scrap,EAF_scrap_bio_elec_finish,delivered coal industry,,0,0,0
-iron and steel,EAF with scrap,EAF_scrap_bio_elec_finish,H2 industrial,,0,0,0
 iron and steel,EAF with scrap,EAF_scrap_bio_elec_finish,delivered biomass industry,1,4.07E-04,4.07E-04,4.07E-04
-iron and steel,EAF with scrap,EAF_scrap_bio_elec_finish,refined liquids industrial,,0,0,0
 iron and steel,EAF with scrap,EAF_scrap_bio_elec_finish,scrap,,1.1,1.1,1.1
-

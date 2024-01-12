@@ -88,9 +88,9 @@ module_energy_L101.en_bal_IEA <- function(command, ...) {
 
 
       L101.IEA_en_bal_ctry_hist <- L101.IEA_en_bal_ctry_hist %>%
-        mutate(sector = if_else(PRODUCT %in% COKE_BLAST_PRODUCTS & FLOW %in% IRON_STL_OWNUSE_INPUTS, "net_industry_energy_iron and steel", sector)) %>%
+        mutate(sector = if_else(PRODUCT %in% COKE_BLAST_PRODUCTS & FLOW %in% c(IRON_STL_OWNUSE_INPUTS, IRON_STL_OWNUSE_OUTPUTS), "net_industry_energy_iron and steel", sector)) # %>%
         # eliminate elec output from coke oven gas/blast furnace gas
-        filter(!(PRODUCT %in% COKE_BLAST_PRODUCTS & FLOW %in% IRON_STL_OWNUSE_OUTPUTS))
+        # filter(!(PRODUCT %in% COKE_BLAST_PRODUCTS & FLOW %in% IRON_STL_OWNUSE_OUTPUTS))
 
 
       # The IEA commodity "Primary solid biomass" (i.e., wood, dung, straw, etc) consumed by the
