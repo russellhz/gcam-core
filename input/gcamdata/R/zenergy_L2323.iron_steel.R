@@ -179,22 +179,32 @@ module_energy_L2323.iron_steel <- function(command, ...) {
       mutate(reference_subsector = if_else(subsector %in% c("EAF with DRI", "EAF with scrap"),
                                            "EAF with scrap", "BLASTFUR")) %>%
       # now get ratio to either BF_BOF or EAF_scrap_fossil
-      group_by(year) %>%
       mutate(ratio = if_else(reference_subsector == "EAF with scrap",
-                             input.cost / input.cost[technology == "EAF_scrap_fossil_NG_finish"],
-                             input.cost / input.cost[technology == "BF_BOF"])) %>%
-      ungroup %>%
+                             input.cost / input.cost[technology == "EAF_scrap_fossil_NG_finish" &
+                                                       year == unique(all_steel_production_costs$year)],
+                             input.cost / input.cost[technology == "BF_BOF" &
+                                                       year == unique(all_steel_production_costs$year)])) %>%
+      # ungroup %>%
       select(supplysector, subsector, technology, year, reference_subsector, ratio)
+
+    L2323.capital_cost_adders <- A323.capital_cost_adders %>%
+      gather_years(value_col = "capital_cost_frac") %>%
+      complete(nesting(supplysector, subsector, technology), year = MODEL_YEARS) %>%
+      group_by(supplysector, subsector, technology) %>%
+      mutate(capital_cost_frac = approx_fun(year, capital_cost_frac) ) %>%
+      ungroup
 
     all_steel_production_costs <-  TZ_steel_cost_gcam_mapping%>%
       left_join(all_steel_production_costs,by=c("Country")) %>%
       mutate(supplysector="iron and steel") %>%
-      right_join(non_capital_cost_ratio %>% filter(year %in% all_steel_production_costs$year),
+      select(-year) %>%
+      gcamdata::repeat_add_columns(tibble(year = MODEL_YEARS)) %>%
+      right_join(non_capital_cost_ratio,
                  by = c("year", "supplysector", "subsector" = "reference_subsector")) %>%
       mutate(value = value * ratio  * gdp_deflator(2015, base_year = 2019)) %>%
       select(-subsector, -ratio, -Country) %>%
       rename(subsector = subsector.y) %>%
-      left_join_error_no_match(A323.capital_cost_adders,by=c("subsector","supplysector", "technology")) %>%
+      left_join_error_no_match(L2323.capital_cost_adders,by=c("subsector","supplysector", "technology", "year")) %>%
       #multiply total OPEX, labor, and raw materials costs with capital cost fraction from IEA
       mutate(value = value + (value * capital_cost_frac)) %>%
       left_join_error_no_match(A323.ccs_adders,
@@ -205,10 +215,6 @@ module_energy_L2323.iron_steel <- function(command, ...) {
     #complete subsector and technology nesting across model years
     all_steel_production_costs %>%
       rename(input.cost=value) %>%
-      complete(nesting(supplysector, subsector, region,stub.technology,input.cost, minicam.non.energy.input), year = c(MODEL_BASE_YEARS, MODEL_FUTURE_YEARS))%>%
-      select(region,supplysector, subsector, stub.technology,year,minicam.non.energy.input, input.cost) %>%
-      mutate(input.cost = round(input.cost, energy.DIGITS_COST)) %>%
-      ungroup() %>%
       filter(year %in% c(MODEL_BASE_YEARS, MODEL_FUTURE_YEARS)) %>%
       select(LEVEL2_DATA_NAMES[["StubTechCost"]]) ->
       L2323.StubTechCost_iron_steel_prelim
