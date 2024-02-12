@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><scenario>
+    <world>
+        <region name="Japan">
+            <ghgpolicy name="GHG">
+                <market>Japan</market>
+                <fixedTax year="2035">220</fixedTax>
+            </ghgpolicy>
+         
+        </region>
+        <region name="EU-12">
+            <ghgpolicy name="GHG">
+                <market>EU</market>
+                <fixedTax year="2035">220</fixedTax>
+            </ghgpolicy>
+         
+        </region>
+        <region name="EU-15">
+            <ghgpolicy name="GHG">
+                <market>EU</market>
+                <fixedTax year="2035">220</fixedTax>
+            </ghgpolicy>
+         
+        </region>
+    </world>
+</scenario>

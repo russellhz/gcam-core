@@ -159,7 +159,7 @@ module_energy_L226.en_distribution <- function(command, ...) {
       gather_years(value_col = "input.cost") %>%
       complete(nesting(supplysector, subsector, technology, minicam.non.energy.input), year = c(year, MODEL_BASE_YEARS, MODEL_FUTURE_YEARS)) %>%
       arrange(supplysector, year) %>%
-      group_by(supplysector) %>%
+      group_by(supplysector, subsector) %>%
       mutate (input.cost = approx_fun(as.numeric(year), input.cost)) %>%
       ungroup() %>%
       filter(year %in% c(MODEL_BASE_YEARS, MODEL_FUTURE_YEARS)) %>%

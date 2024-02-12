@@ -1,0 +1,38 @@
+# File: weo_region_mapping.csv
+# Title: WEO 2022 to GCAM region mapping
+# Units: NA
+# Column types: ccc
+# ----------
+GCAM_region_ID,GCAM_region,WEO_region
+1,USA,United States
+2,Africa_Eastern,Africa
+3,Africa_Northern,Africa
+4,Africa_Southern,Africa
+5,Africa_Western,Africa
+6,Australia_NZ,United States
+7,Brazil,Brazil
+8,Canada,United States
+9,Central America and Caribbean,Brazil
+10,Central Asia,Russia
+11,China,China
+12,EU-12,European Union
+13,EU-15,European Union
+14,Europe_Eastern,European Union
+15,Europe_Non_EU,European Union
+16,European Free Trade Association,European Union
+17,India,India
+18,Indonesia,China
+19,Japan,Japan
+20,Mexico,Brazil
+21,Middle East,Middle East
+22,Pakistan,India
+23,Russia,Russia
+24,South Africa,Africa
+25,South America_Northern,Brazil
+26,South America_Southern,Brazil
+27,South Asia,India
+28,South Korea,Japan
+29,Southeast Asia,China
+30,Taiwan,China
+31,Argentina,Brazil
+32,Colombia,Brazil

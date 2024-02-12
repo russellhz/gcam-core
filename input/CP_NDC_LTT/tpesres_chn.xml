@@ -1,0 +1,663 @@
+<scenario>
+<world>
+   <region name="China">
+         <policy-portfolio-standard name="TPES_RES">
+                                <market>China</market>
+            <policyType>RES</policyType>
+            <constraint year="2015">1</constraint>
+            <constraint year="2020">1</constraint>
+            <constraint year="2025">1</constraint>
+            <constraint fillout="1" year="2030">1</constraint>
+         </policy-portfolio-standard>
+         <supplysector name="regional biomass">
+            <subsector name="regional biomass">
+               <technology name="regional biomass">
+                  <period year="2020"> <minicam-energy-input name="TPES_RES">   <coefficient>0.140370268236528</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output>  </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_RES">   <coefficient>0.189065236623675</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output>  </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2050"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2055"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2060"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2065"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2070"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2075"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2080"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2085"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2090"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2095"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2100"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+               </technology>
+            </subsector>
+        </supplysector>
+
+         <supplysector name="regional coal">
+            <subsector name="imported coal">
+               <technology name="imported coal">
+                  <period year="2020"> <minicam-energy-input name="TPES_RES">   <coefficient>0.140370268236528</coefficient> </minicam-energy-input>  </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_RES">   <coefficient>0.189065236623675</coefficient> </minicam-energy-input>  </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2050"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2055"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2060"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2065"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2070"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2075"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2080"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2085"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2090"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2095"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2100"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+               </technology>
+            </subsector>
+            <subsector name="domestic coal">
+               <technology name="domestic coal">
+                  <period year="2020"> <minicam-energy-input name="TPES_RES">   <coefficient>0.140370268236528</coefficient> </minicam-energy-input>  </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_RES">   <coefficient>0.189065236623675</coefficient> </minicam-energy-input>  </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2050"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2055"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2060"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2065"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2070"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2075"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2080"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2085"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2090"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2095"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2100"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+               </technology>
+            </subsector>
+        </supplysector>
+         <supplysector name="regional natural gas">
+            <nesting-subsector name="imported natural gas">
+                    <subsector name="imported LNG">
+                        <technology name="imported LNG">
+                  <period year="2020"> <minicam-energy-input name="TPES_RES">   <coefficient>0.140370268236528</coefficient> </minicam-energy-input>  </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_RES">   <coefficient>0.189065236623675</coefficient> </minicam-energy-input>  </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2050"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2055"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2060"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2065"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2070"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2075"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2080"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2085"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2090"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2095"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2100"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+          </technology>       </subsector>   
+                    <subsector name="imported pipeline gas">
+                        <technology name="imported RUS pipeline gas">
+                  <period year="2020"> <minicam-energy-input name="TPES_RES">   <coefficient>0.140370268236528</coefficient> </minicam-energy-input>  </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_RES">   <coefficient>0.189065236623675</coefficient> </minicam-energy-input>  </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2050"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2055"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2060"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2065"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2070"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2075"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2080"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2085"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2090"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2095"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2100"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+          </technology>    
+                        <technology name="imported PAC pipeline gas">
+                  <period year="2020"> <minicam-energy-input name="TPES_RES">   <coefficient>0.140370268236528</coefficient> </minicam-energy-input>  </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_RES">   <coefficient>0.189065236623675</coefficient> </minicam-energy-input>  </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2050"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2055"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2060"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2065"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2070"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2075"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2080"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2085"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2090"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2095"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2100"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+          </technology>     </subsector> </nesting-subsector>
+            <nesting-subsector name="domestic natural gas">
+<subsector name="domestic natural gas">
+               <technology name="domestic natural gas">
+                  <period year="2020"> <minicam-energy-input name="TPES_RES">   <coefficient>0.140370268236528</coefficient> </minicam-energy-input>  </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_RES">   <coefficient>0.189065236623675</coefficient> </minicam-energy-input>  </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2050"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2055"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2060"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2065"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2070"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2075"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2080"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2085"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2090"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2095"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2100"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+          </technology>       </subsector>                 </nesting-subsector>
+        </supplysector>
+         <supplysector name="regional oil">
+            <subsector name="imported crude oil">
+               <technology name="imported crude oil">
+                  <period year="2020"> <minicam-energy-input name="TPES_RES">   <coefficient>0.140370268236528</coefficient> </minicam-energy-input>  </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_RES">   <coefficient>0.189065236623675</coefficient> </minicam-energy-input>  </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2050"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2055"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2060"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2065"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2070"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2075"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2080"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2085"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2090"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2095"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2100"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+               </technology>
+            </subsector>
+            <subsector name="domestic crude oil">
+               <technology name="domestic crude oil">
+                  <period year="2020"> <minicam-energy-input name="TPES_RES">   <coefficient>0.140370268236528</coefficient> </minicam-energy-input>  </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_RES">   <coefficient>0.189065236623675</coefficient> </minicam-energy-input>  </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2050"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2055"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2060"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2065"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2070"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2075"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2080"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2085"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2090"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2095"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+                  <period year="2100"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input>  </period>
+               </technology>
+            </subsector>
+            
+        </supplysector>
+         <supplysector name="regional biomassOil">
+            <subsector name="regional biomassOil">
+               <technology name="Soybean">
+                  <period year="2020"> <minicam-energy-input name="TPES_RES">   <coefficient>0.140370268236528</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output>  </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_RES">   <coefficient>0.189065236623675</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output>  </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2050"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2055"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2060"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2065"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2070"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2075"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2080"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2085"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2090"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2095"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2100"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+
+               </technology>
+            </subsector>
+        </supplysector>
+         <supplysector name="regional corn for ethanol">
+            <subsector name="regional corn for ethanol">
+               <technology name="regional corn for ethanol">
+                  <period year="2020"> <minicam-energy-input name="TPES_RES">   <coefficient>0.140370268236528</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output>  </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_RES">   <coefficient>0.189065236623675</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output>  </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2050"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2055"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2060"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2065"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2070"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2075"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2080"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2085"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2090"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2095"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2100"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+
+               </technology>
+            </subsector>
+        </supplysector>
+         <supplysector name="regional sugar for ethanol">
+            <subsector name="regional sugar for ethanol">
+               <technology name="regional sugar for ethanol">
+                  <period year="2020"> <minicam-energy-input name="TPES_RES">   <coefficient>0.140370268236528</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output>  </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_RES">   <coefficient>0.189065236623675</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output>  </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2050"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2055"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2060"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2065"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2070"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2075"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2080"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2085"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2090"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2095"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+                  <period year="2100"> <minicam-energy-input name="TPES_RES">   <coefficient>0.237883274863801</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1</output-ratio> </res-secondary-output> </period>
+               </technology>
+            </subsector>
+        </supplysector>
+         <supplysector name="nuclearFuelGenII">
+            <subsector name="enrichedUranium">
+               <technology name="enrichedUranium">
+                  <period year="2020"> <minicam-energy-input name="TPES_RES">   <coefficient>0.109739266694534</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>0.781784262958166</output-ratio> </res-secondary-output>  </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_RES">   <coefficient>0.14516552300557</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>0.767806528571485</output-ratio> </res-secondary-output>  </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_RES">   <coefficient>0.178339378805902</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>0.749692801681874</output-ratio> </res-secondary-output>  </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_RES">   <coefficient>0.175680115210491</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>0.738513942651391</output-ratio> </res-secondary-output>  </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_RES">   <coefficient>0.173394546075599</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>0.728905998855425</output-ratio> </res-secondary-output>  </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_RES">   <coefficient>0.166185895889626</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>0.698602690688424</output-ratio> </res-secondary-output>  </period>
+                  <period year="2050"> <minicam-energy-input name="TPES_RES">   <coefficient>0.155719390531396</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>0.654604198721211</output-ratio> </res-secondary-output>  </period>
+                  <period year="2055"> <minicam-energy-input name="TPES_RES">   <coefficient>0.153324218664769</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>0.644535513278745</output-ratio> </res-secondary-output>  </period>
+                  <period year="2060"> <minicam-energy-input name="TPES_RES">   <coefficient>0.15025876930995</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>0.631649153964185</output-ratio> </res-secondary-output>  </period>
+                  <period year="2065"> <minicam-energy-input name="TPES_RES">   <coefficient>0.15025876930995</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>0.631649153964185</output-ratio> </res-secondary-output>  </period>
+                  <period year="2070"> <minicam-energy-input name="TPES_RES">   <coefficient>0.15025876930995</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>0.631649153964185</output-ratio> </res-secondary-output>  </period>
+                  <period year="2075"> <minicam-energy-input name="TPES_RES">   <coefficient>0.15025876930995</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>0.631649153964185</output-ratio> </res-secondary-output>  </period>
+                  <period year="2080"> <minicam-energy-input name="TPES_RES">   <coefficient>0.15025876930995</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>0.631649153964185</output-ratio> </res-secondary-output>  </period>
+                  <period year="2085"> <minicam-energy-input name="TPES_RES">   <coefficient>0.15025876930995</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>0.631649153964185</output-ratio> </res-secondary-output>  </period>
+                  <period year="2090"> <minicam-energy-input name="TPES_RES">   <coefficient>0.15025876930995</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>0.631649153964185</output-ratio> </res-secondary-output>  </period>
+                  <period year="2095"> <minicam-energy-input name="TPES_RES">   <coefficient>0.15025876930995</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>0.631649153964185</output-ratio> </res-secondary-output>  </period>
+                  <period year="2100"> <minicam-energy-input name="TPES_RES">   <coefficient>0.15025876930995</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>0.631649153964185</output-ratio> </res-secondary-output>  </period>
+               </technology>
+            </subsector>
+        </supplysector>
+         <supplysector name="nuclearFuelGenIII">
+            <subsector name="enrichedUranium">
+               <technology name="enrichedUranium">
+                  <period year="2020"> <minicam-energy-input name="TPES_RES">   <coefficient>0.109739266694534</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>0.781784262958166</output-ratio> </res-secondary-output>  </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_RES">   <coefficient>0.14516552300557</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>0.767806528571485</output-ratio> </res-secondary-output>  </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_RES">   <coefficient>0.178339378805902</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>0.749692801681874</output-ratio> </res-secondary-output>  </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_RES">   <coefficient>0.175680115210491</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>0.738513942651391</output-ratio> </res-secondary-output>  </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_RES">   <coefficient>0.173394546075599</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>0.728905998855425</output-ratio> </res-secondary-output>  </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_RES">   <coefficient>0.166185895889626</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>0.698602690688424</output-ratio> </res-secondary-output>  </period>
+                  <period year="2050"> <minicam-energy-input name="TPES_RES">   <coefficient>0.155719390531396</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>0.654604198721211</output-ratio> </res-secondary-output>  </period>
+                  <period year="2055"> <minicam-energy-input name="TPES_RES">   <coefficient>0.153324218664769</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>0.644535513278745</output-ratio> </res-secondary-output>  </period>
+                  <period year="2060"> <minicam-energy-input name="TPES_RES">   <coefficient>0.15025876930995</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>0.631649153964185</output-ratio> </res-secondary-output>  </period>
+                  <period year="2065"> <minicam-energy-input name="TPES_RES">   <coefficient>0.15025876930995</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>0.631649153964185</output-ratio> </res-secondary-output>  </period>
+                  <period year="2070"> <minicam-energy-input name="TPES_RES">   <coefficient>0.15025876930995</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>0.631649153964185</output-ratio> </res-secondary-output>  </period>
+                  <period year="2075"> <minicam-energy-input name="TPES_RES">   <coefficient>0.15025876930995</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>0.631649153964185</output-ratio> </res-secondary-output>  </period>
+                  <period year="2080"> <minicam-energy-input name="TPES_RES">   <coefficient>0.15025876930995</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>0.631649153964185</output-ratio> </res-secondary-output>  </period>
+                  <period year="2085"> <minicam-energy-input name="TPES_RES">   <coefficient>0.15025876930995</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>0.631649153964185</output-ratio> </res-secondary-output>  </period>
+                  <period year="2090"> <minicam-energy-input name="TPES_RES">   <coefficient>0.15025876930995</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>0.631649153964185</output-ratio> </res-secondary-output>  </period>
+                  <period year="2095"> <minicam-energy-input name="TPES_RES">   <coefficient>0.15025876930995</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>0.631649153964185</output-ratio> </res-secondary-output>  </period>
+                  <period year="2100"> <minicam-energy-input name="TPES_RES">   <coefficient>0.15025876930995</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>0.631649153964185</output-ratio> </res-secondary-output>  </period>
+               </technology>
+            </subsector>
+        </supplysector>
+         <supplysector name="refined liquids bunkers">
+            <subsector name="refined liquids bunkers">
+               <technology name="refined liquids bunkers">
+                  <period year="2020">  <res-secondary-output name="TPES_RES"> <output-ratio>0.148090632989537</output-ratio><pMultiplier>0</pMultiplier> </res-secondary-output>  </period>
+                  <period year="2025">  <res-secondary-output name="TPES_RES"> <output-ratio>0.199463824637977</output-ratio> <pMultiplier>0</pMultiplier></res-secondary-output>  </period>
+                  <period year="2030">  <res-secondary-output name="TPES_RES"> <output-ratio>0.25096685498131</output-ratio> <pMultiplier>0</pMultiplier></res-secondary-output>  </period>
+                  <period year="2035">  <res-secondary-output name="TPES_RES"> <output-ratio>0.25096685498131</output-ratio> <pMultiplier>0</pMultiplier></res-secondary-output>  </period>
+                  <period year="2040">  <res-secondary-output name="TPES_RES"> <output-ratio>0.25096685498131</output-ratio> <pMultiplier>0</pMultiplier></res-secondary-output>  </period>
+                  <period year="2045">  <res-secondary-output name="TPES_RES"> <output-ratio>0.25096685498131</output-ratio> <pMultiplier>0</pMultiplier></res-secondary-output>  </period>
+                  <period year="2050">  <res-secondary-output name="TPES_RES"> <output-ratio>0.25096685498131</output-ratio> <pMultiplier>0</pMultiplier></res-secondary-output>  </period>
+                  <period year="2055">  <res-secondary-output name="TPES_RES"> <output-ratio>0.25096685498131</output-ratio> <pMultiplier>0</pMultiplier></res-secondary-output>  </period>
+                  <period year="2060">  <res-secondary-output name="TPES_RES"> <output-ratio>0.25096685498131</output-ratio> <pMultiplier>0</pMultiplier></res-secondary-output>  </period>
+                  <period year="2065">  <res-secondary-output name="TPES_RES"> <output-ratio>0.25096685498131</output-ratio> <pMultiplier>0</pMultiplier></res-secondary-output>  </period>
+                  <period year="2070">  <res-secondary-output name="TPES_RES"> <output-ratio>0.25096685498131</output-ratio> <pMultiplier>0</pMultiplier></res-secondary-output>  </period>
+                  <period year="2075">  <res-secondary-output name="TPES_RES"> <output-ratio>0.25096685498131</output-ratio> <pMultiplier>0</pMultiplier></res-secondary-output>  </period>
+                  <period year="2080">  <res-secondary-output name="TPES_RES"> <output-ratio>0.25096685498131</output-ratio> <pMultiplier>0</pMultiplier></res-secondary-output>  </period>
+                  <period year="2085">  <res-secondary-output name="TPES_RES"> <output-ratio>0.25096685498131</output-ratio><pMultiplier>0</pMultiplier></res-secondary-output>  </period>
+                  <period year="2090">  <res-secondary-output name="TPES_RES"> <output-ratio>0.25096685498131</output-ratio><pMultiplier>0</pMultiplier></res-secondary-output>  </period>
+                  <period year="2095">  <res-secondary-output name="TPES_RES"> <output-ratio>0.25096685498131</output-ratio><pMultiplier>0</pMultiplier></res-secondary-output>  </period>
+                  <period year="2100">  <res-secondary-output name="TPES_RES"> <output-ratio>0.25096685498131</output-ratio> <pMultiplier>0</pMultiplier></res-secondary-output>  </period>
+               </technology>
+            </subsector>
+        </supplysector>
+         <supplysector name="refined liquids feedstocks">
+            <subsector name="refined liquids feedstocks">
+               <technology name="refined liquids feedstocks">
+                  <period year="2020">  <res-secondary-output name="TPES_RES"> <output-ratio>0.148090632989537</output-ratio><pMultiplier>0</pMultiplier> </res-secondary-output>  </period>
+                  <period year="2025">  <res-secondary-output name="TPES_RES"> <output-ratio>0.199463824637977</output-ratio> <pMultiplier>0</pMultiplier></res-secondary-output>  </period>
+                  <period year="2030">  <res-secondary-output name="TPES_RES"> <output-ratio>0.25096685498131</output-ratio> <pMultiplier>0</pMultiplier></res-secondary-output>  </period>
+                  <period year="2035">  <res-secondary-output name="TPES_RES"> <output-ratio>0.25096685498131</output-ratio> <pMultiplier>0</pMultiplier></res-secondary-output>  </period>
+                  <period year="2040">  <res-secondary-output name="TPES_RES"> <output-ratio>0.25096685498131</output-ratio> <pMultiplier>0</pMultiplier></res-secondary-output>  </period>
+                  <period year="2045">  <res-secondary-output name="TPES_RES"> <output-ratio>0.25096685498131</output-ratio> <pMultiplier>0</pMultiplier></res-secondary-output>  </period>
+                  <period year="2050">  <res-secondary-output name="TPES_RES"> <output-ratio>0.25096685498131</output-ratio> <pMultiplier>0</pMultiplier></res-secondary-output>  </period>
+                  <period year="2055">  <res-secondary-output name="TPES_RES"> <output-ratio>0.25096685498131</output-ratio> <pMultiplier>0</pMultiplier></res-secondary-output>  </period>
+                  <period year="2060">  <res-secondary-output name="TPES_RES"> <output-ratio>0.25096685498131</output-ratio> <pMultiplier>0</pMultiplier></res-secondary-output>  </period>
+                  <period year="2065">  <res-secondary-output name="TPES_RES"> <output-ratio>0.25096685498131</output-ratio> <pMultiplier>0</pMultiplier></res-secondary-output>  </period>
+                  <period year="2070">  <res-secondary-output name="TPES_RES"> <output-ratio>0.25096685498131</output-ratio> <pMultiplier>0</pMultiplier></res-secondary-output>  </period>
+                  <period year="2075">  <res-secondary-output name="TPES_RES"> <output-ratio>0.25096685498131</output-ratio> <pMultiplier>0</pMultiplier></res-secondary-output>  </period>
+                  <period year="2080">  <res-secondary-output name="TPES_RES"> <output-ratio>0.25096685498131</output-ratio> <pMultiplier>0</pMultiplier></res-secondary-output>  </period>
+                  <period year="2085">  <res-secondary-output name="TPES_RES"> <output-ratio>0.25096685498131</output-ratio><pMultiplier>0</pMultiplier></res-secondary-output>  </period>
+                  <period year="2090">  <res-secondary-output name="TPES_RES"> <output-ratio>0.25096685498131</output-ratio><pMultiplier>0</pMultiplier></res-secondary-output>  </period>
+                  <period year="2095">  <res-secondary-output name="TPES_RES"> <output-ratio>0.25096685498131</output-ratio><pMultiplier>0</pMultiplier></res-secondary-output>  </period>
+                  <period year="2100">  <res-secondary-output name="TPES_RES"> <output-ratio>0.25096685498131</output-ratio> <pMultiplier>0</pMultiplier></res-secondary-output>  </period>
+
+               </technology>
+            </subsector>
+        </supplysector>
+<supplysector name="elect_td_bld">
+            <subsector name="rooftop_pv">
+               <technology name="rooftop_pv">
+                  <period year="2020"> <minicam-energy-input name="TPES_RES">   <coefficient>0.332543232407679</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.36904322108535</output-ratio> </res-secondary-output>  </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_RES">   <coefficient>0.439895524259303</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.32668645021662</output-ratio> </res-secondary-output>  </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_RES">   <coefficient>0.540422360017886</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.27179636873295</output-ratio> </res-secondary-output>  </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_RES">   <coefficient>0.532363985486335</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.23792103833755</output-ratio> </res-secondary-output>  </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_RES">   <coefficient>0.525438018410905</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.20880605713765</output-ratio> </res-secondary-output>  </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_RES">   <coefficient>0.503593623907956</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.11697785057098</output-ratio> </res-secondary-output>  </period>
+                  <period year="2050"> <minicam-energy-input name="TPES_RES">   <coefficient>0.471876941004231</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.98364908703397</output-ratio> </res-secondary-output>  </period>
+                  <period year="2055"> <minicam-energy-input name="TPES_RES">   <coefficient>0.464618844438694</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.9531379190265</output-ratio> </res-secondary-output>  </period>
+                  <period year="2060"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2065"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2070"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2075"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2080"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2085"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2090"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2095"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2100"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+               </technology>
+            </subsector>
+        </supplysector>
+      <supplysector name="electricity">
+                <subsector name="hydro">
+               <technology name="hydro">
+
+                  <period year="2020"> <minicam-energy-input name="TPES_RES">   <coefficient>0.332543232407679</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.36904322108535</output-ratio> </res-secondary-output>  </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_RES">   <coefficient>0.439895524259303</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.32668645021662</output-ratio> </res-secondary-output>  </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_RES">   <coefficient>0.540422360017886</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.27179636873295</output-ratio> </res-secondary-output>  </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_RES">   <coefficient>0.532363985486335</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.23792103833755</output-ratio> </res-secondary-output>  </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_RES">   <coefficient>0.525438018410905</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.20880605713765</output-ratio> </res-secondary-output>  </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_RES">   <coefficient>0.503593623907956</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.11697785057098</output-ratio> </res-secondary-output>  </period>
+                  <period year="2050"> <minicam-energy-input name="TPES_RES">   <coefficient>0.471876941004231</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.98364908703397</output-ratio> </res-secondary-output>  </period>
+                  <period year="2055"> <minicam-energy-input name="TPES_RES">   <coefficient>0.464618844438694</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.9531379190265</output-ratio> </res-secondary-output>  </period>
+                  <period year="2060"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2065"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2070"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2075"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2080"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2085"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2090"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2095"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2100"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+               </technology>
+            </subsector>
+                <subsector name="solar">
+               <technology name="PV">
+                  <period year="2015">  <res-secondary-output name="TPES_RES"> <output-ratio>2.36904322108535</output-ratio> </res-secondary-output>  </period>
+
+                  <period year="2020"> <minicam-energy-input name="TPES_RES">   <coefficient>0.332543232407679</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.36904322108535</output-ratio> </res-secondary-output>  </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_RES">   <coefficient>0.439895524259303</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.32668645021662</output-ratio> </res-secondary-output>  </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_RES">   <coefficient>0.540422360017886</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.27179636873295</output-ratio> </res-secondary-output>  </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_RES">   <coefficient>0.532363985486335</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.23792103833755</output-ratio> </res-secondary-output>  </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_RES">   <coefficient>0.525438018410905</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.20880605713765</output-ratio> </res-secondary-output>  </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_RES">   <coefficient>0.503593623907956</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.11697785057098</output-ratio> </res-secondary-output>  </period>
+                  <period year="2050"> <minicam-energy-input name="TPES_RES">   <coefficient>0.471876941004231</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.98364908703397</output-ratio> </res-secondary-output>  </period>
+                  <period year="2055"> <minicam-energy-input name="TPES_RES">   <coefficient>0.464618844438694</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.9531379190265</output-ratio> </res-secondary-output>  </period>
+                  <period year="2060"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2065"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2070"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2075"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2080"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2085"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2090"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2095"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2100"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+ </technology>
+               <technology name="PV_storage">
+                  <period year="2020"> <minicam-energy-input name="TPES_RES">   <coefficient>0.332543232407679</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.36904322108535</output-ratio> </res-secondary-output>  </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_RES">   <coefficient>0.439895524259303</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.32668645021662</output-ratio> </res-secondary-output>  </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_RES">   <coefficient>0.540422360017886</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.27179636873295</output-ratio> </res-secondary-output>  </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_RES">   <coefficient>0.532363985486335</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.23792103833755</output-ratio> </res-secondary-output>  </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_RES">   <coefficient>0.525438018410905</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.20880605713765</output-ratio> </res-secondary-output>  </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_RES">   <coefficient>0.503593623907956</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.11697785057098</output-ratio> </res-secondary-output>  </period>
+                  <period year="2050"> <minicam-energy-input name="TPES_RES">   <coefficient>0.471876941004231</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.98364908703397</output-ratio> </res-secondary-output>  </period>
+                  <period year="2055"> <minicam-energy-input name="TPES_RES">   <coefficient>0.464618844438694</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.9531379190265</output-ratio> </res-secondary-output>  </period>
+                  <period year="2060"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2065"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2070"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2075"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2080"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2085"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2090"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2095"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2100"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+  </technology>
+               
+
+                </subsector>
+                <subsector name="wind">
+               <technology name="wind">
+                  <period year="2015">  <res-secondary-output name="TPES_RES"> <output-ratio>2.36904322108535</output-ratio> </res-secondary-output>  </period>
+
+                  <period year="2020"> <minicam-energy-input name="TPES_RES">   <coefficient>0.332543232407679</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.36904322108535</output-ratio> </res-secondary-output>  </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_RES">   <coefficient>0.439895524259303</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.32668645021662</output-ratio> </res-secondary-output>  </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_RES">   <coefficient>0.540422360017886</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.27179636873295</output-ratio> </res-secondary-output>  </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_RES">   <coefficient>0.532363985486335</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.23792103833755</output-ratio> </res-secondary-output>  </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_RES">   <coefficient>0.525438018410905</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.20880605713765</output-ratio> </res-secondary-output>  </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_RES">   <coefficient>0.503593623907956</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.11697785057098</output-ratio> </res-secondary-output>  </period>
+                  <period year="2050"> <minicam-energy-input name="TPES_RES">   <coefficient>0.471876941004231</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.98364908703397</output-ratio> </res-secondary-output>  </period>
+                  <period year="2055"> <minicam-energy-input name="TPES_RES">   <coefficient>0.464618844438694</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.9531379190265</output-ratio> </res-secondary-output>  </period>
+                  <period year="2060"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2065"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2070"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2075"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2080"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2085"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2090"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2095"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2100"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+  </technology>
+               <technology name="wind_storage">
+                  <period year="2020"> <minicam-energy-input name="TPES_RES">   <coefficient>0.332543232407679</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.36904322108535</output-ratio> </res-secondary-output>  </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_RES">   <coefficient>0.439895524259303</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.32668645021662</output-ratio> </res-secondary-output>  </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_RES">   <coefficient>0.540422360017886</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.27179636873295</output-ratio> </res-secondary-output>  </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_RES">   <coefficient>0.532363985486335</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.23792103833755</output-ratio> </res-secondary-output>  </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_RES">   <coefficient>0.525438018410905</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.20880605713765</output-ratio> </res-secondary-output>  </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_RES">   <coefficient>0.503593623907956</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.11697785057098</output-ratio> </res-secondary-output>  </period>
+                  <period year="2050"> <minicam-energy-input name="TPES_RES">   <coefficient>0.471876941004231</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.98364908703397</output-ratio> </res-secondary-output>  </period>
+                  <period year="2055"> <minicam-energy-input name="TPES_RES">   <coefficient>0.464618844438694</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.9531379190265</output-ratio> </res-secondary-output>  </period>
+                  <period year="2060"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2065"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2070"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2075"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2080"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2085"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2090"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2095"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2100"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+  </technology>
+               <technology name="wind_offshore">
+                  <period year="2015">  <res-secondary-output name="TPES_RES"> <output-ratio>2.36904322108535</output-ratio> </res-secondary-output>  </period>
+
+                  <period year="2020"> <minicam-energy-input name="TPES_RES">   <coefficient>0.332543232407679</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.36904322108535</output-ratio> </res-secondary-output>  </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_RES">   <coefficient>0.439895524259303</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.32668645021662</output-ratio> </res-secondary-output>  </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_RES">   <coefficient>0.540422360017886</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.27179636873295</output-ratio> </res-secondary-output>  </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_RES">   <coefficient>0.532363985486335</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.23792103833755</output-ratio> </res-secondary-output>  </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_RES">   <coefficient>0.525438018410905</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.20880605713765</output-ratio> </res-secondary-output>  </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_RES">   <coefficient>0.503593623907956</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.11697785057098</output-ratio> </res-secondary-output>  </period>
+                  <period year="2050"> <minicam-energy-input name="TPES_RES">   <coefficient>0.471876941004231</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.98364908703397</output-ratio> </res-secondary-output>  </period>
+                  <period year="2055"> <minicam-energy-input name="TPES_RES">   <coefficient>0.464618844438694</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.9531379190265</output-ratio> </res-secondary-output>  </period>
+                  <period year="2060"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2065"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2070"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2075"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2080"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2085"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2090"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2095"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2100"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+  </technology>
+                </subsector>
+        </supplysector>      
+<pass-through-sector name="elec_geothermal">
+                <subsector name="geothermal">
+                    <stub-technology name="geothermal (recirculating)">
+                  <period year="2020"> <minicam-energy-input name="TPES_RES">   <coefficient>0.332543232407679</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.36904322108535</output-ratio> </res-secondary-output>  </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_RES">   <coefficient>0.439895524259303</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.32668645021662</output-ratio> </res-secondary-output>  </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_RES">   <coefficient>0.540422360017886</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.27179636873295</output-ratio> </res-secondary-output>  </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_RES">   <coefficient>0.532363985486335</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.23792103833755</output-ratio> </res-secondary-output>  </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_RES">   <coefficient>0.525438018410905</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.20880605713765</output-ratio> </res-secondary-output>  </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_RES">   <coefficient>0.503593623907956</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.11697785057098</output-ratio> </res-secondary-output>  </period>
+                  <period year="2050"> <minicam-energy-input name="TPES_RES">   <coefficient>0.471876941004231</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.98364908703397</output-ratio> </res-secondary-output>  </period>
+                  <period year="2055"> <minicam-energy-input name="TPES_RES">   <coefficient>0.464618844438694</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.9531379190265</output-ratio> </res-secondary-output>  </period>
+                  <period year="2060"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2065"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2070"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2075"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2080"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2085"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2090"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2095"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2100"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  </stub-technology>
+                    <stub-technology name="geothermal (dry_hybrid)">
+                  <period year="2020"> <minicam-energy-input name="TPES_RES">   <coefficient>0.332543232407679</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.36904322108535</output-ratio> </res-secondary-output>  </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_RES">   <coefficient>0.439895524259303</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.32668645021662</output-ratio> </res-secondary-output>  </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_RES">   <coefficient>0.540422360017886</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.27179636873295</output-ratio> </res-secondary-output>  </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_RES">   <coefficient>0.532363985486335</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.23792103833755</output-ratio> </res-secondary-output>  </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_RES">   <coefficient>0.525438018410905</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.20880605713765</output-ratio> </res-secondary-output>  </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_RES">   <coefficient>0.503593623907956</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.11697785057098</output-ratio> </res-secondary-output>  </period>
+                  <period year="2050"> <minicam-energy-input name="TPES_RES">   <coefficient>0.471876941004231</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.98364908703397</output-ratio> </res-secondary-output>  </period>
+                  <period year="2055"> <minicam-energy-input name="TPES_RES">   <coefficient>0.464618844438694</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.9531379190265</output-ratio> </res-secondary-output>  </period>
+                  <period year="2060"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2065"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2070"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2075"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2080"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2085"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2090"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2095"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2100"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  </stub-technology>
+                </subsector>
+            </pass-through-sector>
+<pass-through-sector name="elec_CSP">
+                <subsector name="CSP">
+                    <stub-technology name="CSP (recirculating)">
+                  <period year="2020"> <minicam-energy-input name="TPES_RES">   <coefficient>0.332543232407679</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.36904322108535</output-ratio> </res-secondary-output>  </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_RES">   <coefficient>0.439895524259303</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.32668645021662</output-ratio> </res-secondary-output>  </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_RES">   <coefficient>0.540422360017886</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.27179636873295</output-ratio> </res-secondary-output>  </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_RES">   <coefficient>0.532363985486335</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.23792103833755</output-ratio> </res-secondary-output>  </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_RES">   <coefficient>0.525438018410905</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.20880605713765</output-ratio> </res-secondary-output>  </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_RES">   <coefficient>0.503593623907956</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.11697785057098</output-ratio> </res-secondary-output>  </period>
+                  <period year="2050"> <minicam-energy-input name="TPES_RES">   <coefficient>0.471876941004231</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.98364908703397</output-ratio> </res-secondary-output>  </period>
+                  <period year="2055"> <minicam-energy-input name="TPES_RES">   <coefficient>0.464618844438694</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.9531379190265</output-ratio> </res-secondary-output>  </period>
+                  <period year="2060"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2065"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2070"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2075"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2080"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2085"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2090"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2095"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2100"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+
+                    </stub-technology>
+                    <stub-technology name="CSP (dry_hybrid)">
+                  <period year="2020"> <minicam-energy-input name="TPES_RES">   <coefficient>0.332543232407679</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.36904322108535</output-ratio> </res-secondary-output>  </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_RES">   <coefficient>0.439895524259303</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.32668645021662</output-ratio> </res-secondary-output>  </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_RES">   <coefficient>0.540422360017886</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.27179636873295</output-ratio> </res-secondary-output>  </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_RES">   <coefficient>0.532363985486335</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.23792103833755</output-ratio> </res-secondary-output>  </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_RES">   <coefficient>0.525438018410905</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.20880605713765</output-ratio> </res-secondary-output>  </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_RES">   <coefficient>0.503593623907956</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.11697785057098</output-ratio> </res-secondary-output>  </period>
+                  <period year="2050"> <minicam-energy-input name="TPES_RES">   <coefficient>0.471876941004231</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.98364908703397</output-ratio> </res-secondary-output>  </period>
+                  <period year="2055"> <minicam-energy-input name="TPES_RES">   <coefficient>0.464618844438694</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.9531379190265</output-ratio> </res-secondary-output>  </period>
+                  <period year="2060"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2065"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2070"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2075"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2080"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2085"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2090"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2095"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2100"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+
+                    </stub-technology>
+                </subsector>
+            </pass-through-sector>
+<pass-through-sector name="elec_CSP_storage">
+                <subsector name="CSP_storage">
+                    <stub-technology name="CSP_storage (recirculating)">
+                  <period year="2020"> <minicam-energy-input name="TPES_RES">   <coefficient>0.332543232407679</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.36904322108535</output-ratio> </res-secondary-output>  </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_RES">   <coefficient>0.439895524259303</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.32668645021662</output-ratio> </res-secondary-output>  </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_RES">   <coefficient>0.540422360017886</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.27179636873295</output-ratio> </res-secondary-output>  </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_RES">   <coefficient>0.532363985486335</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.23792103833755</output-ratio> </res-secondary-output>  </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_RES">   <coefficient>0.525438018410905</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.20880605713765</output-ratio> </res-secondary-output>  </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_RES">   <coefficient>0.503593623907956</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.11697785057098</output-ratio> </res-secondary-output>  </period>
+                  <period year="2050"> <minicam-energy-input name="TPES_RES">   <coefficient>0.471876941004231</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.98364908703397</output-ratio> </res-secondary-output>  </period>
+                  <period year="2055"> <minicam-energy-input name="TPES_RES">   <coefficient>0.464618844438694</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.9531379190265</output-ratio> </res-secondary-output>  </period>
+                  <period year="2060"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2065"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2070"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2075"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2080"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2085"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2090"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2095"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2100"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+
+                    </stub-technology>
+                    <stub-technology name="CSP_storage (dry_hybrid)">
+                  <period year="2020"> <minicam-energy-input name="TPES_RES">   <coefficient>0.332543232407679</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.36904322108535</output-ratio> </res-secondary-output>  </period>
+                  <period year="2025"> <minicam-energy-input name="TPES_RES">   <coefficient>0.439895524259303</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.32668645021662</output-ratio> </res-secondary-output>  </period>
+                  <period year="2030"> <minicam-energy-input name="TPES_RES">   <coefficient>0.540422360017886</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.27179636873295</output-ratio> </res-secondary-output>  </period>
+                  <period year="2035"> <minicam-energy-input name="TPES_RES">   <coefficient>0.532363985486335</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.23792103833755</output-ratio> </res-secondary-output>  </period>
+                  <period year="2040"> <minicam-energy-input name="TPES_RES">   <coefficient>0.525438018410905</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.20880605713765</output-ratio> </res-secondary-output>  </period>
+                  <period year="2045"> <minicam-energy-input name="TPES_RES">   <coefficient>0.503593623907956</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>2.11697785057098</output-ratio> </res-secondary-output>  </period>
+                  <period year="2050"> <minicam-energy-input name="TPES_RES">   <coefficient>0.471876941004231</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.98364908703397</output-ratio> </res-secondary-output>  </period>
+                  <period year="2055"> <minicam-energy-input name="TPES_RES">   <coefficient>0.464618844438694</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.9531379190265</output-ratio> </res-secondary-output>  </period>
+                  <period year="2060"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2065"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2070"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2075"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2080"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2085"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2090"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2095"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+                  <period year="2100"> <minicam-energy-input name="TPES_RES">   <coefficient>0.455329603969545</coefficient> </minicam-energy-input> <res-secondary-output name="TPES_RES"> <output-ratio>1.91408834534602</output-ratio> </res-secondary-output>  </period>
+
+                    </stub-technology>
+                </subsector>
+            </pass-through-sector>
+
+
+    </region>
+</world>
+</scenario>
+
+
+

@@ -23,12 +23,14 @@ aze,Azerbaijan,Former Soviet Union,10
 bdi,Burundi,Africa,2
 bel,Belgium,Western Europe,13
 ben,Benin,Africa,5
+bes,"Bonaire, Saint Eustatius and Saba",Latin America,9
 bfa,Burkina Faso,Africa,5
 bgd,Bangladesh,Southeast Asia,27
 bgr,Bulgaria,Eastern Europe,12
 bhr,Bahrain,Middle East,21
 bhs,Bahamas,Latin America,9
 bih,Bosnia and Herzegovina,Eastern Europe,15
+blm,Saint Barthelemy,Latin America,9
 blr,Belarus,Former Soviet Union,14
 blz,Belize,Latin America,9
 bmu,Bermuda,Western Europe,9
@@ -42,7 +44,7 @@ caf,Central African Republic,Africa,5
 can,Canada,Canada,8
 cck,Cocos (Keeling) Islands,Southeast Asia,29
 che,Switzerland,Western Europe,16
-chi,Channel Islands,Western Europe,13
+chi,Channel Islands,Western Europe,16
 chl,Chile,Latin America,26
 chn,China,China,11
 civ,Cote dIvoire,Africa,5
@@ -56,9 +58,9 @@ cpv,Cape Verde,Africa,5
 cri,Costa Rica,Latin America,9
 cub,Cuba,Latin America,9
 cuw,Curacao,Latin America,9
+cxr,Christmas Island,Southeast Asia,29
 cym,Cayman Islands,Latin America,9
 cyp,Cyprus,Western Europe,12
-cxr,Christmas Island,Southeast Asia,29
 cze,Czech Republic,Eastern Europe,12
 deu,Germany,Western Europe,13
 dji,Djibouti,Africa,2
@@ -75,16 +77,16 @@ est,Estonia,Former Soviet Union,12
 eth,Ethiopia,Africa,2
 fin,Finland,Western Europe,13
 fji,Fiji,Southeast Asia,29
-flk,Falkland Islands (Malvinas),Latin America,13
+flk,Falkland Islands (Malvinas),Latin America,16
 fra,France,Western Europe,13
 fro,Faroe Islands,Western Europe,13
 fsm,"Micronesia, Federated States of",Southeast Asia,29
 gab,Gabon,Africa,5
-gbr,United Kingdom,Western Europe,13
+gbr,United Kingdom,Western Europe,16
 geo,Georgia,Former Soviet Union,10
-ggy,Guernsey,Western Europe,13
+ggy,Guernsey,Western Europe,16
 gha,Ghana,Africa,5
-gib,Gibraltar,Western Europe,13
+gib,Gibraltar,Western Europe,16
 gin,Guinea,Africa,5
 glp,Guadeloupe,Latin America,9
 gmb,Gambia,Africa,5
@@ -99,11 +101,11 @@ gum,Guam,Southeast Asia,29
 guy,Guyana,Latin America,25
 hkg,Hong Kong,Southeast Asia,11
 hnd,Honduras,Latin America,9
-hrv,Croatia,Eastern Europe,15
+hrv,Croatia,Eastern Europe,12
 hti,Haiti,Latin America,9
 hun,Hungary,Eastern Europe,12
 idn,Indonesia,Southeast Asia,18
-imn,Isle of Man,Western Europe,13
+imn,Isle of Man,Western Europe,16
 ind,India,India,17
 irl,Ireland,Western Europe,13
 irn,"Iran, Islamic Republic of",Middle East,21
@@ -112,7 +114,7 @@ isl,Iceland,Western Europe,16
 isr,Israel,Middle East,21
 ita,Italy,Western Europe,13
 jam,Jamaica,Latin America,9
-jey,Jersey,Western Europe,13
+jey,Jersey,Western Europe,16
 jor,Jordan,Middle East,21
 jpn,Japan,Japan,19
 kaz,Kazakhstan,Former Soviet Union,10
@@ -135,6 +137,7 @@ ltu,Lithuania,Former Soviet Union,12
 lux,Luxembourg,Western Europe,13
 lva,Latvia,Former Soviet Union,12
 mac,Macau,Southeast Asia,11
+maf,Saint Martin,Latin America,9
 mar,Morocco,Africa,3
 mco,Monaco,Western Europe,13
 mda,"Moldova, Republic of",Former Soviet Union,14
@@ -196,7 +199,7 @@ scg,Serbia and Montenegro,Eastern Europe,15
 sdn,Sudan,Africa,2
 sen,Senegal,Africa,5
 sgp,Singapore,Southeast Asia,29
-shn,Saint Helena,Africa,13
+shn,Saint Helena,Africa,16
 sjm,Svalbard and Jan Mayen Islands,Western Europe,16
 slb,Solomon Islands,Southeast Asia,29
 sle,Sierra Leone,Africa,5
@@ -212,9 +215,10 @@ svk,Slovakia,Eastern Europe,12
 svn,Slovenia,Eastern Europe,12
 swe,Sweden,Western Europe,13
 swz,Swaziland,Africa,4
+sxm,Sint Maarten,Latin America,9
 syc,Seychelles,Africa,29
 syr,Syrian Arab Republic,Middle East,21
-tca,Turks and Caicos,Latin America,13
+tca,Turks and Caicos,Latin America,16
 tcd,Chad,Africa,5
 tgo,Togo,Africa,5
 tha,Thailand,Southeast Asia,29
@@ -237,10 +241,11 @@ uzb,Uzbekistan,Former Soviet Union,10
 vat,Vatican,Western Europe,13
 vct,Saint Vincent and the Grenadines,Latin America,9
 ven,Venezuela,Latin America,25
-vgb,"Virgin Islands, British",Latin America,13
+vgb,"Virgin Islands, British",Latin America,16
 vir,"Virgin Islands, U.S.",Latin America,1
 vnm,Viet Nam,China,29
 vut,Vanuatu,Southeast Asia,29
+wbg,West Bank/Gaza Strip,Middle East,21
 wlf,Wallis and Futuna,Australia_NZ,13
 wsm,Samoa,Southeast Asia,29
 yem,Yemen,Middle East,21
