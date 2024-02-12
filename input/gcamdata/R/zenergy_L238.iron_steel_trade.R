@@ -60,7 +60,7 @@ module_energy_L238.iron_steel_trade <- function(command, ...) {
     A_irnstl_TradedTechnology <- get_data(all_data, "energy/A_irnstl_TradedTechnology", strip_attributes = TRUE)
     LB1092.Tradebalance_iron_steel_Mt_R_Y <- get_data(all_data, "LB1092.Tradebalance_iron_steel_Mt_R_Y")
 
-    # 1. TRADED SECTOR / SUBSECTOR / TECHNOLOGY")
+    # 1. TRADED SECTOR / SUBSECTOR / TECHNOLOGY") ---------------
     # L238.Supplysector_tra: generic supplysector info for traded iron and steel
     # By convention, traded commodity information is contained within the USA region (could be within any)
     A_irnstl_TradedSector$region <- gcam.USA_REGION
@@ -120,12 +120,13 @@ module_energy_L238.iron_steel_trade <- function(command, ...) {
                                by = c(market.name = "region", "year")) %>%
       rename(calOutputValue = GrossExp_Mt) %>%
       mutate(calOutputValue = round(calOutputValue, energy.DIGITS_CALOUTPUT),
+             calOutputValue = if_else(grepl("CLUB", supplysector), 0, calOutputValue),
              share.weight.year = year,
              subs.share.weight = if_else(calOutputValue > 0, 1, 0),
              tech.share.weight = subs.share.weight) %>%
       select(LEVEL2_DATA_NAMES[["Production"]])
 
-    # PART 2: DOMESTIC SUPPLY SECTOR / SUBSECTOR / TECHNOLOGY")
+    # PART 2: DOMESTIC SUPPLY SECTOR / SUBSECTOR / TECHNOLOGY") -------------------------
     # L238.Supplysector_reg: generic supplysector info for iron and steel
     L238.Supplysector_reg <- mutate(A_irnstl_RegionalSector, logit.year.fillout = min(MODEL_BASE_YEARS)) %>%
       write_to_all_regions(c(LEVEL2_DATA_NAMES[["Supplysector"]], "logit.type"),
@@ -172,9 +173,12 @@ module_energy_L238.iron_steel_trade <- function(command, ...) {
                                by = c("region", minicam.energy.input = "supplysector", "year")) %>%
       rename(calOutputValue = GrossImp_Mt) %>%
       mutate(calOutputValue = round(calOutputValue, energy.DIGITS_CALOUTPUT),
-             share.weight.year = year,
-             subs.share.weight = if_else(calOutputValue > 0, 1, 0),
-             tech.share.weight = subs.share.weight) %>%
+             calOutputValue = if_else(grepl("CLUB", technology), 0, calOutputValue),
+             share.weight.year = year) %>%
+      group_by(supplysector, subsector, region, year) %>%
+      mutate(subs.share.weight = if_else(any(calOutputValue) > 0, 1, 0)) %>%
+      ungroup %>%
+      mutate(tech.share.weight = if_else(calOutputValue > 0, 1, 0)) %>%
       select(LEVEL2_DATA_NAMES[["Production"]])
 
     # L238.Production_reg_dom: Output (flow) of domestic
@@ -186,13 +190,13 @@ module_energy_L238.iron_steel_trade <- function(command, ...) {
                                                      rename(DomSup_Mt=value,region=GCAM_region),
                                                    GCAM_region_names,
                                                    by = "region") %>%
-      select(region, GCAM_commodity, year, DomSup_Mt)
+      select(region, year, DomSup_Mt)
 
     L238.Production_reg_dom <- A_irnstl_RegionalTechnology_R_Y %>%
       filter(year %in% MODEL_BASE_YEARS,
              grepl( "domestic", subsector)) %>%
       left_join_error_no_match(L238.DomSup_Mt_R_Y,
-                               by = c("region", minicam.energy.input, "year")) %>%
+                               by = c("region", "year")) %>%
       mutate(calOutputValue = round(DomSup_Mt, energy.DIGITS_CALOUTPUT),
              share.weight.year = year,
              subs.share.weight = if_else(calOutputValue > 0, 1, 0),

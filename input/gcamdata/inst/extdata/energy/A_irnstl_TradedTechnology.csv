@@ -7,3 +7,4 @@
 # ----------
 supplysector,subsector,technology,minicam.energy.input,coefficient,input.cost,share.weight,traded
 traded iron and steel,traded iron and steel,traded iron and steel,iron and steel,1,0,1,1
+traded iron and steel_CLUB,traded iron and steel_CLUB,traded iron and steel_CLUB,iron and steel,1,0,0,1

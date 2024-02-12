@@ -8,3 +8,4 @@
 supplysector,subsector,technology,minicam.energy.input,coefficient,input.cost,share.weight,market.name
 regional iron and steel,domestic iron and steel,domestic iron and steel,iron and steel,1,0,1,regional
 regional iron and steel,imported iron and steel,imported iron and steel,traded iron and steel,1,0,1,USA
+regional iron and steel,imported iron and steel,imported iron and steel_CLUB,traded iron and steel_CLUB,1,0,0,USA
