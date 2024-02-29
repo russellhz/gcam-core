@@ -68,6 +68,31 @@ module_energy_L101.en_bal_IEA <- function(command, ...) {
         na.omit() ->
         L101.IEA_en_bal_ctry_hist
 
+      ## FOR STEEL STUDY ONLY
+      # Rewrite to Iron and Steel coal consumption all Coke oven gas/coke and Blast furnace gas in
+      # AUTOHEAT,AUTOELEC,AUTOCHP,ELAUTOE,ELAUTOC
+      COKE_BLAST_PRODUCTS <- c("Coke oven gas", "Coke oven coke", "Blast furnace gas")
+      IRON_STL_OWNUSE_INPUTS <- c("AUTOHEAT", "AUTOELEC", "AUTOCHP")
+      IRON_STL_OWNUSE_OUTPUTS <- c("ELAUTOE", "ELAUTOC")
+
+      # Also keep this elec output to subtract from industrial electricity elsewhere
+      L101.ELEC_HEAT_COKEOVEN_BLASTFUR <- L101.IEA_en_bal_ctry_hist %>%
+        filter(PRODUCT %in% COKE_BLAST_PRODUCTS,
+               FLOW %in% IRON_STL_OWNUSE_OUTPUTS) %>%
+        gather_years() %>%
+        mutate(value = value * conversion) %>%
+        group_by(iso, GCAM_region_ID, year) %>%
+        summarise(value = sum(value)) %>%
+        ungroup  %>%
+        mutate(sector = "in_industry_general", fuel = "electricity")
+
+
+      L101.IEA_en_bal_ctry_hist <- L101.IEA_en_bal_ctry_hist %>%
+        mutate(sector = if_else(PRODUCT %in% COKE_BLAST_PRODUCTS & FLOW %in% c(IRON_STL_OWNUSE_INPUTS, IRON_STL_OWNUSE_OUTPUTS), "net_industry_energy_iron and steel", sector)) # %>%
+        # eliminate elec output from coke oven gas/blast furnace gas
+        # filter(!(PRODUCT %in% COKE_BLAST_PRODUCTS & FLOW %in% IRON_STL_OWNUSE_OUTPUTS))
+
+
       # The IEA commodity "Primary solid biomass" (i.e., wood, dung, straw, etc) consumed by the
       # residential sector is assigned to the GCAM commodity "traditional biomass" in selected regions,
       # indicated in A_regions. (48-65)
@@ -121,8 +146,22 @@ module_energy_L101.en_bal_IEA <- function(command, ...) {
         summarise_all(list(~ sum(. * conversion))) %>%
         select(-conversion) %>%
         # at this point dataset is much smaller; go to long form
-        gather_years ->
+        gather_years %>%
+        ungroup ->
         L101.en_bal_EJ_R_Si_Fi_Yh
+
+      # Subtract coke oven and blast furnace electricity output
+      L101.ELEC_HEAT_COKEOVEN_BLASTFUR_R <- L101.ELEC_HEAT_COKEOVEN_BLASTFUR %>%
+        group_by(GCAM_region_ID, sector, fuel, year) %>%
+        summarise(value = sum(value)) %>%
+        ungroup
+
+      L101.en_bal_EJ_R_Si_Fi_Yh <- L101.en_bal_EJ_R_Si_Fi_Yh %>%
+        left_join(L101.ELEC_HEAT_COKEOVEN_BLASTFUR_R, by = c("GCAM_region_ID", "sector", "fuel", "year")) %>%
+        tidyr::replace_na(list(value.y = 0)) %>%
+        mutate(value = value.x - value.y) %>%
+        select(-value.x, -value.y)
+
 
       # Setting to zero net fuel production from energy transformation sectors modeled under the industrial sector
       # These processes (e.g., coke ovens) are modeled in GCAM as final energy consumption, not energy transformation/production
@@ -209,6 +248,12 @@ module_energy_L101.en_bal_IEA <- function(command, ...) {
         # at this point dataset is much smaller; go to long form
         gather_years ->
         L101.en_bal_EJ_ctry_Si_Fi_Yh
+
+      L101.en_bal_EJ_ctry_Si_Fi_Yh <- L101.en_bal_EJ_ctry_Si_Fi_Yh %>%
+        left_join(L101.ELEC_HEAT_COKEOVEN_BLASTFUR, by = c("iso", "GCAM_region_ID", "sector", "fuel", "year")) %>%
+        tidyr::replace_na(list(value.y = 0)) %>%
+        mutate(value = value.x - value.y) %>%
+        select(-value.x, -value.y)
 
       L101.en_bal_EJ_ctry_Si_Fi_Yh %>%
         filter(grepl("in_", sector) | grepl("net_", sector)) %>%

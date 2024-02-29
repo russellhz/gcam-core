@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?><scenario>
+    <world>
+        <region name="EU-15">
+            <supplysector name="regional iron and steel" nocreate="1">
+                <subsector name="imported iron and steel" nocreate="1">
+                    <stub-technology name="imported high-carbon iron and steel" nocreate="1">
+                        <period year="1975">
+                             <Non-CO2 name="iron.steel.trade.CBAM">
+                                <emiss-coef>0.455</emiss-coef>
+                                <emissions-unit>Mt</emissions-unit>
+                                <output-driver/>
+                                <readin-control name="vintage_adjust">
+                                    <future-emiss-factor year="1975">0.455</future-emiss-factor>
+                                    <future-emiss-factor year="1990">0.455</future-emiss-factor>
+                                    <future-emiss-factor year="2005">0.455</future-emiss-factor>
+                                    <future-emiss-factor year="2010">0.455</future-emiss-factor>
+                                    <future-emiss-factor year="2015">0.455</future-emiss-factor>
+                                    <future-emiss-factor year="2020">0.455</future-emiss-factor>
+                                    <future-emiss-factor year="2025">0.455</future-emiss-factor>
+                                    <future-emiss-factor year="2030">0.455</future-emiss-factor>
+                                    <future-emiss-factor year="2035">0.455</future-emiss-factor>
+                                    <future-emiss-factor year="2040">0.455</future-emiss-factor>
+                                    <future-emiss-factor year="2045">0.455</future-emiss-factor>
+                                    <future-emiss-factor year="2050">0.455</future-emiss-factor>
+                                    <future-emiss-factor year="2055">0.455</future-emiss-factor>
+                                    <future-emiss-factor year="2060">0.455</future-emiss-factor>
+                                    <future-emiss-factor year="2065">0.455</future-emiss-factor>
+                                    <future-emiss-factor year="2070">0.455</future-emiss-factor>
+                                    <future-emiss-factor year="2075">0.455</future-emiss-factor>
+                                    <future-emiss-factor year="2080">0.455</future-emiss-factor>
+                                    <future-emiss-factor year="2085">0.455</future-emiss-factor>
+                                    <future-emiss-factor year="2090">0.455</future-emiss-factor>
+                                    <future-emiss-factor year="2095">0.455</future-emiss-factor>
+                                    <future-emiss-factor year="2100">0.455</future-emiss-factor>
+                                </readin-control>
+                            </Non-CO2>
+                        </period>
+                        <period year="1990">
+                             <Non-CO2 name="iron.steel.trade.CBAM">
+                                <emiss-coef>0.455</emiss-coef>
+                                <emissions-unit>Mt</emissions-unit>
+                                <output-driver/>
+                            </Non-CO2>
+                        </period>
+                        <period year="2005">
+                             <Non-CO2 name="iron.steel.trade.CBAM">
+                                <emiss-coef>0.455</emiss-coef>
+                                <emissions-unit>Mt</emissions-unit>
+                                <output-driver/>
+                            </Non-CO2>
+                        </period>
+                        <period year="2010">
+                             <Non-CO2 name="iron.steel.trade.CBAM">
+                                <emiss-coef>0.455</emiss-coef>
+                                <emissions-unit>Mt</emissions-unit>
+                                <output-driver/>
+                            </Non-CO2>
+                        </period>
+                        <period year="2015">
+                             <Non-CO2 name="iron.steel.trade.CBAM">
+                                <emiss-coef>0.455</emiss-coef>
+                                <emissions-unit>Mt</emissions-unit>
+                                <output-driver/>
+                            </Non-CO2>
+                        </period>
+                    </stub-technology>
+ 					<stub-technology name="imported med-carbon iron and steel" nocreate="1">
+                        <period year="1975">
+                             <Non-CO2 name="iron.steel.trade.CBAM">
+                                <emiss-coef>0.153</emiss-coef>
+                                <emissions-unit>Mt</emissions-unit>
+                                <output-driver/>
+                                <readin-control name="vintage_adjust">
+                                    <future-emiss-factor year="1975">0.153</future-emiss-factor>
+                                    <future-emiss-factor year="1990">0.153</future-emiss-factor>
+                                    <future-emiss-factor year="2005">0.153</future-emiss-factor>
+                                    <future-emiss-factor year="2010">0.153</future-emiss-factor>
+                                    <future-emiss-factor year="2015">0.153</future-emiss-factor>
+                                    <future-emiss-factor year="2020">0.153</future-emiss-factor>
+                                    <future-emiss-factor year="2025">0.153</future-emiss-factor>
+                                    <future-emiss-factor year="2030">0.153</future-emiss-factor>
+                                    <future-emiss-factor year="2035">0.153</future-emiss-factor>
+                                    <future-emiss-factor year="2040">0.153</future-emiss-factor>
+                                    <future-emiss-factor year="2045">0.153</future-emiss-factor>
+                                    <future-emiss-factor year="2050">0.153</future-emiss-factor>
+                                    <future-emiss-factor year="2055">0.153</future-emiss-factor>
+                                    <future-emiss-factor year="2060">0.153</future-emiss-factor>
+                                    <future-emiss-factor year="2065">0.153</future-emiss-factor>
+                                    <future-emiss-factor year="2070">0.153</future-emiss-factor>
+                                    <future-emiss-factor year="2075">0.153</future-emiss-factor>
+                                    <future-emiss-factor year="2080">0.153</future-emiss-factor>
+                                    <future-emiss-factor year="2085">0.153</future-emiss-factor>
+                                    <future-emiss-factor year="2090">0.153</future-emiss-factor>
+                                    <future-emiss-factor year="2095">0.153</future-emiss-factor>
+                                    <future-emiss-factor year="2100">0.153</future-emiss-factor>
+                                </readin-control>
+                            </Non-CO2>
+                        </period>
+                        <period year="1990">
+                             <Non-CO2 name="iron.steel.trade.CBAM">
+                                <emiss-coef>0.153</emiss-coef>
+                                <emissions-unit>Mt</emissions-unit>
+                                <output-driver/>
+                            </Non-CO2>
+                        </period>
+                        <period year="2005">
+                             <Non-CO2 name="iron.steel.trade.CBAM">
+                                <emiss-coef>0.153</emiss-coef>
+                                <emissions-unit>Mt</emissions-unit>
+                                <output-driver/>
+                            </Non-CO2>
+                        </period>
+                        <period year="2010">
+                             <Non-CO2 name="iron.steel.trade.CBAM">
+                                <emiss-coef>0.153</emiss-coef>
+                                <emissions-unit>Mt</emissions-unit>
+                                <output-driver/>
+                            </Non-CO2>
+                        </period>
+                        <period year="2015">
+                             <Non-CO2 name="iron.steel.trade.CBAM">
+                                <emiss-coef>0.153</emiss-coef>
+                                <emissions-unit>Mt</emissions-unit>
+                                <output-driver/>
+                            </Non-CO2>
+                        </period>
+                    </stub-technology>
+                </subsector>
+            </supplysector>
+        </region>
+
+		<region name="EU-12">
+            <supplysector name="regional iron and steel" nocreate="1">
+                <subsector name="imported iron and steel" nocreate="1">
+                    <stub-technology name="imported high-carbon iron and steel" nocreate="1">
+                        <period year="1975">
+                             <Non-CO2 name="iron.steel.trade.CBAM">
+                                <emiss-coef>0.455</emiss-coef>
+                                <emissions-unit>Mt</emissions-unit>
+                                <output-driver/>
+                                <readin-control name="vintage_adjust">
+                                    <future-emiss-factor year="1975">0.455</future-emiss-factor>
+                                    <future-emiss-factor year="1990">0.455</future-emiss-factor>
+                                    <future-emiss-factor year="2005">0.455</future-emiss-factor>
+                                    <future-emiss-factor year="2010">0.455</future-emiss-factor>
+                                    <future-emiss-factor year="2015">0.455</future-emiss-factor>
+                                    <future-emiss-factor year="2020">0.455</future-emiss-factor>
+                                    <future-emiss-factor year="2025">0.455</future-emiss-factor>
+                                    <future-emiss-factor year="2030">0.455</future-emiss-factor>
+                                    <future-emiss-factor year="2035">0.455</future-emiss-factor>
+                                    <future-emiss-factor year="2040">0.455</future-emiss-factor>
+                                    <future-emiss-factor year="2045">0.455</future-emiss-factor>
+                                    <future-emiss-factor year="2050">0.455</future-emiss-factor>
+                                    <future-emiss-factor year="2055">0.455</future-emiss-factor>
+                                    <future-emiss-factor year="2060">0.455</future-emiss-factor>
+                                    <future-emiss-factor year="2065">0.455</future-emiss-factor>
+                                    <future-emiss-factor year="2070">0.455</future-emiss-factor>
+                                    <future-emiss-factor year="2075">0.455</future-emiss-factor>
+                                    <future-emiss-factor year="2080">0.455</future-emiss-factor>
+                                    <future-emiss-factor year="2085">0.455</future-emiss-factor>
+                                    <future-emiss-factor year="2090">0.455</future-emiss-factor>
+                                    <future-emiss-factor year="2095">0.455</future-emiss-factor>
+                                    <future-emiss-factor year="2100">0.455</future-emiss-factor>
+                                </readin-control>
+                            </Non-CO2>
+                        </period>
+                        <period year="1990">
+                             <Non-CO2 name="iron.steel.trade.CBAM">
+                                <emiss-coef>0.455</emiss-coef>
+                                <emissions-unit>Mt</emissions-unit>
+                                <output-driver/>
+                            </Non-CO2>
+                        </period>
+                        <period year="2005">
+                             <Non-CO2 name="iron.steel.trade.CBAM">
+                                <emiss-coef>0.455</emiss-coef>
+                                <emissions-unit>Mt</emissions-unit>
+                                <output-driver/>
+                            </Non-CO2>
+                        </period>
+                        <period year="2010">
+                             <Non-CO2 name="iron.steel.trade.CBAM">
+                                <emiss-coef>0.455</emiss-coef>
+                                <emissions-unit>Mt</emissions-unit>
+                                <output-driver/>
+                            </Non-CO2>
+                        </period>
+                        <period year="2015">
+                             <Non-CO2 name="iron.steel.trade.CBAM">
+                                <emiss-coef>0.455</emiss-coef>
+                                <emissions-unit>Mt</emissions-unit>
+                                <output-driver/>
+                            </Non-CO2>
+                        </period>
+                    </stub-technology>
+ 					<stub-technology name="imported med-carbon iron and steel" nocreate="1">
+                        <period year="1975">
+                             <Non-CO2 name="iron.steel.trade.CBAM">
+                                <emiss-coef>0.153</emiss-coef>
+                                <emissions-unit>Mt</emissions-unit>
+                                <output-driver/>
+                                <readin-control name="vintage_adjust">
+                                    <future-emiss-factor year="1975">0.153</future-emiss-factor>
+                                    <future-emiss-factor year="1990">0.153</future-emiss-factor>
+                                    <future-emiss-factor year="2005">0.153</future-emiss-factor>
+                                    <future-emiss-factor year="2010">0.153</future-emiss-factor>
+                                    <future-emiss-factor year="2015">0.153</future-emiss-factor>
+                                    <future-emiss-factor year="2020">0.153</future-emiss-factor>
+                                    <future-emiss-factor year="2025">0.153</future-emiss-factor>
+                                    <future-emiss-factor year="2030">0.153</future-emiss-factor>
+                                    <future-emiss-factor year="2035">0.153</future-emiss-factor>
+                                    <future-emiss-factor year="2040">0.153</future-emiss-factor>
+                                    <future-emiss-factor year="2045">0.153</future-emiss-factor>
+                                    <future-emiss-factor year="2050">0.153</future-emiss-factor>
+                                    <future-emiss-factor year="2055">0.153</future-emiss-factor>
+                                    <future-emiss-factor year="2060">0.153</future-emiss-factor>
+                                    <future-emiss-factor year="2065">0.153</future-emiss-factor>
+                                    <future-emiss-factor year="2070">0.153</future-emiss-factor>
+                                    <future-emiss-factor year="2075">0.153</future-emiss-factor>
+                                    <future-emiss-factor year="2080">0.153</future-emiss-factor>
+                                    <future-emiss-factor year="2085">0.153</future-emiss-factor>
+                                    <future-emiss-factor year="2090">0.153</future-emiss-factor>
+                                    <future-emiss-factor year="2095">0.153</future-emiss-factor>
+                                    <future-emiss-factor year="2100">0.153</future-emiss-factor>
+                                </readin-control>
+                            </Non-CO2>
+                        </period>
+                        <period year="1990">
+                             <Non-CO2 name="iron.steel.trade.CBAM">
+                                <emiss-coef>0.153</emiss-coef>
+                                <emissions-unit>Mt</emissions-unit>
+                                <output-driver/>
+                            </Non-CO2>
+                        </period>
+                        <period year="2005">
+                             <Non-CO2 name="iron.steel.trade.CBAM">
+                                <emiss-coef>0.153</emiss-coef>
+                                <emissions-unit>Mt</emissions-unit>
+                                <output-driver/>
+                            </Non-CO2>
+                        </period>
+                        <period year="2010">
+                             <Non-CO2 name="iron.steel.trade.CBAM">
+                                <emiss-coef>0.153</emiss-coef>
+                                <emissions-unit>Mt</emissions-unit>
+                                <output-driver/>
+                            </Non-CO2>
+                        </period>
+                        <period year="2015">
+                             <Non-CO2 name="iron.steel.trade.CBAM">
+                                <emiss-coef>0.153</emiss-coef>
+                                <emissions-unit>Mt</emissions-unit>
+                                <output-driver/>
+                            </Non-CO2>
+                        </period>
+                    </stub-technology>
+                </subsector>
+            </supplysector>
+        </region>
+    </world>
+</scenario>

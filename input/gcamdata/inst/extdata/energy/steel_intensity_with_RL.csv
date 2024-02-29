@@ -9,6 +9,7 @@ subsector,technology,fuel,value,Unit,ratio
 BLASTFUR,BF_BOF,electricity,0.472936401,GJ/t,1
 BLASTFUR,BF_BOF,gas,1.282323615,GJ/t,1
 BLASTFUR,BF_BOF,coal,21.14541054,GJ/t,1
+BLASTFUR,BF_BOF,refined liquids,0.01,GJ/t,1
 BLASTFUR,BF_BOF_CCS_73%,electricity,3.481526129,GJ/t,7.361510176925459
 BLASTFUR,BF_BOF_CCS_73%,gas,1.282323615,GJ/t,1
 BLASTFUR,BF_BOF_CCS_73%,coal,21.14541054,GJ/t,1
@@ -32,6 +33,7 @@ Smelting reduction,SR_BOF_CCS,coal,13.78426799,GJ/t,1
 EAF with DRI,DRI_EAF_NG,electricity,2.046730778,GJ/t,1
 EAF with DRI,DRI_EAF_NG,gas,13.97395452,GJ/t,1
 EAF with DRI,DRI_EAF_NG,coal,0.079560695,GJ/t,1
+EAF with DRI,DRI_EAF_NG,refined liquids,0.01,GJ/t,1
 EAF with DRI,DRI_EAF_NG_CCS,electricity,2.708809791,GJ/t,1.323481241459105
 EAF with DRI,DRI_EAF_NG_CCS,gas,13.97395452,GJ/t,1
 EAF with DRI,DRI_EAF_NG_CCS,coal,0.079560695,GJ/t,1
@@ -60,6 +62,7 @@ Electrolysis,MOE,electricity,19.10255219,GJ/t,1.085964187068839
 EAF with scrap,EAF_scrap_fossil_NG_finish,electricity,2.705708719,GJ/t,1
 EAF with scrap,EAF_scrap_fossil_NG_finish,gas,3.051005135,GJ/t,1
 EAF with scrap,EAF_scrap_fossil_NG_finish,coal,0.405062111,GJ/t,1
+EAF with scrap,EAF_scrap_fossil_NG_finish,refined liquids,0.01,GJ/t,1
 EAF with scrap,EAF_scrap_fossil_NG_finish,scrap,1100,GJ/t,1
 EAF with scrap,EAF_scrap_bio_NG_finish,electricity,3.147239444,GJ/t,1.1631848697901173
 EAF with scrap,EAF_scrap_bio_NG_finish,gas,2.609474409,GJ/t,0.8552835192130872
@@ -68,6 +71,7 @@ EAF with scrap,EAF_scrap_bio_NG_finish,scrap,1100,GJ/t,1
 EAF with scrap,EAF_scrap_fossil_elec_finish,electricity,5.315183128,GJ/t,1.964432863994478
 EAF with scrap,EAF_scrap_fossil_elec_finish,gas,0.441530726,GJ/t,0.14471648078691285
 EAF with scrap,EAF_scrap_fossil_elec_finish,coal,0.405062111,GJ/t,1
+EAF with scrap,EAF_scrap_fossil_elec_finish,refined liquids,0.01,GJ/t,1
 EAF with scrap,EAF_scrap_fossil_elec_finish,scrap,1100,GJ/t,1
 EAF with scrap,EAF_scrap_bio_elec_finish,electricity,5.756713853,GJ/t,2.127617733784595
 EAF with scrap,EAF_scrap_bio_elec_finish,biomass,0.406538222,GJ/t,

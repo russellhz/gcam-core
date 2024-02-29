@@ -1,11 +1,19 @@
-# File: A_irnstl_RegionalTechnology.csv
-# Title: Technology-level assumptions of regional iron and steel markets
-# Units: Various
-# Comments: Subsectors capture competition between domestic and imported resources; there is no technology competition.
-# Source: NA
-# Column types: ccccnnnc
-# ----------
+# File: A_irnstl_RegionalTechnology.csv,,,,,,,
+# Title: Technology-level assumptions of regional iron and steel markets,,,,,,,
+# Units: Various,,,,,,,
+# Comments: Subsectors capture competition between domestic and imported resources; there is no technology competition.,,,,,,,
+# Source: NA,,,,,,,
+# Column types: ccccnnnc,,,,,,,
+# ----------,,,,,,,
 supplysector,subsector,technology,minicam.energy.input,coefficient,input.cost,share.weight,market.name
-regional iron and steel,domestic iron and steel,domestic iron and steel,iron and steel,1,0,1,regional
-regional iron and steel,imported iron and steel,imported iron and steel,traded iron and steel,1,0,1,USA
-regional iron and steel,imported iron and steel,imported iron and steel_CLUB,traded iron and steel_CLUB,1,0,0,USA
+regional iron and steel,domestic iron and steel,domestic low-carbon iron and steel,iron and steel,1,0,1,regional
+regional iron and steel,domestic iron and steel,domestic low-carbon iron and steel,Low-carbon iron and steel,1,0,1,regional
+regional iron and steel,domestic iron and steel,domestic med-carbon iron and steel,iron and steel,1,0,1,regional
+regional iron and steel,domestic iron and steel,domestic med-carbon iron and steel,Med-carbon iron and steel,1,0,1,regional
+regional iron and steel,domestic iron and steel,domestic high-carbon iron and steel,iron and steel,1,0,1,regional
+regional iron and steel,imported iron and steel,imported low-carbon iron and steel,traded low-carbon iron and steel,1,0,1,USA
+regional iron and steel,imported iron and steel,imported med-carbon iron and steel,traded med-carbon iron and steel,1,0,1,USA
+regional iron and steel,imported iron and steel,imported high-carbon iron and steel,traded high-carbon iron and steel,1,0,1,USA
+regional iron and steel,imported iron and steel,traded low-carbon iron and steel_CLUB,traded low-carbon iron and steel_CLUB,1,0,0,USA
+regional iron and steel,imported iron and steel,traded med-carbon iron and steel_CLUB,traded med-carbon iron and steel_CLUB,1,0,0,USA
+regional iron and steel,imported iron and steel,traded high-carbon iron and steel_CLUB,traded high-carbon iron and steel_CLUB,1,0,0,USA

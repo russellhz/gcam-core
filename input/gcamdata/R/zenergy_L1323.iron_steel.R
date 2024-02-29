@@ -21,6 +21,7 @@
 module_energy_L1323.iron_steel <- function(command, ...) {
   if(command == driver.DECLARE_INPUTS) {
     return(c(FILE = "energy/steel_prod_process",
+             FILE = "energy/steel_prod_process_Wuppertal",
              FILE = "energy/steel_intensity",
              FILE = "energy/WSA_direct_reduced_iron_2008_2019.csv",
              FILE = "common/iso_GCAM_regID",
@@ -50,6 +51,7 @@ module_energy_L1323.iron_steel <- function(command, ...) {
     # Load required inputs
     #All_steel <- get_data(all_data, "energy/steel_prod", strip_attributes = TRUE)
     All_steel <- get_data(all_data, "energy/steel_prod_process", strip_attributes = TRUE)
+    All_steel_Wuppertal <- get_data(all_data, "energy/steel_prod_process_Wuppertal", strip_attributes = TRUE)
     DRI_stats <- get_data(all_data, "energy/WSA_direct_reduced_iron_2008_2019.csv", strip_attributes = TRUE)
     A323.subsector_interp <- get_data(all_data, "energy/A323.subsector_interp", strip_attributes = TRUE)
     steel_intensity <- get_data(all_data, "energy/steel_intensity", strip_attributes = TRUE)
@@ -82,6 +84,42 @@ module_energy_L1323.iron_steel <- function(command, ...) {
       left_join(iso_GCAM_regID,by="country_name")%>%
       select(-GCAM_region_ID,-country_name,-region_GCAM3)-> All_steel
 
+    # Replace base-year data with Wuppertal data
+    All_steel_Wuppertal_R_tech <- All_steel_Wuppertal %>%
+      tidyr::pivot_longer(cols = !c(subsector, technology), names_to = "country_name") %>%
+      mutate(year = MODEL_FINAL_BASE_YEAR,
+             country_name = case_when(
+               country_name == "Russia" ~"Russian Federation",
+               # since we are going to group by GCAM region, we can just assign all
+               # EU data to one EU country
+               # then split between EU-12 and EU-15 below
+               country_name == "EU_27" ~ "Germany",
+               country_name == "Iran" ~ "Iran, Islamic Republic of",
+               country_name == "South_Africa" ~ "South Africa",
+               country_name == "South_Korea" ~ "Korea, Republic of",
+               country_name == "United_States" ~ "United States of America",
+               TRUE ~ country_name
+             )) %>%
+      left_join(iso_GCAM_regID, by = "country_name")
+
+    # By subsector, region
+    All_steel_Wuppertal_R_subs <- All_steel_Wuppertal_R_tech %>%
+      group_by(GCAM_region_ID, year, subsector) %>%
+      summarise(value = sum(value)) %>%
+      ungroup
+
+    # Tech split in base year
+    Wuppertal_R_tech_ratio <- All_steel_Wuppertal_R_tech %>%
+      group_by(GCAM_region_ID, year, subsector, technology) %>%
+      summarise(value = sum(value)) %>%
+      group_by(GCAM_region_ID, year, subsector) %>%
+      mutate(tech_ratio = value / sum(value)) %>%
+      ungroup %>%
+      select(-value) %>%
+      # we set NAs to 1 only if in energy.CALIBRATED_STEEL_TECHS
+      mutate(tech_ratio = if_else(is.na(tech_ratio) & technology %in% energy.CALIBRATED_STEEL_TECHS, 1,
+             if_else(is.na(tech_ratio), 0, tech_ratio)))
+
 
     # ===================================================
     # 2. Perform computations
@@ -94,7 +132,36 @@ module_energy_L1323.iron_steel <- function(command, ...) {
       #aggregate the production to regional level
       group_by(GCAM_region_ID, year) %>%
       summarise(BLASTFUR=sum(BLASTFUR),`EAF with scrap`=sum(`EAF with scrap`),
-                `EAF with DRI`=sum(`EAF with DRI`))-> All_steel
+                `EAF with DRI`=sum(`EAF with DRI`)) %>%
+      ungroup -> All_steel
+
+    # Split Wuppertal Eu data into EU-15 and EU-12
+    All_steel_EU_split <- All_steel %>%
+      filter(year == MODEL_FINAL_BASE_YEAR,
+             GCAM_region_ID %in% filter(GCAM_region_names, grepl("^EU", region))$GCAM_region_ID) %>%
+      group_by(GCAM_region_ID) %>%
+      summarise(total = sum(BLASTFUR) + sum(`EAF with scrap`) + sum(`EAF with DRI`)) %>%
+      ungroup %>%
+      mutate(EU_prop = total / sum(total))
+
+    # Now add in EU split to Wuppertal data and prepare to replace default data
+    All_steel_Wuppertal_R_EU_split <- All_steel_Wuppertal_R_subs %>%
+      filter(GCAM_region_ID %in% All_steel_EU_split$GCAM_region_ID) %>%
+      repeat_add_columns(All_steel_EU_split) %>%
+      mutate(value = value * EU_prop) %>%
+      select(GCAM_region_ID = GCAM_region_ID.y, year, subsector, value)
+
+    All_steel_Wuppertal_R_EU  <- All_steel_Wuppertal_R_subs %>%
+      filter(!GCAM_region_ID %in% All_steel_EU_split$GCAM_region_ID) %>%
+      bind_rows(All_steel_Wuppertal_R_EU_split) %>%
+      mutate(value = value * 1000) %>%
+      tidyr::pivot_wider(names_from = subsector) %>%
+      na.omit()
+
+    # Remove Wuppertal region and year from All_steel and then add in new data
+    All_steel <- All_steel %>%
+      anti_join(All_steel_Wuppertal_R_EU, by = c("GCAM_region_ID", "year")) %>%
+      bind_rows(All_steel_Wuppertal_R_EU)
 
       #Obtain the index of GCAM_regions and sub sectors that are calibrated to zero steel production in the base-year
       All_steel %>%
@@ -120,13 +187,28 @@ module_energy_L1323.iron_steel <- function(command, ...) {
         mutate(BLASTFUR=BLASTFUR_pct*(1/CONV_KT_MT)*production,
                `EAF with scrap`=EAF_scrap_pct*(1/CONV_KT_MT)*production,
                `EAF with DRI`=EAF_DRI_pct*(1/CONV_KT_MT)*production) %>%
-        ungroup()%>%
+        ungroup() %>%
         select(GCAM_region_ID,year,BLASTFUR,`EAF with scrap`,`EAF with DRI`)%>%
         #convert from wide to long
         gather(subsector,value,-year,-GCAM_region_ID) %>%
         #convert unit from kt to mt
         mutate(value = value * CONV_KT_MT) %>%
-        select(GCAM_region_ID, year,subsector, value) -> L1323.out_Mt_R_iron_steel_Yh
+        select(GCAM_region_ID, year,subsector, value) %>%
+        # Add in technologies
+        # First add in all techs, then the ratio
+        left_join(Wuppertal_R_tech_ratio %>% distinct(subsector, technology), by = "subsector") %>%
+        left_join(Wuppertal_R_tech_ratio %>% select(-year),
+                  by = c("GCAM_region_ID", "subsector", "technology")) %>%
+        # If NA and not in energy.CALIBRATED_STEEL_TECHS, set to 0,
+        # Otherwise set to 1
+        mutate(tech_ratio = if_else(is.na(tech_ratio) & technology %in% energy.CALIBRATED_STEEL_TECHS, 1,
+                                    if_else(is.na(tech_ratio), 0, tech_ratio)),
+               value = value * tech_ratio) %>%
+        # now remove techs that are 0 for all years
+        group_by(GCAM_region_ID, subsector, technology) %>%
+        filter(any(value) != 0) %>%
+        ungroup %>%
+        select(-tech_ratio) -> L1323.out_Mt_R_iron_steel_Yh
 
    # L2323.SubsectorInterp_iron_steel: Subsector shareweight interpolation of iron and steel sector
       A323.subsector_interp %>%
@@ -140,74 +222,90 @@ module_energy_L1323.iron_steel <- function(command, ...) {
       L1323.SubsectorInterp_iron_steel$to.year[which(L1323.SubsectorInterp_iron_steel$region %in% unique((L1323.index %>%
                                                                    filter(BLASTFUR == 0 |`EAF with scrap`== 0 |`EAF with DRI` == 0))$region))] <- 2100
 
-      L1323.SubsectorInterp_iron_steel$interpolation.function[which(L1323.SubsectorInterp_iron_steel$region %in% unique((L1323.index %>%
-                                                                                                            filter(BLASTFUR == 0 |`EAF with scrap`== 0 |`EAF with DRI` == 0))$region))] <- "linear"
-    # Get steel energy use from IEA energy balances
-    L1012.en_bal_EJ_R_Si_Fi_Yh %>%
-      filter(grepl("steel", sector)) %>%
-      group_by(GCAM_region_ID, fuel, year) %>%
-      summarise(value = sum(value)) %>%
-      ungroup() %>%
-      mutate(sector = "iron and steel") ->
-      en_steel
+      L1323.SubsectorInterp_iron_steel$interpolation.function[
+        which(L1323.SubsectorInterp_iron_steel$region %in%
+                unique((L1323.index %>% filter(BLASTFUR == 0 |`EAF with scrap`== 0 |`EAF with DRI` == 0))$region))
+        ] <- "linear"
 
-    # Map fuel in iron and steel sector
-    en_steel %>%
-      left_join(select(enduse_fuel_aggregation, fuel, industry), by = "fuel") %>%
-      select(-fuel, fuel = industry) %>%
-      na.omit() %>%
-      group_by(GCAM_region_ID, year, sector, fuel) %>%
-      summarise(value = sum(value)) %>%
-      ungroup() ->
-      en_steel
+      # Get steel energy use from IEA energy balances
+      L1012.en_bal_EJ_R_Si_Fi_Yh %>%
+        filter(grepl("steel", sector)) %>%
+        group_by(GCAM_region_ID, fuel, year) %>%
+        summarise(value = sum(value)) %>%
+        ungroup() %>%
+        mutate(sector = "iron and steel") ->
+        en_steel
 
-    # Calculate bottom-up energy consumption = production * intensity from literature
-    L1323.out_Mt_R_iron_steel_Yh %>%
-      rename(output = value) %>%
-      left_join(steel_intensity %>% select(-subsector,-ratio), by = c("subsector"="technology")) %>%
-      mutate(value = value * CONV_GJ_EJ / CONV_T_MT,
-                    energy_use = output * value,
-                    unit = "EJ") ->
-      Intensity_literature
+      # Map fuel in iron and steel sector
+      en_steel %>%
+        left_join(select(enduse_fuel_aggregation, fuel, industry), by = "fuel") %>%
+        select(-fuel, fuel = industry) %>%
+        na.omit() %>%
+        group_by(GCAM_region_ID, year, sector, fuel) %>%
+        summarise(value = sum(value)) %>%
+        ungroup() ->
+        en_steel
 
-    # Scaler: IEA's estimates of fuel consumption divided by bottom-up estimate of energy consumption
-    Intensity_literature %>%
-      group_by(GCAM_region_ID, year, fuel) %>%
-      dplyr::summarise(energy_use = sum(energy_use)) %>%
-      ungroup() %>%
-      left_join(en_steel %>% select(GCAM_region_ID, year, fuel, value),by = c("GCAM_region_ID","fuel",  "year"))%>%
-      mutate(value = replace_na(value,0), #replace NA IEA data with zero
-             value= if_else(value == 0 & energy_use > 0, energy_use, value), #if bottom-up calculation is non-zero and IEA value is zero, then set IEA value = bottom-up value
-             scalar = replace_na(value / energy_use, 1), #calculate scalar = IEA data/bottom-up data, if NA replace scaler = 1
-             scalar = if_else(energy_use == 0 & value > 0, 1, scalar),  #if IEA data is non-zero, but bottom-up data is zero; set scaler = 1
-             scalar = if_else(scalar>=6,1,scalar), #if IEA data is 6 times higher or lower than bottom-up calculation; then do not scale the results (i.e., scaler = 1)
-             scalar = if_else(scalar<=0.16,1,scalar)) -> Scaler
+      # Calculate bottom-up energy consumption = production * intensity from literature
+      L1323.out_Mt_R_iron_steel_Yh %>%
+        rename(output = value) %>%
+        left_join(steel_intensity  %>% select(-ratio),
+                  by = c("subsector", "technology")) %>%
+        mutate(value = value * CONV_GJ_EJ / CONV_T_MT,
+               energy_use = output * value,
+               unit = "EJ") ->
+        Intensity_literature
+
+      # Scaler: IEA's estimates of fuel consumption divided by bottom-up estimate of energy consumption
+      Intensity_literature %>%
+        group_by(GCAM_region_ID, year, fuel) %>%
+        dplyr::summarise(energy_use = sum(energy_use)) %>%
+        ungroup() %>%
+        left_join(en_steel %>% select(GCAM_region_ID, year, fuel, value),by = c("GCAM_region_ID","fuel",  "year")) %>%
+        mutate(value = replace_na(value,0), #replace NA IEA data with zero
+               value= if_else(value == 0 & energy_use > 0, energy_use, value), #if bottom-up calculation is non-zero and IEA value is zero, then set IEA value = bottom-up value
+               scalar = replace_na(value / energy_use, 1), #calculate scalar = IEA data/bottom-up data, if NA replace scaler = 1
+               scalar = if_else(energy_use == 0 & value > 0, 1, scalar),  #if IEA data is non-zero, but bottom-up data is zero; set scaler = 1
+               scalar = if_else(scalar>=6,1,scalar), #if IEA data is 6 times higher or lower than bottom-up calculation; then do not scale the results (i.e., scaler = 1)
+               scalar = if_else(scalar<=0.16,1,scalar)) -> Scaler
 
 
+      # Intensity scaled = Intensity from the literature times scaler.
+      Intensity_literature %>%
+        left_join(Scaler %>% select(GCAM_region_ID, year, fuel, scalar),by = c("GCAM_region_ID", "fuel", "year")) %>%
+        mutate(coefficient = value * scalar) %>%
+        select(GCAM_region_ID, year, subsector, technology, fuel, coefficient, Unit) ->
+        Intensity_scaled
 
+      IO_iron_steel_calculated <- steel_intensity %>%
+        select(subsector, technology, fuel,ratio) %>%
+        distinct() %>%
+        mutate(sector = "iron and steel") %>%
+        repeat_add_columns(select(iso_GCAM_regID, GCAM_region_ID) %>% distinct(GCAM_region_ID)) %>%
+        repeat_add_columns(tibble::tibble(year = HISTORICAL_YEARS)) %>%
+        left_join(Intensity_scaled, by = c("GCAM_region_ID", "year", "subsector", "technology", "fuel")) %>%
+        na.omit %>%
+        mutate(coefficient=coefficient*ratio) %>%
+        select(-ratio)
 
-    # Intensity scaled = Intensity from the literature times scaler.
-    Intensity_literature %>%
-      left_join(Scaler %>% select(GCAM_region_ID, year, fuel, scalar),by = c("GCAM_region_ID", "fuel", "year")) %>%
-      mutate(coefficient = value * scalar) %>%
-      select(GCAM_region_ID, year, subsector, fuel, coefficient, Unit) ->
-      Intensity_scaled
+      IO_iron_steel_Wuppertal <- steel_intensity %>%
+        mutate(sector = "iron and steel",
+               value = value * CONV_GJ_EJ / CONV_T_MT) %>%
+        select(sector, subsector, technology, fuel, coefficient = value, Unit) %>%
+        repeat_add_columns(select(iso_GCAM_regID, GCAM_region_ID) %>% distinct(GCAM_region_ID)) %>%
+        repeat_add_columns(tibble::tibble(year = HISTORICAL_YEARS))
 
-    IO_iron_steel <- steel_intensity %>%
-      select(subsector, technology, fuel,ratio) %>%
-      distinct() %>%
-      mutate(sector = "iron and steel") %>%
-      repeat_add_columns(select(iso_GCAM_regID, GCAM_region_ID) %>% distinct(GCAM_region_ID)) %>%
-      repeat_add_columns(tibble::tibble(year = HISTORICAL_YEARS)) %>%
-      left_join(Intensity_scaled, by = c("GCAM_region_ID", "year", "subsector", "fuel")) %>%
-      na.omit %>%
-      mutate(coefficient=coefficient*ratio)%>%
-      select(-ratio)
+      # Decide whether to use IOs by scaling from IEA balance or just directly
+      # use provided IOS
+      if (energy.IRON_STEEL_CALCULATE_IO){
+        IO_iron_steel <- IO_iron_steel_calculated
+      } else {
+        IO_iron_steel <- IO_iron_steel_Wuppertal
 
+      }
 
      # Use IO to calculate energy input
     L1323.out_Mt_R_iron_steel_Yh %>%
-      mutate(technology = subsector) %>%
       left_join(IO_iron_steel, by = c("subsector","technology","year","GCAM_region_ID")) %>%
       mutate(value = value * coefficient) %>%
       select(GCAM_region_ID, supplysector = "sector", year, subsector, technology, fuel, "value") ->
@@ -217,6 +315,7 @@ module_energy_L1323.iron_steel <- function(command, ...) {
       select(GCAM_region_ID, year, supplysector = "sector", subsector, technology, fuel, coefficient) ->
       L1323.IO_GJkg_R_iron_steel_F_Yh
 
+	 # FIRST ENERGY CALCULATION ---------------
 	# Subtract iron and steel energy use from other industrial energy use
     L1322.in_EJ_R_indenergy_F_Yh %>%
       rename(raw = value) %>%
@@ -232,6 +331,7 @@ module_energy_L1323.iron_steel <- function(command, ...) {
       mutate(value = if_else(value > 0 , value, 0)) ->
       L1323.in_EJ_R_indenergy_F_Yh
 
+    # FIRST IO ADJUSTMENT ---------------
     #Adjust negative energy use
 
     # Identify rows with negative energy use
@@ -240,21 +340,30 @@ module_energy_L1323.iron_steel <- function(command, ...) {
       select(-sector) ->
       negative
 
-    # revise IO coefficients to zero for rows with negative energy use
-    L1323.IO_GJkg_R_iron_steel_F_Yh %>%
-      left_join(negative,by = c("GCAM_region_ID", "year", "fuel")) %>%
-      mutate(coefficient = if_else(replace_na(value, 0) < 0, 0, coefficient),value = NULL) ->
-      L1323.IO_GJkg_R_iron_steel_F_Yh
-
+    # revise IO coefficients
+    if (energy.IRON_STEEL_CALCULATE_IO){
+      # If using calcuated IOs, switch to zero
+      L1323.IO_GJkg_R_iron_steel_F_Yh %>%
+        left_join(negative,by = c("GCAM_region_ID", "year", "fuel")) %>%
+        mutate(coefficient = if_else(replace_na(value, 0) < 0, 0, coefficient),value = NULL) ->
+        L1323.IO_GJkg_R_iron_steel_F_Yh
+    } else {
+      # Otherwise switch to calculated IOs
+      L1323.IO_GJkg_R_iron_steel_F_Yh %>%
+        left_join(negative,by = c("GCAM_region_ID", "year", "fuel")) %>%
+        left_join(IO_iron_steel_calculated,
+                                 by = c("GCAM_region_ID", "year", "subsector", "technology", "fuel")) %>%
+        mutate(coefficient = if_else(replace_na(value, 0) < 0 & !is.na(coefficient.y), coefficient.y, coefficient.x)) %>%
+        select(-value, -coefficient.x, -coefficient.y)->
+        L1323.IO_GJkg_R_iron_steel_F_Yh
+    }
+    # SECOND ENERGY CALCULATION ---------------
     #Recalculate
 
     # Recalculate the input steel energy with revised IO coefficients
     L1323.out_Mt_R_iron_steel_Yh %>%
-      # 10/11/2019 gpk modification: in order to avoid assigning output (and energy consumption) to technologies that do
-      # not exist in the base years, we specify a "technology" column which is equal to the subsector. Note that this
-      # method assumes that the techs with market share in the base years have the same name as their parent subsectors
-      mutate(technology = subsector) %>%
-      left_join(L1323.IO_GJkg_R_iron_steel_F_Yh, by = c("subsector", "technology", "GCAM_region_ID", "year")) %>%
+      left_join(L1323.IO_GJkg_R_iron_steel_F_Yh,
+                by = c("subsector", "technology", "GCAM_region_ID", "year")) %>%
       mutate(value = value * coefficient) %>%
       select(GCAM_region_ID, year, subsector, technology, fuel, value) ->
       L1323.in_EJ_R_iron_steel_F_Y
@@ -267,7 +376,50 @@ module_energy_L1323.iron_steel <- function(command, ...) {
                   summarise(value = sum(value)), by = c("GCAM_region_ID", "year", "fuel")) %>%
       replace_na(list(value = 0)) %>%
       mutate(value = raw - value , raw = NULL) ->
+      L1323.in_EJ_R_indenergy_F_Yh_tmp
+
+    L1323.in_EJ_R_indenergy_F_Yh_tmp %>%
+      mutate(value = if_else(value > 0 , value, 0)) ->
       L1323.in_EJ_R_indenergy_F_Yh
+
+    # SECOND IO ADJUSTMENT ------------------
+    #Adjust negative energy use
+    # Identify rows with negative energy use
+    L1323.in_EJ_R_indenergy_F_Yh_tmp %>%
+      filter(value < 0) %>%
+      select(-sector) ->
+      negative
+
+    # revise IO coefficients
+      # set to zero, except in 2015, divide by 10
+      L1323.IO_GJkg_R_iron_steel_F_Yh %>%
+        left_join(negative,by = c("GCAM_region_ID", "year", "fuel")) %>%
+        mutate(coefficient = if_else(replace_na(value, 0) < 0,
+                                     0,
+                                     coefficient)) %>%
+        select(-value)->
+        L1323.IO_GJkg_R_iron_steel_F_Yh
+
+      # THIRD ENERGY CALCULATION ---------------
+      #Recalculate
+
+      # Recalculate the input steel energy with revised IO coefficients
+      L1323.out_Mt_R_iron_steel_Yh %>%
+        left_join(L1323.IO_GJkg_R_iron_steel_F_Yh,
+                  by = c("subsector", "technology", "GCAM_region_ID", "year")) %>%
+        mutate(value = value * coefficient) %>%
+        select(GCAM_region_ID, year, subsector, technology, fuel, value) ->
+        L1323.in_EJ_R_iron_steel_F_Y
+
+      # Redo the iron and steel energy use and other industrial energy use subtraction
+      L1322.in_EJ_R_indenergy_F_Yh %>%
+        rename(raw = value) %>%
+        left_join(L1323.in_EJ_R_iron_steel_F_Y %>%
+                    group_by(GCAM_region_ID, year, fuel) %>%
+                    summarise(value = sum(value)), by = c("GCAM_region_ID", "year", "fuel")) %>%
+        replace_na(list(value = 0)) %>%
+        mutate(value = raw - value , raw = NULL) ->
+        L1323.in_EJ_R_indenergy_F_Yh
 
     # ===================================================
     # Produce outputs

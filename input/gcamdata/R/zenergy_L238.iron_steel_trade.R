@@ -26,7 +26,9 @@ module_energy_L238.iron_steel_trade <- function(command, ...) {
              FILE = "energy/A_irnstl_TradedSector",
              FILE = "energy/A_irnstl_TradedSubsector",
              FILE = "energy/A_irnstl_TradedTechnology",
-             "LB1092.Tradebalance_iron_steel_Mt_R_Y"))
+             "LB1092.Tradebalance_iron_steel_Mt_R_Y",
+             "L2323.StubTechProd_iron_steel",
+             FILE = "energy/A323.globaltech_secout"))
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(c("L238.Supplysector_tra",
              "L238.SectorUseTrialMarket_tra",
@@ -50,7 +52,7 @@ module_energy_L238.iron_steel_trade <- function(command, ...) {
       GrossImp_Mt <- Prod_Mt <- GCAM_region_ID <- GCAM_region <- NetExp_Mt <- Prod_bm3 <-
       NetExp_bm3 <- value <- metric <- flow <- GrossExp <- NULL # silence package check notes
 
-    # Load required inputs
+    # Load required inputs  ---------------------
     GCAM_region_names <- get_data(all_data, "common/GCAM_region_names")
     A_irnstl_RegionalSector <- get_data(all_data, "energy/A_irnstl_RegionalSector", strip_attributes = TRUE)
     A_irnstl_RegionalSubsector <- get_data(all_data, "energy/A_irnstl_RegionalSubsector", strip_attributes = TRUE)
@@ -59,8 +61,10 @@ module_energy_L238.iron_steel_trade <- function(command, ...) {
     A_irnstl_TradedSubsector <- get_data(all_data, "energy/A_irnstl_TradedSubsector", strip_attributes = TRUE)
     A_irnstl_TradedTechnology <- get_data(all_data, "energy/A_irnstl_TradedTechnology", strip_attributes = TRUE)
     LB1092.Tradebalance_iron_steel_Mt_R_Y <- get_data(all_data, "LB1092.Tradebalance_iron_steel_Mt_R_Y")
+    L2323.StubTechProd_iron_steel <- get_data(all_data, "L2323.StubTechProd_iron_steel")
+    A323.globaltech_secout <- get_data(all_data, "energy/A323.globaltech_secout")
 
-    # 1. TRADED SECTOR / SUBSECTOR / TECHNOLOGY") ---------------
+    # 1. TRADED SECTOR / SUBSECTOR / TECHNOLOGY") ---------------------
     # L238.Supplysector_tra: generic supplysector info for traded iron and steel
     # By convention, traded commodity information is contained within the USA region (could be within any)
     A_irnstl_TradedSector$region <- gcam.USA_REGION
@@ -103,7 +107,9 @@ module_energy_L238.iron_steel_trade <- function(command, ...) {
       select(LEVEL2_DATA_NAMES[["TechCost"]])
 
     # L238.TechCoef_tra: Coefficient and market name of traded technologies
-    L238.TechCoef_tra <- select(A_irnstl_TradedTechnology_R_Y, LEVEL2_DATA_NAMES[["TechCoef"]])
+    L238.TechCoef_tra <- select(A_irnstl_TradedTechnology_R_Y, LEVEL2_DATA_NAMES[["TechCoef"]]) %>%
+      mutate(coefficient = if_else(year <= MODEL_FINAL_BASE_YEAR & minicam.energy.input != "iron and steel",
+                                   0, coefficient))
 
 
 
@@ -115,9 +121,35 @@ module_energy_L238.iron_steel_trade <- function(command, ...) {
                                                            by = "region") %>%
       select(region, year, GrossExp_Mt)
 
-    L238.Production_tra <- filter(A_irnstl_TradedTechnology_R_Y, year %in% MODEL_BASE_YEARS) %>%
-      left_join_error_no_match(L238.GrossExports_Mt_R_Y,
-                               by = c(market.name = "region", "year")) %>%
+    # Assume high-carbon/low-carbon export split is proportional to production
+    sec.out.prodShare <- L2323.StubTechProd_iron_steel %>%
+      left_join(select(A323.globaltech_secout, supplysector, subsector, stub.technology = technology, res.secondary.output),
+                                      by = c("supplysector", "subsector", "stub.technology")) %>%
+      # If no sec.out, still need to include in split, so rename to iron and steel
+      tidyr::replace_na(list(res.secondary.output = "iron and steel")) %>%
+      group_by(region, year, res.secondary.output) %>%
+      summarise(calOutputValue = sum(calOutputValue)) %>%
+      group_by(region, year) %>%
+      mutate(prodShare = calOutputValue / sum(calOutputValue)) %>%
+      ungroup %>%
+      tidyr::replace_na(list(prodShare = 0)) %>%
+      select(-calOutputValue)
+
+    # Multiply sec.out share by total exports
+    L238.GrossExports_Mt_R_Y_carbonType <- L238.GrossExports_Mt_R_Y %>%
+      filter(year %in% MODEL_BASE_YEARS) %>%
+      left_join(sec.out.prodShare, by = c("region", "year")) %>%
+      mutate(GrossExp_Mt = GrossExp_Mt * prodShare) %>%
+      rename(minicam.energy.input = res.secondary.output)
+
+    L238.Production_tra <- A_irnstl_TradedTechnology_R_Y %>%
+      group_by(supplysector, subsector, technology, year) %>%
+      # If no sec.out, there will be only one group, otherwise it will be an input not named iron and steel
+      filter(dplyr::n() == 1 | minicam.energy.input != "iron and steel") %>%
+      ungroup %>%
+      filter(year %in% MODEL_BASE_YEARS) %>%
+      left_join_error_no_match(L238.GrossExports_Mt_R_Y_carbonType,
+                               by = c(market.name = "region", "year", "minicam.energy.input")) %>%
       rename(calOutputValue = GrossExp_Mt) %>%
       mutate(calOutputValue = round(calOutputValue, energy.DIGITS_CALOUTPUT),
              calOutputValue = if_else(grepl("CLUB", supplysector), 0, calOutputValue),
@@ -152,18 +184,32 @@ module_energy_L238.iron_steel_trade <- function(command, ...) {
     L238.TechShrwt_reg <- select(A_irnstl_RegionalTechnology_R_Y, LEVEL2_DATA_NAMES[["TechShrwt"]])
 
     # L238.TechCoef_reg: Coefficient and market name of traded technologies
-    L238.TechCoef_reg <- select(A_irnstl_RegionalTechnology_R_Y, LEVEL2_DATA_NAMES[["TechCoef"]])
+    L238.TechCoef_reg <- select(A_irnstl_RegionalTechnology_R_Y, LEVEL2_DATA_NAMES[["TechCoef"]]) %>%
+      mutate(coefficient = if_else(year <= MODEL_FINAL_BASE_YEAR & minicam.energy.input != "iron and steel" & grepl("domestic", subsector),
+                                   0, coefficient))
 
     # L238.Production_reg_imp: Output (flow) of gross imports
     # Imports are equal to the gross imports calculated in LB1092
+    # split between carbon levels based on global export pool
+    global_exports_share <- L238.Production_tra %>%
+      group_by(supplysector, year) %>%
+      summarise(calOutputValue = sum(calOutputValue)) %>%
+      group_by(year) %>%
+      mutate(exportShare = calOutputValue / sum(calOutputValue)) %>%
+      ungroup %>%
+      select(-calOutputValue)
+
     L238.GrossImports_Mt_R_Y <- left_join_error_no_match(LB1092.Tradebalance_iron_steel_Mt_R_Y %>%
                                                            filter(metric=="imports_reval") %>%
                                                            mutate(minicam.energy.input="iron and steel")%>%
                                                            rename(GrossImp_Mt=value,region=GCAM_region),
                                                            GCAM_region_names,
-                                                           by = "region")%>%
+                                                           by = "region") %>%
       left_join(select(A_irnstl_TradedTechnology, supplysector, minicam.energy.input),
                 by = c("minicam.energy.input")) %>%
+      filter(year %in% MODEL_BASE_YEARS) %>%
+      left_join_error_no_match(global_exports_share, by = c("year", "supplysector")) %>%
+      mutate(GrossImp_Mt = GrossImp_Mt * exportShare) %>%
       select(region, supplysector, year, GrossImp_Mt)
 
     L238.Production_reg_imp <- A_irnstl_RegionalTechnology_R_Y %>%
@@ -184,26 +230,41 @@ module_energy_L238.iron_steel_trade <- function(command, ...) {
     # L238.Production_reg_dom: Output (flow) of domestic
 
     #### DOMESTIC TECHNOLOGY OUTPUT = iron and steel PRODUCTION - GROSS EXPORTS
+
+    A_irnstl_RegionalTechnology_filtered <- A_irnstl_RegionalTechnology %>%
+      group_by(supplysector, subsector, technology) %>%
+      # If no sec.out, there will be only one group, otherwise it will be an input not named iron and steel
+      filter(dplyr::n() == 1 | minicam.energy.input != "iron and steel") %>%
+      ungroup
+
+    # Again use production share of high vs low carbon output to set domestic consumption
     L238.DomSup_Mt_R_Y <- left_join_error_no_match(LB1092.Tradebalance_iron_steel_Mt_R_Y %>%
                                                      filter(metric=="domestic_supply") %>%
                                                      mutate(minicam.energy.input="iron and steel")%>%
                                                      rename(DomSup_Mt=value,region=GCAM_region),
                                                    GCAM_region_names,
                                                    by = "region") %>%
-      select(region, year, DomSup_Mt)
+      right_join(sec.out.prodShare, by = c("region", "year")) %>%
+      mutate(DomSup_Mt = DomSup_Mt * prodShare) %>%
+      select(region, minicam.energy.input = res.secondary.output, year, DomSup_Mt) %>%
+      left_join_error_no_match(A_irnstl_RegionalTechnology_filtered, by = "minicam.energy.input")  %>%
+      select(region, supplysector, subsector, technology, year, DomSup_Mt)
 
     L238.Production_reg_dom <- A_irnstl_RegionalTechnology_R_Y %>%
       filter(year %in% MODEL_BASE_YEARS,
-             grepl( "domestic", subsector)) %>%
+             grepl( "domestic", subsector),
+             minicam.energy.input == "iron and steel") %>%
       left_join_error_no_match(L238.DomSup_Mt_R_Y,
-                               by = c("region", "year")) %>%
+                               by = c("region", "supplysector", "subsector", "technology", "year")) %>%
       mutate(calOutputValue = round(DomSup_Mt, energy.DIGITS_CALOUTPUT),
-             share.weight.year = year,
-             subs.share.weight = if_else(calOutputValue > 0, 1, 0),
-             tech.share.weight = subs.share.weight) %>%
+             share.weight.year = year) %>%
+      group_by(supplysector, region, year) %>%
+      mutate(subs.share.weight = if_else(any(calOutputValue) > 0, 1, 0)) %>%
+      ungroup %>%
+      mutate(tech.share.weight = if_else(calOutputValue > 0, 1, 0)) %>%
       select(LEVEL2_DATA_NAMES[["Production"]])
 
-    # Produce outputs
+    # Produce outputs  ---------------------
     L238.Supplysector_tra %>%
       add_title("Supplysector info for iron and steel") %>%
       add_units("None") %>%
