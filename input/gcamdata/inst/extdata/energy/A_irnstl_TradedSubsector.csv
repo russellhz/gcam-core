@@ -9,6 +9,6 @@ supplysector,subsector,logit.exponent,year.fillout,share.weight,apply.to,from.ye
 traded low-carbon iron and steel,traded low-carbon iron and steel,-6,start-year,1,share-weight,final-calibration-year,2100,1,fixed,1,
 traded med-carbon iron and steel,traded med-carbon iron and steel,-6,start-year,1,share-weight,final-calibration-year,2100,1,fixed,1,
 traded high-carbon iron and steel,traded high-carbon iron and steel,-6,start-year,1,share-weight,final-calibration-year,2100,1,fixed,1,
-traded low-carbon iron and steel_CLUB,traded low-carbon iron and steel_CLUB,-6,start-year,1,share-weight,final-calibration-year,2100,1,fixed,1,
+traded low-carbon iron and steel_CLUB,traded low-carbon iron and steel_CLUB,-6,start-year,1,share-weight,2020,2100,1,fixed,1,
 traded med-carbon iron and steel_CLUB,traded med-carbon iron and steel_CLUB,-6,start-year,1,share-weight,final-calibration-year,2100,1,fixed,1,
 traded high-carbon iron and steel_CLUB,traded high-carbon iron and steel_CLUB,-6,start-year,1,share-weight,final-calibration-year,2100,1,fixed,1,

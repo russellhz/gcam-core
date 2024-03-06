@@ -33,6 +33,7 @@ module_energy_L238.iron_steel_trade <- function(command, ...) {
     return(c("L238.Supplysector_tra",
              "L238.SectorUseTrialMarket_tra",
              "L238.SubsectorAll_tra",
+             "L238.SubsectorShwtClub_tra",
              "L238.TechShrwt_tra",
              "L238.TechCost_tra",
              "L238.TechCoef_tra",
@@ -83,6 +84,18 @@ module_energy_L238.iron_steel_trade <- function(command, ...) {
                                                   c(LEVEL2_DATA_NAMES[["SubsectorAllTo"]], "logit.type"),
                                                   GCAM_region_names,
                                                   has_traded = TRUE)
+
+    # L238.SubsectorShwtClub_tra: set shareweights for subsector to 1 after 2025 for all traded steel club
+    L238.SubsectorShwtClub_tra <- L238.SubsectorAll_tra %>%
+      select(region, supplysector, subsector) %>%
+      filter(grepl("CLUB", subsector)) %>%
+      mutate(year = 2025,
+             share.weight = 1,
+             from.year = 2030,
+             apply.to = "share-weight",
+             to.year = 2100,
+             delete = 1,
+             interpolation.function = "fixed")
 
 
     # Change traded iron and steel interpolation rule and to.value in countries listed in energy.IRON_STEEL.DOMESTIC_SW
@@ -367,9 +380,16 @@ module_energy_L238.iron_steel_trade <- function(command, ...) {
                      "LB1092.Tradebalance_iron_steel_Mt_R_Y") ->
       L238.Production_reg_dom
 
+    L238.SubsectorShwtClub_tra %>%
+      add_title("Subsector shareweights for steel club") %>%
+      add_units("NA") %>%
+      add_precursors("common/GCAM_region_names") ->
+      L238.SubsectorShwtClub_tra
+
     return_data(L238.Supplysector_tra,
                 L238.SectorUseTrialMarket_tra,
                 L238.SubsectorAll_tra,
+                L238.SubsectorShwtClub_tra,
                 L238.TechShrwt_tra,
                 L238.TechCost_tra,
                 L238.TechCoef_tra,

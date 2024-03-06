@@ -23,7 +23,8 @@ module_energy_iron_steel_trade_xml <- function(command, ...) {
              "L238.TechShrwt_reg",
              "L238.TechCoef_reg",
              "L238.Production_reg_imp",
-             "L238.Production_reg_dom"))
+             "L238.Production_reg_dom",
+             "L238.SubsectorShwtClub_tra"))
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(c(XML = "iron_steel_trade.xml"))
   } else if(command == driver.MAKE) {
@@ -44,6 +45,14 @@ module_energy_iron_steel_trade_xml <- function(command, ...) {
     L238.TechCoef_reg <- get_data(all_data, "L238.TechCoef_reg")
     L238.Production_reg_imp <- get_data(all_data, "L238.Production_reg_imp")
     L238.Production_reg_dom <- get_data(all_data, "L238.Production_reg_dom")
+    L238.SubsectorShwtClub_tra <- get_data(all_data, "L238.SubsectorShwtClub_tra")
+
+    L238.SubsectorShwtClub_tra_interp <- L238.SubsectorShwtClub_tra %>%
+      distinct(region, supplysector, subsector, from.year, to.year, apply.to, delete, interpolation.function)
+
+    L238.SubsectorShwtClub_tra <- L238.SubsectorShwtClub_tra %>%
+      select(region, supplysector, subsector, year, share.weight)
+
 
     # ===================================================
 
@@ -52,6 +61,8 @@ module_energy_iron_steel_trade_xml <- function(command, ...) {
       add_logit_tables_xml(L238.Supplysector_tra, "Supplysector") %>%
       add_xml_data(L238.SectorUseTrialMarket_tra, "SectorUseTrialMarket") %>%
       add_logit_tables_xml(L238.SubsectorAll_tra, "SubsectorAllTo", base_logit_header = "SubsectorLogit") %>%
+      add_xml_data(L238.SubsectorShwtClub_tra_interp, "SubsectorDeleteInterp") %>%
+      add_xml_data(L238.SubsectorShwtClub_tra, "SubsectorShrwt") %>%
       add_xml_data(L238.TechShrwt_tra, "TechShrwt") %>%
       add_xml_data(L238.TechCost_tra, "TechCost") %>%
       add_xml_data(L238.TechCoef_tra, "TechCoef") %>%
@@ -74,7 +85,8 @@ module_energy_iron_steel_trade_xml <- function(command, ...) {
                      "L238.TechShrwt_reg",
                      "L238.TechCoef_reg",
                      "L238.Production_reg_imp",
-                     "L238.Production_reg_dom") ->
+                     "L238.Production_reg_dom",
+                     "L238.SubsectorShwtClub_tra") ->
       iron_steel_trade.xml
 
     return_data(iron_steel_trade.xml)
