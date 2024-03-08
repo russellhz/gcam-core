@@ -160,20 +160,32 @@ module_policy_L3221.CCap <- function(command, ...) {
     L3221.CCap_tranTech_pre <- policy_mappings %>%
       filter(!is.na(tranSubsector) | grepl("^trn_", supplysector)) %>%
       select(-resource, -reserve.subresource) %>%
-      left_join(tech_all_regions, by = c("mapping.name"))
+      left_join(tech_all_regions, by = c("mapping.name"))%>%
+      filter(!is.na(region))
 
-    L3221.CCap_tranTech_sector <- L3221.CCap_tranTech_pre %>%
-      filter(is.na(tranSubsector)) %>%
-      select(-tranSubsector) %>%
-      left_join(L254.StubTranTech, by = c("supplysector", "region"))
+    if (nrow(L3221.CCap_tranTech_pre) == 0){
+      # If no caps to implement, create empty tibble
+      tbl_colnames <- c("xml", LEVEL2_DATA_NAMES[["StubTranTechCO2"]])
+      L3221.CCap_tranTech <- tibble::tibble(!!!tbl_colnames, .rows = 0, .name_repair = ~ tbl_colnames)
 
-    L3221.CCap_tranTech <-  L3221.CCap_tranTech_pre %>%
-      filter(!is.na(tranSubsector)) %>%
-      left_join(L254.StubTranTech, by = c("supplysector", "region", "tranSubsector")) %>%
-      bind_rows(L3221.CCap_tranTech_sector) %>%
-      rename(CO2 = ghgpolicy) %>%
-      select(-market) %>%
-      repeat_add_columns(tibble(year = MODEL_YEARS))
+    } else {
+      L3221.CCap_tranTech_sector <- L3221.CCap_tranTech_pre %>%
+        filter(is.na(tranSubsector)) %>%
+        select(-tranSubsector) %>%
+        left_join(L254.StubTranTech, by = c("supplysector", "region"))
+
+
+
+      L3221.CCap_tranTech <-  L3221.CCap_tranTech_pre %>%
+        filter(!is.na(tranSubsector)) %>%
+        left_join(L254.StubTranTech, by = c("supplysector", "region", "tranSubsector")) %>%
+        bind_rows(L3221.CCap_tranTech_sector) %>%
+        rename(CO2 = ghgpolicy) %>%
+        select(-market) %>%
+        repeat_add_columns(tibble(year = MODEL_YEARS))
+    }
+
+
 
     # Check that there are no NAs
     stopifnot(!any(is.na(L3221.CCap_tranTech)))
@@ -183,10 +195,17 @@ module_policy_L3221.CCap <- function(command, ...) {
       filter(!is.na(resource)) %>%
       select(-supplysector, -tranSubsector) %>%
       left_join(tech_all_regions, by = c("mapping.name")) %>%
+      filter(!is.na(region)) %>%
       left_join(L210.ResTech, by = c("resource", "reserve.subresource", "region")) %>%
       rename(CO2 = ghgpolicy) %>%
-      select(-market) %>%
-      repeat_add_columns(tibble(year = MODEL_YEARS))
+      select(-market)
+
+    if (nrow(L3221.CCap_resource) > 0){
+      L3221.CCap_resource <- L3221.CCap_resource %>% repeat_add_columns(tibble(year = MODEL_YEARS))
+    } else {
+      L3221.CCap_resource <- L3221.CCap_resource %>% repeat_add_columns(tibble(year = numeric()))
+
+    }
 
     # Check that there are no NAs
     stopifnot(!any(is.na(L3221.CCap_resource)))
