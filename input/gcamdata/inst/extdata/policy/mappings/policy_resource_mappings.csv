@@ -5,3 +5,7 @@
 # ----------,,
 mapping.name,resource,reserve.subresource
 CO2_CHINA_INDUSTRY,crude oil,unconventional oil
+CO2_NO_STEEL,coal,coal
+CO2_NO_STEEL,crude oil,crude oil
+CO2_NO_STEEL,crude oil,unconventional oil
+CO2_NO_STEEL,natural gas,natural gas

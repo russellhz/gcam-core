@@ -42,3 +42,56 @@ TRN_4W,trn_pass_road_LDV_4W
 CEMENT,cement
 CEMENT,process heat cement
 IRONSTEEL,iron and steel
+CO2_NO_STEEL,H2 central production
+CO2_NO_STEEL,H2 wholesale dispensing
+CO2_NO_STEEL,N fertilizer
+CO2_NO_STEEL,agricultural energy use
+CO2_NO_STEEL,alumina
+CO2_NO_STEEL,backup_electricity
+CO2_NO_STEEL,cement
+CO2_NO_STEEL,chemical energy use
+CO2_NO_STEEL,chemical feedstocks
+CO2_NO_STEEL,comm cooling
+CO2_NO_STEEL,comm heating
+CO2_NO_STEEL,comm others
+CO2_NO_STEEL,construction energy use
+CO2_NO_STEEL,csp_backup
+CO2_NO_STEEL,delivered gas h2
+CO2_NO_STEEL,desalinated water
+CO2_NO_STEEL,district heat
+CO2_NO_STEEL,elec_biomass (IGCC CCS)
+CO2_NO_STEEL,elec_biomass (IGCC)
+CO2_NO_STEEL,elec_biomass (conv CCS)
+CO2_NO_STEEL,elec_biomass (conv)
+CO2_NO_STEEL,elec_coal (IGCC CCS)
+CO2_NO_STEEL,elec_coal (IGCC)
+CO2_NO_STEEL,elec_coal (conv pul CCS)
+CO2_NO_STEEL,elec_coal (conv pul)
+CO2_NO_STEEL,elec_gas (CC CCS)
+CO2_NO_STEEL,elec_gas (CC)
+CO2_NO_STEEL,elec_gas (steam/CT)
+CO2_NO_STEEL,elec_refined liquids (CC CCS)
+CO2_NO_STEEL,elec_refined liquids (CC)
+CO2_NO_STEEL,elec_refined liquids (steam/CT)
+CO2_NO_STEEL,gas pipeline
+CO2_NO_STEEL,gas processing
+CO2_NO_STEEL,mining energy use
+CO2_NO_STEEL,other industrial energy use
+CO2_NO_STEEL,other industrial feedstocks
+CO2_NO_STEEL,process heat cement
+CO2_NO_STEEL,refining
+CO2_NO_STEEL,regional biomass
+CO2_NO_STEEL,regional biomassOil
+CO2_NO_STEEL,regional corn for ethanol
+CO2_NO_STEEL,regional sugar for ethanol
+CO2_NO_STEEL,resid cooling
+CO2_NO_STEEL,resid heating
+CO2_NO_STEEL,resid others
+CO2_NO_STEEL,trn_aviation_intl
+CO2_NO_STEEL,trn_freight
+CO2_NO_STEEL,trn_freight_road
+CO2_NO_STEEL,trn_pass
+CO2_NO_STEEL,trn_pass_road
+CO2_NO_STEEL,trn_pass_road_LDV
+CO2_NO_STEEL,trn_pass_road_LDV_4W
+CO2_NO_STEEL,trn_shipping_intl
