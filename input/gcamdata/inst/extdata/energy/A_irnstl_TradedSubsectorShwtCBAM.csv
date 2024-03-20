@@ -1,0 +1,103 @@
+# File: A_irnstl_TradedSubsectorShwtCBAM.csv
+# Title: Iron and steel subsector shareweights from 2015
+# Units: Unitless
+# Comments: For copying to new CBAM markets
+# Column types: ccn 
+# ----------
+supplysector,subsector,shareweight
+traded high-carbon iron and steel,Africa_Eastern traded high-carbon iron and steel,1.94E-07
+traded low-carbon iron and steel,Africa_Eastern traded low-carbon iron and steel,4.47E-05
+traded med-carbon iron and steel,Africa_Eastern traded med-carbon iron and steel,1.24E-06
+traded high-carbon iron and steel,Africa_Northern traded high-carbon iron and steel,0.00927497
+traded low-carbon iron and steel,Africa_Northern traded low-carbon iron and steel,0.0272282
+traded med-carbon iron and steel,Africa_Northern traded med-carbon iron and steel,0.134261
+traded high-carbon iron and steel,Africa_Southern traded high-carbon iron and steel,0
+traded low-carbon iron and steel,Africa_Southern traded low-carbon iron and steel,7.79E-07
+traded med-carbon iron and steel,Africa_Southern traded med-carbon iron and steel,0
+traded high-carbon iron and steel,Africa_Western traded high-carbon iron and steel,6.61E-07
+traded low-carbon iron and steel,Africa_Western traded low-carbon iron and steel,1.55E-04
+traded med-carbon iron and steel,Africa_Western traded med-carbon iron and steel,4.22E-06
+traded high-carbon iron and steel,Argentina traded high-carbon iron and steel,0.00813158
+traded low-carbon iron and steel,Argentina traded low-carbon iron and steel,0.00292396
+traded med-carbon iron and steel,Argentina traded med-carbon iron and steel,0.024765
+traded high-carbon iron and steel,Australia_NZ traded high-carbon iron and steel,0.0142019
+traded low-carbon iron and steel,Australia_NZ traded low-carbon iron and steel,0.00581436
+traded med-carbon iron and steel,Australia_NZ traded med-carbon iron and steel,6.12E-04
+traded high-carbon iron and steel,Brazil traded high-carbon iron and steel,0.102833
+traded low-carbon iron and steel,Brazil traded low-carbon iron and steel,0.0301719
+traded med-carbon iron and steel,Brazil traded med-carbon iron and steel,0.00410393
+traded high-carbon iron and steel,Canada traded high-carbon iron and steel,0.11607
+traded low-carbon iron and steel,Canada traded low-carbon iron and steel,0.0862137
+traded med-carbon iron and steel,Canada traded med-carbon iron and steel,0.166208
+traded high-carbon iron and steel,Central America and Caribbean traded high-carbon iron and steel,7.20E-06
+traded low-carbon iron and steel,Central America and Caribbean traded low-carbon iron and steel,0.0236963
+traded med-carbon iron and steel,Central America and Caribbean traded med-carbon iron and steel,6.45E-04
+traded high-carbon iron and steel,Central Asia traded high-carbon iron and steel,0.0149474
+traded low-carbon iron and steel,Central Asia traded low-carbon iron and steel,0.0053927
+traded med-carbon iron and steel,Central Asia traded med-carbon iron and steel,6.24E-04
+traded high-carbon iron and steel,China traded high-carbon iron and steel,1
+traded low-carbon iron and steel,China traded low-carbon iron and steel,0.129038
+traded med-carbon iron and steel,China traded med-carbon iron and steel,0.0354374
+traded high-carbon iron and steel,Colombia traded high-carbon iron and steel,7.90E-04
+traded low-carbon iron and steel,Colombia traded low-carbon iron and steel,0.00373332
+traded med-carbon iron and steel,Colombia traded med-carbon iron and steel,1.27E-04
+traded high-carbon iron and steel,EU-12 traded high-carbon iron and steel,0.303305
+traded low-carbon iron and steel,EU-12 traded low-carbon iron and steel,0.300596
+traded med-carbon iron and steel,EU-12 traded med-carbon iron and steel,0.017861
+traded high-carbon iron and steel,EU-15 traded high-carbon iron and steel,1.00901
+traded low-carbon iron and steel,EU-15 traded low-carbon iron and steel,1
+traded med-carbon iron and steel,EU-15 traded med-carbon iron and steel,0.0594186
+traded high-carbon iron and steel,Europe_Eastern traded high-carbon iron and steel,0.126468
+traded low-carbon iron and steel,Europe_Eastern traded low-carbon iron and steel,0.0287003
+traded med-carbon iron and steel,Europe_Eastern traded med-carbon iron and steel,0.00197236
+traded high-carbon iron and steel,Europe_Non_EU traded high-carbon iron and steel,0.125244
+traded low-carbon iron and steel,Europe_Non_EU traded low-carbon iron and steel,0.239625
+traded med-carbon iron and steel,Europe_Non_EU traded med-carbon iron and steel,0.0029425
+traded high-carbon iron and steel,European Free Trade Association traded high-carbon iron and steel,0.031758
+traded low-carbon iron and steel,European Free Trade Association traded low-carbon iron and steel,0.0160909
+traded med-carbon iron and steel,European Free Trade Association traded med-carbon iron and steel,3.36E-04
+traded high-carbon iron and steel,India traded high-carbon iron and steel,0.23466
+traded low-carbon iron and steel,India traded low-carbon iron and steel,0.0384286
+traded med-carbon iron and steel,India traded med-carbon iron and steel,0.139387
+traded high-carbon iron and steel,Indonesia traded high-carbon iron and steel,0.0215859
+traded low-carbon iron and steel,Indonesia traded low-carbon iron and steel,0.0190563
+traded med-carbon iron and steel,Indonesia traded med-carbon iron and steel,0.00435802
+traded high-carbon iron and steel,Japan traded high-carbon iron and steel,0.705268
+traded low-carbon iron and steel,Japan traded low-carbon iron and steel,0.280359
+traded med-carbon iron and steel,Japan traded med-carbon iron and steel,0.030144
+traded high-carbon iron and steel,Mexico traded high-carbon iron and steel,0.0813585
+traded low-carbon iron and steel,Mexico traded low-carbon iron and steel,0.145298
+traded med-carbon iron and steel,Mexico traded med-carbon iron and steel,0.594827
+traded high-carbon iron and steel,Middle East traded high-carbon iron and steel,0.0822075
+traded low-carbon iron and steel,Middle East traded low-carbon iron and steel,0.00392815
+traded med-carbon iron and steel,Middle East traded med-carbon iron and steel,3.7495
+traded high-carbon iron and steel,Pakistan traded high-carbon iron and steel,3.56E-04
+traded low-carbon iron and steel,Pakistan traded low-carbon iron and steel,0.00622386
+traded med-carbon iron and steel,Pakistan traded med-carbon iron and steel,1.81E-04
+traded high-carbon iron and steel,Russia traded high-carbon iron and steel,0.652527
+traded low-carbon iron and steel,Russia traded low-carbon iron and steel,0.206773
+traded med-carbon iron and steel,Russia traded med-carbon iron and steel,1
+traded high-carbon iron and steel,South Africa traded high-carbon iron and steel,0.0247236
+traded low-carbon iron and steel,South Africa traded low-carbon iron and steel,0.0241803
+traded med-carbon iron and steel,South Africa traded med-carbon iron and steel,0.00144715
+traded high-carbon iron and steel,South America_Northern traded high-carbon iron and steel,1.10E-04
+traded low-carbon iron and steel,South America_Northern traded low-carbon iron and steel,0.0176627
+traded med-carbon iron and steel,South America_Northern traded med-carbon iron and steel,0.0449508
+traded high-carbon iron and steel,South America_Southern traded high-carbon iron and steel,0.00101076
+traded low-carbon iron and steel,South America_Southern traded low-carbon iron and steel,0.00304874
+traded med-carbon iron and steel,South America_Southern traded med-carbon iron and steel,9.98E-04
+traded high-carbon iron and steel,South Asia traded high-carbon iron and steel,2.35E-06
+traded low-carbon iron and steel,South Asia traded low-carbon iron and steel,5.52E-04
+traded med-carbon iron and steel,South Asia traded med-carbon iron and steel,1.51E-05
+traded high-carbon iron and steel,South Korea traded high-carbon iron and steel,0.434666
+traded low-carbon iron and steel,South Korea traded low-carbon iron and steel,0.255597
+traded med-carbon iron and steel,South Korea traded med-carbon iron and steel,0.0208308
+traded high-carbon iron and steel,Southeast Asia traded high-carbon iron and steel,0.0322484
+traded low-carbon iron and steel,Southeast Asia traded low-carbon iron and steel,0.126607
+traded med-carbon iron and steel,Southeast Asia traded med-carbon iron and steel,0.03627
+traded high-carbon iron and steel,Taiwan traded high-carbon iron and steel,0.149042
+traded low-carbon iron and steel,Taiwan traded low-carbon iron and steel,0.106136
+traded med-carbon iron and steel,Taiwan traded med-carbon iron and steel,0.0076458
+traded high-carbon iron and steel,USA traded high-carbon iron and steel,0.273358
+traded low-carbon iron and steel,USA traded low-carbon iron and steel,0.419537
+traded med-carbon iron and steel,USA traded med-carbon iron and steel,1.47697

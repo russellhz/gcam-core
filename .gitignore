@@ -84,3 +84,4 @@ exe/configuration*.xml
 /exe/old
 input/*.xml
 *outputs*
+/analysis/*

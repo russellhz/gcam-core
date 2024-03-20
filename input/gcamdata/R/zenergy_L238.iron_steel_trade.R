@@ -26,6 +26,7 @@ module_energy_L238.iron_steel_trade <- function(command, ...) {
              FILE = "energy/A_irnstl_TradedSector",
              FILE = "energy/A_irnstl_TradedSubsector",
              FILE = "energy/A_irnstl_TradedTechnology",
+             FILE = "energy/A_irnstl_TradedSubsectorShwtCBAM",
              "LB1092.Tradebalance_iron_steel_Mt_R_Y",
              "L2323.StubTechProd_iron_steel",
              FILE = "energy/A323.globaltech_secout"))
@@ -88,7 +89,7 @@ module_energy_L238.iron_steel_trade <- function(command, ...) {
     # L238.SubsectorShwtClub_tra: set shareweights for subsector to 1 after 2025 for all traded steel club
     L238.SubsectorShwtClub_tra <- L238.SubsectorAll_tra %>%
       select(region, supplysector, subsector) %>%
-      filter(grepl("CLUB", subsector)) %>%
+      filter(grepl("OECD", subsector)) %>%
       mutate(year = 2025,
              share.weight = 1,
              from.year = 2030,
@@ -165,7 +166,7 @@ module_energy_L238.iron_steel_trade <- function(command, ...) {
                                by = c(market.name = "region", "year", "minicam.energy.input")) %>%
       rename(calOutputValue = GrossExp_Mt) %>%
       mutate(calOutputValue = round(calOutputValue, energy.DIGITS_CALOUTPUT),
-             calOutputValue = if_else(grepl("CLUB", supplysector), 0, calOutputValue),
+             calOutputValue = if_else(grepl("OECD", supplysector), 0, calOutputValue),
              share.weight.year = year,
              subs.share.weight = if_else(calOutputValue > 0, 1, 0),
              tech.share.weight = subs.share.weight) %>%
@@ -232,7 +233,7 @@ module_energy_L238.iron_steel_trade <- function(command, ...) {
                                by = c("region", minicam.energy.input = "supplysector", "year")) %>%
       rename(calOutputValue = GrossImp_Mt) %>%
       mutate(calOutputValue = round(calOutputValue, energy.DIGITS_CALOUTPUT),
-             calOutputValue = if_else(grepl("CLUB", technology), 0, calOutputValue),
+             calOutputValue = if_else(grepl("OECD", technology), 0, calOutputValue),
              share.weight.year = year) %>%
       group_by(supplysector, subsector, region, year) %>%
       mutate(subs.share.weight = if_else(any(calOutputValue) > 0, 1, 0)) %>%
