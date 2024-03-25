@@ -1,8 +1,8 @@
-# File: A_irnstl_regions.csv
-# Title: OECD regions for semi-bilateral trade
-# Units: NA
-# Column types: cc
-# ----------
+# File: A_irnstl_regions.csv,
+# Title: OECD regions for semi-bilateral trade,
+# Units: NA,
+# Column types: cc,
+# ----------,
 region,sector
 USA,OECD
 Australia_NZ,OECD
@@ -16,23 +16,23 @@ Mexico,OECD
 South Korea,OECD
 Colombia,OECD
 Argentina,OECD
-Brazil,non_OECD
-China,non_OECD
-India,non_OECD
-Russia,non_OECD
-South Africa,non_OECD
-Taiwan,non_OECD
-Indonesia,non_OECD
-Africa_Eastern,non_OECD
-Africa_Northern,non_OECD
-Africa_Southern,non_OECD
-Africa_Western,non_OECD
-Central America and Caribbean,non_OECD
-Central Asia,non_OECD
-Europe_Eastern,non_OECD
-Middle East,non_OECD
-Pakistan,non_OECD
-South America_Northern,non_OECD
-South America_Southern,non_OECD
-South Asia,non_OECD
-Southeast Asia,non_OECD
+Brazil,nonOECD
+China,nonOECD
+India,nonOECD
+Russia,nonOECD
+South Africa,nonOECD
+Taiwan,nonOECD
+Indonesia,nonOECD
+Africa_Eastern,nonOECD
+Africa_Northern,nonOECD
+Africa_Southern,nonOECD
+Africa_Western,nonOECD
+Central America and Caribbean,nonOECD
+Central Asia,nonOECD
+Europe_Eastern,nonOECD
+Middle East,nonOECD
+Pakistan,nonOECD
+South America_Northern,nonOECD
+South America_Southern,nonOECD
+South Asia,nonOECD
+Southeast Asia,nonOECD

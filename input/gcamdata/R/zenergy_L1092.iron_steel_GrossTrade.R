@@ -272,7 +272,7 @@ module_energy_L1092.iron_steel_GrossTrade <- function(command, ...){
     stopifnot(all(round(bilateral_imports_Agg$exports, energy.DIGITS_CALOUTPUT) == round(bilateral_imports_Agg$exports_adj, energy.DIGITS_CALOUTPUT)))
 
     LB1092.Tradebalance_iron_steel_Mt_R_Y_OECD_bilateral <- bilateral_imports_Agg %>%
-      select(year, Exporter_Region_Agg, GCAM_region, value = exports_adj) %>%
+      select(year, Exporter_Region_Agg, GCAM_region, value = imports_adj) %>%
       add_title("Gross BILATERAL (OECD and non-OECD) trade of semi-finished and finished steel, by region / year") %>%
       add_units("Mt") %>%
       add_comments("Determined from WSA steel production, consumption, imports, and exports data; only includes trade between countries in different GCAM regions") %>%

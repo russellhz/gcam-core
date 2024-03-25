@@ -1,0 +1,18 @@
+# File: A_irnstl_TradedTechnology_bilateral.csv,,,,,,,
+# Title: Technology-level assumptions of traded iron and steel markets,,,,,,,
+# Units: Various,,,,,,,
+# Comments: for traded fuels, each subsector has only one technology; there is no technology-level competition,,,,,,
+# Source: NA,,,,,,,
+# Column types: ccccnnni,,,,,,,
+# ----------,,,,,,,
+supplysector,subsector,technology,minicam.energy.input,coefficient,input.cost,share.weight,traded
+traded low-carbon iron and steel_nonOECD,traded low-carbon iron and steel_nonOECD,traded low-carbon iron and steel_nonOECD,iron and steel,1,0,1,1
+traded low-carbon iron and steel_nonOECD,traded low-carbon iron and steel_nonOECD,traded low-carbon iron and steel_nonOECD,Low-carbon iron and steel,1,0,1,1
+traded med-carbon iron and steel_nonOECD,traded med-carbon iron and steel_nonOECD,traded med-carbon iron and steel_nonOECD,iron and steel,1,0,1,1
+traded med-carbon iron and steel_nonOECD,traded med-carbon iron and steel_nonOECD,traded med-carbon iron and steel_nonOECD,Med-carbon iron and steel,1,0,1,1
+traded high-carbon iron and steel_nonOECD,traded high-carbon iron and steel_nonOECD,traded high-carbon iron and steel_nonOECD,iron and steel,1,0,1,1
+traded low-carbon iron and steel_OECD,traded low-carbon iron and steel_OECD,traded low-carbon iron and steel_OECD,iron and steel,1,0,1,1
+traded low-carbon iron and steel_OECD,traded low-carbon iron and steel_OECD,traded low-carbon iron and steel_OECD,Low-carbon iron and steel,1,0,1,1
+traded med-carbon iron and steel_OECD,traded med-carbon iron and steel_OECD,traded med-carbon iron and steel_OECD,iron and steel,1,0,1,1
+traded med-carbon iron and steel_OECD,traded med-carbon iron and steel_OECD,traded med-carbon iron and steel_OECD,Med-carbon iron and steel,1,0,1,1
+traded high-carbon iron and steel_OECD,traded high-carbon iron and steel_OECD,traded high-carbon iron and steel_OECD,iron and steel,1,0,1,1
