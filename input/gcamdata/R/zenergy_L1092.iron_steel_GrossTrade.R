@@ -24,9 +24,11 @@ module_energy_L1092.iron_steel_GrossTrade <- function(command, ...){
              FILE = "energy/mappings/comtrade_countrycode_ISO",
              FILE = "energy/Rt_iron_steel_bilateral_trade",
              FILE = "common/GCAM_region_names",
-             FILE = "common/iso_GCAM_regID"))
+             FILE = "common/iso_GCAM_regID",
+             FILE = "energy/A_irnstl_regions"))
   } else if(command == driver.DECLARE_OUTPUTS) {
-    return(c("LB1092.Tradebalance_iron_steel_Mt_R_Y"))
+    return(c("LB1092.Tradebalance_iron_steel_Mt_R_Y",
+             "LB1092.Tradebalance_iron_steel_Mt_R_Y_OECD_bilateral"))
   } else if(command == driver.MAKE) {
 
     Country <- GCAM_region <- Metric <- '1970' <-'1971' <- '1972' <- '1973' <- '1974' <- '1975' <-
@@ -47,7 +49,7 @@ module_energy_L1092.iron_steel_GrossTrade <- function(command, ...){
     comtrade_countrycode_ISO <- get_data(all_data, "energy/mappings/comtrade_countrycode_ISO",strip_attributes = TRUE)
     Rt_iron_steel_bilateral_trade_data <- get_data(all_data, "energy/Rt_iron_steel_bilateral_trade",strip_attributes = TRUE) %>%
       filter(Year %in% c("2000",MODEL_BASE_YEARS))
-
+    A_irnstl_regions <- get_data(all_data, "energy/A_irnstl_regions")
 
     # Bind iron and steel production, consumption, and trade data
     # Convert data from wide to long format, and adjust units
@@ -158,7 +160,7 @@ module_energy_L1092.iron_steel_GrossTrade <- function(command, ...){
       left_join(comtrade_countrycode_ISO,by=c("Country_Name"))%>%
       mutate(iso=tolower(iso)) %>%
       left_join(iso_GCAM_regID,by=c("iso")) %>%
-      left_join(GCAM_region_names,by=c("GCAM_region_ID"))%>%
+      left_join(GCAM_region_names,by=c("GCAM_region_ID")) %>%
       rename(Exporter_Region = region, Exporter_Country = Country_Name,Country_Name=Importer)%>%
       select(Exporter_Country,Country_Name,`Importer ISO3`,Resource,Year,Value,Weight,Exporter_Region)%>%
       left_join(comtrade_countrycode_ISO,by=c("Country_Name"))%>%
@@ -196,7 +198,7 @@ module_energy_L1092.iron_steel_GrossTrade <- function(command, ...){
       left_join(intra_regional_trade_pct,by=c("year","GCAM_region")) %>%
       mutate(percent_trade=ifelse(is.na(percent_trade),temp_percent_trade,percent_trade),
              intra_exports=value*percent_trade/100,
-             intra_exports=ifelse(is.na(intra_exports),0,intra_exports))%>%
+             intra_exports=ifelse(is.na(intra_exports),0,intra_exports)) %>%
       select(GCAM_region,year,intra_exports)-> intra_regional_trade_Mt_R_Y
 
     #remove intra region trade from imports and exports and add this amount to domestic supply
@@ -206,6 +208,81 @@ module_energy_L1092.iron_steel_GrossTrade <- function(command, ...){
              value=ifelse(metric %in% c("domestic_supply"),value+intra_exports,value))%>%
       select(-intra_exports)-> LB1092.Tradebalance_iron_steel_Mt_R_Y
 
+    # OECD Bilateral Trade -------------------------------------------------------------------------
+    intra_regional_trade_Agg <- intra_regional_trade %>% ungroup %>%
+      filter(Exporter_Region != Importer_Region,
+             !is.na(Exporter_Region),
+             !is.na(Importer_Region)) %>%
+      left_join_error_no_match(A_irnstl_regions, by = c("Exporter_Region" = "region")) %>%
+      left_join_error_no_match(A_irnstl_regions, by = c("Importer_Region" = "region")) %>%
+      rename(Exporter_Region_Agg = sector.x, Importer_Region_Agg = sector.y)
+
+    # give Taiwan same values as China
+    intra_regional_trade_Agg <- intra_regional_trade_Agg %>%
+      filter(Importer_Region == "China") %>%
+      mutate(Importer_Region = "Taiwan") %>%
+      bind_rows(intra_regional_trade_Agg)
+
+    LB1092.Export_Totals <- LB1092.Tradebalance_iron_steel_Mt_R_Y %>%
+      filter(metric == "exports_reval") %>%
+      left_join_error_no_match(A_irnstl_regions, by = c("GCAM_region" = "region")) %>%
+      group_by(Exporter_Region_Agg = sector, year) %>%
+      summarise(exports = sum(value)) %>%
+      ungroup
+
+    LB1092.R_Import_Share <- LB1092.Tradebalance_iron_steel_Mt_R_Y %>%
+      filter(metric == "imports_reval") %>%
+      group_by(year) %>%
+      mutate(reg_import_share = value/sum(value)) %>%
+      ungroup %>%
+      select(-metric, -value)
+
+    # Only need to divide imports between OECD and non-OECD
+    # Since exports automatically go to correct category
+    # Methodology: Apply OECD share to GCAM calibrated imports, then adjust based on share of total imports
+    # Need total imports from each group to match total exports from each group
+    bilateral_imports_Agg <- intra_regional_trade_Agg %>%
+      # first calculate imports from OECD and nonOECD in each region
+      group_by(year = Year, Exporter_Region_Agg, GCAM_region = Importer_Region) %>%
+      summarise(Weight = sum(Weight)) %>%
+      group_by(Exporter_Region_Agg, GCAM_region) %>%
+      # extend back to GCAM historical years
+      complete(nesting(Exporter_Region_Agg, GCAM_region), year = sort(union(MODEL_BASE_YEARS, intra_regional_trade_Agg$Year))) %>%
+      mutate(Weight = approx_fun(year, Weight, rule = 2)) %>%
+      # then calculate shares
+      group_by(year, GCAM_region) %>%
+      mutate(import_share = Weight / sum(Weight)) %>%
+      ungroup %>%
+      # now multiply by GCAM calibration of imports
+      left_join_error_no_match(LB1092.Tradebalance_iron_steel_Mt_R_Y %>%  filter(metric == "imports_reval"), by = c("year", "GCAM_region")) %>%
+      mutate(imports_unadj = value * import_share) %>%
+      # add difference between total exports from each group in calibration and implied from unadjusted
+      left_join_error_no_match(LB1092.Export_Totals, by = c("year", "Exporter_Region_Agg")) %>%
+      group_by(year, Exporter_Region_Agg) %>%
+      mutate(exports_unadj = sum(imports_unadj)) %>%
+      ungroup %>%
+      # Add the difference multiplied by percent of imports of region
+      left_join_error_no_match(LB1092.R_Import_Share, by = c("year", "GCAM_region")) %>%
+      mutate(imports_adj = imports_unadj + reg_import_share * (exports - exports_unadj)) %>%
+      # confirm that adjusted exports match calibrated
+      group_by(year, Exporter_Region_Agg) %>%
+      mutate(exports_adj = sum(imports_adj)) %>%
+      ungroup
+
+    stopifnot(all(round(bilateral_imports_Agg$exports, energy.DIGITS_CALOUTPUT) == round(bilateral_imports_Agg$exports_adj, energy.DIGITS_CALOUTPUT)))
+
+    LB1092.Tradebalance_iron_steel_Mt_R_Y_OECD_bilateral <- bilateral_imports_Agg %>%
+      select(year, Exporter_Region_Agg, GCAM_region, value = exports_adj) %>%
+      add_title("Gross BILATERAL (OECD and non-OECD) trade of semi-finished and finished steel, by region / year") %>%
+      add_units("Mt") %>%
+      add_comments("Determined from WSA steel production, consumption, imports, and exports data; only includes trade between countries in different GCAM regions") %>%
+      add_precursors("energy/WSA_steel_prod_cons_1970_2018",
+                     "energy/WSA_steel_trade_1970_2018",
+                     "energy/mappings/WSA_gcam_mapping",
+                     "energy/mappings/comtrade_countrycode_ISO",
+                     "energy/Rt_iron_steel_bilateral_trade",
+                     "common/GCAM_region_names",
+                     "common/iso_GCAM_regID")
 
     # Produce outputs
     LB1092.Tradebalance_iron_steel_Mt_R_Y %>%
@@ -220,7 +297,7 @@ module_energy_L1092.iron_steel_GrossTrade <- function(command, ...){
                      "common/GCAM_region_names",
                      "common/iso_GCAM_regID") -> LB1092.Tradebalance_iron_steel_Mt_R_Y
 
-    return_data(LB1092.Tradebalance_iron_steel_Mt_R_Y)
+    return_data(LB1092.Tradebalance_iron_steel_Mt_R_Y, LB1092.Tradebalance_iron_steel_Mt_R_Y_OECD_bilateral)
 
   } else {
     stop("Unknown command")
