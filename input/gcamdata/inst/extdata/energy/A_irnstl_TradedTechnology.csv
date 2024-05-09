@@ -7,12 +7,12 @@
 # ----------,,,,,,,
 supplysector,subsector,technology,minicam.energy.input,coefficient,input.cost,share.weight,traded
 traded low-carbon iron and steel,traded low-carbon iron and steel,traded low-carbon iron and steel,iron and steel,1,0,1,1
-traded low-carbon iron and steel,traded low-carbon iron and steel,traded low-carbon iron and steel,Low-carbon iron and steel,1,0,1,1
 traded med-carbon iron and steel,traded med-carbon iron and steel,traded med-carbon iron and steel,iron and steel,1,0,1,1
 traded med-carbon iron and steel,traded med-carbon iron and steel,traded med-carbon iron and steel,Med-carbon iron and steel,1,0,1,1
 traded high-carbon iron and steel,traded high-carbon iron and steel,traded high-carbon iron and steel,iron and steel,1,0,1,1
+traded high-carbon iron and steel,traded high-carbon iron and steel,traded high-carbon iron and steel,High-carbon iron and steel,1,0,1,1
 traded low-carbon iron and steel_OECD,traded low-carbon iron and steel_OECD,traded low-carbon iron and steel_OECD,iron and steel,1,0,1,1
-traded low-carbon iron and steel_OECD,traded low-carbon iron and steel_OECD,traded low-carbon iron and steel_OECD,Low-carbon iron and steel,1,0,1,1
 traded med-carbon iron and steel_OECD,traded med-carbon iron and steel_OECD,traded med-carbon iron and steel_OECD,iron and steel,1,0,1,1
 traded med-carbon iron and steel_OECD,traded med-carbon iron and steel_OECD,traded med-carbon iron and steel_OECD,Med-carbon iron and steel,1,0,1,1
 traded high-carbon iron and steel_OECD,traded high-carbon iron and steel_OECD,traded high-carbon iron and steel_OECD,iron and steel,1,0,1,1
+traded high-carbon iron and steel_OECD,traded high-carbon iron and steel_OECD,traded high-carbon iron and steel_OECD,High-carbon iron and steel,1,0,1,1

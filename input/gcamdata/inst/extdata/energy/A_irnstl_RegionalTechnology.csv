@@ -7,10 +7,10 @@
 # ----------,,,,,,,
 supplysector,subsector,technology,minicam.energy.input,coefficient,input.cost,share.weight,market.name
 regional iron and steel,domestic iron and steel,domestic low-carbon iron and steel,iron and steel,1,0,1,regional
-regional iron and steel,domestic iron and steel,domestic low-carbon iron and steel,Low-carbon iron and steel,1,0,1,regional
 regional iron and steel,domestic iron and steel,domestic med-carbon iron and steel,iron and steel,1,0,1,regional
 regional iron and steel,domestic iron and steel,domestic med-carbon iron and steel,Med-carbon iron and steel,1,0,1,regional
 regional iron and steel,domestic iron and steel,domestic high-carbon iron and steel,iron and steel,1,0,1,regional
+regional iron and steel,domestic iron and steel,domestic high-carbon iron and steel,High-carbon iron and steel,1,0,1,regional
 regional iron and steel,imported iron and steel,imported low-carbon iron and steel,traded low-carbon iron and steel,1,0,1,USA
 regional iron and steel,imported iron and steel,imported med-carbon iron and steel,traded med-carbon iron and steel,1,0,1,USA
 regional iron and steel,imported iron and steel,imported high-carbon iron and steel,traded high-carbon iron and steel,1,0,1,USA
