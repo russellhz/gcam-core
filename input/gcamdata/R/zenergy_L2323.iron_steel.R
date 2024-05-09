@@ -547,7 +547,8 @@ module_energy_L2323.iron_steel <- function(command, ...) {
       mutate(constraint = 1,
              price.unit = "1975$/kg",
              output.unit = "Mt",
-             market = region) %>%
+             market = region,
+             min.price = -100) %>%
       repeat_add_columns(tibble(policy.portfolio.standard = unique(A323.globaltech_secout$res.secondary.output)))
 
     # ===================================================
