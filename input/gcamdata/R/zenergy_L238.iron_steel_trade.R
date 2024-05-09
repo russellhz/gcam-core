@@ -64,7 +64,8 @@ module_energy_L238.iron_steel_trade <- function(command, ...) {
     A_irnstl_TradedTechnology <- get_data(all_data, "energy/A_irnstl_TradedTechnology", strip_attributes = TRUE)
     LB1092.Tradebalance_iron_steel_Mt_R_Y <- get_data(all_data, "LB1092.Tradebalance_iron_steel_Mt_R_Y")
     L2323.StubTechProd_iron_steel <- get_data(all_data, "L2323.StubTechProd_iron_steel")
-    A323.globaltech_secout <- get_data(all_data, "energy/A323.globaltech_secout")
+    A323.globaltech_secout <- get_data(all_data, "energy/A323.globaltech_secout") %>%
+      filter(res.secondary.output != "High-carbon iron and steel")
 
     # 1. TRADED SECTOR / SUBSECTOR / TECHNOLOGY") ---------------------
     # L238.Supplysector_tra: generic supplysector info for traded iron and steel
