@@ -37,7 +37,6 @@ module_energy_L2323.iron_steel <- function(command, ...) {
              FILE = "energy/A323.globaltech_shrwt",
              FILE = "energy/A323.globaltech_co2capture",
              FILE = "energy/A323.globaltech_retirement",
-             FILE = "energy/A323.globaltech_secout",
              FILE = "energy/A323.demand",
              FILE = "energy/A323.capital_cost_adders",
              FILE = "energy/A323.ccs_adders",
@@ -66,15 +65,12 @@ module_energy_L2323.iron_steel <- function(command, ...) {
              "L2323.GlobalTechSCurve_en",
              "L2323.GlobalTechLifetime_en",
              "L2323.GlobalTechProfitShutdown_en",
-             "L2323.GlobalTechSecOut_iron_steel",
              "L2323.StubTechProd_iron_steel",
              "L2323.StubTechCoef_iron_steel",
              "L2323.StubTechCost_iron_steel",
              "L2323.PerCapitaBased_iron_steel",
              "L2323.BaseService_iron_steel",
-			       "L2323.PriceElasticity_iron_steel",
-			       "L2323.Rsrc_iron_steel",
-			       "L2323.RsrcPrice_iron_steel"
+			       "L2323.PriceElasticity_iron_steel"
 			       ))
   } else if(command == driver.MAKE) {
 
@@ -91,7 +87,6 @@ module_energy_L2323.iron_steel <- function(command, ...) {
     A323.globaltech_shrwt <- get_data(all_data, "energy/A323.globaltech_shrwt", strip_attributes = TRUE)
     A323.globaltech_co2capture <- get_data(all_data, "energy/A323.globaltech_co2capture", strip_attributes = TRUE)
     A323.globaltech_retirement <- get_data(all_data, "energy/A323.globaltech_retirement", strip_attributes = TRUE)
-    A323.globaltech_secout  <- get_data(all_data, "energy/A323.globaltech_secout")
     A323.demand <- get_data(all_data, "energy/A323.demand", strip_attributes = TRUE)
     A323.capital_cost_adders <- get_data(all_data, "energy/A323.capital_cost_adders", strip_attributes = TRUE)
     A323.ccs_adders <- get_data(all_data, "energy/A323.ccs_adders", strip_attributes = TRUE)
@@ -388,18 +383,6 @@ module_energy_L2323.iron_steel <- function(command, ...) {
       select(LEVEL2_DATA_NAMES[['GlobalTechTrackCapital']]) ->
       L2323.GlobalTechTrackCapital_iron_steel
 
-    # L2323.GlobalTechSecOut_iron_steel: Global tech secondary output for separating high and low carbon steel
-    L2323.GlobalTechSecOut_iron_steel <- A323.globaltech_secout %>%
-      gather_years %>%
-      complete(nesting(supplysector, subsector, technology, res.secondary.output), year = c(year, MODEL_YEARS)) %>%
-      arrange(supplysector, subsector, technology, res.secondary.output, year) %>%
-      group_by(supplysector, subsector, technology, res.secondary.output) %>%
-      mutate(output.ratio = approx_fun(year, value, rule = 1)) %>%
-      ungroup %>%
-      rename(sector.name = supplysector,
-             subsector.name = subsector) %>%
-      select(LEVEL2_DATA_NAMES[["GlobalTechRESSecOut"]])
-
     # Calibration and region-specific data --------------------
     # L2323.StubTechProd_iron_steel: calibrated iron_steel production
     calibrated_techs %>%
@@ -504,28 +487,6 @@ module_energy_L2323.iron_steel <- function(command, ...) {
       repeat_add_columns(tibble(year = MODEL_FUTURE_YEARS)) %>%
       select(LEVEL2_DATA_NAMES[["PriceElasticity"]]) ->
       L2323.PriceElasticity_iron_steel
-
-    # L2323.Rsrc_iron_steel: secondary output resource
-    # Only want price for resources that are used that year/region
-    resource_rgn_years <- L2323.StubTechProd_iron_steel %>%
-      filter(calOutputValue > 0) %>%
-      right_join(A323.globaltech_secout %>% dplyr::select_if(is.character),
-                               by = c("supplysector", "subsector", "stub.technology" = "technology")) %>%
-      distinct(region, year, res.secondary.output)
-
-
-    A323.rsrc_info %>%
-      repeat_add_columns(GCAM_region_names) %>%
-      select(region, resource, output.unit = "output-unit", price.unit = "price-unit", market) %>%
-      mutate(market = region) -> L2323.Rsrc_iron_steel
-
-    # Resource prices artificially created
-    L2323.Rsrc_iron_steel %>%
-      select(region, resource) %>%
-      repeat_add_columns(tibble(year = MODEL_BASE_YEARS)) %>%
-      semi_join(resource_rgn_years, by = c("region", "year", "resource" = "res.secondary.output")) %>%
-      mutate(price = 0.001) ->
-      L2323.RsrcPrice_iron_steel
 
 
     # ===================================================
@@ -682,13 +643,6 @@ module_energy_L2323.iron_steel <- function(command, ...) {
         L2323.GlobalTechProfitShutdown_en
     }
 
-    L2323.GlobalTechSecOut_iron_steel %>%
-      add_title("Global tech secondary output to set up iron and steel trade policies") %>%
-      add_units("Unitless") %>%
-      add_precursors("energy/A323.globaltech_secout") ->
-      L2323.GlobalTechSecOut_iron_steel
-
-
     L2323.StubTechProd_iron_steel %>%
       add_title("calibrated iron and steel production") %>%
       add_units("Mt") %>%
@@ -729,29 +683,16 @@ module_energy_L2323.iron_steel <- function(command, ...) {
       add_precursors("energy/A323.demand", "common/GCAM_region_names") ->
       L2323.PriceElasticity_iron_steel
 
-    L2323.Rsrc_iron_steel %>%
-      add_title("Resource for high and low carbon iron and steel", overwrite = T) %>%
-      add_units("Unitless") %>%
-      add_precursors("energy/A323.rsrc_info", "common/GCAM_region_names") ->
-      L2323.Rsrc_iron_steel
-
-    L2323.RsrcPrice_iron_steel %>%
-      add_title("Resource prices for high and low carbon iron and steel", overwrite = T) %>%
-      add_units("Unitless") %>%
-      add_precursors("energy/A323.rsrc_info", "common/GCAM_region_names") ->
-      L2323.RsrcPrice_iron_steel
-
 
       return_data(L2323.Supplysector_iron_steel, L2323.FinalEnergyKeyword_iron_steel, L2323.SubsectorLogit_iron_steel,
                   L2323.SubsectorShrwtFllt_iron_steel,L2323.SubsectorInterp_iron_steel,
                   L2323.StubTech_iron_steel, L2323.GlobalTechShrwt_iron_steel,
                   L2323.GlobalTechCoef_iron_steel, L2323.GlobalTechCost_iron_steel, L2323.GlobalTechCapture_iron_steel, L2323.GlobalTechShutdown_en,
-                  L2323.GlobalTechSCurve_en, L2323.GlobalTechLifetime_en, L2323.GlobalTechProfitShutdown_en, L2323.GlobalTechSecOut_iron_steel,
+                  L2323.GlobalTechSCurve_en, L2323.GlobalTechLifetime_en, L2323.GlobalTechProfitShutdown_en,
                   L2323.StubTechProd_iron_steel, L2323.StubTechCoef_iron_steel,
                   L2323.PerCapitaBased_iron_steel, L2323.BaseService_iron_steel,
                   L2323.PriceElasticity_iron_steel,L2323.StubTechCost_iron_steel,
-                  L2323.GlobalTechTrackCapital_iron_steel,
-                  L2323.Rsrc_iron_steel, L2323.RsrcPrice_iron_steel)
+                  L2323.GlobalTechTrackCapital_iron_steel)
   } else {
     stop("Unknown command")
   }
