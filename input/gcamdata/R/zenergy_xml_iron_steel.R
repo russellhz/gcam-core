@@ -31,11 +31,7 @@ module_energy_iron_steel_xml <- function(command, ...) {
              "L2323.StubTechCoef_iron_steel",
              "L2323.PerCapitaBased_iron_steel",
              "L2323.BaseService_iron_steel",
-             "L2323.PriceElasticity_iron_steel",
-             "L2323.Rsrc_iron_steel",
-             "L2323.RsrcPrice_iron_steel",
-             "L2323.CreditMkt"))
-             #"L2323.StubTechCalPrice_en"))
+             "L2323.PriceElasticity_iron_steel"))
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(c(XML = "iron_steel.xml"))
   } else if(command == driver.MAKE) {
@@ -63,11 +59,6 @@ module_energy_iron_steel_xml <- function(command, ...) {
     L2323.PerCapitaBased_iron_steel <- get_data(all_data, "L2323.PerCapitaBased_iron_steel")
     L2323.BaseService_iron_steel <- get_data(all_data, "L2323.BaseService_iron_steel")
     L2323.PriceElasticity_iron_steel <- get_data(all_data, "L2323.PriceElasticity_iron_steel")
-    L2323.Rsrc_iron_steel  <- get_data(all_data, "L2323.Rsrc_iron_steel")
-    L2323.RsrcPrice_iron_steel <- get_data(all_data, "L2323.RsrcPrice_iron_steel")
-    # L2323.StubTechCalPrice_en <- get_data(all_data, "L2323.StubTechCalPrice_en")
-    L2323.CreditMkt <- get_data(all_data, "L2323.CreditMkt") %>%
-      mutate(constraint = if_else(region == "China", 1, 0))
     # ===================================================
 
     # Produce outputs
@@ -91,14 +82,9 @@ module_energy_iron_steel_xml <- function(command, ...) {
       add_xml_data(L2323.StubTechCost_iron_steel, "StubTechCost") %>%
       add_xml_data(L2323.StubTechProd_iron_steel, "StubTechProd") %>%
       add_xml_data(L2323.StubTechCoef_iron_steel, "StubTechCoef") %>%
-      add_xml_data(L2323.CreditMkt, "PortfolioStd") %>%
-      add_xml_data(L2323.CreditMkt, "PortfolioStdMinPrice") %>%
-      # add_xml_data(L2323.StubTechCalPrice_en, "StubTechCalPrice") %>%
       add_xml_data(L2323.PerCapitaBased_iron_steel, "PerCapitaBased") %>%
       add_xml_data(L2323.BaseService_iron_steel, "BaseService") %>%
       add_xml_data(L2323.PriceElasticity_iron_steel, "PriceElasticity") %>%
-      # add_xml_data(L2323.Rsrc_iron_steel, "Rsrc") %>%
-      # add_xml_data(L2323.RsrcPrice_iron_steel, "RsrcPrice") %>%
       add_precursors("L2323.Supplysector_iron_steel", "L2323.FinalEnergyKeyword_iron_steel", "L2323.SubsectorLogit_iron_steel",
                      "L2323.SubsectorShrwtFllt_iron_steel",
                      "L2323.SubsectorInterp_iron_steel",

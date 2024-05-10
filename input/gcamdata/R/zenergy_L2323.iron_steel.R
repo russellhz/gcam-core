@@ -68,16 +68,13 @@ module_energy_L2323.iron_steel <- function(command, ...) {
              "L2323.GlobalTechProfitShutdown_en",
              "L2323.GlobalTechSecOut_iron_steel",
              "L2323.StubTechProd_iron_steel",
-             #"L2323.StubTechCalInput_iron_steel",
              "L2323.StubTechCoef_iron_steel",
              "L2323.StubTechCost_iron_steel",
              "L2323.PerCapitaBased_iron_steel",
              "L2323.BaseService_iron_steel",
 			       "L2323.PriceElasticity_iron_steel",
 			       "L2323.Rsrc_iron_steel",
-			       "L2323.RsrcPrice_iron_steel",
-			       "L2323.CreditMkt"
-			       # "L2323.StubTechCalPrice_en"
+			       "L2323.RsrcPrice_iron_steel"
 			       ))
   } else if(command == driver.MAKE) {
 
@@ -134,12 +131,12 @@ module_energy_L2323.iron_steel <- function(command, ...) {
         # GCAM estimates cost of coke in energy costs
         filter(!(Component%in%c("Coke"))) %>%
         # map TZ countries with oecd classification
-        left_join(TZ_steel_cost_oecd_mapping,by=c("Country")) -> TZ_steel_production_costs
+        left_join(TZ_steel_cost_oecd_mapping,by=c("Country")) -> TZ_steel_production_costs_non_energy
 
     # Function to aggregate steel production data by Country or OECD regions
     aggregate_steel_production_costs <- function(data,agg_region) {
 
-        TZ_steel_production_costs %>%
+      data %>%
         # estimate total costs by Plant ID across countries
         group_by(subsector,Plant_ID,year)%>%
         mutate(value=sum(value)) %>%
@@ -147,19 +144,19 @@ module_energy_L2323.iron_steel <- function(command, ...) {
         # calculate mean costs by country for EAF and BF-BOF
         group_by({{agg_region}},subsector,year)%>%
         summarize(value=mean(value)) %>%
-        mutate(subsector=if_else(subsector=="EAF","EAF with scrap",subsector),
-               subsector=if_else(subsector=="BF-BOF","BLASTFUR",subsector)) -> all_steel_production_costs
+        mutate(subsector=if_else(subsector=="EAF","EAF_scrap_fossil_NG_finish", subsector),
+               subsector=if_else(subsector=="BF-BOF","BF_BOF",subsector)) -> all_steel_production_costs
 
       return(all_steel_production_costs)
     }
 
     # Calculate the average steel production costs by sub sector for OECD and non-OECD countries
-    oecd_steel_production_costs <- aggregate_steel_production_costs(data=TZ_steel_production_costs,agg_region=OECD_mapping) %>%
+    oecd_steel_production_costs <- aggregate_steel_production_costs(data=TZ_steel_production_costs_non_energy, agg_region=OECD_mapping) %>%
       rename(Country=OECD_mapping)
 
     # Calculate average steel production costs by sub sector for countries in transition zero database and combine
     # with OECD average data
-    all_steel_production_costs <- rbind(aggregate_steel_production_costs(data=TZ_steel_production_costs,agg_region=Country),
+    all_steel_production_costs <- rbind(aggregate_steel_production_costs(data=TZ_steel_production_costs_non_energy,agg_region=Country),
                                             oecd_steel_production_costs) %>%
       ungroup
 
@@ -176,10 +173,10 @@ module_energy_L2323.iron_steel <- function(command, ...) {
              input.cost = round(input.cost, energy.DIGITS_COST)) %>%
       ungroup %>%
       filter(year %in% c(MODEL_BASE_YEARS, MODEL_FUTURE_YEARS)) %>%
-      mutate(reference_subsector = if_else(subsector %in% c("EAF with DRI", "EAF with scrap"),
-                                           "EAF with scrap", "BLASTFUR")) %>%
+      mutate(reference_subsector = if_else(grepl("^EAF|^DRI_EAF", subsector),
+                                           "EAF_scrap_fossil_NG_finish", "BF_BOF")) %>%
       # now get ratio to either BF_BOF or EAF_scrap_fossil
-      mutate(ratio = if_else(reference_subsector == "EAF with scrap",
+      mutate(ratio = if_else(reference_subsector == "EAF_scrap_fossil_NG_finish",
                              input.cost / input.cost[technology == "EAF_scrap_fossil_NG_finish" &
                                                        year == unique(all_steel_production_costs$year)],
                              input.cost / input.cost[technology == "BF_BOF" &
@@ -194,13 +191,12 @@ module_energy_L2323.iron_steel <- function(command, ...) {
       mutate(capital_cost_frac = approx_fun(year, capital_cost_frac) ) %>%
       ungroup
 
-    all_steel_production_costs <-  TZ_steel_cost_gcam_mapping%>%
-      left_join(all_steel_production_costs,by=c("Country")) %>%
-      mutate(supplysector="iron and steel") %>%
+    all_steet_prod_costs_T_Y <-  TZ_steel_cost_gcam_mapping %>%
+      left_join(all_steel_production_costs, by = c("Country")) %>%
       select(-year) %>%
       gcamdata::repeat_add_columns(tibble(year = MODEL_YEARS)) %>%
       right_join(non_capital_cost_ratio,
-                 by = c("year", "supplysector", "subsector" = "reference_subsector")) %>%
+                 by = c("year", "subsector" = "reference_subsector")) %>%
       mutate(value = value * ratio  * gdp_deflator(2015, base_year = 2019)) %>%
       select(-subsector, -ratio, -Country) %>%
       rename(subsector = subsector.y) %>%
@@ -213,7 +209,7 @@ module_energy_L2323.iron_steel <- function(command, ...) {
       select(supplysector,subsector,region,year,stub.technology = technology,minicam.non.energy.input,value)
 
     #complete subsector and technology nesting across model years
-    all_steel_production_costs %>%
+    all_steet_prod_costs_T_Y %>%
       rename(input.cost=value) %>%
       filter(year %in% c(MODEL_BASE_YEARS, MODEL_FUTURE_YEARS)) %>%
       select(LEVEL2_DATA_NAMES[["StubTechCost"]]) ->
@@ -410,20 +406,20 @@ module_energy_L2323.iron_steel <- function(command, ...) {
       filter(calibration == "output") %>% # Only take the tech IDs where the calibration is identified as output
       select(sector, subsector, technology) %>%
       distinct %>%
-      filter(sector == "iron and steel") %>%
+      filter(sector %in% A323.sector$supplysector) %>%
       repeat_add_columns(distinct(GCAM_region_names, region)) %>%
       repeat_add_columns(tibble(year = MODEL_BASE_YEARS)) ->
       calibrated_techs_export # temporary tibble
 
     L1323.out_Mt_R_iron_steel_Yh %>%
       filter(year %in% MODEL_BASE_YEARS) %>%
-      mutate(calOutputValue = round(value, energy.DIGITS_CALOUTPUT), sector = "iron and steel") %>%
+      mutate(calOutputValue = round(value, energy.DIGITS_CALOUTPUT), sector = subsector) %>%
       left_join(GCAM_region_names, by = "GCAM_region_ID") %>%
       # add in all techs, set to zero if not included
       right_join(calibrated_techs_export, by = c("region", "sector", "subsector", "technology", "year")) %>%
       tidyr::replace_na(list(calOutputValue = 0)) %>%
       mutate(stub.technology = technology,
-             supplysector = "iron and steel",
+             supplysector = sector,
              share.weight.year = year,
              subs.share.weight = 1,
              tech.share.weight = if_else(stub.technology %in% energy.CALIBRATED_STEEL_TECHS | calOutputValue > 0, 1, 0)) %>%
@@ -440,7 +436,7 @@ module_energy_L2323.iron_steel <- function(command, ...) {
     L1323.IO_GJkg_R_iron_steel_F_Yh %>%
       left_join(GCAM_region_names, by = "GCAM_region_ID") %>%
       mutate(fuel = stringr::str_to_lower(fuel)) %>%
-      left_join(calibrated_techs, by = c("supplysector", "subsector", "technology", "fuel")) %>%
+      left_join(calibrated_techs %>%  select(-supplysector), by = c("supplysector" = "sector", "subsector", "technology", "fuel")) %>%
       mutate(coefficient = round(coefficient, energy.DIGITS_COEFFICIENT),
              stub.technology = technology,
              market.name = region) %>%
@@ -531,25 +527,6 @@ module_energy_L2323.iron_steel <- function(command, ...) {
       mutate(price = 0.001) ->
       L2323.RsrcPrice_iron_steel
 
-    # L2323.StubTechCalPrice_en <- L2323.GlobalTechSecOut_iron_steel %>%
-    #   rename(supplysector = sector.name, subsector = subsector.name,
-    #          stub.technology = technology) %>%
-    #   mutate(calPrice = 0.001) %>%
-    #   select(-output.ratio) %>%
-    #   left_join(L2323.RsrcPrice_iron_steel %>% distinct(region, resource, year),
-    #             by = c("year", "res.secondary.output" = "resource")) %>%
-    #   na.omit()
-
-    # Set up RES market
-    L2323.CreditMkt <- tibble(region = GCAM_region_names$region,
-           policyType = "RES") %>%
-      repeat_add_columns(tibble(year = MODEL_FUTURE_YEARS)) %>%
-      mutate(constraint = 1,
-             price.unit = "1975$/kg",
-             output.unit = "Mt",
-             market = region,
-             min.price = -100) %>%
-      repeat_add_columns(tibble(policy.portfolio.standard = unique(A323.globaltech_secout$res.secondary.output)))
 
     # ===================================================
     # Produce outputs
@@ -764,17 +741,6 @@ module_energy_L2323.iron_steel <- function(command, ...) {
       add_precursors("energy/A323.rsrc_info", "common/GCAM_region_names") ->
       L2323.RsrcPrice_iron_steel
 
-    L2323.CreditMkt  %>%
-      add_title("Portfolio standard markets", overwrite = T) %>%
-      add_units("Unitless") %>%
-      add_precursors("") ->
-      L2323.CreditMkt
-
-    # L2323.StubTechCalPrice_en %>%
-    #   add_title("Resource prices for high and low carbon iron and steel", overwrite = T) %>%
-    #   add_units("Unitless") %>%
-    #   add_precursors("energy/A323.rsrc_info", "common/GCAM_region_names") ->
-    #   L2323.StubTechCalPrice_en
 
       return_data(L2323.Supplysector_iron_steel, L2323.FinalEnergyKeyword_iron_steel, L2323.SubsectorLogit_iron_steel,
                   L2323.SubsectorShrwtFllt_iron_steel,L2323.SubsectorInterp_iron_steel,
@@ -785,7 +751,7 @@ module_energy_L2323.iron_steel <- function(command, ...) {
                   L2323.PerCapitaBased_iron_steel, L2323.BaseService_iron_steel,
                   L2323.PriceElasticity_iron_steel,L2323.StubTechCost_iron_steel,
                   L2323.GlobalTechTrackCapital_iron_steel,
-                  L2323.Rsrc_iron_steel, L2323.RsrcPrice_iron_steel, L2323.CreditMkt) #, L2323.StubTechCalPrice_en)
+                  L2323.Rsrc_iron_steel, L2323.RsrcPrice_iron_steel)
   } else {
     stop("Unknown command")
   }

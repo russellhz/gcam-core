@@ -6,14 +6,31 @@
 # Column types: ccccnnnc,,,,,,,
 # ----------,,,,,,,
 supplysector,subsector,technology,minicam.energy.input,coefficient,input.cost,share.weight,market.name
-regional iron and steel,domestic iron and steel,domestic low-carbon iron and steel,iron and steel,1,0,1,regional
-regional iron and steel,domestic iron and steel,domestic low-carbon iron and steel,Low-carbon iron and steel,1,0,1,regional
-regional iron and steel,domestic iron and steel,domestic med-carbon iron and steel,iron and steel,1,0,1,regional
-regional iron and steel,domestic iron and steel,domestic med-carbon iron and steel,Med-carbon iron and steel,1,0,1,regional
-regional iron and steel,domestic iron and steel,domestic high-carbon iron and steel,iron and steel,1,0,1,regional
 regional iron and steel,imported iron and steel,imported low-carbon iron and steel,traded low-carbon iron and steel,1,0,1,USA
 regional iron and steel,imported iron and steel,imported med-carbon iron and steel,traded med-carbon iron and steel,1,0,1,USA
 regional iron and steel,imported iron and steel,imported high-carbon iron and steel,traded high-carbon iron and steel,1,0,1,USA
 regional iron and steel,imported iron and steel,imported low-carbon iron and steel_OECD,traded low-carbon iron and steel_OECD,1,0,0,USA
 regional iron and steel,imported iron and steel,imported med-carbon iron and steel_OECD,traded med-carbon iron and steel_OECD,1,0,0,USA
 regional iron and steel,imported iron and steel,imported high-carbon iron and steel_OECD,traded high-carbon iron and steel_OECD,1,0,0,USA
+regional iron and steel,domestic iron and steel,BF_BOF_CCS_86%,BF_BOF_CCS_86%,1,0,1,regional
+regional iron and steel,domestic iron and steel,BF_BOF_BECCSmin,BF_BOF_BECCSmin,1,0,1,regional
+regional iron and steel,domestic iron and steel,BF_BOF_BECCSmax,BF_BOF_BECCSmax,1,0,1,regional
+regional iron and steel,domestic iron and steel,SR_BOF_CCS,SR_BOF_CCS,1,0,1,regional
+regional iron and steel,domestic iron and steel,DRI_EAF_NG_CCS,DRI_EAF_NG_CCS,1,0,1,regional
+regional iron and steel,domestic iron and steel,DRI_EAF_coal_CCS,DRI_EAF_coal_CCS,1,0,1,regional
+regional iron and steel,domestic iron and steel,DRI_EAF_BECCS,DRI_EAF_BECCS,1,0,1,regional
+regional iron and steel,domestic iron and steel,DRI_EAF_H2,DRI_EAF_H2,1,0,1,regional
+regional iron and steel,domestic iron and steel,DRI_SAF_BOF_H2,DRI_SAF_BOF_H2,1,0,1,regional
+regional iron and steel,domestic iron and steel,DRI_SAF_BOF_BECCS,DRI_SAF_BOF_BECCS,1,0,1,regional
+regional iron and steel,domestic iron and steel,AEL_EAF,AEL_EAF,1,0,1,regional
+regional iron and steel,domestic iron and steel,MOE,MOE,1,0,1,regional
+regional iron and steel,domestic iron and steel,EAF_scrap_fossil_NG_finish,EAF_scrap_fossil_NG_finish,1,0,1,regional
+regional iron and steel,domestic iron and steel,EAF_scrap_bio_NG_finish,EAF_scrap_bio_NG_finish,1,0,1,regional
+regional iron and steel,domestic iron and steel,EAF_scrap_fossil_elec_finish,EAF_scrap_fossil_elec_finish,1,0,1,regional
+regional iron and steel,domestic iron and steel,EAF_scrap_bio_elec_finish,EAF_scrap_bio_elec_finish,1,0,1,regional
+regional iron and steel,domestic iron and steel,DRI_EAF_NG,DRI_EAF_NG,1,0,1,regional
+regional iron and steel,domestic iron and steel,DRI_SAF_BOF_NG,DRI_SAF_BOF_NG,1,0,1,regional
+regional iron and steel,domestic iron and steel,BF_BOF_CCS_73%,BF_BOF_CCS_73%,1,0,1,regional
+regional iron and steel,domestic iron and steel,BF_BOF,BF_BOF,1,0,1,regional
+regional iron and steel,domestic iron and steel,SR_BOF,SR_BOF,1,0,1,regional
+regional iron and steel,domestic iron and steel,DRI_EAF_coal,DRI_EAF_coal,1,0,1,regional

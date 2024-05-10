@@ -4,22 +4,22 @@
 # Column types: ccccnnnnnn,,,,,,,,,
 # ----------,,,,,,,,,
 supplysector,subsector,technology,res.secondary.output,1975,2005,2010,2015,2020,2100
-iron and steel,BLASTFUR,BF_BOF_CCS_86%,Low-carbon iron and steel,0,0,0,1,1,1
-iron and steel,BLASTFUR,BF_BOF_BECCSmin,Low-carbon iron and steel,0,0,0,1,1,1
-iron and steel,BLASTFUR,BF_BOF_BECCSmax,Low-carbon iron and steel,0,0,0,1,1,1
-iron and steel,Smelting reduction,SR_BOF_CCS,Low-carbon iron and steel,0,0,0,1,1,1
-iron and steel,EAF with DRI,DRI_EAF_NG_CCS,Low-carbon iron and steel,0,0,0,1,1,1
-iron and steel,EAF with DRI,DRI_EAF_coal_CCS,Low-carbon iron and steel,0,0,0,1,1,1
-iron and steel,EAF with DRI,DRI_EAF_BECCS,Low-carbon iron and steel,0,0,0,1,1,1
-iron and steel,EAF with DRI,DRI_EAF_H2,Low-carbon iron and steel,0,0,0,1,1,1
-iron and steel,SAF with DRI,DRI_SAF_BOF_H2,Low-carbon iron and steel,0,0,0,1,1,1
-iron and steel,SAF with DRI,DRI_SAF_BOF_BECCS,Low-carbon iron and steel,0,0,0,1,1,1
-iron and steel,Electrolysis,AEL_EAF,Low-carbon iron and steel,0,0,0,1,1,1
-iron and steel,Electrolysis,MOE,Low-carbon iron and steel,0,0,0,1,1,1
-iron and steel,EAF with scrap,EAF_scrap_fossil_NG_finish,Low-carbon iron and steel,0,0,0,1,1,1
-iron and steel,EAF with scrap,EAF_scrap_bio_NG_finish,Low-carbon iron and steel,0,0,0,1,1,1
-iron and steel,EAF with scrap,EAF_scrap_fossil_elec_finish,Low-carbon iron and steel,0,0,0,1,1,1
-iron and steel,EAF with scrap,EAF_scrap_bio_elec_finish,Low-carbon iron and steel,0,0,0,1,1,1
-iron and steel,EAF with DRI,DRI_EAF_NG,Med-carbon iron and steel,0,0,0,1,1,1
-iron and steel,SAF with DRI,DRI_SAF_BOF_NG,Med-carbon iron and steel,0,0,0,1,1,1
-iron and steel,BLASTFUR,BF_BOF_CCS_73%,Med-carbon iron and steel,0,0,0,1,1,1
+BF_BOF_CCS_86%,BF_BOF_CCS_86%,BF_BOF_CCS_86%,Low-carbon iron and steel,0,0,0,1,1,1
+BF_BOF_BECCSmin,BF_BOF_BECCSmin,BF_BOF_BECCSmin,Low-carbon iron and steel,0,0,0,1,1,1
+BF_BOF_BECCSmax,BF_BOF_BECCSmax,BF_BOF_BECCSmax,Low-carbon iron and steel,0,0,0,1,1,1
+SR_BOF_CCS,SR_BOF_CCS,SR_BOF_CCS,Low-carbon iron and steel,0,0,0,1,1,1
+DRI_EAF_NG_CCS,DRI_EAF_NG_CCS,DRI_EAF_NG_CCS,Low-carbon iron and steel,0,0,0,1,1,1
+DRI_EAF_coal_CCS,DRI_EAF_coal_CCS,DRI_EAF_coal_CCS,Low-carbon iron and steel,0,0,0,1,1,1
+DRI_EAF_BECCS,DRI_EAF_BECCS,DRI_EAF_BECCS,Low-carbon iron and steel,0,0,0,1,1,1
+DRI_EAF_H2,DRI_EAF_H2,DRI_EAF_H2,Low-carbon iron and steel,0,0,0,1,1,1
+DRI_SAF_BOF_H2,DRI_SAF_BOF_H2,DRI_SAF_BOF_H2,Low-carbon iron and steel,0,0,0,1,1,1
+DRI_SAF_BOF_BECCS,DRI_SAF_BOF_BECCS,DRI_SAF_BOF_BECCS,Low-carbon iron and steel,0,0,0,1,1,1
+AEL_EAF,AEL_EAF,AEL_EAF,Low-carbon iron and steel,0,0,0,1,1,1
+MOE,MOE,MOE,Low-carbon iron and steel,0,0,0,1,1,1
+EAF_scrap_fossil_NG_finish,EAF_scrap_fossil_NG_finish,EAF_scrap_fossil_NG_finish,Low-carbon iron and steel,0,0,0,1,1,1
+EAF_scrap_bio_NG_finish,EAF_scrap_bio_NG_finish,EAF_scrap_bio_NG_finish,Low-carbon iron and steel,0,0,0,1,1,1
+EAF_scrap_fossil_elec_finish,EAF_scrap_fossil_elec_finish,EAF_scrap_fossil_elec_finish,Low-carbon iron and steel,0,0,0,1,1,1
+EAF_scrap_bio_elec_finish,EAF_scrap_bio_elec_finish,EAF_scrap_bio_elec_finish,Low-carbon iron and steel,0,0,0,1,1,1
+DRI_EAF_NG,DRI_EAF_NG,DRI_EAF_NG,Med-carbon iron and steel,0,0,0,1,1,1
+DRI_SAF_BOF_NG,DRI_SAF_BOF_NG,DRI_SAF_BOF_NG,Med-carbon iron and steel,0,0,0,1,1,1
+BF_BOF_CCS_73%,BF_BOF_CCS_73%,BF_BOF_CCS_73%,Med-carbon iron and steel,0,0,0,1,1,1
