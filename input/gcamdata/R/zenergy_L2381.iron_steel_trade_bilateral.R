@@ -123,9 +123,7 @@ module_energy_L2381.iron_steel_trade_bilateral <- function(command, ...) {
       select(LEVEL2_DATA_NAMES[["TechCost"]])
 
     # L2381.TechCoef_tra: Coefficient and market name of traded technologies
-    L2381.TechCoef_tra <- select(A_irnstl_TradedTechnology_bilateral_R_Y, LEVEL2_DATA_NAMES[["TechCoef"]]) %>%
-      mutate(coefficient = if_else(year <= MODEL_FINAL_BASE_YEAR & minicam.energy.input != "iron and steel",
-                                   0, coefficient))
+    L2381.TechCoef_tra <- select(A_irnstl_TradedTechnology_bilateral_R_Y, LEVEL2_DATA_NAMES[["TechCoef"]])
 
 
 
@@ -197,9 +195,7 @@ module_energy_L2381.iron_steel_trade_bilateral <- function(command, ...) {
       select(LEVEL2_DATA_NAMES[["TechShrwt"]])
 
     # L2381.TechCoef_reg: Coefficient and market name of traded technologies
-    L2381.TechCoef_reg <- select(A_irnstl_RegionalTechnology_bilateral_R_Y, LEVEL2_DATA_NAMES[["TechCoef"]]) %>%
-      mutate(coefficient = if_else(year <= MODEL_FINAL_BASE_YEAR & minicam.energy.input != "iron and steel" & grepl("domestic", subsector),
-                                   0, coefficient))
+    L2381.TechCoef_reg <- select(A_irnstl_RegionalTechnology_bilateral_R_Y, LEVEL2_DATA_NAMES[["TechCoef"]])
 
     # 2b. L2381.Production_reg_imp: Output (flow) of gross imports ----------------------------
     # Imports are equal to the gross imports calculated in LB1092.Tradebalance_iron_steel_Mt_R_Y_OECD_bilateral
