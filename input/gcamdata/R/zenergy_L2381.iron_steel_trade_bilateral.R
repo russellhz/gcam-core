@@ -28,15 +28,13 @@ module_energy_L2381.iron_steel_trade_bilateral <- function(command, ...) {
                      FILE = "energy/A_irnstl_regions",
                      "LB1092.Tradebalance_iron_steel_Mt_R_Y_OECD_bilateral",
                      "LB1092.Tradebalance_iron_steel_Mt_R_Y",
-                     "L2323.StubTechProd_iron_steel",
-                     FILE = "energy/A323.globaltech_secout")
+                     "L2323.StubTechProd_iron_steel")
   if(command == driver.DECLARE_INPUTS) {
     return(MODULE_INPUTS)
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(c("L2381.Supplysector_tra",
              "L2381.SectorUseTrialMarket_tra",
              "L2381.SubsectorAll_tra",
-             # "L2381.SubsectorShwtClub_tra",
              "L2381.TechShrwt_tra",
              "L2381.TechCost_tra",
              "L2381.TechCoef_tra",
@@ -88,20 +86,6 @@ module_energy_L2381.iron_steel_trade_bilateral <- function(command, ...) {
                                                    has_traded = TRUE) %>% mutate(region = gcam.USA_REGION)
     L2381.SubsectorAll_tra <- bind_rows(L2381.SubsectorAll_tra_OECD, L2381.SubsectorAll_tra_nonOECD)
 
-
-    # # L2381.SubsectorShwtClub_tra: set shareweights for subsector to 1 after 2025 for all traded steel club
-    # L2381.SubsectorShwtClub_tra <- L2381.SubsectorAll_tra %>%
-    #   select(region, supplysector, subsector) %>%
-    #   filter(grepl("CBAM", subsector)) %>%
-    #   mutate(year = 2025,
-    #          share.weight = 1,
-    #          from.year = 2030,
-    #          apply.to = "share-weight",
-    #          to.year = 2100,
-    #          delete = 1,
-    #          interpolation.function = "fixed")
-
-
     # Change traded iron and steel interpolation rule and to.value in countries listed in energy.IRON_STEEL.DOMESTIC_SW
     L2381.SubsectorAll_tra$interpolation.function[which(L2381.SubsectorAll_tra$subsector %in% energy.IRON_STEEL.TRADED_SW)] <- "s-curve"
     L2381.SubsectorAll_tra$to.year[which(L2381.SubsectorAll_tra$subsector %in% energy.IRON_STEEL.TRADED_SW)] <- 2300
@@ -111,7 +95,7 @@ module_energy_L2381.iron_steel_trade_bilateral <- function(command, ...) {
                                                         tibble(year = MODEL_YEARS)) %>%
       repeat_add_columns(GCAM_region_names) %>%
       mutate(subsector = paste(region, subsector, sep = " "),
-             technology = subsector,
+             technology = paste(region, technology, sep = " "),
              market.name = region,
              region = gcam.USA_REGION) %>%
       semi_join(L2381.SubsectorAll_tra %>%  distinct(supplysector, subsector), by = c("supplysector", "subsector"))
@@ -140,31 +124,21 @@ module_energy_L2381.iron_steel_trade_bilateral <- function(command, ...) {
       select(region, year, GrossExp_Mt)
 
     # Assume high-carbon/low-carbon export split is proportional to production
-    sec.out.prodShare <- L2323.StubTechProd_iron_steel %>%
-      left_join(select(A323.globaltech_secout, supplysector, subsector, stub.technology = technology, res.secondary.output),
-                by = c("supplysector", "subsector", "stub.technology")) %>%
-      # If no sec.out, still need to include in split, so rename to iron and steel
-      tidyr::replace_na(list(res.secondary.output = "iron and steel")) %>%
-      group_by(region, year, res.secondary.output) %>%
-      summarise(calOutputValue = sum(calOutputValue)) %>%
+    tech.prodShare <- L2323.StubTechProd_iron_steel %>%
       group_by(region, year) %>%
       mutate(prodShare = calOutputValue / sum(calOutputValue)) %>%
       ungroup %>%
       tidyr::replace_na(list(prodShare = 0)) %>%
-      select(-calOutputValue)
+      select(region, stub.technology, year, prodShare)
 
     # Multiply sec.out share by total exports
     L2381.GrossExports_Mt_R_Y_carbonType <- L2381.GrossExports_Mt_R_Y %>%
       filter(year %in% MODEL_BASE_YEARS) %>%
-      left_join(sec.out.prodShare, by = c("region", "year")) %>%
+      left_join(tech.prodShare, by = c("region", "year")) %>%
       mutate(GrossExp_Mt = GrossExp_Mt * prodShare) %>%
-      rename(minicam.energy.input = res.secondary.output)
+      rename(minicam.energy.input = stub.technology)
 
     L2381.Production_tra <- A_irnstl_TradedTechnology_bilateral_R_Y %>%
-      group_by(supplysector, subsector, technology, year) %>%
-      # If no sec.out, there will be only one group, otherwise it will be an input not named iron and steel
-      filter(dplyr::n() == 1 | minicam.energy.input != "iron and steel") %>%
-      ungroup %>%
       filter(year %in% MODEL_BASE_YEARS) %>%
       left_join_error_no_match(L2381.GrossExports_Mt_R_Y_carbonType,
                                by = c(market.name = "region", "year", "minicam.energy.input")) %>%
@@ -260,16 +234,15 @@ module_energy_L2381.iron_steel_trade_bilateral <- function(command, ...) {
                                                      rename(DomSup_Mt=value,region=GCAM_region),
                                                    GCAM_region_names,
                                                    by = "region") %>%
-      right_join(sec.out.prodShare, by = c("region", "year")) %>%
+      right_join(tech.prodShare, by = c("region", "year")) %>%
       mutate(DomSup_Mt = DomSup_Mt * prodShare) %>%
-      select(region, minicam.energy.input = res.secondary.output, year, DomSup_Mt) %>%
+      select(region, minicam.energy.input = stub.technology, year, DomSup_Mt) %>%
       left_join_error_no_match(A_irnstl_RegionalTechnology_bilateral_filtered, by = "minicam.energy.input")  %>%
       select(region, supplysector, subsector, technology, year, DomSup_Mt)
 
     L2381.Production_reg_dom <- A_irnstl_RegionalTechnology_bilateral_R_Y %>%
       filter(year %in% MODEL_BASE_YEARS,
-             grepl( "domestic", subsector),
-             minicam.energy.input == "iron and steel") %>%
+             grepl( "domestic", subsector)) %>%
       left_join_error_no_match(L2381.DomSup_Mt_R_Y,
                                by = c("region", "supplysector", "subsector", "technology", "year")) %>%
       mutate(calOutputValue = round(DomSup_Mt, energy.DIGITS_CALOUTPUT),
@@ -383,16 +356,9 @@ module_energy_L2381.iron_steel_trade_bilateral <- function(command, ...) {
                      "LB1092.Tradebalance_iron_steel_Mt_R_Y") ->
       L2381.Production_reg_dom
 
-    # L2381.SubsectorShwtClub_tra %>%
-    #   add_title("Subsector shareweights for steel club") %>%
-    #   add_units("NA") %>%
-    #   add_precursors("common/GCAM_region_names") ->
-    #   L2381.SubsectorShwtClub_tra
-
     return_data(L2381.Supplysector_tra,
                 L2381.SectorUseTrialMarket_tra,
                 L2381.SubsectorAll_tra,
-                # L2381.SubsectorShwtClub_tra,
                 L2381.TechShrwt_tra,
                 L2381.TechCost_tra,
                 L2381.TechCoef_tra,
