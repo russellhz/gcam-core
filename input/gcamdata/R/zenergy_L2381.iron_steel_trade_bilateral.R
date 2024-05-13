@@ -26,6 +26,7 @@ module_energy_L2381.iron_steel_trade_bilateral <- function(command, ...) {
                      FILE = "energy/A_irnstl_TradedSubsector_bilateral",
                      FILE = "energy/A_irnstl_TradedTechnology_bilateral",
                      FILE = "energy/A_irnstl_regions",
+                     FILE = "energy/A323.globaltech_shrwt",
                      "LB1092.Tradebalance_iron_steel_Mt_R_Y_OECD_bilateral",
                      "LB1092.Tradebalance_iron_steel_Mt_R_Y",
                      "L2323.StubTechProd_iron_steel")
@@ -101,7 +102,20 @@ module_energy_L2381.iron_steel_trade_bilateral <- function(command, ...) {
       semi_join(L2381.SubsectorAll_tra %>%  distinct(supplysector, subsector), by = c("supplysector", "subsector"))
 
     # L2381.TechShrwt_tra: Share-weights of traded technologies
-    L2381.TechShrwt_tra <- select(A_irnstl_TradedTechnology_bilateral_R_Y, LEVEL2_DATA_NAMES[["TechShrwt"]])
+    L2381.TechShrwt_global <- A323.globaltech_shrwt %>%
+      gather_years %>%
+      complete(nesting(supplysector, subsector, technology), year = c(year, MODEL_BASE_YEARS, MODEL_FUTURE_YEARS)) %>%
+      arrange(supplysector, subsector, technology, year) %>%
+      group_by(supplysector, subsector, technology) %>%
+      mutate(share.weight = approx_fun(year, value, rule = 1)) %>%
+      ungroup %>%
+      filter(year %in% c(MODEL_BASE_YEARS, MODEL_FUTURE_YEARS)) %>%
+      select(technology, year, share.weight)
+
+    L2381.TechShrwt_tra <- A_irnstl_TradedTechnology_bilateral_R_Y %>%
+      select(region, supplysector, subsector, technology, minicam.energy.input, year) %>%
+      left_join_error_no_match(L2381.TechShrwt_global, by = c("year", "minicam.energy.input" = "technology")) %>%
+      select(LEVEL2_DATA_NAMES[["TechShrwt"]])
 
     # L2381.TechCost_tra: Costs of traded technologies
     L2381.TechCost_tra <- A_irnstl_TradedTechnology_bilateral_R_Y %>%
@@ -173,7 +187,13 @@ module_energy_L2381.iron_steel_trade_bilateral <- function(command, ...) {
       mutate(market.name = if_else(market.name == "regional", region, market.name))
 
     # L2381.TechShrwt_tra: Share-weights of traded technologies
-    L2381.TechShrwt_reg <- select(A_irnstl_RegionalTechnology_bilateral_R_Y, LEVEL2_DATA_NAMES[["TechShrwt"]])
+    L2381.TechShrwt_reg <- A_irnstl_RegionalTechnology_bilateral_R_Y %>%
+      filter(grepl("domestic", subsector)) %>%
+      select(region, supplysector, subsector, technology, minicam.energy.input, year) %>%
+      left_join_error_no_match(L2381.TechShrwt_global, by = c("year", "minicam.energy.input" = "technology")) %>%
+      bind_rows(A_irnstl_RegionalTechnology_bilateral_R_Y %>%
+                   filter(!grepl("domestic", subsector))) %>%
+      select(LEVEL2_DATA_NAMES[["TechShrwt"]])
 
     # L2381.TechCoef_reg: Coefficient and market name of traded technologies
     L2381.TechCoef_reg <- select(A_irnstl_RegionalTechnology_bilateral_R_Y, LEVEL2_DATA_NAMES[["TechCoef"]]) %>%
