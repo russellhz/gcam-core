@@ -158,10 +158,11 @@ module_energy_L2381.iron_steel_trade_bilateral <- function(command, ...) {
                                by = c(market.name = "region", "year", "minicam.energy.input")) %>%
       rename(calOutputValue = GrossExp_Mt) %>%
       mutate(calOutputValue = round(calOutputValue, energy.DIGITS_CALOUTPUT),
-             calOutputValue = if_else(grepl("CBAM", supplysector), 0, calOutputValue),
              share.weight.year = year,
-             subs.share.weight = if_else(calOutputValue > 0, 1, 0),
-             tech.share.weight = subs.share.weight) %>%
+             tech.share.weight = if_else(calOutputValue > 0, 1, 0)) %>%
+      group_by(region, supplysector, subsector, year) %>%
+      mutate(subs.share.weight = if_else(any(calOutputValue > 0), 1, 0)) %>%
+      ungroup %>%
       select(LEVEL2_DATA_NAMES[["Production"]])
 
     # 2a: DOMESTIC SUPPLYSECTOR -------------------------
