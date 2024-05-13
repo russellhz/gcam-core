@@ -1,9 +1,9 @@
-# File: A51.steepness.csv
-# Title: Steepness of emissions reduction by supply sector, subsector, technology, and gas
-# Units: Percentage
-# Source: Internal
-# Column types: cccnnnnnn 
-# ----------
+# File: A51.steepness.csv,,,,,,,,
+# Title: Steepness of emissions reduction by supply sector, subsector, technology, and gas,,,,,
+# Units: Percentage,,,,,,,,
+# Source: Internal,,,,,,,,
+# Column types: cccnnnnnn ,,,,,,,,
+# ----------,,,,,,,,
 supplysector,subsector,stub.technology,SO2,NOx,CO,BC,OC,NMVOC
 cement,cement,cement,,,,,,
 district heat,biomass,biomass,,,,,,
@@ -269,12 +269,39 @@ chemical feedstocks,coal,coal,,,,,,
 chemical feedstocks,gas,gas,,,,,,
 chemical feedstocks,refined liquids,refined liquids,3.5,3.5,3.5,3.5,3.5,3.5
 construction feedstocks,refined liquids,refined liquids,3.5,3.5,3.5,3.5,3.5,3.5
-iron and steel,biomass,Biomass-based,3.5,3.5,3.5,3.5,3.5,3.5
-iron and steel,coal,BLASTFUR,3.5,3.5,3.5,3.5,3.5,3.5
-iron and steel,coal,EAF with DRI,3.5,3.5,3.5,3.5,3.5,3.5
-iron and steel,gas,BLASTFUR,3.5,3.5,3.5,3.5,3.5,3.5
-iron and steel,gas,EAF with DRI,3.5,3.5,3.5,3.5,3.5,3.5
-iron and steel,refined liquids,BLASTFUR,3.5,3.5,3.5,3.5,3.5,3.5
-iron and steel,refined liquids,EAF with DRI,3.5,3.5,3.5,3.5,3.5,3.5
-iron and steel,refined liquids,EAF with scrap,3.5,3.5,3.5,3.5,3.5,3.5
-iron and steel,gas,EAF with scrap,3.5,3.5,3.5,3.5,3.5,3.5
+BF_BOF,gas,BF_BOF,3.5,3.5,3.5,3.5,3.5,3.5
+BF_BOF,coal,BF_BOF,3.5,3.5,3.5,3.5,3.5,3.5
+BF_BOF_CCS_73%,gas,BF_BOF_CCS_73%,3.5,3.5,3.5,3.5,3.5,3.5
+BF_BOF_CCS_73%,coal,BF_BOF_CCS_73%,3.5,3.5,3.5,3.5,3.5,3.5
+BF_BOF_CCS_86%,gas,BF_BOF_CCS_86%,3.5,3.5,3.5,3.5,3.5,3.5
+BF_BOF_CCS_86%,coal,BF_BOF_CCS_86%,3.5,3.5,3.5,3.5,3.5,3.5
+BF_BOF_BECCSmin,gas,BF_BOF_BECCSmin,3.5,3.5,3.5,3.5,3.5,3.5
+BF_BOF_BECCSmin,coal,BF_BOF_BECCSmin,3.5,3.5,3.5,3.5,3.5,3.5
+BF_BOF_BECCSmin,biomass,BF_BOF_BECCSmin,3.5,3.5,3.5,3.5,3.5,3.5
+BF_BOF_BECCSmax,gas,BF_BOF_BECCSmax,3.5,3.5,3.5,3.5,3.5,3.5
+BF_BOF_BECCSmax,coal,BF_BOF_BECCSmax,3.5,3.5,3.5,3.5,3.5,3.5
+BF_BOF_BECCSmax,biomass,BF_BOF_BECCSmax,3.5,3.5,3.5,3.5,3.5,3.5
+SR_BOF,gas,SR_BOF,3.5,3.5,3.5,3.5,3.5,3.5
+SR_BOF,coal,SR_BOF,3.5,3.5,3.5,3.5,3.5,3.5
+SR_BOF_CCS,gas,SR_BOF_CCS,3.5,3.5,3.5,3.5,3.5,3.5
+SR_BOF_CCS,coal,SR_BOF_CCS,3.5,3.5,3.5,3.5,3.5,3.5
+DRI_EAF_NG,gas,DRI_EAF_NG,3.5,3.5,3.5,3.5,3.5,3.5
+DRI_EAF_NG,coal,DRI_EAF_NG,3.5,3.5,3.5,3.5,3.5,3.5
+DRI_EAF_NG_CCS,coal,DRI_EAF_NG_CCS,3.5,3.5,3.5,3.5,3.5,3.5
+DRI_EAF_NG_CCS,gas,DRI_EAF_NG_CCS,3.5,3.5,3.5,3.5,3.5,3.5
+DRI_EAF_coal,coal,DRI_EAF_coal,3.5,3.5,3.5,3.5,3.5,3.5
+DRI_EAF_coal,gas,DRI_EAF_coal,3.5,3.5,3.5,3.5,3.5,3.5
+DRI_EAF_coal_CCS,coal,DRI_EAF_coal_CCS,3.5,3.5,3.5,3.5,3.5,3.5
+DRI_EAF_coal_CCS,biomass,DRI_EAF_coal_CCS,3.5,3.5,3.5,3.5,3.5,3.5
+DRI_EAF_H2,biomass,DRI_EAF_H2,3.5,3.5,3.5,3.5,3.5,3.5
+DRI_EAF_H2,gas,DRI_EAF_H2,3.5,3.5,3.5,3.5,3.5,3.5
+DRI_SAF_BOF_NG,coal,DRI_SAF_BOF_NG,3.5,3.5,3.5,3.5,3.5,3.5
+DRI_SAF_BOF_H2,biomass,DRI_SAF_BOF_H2,3.5,3.5,3.5,3.5,3.5,3.5
+DRI_SAF_BOF_BECCS,biomass,DRI_SAF_BOF_BECCS,3.5,3.5,3.5,3.5,3.5,3.5
+MOE,gas,MOE,3.5,3.5,3.5,3.5,3.5,3.5
+EAF_scrap_fossil_NG_finish,coal,EAF_scrap_fossil_NG_finish,3.5,3.5,3.5,3.5,3.5,3.5
+EAF_scrap_fossil_NG_finish,gas,EAF_scrap_fossil_NG_finish,3.5,3.5,3.5,3.5,3.5,3.5
+EAF_scrap_fossil_NG_finish,biomass,EAF_scrap_fossil_NG_finish,3.5,3.5,3.5,3.5,3.5,3.5
+EAF_scrap_bio_NG_finish,gas,EAF_scrap_bio_NG_finish,3.5,3.5,3.5,3.5,3.5,3.5
+EAF_scrap_bio_NG_finish,coal,EAF_scrap_bio_NG_finish,3.5,3.5,3.5,3.5,3.5,3.5
+EAF_scrap_fossil_elec_finish,biomass,EAF_scrap_fossil_elec_finish,3.5,3.5,3.5,3.5,3.5,3.5

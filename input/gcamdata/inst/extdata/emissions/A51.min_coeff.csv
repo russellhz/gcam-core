@@ -1,10 +1,10 @@
-# File: A51.min_coeff.csv
-# Title: Minimum (i.e., fully controlled) emissions coefficients (unit emissions per unit fuel input or output, or something else) by technology and emissions species, for non-greenhouse gases
-# Units: kg / GJ (or TgXXX / EJ, where XXX is the particular gas)
-# Description: Minimum emissions coefficient for various technologies and gases. Emissions coefficients decline with GDP until these levels are reached, after which no further declines are possible.
-# Source: GCAM3 emissions files (e.g., SO2 are from NonCO2_energy_input.xls, SO2_calcs tab, table starting at row 509)
-# Column types: cccnnnnnn
-# ----------
+# File: A51.min_coeff.csv,,,,,,,,
+# Title: Minimum (i.e., fully controlled) emissions coefficients (unit emissions per unit fuel input or output, or something else) by technology and emissions species, for non-greenhouse gases,,,,,
+# Units: kg / GJ (or TgXXX / EJ, where XXX is the particular gas),,,,,,,
+# Description: Minimum emissions coefficient for various technologies and gases. Emissions coefficients decline with GDP until these levels are reached, after which no further declines are possible.,,,,,,,
+# Source: GCAM3 emissions files (e.g., SO2 are from NonCO2_energy_input.xls, SO2_calcs tab, table starting at row 509),,,,,
+# Column types: cccnnnnnn,,,,,,,,
+# ----------,,,,,,,,
 supplysector,subsector,stub.technology,SO2,NOx,CO,BC,OC,NMVOC
 cement,cement,cement,,,,,,
 district heat,biomass,biomass,,,,,,
@@ -272,12 +272,39 @@ chemical feedstocks,coal,coal,,,,,,
 chemical feedstocks,gas,gas,,,,,,
 chemical feedstocks,refined liquids,refined liquids,,,,,,
 construction feedstocks,refined liquids,refined liquids,,,,,,
-iron and steel,biomass,Biomass-based,0.0238,0.0351,0.0067,0.0001,0.0003,0.0038
-iron and steel,coal,BLASTFUR,0.004,0.013,0.0067,0.0024,0.0009,0.0038
-iron and steel,coal,EAF with DRI,0.004,0.013,0.0067,0.0024,0.0009,0.0038
-iron and steel,gas,BLASTFUR,0.0238,0.0468,0.0067,0,0,0.0038
-iron and steel,gas,EAF with DRI,0.0238,0.0468,0.0067,0,0,0.0038
-iron and steel,refined liquids,BLASTFUR,0.0238,0.0156,0.0067,0.0092,0.001,0.0038
-iron and steel,refined liquids,EAF with DRI,0.0238,0.0156,0.0067,0.0092,0.001,0.0038
-iron and steel,refined liquids,EAF with scrap,0.0238,0.0156,0.0067,0.0092,0.001,0.0038
-iron and steel,gas,EAF with scrap,0.0238,0.0468,0.0067,0,0,0.0038
+BF_BOF,gas,BF_BOF,0.0238,0.0468,0.0067,0,0,0.0038
+BF_BOF,coal,BF_BOF,0.004,0.013,0.0067,0.0024,0.0009,0.0038
+BF_BOF_CCS_73%,gas,BF_BOF_CCS_73%,0.0238,0.0468,0.0067,0,0,0.0038
+BF_BOF_CCS_73%,coal,BF_BOF_CCS_73%,0.004,0.013,0.0067,0.0024,0.0009,0.0038
+BF_BOF_CCS_86%,gas,BF_BOF_CCS_86%,0.0238,0.0468,0.0067,0,0,0.0038
+BF_BOF_CCS_86%,coal,BF_BOF_CCS_86%,0.004,0.013,0.0067,0.0024,0.0009,0.0038
+BF_BOF_BECCSmin,gas,BF_BOF_BECCSmin,0.0238,0.0468,0.0067,0,0,0.0038
+BF_BOF_BECCSmin,coal,BF_BOF_BECCSmin,0.004,0.013,0.0067,0.0024,0.0009,0.0038
+BF_BOF_BECCSmin,biomass,BF_BOF_BECCSmin,0.0238,0.0351,0.0067,0.0001,0.0003,0.0038
+BF_BOF_BECCSmax,gas,BF_BOF_BECCSmax,0.0238,0.0468,0.0067,0,0,0.0038
+BF_BOF_BECCSmax,coal,BF_BOF_BECCSmax,0.004,0.013,0.0067,0.0024,0.0009,0.0038
+BF_BOF_BECCSmax,biomass,BF_BOF_BECCSmax,0.0238,0.0351,0.0067,0.0001,0.0003,0.0038
+SR_BOF,gas,SR_BOF,0.0238,0.0468,0.0067,0,0,0.0038
+SR_BOF,coal,SR_BOF,0.004,0.013,0.0067,0.0024,0.0009,0.0038
+SR_BOF_CCS,gas,SR_BOF_CCS,0.0238,0.0468,0.0067,0,0,0.0038
+SR_BOF_CCS,coal,SR_BOF_CCS,0.004,0.013,0.0067,0.0024,0.0009,0.0038
+DRI_EAF_NG,gas,DRI_EAF_NG,0.0238,0.0468,0.0067,0,0,0.0038
+DRI_EAF_NG,coal,DRI_EAF_NG,0.004,0.013,0.0067,0.0024,0.0009,0.0038
+DRI_EAF_NG_CCS,coal,DRI_EAF_NG_CCS,0.004,0.013,0.0067,0.0024,0.0009,0.0038
+DRI_EAF_NG_CCS,gas,DRI_EAF_NG_CCS,0.0238,0.0468,0.0067,0,0,0.0038
+DRI_EAF_coal,coal,DRI_EAF_coal,0.004,0.013,0.0067,0.0024,0.0009,0.0038
+DRI_EAF_coal,gas,DRI_EAF_coal,0.0238,0.0468,0.0067,0,0,0.0038
+DRI_EAF_coal_CCS,coal,DRI_EAF_coal_CCS,0.004,0.013,0.0067,0.0024,0.0009,0.0038
+DRI_EAF_coal_CCS,biomass,DRI_EAF_coal_CCS,0.0238,0.0351,0.0067,0.0001,0.0003,0.0038
+DRI_EAF_H2,biomass,DRI_EAF_H2,0.0238,0.0351,0.0067,0.0001,0.0003,0.0038
+DRI_EAF_H2,gas,DRI_EAF_H2,0.0238,0.0468,0.0067,0,0,0.0038
+DRI_SAF_BOF_NG,coal,DRI_SAF_BOF_NG,0.004,0.013,0.0067,0.0024,0.0009,0.0038
+DRI_SAF_BOF_H2,biomass,DRI_SAF_BOF_H2,0.0238,0.0351,0.0067,0.0001,0.0003,0.0038
+DRI_SAF_BOF_BECCS,biomass,DRI_SAF_BOF_BECCS,0.0238,0.0351,0.0067,0.0001,0.0003,0.0038
+MOE,gas,MOE,0.0238,0.0468,0.0067,0,0,0.0038
+EAF_scrap_fossil_NG_finish,coal,EAF_scrap_fossil_NG_finish,0.004,0.013,0.0067,0.0024,0.0009,0.0038
+EAF_scrap_fossil_NG_finish,gas,EAF_scrap_fossil_NG_finish,0.0238,0.0468,0.0067,0,0,0.0038
+EAF_scrap_fossil_NG_finish,biomass,EAF_scrap_fossil_NG_finish,0.0238,0.0351,0.0067,0.0001,0.0003,0.0038
+EAF_scrap_bio_NG_finish,gas,EAF_scrap_bio_NG_finish,0.0238,0.0468,0.0067,0,0,0.0038
+EAF_scrap_bio_NG_finish,coal,EAF_scrap_bio_NG_finish,0.004,0.013,0.0067,0.0024,0.0009,0.0038
+EAF_scrap_fossil_elec_finish,biomass,EAF_scrap_fossil_elec_finish,0.0238,0.0351,0.0067,0.0001,0.0003,0.0038

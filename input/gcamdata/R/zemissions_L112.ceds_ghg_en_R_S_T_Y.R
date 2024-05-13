@@ -108,6 +108,7 @@ module_emissions_L112.ceds_ghg_en_R_S_T_Y <- function(command, ...) {
       quantile <- upper <- GCAM_subsector <- value_median <- share_in_global_ship <- main.fuel <- CEDS_agg_fuel_remapped <- NULL
 
 
+    # Load data -----------------------
     #Get CEDS_GFED data
     L112.CEDS_GCAM_no_intl_shipping <- get_data(all_data, "L102.ceds_GFED_nonco2_tg_R_S_F")
 
@@ -506,7 +507,7 @@ module_emissions_L112.ceds_ghg_en_R_S_T_Y <- function(command, ...) {
 
     # prepare detailed industry energy use for matching and filter out feedstocks
     L1323.in_EJ_R_iron_steel_F_Y %>%
-      mutate(sector = "iron and steel") %>%
+      mutate(sector = subsector) %>%
       filter(!fuel %in% c("scrap")) ->
       L1323.in_EJ_R_iron_steel_F_Y
 
@@ -557,7 +558,8 @@ module_emissions_L112.ceds_ghg_en_R_S_T_Y <- function(command, ...) {
     L101.in_EJ_R_en_Si_F_Yh %>%
       left_join(calibrated_techs %>% bind_rows(calibrated_outresources) %>% select(-secondary.output), by = c("sector", "fuel", "technology")) %>%
       # Replace subsector with fuel to preserve both in dataframe. Subsector will be added back later in L201
-      mutate(subsector = if_else(sector == "iron and steel", fuel, subsector)) %>%
+      mutate(subsector = if_else(supplysector == "iron and steel", fuel, subsector),
+             supplysector = if_else(supplysector == "iron and steel", sector, supplysector)) %>%
       rename(stub.technology = technology) %>%
       select(GCAM_region_ID, year, energy, supplysector, subsector, stub.technology) %>%
       na.omit() ->
