@@ -68,6 +68,7 @@ module_energy_L2323.iron_steel <- function(command, ...) {
              "L2323.StubTechProd_iron_steel",
              "L2323.StubTechCoef_iron_steel",
              "L2323.StubTechCost_iron_steel",
+             "L2323.StubTechShrwt_iron_steel",
              "L2323.PerCapitaBased_iron_steel",
              "L2323.BaseService_iron_steel",
 			       "L2323.PriceElasticity_iron_steel"
@@ -409,6 +410,12 @@ module_energy_L2323.iron_steel <- function(command, ...) {
       select(LEVEL2_DATA_NAMES[["StubTechProd"]]) ->
       L2323.StubTechProd_iron_steel
 
+
+    L2323.StubTechShrwt_iron_steel <- L2323.StubTechProd_iron_steel %>%
+      filter(supplysector == "DRI_EAF_coal", year == MODEL_FINAL_BASE_YEAR, calOutputValue > 0) %>%
+      distinct(region, supplysector, subsector, stub.technology) %>%
+      repeat_add_columns(tibble(year = MODEL_FUTURE_YEARS, share.weight = 1))
+
     # L2323.StubTechCoef_iron_steel: region-specific coefficients of iron_steel production technologies
     # Take this as a given in all years for which data is available
     calibrated_techs %>%
@@ -691,7 +698,7 @@ module_energy_L2323.iron_steel <- function(command, ...) {
                   L2323.GlobalTechSCurve_en, L2323.GlobalTechLifetime_en, L2323.GlobalTechProfitShutdown_en,
                   L2323.StubTechProd_iron_steel, L2323.StubTechCoef_iron_steel,
                   L2323.PerCapitaBased_iron_steel, L2323.BaseService_iron_steel,
-                  L2323.PriceElasticity_iron_steel,L2323.StubTechCost_iron_steel,
+                  L2323.PriceElasticity_iron_steel,L2323.StubTechCost_iron_steel, L2323.StubTechShrwt_iron_steel,
                   L2323.GlobalTechTrackCapital_iron_steel)
   } else {
     stop("Unknown command")
