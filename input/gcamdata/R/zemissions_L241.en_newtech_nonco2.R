@@ -16,21 +16,23 @@
 #' @importFrom tidyr unite
 #' @author KD August 2017
 module_emissions_L241.en_newtech_nonco2 <- function(command, ...) {
+  MODULE_INPUTS <- c(FILE = "common/GCAM_region_names",
+                     FILE = "emissions/A_regions",
+                     FILE = "energy/A_regions",
+                     FILE = "emissions/A41.tech_coeff",
+                     FILE = "emissions/A51.max_reduction",
+                     FILE = "emissions/A51.steepness",
+                     # the following files to be able to map in the input.name to
+                     # use for the input-driver
+                     FILE = "energy/A22.globaltech_input_driver",
+                     FILE = "energy/A23.globaltech_input_driver",
+                     FILE = "energy/A25.globaltech_input_driver",
+                     FILE = "emissions/mappings/ind_subsector_revised",
+                     "L111.nonghg_tgej_R_en_S_F_Yh_infered_combEF_AP",
+                     "L112.ghg_tgej_R_en_S_F_Yh_infered_combEF_AP",
+                     "L223.GlobalTechEff_elec")
   if(command == driver.DECLARE_INPUTS) {
-    return(c(FILE = "common/GCAM_region_names",
-             FILE = "emissions/A_regions",
-             FILE = "energy/A_regions",
-             FILE = "emissions/A41.tech_coeff",
-             FILE = "emissions/A51.max_reduction",
-             FILE = "emissions/A51.steepness",
-             # the following files to be able to map in the input.name to
-             # use for the input-driver
-             FILE = "energy/A22.globaltech_input_driver",
-             FILE = "energy/A23.globaltech_input_driver",
-             FILE = "energy/A25.globaltech_input_driver",
-             "L111.nonghg_tgej_R_en_S_F_Yh_infered_combEF_AP",
-             "L112.ghg_tgej_R_en_S_F_Yh_infered_combEF_AP",
-             "L223.GlobalTechEff_elec"))
+    return(MODULE_INPUTS)
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(c("L241.nonco2_tech_coeff",
              "L241.OutputEmissCoeff_elec",
@@ -40,39 +42,27 @@ module_emissions_L241.en_newtech_nonco2 <- function(command, ...) {
 
     all_data <- list(...)[[1]]
 
-    # Load required inputs
-    GCAM_region_names <- get_data(all_data, "common/GCAM_region_names")
+    # Load required inputs ----------------------
+    get_data_list(all_data, MODULE_INPUTS)
     Emiss_A_regions <- get_data(all_data, "emissions/A_regions")
     En_A_regions <- get_data(all_data, "energy/A_regions")
-    A41.tech_coeff <- get_data(all_data, "emissions/A41.tech_coeff")
-    A51.max_reduction <- get_data(all_data, "emissions/A51.max_reduction")
-    A51.steepness <- get_data(all_data, "emissions/A51.steepness")
-
-    L111.nonghg_tgej_R_en_S_F_Yh_infered_combEF_AP <- get_data(all_data, "L111.nonghg_tgej_R_en_S_F_Yh_infered_combEF_AP")
-    L112.ghg_tgej_R_en_S_F_Yh_infered_combEF_AP <- get_data(all_data, "L112.ghg_tgej_R_en_S_F_Yh_infered_combEF_AP")
-    L223.GlobalTechEff_elec <- get_data(all_data, "L223.GlobalTechEff_elec")
-
-    year <- value <- GCAM_region_ID <- supplysector <- subsector <- stub.technology <- Non.CO2 <-
-      exception <- exception_tech <- may.be.historic <- region <- sector_tech_id <- region_eth <-
-      ethanol <- region_bio <- biodiesel <- emiss.coeff <- technology <- efficiency <- NULL  # silence package check notes
 
     # make a complete mapping to be able to look up with sector + subsector + tech the
     # input name to use for an input-driver
     bind_rows(
-      get_data(all_data, "energy/A22.globaltech_input_driver"),
-      get_data(all_data, "energy/A23.globaltech_input_driver"),
-      get_data(all_data, "energy/A25.globaltech_input_driver")
-    ) %>%
+      A22.globaltech_input_driver,
+      A23.globaltech_input_driver,
+      A25.globaltech_input_driver) %>%
       rename(stub.technology = technology) ->
       EnTechInputMap
 
-    # ===================================================
-    # Assign new technology emission factors to all GCAM regions
+    # 1. Assign new technology emission factors to all GCAM regions ===================================================
     # for nonco2 emissions.
     A41.tech_coeff %>%
       gather(Non.CO2, emiss.coeff, -supplysector, -subsector, -stub.technology, -exception, -exception_tech, -may.be.historic) %>%
       repeat_add_columns(tibble(region = GCAM_region_names[["region"]])) ->
       L241.nonco2_tech_coeff
+    # 1a. CO emissions exceptions ---------------
 
     # Select the most recent CO emission coefficients for the technologies with exceptions.
     L111.nonghg_tgej_R_en_S_F_Yh_infered_combEF_AP %>%
@@ -91,6 +81,7 @@ module_emissions_L241.en_newtech_nonco2 <- function(command, ...) {
       rename(emiss.coeff = value) ->
       L241.co_tech_coeff_except
 
+    # 1b. CH4 emissions exceptions--------------------------------------
     # Now select the CH4 emission coefficients for technologies with exceptions.
     L112.ghg_tgej_R_en_S_F_Yh_infered_combEF_AP %>%
       left_join_error_no_match(GCAM_region_names, by = "GCAM_region_ID") %>%
@@ -108,6 +99,14 @@ module_emissions_L241.en_newtech_nonco2 <- function(command, ...) {
       rename(emiss.coeff = value) ->
       L241.ch4_tech_coeff_except
 
+    # 1c. Iron steel emissions --------------------------------------
+    # set all future emissions to EU-15 (except for DRI_EAF_coal to India)
+    EU15_ID <- GCAM_region_names %>%  filter(region == "EU-15") %>% pull(GCAM_region_ID)
+    L241.steel_coeff <- L112.ghg_tgej_R_en_S_F_Yh_infered_combEF_AP %>%
+      filter(supplysector %in% ind_subsector_revised$sector,
+             year == MODEL_FINAL_BASE_YEAR,
+             GCAM_region_ID)
+    # 1d. Combine emissions exceptions --------------------------------------
     # Now replace the missing with the CO and CH4 emission coefficients for
     # technologies with expectations and select for future years.
     L241.nonco2_tech_coeff %>%
@@ -117,7 +116,7 @@ module_emissions_L241.en_newtech_nonco2 <- function(command, ...) {
       select(region, supplysector, subsector, stub.technology, year, Non.CO2, emiss.coeff) ->
       L241.nonco2_tech_coeff
 
-    # Emission reduction from energy technologies.
+    # 2. Emission reduction from energy technologies. ------------------
     #
     # Assign the assumed emissions reduction from energy technologies to all regions.
     A51.max_reduction %>%
@@ -142,7 +141,7 @@ module_emissions_L241.en_newtech_nonco2 <- function(command, ...) {
       L241.nonco2_max_reduction
 
 
-    # Steepness of emission reduction
+    # 3. Steepness of emission reduction ----------------
     #
     # Assign the steepness of emission reduction based on energy technologies to all regions.
     A51.steepness %>%
@@ -172,6 +171,7 @@ module_emissions_L241.en_newtech_nonco2 <- function(command, ...) {
     L241.nonco2_steepness <- rename_SO2(L241.nonco2_steepness, Emiss_A_regions, FALSE)
 
 
+    # 4. Refining emissions ------------------
     # TODO: better way to handle this, probably these technologies should pull from historical data
     # Ensure only regions that have first gen biofuels get read in
     # See GitHub issue #650
@@ -269,9 +269,7 @@ module_emissions_L241.en_newtech_nonco2 <- function(command, ...) {
       select(-region_bio) ->
       L241.nonco2_steepness
 
-    # ===================================================
-
-    # Produce outputs
+    # Produce outputs     # ===================================================
     L241.nonco2_tech_coeff %>%
       add_title("Non-CO2 new technology emission coefficients by supply sector") %>%
       add_units("NA") %>%

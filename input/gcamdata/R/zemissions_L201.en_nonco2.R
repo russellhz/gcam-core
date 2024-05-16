@@ -220,8 +220,16 @@ module_emissions_L201.en_nonco2 <- function(command, ...) {
       select(-subsector_orig) ->
       L201.nonghg_gdp_control
 
-    L201.nonghg_max_reduction <- select(L201.nonghg_gdp_control, -steepness)
-    L201.nonghg_steepness <- select(L201.nonghg_gdp_control, -max_reduction)
+    L201.nonghg_max_reduction <- select(L201.nonghg_gdp_control, -steepness) %>%
+      left_join(ind_subsector_revised %>% distinct(supplysector,subsector.original, technology),
+                by = c("supplysector", "stub.technology" = "technology")) %>%
+      mutate(subsector = if_else(!is.na(subsector.original),subsector.original,subsector)) %>%
+      select(-subsector.original)
+    L201.nonghg_steepness <- select(L201.nonghg_gdp_control, -max_reduction) %>%
+      left_join(ind_subsector_revised %>% distinct(supplysector,subsector.original, technology),
+                by = c("supplysector", "stub.technology" = "technology")) %>%
+      mutate(subsector = if_else(!is.na(subsector.original),subsector.original,subsector)) %>%
+      select(-subsector.original)
 
     # L201.nonghg_res: Pollutant emissions for energy resources in all regions
     L111.nonghg_tgej_R_en_S_F_Yh_infered_combEF_AP %>%

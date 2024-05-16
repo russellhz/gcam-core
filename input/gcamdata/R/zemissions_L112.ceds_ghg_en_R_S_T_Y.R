@@ -652,7 +652,7 @@ module_emissions_L112.ceds_ghg_en_R_S_T_Y <- function(command, ...) {
     # because of additional level of detail in iron and steel sector, map emissions to the main fuel for each technology and region
     # (current structure can't handle multiple inputs for each technology)
     L112.CEDSGCAM_computedemissions %>%
-      filter(supplysector == "iron and steel") %>%
+      filter(CEDS_agg_sector == "iron and steel") %>%
       select(-CEDS_agg_fuel) %>%
       left_join(ironsteel_main_fuel_BY, by = c("GCAM_region_ID", "supplysector", "stub.technology")) %>%
       mutate(subsector = main.fuel) %>%
@@ -663,7 +663,7 @@ module_emissions_L112.ceds_ghg_en_R_S_T_Y <- function(command, ...) {
       L112.CEDSGCAM_computedemissions_steel_adj
 
     L112.CEDSGCAM_computedemissions %>%
-      filter(!supplysector == "iron and steel") %>%
+      filter(CEDS_agg_sector != "iron and steel") %>%
       bind_rows(L112.CEDSGCAM_computedemissions_steel_adj) ->
       L112.CEDSGCAM_computedemissions_complete
 
@@ -680,8 +680,8 @@ module_emissions_L112.ceds_ghg_en_R_S_T_Y <- function(command, ...) {
     L112.in_EJ_R_en_S_F_Yh_calib_all_baseenergy %>%
       left_join((ironsteel_main_fuel_BY %>% rename(CEDS_agg_fuel_remapped = CEDS_agg_fuel)),
                 by = c("GCAM_region_ID", "supplysector", "stub.technology")) %>%
-      mutate(subsector = if_else(supplysector == "iron and steel", main.fuel, subsector),
-             CEDS_agg_fuel = if_else(supplysector == "iron and steel", CEDS_agg_fuel_remapped, CEDS_agg_fuel)) %>%
+      mutate(subsector = if_else(CEDS_agg_sector == "iron and steel", main.fuel, subsector),
+             CEDS_agg_fuel = if_else(CEDS_agg_sector == "iron and steel", CEDS_agg_fuel_remapped, CEDS_agg_fuel)) %>%
       group_by(GCAM_region_ID, year, supplysector, subsector, stub.technology, CEDS_agg_sector, CEDS_agg_fuel) %>%
       summarise(energy = sum(energy)) %>%
       ungroup() ->
@@ -1713,9 +1713,11 @@ module_emissions_L112.ceds_ghg_en_R_S_T_Y <- function(command, ...) {
       # -------------------------------------------------------------------------------------------------------------
     }
 
+
     # ===============
     # Produce outputs
     L111.nonghg_tg_R_en_S_F_Yh %>%
+      # mutate(subsector = if_else(supplysector %in%     ironsteel_main_fuel_BY$supplysector, supplysector, subsector)) %>%
       na.omit() %>%
       add_title("Non-ghg emission totals by GCAM sector, fuel, technology, and driver type for CEDS historical years.") %>%
       add_units("Tg") %>%
@@ -1734,6 +1736,7 @@ module_emissions_L112.ceds_ghg_en_R_S_T_Y <- function(command, ...) {
       L111.nonghg_tg_R_en_S_F_Yh
 
     L111.nonghg_tgej_R_en_S_F_Yh_infered_combEF_AP %>%
+      # mutate(subsector = if_else(supplysector %in%     ironsteel_main_fuel_BY$supplysector, supplysector, subsector)) %>%
       na.omit() %>%
       add_title("Non-ghg emission total shares by GCAM sector, fuel, technology, and driver type for CEDS historical years.") %>%
       add_units("Tg/EJ") %>%
@@ -1743,6 +1746,7 @@ module_emissions_L112.ceds_ghg_en_R_S_T_Y <- function(command, ...) {
       L111.nonghg_tgej_R_en_S_F_Yh_infered_combEF_AP
 
     L112.ghg_tg_R_en_S_F_Yh %>%
+      # mutate(subsector = if_else(supplysector %in%     ironsteel_main_fuel_BY$supplysector, supplysector, subsector)) %>%
       add_title("GHG emissions by energy sector, gas, region, and historical year") %>%
       add_units("Tg") %>%
       add_comments("Emissions calculated with CEDS totals") %>%
@@ -1759,6 +1763,7 @@ module_emissions_L112.ceds_ghg_en_R_S_T_Y <- function(command, ...) {
       L112.ghg_tg_R_en_S_F_Yh
 
     L112.ghg_tgej_R_en_S_F_Yh_infered_combEF_AP %>%
+      # mutate(subsector = if_else(supplysector %in%     ironsteel_main_fuel_BY$supplysector, supplysector, subsector)) %>%
       add_title("GHG emissions factors by energy sector, gas, region, and historical year") %>%
       add_units("Tg/EJ") %>%
       add_comments("Emissions calculated with CEDS emissions factors.") %>%
