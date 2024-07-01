@@ -56,10 +56,15 @@ module_policy_302.inputtaxsubsidy <- function(command, ...) {
     L302.InputCapitalFCR <- A_InputCapitalFCR %>%
       gather_years() %>%
       mutate(value = as.numeric(value)) %>%
-      na.omit() %>%
-      group_by(xml, region, supplysector, subsector, stub.technology, input.capital) %>%
-      complete(nesting(xml, region, supplysector, subsector, stub.technology, input.capital),
-               year = seq(min(year), max(year), 5)) %>%
+      na.omit()  %>%
+      group_by(xml, region, supplysector, subsector, stub.technology, input.capital)
+
+    if(nrow(L302.InputCapitalFCR) > 0){
+      L302.InputCapitalFCR <- L302.InputCapitalFCR  %>%
+        complete(nesting(xml, region, supplysector, subsector, stub.technology, input.capital),
+                 year = seq(min(year), max(year), 5))
+    }
+    L302.InputCapitalFCR <- L302.InputCapitalFCR %>%
       # If group only has one, approx_fun doesn't work, so we use this workaround
       mutate(value_NA = as.numeric(approx_fun(year, value))) %>%
       ungroup %>%
