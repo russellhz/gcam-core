@@ -1,0 +1,8 @@
+# File: A_energy_constraints.csv,,,,,,,,,,,,,,,,,,,,,,
+# Title: Policy floors/ceilings for tax/subsidy policies,,,,,,,,,,,,,,,,,,,,,,
+# Comments: If using GDP intensity base year  in GDPIntensity_BaseYear column (must be historical year); then percent change in year columns,,,,,,,,,,,,,,,,,,,,,,
+# Units: EJ (fe-constraint),,,,,,,,,,,,,,,,,,,,,,
+# Column types: ccccicnnnnnnnnnnnnnnnnn,,,,,,,,,,,,,,,,,,,,,,
+# ----------,,,,,,,,,,,,,,,,,,,,,,
+xml,market,policy.portfolio.standard,policyType,GDPIntensity_BaseYear,tech_mapping,2020,2025,2030,2035,2040,2045,2050,2055,2060,2065,2070,2075,2080,2085,2090,2095,2100
+policy_scrap_limit_global,Global,scrap-limit,tax,,SCRAP_STEEL,392,537,624,742,851,970,1090,,,,,,,,,,

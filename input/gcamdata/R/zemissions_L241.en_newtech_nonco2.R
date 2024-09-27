@@ -105,7 +105,7 @@ module_emissions_L241.en_newtech_nonco2 <- function(command, ...) {
     L241.steel_coeff <- L112.ghg_tgej_R_en_S_F_Yh_infered_combEF_AP %>%
       filter(supplysector %in% ind_subsector_revised$sector,
              year == MODEL_FINAL_BASE_YEAR,
-             GCAM_region_ID)
+             GCAM_region_ID == EU15_ID)
     # 1d. Combine emissions exceptions --------------------------------------
     # Now replace the missing with the CO and CH4 emission coefficients for
     # technologies with expectations and select for future years.
