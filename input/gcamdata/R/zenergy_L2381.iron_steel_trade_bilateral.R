@@ -29,7 +29,7 @@ module_energy_L2381.iron_steel_trade_bilateral <- function(command, ...) {
                      FILE = "energy/A323.globaltech_shrwt",
                      FILE = "energy/A_irnstl_base_shareweights",
                      FILE = "energy/A_irnstl_tech_reference",
-                     "LB1092.Tradebalance_iron_steel_Mt_R_Y_OECD_bilateral",
+                     "LB1092.Tradebalance_iron_steel_Mt_R_Y_EU_bilateral",
                      "LB1092.Tradebalance_iron_steel_Mt_R_Y",
                      "L2323.StubTechProd_iron_steel")
   if(command == driver.DECLARE_INPUTS) {
@@ -59,10 +59,10 @@ module_energy_L2381.iron_steel_trade_bilateral <- function(command, ...) {
 
     # Load required inputs  ---------------------
     get_data_list(all_data, MODULE_INPUTS)
-    GCAM_region_names_OECD <- GCAM_region_names %>%
-      semi_join(A_irnstl_regions %>%  filter(sector == "OECD"), by = "region")
-    GCAM_region_names_nonOECD <- GCAM_region_names %>%
-      anti_join(A_irnstl_regions %>%  filter(sector == "OECD"), by = "region")
+    GCAM_region_names_EU <- GCAM_region_names %>%
+      semi_join(A_irnstl_regions %>%  filter(sector == "EU"), by = "region")
+    GCAM_region_names_nonEU <- GCAM_region_names %>%
+      anti_join(A_irnstl_regions %>%  filter(sector == "EU"), by = "region")
 
     # 1. TRADED SECTOR / SUBSECTOR / TECHNOLOGY") ---------------------
     # L2381.Supplysector_tra: generic supplysector info for traded iron and steel
@@ -79,15 +79,15 @@ module_energy_L2381.iron_steel_trade_bilateral <- function(command, ...) {
 
     # L2381.SubsectorAll_tra: generic subsector info for traded iron and steel
     # Traded commodities have the region set to USA and the subsector gets the region name pre-pended
-    L2381.SubsectorAll_tra_OECD <- write_to_all_regions(filter(A_irnstl_TradedSubsector_bilateral, grepl("_OECD", supplysector)),
+    L2381.SubsectorAll_tra_EU <- write_to_all_regions(filter(A_irnstl_TradedSubsector_bilateral, grepl("_EU", supplysector)),
                                                   c(LEVEL2_DATA_NAMES[["SubsectorAllTo"]], "logit.type"),
-                                                  GCAM_region_names_OECD,
-                                                  has_traded = TRUE)
-    L2381.SubsectorAll_tra_nonOECD <- write_to_all_regions(filter(A_irnstl_TradedSubsector_bilateral, grepl("_nonOECD", supplysector)),
+                                                  GCAM_region_names_EU,
+                                                  has_traded = TRUE) %>% mutate(region = gcam.USA_REGION)
+    L2381.SubsectorAll_tra_nonEU <- write_to_all_regions(filter(A_irnstl_TradedSubsector_bilateral, grepl("_nonEU", supplysector)),
                                                    c(LEVEL2_DATA_NAMES[["SubsectorAllTo"]], "logit.type"),
-                                                   GCAM_region_names_nonOECD,
+                                                   GCAM_region_names_nonEU,
                                                    has_traded = TRUE) %>% mutate(region = gcam.USA_REGION)
-    L2381.SubsectorAll_tra <- bind_rows(L2381.SubsectorAll_tra_OECD, L2381.SubsectorAll_tra_nonOECD)
+    L2381.SubsectorAll_tra <- bind_rows(L2381.SubsectorAll_tra_EU, L2381.SubsectorAll_tra_nonEU)
 
     # Change traded iron and steel interpolation rule and to.value in countries listed in energy.IRON_STEEL.DOMESTIC_SW
     L2381.SubsectorAll_tra$interpolation.function[which(L2381.SubsectorAll_tra$subsector %in% energy.IRON_STEEL.TRADED_SW)] <- "s-curve"
@@ -224,7 +224,7 @@ module_energy_L2381.iron_steel_trade_bilateral <- function(command, ...) {
     L2381.TechCoef_reg <- select(A_irnstl_RegionalTechnology_bilateral_R_Y, LEVEL2_DATA_NAMES[["TechCoef"]])
 
     # 2b. L2381.Production_reg_imp: Output (flow) of gross imports ----------------------------
-    # Imports are equal to the gross imports calculated in LB1092.Tradebalance_iron_steel_Mt_R_Y_OECD_bilateral
+    # Imports are equal to the gross imports calculated in LB1092.Tradebalance_iron_steel_Mt_R_Y_EU_bilateral
     # split between carbon levels based on global export pool
     global_exports_share <- L2381.Production_tra %>%
       mutate(Exporter_Region_Agg = stringr::str_extract(supplysector, "(?<=steel_).*")) %>%
@@ -235,7 +235,7 @@ module_energy_L2381.iron_steel_trade_bilateral <- function(command, ...) {
       ungroup %>%
       select(-calOutputValue, -Exporter_Region_Agg)
 
-    L2381.GrossImports_Mt_R_Y <- LB1092.Tradebalance_iron_steel_Mt_R_Y_OECD_bilateral %>%
+    L2381.GrossImports_Mt_R_Y <- LB1092.Tradebalance_iron_steel_Mt_R_Y_EU_bilateral %>%
       mutate(minicam.energy.input="iron and steel")%>%
       rename(GrossImp_Mt = value, region = GCAM_region) %>%
       left_join_error_no_match(GCAM_region_names, by = "region") %>%

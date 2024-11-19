@@ -6,12 +6,12 @@
 # Column types: ccccnnnc,,,,,,,
 # ----------,,,,,,,
 supplysector,subsector,technology,minicam.energy.input,coefficient,input.cost,share.weight,market.name
-regional iron and steel,imported iron and steel,imported low-carbon iron and steel_nonOECD,traded low-carbon iron and steel_nonOECD,1,0,1,USA
-regional iron and steel,imported iron and steel,imported med-carbon iron and steel_nonOECD,traded med-carbon iron and steel_nonOECD,1,0,1,USA
-regional iron and steel,imported iron and steel,imported high-carbon iron and steel_nonOECD,traded high-carbon iron and steel_nonOECD,1,0,1,USA
-regional iron and steel,imported iron and steel,imported low-carbon iron and steel_OECD,traded low-carbon iron and steel_OECD,1,0,1,USA
-regional iron and steel,imported iron and steel,imported med-carbon iron and steel_OECD,traded med-carbon iron and steel_OECD,1,0,1,USA
-regional iron and steel,imported iron and steel,imported high-carbon iron and steel_OECD,traded high-carbon iron and steel_OECD,1,0,1,USA
+regional iron and steel,imported iron and steel,imported low-carbon iron and steel_nonEU,traded low-carbon iron and steel_nonEU,1,0,1,USA
+regional iron and steel,imported iron and steel,imported med-carbon iron and steel_nonEU,traded med-carbon iron and steel_nonEU,1,0,1,USA
+regional iron and steel,imported iron and steel,imported high-carbon iron and steel_nonEU,traded high-carbon iron and steel_nonEU,1,0,1,USA
+regional iron and steel,imported iron and steel,imported low-carbon iron and steel_EU,traded low-carbon iron and steel_EU,1,0,1,USA
+regional iron and steel,imported iron and steel,imported med-carbon iron and steel_EU,traded med-carbon iron and steel_EU,1,0,1,USA
+regional iron and steel,imported iron and steel,imported high-carbon iron and steel_EU,traded high-carbon iron and steel_EU,1,0,1,USA
 regional iron and steel,domestic iron and steel,BF_BOF_CCS_86%,BF_BOF_CCS_86%,1,0,1,regional
 regional iron and steel,domestic iron and steel,BF_BOF_BECCSmin,BF_BOF_BECCSmin,1,0,1,regional
 regional iron and steel,domestic iron and steel,BF_BOF_BECCSmax,BF_BOF_BECCSmax,1,0,1,regional

@@ -368,32 +368,32 @@ RESID_ELEC,resid cooling,electricity,electricity
 RESID_ELEC,resid heating,electricity,electricity
 RESID_ELEC,resid others,electricity,electricity
 ROOFTOP_PV,elect_td_bld,rooftop_pv,rooftop_pv
-SCRAP_STEEL,EAF_scrap_bio_NG_finish,EAF_scrap_bio_NG_finish,EAF_scrap_bio_NG_finish
-SCRAP_STEEL,EAF_scrap_fossil_NG_finish,EAF_scrap_fossil_NG_finish,EAF_scrap_fossil_NG_finish
-SCRAP_STEEL,EAF_scrap_bio_elec_finish,EAF_scrap_bio_elec_finish,EAF_scrap_bio_elec_finish
-SCRAP_STEEL,EAF_scrap_fossil_elec_finish,EAF_scrap_fossil_elec_finish,EAF_scrap_fossil_elec_finish
-STEEL_ALL,iron and steel,BLASTFUR,BF_BOF
-STEEL_ALL,iron and steel,BLASTFUR,BF_BOF_CCS_73%
-STEEL_ALL,iron and steel,BLASTFUR,BF_BOF_CCS_86%
-STEEL_ALL,iron and steel,BLASTFUR,BF_BOF_BECCSmin
-STEEL_ALL,iron and steel,BLASTFUR,BF_BOF_BECCSmax
-STEEL_ALL,iron and steel,Smelting reduction,SR_BOF
-STEEL_ALL,iron and steel,Smelting reduction,SR_BOF_CCS
-STEEL_ALL,iron and steel,EAF with DRI,DRI_EAF_NG
-STEEL_ALL,iron and steel,EAF with DRI,DRI_EAF_NG_CCS
-STEEL_ALL,iron and steel,EAF with DRI,DRI_EAF_coal
-STEEL_ALL,iron and steel,EAF with DRI,DRI_EAF_coal_CCS
-STEEL_ALL,iron and steel,EAF with DRI,DRI_EAF_BECCS
-STEEL_ALL,iron and steel,EAF with DRI,DRI_EAF_H2
-STEEL_ALL,iron and steel,SAF with DRI,DRI_SAF_BOF_NG
-STEEL_ALL,iron and steel,SAF with DRI,DRI_SAF_BOF_H2
-STEEL_ALL,iron and steel,SAF with DRI,DRI_SAF_BOF_BECCS
-STEEL_ALL,iron and steel,Electrolysis,AEL_EAF
-STEEL_ALL,iron and steel,Electrolysis,MOE
-STEEL_ALL,iron and steel,EAF with scrap,EAF_scrap_bio_NG_finish
-STEEL_ALL,iron and steel,EAF with scrap,EAF_scrap_fossil_NG_finish
-STEEL_ALL,iron and steel,EAF with scrap,EAF_scrap_bio_elec_finish
-STEEL_ALL,iron and steel,EAF with scrap,EAF_scrap_fossil_elec_finish
+SCRAP_STEEL,EAF with scrap,EAF with scrap,EAF_scrap_bio_NG_finish
+SCRAP_STEEL,EAF with scrap,EAF with scrap,EAF_scrap_fossil_NG_finish
+SCRAP_STEEL,EAF with scrap,EAF with scrap,EAF_scrap_bio_elec_finish
+SCRAP_STEEL,EAF with scrap,EAF with scrap,EAF_scrap_fossil_elec_finish
+STEEL_ALL,BLASTFUR,BLASTFUR,BF_BOF
+STEEL_ALL,BLASTFUR,BLASTFUR,BF_BOF_CCS_73%
+STEEL_ALL,BLASTFUR,BLASTFUR,BF_BOF_CCS_86%
+STEEL_ALL,BLASTFUR,BLASTFUR,BF_BOF_BECCSmin
+STEEL_ALL,BLASTFUR,BLASTFUR,BF_BOF_BECCSmax
+STEEL_ALL,Smelting reduction,Smelting reduction,SR_BOF
+STEEL_ALL,Smelting reduction,Smelting reduction,SR_BOF_CCS
+STEEL_ALL,EAF with DRI,EAF with DRI,DRI_EAF_NG
+STEEL_ALL,EAF with DRI,EAF with DRI,DRI_EAF_NG_CCS
+STEEL_ALL,EAF with DRI,EAF with DRI,DRI_EAF_coal
+STEEL_ALL,EAF with DRI,EAF with DRI,DRI_EAF_coal_CCS
+STEEL_ALL,EAF with DRI,EAF with DRI,DRI_EAF_BECCS
+STEEL_ALL,EAF with DRI,EAF with DRI,DRI_EAF_H2
+STEEL_ALL,SAF with DRI,SAF with DRI,DRI_SAF_BOF_NG
+STEEL_ALL,SAF with DRI,SAF with DRI,DRI_SAF_BOF_H2
+STEEL_ALL,SAF with DRI,SAF with DRI,DRI_SAF_BOF_BECCS
+STEEL_ALL,Electrolysis,Electrolysis,AEL_EAF
+STEEL_ALL,Electrolysis,Electrolysis,MOE
+STEEL_ALL,EAF with scrap,EAF with scrap,EAF_scrap_bio_NG_finish
+STEEL_ALL,EAF with scrap,EAF with scrap,EAF_scrap_fossil_NG_finish
+STEEL_ALL,EAF with scrap,EAF with scrap,EAF_scrap_bio_elec_finish
+STEEL_ALL,EAF with scrap,EAF with scrap,EAF_scrap_fossil_elec_finish
 TPES_BIO,regional biomass,regional biomass,regional biomass
 TPES_BIO,regional biomassOil,regional biomassOil,Soybean
 TPES_BIO,regional biomassOil,regional biomassOil,OilCrop

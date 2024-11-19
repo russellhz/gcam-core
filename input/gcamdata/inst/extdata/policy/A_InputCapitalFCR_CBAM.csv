@@ -1,0 +1,6 @@
+# File: A_InputCapitalFCR.csv,,,,,,,,,,,,,
+# Title: Capital FCR for Specific Technologies,,,,,,,,,,,,,
+# Units: 1975$/GJ,,,,,,,,,,,,,
+# Column types: cccccccnnnnnnn,,,,,,,,,,,,,
+# ----------,,,,,,,,,,,,,
+xml,region,supplysector,subsector,stub.technology,input.capital,2020,2025,2030,2035,2040,2045,2050,2100

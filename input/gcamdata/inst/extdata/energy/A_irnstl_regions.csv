@@ -4,35 +4,35 @@
 # Column types: cc,
 # ----------,
 region,sector
-USA,OECD
-Australia_NZ,OECD
-Canada,OECD
-EU-12,OECD
-EU-15,OECD
-Europe_Non_EU,OECD
-European Free Trade Association,OECD
-Japan,OECD
-Mexico,OECD
-South Korea,OECD
-Colombia,OECD
-Argentina,OECD
-Brazil,nonOECD
-China,nonOECD
-India,nonOECD
-Russia,nonOECD
-South Africa,nonOECD
-Taiwan,nonOECD
-Indonesia,nonOECD
-Africa_Eastern,nonOECD
-Africa_Northern,nonOECD
-Africa_Southern,nonOECD
-Africa_Western,nonOECD
-Central America and Caribbean,nonOECD
-Central Asia,nonOECD
-Europe_Eastern,nonOECD
-Middle East,nonOECD
-Pakistan,nonOECD
-South America_Northern,nonOECD
-South America_Southern,nonOECD
-South Asia,nonOECD
-Southeast Asia,nonOECD
+USA,nonEU
+Australia_NZ,nonEU
+Canada,nonEU
+EU-12,EU
+EU-15,EU
+Europe_Non_EU,nonEU
+European Free Trade Association,nonEU
+Japan,nonEU
+Mexico,nonEU
+South Korea,nonEU
+Colombia,nonEU
+Argentina,nonEU
+Brazil,nonEU
+China,nonEU
+India,nonEU
+Russia,nonEU
+South Africa,nonEU
+Taiwan,nonEU
+Indonesia,nonEU
+Africa_Eastern,nonEU
+Africa_Northern,nonEU
+Africa_Southern,nonEU
+Africa_Western,nonEU
+Central America and Caribbean,nonEU
+Central Asia,nonEU
+Europe_Eastern,nonEU
+Middle East,nonEU
+Pakistan,nonEU
+South America_Northern,nonEU
+South America_Southern,nonEU
+South Asia,nonEU
+Southeast Asia,nonEU

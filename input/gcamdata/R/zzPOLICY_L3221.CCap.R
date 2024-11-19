@@ -20,9 +20,9 @@ module_policy_L3221.CCap <- function(command, ...) {
              FILE = "policy/mappings/policy_tranSubsector_mappings",
              FILE = "policy/mappings/policy_resource_mappings",
              FILE = "policy/mappings/ghg_link",
-             FILE = "policy/GCAM_results/CO2byTech",
+             FILE = "policy/GCAM_results/CO2ByTech",
              FILE = "policy/mappings/market_region_mappings",
-             "L210.ResTechShrwt",
+             "L210.ResTechCoef",
              "L221.StubTech_en",
              "L222.StubTech_en",
              "L224.StubTech_heat",
@@ -38,7 +38,6 @@ module_policy_L3221.CCap <- function(command, ...) {
              "L2326.StubTech_aluminum",
              "L244.StubTech_bld",
              "L225.StubTech_h2",
-             "L271.StubTech_desal",
              "L239.PrimaryConsKeyword_en",
              "L254.StubTranTech",
              "L201.GDP_Scen"
@@ -49,8 +48,7 @@ module_policy_L3221.CCap <- function(command, ...) {
              "L3221.CCap_tech",
              "L3221.CCap_tranTech",
              "L3221.CCap_resource",
-             "L3221.CCap_GHG_Link",
-             "L3221.CCap_global_tech"))
+             "L3221.CCap_GHG_Link"))
   } else if(command == driver.MAKE) {
 
     all_data <- list(...)[[1]]
@@ -83,7 +81,6 @@ module_policy_L3221.CCap <- function(command, ...) {
                                     get_data(all_data, "L2325.StubTech_chemical"),
                                     get_data(all_data, "L2326.StubTech_aluminum"),
                                     get_data(all_data, "L244.StubTech_bld"),
-                                    get_data(all_data, "L271.StubTech_desal"),
                                     get_data(all_data, "L239.PrimaryConsKeyword_en") %>%
                                       select(-primary.consumption, -year) %>%
                                       distinct() %>%
@@ -92,11 +89,11 @@ module_policy_L3221.CCap <- function(command, ...) {
     L254.StubTranTech <- get_data(all_data, "L254.StubTranTech") %>%
                                       filter(sce == "CORE") %>%
                                       select(-sce)
-    L210.ResTech <- get_data(all_data, "L210.ResTechShrwt") %>%
-      distinct(region, resource, reserve.subresource = subresource, resource.reserve.technology = technology)
+    L210.ResTech <- get_data(all_data, "L210.ResTechCoef") %>%
+      distinct(region, resource, reserve.subresource, resource.reserve.technology)
 
     L201.GDP_Scen <- get_data(all_data, "L201.GDP_Scen")
-    CO2byTech <- get_data(all_data, "policy/GCAM_results/CO2byTech") %>%
+    CO2byTech <- get_data(all_data, "policy/GCAM_results/CO2ByTech") %>%
       gather_years()
 
     # 1. Write constraint to correct regions ----------------------------
@@ -112,7 +109,6 @@ module_policy_L3221.CCap <- function(command, ...) {
       mutate(region = if_else(!is.na(region), region, market))
 
     L3221.CCap_link_regions <- L3221.CCap_constraint %>%
-      filter(market != "World") %>%
       # first filter to needed markets
       semi_join(market_region_mappings, by = "market") %>%
       # then add in all regions
@@ -126,8 +122,7 @@ module_policy_L3221.CCap <- function(command, ...) {
     # CO2 constraints in most cases
     # For technologies, we need all regions
     tech_all_regions <- bind_rows(L3221.CCap_constraint, L3221.CCap_link_regions)  %>%
-      distinct(xml, market, region, ghgpolicy, mapping.name) %>%
-      filter(market != "World")
+      distinct(xml, market, region, ghgpolicy, mapping.name)
 
     # Need to add all techs for the given regions/sectors
     # First for non-transport techs, then for transport techs, then for resources
@@ -165,32 +160,20 @@ module_policy_L3221.CCap <- function(command, ...) {
     L3221.CCap_tranTech_pre <- policy_mappings %>%
       filter(!is.na(tranSubsector) | grepl("^trn_", supplysector)) %>%
       select(-resource, -reserve.subresource) %>%
-      left_join(tech_all_regions, by = c("mapping.name"))%>%
-      filter(!is.na(region))
+      left_join(tech_all_regions, by = c("mapping.name"))
 
-    if (nrow(L3221.CCap_tranTech_pre) == 0){
-      # If no caps to implement, create empty tibble
-      tbl_colnames <- c("xml", LEVEL2_DATA_NAMES[["StubTranTechCO2"]])
-      L3221.CCap_tranTech <- tibble::tibble(!!!tbl_colnames, .rows = 0, .name_repair = ~ tbl_colnames)
+    L3221.CCap_tranTech_sector <- L3221.CCap_tranTech_pre %>%
+      filter(is.na(tranSubsector)) %>%
+      select(-tranSubsector) %>%
+      left_join(L254.StubTranTech, by = c("supplysector", "region"))
 
-    } else {
-      L3221.CCap_tranTech_sector <- L3221.CCap_tranTech_pre %>%
-        filter(is.na(tranSubsector)) %>%
-        select(-tranSubsector) %>%
-        left_join(L254.StubTranTech, by = c("supplysector", "region"))
-
-
-
-      L3221.CCap_tranTech <-  L3221.CCap_tranTech_pre %>%
-        filter(!is.na(tranSubsector)) %>%
-        left_join(L254.StubTranTech, by = c("supplysector", "region", "tranSubsector")) %>%
-        bind_rows(L3221.CCap_tranTech_sector) %>%
-        rename(CO2 = ghgpolicy) %>%
-        select(-market) %>%
-        repeat_add_columns(tibble(year = MODEL_YEARS))
-    }
-
-
+    L3221.CCap_tranTech <-  L3221.CCap_tranTech_pre %>%
+      filter(!is.na(tranSubsector)) %>%
+      left_join(L254.StubTranTech, by = c("supplysector", "region", "tranSubsector")) %>%
+      bind_rows(L3221.CCap_tranTech_sector) %>%
+      rename(CO2 = ghgpolicy) %>%
+      select(-market) %>%
+      repeat_add_columns(tibble(year = MODEL_YEARS))
 
     # Check that there are no NAs
     stopifnot(!any(is.na(L3221.CCap_tranTech)))
@@ -200,73 +183,15 @@ module_policy_L3221.CCap <- function(command, ...) {
       filter(!is.na(resource)) %>%
       select(-supplysector, -tranSubsector) %>%
       left_join(tech_all_regions, by = c("mapping.name")) %>%
-      filter(!is.na(region)) %>%
       left_join(L210.ResTech, by = c("resource", "reserve.subresource", "region")) %>%
       rename(CO2 = ghgpolicy) %>%
-      select(-market)
-
-    if (nrow(L3221.CCap_resource) > 0){
-      L3221.CCap_resource <- L3221.CCap_resource %>% repeat_add_columns(tibble(year = MODEL_YEARS))
-    } else {
-      L3221.CCap_resource <- L3221.CCap_resource %>% repeat_add_columns(tibble(year = numeric()))
-
-    }
+      select(-market) %>%
+      repeat_add_columns(tibble(year = MODEL_YEARS))
 
     # Check that there are no NAs
     stopifnot(!any(is.na(L3221.CCap_resource)))
 
-    # 5 Global tech db technologies ---------------
-    # For technologies, we need all regions
-    tech_global_db <- A_CCap_Constraint  %>%
-      distinct(xml, market, ghgpolicy, mapping.name) %>%
-      filter(market == "World")
-
-    if (nrow(tech_global_db) == 0){
-      # If no caps to implement, create empty tibble
-      tbl_colnames <- c("xml", LEVEL2_DATA_NAMES[["GlobalTechCO2"]])
-      L3221.CCap_global_tech <- tibble::tibble(!!!tbl_colnames, .rows = 0, .name_repair = ~ tbl_colnames)
-    } else {
-    # Need to add all techs for the given regions/sectors
-    # First for non-transport techs, then for transport techs, then for resources
-    L3221.CCap_global_tech <- policy_mappings %>%
-      # global-tech-db won't work for resources
-      select(-resource, -reserve.subresource, -tranSubsector) %>%
-      # mutate(mapping.name = if_else(is.na(mapping.name), tech_mapping, mapping.name)) %>%
-      right_join(tech_global_db, by = c("mapping.name")) %>%
-      # add in all techs
-      left_join(L3221.StubTech_All %>% bind_rows(L254.StubTranTech %>% rename(subsector = tranSubsector)) %>%
-                  distinct(supplysector, subsector, stub.technology), by = "supplysector") %>%
-      # refined liquid feedstocks assumed to be captured
-      filter(!(grepl("feedstock", supplysector) & stub.technology == "refined liquids")) %>%
-      select(xml, CO2 = ghgpolicy, sector.name = supplysector, subsector.name = subsector, technology = stub.technology) %>%
-      repeat_add_columns(tibble(year = MODEL_YEARS))
-    }
-
-    # 5b Global tech resource technologies ---------------
-    # For technologies, we need all regions
-    tech_global_db <- A_CCap_Constraint  %>%
-      distinct(xml, market, ghgpolicy, mapping.name) %>%
-      filter(market == "World")
-
-    L3221.CCap_global_resource <- policy_mappings %>%
-      select(-supplysector, -tranSubsector) %>%
-      right_join(tech_global_db, by = c("mapping.name")) %>%
-      na.omit()
-
-    if (nrow(L3221.CCap_global_resource) > 0){
-      # Write to all resource/region
-      L3221.CCap_global_resource <- L3221.CCap_global_resource %>%
-        left_join(L210.ResTech, by = c("resource", "reserve.subresource")) %>%
-        rename(CO2 = ghgpolicy) %>%
-        select(-market) %>%
-        repeat_add_columns(tibble(year = MODEL_YEARS))
-
-      # add to other resource data
-      L3221.CCap_resource <- bind_rows(L3221.CCap_resource, L3221.CCap_global_resource)
-    }
-
-
-    # 6. Adjust any GDPIntensity targets -------------------------
+    # 5. Adjust any GDPIntensity targets -------------------------
     if (any(!is.na(L3221.CCap_constraint$GDPIntensity_BaseYear))){
       GDP_Intensity_targets <- L3221.CCap_constraint %>%
         filter(!is.na(GDPIntensity_BaseYear))
@@ -321,7 +246,7 @@ module_policy_L3221.CCap <- function(command, ...) {
 
     }
 
-    # 7. Get ghg link for each -------------------------
+    # 6. Get ghg link for each -------------------------
     L3221.CCap_GHG_Link <- A_CCap_Constraint %>%
       distinct(xml, link.type, market, ghgpolicy, adjust.year) %>%
       left_join(market_region_mappings, by = "market") %>%
@@ -381,7 +306,7 @@ module_policy_L3221.CCap <- function(command, ...) {
       add_units("NA") %>%
       add_precursors("policy/A_CCap_Region",
                      "policy/A_CCap_Resource",
-                     "L210.ResTechShrwt") ->
+                     "L210.ResTechCoef") ->
       L3221.CCap_resource
 
     L3221.CCap_GHG_Link %>%
@@ -391,18 +316,9 @@ module_policy_L3221.CCap <- function(command, ...) {
                      "policy/A_CTax_Link") ->
     L3221.CCap_GHG_Link
 
-    L3221.CCap_global_tech %>%
-      add_title("CO2 Names for global-tech-db", overwrite = T) %>%
-      add_units("NA") %>%
-      add_precursors("policy/A_CCap_Constraint",
-                     "policy/mappings/policy_tech_mappings",
-                     "policy/mappings/policy_tranSubsector_mappings",
-                     "policy/mappings/policy_resource_mappings") ->
-      L3221.CCap_global_tech
-
     return_data(L3221.CCap_constraint, L3221.CCap_link_regions,
                 L3221.CCap_tech, L3221.CCap_tranTech, L3221.CCap_resource,
-                L3221.CCap_GHG_Link, L3221.CCap_global_tech)
+                L3221.CCap_GHG_Link)
   } else {
     stop("Unknown command")
   }

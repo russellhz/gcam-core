@@ -25,6 +25,28 @@ ETS,elec_refined liquids (CC)
 ETS,elec_refined liquids (steam/CT)
 ETS,elec_gas (CC)
 ETS,elec_gas (steam/CT)
+ETS,BF_BOF
+ETS,BF_BOF_CCS_73%
+ETS,BF_BOF_CCS_86%
+ETS,BF_BOF_BECCSmin
+ETS,BF_BOF_BECCSmax
+ETS,SR_BOF
+ETS,SR_BOF_CCS
+ETS,DRI_EAF_NG
+ETS,DRI_EAF_NG_CCS
+ETS,DRI_EAF_coal
+ETS,DRI_EAF_coal_CCS
+ETS,DRI_EAF_BECCS
+ETS,DRI_EAF_H2
+ETS,DRI_SAF_BOF_NG
+ETS,DRI_SAF_BOF_H2
+ETS,DRI_SAF_BOF_BECCS
+ETS,AEL_EAF
+ETS,MOE
+ETS,EAF_scrap_fossil_NG_finish
+ETS,EAF_scrap_bio_NG_finish
+ETS,EAF_scrap_fossil_elec_finish
+ETS,EAF_scrap_bio_elec_finish
 BUILD_SECTORS_NOCOOL,resid heating
 BUILD_SECTORS_NOCOOL,resid others
 BUILD_SECTORS_NOCOOL,comm heating
@@ -36,72 +58,43 @@ CO2_CHINA_INDUSTRY,chemical energy use
 CO2_CHINA_INDUSTRY,chemical feedstocks
 CO2_CHINA_INDUSTRY,alumina
 CO2_CHINA_INDUSTRY,mining energy use
-CO2_CHINA_INDUSTRY,iron and steel
 CO2_CHINA_INDUSTRY,construction energy use
-TRN_4W,trn_pass_road_LDV_4W
-CEMENT,cement
-CEMENT,process heat cement
-CO2_NO_STEEL,H2 central production
-CO2_NO_STEEL,H2 wholesale dispensing
-CO2_NO_STEEL,N fertilizer
-CO2_NO_STEEL,agricultural energy use
-CO2_NO_STEEL,alumina
-CO2_NO_STEEL,backup_electricity
-CO2_NO_STEEL,cement
-CO2_NO_STEEL,chemical energy use
-CO2_NO_STEEL,chemical feedstocks
-CO2_NO_STEEL,comm cooling
-CO2_NO_STEEL,comm heating
-CO2_NO_STEEL,comm others
-CO2_NO_STEEL,construction energy use
-CO2_NO_STEEL,csp_backup
-CO2_NO_STEEL,delivered gas h2
-CO2_NO_STEEL,desalinated water
-CO2_NO_STEEL,district heat
-CO2_NO_STEEL,elec_biomass (IGCC CCS)
-CO2_NO_STEEL,elec_biomass (IGCC)
-CO2_NO_STEEL,elec_biomass (conv CCS)
-CO2_NO_STEEL,elec_biomass (conv)
-CO2_NO_STEEL,elec_coal (IGCC CCS)
-CO2_NO_STEEL,elec_coal (IGCC)
-CO2_NO_STEEL,elec_coal (conv pul CCS)
-CO2_NO_STEEL,elec_coal (conv pul)
-CO2_NO_STEEL,elec_gas (CC CCS)
-CO2_NO_STEEL,elec_gas (CC)
-CO2_NO_STEEL,elec_gas (steam/CT)
-CO2_NO_STEEL,elec_refined liquids (CC CCS)
-CO2_NO_STEEL,elec_refined liquids (CC)
-CO2_NO_STEEL,elec_refined liquids (steam/CT)
-CO2_NO_STEEL,gas pipeline
-CO2_NO_STEEL,gas processing
-CO2_NO_STEEL,mining energy use
-CO2_NO_STEEL,other industrial energy use
-CO2_NO_STEEL,other industrial feedstocks
-CO2_NO_STEEL,process heat cement
-CO2_NO_STEEL,refining
-CO2_NO_STEEL,regional biomass
-CO2_NO_STEEL,regional biomassOil
-CO2_NO_STEEL,regional corn for ethanol
-CO2_NO_STEEL,regional sugar for ethanol
-CO2_NO_STEEL,resid cooling
-CO2_NO_STEEL,resid heating
-CO2_NO_STEEL,resid others
-CO2_NO_STEEL,trn_aviation_intl
-CO2_NO_STEEL,trn_freight
-CO2_NO_STEEL,trn_freight_road
-CO2_NO_STEEL,trn_pass
-CO2_NO_STEEL,trn_pass_road
-CO2_NO_STEEL,trn_pass_road_LDV
-CO2_NO_STEEL,trn_pass_road_LDV_4W
-CO2_NO_STEEL,trn_shipping_intl
+CO2_CHINA_INDUSTRY,BF_BOF
+CO2_CHINA_INDUSTRY,BF_BOF_CCS_73%
+CO2_CHINA_INDUSTRY,BF_BOF_CCS_86%
+CO2_CHINA_INDUSTRY,BF_BOF_BECCSmin
+CO2_CHINA_INDUSTRY,BF_BOF_BECCSmax
+CO2_CHINA_INDUSTRY,SR_BOF
+CO2_CHINA_INDUSTRY,SR_BOF_CCS
+CO2_CHINA_INDUSTRY,DRI_EAF_NG
+CO2_CHINA_INDUSTRY,DRI_EAF_NG_CCS
+CO2_CHINA_INDUSTRY,DRI_EAF_coal
+CO2_CHINA_INDUSTRY,DRI_EAF_coal_CCS
+CO2_CHINA_INDUSTRY,DRI_EAF_BECCS
+CO2_CHINA_INDUSTRY,DRI_EAF_H2
+CO2_CHINA_INDUSTRY,DRI_SAF_BOF_NG
+CO2_CHINA_INDUSTRY,DRI_SAF_BOF_H2
+CO2_CHINA_INDUSTRY,DRI_SAF_BOF_BECCS
+CO2_CHINA_INDUSTRY,AEL_EAF
+CO2_CHINA_INDUSTRY,MOE
+CO2_CHINA_INDUSTRY,EAF_scrap_fossil_NG_finish
+CO2_CHINA_INDUSTRY,EAF_scrap_bio_NG_finish
+CO2_CHINA_INDUSTRY,EAF_scrap_fossil_elec_finish
+CO2_CHINA_INDUSTRY,EAF_scrap_bio_elec_finish
+IRONSTEEL,BF_BOF
+IRONSTEEL,BF_BOF_CCS_73%
 IRONSTEEL,BF_BOF_CCS_86%
 IRONSTEEL,BF_BOF_BECCSmin
 IRONSTEEL,BF_BOF_BECCSmax
+IRONSTEEL,SR_BOF
 IRONSTEEL,SR_BOF_CCS
+IRONSTEEL,DRI_EAF_NG
 IRONSTEEL,DRI_EAF_NG_CCS
+IRONSTEEL,DRI_EAF_coal
 IRONSTEEL,DRI_EAF_coal_CCS
 IRONSTEEL,DRI_EAF_BECCS
 IRONSTEEL,DRI_EAF_H2
+IRONSTEEL,DRI_SAF_BOF_NG
 IRONSTEEL,DRI_SAF_BOF_H2
 IRONSTEEL,DRI_SAF_BOF_BECCS
 IRONSTEEL,AEL_EAF
@@ -110,10 +103,6 @@ IRONSTEEL,EAF_scrap_fossil_NG_finish
 IRONSTEEL,EAF_scrap_bio_NG_finish
 IRONSTEEL,EAF_scrap_fossil_elec_finish
 IRONSTEEL,EAF_scrap_bio_elec_finish
-IRONSTEEL,DRI_EAF_NG
-IRONSTEEL,DRI_SAF_BOF_NG
-IRONSTEEL,BF_BOF_CCS_73%
-IRONSTEEL,BF_BOF
-IRONSTEEL,SR_BOF
-IRONSTEEL,DRI_EAF_coal
-IRONSTEEL,BF_BOF_CCS_86%
+TRN_4W,trn_pass_road_LDV_4W
+CEMENT,cement
+CEMENT,process heat cement
