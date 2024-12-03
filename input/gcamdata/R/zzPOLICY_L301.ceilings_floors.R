@@ -66,14 +66,14 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
     # Load required inputs -------------------------
     get_data_list(all_data, MODULE_INPUTS)
 
-    A_energy_constraints <- left_join(A_energy_constraints, market_region_mapping, by = "market") %>%
+    A_energy_constraints <- left_join(A_energy_constraints, market_region_mappings, by = "market") %>%
       mutate(region = if_else(is.na(region), market, region))
 
-    A_renewable_energy_standards <- left_join(A_renewable_energy_standards, market_region_mapping, by = "market") %>%
+    A_renewable_energy_standards <- left_join(A_renewable_energy_standards, market_region_mappings, by = "market") %>%
       mutate(region = if_else(is.na(region), market, region),
              policyType = "RES")
 
-    A_OutputsByTech <- gather_years(A_OutputsByTech)
+    OutputsByTech <- gather_years(OutputsByTech)
 
     L301.StubTech_All <- bind_rows(
       # Not all biomassOil techs are in the stubtech
@@ -101,7 +101,7 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
       # Calculate the energy output of the techs in the base year
       L301.baseEnergy <- L301.energy_consumption %>%
         # Filter out techs that don't exist in base year
-        inner_join(A_OutputsByTech, by = c("region", "supplysector" = "sector", "subsector",
+        inner_join(OutputsByTech, by = c("region", "supplysector" = "sector", "subsector",
                                            "stub.technology" = "technology", "GDPIntensity_BaseYear" = "year"))
 
       # Add in GDP and calculate base GDP Intensity

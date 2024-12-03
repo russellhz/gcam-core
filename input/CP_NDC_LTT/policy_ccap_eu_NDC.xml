@@ -4,7 +4,7 @@
             <ghgpolicy name="CO2_ETS">
                 <market>EU</market>
                 <constraint year="2025">387.8102662</constraint>
-                <constraint year="2030">242.367</constraint>
+                <constraint fillout="1" year="2030">242.367</constraint>
                 <fixedTax fillout="1" year="2035">349.618</fixedTax>
             </ghgpolicy>
             <supplysector name="other industrial energy use">
@@ -4241,558 +4241,6 @@
                     </technology>
                 </subsector>
             </supplysector>
-            <supplysector name="iron and steel">
-                <subsector name="BLASTFUR">
-                    <technology name="BLASTFUR">
-                        <period year="1975">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="1990">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2005">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2010">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2015">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2020">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2025">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2030">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2035">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2040">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2045">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2050">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2055">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2060">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2065">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2070">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2075">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2080">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2085">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2090">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2095">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2100">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                    </technology>
-                    <technology name="BLASTFUR CCS">
-                        <period year="1975">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="1990">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2005">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2010">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2015">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2020">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2025">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2030">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2035">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2040">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2045">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2050">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2055">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2060">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2065">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2070">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2075">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2080">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2085">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2090">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2095">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2100">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                    </technology>
-                    <technology name="BLASTFUR with hydrogen">
-                        <period year="1975">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="1990">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2005">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2010">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2015">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2020">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2025">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2030">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2035">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2040">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2045">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2050">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2055">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2060">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2065">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2070">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2075">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2080">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2085">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2090">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2095">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2100">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                    </technology>
-                    <technology name="BLASTFUR CCS with hydrogen">
-                        <period year="1975">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="1990">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2005">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2010">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2015">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2020">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2025">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2030">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2035">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2040">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2045">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2050">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2055">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2060">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2065">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2070">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2075">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2080">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2085">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2090">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2095">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2100">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                    </technology>
-                </subsector>
-                <subsector name="EAF with DRI">
-                    <technology name="EAF with DRI">
-                        <period year="1975">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="1990">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2005">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2010">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2015">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2020">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2025">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2030">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2035">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2040">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2045">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2050">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2055">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2060">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2065">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2070">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2075">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2080">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2085">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2090">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2095">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2100">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                    </technology>
-                    <technology name="EAF with DRI CCS">
-                        <period year="1975">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="1990">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2005">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2010">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2015">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2020">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2025">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2030">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2035">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2040">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2045">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2050">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2055">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2060">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2065">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2070">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2075">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2080">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2085">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2090">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2095">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2100">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                    </technology>
-                    <technology name="Hydrogen-based DRI">
-                        <period year="1975">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="1990">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2005">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2010">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2015">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2020">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2025">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2030">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2035">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2040">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2045">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2050">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2055">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2060">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2065">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2070">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2075">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2080">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2085">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2090">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2095">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2100">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                    </technology>
-                </subsector>
-                <subsector name="EAF with scrap">
-                    <technology name="EAF with scrap">
-                        <period year="1975">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="1990">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2005">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2010">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2015">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2020">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2025">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2030">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2035">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2040">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2045">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2050">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2055">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2060">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2065">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2070">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2075">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2080">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2085">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2090">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2095">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2100">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                    </technology>
-                </subsector>
-            </supplysector>
             <supplysector name="refining">
                 <subsector name="oil refining">
                     <technology name="oil refining">
@@ -7426,6 +6874,1446 @@
                         </period>
                     </technology>
                     <technology name="gas (steam/CT) (dry cooling)">
+                        <period year="1975">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="1990">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2005">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2010">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2015">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2020">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2025">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2030">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2035">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2040">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2045">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2050">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2055">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2060">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2065">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2070">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2075">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2080">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2085">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2090">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2095">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2100">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                    </technology>
+                </subsector>
+            </supplysector>
+            <supplysector name="BF_BOF">
+                <subsector name="BF_BOF">
+                    <technology name="BF_BOF">
+                        <period year="1975">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="1990">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2005">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2010">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2015">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2020">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2025">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2030">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2035">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2040">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2045">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2050">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2055">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2060">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2065">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2070">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2075">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2080">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2085">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2090">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2095">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2100">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                    </technology>
+                </subsector>
+            </supplysector>
+            <supplysector name="BF_BOF_CCS_73%">
+                <subsector name="BF_BOF_CCS_73%">
+                    <technology name="BF_BOF_CCS_73%">
+                        <period year="1975">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="1990">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2005">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2010">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2015">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2020">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2025">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2030">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2035">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2040">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2045">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2050">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2055">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2060">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2065">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2070">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2075">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2080">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2085">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2090">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2095">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2100">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                    </technology>
+                </subsector>
+            </supplysector>
+            <supplysector name="BF_BOF_CCS_86%">
+                <subsector name="BF_BOF_CCS_86%">
+                    <technology name="BF_BOF_CCS_86%">
+                        <period year="1975">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="1990">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2005">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2010">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2015">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2020">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2025">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2030">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2035">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2040">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2045">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2050">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2055">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2060">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2065">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2070">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2075">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2080">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2085">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2090">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2095">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2100">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                    </technology>
+                </subsector>
+            </supplysector>
+            <supplysector name="BF_BOF_BECCSmin">
+                <subsector name="BF_BOF_BECCSmin">
+                    <technology name="BF_BOF_BECCSmin">
+                        <period year="1975">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="1990">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2005">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2010">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2015">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2020">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2025">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2030">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2035">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2040">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2045">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2050">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2055">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2060">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2065">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2070">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2075">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2080">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2085">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2090">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2095">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2100">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                    </technology>
+                </subsector>
+            </supplysector>
+            <supplysector name="BF_BOF_BECCSmax">
+                <subsector name="BF_BOF_BECCSmax">
+                    <technology name="BF_BOF_BECCSmax">
+                        <period year="1975">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="1990">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2005">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2010">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2015">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2020">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2025">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2030">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2035">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2040">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2045">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2050">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2055">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2060">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2065">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2070">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2075">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2080">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2085">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2090">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2095">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2100">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                    </technology>
+                </subsector>
+            </supplysector>
+            <supplysector name="SR_BOF">
+                <subsector name="SR_BOF">
+                    <technology name="SR_BOF">
+                        <period year="1975">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="1990">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2005">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2010">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2015">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2020">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2025">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2030">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2035">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2040">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2045">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2050">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2055">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2060">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2065">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2070">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2075">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2080">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2085">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2090">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2095">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2100">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                    </technology>
+                </subsector>
+            </supplysector>
+            <supplysector name="SR_BOF_CCS">
+                <subsector name="SR_BOF_CCS">
+                    <technology name="SR_BOF_CCS">
+                        <period year="1975">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="1990">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2005">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2010">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2015">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2020">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2025">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2030">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2035">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2040">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2045">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2050">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2055">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2060">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2065">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2070">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2075">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2080">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2085">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2090">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2095">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2100">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                    </technology>
+                </subsector>
+            </supplysector>
+            <supplysector name="DRI_EAF_NG">
+                <subsector name="DRI_EAF_NG">
+                    <technology name="DRI_EAF_NG">
+                        <period year="1975">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="1990">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2005">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2010">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2015">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2020">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2025">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2030">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2035">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2040">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2045">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2050">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2055">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2060">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2065">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2070">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2075">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2080">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2085">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2090">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2095">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2100">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                    </technology>
+                </subsector>
+            </supplysector>
+            <supplysector name="DRI_EAF_NG_CCS">
+                <subsector name="DRI_EAF_NG_CCS">
+                    <technology name="DRI_EAF_NG_CCS">
+                        <period year="1975">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="1990">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2005">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2010">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2015">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2020">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2025">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2030">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2035">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2040">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2045">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2050">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2055">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2060">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2065">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2070">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2075">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2080">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2085">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2090">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2095">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2100">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                    </technology>
+                </subsector>
+            </supplysector>
+            <supplysector name="DRI_EAF_coal">
+                <subsector name="DRI_EAF_coal">
+                    <technology name="DRI_EAF_coal">
+                        <period year="1975">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="1990">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2005">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2010">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2015">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2020">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2025">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2030">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2035">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2040">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2045">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2050">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2055">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2060">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2065">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2070">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2075">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2080">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2085">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2090">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2095">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2100">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                    </technology>
+                </subsector>
+            </supplysector>
+            <supplysector name="DRI_EAF_coal_CCS">
+                <subsector name="DRI_EAF_coal_CCS">
+                    <technology name="DRI_EAF_coal_CCS">
+                        <period year="1975">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="1990">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2005">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2010">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2015">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2020">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2025">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2030">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2035">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2040">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2045">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2050">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2055">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2060">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2065">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2070">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2075">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2080">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2085">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2090">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2095">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2100">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                    </technology>
+                </subsector>
+            </supplysector>
+            <supplysector name="DRI_EAF_BECCS">
+                <subsector name="DRI_EAF_BECCS">
+                    <technology name="DRI_EAF_BECCS">
+                        <period year="1975">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="1990">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2005">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2010">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2015">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2020">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2025">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2030">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2035">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2040">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2045">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2050">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2055">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2060">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2065">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2070">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2075">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2080">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2085">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2090">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2095">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2100">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                    </technology>
+                </subsector>
+            </supplysector>
+            <supplysector name="DRI_EAF_H2">
+                <subsector name="DRI_EAF_H2">
+                    <technology name="DRI_EAF_H2">
+                        <period year="1975">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="1990">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2005">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2010">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2015">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2020">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2025">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2030">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2035">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2040">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2045">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2050">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2055">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2060">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2065">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2070">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2075">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2080">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2085">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2090">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2095">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2100">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                    </technology>
+                </subsector>
+            </supplysector>
+            <supplysector name="DRI_SAF_BOF_NG">
+                <subsector name="DRI_SAF_BOF_NG">
+                    <technology name="DRI_SAF_BOF_NG">
+                        <period year="1975">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="1990">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2005">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2010">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2015">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2020">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2025">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2030">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2035">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2040">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2045">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2050">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2055">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2060">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2065">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2070">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2075">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2080">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2085">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2090">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2095">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2100">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                    </technology>
+                </subsector>
+            </supplysector>
+            <supplysector name="DRI_SAF_BOF_H2">
+                <subsector name="DRI_SAF_BOF_H2">
+                    <technology name="DRI_SAF_BOF_H2">
+                        <period year="1975">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="1990">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2005">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2010">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2015">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2020">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2025">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2030">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2035">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2040">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2045">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2050">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2055">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2060">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2065">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2070">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2075">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2080">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2085">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2090">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2095">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2100">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                    </technology>
+                </subsector>
+            </supplysector>
+            <supplysector name="DRI_SAF_BOF_BECCS">
+                <subsector name="DRI_SAF_BOF_BECCS">
+                    <technology name="DRI_SAF_BOF_BECCS">
+                        <period year="1975">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="1990">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2005">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2010">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2015">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2020">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2025">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2030">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2035">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2040">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2045">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2050">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2055">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2060">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2065">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2070">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2075">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2080">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2085">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2090">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2095">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2100">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                    </technology>
+                </subsector>
+            </supplysector>
+            <supplysector name="AEL_EAF">
+                <subsector name="AEL_EAF">
+                    <technology name="AEL_EAF">
+                        <period year="1975">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="1990">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2005">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2010">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2015">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2020">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2025">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2030">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2035">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2040">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2045">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2050">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2055">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2060">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2065">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2070">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2075">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2080">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2085">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2090">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2095">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2100">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                    </technology>
+                </subsector>
+            </supplysector>
+            <supplysector name="MOE">
+                <subsector name="MOE">
+                    <technology name="MOE">
+                        <period year="1975">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="1990">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2005">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2010">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2015">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2020">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2025">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2030">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2035">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2040">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2045">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2050">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2055">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2060">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2065">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2070">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2075">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2080">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2085">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2090">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2095">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2100">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                    </technology>
+                </subsector>
+            </supplysector>
+            <supplysector name="EAF_scrap_fossil_NG_finish">
+                <subsector name="EAF_scrap_fossil_NG_finish">
+                    <technology name="EAF_scrap_fossil_NG_finish">
+                        <period year="1975">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="1990">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2005">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2010">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2015">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2020">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2025">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2030">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2035">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2040">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2045">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2050">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2055">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2060">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2065">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2070">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2075">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2080">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2085">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2090">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2095">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2100">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                    </technology>
+                </subsector>
+            </supplysector>
+            <supplysector name="EAF_scrap_fossil_elec_finish">
+                <subsector name="EAF_scrap_fossil_elec_finish">
+                    <technology name="EAF_scrap_fossil_elec_finish">
                         <period year="1975">
                             <CO2 name="CO2_ETS"/>
                         </period>
@@ -11664,558 +12552,6 @@
                     </technology>
                 </subsector>
             </supplysector>
-            <supplysector name="iron and steel">
-                <subsector name="BLASTFUR">
-                    <technology name="BLASTFUR">
-                        <period year="1975">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="1990">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2005">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2010">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2015">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2020">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2025">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2030">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2035">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2040">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2045">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2050">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2055">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2060">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2065">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2070">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2075">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2080">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2085">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2090">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2095">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2100">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                    </technology>
-                    <technology name="BLASTFUR CCS">
-                        <period year="1975">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="1990">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2005">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2010">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2015">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2020">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2025">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2030">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2035">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2040">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2045">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2050">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2055">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2060">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2065">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2070">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2075">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2080">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2085">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2090">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2095">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2100">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                    </technology>
-                    <technology name="BLASTFUR with hydrogen">
-                        <period year="1975">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="1990">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2005">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2010">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2015">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2020">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2025">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2030">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2035">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2040">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2045">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2050">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2055">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2060">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2065">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2070">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2075">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2080">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2085">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2090">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2095">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2100">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                    </technology>
-                    <technology name="BLASTFUR CCS with hydrogen">
-                        <period year="1975">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="1990">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2005">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2010">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2015">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2020">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2025">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2030">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2035">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2040">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2045">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2050">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2055">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2060">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2065">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2070">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2075">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2080">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2085">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2090">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2095">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2100">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                    </technology>
-                </subsector>
-                <subsector name="EAF with DRI">
-                    <technology name="EAF with DRI">
-                        <period year="1975">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="1990">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2005">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2010">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2015">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2020">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2025">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2030">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2035">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2040">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2045">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2050">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2055">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2060">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2065">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2070">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2075">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2080">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2085">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2090">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2095">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2100">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                    </technology>
-                    <technology name="EAF with DRI CCS">
-                        <period year="1975">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="1990">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2005">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2010">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2015">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2020">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2025">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2030">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2035">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2040">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2045">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2050">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2055">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2060">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2065">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2070">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2075">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2080">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2085">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2090">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2095">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2100">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                    </technology>
-                    <technology name="Hydrogen-based DRI">
-                        <period year="1975">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="1990">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2005">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2010">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2015">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2020">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2025">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2030">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2035">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2040">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2045">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2050">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2055">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2060">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2065">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2070">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2075">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2080">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2085">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2090">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2095">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2100">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                    </technology>
-                </subsector>
-                <subsector name="EAF with scrap">
-                    <technology name="EAF with scrap">
-                        <period year="1975">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="1990">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2005">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2010">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2015">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2020">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2025">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2030">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2035">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2040">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2045">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2050">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2055">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2060">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2065">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2070">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2075">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2080">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2085">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2090">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2095">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                        <period year="2100">
-                            <CO2 name="CO2_ETS"/>
-                        </period>
-                    </technology>
-                </subsector>
-            </supplysector>
             <supplysector name="refining">
                 <subsector name="oil refining">
                     <technology name="oil refining">
@@ -14637,6 +14973,1446 @@
                         </period>
                     </technology>
                     <technology name="gas (steam/CT) (dry cooling)">
+                        <period year="1975">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="1990">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2005">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2010">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2015">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2020">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2025">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2030">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2035">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2040">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2045">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2050">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2055">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2060">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2065">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2070">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2075">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2080">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2085">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2090">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2095">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2100">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                    </technology>
+                </subsector>
+            </supplysector>
+            <supplysector name="BF_BOF">
+                <subsector name="BF_BOF">
+                    <technology name="BF_BOF">
+                        <period year="1975">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="1990">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2005">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2010">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2015">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2020">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2025">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2030">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2035">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2040">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2045">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2050">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2055">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2060">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2065">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2070">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2075">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2080">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2085">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2090">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2095">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2100">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                    </technology>
+                </subsector>
+            </supplysector>
+            <supplysector name="BF_BOF_CCS_73%">
+                <subsector name="BF_BOF_CCS_73%">
+                    <technology name="BF_BOF_CCS_73%">
+                        <period year="1975">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="1990">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2005">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2010">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2015">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2020">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2025">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2030">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2035">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2040">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2045">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2050">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2055">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2060">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2065">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2070">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2075">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2080">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2085">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2090">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2095">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2100">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                    </technology>
+                </subsector>
+            </supplysector>
+            <supplysector name="BF_BOF_CCS_86%">
+                <subsector name="BF_BOF_CCS_86%">
+                    <technology name="BF_BOF_CCS_86%">
+                        <period year="1975">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="1990">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2005">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2010">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2015">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2020">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2025">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2030">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2035">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2040">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2045">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2050">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2055">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2060">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2065">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2070">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2075">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2080">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2085">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2090">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2095">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2100">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                    </technology>
+                </subsector>
+            </supplysector>
+            <supplysector name="BF_BOF_BECCSmin">
+                <subsector name="BF_BOF_BECCSmin">
+                    <technology name="BF_BOF_BECCSmin">
+                        <period year="1975">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="1990">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2005">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2010">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2015">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2020">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2025">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2030">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2035">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2040">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2045">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2050">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2055">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2060">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2065">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2070">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2075">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2080">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2085">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2090">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2095">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2100">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                    </technology>
+                </subsector>
+            </supplysector>
+            <supplysector name="BF_BOF_BECCSmax">
+                <subsector name="BF_BOF_BECCSmax">
+                    <technology name="BF_BOF_BECCSmax">
+                        <period year="1975">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="1990">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2005">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2010">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2015">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2020">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2025">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2030">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2035">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2040">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2045">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2050">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2055">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2060">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2065">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2070">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2075">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2080">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2085">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2090">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2095">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2100">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                    </technology>
+                </subsector>
+            </supplysector>
+            <supplysector name="SR_BOF">
+                <subsector name="SR_BOF">
+                    <technology name="SR_BOF">
+                        <period year="1975">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="1990">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2005">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2010">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2015">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2020">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2025">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2030">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2035">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2040">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2045">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2050">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2055">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2060">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2065">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2070">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2075">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2080">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2085">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2090">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2095">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2100">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                    </technology>
+                </subsector>
+            </supplysector>
+            <supplysector name="SR_BOF_CCS">
+                <subsector name="SR_BOF_CCS">
+                    <technology name="SR_BOF_CCS">
+                        <period year="1975">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="1990">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2005">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2010">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2015">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2020">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2025">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2030">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2035">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2040">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2045">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2050">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2055">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2060">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2065">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2070">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2075">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2080">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2085">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2090">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2095">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2100">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                    </technology>
+                </subsector>
+            </supplysector>
+            <supplysector name="DRI_EAF_NG">
+                <subsector name="DRI_EAF_NG">
+                    <technology name="DRI_EAF_NG">
+                        <period year="1975">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="1990">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2005">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2010">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2015">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2020">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2025">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2030">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2035">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2040">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2045">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2050">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2055">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2060">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2065">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2070">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2075">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2080">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2085">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2090">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2095">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2100">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                    </technology>
+                </subsector>
+            </supplysector>
+            <supplysector name="DRI_EAF_NG_CCS">
+                <subsector name="DRI_EAF_NG_CCS">
+                    <technology name="DRI_EAF_NG_CCS">
+                        <period year="1975">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="1990">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2005">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2010">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2015">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2020">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2025">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2030">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2035">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2040">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2045">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2050">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2055">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2060">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2065">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2070">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2075">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2080">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2085">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2090">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2095">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2100">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                    </technology>
+                </subsector>
+            </supplysector>
+            <supplysector name="DRI_EAF_coal">
+                <subsector name="DRI_EAF_coal">
+                    <technology name="DRI_EAF_coal">
+                        <period year="1975">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="1990">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2005">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2010">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2015">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2020">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2025">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2030">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2035">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2040">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2045">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2050">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2055">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2060">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2065">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2070">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2075">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2080">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2085">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2090">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2095">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2100">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                    </technology>
+                </subsector>
+            </supplysector>
+            <supplysector name="DRI_EAF_coal_CCS">
+                <subsector name="DRI_EAF_coal_CCS">
+                    <technology name="DRI_EAF_coal_CCS">
+                        <period year="1975">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="1990">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2005">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2010">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2015">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2020">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2025">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2030">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2035">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2040">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2045">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2050">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2055">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2060">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2065">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2070">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2075">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2080">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2085">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2090">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2095">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2100">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                    </technology>
+                </subsector>
+            </supplysector>
+            <supplysector name="DRI_EAF_BECCS">
+                <subsector name="DRI_EAF_BECCS">
+                    <technology name="DRI_EAF_BECCS">
+                        <period year="1975">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="1990">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2005">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2010">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2015">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2020">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2025">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2030">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2035">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2040">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2045">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2050">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2055">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2060">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2065">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2070">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2075">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2080">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2085">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2090">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2095">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2100">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                    </technology>
+                </subsector>
+            </supplysector>
+            <supplysector name="DRI_EAF_H2">
+                <subsector name="DRI_EAF_H2">
+                    <technology name="DRI_EAF_H2">
+                        <period year="1975">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="1990">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2005">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2010">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2015">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2020">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2025">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2030">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2035">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2040">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2045">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2050">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2055">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2060">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2065">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2070">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2075">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2080">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2085">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2090">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2095">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2100">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                    </technology>
+                </subsector>
+            </supplysector>
+            <supplysector name="DRI_SAF_BOF_NG">
+                <subsector name="DRI_SAF_BOF_NG">
+                    <technology name="DRI_SAF_BOF_NG">
+                        <period year="1975">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="1990">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2005">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2010">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2015">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2020">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2025">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2030">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2035">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2040">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2045">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2050">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2055">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2060">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2065">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2070">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2075">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2080">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2085">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2090">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2095">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2100">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                    </technology>
+                </subsector>
+            </supplysector>
+            <supplysector name="DRI_SAF_BOF_H2">
+                <subsector name="DRI_SAF_BOF_H2">
+                    <technology name="DRI_SAF_BOF_H2">
+                        <period year="1975">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="1990">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2005">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2010">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2015">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2020">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2025">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2030">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2035">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2040">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2045">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2050">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2055">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2060">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2065">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2070">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2075">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2080">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2085">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2090">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2095">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2100">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                    </technology>
+                </subsector>
+            </supplysector>
+            <supplysector name="DRI_SAF_BOF_BECCS">
+                <subsector name="DRI_SAF_BOF_BECCS">
+                    <technology name="DRI_SAF_BOF_BECCS">
+                        <period year="1975">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="1990">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2005">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2010">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2015">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2020">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2025">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2030">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2035">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2040">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2045">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2050">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2055">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2060">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2065">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2070">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2075">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2080">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2085">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2090">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2095">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2100">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                    </technology>
+                </subsector>
+            </supplysector>
+            <supplysector name="AEL_EAF">
+                <subsector name="AEL_EAF">
+                    <technology name="AEL_EAF">
+                        <period year="1975">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="1990">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2005">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2010">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2015">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2020">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2025">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2030">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2035">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2040">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2045">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2050">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2055">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2060">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2065">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2070">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2075">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2080">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2085">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2090">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2095">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2100">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                    </technology>
+                </subsector>
+            </supplysector>
+            <supplysector name="MOE">
+                <subsector name="MOE">
+                    <technology name="MOE">
+                        <period year="1975">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="1990">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2005">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2010">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2015">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2020">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2025">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2030">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2035">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2040">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2045">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2050">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2055">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2060">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2065">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2070">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2075">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2080">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2085">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2090">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2095">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2100">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                    </technology>
+                </subsector>
+            </supplysector>
+            <supplysector name="EAF_scrap_fossil_NG_finish">
+                <subsector name="EAF_scrap_fossil_NG_finish">
+                    <technology name="EAF_scrap_fossil_NG_finish">
+                        <period year="1975">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="1990">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2005">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2010">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2015">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2020">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2025">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2030">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2035">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2040">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2045">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2050">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2055">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2060">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2065">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2070">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2075">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2080">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2085">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2090">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2095">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                        <period year="2100">
+                            <CO2 name="CO2_ETS"/>
+                        </period>
+                    </technology>
+                </subsector>
+            </supplysector>
+            <supplysector name="EAF_scrap_fossil_elec_finish">
+                <subsector name="EAF_scrap_fossil_elec_finish">
+                    <technology name="EAF_scrap_fossil_elec_finish">
                         <period year="1975">
                             <CO2 name="CO2_ETS"/>
                         </period>

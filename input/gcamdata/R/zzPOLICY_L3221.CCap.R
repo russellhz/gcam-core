@@ -133,8 +133,8 @@ module_policy_L3221.CCap <- function(command, ...) {
       left_join(tech_all_regions, by = c("mapping.name")) %>%
       left_join(L3221.StubTech_All, by = c("supplysector", "region")) %>%
       # Remove bio techs
-      filter(!grepl("bio", subsector, ignore.case = T),
-             !grepl("bio", stub.technology, ignore.case = T)) %>%
+      filter((!grepl("bio", subsector, ignore.case = T)) | subsector == "EAF_scrap_bio_NG_finish",
+             (!grepl("bio", stub.technology, ignore.case = T)) | stub.technology == "EAF_scrap_bio_NG_finish") %>%
       rename(CO2 = ghgpolicy) %>%
       select(-market) %>%
       repeat_add_columns(tibble(year = MODEL_YEARS))
