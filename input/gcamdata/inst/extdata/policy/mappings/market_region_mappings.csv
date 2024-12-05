@@ -102,3 +102,35 @@ South Korea,World
 Southeast Asia,World
 Taiwan,World
 USA,World
+Africa_Eastern,nonEU_FreeTrade
+Africa_Northern,nonEU_FreeTrade
+Africa_Southern,nonEU_FreeTrade
+Africa_Western,nonEU_FreeTrade
+Argentina,nonEU_FreeTrade
+Australia_NZ,nonEU_FreeTrade
+Brazil,nonEU_FreeTrade
+Canada,nonEU_FreeTrade
+Central America and Caribbean,nonEU_FreeTrade
+Central Asia,nonEU_FreeTrade
+China,nonEU_FreeTrade
+Colombia,nonEU_FreeTrade
+Europe_Eastern,nonEU_FreeTrade
+Europe_Non_EU,nonEU_FreeTrade
+India,nonEU_FreeTrade
+Indonesia,nonEU_FreeTrade
+Japan,nonEU_FreeTrade
+Mexico,nonEU_FreeTrade
+Middle East,nonEU_FreeTrade
+Pakistan,nonEU_FreeTrade
+Russia,nonEU_FreeTrade
+South Africa,nonEU_FreeTrade
+South America_Northern,nonEU_FreeTrade
+South America_Southern,nonEU_FreeTrade
+South Asia,nonEU_FreeTrade
+South Korea,nonEU_FreeTrade
+Southeast Asia,nonEU_FreeTrade
+Taiwan,nonEU_FreeTrade
+USA,nonEU_FreeTrade
+EU-12,EU_FreeTrade
+EU-15,EU_FreeTrade
+European Free Trade Association,EU_FreeTrade

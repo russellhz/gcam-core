@@ -122,7 +122,8 @@ module_policy_L3221.CCap <- function(command, ...) {
     # CO2 constraints in most cases
     # For technologies, we need all regions
     tech_all_regions <- bind_rows(L3221.CCap_constraint, L3221.CCap_link_regions)  %>%
-      distinct(xml, market, region, ghgpolicy, mapping.name)
+      distinct(xml, market, region, ghgpolicy, mapping.name) %>%
+      filter(market != "World")
 
     # Need to add all techs for the given regions/sectors
     # First for non-transport techs, then for transport techs, then for resources
@@ -140,14 +141,13 @@ module_policy_L3221.CCap <- function(command, ...) {
       repeat_add_columns(tibble(year = MODEL_YEARS))
 
     L3221.CCap_tech_NAs <- L3221.CCap_tech %>%
-      filter(is.na(stub.technology)) %>%
-      distinct(xml, CO2, region, supplysector)
+      filter(is.na(stub.technology))
 
     # If there are NAs, we need to remove them, but here we print a message with any NA sectors
     if (nrow(L3221.CCap_tech_NAs) > 0){
       print("Constraint removed for the following sectors:")
       for(i in 1:nrow(L3221.CCap_tech_NAs)){
-        print(paste(L3221.CCap_tech_NAs[i,], collapse = "---"))
+        print(paste( distinct(L3221.CCap_tech_NAs[i,], xml, CO2, region, supplysector), collapse = "---"))
       }
     }
 
@@ -200,8 +200,16 @@ module_policy_L3221.CCap <- function(command, ...) {
       L3221.GDP <- L201.GDP_Scen %>%
         filter(scenario == paste0("g", socioeconomics.BASE_GDP_SCENARIO))
 
+      # any techs that change names between reference and policy (ie steel in CBAM branch) need to be included here
+      NameChangeTechs <- L3221.CCap_tech_NAs %>%
+        select(-subsector, -stub.technology) %>%
+        filter(xml %in% GDP_Intensity_targets$xml) %>%
+        left_join(CO2byTech %>% distinct(region, supplysector = sector, subsector, stub.technology = technology),
+                  by = c("region", "supplysector"))
+
       # Next get the energy technologies that we want to constraint
       L3221.emissions_techs <- bind_rows(L3221.CCap_tech,
+                                         NameChangeTechs,
                                       rename(L3221.CCap_tranTech, subsector = tranSubsector),
                                       rename(L3221.CCap_resource, supplysector = resource,
                                              subsector = reserve.subresource,
@@ -210,6 +218,7 @@ module_policy_L3221.CCap <- function(command, ...) {
         left_join_error_no_match(select(GDP_Intensity_targets, region, CO2 = ghgpolicy,
                                         GDPIntensity_BaseYear, constraint, year = constraint.year),
                                  by = c("region", "CO2", "year"))
+
 
       # Calculate the CO2 emissions of the techs in the base year
       L3221.baseEmissions <- L3221.emissions_techs %>%
