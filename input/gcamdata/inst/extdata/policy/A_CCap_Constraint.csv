@@ -8,9 +8,11 @@
 xml,market,ghgpolicy,link.type,mapping.name,year.fillout,GDPIntensity_BaseYear,adjust.year,2020,2025,2030,2035,2040,2045,2050,2055,2060,2065,2070,2075,2080,2085,2090,2095,2100
 policy_ccapbuild_can.xml,Canada,CO2_building,,BUILD_SECTORS_NOCOOL,2030,,2020,19.9403927,19.9403927,19.9403927,,,,,,,,,,,,,,
 policy_ccapind_chn.xml,China,CO2_industry,,CO2_CHINA_INDUSTRY,,2015,2020,-12,-28,-28,-28,-28,-28,-28,-28,-28,-28,-28,-28,-28,-28,-28,-28,-28
-policy_ccap_eu.xml,EU,CO2_ETS,,ETS,2030,,2020,,387.8102662,242.367,,,,,,,,,,,,,,
 policy_fgas_eu.xml,EU,FGAS,FGAS,,2050,,2020,69.9,48.5,27.1,13.4,6.6,3.3,1.7,,,,,,,,,,
-policy_ccap_efta.xml,European Free Trade Association,CO2_ETS,,ETS,2030,,2020,,45,36.5,,,,,,,,,,,,,,
+policy_ccap_eu.xml,EU,CO2_ETS,ETS,ETS_NO_STEEL,2030,,2020,,387.8102662,242.367,,,,,,,,,,,,,,
+policy_ccap_eu.xml,World,CO2_STEEL_ETS,,IRONSTEEL,,,,,,,,,,,,,,,,,,,,
+policy_ccap_efta.xml,European Free Trade Association,CO2_ETS,ETS,ETS_NO_STEEL,2030,,2025,,45,36.5,,,,,,,,,,,,,,
+policy_ccap_efta.xml,World,CO2_STEEL_ETS,,IRONSTEEL,,,,,,,,,,,,,,,,,,,,
 policy_ccap_iron_steel_cement_jpn.xml,Japan,CO2_ironsteel,,IRONSTEEL,2030,,2020,,35.7,28.6,,,,,,,,,,,,,,
 policy_ccap_iron_steel_cement_jpn.xml,Japan,CO2_cement,,CEMENT,2030,,2020,,,10.14,,,,,,,,,,,,,,
 policy_ccaptran_rus.xml,Russia,CO2_4W,,TRN_4W,2050,,2020,,,25,25,25,25,25,,,,,,,,,,
@@ -302,3 +304,8 @@ policy_GHG_constraint_LTT_NDC_NoSteel2035.xml,South Korea,GHG,ALL_GHG_NOAGPR,,,,
 policy_GHG_constraint_LTT_NDC_NoSteel2035.xml,Southeast Asia,GHG,ALL_GHG_NOAGPR,,,,2040,,,,,1992.634761,1648.137852,1292.684203,1103.181691,917.0549296,736.6844989,648.3288965,565.9846767,490.6210026,423.0211549,363.3118785,311.141251,265.9760168
 policy_GHG_constraint_LTT_NDC_NoSteel2035.xml,Taiwan,GHG,ALL_GHG_NOAGPR,,,,2040,,,,,392.8686555,355.1221481,321.0022951,290.1606503,262.2822462,237.082377,214.3036911,193.7135632,175.1017184,158.2780849,143.0708526,129.3247191,116.8993031
 policy_GHG_constraint_LTT_NDC_NoSteel2035.xml,USA,GHG,GHG_NO_LUC_AGPR,,,,2040,,,,,2136.708881,1553.475,813,813,813,813,813,813,813,813,813,813,813
+EFTA_ccaps,European Free Trade Association,GHG_noSteel,GHG_NO_LUC_AGPR_NoSteel,,,,2020,90,,,,,,,,,,,,,,,,
+EFTA_ccaps,World,CO2_NO_STEEL,,CO2_NO_STEEL,,,,,,,,,,,,,,,,,,,,
+EFTA_ccaps,World,CO2_STEEL,,IRONSTEEL,,,,,,,,,,,,,,,,,,,,
+EFTA_ccaps,European Free Trade Association,CO2_ETS,ETS,ETS_NO_STEEL,2030,,2020,35,,,,,,,,,,,,,,,,
+EFTA_ccaps,World,CO2_STEEL_ETS,,IRONSTEEL,,,,,,,,,,,,,,,,,,,,

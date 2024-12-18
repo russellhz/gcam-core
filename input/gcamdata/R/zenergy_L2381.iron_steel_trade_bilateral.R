@@ -47,7 +47,8 @@ module_energy_L2381.iron_steel_trade_bilateral <- function(command, ...) {
              "L2381.TechShrwt_reg",
              "L2381.TechCoef_reg",
              "L2381.Production_reg_imp",
-             "L2381.Production_reg_dom"))
+             "L2381.Production_reg_dom",
+             "L2381.TechInterp_imp"))
   } else if(command == driver.MAKE) {
 
     all_data <- list(...)[[1]]
@@ -261,6 +262,13 @@ module_energy_L2381.iron_steel_trade_bilateral <- function(command, ...) {
       mutate(tech.share.weight = if_else(calOutputValue > 0, 1, 0)) %>%
       select(LEVEL2_DATA_NAMES[["Production"]])
 
+    L2381.TechInterp_imp <- L2381.Production_reg_imp %>%
+      select(region, supplysector, subsector, technology  ) %>%
+      mutate(apply.to = "share-weight",
+             from.year = MODEL_FINAL_BASE_YEAR,
+             to.year = max(MODEL_FUTURE_YEARS),
+             interpolation.function = "fixed")
+
     # 2c. L2381.Production_reg_dom: Output (flow) of domestic ---------------------
     #### DOMESTIC TECHNOLOGY OUTPUT = iron and steel PRODUCTION - GROSS EXPORTS
 
@@ -411,7 +419,8 @@ module_energy_L2381.iron_steel_trade_bilateral <- function(command, ...) {
                 L2381.TechShrwt_reg,
                 L2381.TechCoef_reg,
                 L2381.Production_reg_imp,
-                L2381.Production_reg_dom)
+                L2381.Production_reg_dom,
+                L2381.TechInterp_imp)
   } else {
     stop("Unknown command")
   }

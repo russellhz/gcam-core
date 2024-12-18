@@ -580,3 +580,16 @@ COMM_ELEC,comm cooling,electricity,electricity
 COMM_ELEC,comm heating,electricity,electricity
 ELEC_BLD,elect_td_bld,elect_td_bld,elect_td_bld
 ELEC_BLD,elect_td_bld,rooftop_pv,rooftop_pv
+FE_BUNKERS_NO_PV_NO_INDUSTRY,delivered biomass,delivered biomass,delivered biomass
+FE_BUNKERS_NO_PV_NO_INDUSTRY,delivered coal,delivered coal,delivered coal
+FE_BUNKERS_NO_PV_NO_INDUSTRY,delivered gas,delivered gas,delivered gas
+FE_BUNKERS_NO_PV_NO_INDUSTRY,delivered gas transport,delivered gas transport,delivered gas transport
+FE_BUNKERS_NO_PV_NO_INDUSTRY,refined liquids enduse,refined liquids enduse,refined liquids enduse
+FE_BUNKERS_NO_PV_NO_INDUSTRY,refined liquids transport,refined liquids transport,refined liquids transport
+FE_BUNKERS_NO_PV_NO_INDUSTRY,refined liquids bunkers,refined liquids bunkers,refined liquids bunkers
+FE_BUNKERS_NO_PV_NO_INDUSTRY,H2 wholesale dispensing,H2 delivery,H2 liquid truck
+FE_BUNKERS_NO_PV_NO_INDUSTRY,H2 wholesale dispensing,H2 delivery,H2 pipeline
+FE_BUNKERS_NO_PV_NO_INDUSTRY,H2 wholesale dispensing,forecourt production,electrolysis
+FE_BUNKERS_NO_PV_NO_INDUSTRY,H2 wholesale dispensing,forecourt production,natural gas steam reforming
+FE_BUNKERS_NO_PV_NO_INDUSTRY,elect_td_bld,elect_td_bld,elect_td_bld
+FE_BUNKERS_NO_PV_NO_INDUSTRY,elect_td_trn,elect_td_trn,elect_td_trn

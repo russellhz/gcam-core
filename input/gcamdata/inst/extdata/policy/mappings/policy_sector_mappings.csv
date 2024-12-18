@@ -160,3 +160,22 @@ CO2_NO_STEEL,trn_pass_road
 CO2_NO_STEEL,trn_pass_road_LDV
 CO2_NO_STEEL,trn_pass_road_LDV_4W
 CO2_NO_STEEL,trn_shipping_intl
+ETS_NO_STEEL,other industrial energy use
+ETS_NO_STEEL,other industrial feedstocks
+ETS_NO_STEEL,cement
+ETS_NO_STEEL,process heat cement
+ETS_NO_STEEL,N fertilizer
+ETS_NO_STEEL,chemical energy use
+ETS_NO_STEEL,chemical feedstocks
+ETS_NO_STEEL,alumina
+ETS_NO_STEEL,mining energy use
+ETS_NO_STEEL,refining
+ETS_NO_STEEL,gas processing
+ETS_NO_STEEL,district heat
+ETS_NO_STEEL,backup_electricity
+ETS_NO_STEEL,elec_coal (IGCC)
+ETS_NO_STEEL,elec_coal (conv pul)
+ETS_NO_STEEL,elec_refined liquids (CC)
+ETS_NO_STEEL,elec_refined liquids (steam/CT)
+ETS_NO_STEEL,elec_gas (CC)
+ETS_NO_STEEL,elec_gas (steam/CT)

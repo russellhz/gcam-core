@@ -10,7 +10,7 @@ policy_ind_chn,China,ind-constraint,tax,2015,IND_EN,-18,,,,,,,,,,,,,,,,
 policy_greenH2_chn.xml,China,green_H2,subsidy,,GREEN_H2,,0.0180315,0.0180315,0.0180315,0.0180315,0.0180315,0.0180315,0.0180315,0.0180315,0.0180315,0.0180315,0.0180315,0.0180315,0.0180315,0.0180315,0.0180315,0.0180315
 policy_tpes_chn,China,energy-constraint,tax,2015,PRIMARY_ENERGY,-15,-24,-24,-24,-24,-24,-24,-24,-24,-24,-24,-24,-24,-24,-24,-24,-24
 policy_NUC_chn,China,nuclear-target,subsidy,,ELEC_NUCLEAR,,1.99,1.99,1.99,1.99,1.99,1.99,1.99,1.99,1.99,1.99,1.99,1.99,1.99,1.99,1.99,1.99
-policy_fe_eu,EU,fe-constraint,tax,,FE_BUNKERS_NO_PV,41.014,37.885,34.757,34.757,34.757,34.757,34.757,34.757,34.757,34.757,34.757,34.757,34.757,34.757,34.757,34.757,34.757
+policy_fe_eu,EU,fe-constraint,tax,,FE_BUNKERS_NO_PV_NO_INDUSTRY,27.84744489,25.72293484,23.59910377,23.59910377,23.59910377,23.59910377,23.59910377,23.59910377,23.59910377,23.59910377,23.59910377,23.59910377,23.59910377,23.59910377,23.59910377,23.59910377,23.59910377
 policy_tpes_eu,EU,energy-constraint,tax,,PRIMARY_ENERGY,,,41.57,41.57,41.57,41.57,41.57,41.57,41.57,41.57,41.57,41.57,41.57,41.57,41.57,41.57,41.57
 policy_RE_targets_EU,EU,PV-target,subsidy,,ELEC_PV,0.5,1.81,3.41,3.41,3.41,3.41,3.41,3.41,3.41,3.41,3.41,3.41,3.41,3.41,3.41,3.41,3.41
 policy_RE_targets_EU,EU,offshore-target,subsidy,,ELEC_WIND_OFFSHORE,0.24,0.5,0.76,1.515,2.27,3.025,3.78,3.78,3.78,3.78,3.78,3.78,3.78,3.78,3.78,3.78,3.78
@@ -47,8 +47,9 @@ ELEC_coal_constraint_EIR,USA,coal_ceiling_EIR,tax,,ELEC_COAL_NO_CCS,,1.918,0.788
 policy_RE_targets_usa,USA,offshore-target,subsidy,,ELEC_WIND_OFFSHORE,,,,0.43,0.43,0.43,0.43,0.43,0.43,0.43,0.43,0.43,0.43,0.43,0.43,0.43,0.43
 policy_RE_targets_usa,USA,biodiesel-target-OLD,subsidy,,BIODIESEL,0.25418326,0.3405,0.3405,0.3405,0.3405,0.3405,0.3405,0.3405,0.3405,0.3405,0.3405,0.3405,0.3405,0.3405,0.3405,0.3405,0.3405
 policy_RE_targets_usa,USA,biofuel-target-OLD,subsidy,,BIOFUEL_ALL,1.23772801,1.635,1.635,1.635,1.635,1.635,1.635,1.635,1.635,1.635,1.635,1.635,1.635,1.635,1.635,1.635,1.635
-policy_scrap_limit_global,nonEU_FreeTrade,scrap-limit-RoW,tax,,SCRAP_STEEL,298,439,523,638,744,861,979,,,,,,,,,,
-policy_scrap_limit_global,EU_FreeTrade,scrap-limit-EU,tax,,SCRAP_STEEL,94,98,101,104,107,109,111,,,,,,,,,,
+policy_scrap_limit_global,nonEU_FreeTrade,scrap-limit-RoW,tax,,SCRAP_STEEL,,,523,638,744,861,979,,,,,,,,,,
+policy_scrap_limit_global,EU_FreeTrade,scrap-limit-EU,tax,,SCRAP_STEEL,,,101,104,107,109,111,,,,,,,,,,
+policy_scrap_limit_global,World,scrap-limit-global,tax,,SCRAP_STEEL,463,537,,,,,,,,,,,,,,,
 EU_iron_steel_floor,EU,steel_floor,subsidy,,STEEL_ALL,157,157,157,157,157,157,157,,,,,,,,,,
 EU_iron_steel_floor_2020,EU,steel_floor_2020,subsidy,,STEEL_ALL,157,,,,,,,,,,,,,,,,
 resid_calib_world,World,elec-calib,tax,,ELEC_BLD,43.4503,,,,,,,,,,,,,,,,

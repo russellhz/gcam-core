@@ -16,13 +16,13 @@ DRI_EAF_NG_CCS,DRI_EAF_NG_CCS,DRI_EAF_NG_CCS,0,0,0,0,0.1,0.2,0.3,0.5,1
 DRI_EAF_coal,DRI_EAF_coal,DRI_EAF_coal,0,0,0,0,0,0,0,0,0
 DRI_EAF_coal_CCS,DRI_EAF_coal_CCS,DRI_EAF_coal_CCS,0,0,0,0,0.1,0.2,0.3,0.5,1
 DRI_EAF_BECCS,DRI_EAF_BECCS,DRI_EAF_BECCS,0,0,0,0,0.1,0.2,0.3,0.5,1
-DRI_EAF_H2,DRI_EAF_H2,DRI_EAF_H2,0,0,0,0.1,0.2,0.3,0.4,0.6,1
+DRI_EAF_H2,DRI_EAF_H2,DRI_EAF_H2,0,0,0,0,0.2,0.3,0.4,0.6,1
 DRI_SAF_BOF_NG,DRI_SAF_BOF_NG,DRI_SAF_BOF_NG,0,0,0,0.1,0.2,0.3,0.4,0.6,1
-DRI_SAF_BOF_H2,DRI_SAF_BOF_H2,DRI_SAF_BOF_H2,0,0,0,0.1,0.2,0.3,0.4,0.6,1
+DRI_SAF_BOF_H2,DRI_SAF_BOF_H2,DRI_SAF_BOF_H2,0,0,0,0,0.2,0.3,0.4,0.6,1
 DRI_SAF_BOF_BECCS,DRI_SAF_BOF_BECCS,DRI_SAF_BOF_BECCS,0,0,0,0,0.1,0.2,0.3,0.5,1
 AEL_EAF,AEL_EAF,AEL_EAF,0,0,0,0,0,0,0.1,0.2,1
 MOE,MOE,MOE,0,0,0,0,0,0.1,0.2,0.4,1
 EAF_scrap_fossil_NG_finish,EAF_scrap_fossil_NG_finish,EAF_scrap_fossil_NG_finish,1,1,1,1,1,1,1,1,1
-EAF_scrap_bio_NG_finish,EAF_scrap_bio_NG_finish,EAF_scrap_bio_NG_finish,0,0,0,0.1,0.2,0.3,0.4,0.6,1
+EAF_scrap_bio_NG_finish,EAF_scrap_bio_NG_finish,EAF_scrap_bio_NG_finish,0,0,0,0,0.2,0.3,0.4,0.6,1
 EAF_scrap_fossil_elec_finish,EAF_scrap_fossil_elec_finish,EAF_scrap_fossil_elec_finish,0,0,0,0,0,0,0.2,0.4,1
 EAF_scrap_bio_elec_finish,EAF_scrap_bio_elec_finish,EAF_scrap_bio_elec_finish,0,0,0,0,0,0,0.2,0.4,1

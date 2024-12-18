@@ -23,7 +23,8 @@ module_energy_iron_steel_trade_bilateral_xml <- function(command, ...) {
              "L2381.TechShrwt_reg",
              "L2381.TechCoef_reg",
              "L2381.Production_reg_imp",
-             "L2381.Production_reg_dom"))
+             "L2381.Production_reg_dom",
+             "L2381.TechInterp_imp"))
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(c(XML = "iron_steel_trade_bilateral.xml"))
   } else if(command == driver.MAKE) {
@@ -44,7 +45,7 @@ module_energy_iron_steel_trade_bilateral_xml <- function(command, ...) {
     L2381.TechCoef_reg <- get_data(all_data, "L2381.TechCoef_reg")
     L2381.Production_reg_imp <- get_data(all_data, "L2381.Production_reg_imp")
     L2381.Production_reg_dom <- get_data(all_data, "L2381.Production_reg_dom")
-
+    L2381.TechInterp_imp <- get_data(all_data, "L2381.TechInterp_imp")
 
 
     # ===================================================
@@ -64,6 +65,9 @@ module_energy_iron_steel_trade_bilateral_xml <- function(command, ...) {
       add_xml_data(L2381.TechCoef_reg, "TechCoef") %>%
       add_xml_data(L2381.Production_reg_imp, "Production") %>%
       add_xml_data(L2381.Production_reg_dom, "Production") %>%
+      add_xml_data(L2381.TechInterp_imp, "TechInterp") %>%
+
+
       add_precursors("L2381.Supplysector_tra",
                      "L2381.SectorUseTrialMarket_tra",
                      "L2381.SubsectorAll_tra",
