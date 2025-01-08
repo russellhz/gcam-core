@@ -424,6 +424,7 @@ module_energy_L2323.iron_steel <- function(command, ...) {
       calibrated_techs_export # temporary tibble
 
     L1323.IO_GJkg_R_iron_steel_F_Yh %>%
+      filter(!grepl("charcoal", fuel)) %>%
       left_join(GCAM_region_names, by = "GCAM_region_ID") %>%
       mutate(fuel = stringr::str_to_lower(fuel)) %>%
       left_join(calibrated_techs %>%  select(-supplysector), by = c("supplysector" = "sector", "subsector", "technology", "fuel")) %>%

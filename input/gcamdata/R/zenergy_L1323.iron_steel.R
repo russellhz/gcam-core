@@ -367,7 +367,8 @@ module_energy_L1323.iron_steel <- function(command, ...) {
         left_join(negative,by = c("GCAM_region_ID", "year", "fuel")) %>%
         mutate(coefficient = if_else(replace_na(value, 0) < 0,
                                      0,
-                                     coefficient)) %>%
+                                     coefficient),
+               Unit = "GJ/t") %>%
         select(-value)->
         L1323.IO_GJkg_R_iron_steel_F_Yh
 

@@ -140,6 +140,7 @@ alumina,biomass,biomass CCS,industry_energy,biomass
 alumina,heat,heat,industry_energy,heat
 BF_BOF,gas,BF_BOF,iron and steel,gas
 BF_BOF,coal,BF_BOF,iron and steel,coal
+BF_BOF,refined liquids,BF_BOF,iron and steel,refined liquids
 BF_BOF_CCS_73%,gas,BF_BOF_CCS_73%,iron and steel,gas
 BF_BOF_CCS_73%,coal,BF_BOF_CCS_73%,iron and steel,coal
 BF_BOF_CCS_86%,gas,BF_BOF_CCS_86%,iron and steel,gas
@@ -157,6 +158,7 @@ SR_BOF_CCS,coal,SR_BOF_CCS,iron and steel,coal
 DRI_EAF_NG,gas,DRI_EAF_NG,iron and steel,gas
 DRI_EAF_NG,coal,DRI_EAF_NG,iron and steel,coal
 DRI_EAF_NG,gas,DRI_EAF_NG,iron and steel,gas
+DRI_EAF_NG,refined liquids,DRI_EAF_NG,iron and steel,refined liquids
 DRI_EAF_NG_CCS,coal,DRI_EAF_NG_CCS,iron and steel,coal
 DRI_EAF_NG_CCS,gas,DRI_EAF_NG_CCS,iron and steel,gas
 DRI_EAF_coal,coal,DRI_EAF_coal,iron and steel,coal
@@ -171,6 +173,7 @@ DRI_SAF_BOF_BECCS,biomass,DRI_SAF_BOF_BECCS,iron and steel,biomass
 MOE,gas,MOE,iron and steel,gas
 EAF_scrap_fossil_NG_finish,coal,EAF_scrap_fossil_NG_finish,iron and steel,coal
 EAF_scrap_fossil_NG_finish,gas,EAF_scrap_fossil_NG_finish,iron and steel,gas
+EAF_scrap_fossil_NG_finish,refined liquids,EAF_scrap_fossil_NG_finish,iron and steel,refined liquids
 EAF_scrap_fossil_NG_finish,biomass,EAF_scrap_fossil_NG_finish,iron and steel,biomass
 EAF_scrap_bio_NG_finish,gas,EAF_scrap_bio_NG_finish,iron and steel,gas
 EAF_scrap_bio_NG_finish,coal,EAF_scrap_bio_NG_finish,iron and steel,coal
