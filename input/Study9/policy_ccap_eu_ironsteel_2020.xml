@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><scenario>
+    <world>
+        <region name="EU-12">
+            <ghgpolicy name="CO2_ETS_STEEL">
+                <market>EU</market>
+                <fixedTax year="2020">20</fixedTax>
+            </ghgpolicy>
+        </region>
+        <region name="EU-15">
+            <ghgpolicy name="CO2_ETS_STEEL">
+                <market>EU</market>
+                <fixedTax year="2020">20</fixedTax>
+            </ghgpolicy>
+        </region>
+    </world>
+</scenario>

@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?><scenario>
+    <world>
+<region name="EU-12">         
+            <pass-through-sector name="elec_gas (steam/CT)">
+                <subsector name="gas (steam/CT)">
+
+                    <stub-technology name="gas (steam/CT) (once through)">
+                        <period year="2015">
+                        <profit-shutdown-decider name="profit">
+                            <median-shutdown-point>-1</median-shutdown-point>
+                            <steepness>6</steepness>
+                        </profit-shutdown-decider>
+                        <lifetime>20</lifetime>
+                        </period>
+                    </stub-technology>
+
+                    <stub-technology name="gas (steam/CT) (seawater)">
+                        <period year="2015">
+                        <profit-shutdown-decider name="profit">
+                            <median-shutdown-point>-1</median-shutdown-point>
+                            <steepness>6</steepness>
+                        </profit-shutdown-decider>
+                        <lifetime>20</lifetime>
+                        </period>
+                    </stub-technology>
+
+                    <stub-technology name="gas (steam/CT) (recirculating)">
+                        <period year="2015">
+                        <profit-shutdown-decider name="profit">
+                            <median-shutdown-point>-1</median-shutdown-point>
+                            <steepness>6</steepness>
+                        </profit-shutdown-decider>
+                        <lifetime>20</lifetime>
+                        </period>
+                    </stub-technology>
+
+                    <stub-technology name="gas (steam/CT) (cooling pond)">
+                        <period year="2015">
+                        <profit-shutdown-decider name="profit">
+                            <median-shutdown-point>-1</median-shutdown-point>
+                            <steepness>6</steepness>
+                        </profit-shutdown-decider>
+                        <lifetime>20</lifetime>
+                        </period>
+                    </stub-technology>
+
+                    <stub-technology name="gas (steam/CT) (dry cooling)">
+                        <period year="2015">
+                        <profit-shutdown-decider name="profit">
+                            <median-shutdown-point>-1</median-shutdown-point>
+                            <steepness>6</steepness>
+                        </profit-shutdown-decider>
+                        <lifetime>20</lifetime>
+                        </period>
+                    </stub-technology>
+                </subsector>
+            </pass-through-sector>
+
+            <pass-through-sector name="elec_gas (CC)">
+                <subsector name="gas (CC)">
+                    <stub-technology name="gas (CC) (once through)">
+                        <period year="2015">
+                        <profit-shutdown-decider name="profit">
+                            <median-shutdown-point>-1</median-shutdown-point>
+                            <steepness>6</steepness>
+                        </profit-shutdown-decider>
+                        <lifetime>25</lifetime>
+                        </period>
+                    </stub-technology>
+
+                    <stub-technology name="gas (CC) (seawater)">
+                        <period year="2015">
+                        <profit-shutdown-decider name="profit">
+                            <median-shutdown-point>-1</median-shutdown-point>
+                            <steepness>6</steepness>
+                        </profit-shutdown-decider>
+                        <lifetime>25</lifetime>
+                        </period>
+                    </stub-technology>
+
+                    <stub-technology name="gas (CC) (recirculating)">
+                        <period year="2015">
+                        <profit-shutdown-decider name="profit">
+                            <median-shutdown-point>-1</median-shutdown-point>
+                            <steepness>6</steepness>
+                        </profit-shutdown-decider>
+                        <lifetime>25</lifetime>
+                        </period>
+                    </stub-technology>
+
+                    <stub-technology name="gas (CC) (cooling pond)">
+                        <period year="2015">
+                        <profit-shutdown-decider name="profit">
+                            <median-shutdown-point>-1</median-shutdown-point>
+                            <steepness>6</steepness>
+                        </profit-shutdown-decider>
+                        <lifetime>25</lifetime>
+                        </period>
+                    </stub-technology>
+
+                    <stub-technology name="gas (CC) (dry cooling)">
+                        <period year="2015">
+                        <profit-shutdown-decider name="profit">
+                            <median-shutdown-point>-1</median-shutdown-point>
+                            <steepness>6</steepness>
+                        </profit-shutdown-decider>
+                        <lifetime>25</lifetime>
+                        </period>
+                    </stub-technology>
+                </subsector>
+            </pass-through-sector>
+            
+            <pass-through-sector name="elec_refined liquids (steam/CT)">
+                <subsector name="refined liquids (steam/CT)">
+
+                    <stub-technology name="refined liquids (steam/CT) (once through)">
+                        <period year="2015">
+                        <profit-shutdown-decider name="profit">
+                            <median-shutdown-point>-1</median-shutdown-point>
+                            <steepness>6</steepness>
+                        </profit-shutdown-decider>
+                        <lifetime>20</lifetime>
+                        </period>
+                    </stub-technology>
+
+                    <stub-technology name="refined liquids (steam/CT) (seawater)">
+                        <period year="2015">
+                        <profit-shutdown-decider name="profit">
+                            <median-shutdown-point>-1</median-shutdown-point>
+                            <steepness>6</steepness>
+                        </profit-shutdown-decider>
+                     <lifetime>20</lifetime>
+                        </period>
+                    </stub-technology>
+
+                    <stub-technology name="refined liquids (steam/CT) (recirculating)">
+                        <period year="2015">
+                        <profit-shutdown-decider name="profit">
+                            <median-shutdown-point>-1</median-shutdown-point>
+                            <steepness>6</steepness>
+                        </profit-shutdown-decider>
+                     <lifetime>20</lifetime>
+                        </period>
+                    </stub-technology>
+
+                    <stub-technology name="refined liquids (steam/CT) (cooling pond)">
+                        <period year="2015">
+                        <profit-shutdown-decider name="profit">
+                            <median-shutdown-point>-1</median-shutdown-point>
+                            <steepness>6</steepness>
+                        </profit-shutdown-decider>
+                     <lifetime>20</lifetime>
+                        </period>
+                    </stub-technology>
+
+                    <stub-technology name="refined liquids (steam/CT) (dry cooling)">
+                        <period year="2015">
+                        <profit-shutdown-decider name="profit">
+                            <median-shutdown-point>-1</median-shutdown-point>
+                            <steepness>6</steepness>
+                        </profit-shutdown-decider>
+                     <lifetime>20</lifetime>
+                        </period>
+                    </stub-technology>
+                 </subsector>                
+            </pass-through-sector>
+            
+            
+            <pass-through-sector name="elec_biomass (conv)">
+                <subsector name="biomass (conv)">
+
+                    <stub-technology name="biomass (conv) (once through)">
+                        <period year="2015">
+                        <profit-shutdown-decider name="profit">
+                            <median-shutdown-point>-1</median-shutdown-point>
+                            <steepness>6</steepness>
+                        </profit-shutdown-decider>
+                     <lifetime>35</lifetime>
+                        </period>
+                    </stub-technology>
+
+                    <stub-technology name="biomass (conv) (seawater)">
+                        <period year="2015">
+                        <profit-shutdown-decider name="profit">
+                            <median-shutdown-point>-1</median-shutdown-point>
+                            <steepness>6</steepness>
+                        </profit-shutdown-decider>
+                     <lifetime>35</lifetime>
+                        </period>
+                    </stub-technology>
+
+                    <stub-technology name="biomass (conv) (recirculating)">
+                        <period year="2015">
+                        <profit-shutdown-decider name="profit">
+                            <median-shutdown-point>-1</median-shutdown-point>
+                            <steepness>6</steepness>
+                        </profit-shutdown-decider>
+                     <lifetime>35</lifetime>
+                        </period>
+                    </stub-technology>
+
+                    <stub-technology name="biomass (conv) (cooling pond)">
+                        <period year="2015">
+                        <profit-shutdown-decider name="profit">
+                            <median-shutdown-point>-1</median-shutdown-point>
+                            <steepness>6</steepness>
+                        </profit-shutdown-decider>
+                     <lifetime>35</lifetime>
+                        </period>
+                    </stub-technology>
+
+                    <stub-technology name="biomass (conv) (dry cooling)">
+                        <period year="2015">
+                        <profit-shutdown-decider name="profit">
+                            <median-shutdown-point>-1</median-shutdown-point>
+                            <steepness>6</steepness>
+                        </profit-shutdown-decider>
+                     <lifetime>35</lifetime>
+                        </period>
+                    </stub-technology>         
+                </subsector>
+            </pass-through-sector>
+        </region>
+<region name="EU-15">         
+            <pass-through-sector name="elec_gas (steam/CT)">
+                <subsector name="gas (steam/CT)">
+
+                    <stub-technology name="gas (steam/CT) (once through)">
+                        <period year="2015">
+                        <profit-shutdown-decider name="profit">
+                            <median-shutdown-point>-1</median-shutdown-point>
+                            <steepness>6</steepness>
+                        </profit-shutdown-decider>
+                        <lifetime>20</lifetime>
+                        </period>
+                    </stub-technology>
+
+                    <stub-technology name="gas (steam/CT) (seawater)">
+                        <period year="2015">
+                        <profit-shutdown-decider name="profit">
+                            <median-shutdown-point>-1</median-shutdown-point>
+                            <steepness>6</steepness>
+                        </profit-shutdown-decider>
+                        <lifetime>20</lifetime>
+                        </period>
+                    </stub-technology>
+
+                    <stub-technology name="gas (steam/CT) (recirculating)">
+                        <period year="2015">
+                        <profit-shutdown-decider name="profit">
+                            <median-shutdown-point>-1</median-shutdown-point>
+                            <steepness>6</steepness>
+                        </profit-shutdown-decider>
+                        <lifetime>20</lifetime>
+                        </period>
+                    </stub-technology>
+
+                    <stub-technology name="gas (steam/CT) (cooling pond)">
+                        <period year="2015">
+                        <profit-shutdown-decider name="profit">
+                            <median-shutdown-point>-1</median-shutdown-point>
+                            <steepness>6</steepness>
+                        </profit-shutdown-decider>
+                        <lifetime>20</lifetime>
+                        </period>
+                    </stub-technology>
+
+                    <stub-technology name="gas (steam/CT) (dry cooling)">
+                        <period year="2015">
+                        <profit-shutdown-decider name="profit">
+                            <median-shutdown-point>-1</median-shutdown-point>
+                            <steepness>6</steepness>
+                        </profit-shutdown-decider>
+                        <lifetime>20</lifetime>
+                        </period>
+                    </stub-technology>
+                </subsector>
+            </pass-through-sector>
+
+            <pass-through-sector name="elec_gas (CC)">
+                <subsector name="gas (CC)">
+                    <stub-technology name="gas (CC) (once through)">
+                        <period year="2015">
+                        <profit-shutdown-decider name="profit">
+                            <median-shutdown-point>-1</median-shutdown-point>
+                            <steepness>6</steepness>
+                        </profit-shutdown-decider>
+                        <lifetime>25</lifetime>
+                        </period>
+                    </stub-technology>
+
+                    <stub-technology name="gas (CC) (seawater)">
+                        <period year="2015">
+                        <profit-shutdown-decider name="profit">
+                            <median-shutdown-point>-1</median-shutdown-point>
+                            <steepness>6</steepness>
+                        </profit-shutdown-decider>
+                        <lifetime>25</lifetime>
+                        </period>
+                    </stub-technology>
+
+                    <stub-technology name="gas (CC) (recirculating)">
+                        <period year="2015">
+                        <profit-shutdown-decider name="profit">
+                            <median-shutdown-point>-1</median-shutdown-point>
+                            <steepness>6</steepness>
+                        </profit-shutdown-decider>
+                        <lifetime>25</lifetime>
+                        </period>
+                    </stub-technology>
+
+                    <stub-technology name="gas (CC) (cooling pond)">
+                        <period year="2015">
+                        <profit-shutdown-decider name="profit">
+                            <median-shutdown-point>-1</median-shutdown-point>
+                            <steepness>6</steepness>
+                        </profit-shutdown-decider>
+                        <lifetime>25</lifetime>
+                        </period>
+                    </stub-technology>
+
+                    <stub-technology name="gas (CC) (dry cooling)">
+                        <period year="2015">
+                        <profit-shutdown-decider name="profit">
+                            <median-shutdown-point>-1</median-shutdown-point>
+                            <steepness>6</steepness>
+                        </profit-shutdown-decider>
+                        <lifetime>25</lifetime>
+                        </period>
+                    </stub-technology>
+                </subsector>
+            </pass-through-sector>
+            
+            <pass-through-sector name="elec_refined liquids (steam/CT)">
+                <subsector name="refined liquids (steam/CT)">
+
+                    <stub-technology name="refined liquids (steam/CT) (once through)">
+                        <period year="2015">
+                        <profit-shutdown-decider name="profit">
+                            <median-shutdown-point>-1</median-shutdown-point>
+                            <steepness>6</steepness>
+                        </profit-shutdown-decider>
+                        <lifetime>20</lifetime>
+                        </period>
+                    </stub-technology>
+
+                    <stub-technology name="refined liquids (steam/CT) (seawater)">
+                        <period year="2015">
+                        <profit-shutdown-decider name="profit">
+                            <median-shutdown-point>-1</median-shutdown-point>
+                            <steepness>6</steepness>
+                        </profit-shutdown-decider>
+                     <lifetime>20</lifetime>
+                        </period>
+                    </stub-technology>
+
+                    <stub-technology name="refined liquids (steam/CT) (recirculating)">
+                        <period year="2015">
+                        <profit-shutdown-decider name="profit">
+                            <median-shutdown-point>-1</median-shutdown-point>
+                            <steepness>6</steepness>
+                        </profit-shutdown-decider>
+                     <lifetime>20</lifetime>
+                        </period>
+                    </stub-technology>
+
+                    <stub-technology name="refined liquids (steam/CT) (cooling pond)">
+                        <period year="2015">
+                        <profit-shutdown-decider name="profit">
+                            <median-shutdown-point>-1</median-shutdown-point>
+                            <steepness>6</steepness>
+                        </profit-shutdown-decider>
+                     <lifetime>20</lifetime>
+                        </period>
+                    </stub-technology>
+
+                    <stub-technology name="refined liquids (steam/CT) (dry cooling)">
+                        <period year="2015">
+                        <profit-shutdown-decider name="profit">
+                            <median-shutdown-point>-1</median-shutdown-point>
+                            <steepness>6</steepness>
+                        </profit-shutdown-decider>
+                     <lifetime>20</lifetime>
+                        </period>
+                    </stub-technology>
+                 </subsector>                
+            </pass-through-sector>
+            
+            
+            <pass-through-sector name="elec_biomass (conv)">
+                <subsector name="biomass (conv)">
+
+                    <stub-technology name="biomass (conv) (once through)">
+                        <period year="2015">
+                        <profit-shutdown-decider name="profit">
+                            <median-shutdown-point>-1</median-shutdown-point>
+                            <steepness>6</steepness>
+                        </profit-shutdown-decider>
+                     <lifetime>35</lifetime>
+                        </period>
+                    </stub-technology>
+
+                    <stub-technology name="biomass (conv) (seawater)">
+                        <period year="2015">
+                        <profit-shutdown-decider name="profit">
+                            <median-shutdown-point>-1</median-shutdown-point>
+                            <steepness>6</steepness>
+                        </profit-shutdown-decider>
+                     <lifetime>35</lifetime>
+                        </period>
+                    </stub-technology>
+
+                    <stub-technology name="biomass (conv) (recirculating)">
+                        <period year="2015">
+                        <profit-shutdown-decider name="profit">
+                            <median-shutdown-point>-1</median-shutdown-point>
+                            <steepness>6</steepness>
+                        </profit-shutdown-decider>
+                     <lifetime>35</lifetime>
+                        </period>
+                    </stub-technology>
+
+                    <stub-technology name="biomass (conv) (cooling pond)">
+                        <period year="2015">
+                        <profit-shutdown-decider name="profit">
+                            <median-shutdown-point>-1</median-shutdown-point>
+                            <steepness>6</steepness>
+                        </profit-shutdown-decider>
+                     <lifetime>35</lifetime>
+                        </period>
+                    </stub-technology>
+
+                    <stub-technology name="biomass (conv) (dry cooling)">
+                        <period year="2015">
+                        <profit-shutdown-decider name="profit">
+                            <median-shutdown-point>-1</median-shutdown-point>
+                            <steepness>6</steepness>
+                        </profit-shutdown-decider>
+                     <lifetime>35</lifetime>
+                        </period>
+                    </stub-technology>         
+                </subsector>
+            </pass-through-sector>
+        </region>
+    </world>
+</scenario>
