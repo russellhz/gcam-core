@@ -153,12 +153,12 @@ void CachedMarket::addToSupply( const string& aGoodName, const string& aRegionNa
     assert( aPeriod == mPeriod );
     
     // Print a warning message when adding infinity values to the supply.
-    if ( !util::isValidNumber( aValue ) ) {
-        ILogger& mainLog = ILogger::getLogger( "main_log" );
-        mainLog.setLevel( ILogger::NOTICE );
-        mainLog << "Error adding to supply in marketplace for: " << aGoodName << ", region: " << aRegionName << ", value: " << aValue << endl;
-        return;
-    }
+    //if ( !util::isValidNumber( aValue ) ) {
+     //   ILogger& mainLog = ILogger::getLogger( "main_log" );
+       // mainLog.setLevel( ILogger::NOTICE );
+        //mainLog << "Error adding to supply in marketplace for: " << aGoodName << ", region: " << aRegionName << ", value: " << aValue << endl;
+        //return;
+    //}
     
     if ( mCachedMarket ) {
         mCachedMarket->addToSupply( scenario->getMarketplace()->mIsDerivativeCalc ?
@@ -201,12 +201,12 @@ void CachedMarket::addToDemand( const string& aGoodName, const string& aRegionNa
     assert( aPeriod == mPeriod );
     
     // Print a warning message when adding infinity values to the demand
-    if ( !util::isValidNumber( aValue ) ) {
-        ILogger& mainLog = ILogger::getLogger( "main_log" );
-        mainLog.setLevel( ILogger::NOTICE );
-        mainLog << "Error adding to demand in marketplace for: " << aGoodName << ", region: " << aRegionName << ", value: " << aValue << endl;
-        return;
-    }
+   // if ( !util::isValidNumber( aValue ) ) {
+     //   ILogger& mainLog = ILogger::getLogger( "main_log" );
+       // mainLog.setLevel( ILogger::NOTICE );
+        //mainLog << "Error adding to demand in marketplace for: " << aGoodName << ", region: " << aRegionName << ", value: " << aValue << endl;
+        //return;
+    //}
     
     if ( mCachedMarket ) {
         mCachedMarket->addToDemand( scenario->getMarketplace()->mIsDerivativeCalc ?
