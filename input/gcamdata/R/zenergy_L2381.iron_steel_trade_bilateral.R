@@ -115,12 +115,12 @@ module_energy_L2381.iron_steel_trade_bilateral <- function(command, ...) {
       filter(year %in% c(MODEL_BASE_YEARS, MODEL_FUTURE_YEARS)) %>%
       select(technology, year, share.weight)
 
-    # Write 2015 shareweights forward, assuming linear convergence to 1 in 2100
+    # Write 2015 shareweights forward, assuming linear convergence to 1 in 2050
     L2381.TechShrwt_base <- A_irnstl_base_shareweights %>%
       select(region, technology, share.weight.base = shareweight) %>%
       mutate(year = 2015) %>%
       complete(nesting(region, technology), year = c(2015, MODEL_FUTURE_YEARS)) %>%
-      mutate(share.weight.base = if_else(year == 2100, 1, share.weight.base)) %>%
+      mutate(share.weight.base = if_else(year == 2050, 1, share.weight.base)) %>%
       group_by(region, technology) %>%
       mutate(share.weight.base = approx_fun(year, share.weight.base)) %>%
       ungroup

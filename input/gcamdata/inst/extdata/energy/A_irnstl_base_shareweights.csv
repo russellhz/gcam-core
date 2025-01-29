@@ -5,100 +5,100 @@
 # Column types: ccccn,,,,
 # ----------,,,,
 region,sector,subsector,technology,shareweight
-Africa_Eastern,regional iron and steel,domestic iron and steel,BF_BOF,9.46E-04
-Africa_Eastern,regional iron and steel,domestic iron and steel,DRI_EAF_NG,0.0205794
+Africa_Eastern,regional iron and steel,domestic iron and steel,BF_BOF,3.22E-04
+Africa_Eastern,regional iron and steel,domestic iron and steel,DRI_EAF_NG,0.0205793
 Africa_Eastern,regional iron and steel,domestic iron and steel,EAF_scrap_fossil_NG_finish,1
-Africa_Northern,regional iron and steel,domestic iron and steel,BF_BOF,0.0539472
+Africa_Northern,regional iron and steel,domestic iron and steel,BF_BOF,0.0142774
 Africa_Northern,regional iron and steel,domestic iron and steel,DRI_EAF_NG,5.25912
 Africa_Northern,regional iron and steel,domestic iron and steel,EAF_scrap_fossil_NG_finish,1
-Africa_Southern,regional iron and steel,domestic iron and steel,BF_BOF,0.00103802
+Africa_Southern,regional iron and steel,domestic iron and steel,BF_BOF,3.46E-04
 Africa_Southern,regional iron and steel,domestic iron and steel,DRI_EAF_NG,0.0232265
 Africa_Southern,regional iron and steel,domestic iron and steel,EAF_scrap_fossil_NG_finish,1
-Africa_Western,regional iron and steel,domestic iron and steel,BF_BOF,0.00164355
+Africa_Western,regional iron and steel,domestic iron and steel,BF_BOF,5.52E-04
 Africa_Western,regional iron and steel,domestic iron and steel,DRI_EAF_NG,0.0277065
 Africa_Western,regional iron and steel,domestic iron and steel,EAF_scrap_fossil_NG_finish,1
 Argentina,regional iron and steel,domestic iron and steel,BF_BOF,1
-Argentina,regional iron and steel,domestic iron and steel,DRI_EAF_NG,20.5909
-Argentina,regional iron and steel,domestic iron and steel,EAF_scrap_fossil_NG_finish,2.27257
+Argentina,regional iron and steel,domestic iron and steel,DRI_EAF_NG,82.1191
+Argentina,regional iron and steel,domestic iron and steel,EAF_scrap_fossil_NG_finish,9.06331
 Australia_NZ,regional iron and steel,domestic iron and steel,BF_BOF,1
-Australia_NZ,regional iron and steel,domestic iron and steel,DRI_EAF_NG,0.0857824
-Australia_NZ,regional iron and steel,domestic iron and steel,EAF_scrap_fossil_NG_finish,0.631805
+Australia_NZ,regional iron and steel,domestic iron and steel,DRI_EAF_NG,0.26112
+Australia_NZ,regional iron and steel,domestic iron and steel,EAF_scrap_fossil_NG_finish,1.92321
 Brazil,regional iron and steel,domestic iron and steel,BF_BOF,1
-Brazil,regional iron and steel,domestic iron and steel,DRI_EAF_NG,0.157815
-Brazil,regional iron and steel,domestic iron and steel,EAF_scrap_fossil_NG_finish,1.01594
+Brazil,regional iron and steel,domestic iron and steel,DRI_EAF_NG,0.586294
+Brazil,regional iron and steel,domestic iron and steel,EAF_scrap_fossil_NG_finish,3.7743
 Canada,regional iron and steel,domestic iron and steel,BF_BOF,1
-Canada,regional iron and steel,domestic iron and steel,DRI_EAF_NG,4.00478
-Canada,regional iron and steel,domestic iron and steel,EAF_scrap_fossil_NG_finish,1.80892
-Central America and Caribbean,regional iron and steel,domestic iron and steel,BF_BOF,9.69E-05
+Canada,regional iron and steel,domestic iron and steel,DRI_EAF_NG,12.8797
+Canada,regional iron and steel,domestic iron and steel,EAF_scrap_fossil_NG_finish,5.81761
+Central America and Caribbean,regional iron and steel,domestic iron and steel,BF_BOF,3.19E-05
 Central America and Caribbean,regional iron and steel,domestic iron and steel,DRI_EAF_NG,0.0249114
 Central America and Caribbean,regional iron and steel,domestic iron and steel,EAF_scrap_fossil_NG_finish,1
 Central Asia,regional iron and steel,domestic iron and steel,BF_BOF,1
-Central Asia,regional iron and steel,domestic iron and steel,DRI_EAF_NG,0.121536
-Central Asia,regional iron and steel,domestic iron and steel,EAF_scrap_fossil_NG_finish,0.946379
+Central Asia,regional iron and steel,domestic iron and steel,DRI_EAF_NG,0.400251
+Central Asia,regional iron and steel,domestic iron and steel,EAF_scrap_fossil_NG_finish,3.11668
 China,regional iron and steel,domestic iron and steel,BF_BOF,1
-China,regional iron and steel,domestic iron and steel,DRI_EAF_NG,0.110593
-China,regional iron and steel,domestic iron and steel,EAF_scrap_fossil_NG_finish,0.643708
-Colombia,regional iron and steel,domestic iron and steel,BF_BOF,0.126438
+China,regional iron and steel,domestic iron and steel,DRI_EAF_NG,0.363257
+China,regional iron and steel,domestic iron and steel,EAF_scrap_fossil_NG_finish,0.851094
+Colombia,regional iron and steel,domestic iron and steel,BF_BOF,0.0346899
 Colombia,regional iron and steel,domestic iron and steel,DRI_EAF_NG,0.043594
 Colombia,regional iron and steel,domestic iron and steel,EAF_scrap_fossil_NG_finish,1
 EU-12,regional iron and steel,domestic iron and steel,BF_BOF,1
-EU-12,regional iron and steel,domestic iron and steel,DRI_EAF_NG,0.100201
-EU-12,regional iron and steel,domestic iron and steel,EAF_scrap_fossil_NG_finish,1.32996
+EU-12,regional iron and steel,domestic iron and steel,DRI_EAF_NG,0.314424
+EU-12,regional iron and steel,domestic iron and steel,EAF_scrap_fossil_NG_finish,4.17332
 EU-15,regional iron and steel,domestic iron and steel,BF_BOF,1
-EU-15,regional iron and steel,domestic iron and steel,DRI_EAF_NG,0.118104
-EU-15,regional iron and steel,domestic iron and steel,EAF_scrap_fossil_NG_finish,1.53972
+EU-15,regional iron and steel,domestic iron and steel,DRI_EAF_NG,0.409778
+EU-15,regional iron and steel,domestic iron and steel,EAF_scrap_fossil_NG_finish,5.34225
 Europe_Eastern,regional iron and steel,domestic iron and steel,BF_BOF,1
-Europe_Eastern,regional iron and steel,domestic iron and steel,DRI_EAF_NG,0.0608994
-Europe_Eastern,regional iron and steel,domestic iron and steel,EAF_scrap_fossil_NG_finish,1.36594
-Europe_Non_EU,regional iron and steel,domestic iron and steel,BF_BOF,0.306435
+Europe_Eastern,regional iron and steel,domestic iron and steel,DRI_EAF_NG,0.193217
+Europe_Eastern,regional iron and steel,domestic iron and steel,EAF_scrap_fossil_NG_finish,2.47238
+Europe_Non_EU,regional iron and steel,domestic iron and steel,BF_BOF,0.0706045
 Europe_Non_EU,regional iron and steel,domestic iron and steel,DRI_EAF_NG,0.0175918
 Europe_Non_EU,regional iron and steel,domestic iron and steel,EAF_scrap_fossil_NG_finish,1
 European Free Trade Association,regional iron and steel,domestic iron and steel,BF_BOF,1
-European Free Trade Association,regional iron and steel,domestic iron and steel,DRI_EAF_NG,0.0191824
-European Free Trade Association,regional iron and steel,domestic iron and steel,EAF_scrap_fossil_NG_finish,0.69778
+European Free Trade Association,regional iron and steel,domestic iron and steel,DRI_EAF_NG,0.0671773
+European Free Trade Association,regional iron and steel,domestic iron and steel,EAF_scrap_fossil_NG_finish,2.44365
 India,regional iron and steel,domestic iron and steel,BF_BOF,1
-India,regional iron and steel,domestic iron and steel,DRI_EAF_coal,38.2021
-India,regional iron and steel,domestic iron and steel,DRI_EAF_NG,3.25766
-India,regional iron and steel,domestic iron and steel,EAF_scrap_fossil_NG_finish,1.62195
+India,regional iron and steel,domestic iron and steel,DRI_EAF_NG,9.75923
+India,regional iron and steel,domestic iron and steel,DRI_EAF_coal,43.8698
+India,regional iron and steel,domestic iron and steel,EAF_scrap_fossil_NG_finish,2.08487
 Indonesia,regional iron and steel,domestic iron and steel,BF_BOF,1
-Indonesia,regional iron and steel,domestic iron and steel,DRI_EAF_NG,0.547839
-Indonesia,regional iron and steel,domestic iron and steel,EAF_scrap_fossil_NG_finish,2.03074
+Indonesia,regional iron and steel,domestic iron and steel,DRI_EAF_NG,1.72753
+Indonesia,regional iron and steel,domestic iron and steel,EAF_scrap_fossil_NG_finish,6.40364
 Japan,regional iron and steel,domestic iron and steel,BF_BOF,1
-Japan,regional iron and steel,domestic iron and steel,DRI_EAF_NG,0.125281
-Japan,regional iron and steel,domestic iron and steel,EAF_scrap_fossil_NG_finish,1.96361
-Mexico,regional iron and steel,domestic iron and steel,BF_BOF,0.210781
+Japan,regional iron and steel,domestic iron and steel,DRI_EAF_NG,0.372663
+Japan,regional iron and steel,domestic iron and steel,EAF_scrap_fossil_NG_finish,2.52681
+Mexico,regional iron and steel,domestic iron and steel,BF_BOF,0.0634416
 Mexico,regional iron and steel,domestic iron and steel,DRI_EAF_NG,4.62426
 Mexico,regional iron and steel,domestic iron and steel,EAF_scrap_fossil_NG_finish,1
-Middle East,regional iron and steel,domestic iron and steel,BF_BOF,0.00775833
+Middle East,regional iron and steel,domestic iron and steel,BF_BOF,0.00262868
 Middle East,regional iron and steel,domestic iron and steel,DRI_EAF_NG,1
 Middle East,regional iron and steel,domestic iron and steel,EAF_scrap_fossil_NG_finish,0.00112899
-Pakistan,regional iron and steel,domestic iron and steel,BF_BOF,0.0173675
+Pakistan,regional iron and steel,domestic iron and steel,BF_BOF,0.00530417
 Pakistan,regional iron and steel,domestic iron and steel,DRI_EAF_NG,0.0269946
 Pakistan,regional iron and steel,domestic iron and steel,EAF_scrap_fossil_NG_finish,1
 Russia,regional iron and steel,domestic iron and steel,BF_BOF,1
-Russia,regional iron and steel,domestic iron and steel,DRI_EAF_NG,3.43088
-Russia,regional iron and steel,domestic iron and steel,EAF_scrap_fossil_NG_finish,0.614778
+Russia,regional iron and steel,domestic iron and steel,DRI_EAF_NG,11.0218
+Russia,regional iron and steel,domestic iron and steel,EAF_scrap_fossil_NG_finish,1.975
 South Africa,regional iron and steel,domestic iron and steel,BF_BOF,1
-South Africa,regional iron and steel,domestic iron and steel,DRI_EAF_NG,0.138584
-South Africa,regional iron and steel,domestic iron and steel,EAF_scrap_fossil_NG_finish,1.31652
-South America_Northern,regional iron and steel,domestic iron and steel,BF_BOF,4.91E-04
+South Africa,regional iron and steel,domestic iron and steel,DRI_EAF_NG,0.739149
+South Africa,regional iron and steel,domestic iron and steel,EAF_scrap_fossil_NG_finish,7.02176
+South America_Northern,regional iron and steel,domestic iron and steel,BF_BOF,1.40E-04
 South America_Northern,regional iron and steel,domestic iron and steel,DRI_EAF_NG,1.82883
 South America_Northern,regional iron and steel,domestic iron and steel,EAF_scrap_fossil_NG_finish,1
-South America_Southern,regional iron and steel,domestic iron and steel,BF_BOF,0.156326
+South America_Southern,regional iron and steel,domestic iron and steel,BF_BOF,0.0482288
 South America_Southern,regional iron and steel,domestic iron and steel,DRI_EAF_NG,0.374649
 South America_Southern,regional iron and steel,domestic iron and steel,EAF_scrap_fossil_NG_finish,1
-South Asia,regional iron and steel,domestic iron and steel,BF_BOF,0.00174186
+South Asia,regional iron and steel,domestic iron and steel,BF_BOF,5.44E-04
 South Asia,regional iron and steel,domestic iron and steel,DRI_EAF_NG,0.0293028
 South Asia,regional iron and steel,domestic iron and steel,EAF_scrap_fossil_NG_finish,1
 South Korea,regional iron and steel,domestic iron and steel,BF_BOF,1
-South Korea,regional iron and steel,domestic iron and steel,DRI_EAF_NG,0.194465
-South Korea,regional iron and steel,domestic iron and steel,EAF_scrap_fossil_NG_finish,4.07964
-Southeast Asia,regional iron and steel,domestic iron and steel,BF_BOF,0.134592
+South Korea,regional iron and steel,domestic iron and steel,DRI_EAF_NG,0.590578
+South Korea,regional iron and steel,domestic iron and steel,EAF_scrap_fossil_NG_finish,5.27362
+Southeast Asia,regional iron and steel,domestic iron and steel,BF_BOF,0.0409483
 Southeast Asia,regional iron and steel,domestic iron and steel,DRI_EAF_NG,0.361561
 Southeast Asia,regional iron and steel,domestic iron and steel,EAF_scrap_fossil_NG_finish,1
 Taiwan,regional iron and steel,domestic iron and steel,BF_BOF,1
-Taiwan,regional iron and steel,domestic iron and steel,DRI_EAF_NG,0.144547
-Taiwan,regional iron and steel,domestic iron and steel,EAF_scrap_fossil_NG_finish,3.48484
-USA,regional iron and steel,domestic iron and steel,BF_BOF,0.474832
+Taiwan,regional iron and steel,domestic iron and steel,DRI_EAF_NG,0.453425
+Taiwan,regional iron and steel,domestic iron and steel,EAF_scrap_fossil_NG_finish,4.53803
+USA,regional iron and steel,domestic iron and steel,BF_BOF,0.166373
 USA,regional iron and steel,domestic iron and steel,DRI_EAF_NG,4.30602
 USA,regional iron and steel,domestic iron and steel,EAF_scrap_fossil_NG_finish,1
