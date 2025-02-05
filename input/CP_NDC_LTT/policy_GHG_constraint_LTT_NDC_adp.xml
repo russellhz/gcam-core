@@ -35,7 +35,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="CH4">
-                <price-adjust fillout="1" year="2035">7.636363636</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">28</demand-adjust>
                 <market>Africa_Eastern</market>
                 <linked-policy>GHG</linked-policy>
@@ -43,7 +43,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="N2O">
-                <price-adjust fillout="1" year="2035">72.27272727</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">265</demand-adjust>
                 <market>Africa_Eastern</market>
                 <linked-policy>GHG</linked-policy>
@@ -238,7 +238,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="CH4">
-                <price-adjust fillout="1" year="2035">7.636363636</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">28</demand-adjust>
                 <market>Africa_Northern</market>
                 <linked-policy>GHG</linked-policy>
@@ -246,7 +246,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="N2O">
-                <price-adjust fillout="1" year="2035">72.27272727</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">265</demand-adjust>
                 <market>Africa_Northern</market>
                 <linked-policy>GHG</linked-policy>
@@ -441,7 +441,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="CH4">
-                <price-adjust fillout="1" year="2035">7.636363636</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">28</demand-adjust>
                 <market>Africa_Southern</market>
                 <linked-policy>GHG</linked-policy>
@@ -449,7 +449,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="N2O">
-                <price-adjust fillout="1" year="2035">72.27272727</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">265</demand-adjust>
                 <market>Africa_Southern</market>
                 <linked-policy>GHG</linked-policy>
@@ -644,7 +644,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="CH4">
-                <price-adjust fillout="1" year="2035">7.636363636</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">28</demand-adjust>
                 <market>Africa_Western</market>
                 <linked-policy>GHG</linked-policy>
@@ -652,7 +652,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="N2O">
-                <price-adjust fillout="1" year="2035">72.27272727</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">265</demand-adjust>
                 <market>Africa_Western</market>
                 <linked-policy>GHG</linked-policy>
@@ -847,7 +847,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="CH4">
-                <price-adjust fillout="1" year="2035">7.636363636</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">19.6</demand-adjust>
                 <market>Argentina</market>
                 <linked-policy>GHG</linked-policy>
@@ -855,7 +855,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="N2O">
-                <price-adjust fillout="1" year="2035">72.27272727</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">265</demand-adjust>
                 <market>Argentina</market>
                 <linked-policy>GHG</linked-policy>
@@ -1050,7 +1050,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="CH4">
-                <price-adjust fillout="1" year="2035">7.636363636</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">28</demand-adjust>
                 <market>Australia_NZ</market>
                 <linked-policy>GHG</linked-policy>
@@ -1058,7 +1058,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="N2O">
-                <price-adjust fillout="1" year="2035">72.27272727</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">265</demand-adjust>
                 <market>Australia_NZ</market>
                 <linked-policy>GHG</linked-policy>
@@ -1253,7 +1253,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="CH4">
-                <price-adjust fillout="1" year="2035">7.636363636</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">14</demand-adjust>
                 <market>Brazil</market>
                 <linked-policy>GHG</linked-policy>
@@ -1261,7 +1261,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="N2O">
-                <price-adjust fillout="1" year="2035">72.27272727</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">265</demand-adjust>
                 <market>Brazil</market>
                 <linked-policy>GHG</linked-policy>
@@ -1456,7 +1456,7 @@
                 <output-unit>MTC</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="CH4">
-                <price-adjust fillout="1" year="2035">7.636363636</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">28</demand-adjust>
                 <market>Canada</market>
                 <linked-policy>GHG</linked-policy>
@@ -1464,7 +1464,7 @@
                 <output-unit>TgCH4</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="N2O">
-                <price-adjust fillout="1" year="2035">72.27272727</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">265</demand-adjust>
                 <market>Canada</market>
                 <linked-policy>GHG</linked-policy>
@@ -1659,7 +1659,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="CH4">
-                <price-adjust fillout="1" year="2035">7.636363636</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">28</demand-adjust>
                 <market>Central America and Caribbean</market>
                 <linked-policy>GHG</linked-policy>
@@ -1667,7 +1667,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="N2O">
-                <price-adjust fillout="1" year="2035">72.27272727</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">265</demand-adjust>
                 <market>Central America and Caribbean</market>
                 <linked-policy>GHG</linked-policy>
@@ -1862,7 +1862,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="CH4">
-                <price-adjust fillout="1" year="2035">7.636363636</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">28</demand-adjust>
                 <market>Central Asia</market>
                 <linked-policy>GHG</linked-policy>
@@ -1870,7 +1870,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="N2O">
-                <price-adjust fillout="1" year="2035">72.27272727</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">265</demand-adjust>
                 <market>Central Asia</market>
                 <linked-policy>GHG</linked-policy>
@@ -2100,7 +2100,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="CH4">
-                <price-adjust fillout="1" year="2035">7.636363636</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">9.24</demand-adjust>
                 <market>Colombia</market>
                 <linked-policy>GHG</linked-policy>
@@ -2108,7 +2108,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="N2O">
-                <price-adjust fillout="1" year="2035">72.27272727</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">265</demand-adjust>
                 <market>Colombia</market>
                 <linked-policy>GHG</linked-policy>
@@ -2303,7 +2303,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="CH4">
-                <price-adjust fillout="1" year="2035">7.636363636</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">28</demand-adjust>
                 <market>EU</market>
                 <linked-policy>GHG</linked-policy>
@@ -2311,7 +2311,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="N2O">
-                <price-adjust fillout="1" year="2035">72.27272727</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">265</demand-adjust>
                 <market>EU</market>
                 <linked-policy>GHG</linked-policy>
@@ -2510,7 +2510,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="CH4">
-                <price-adjust fillout="1" year="2035">7.636363636</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">28</demand-adjust>
                 <market>Europe_Eastern</market>
                 <linked-policy>GHG</linked-policy>
@@ -2518,7 +2518,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="N2O">
-                <price-adjust fillout="1" year="2035">72.27272727</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">265</demand-adjust>
                 <market>Europe_Eastern</market>
                 <linked-policy>GHG</linked-policy>
@@ -2713,7 +2713,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="CH4">
-                <price-adjust fillout="1" year="2035">7.636363636</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">28</demand-adjust>
                 <market>Europe_Non_EU</market>
                 <linked-policy>GHG</linked-policy>
@@ -2721,7 +2721,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="N2O">
-                <price-adjust fillout="1" year="2035">72.27272727</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">265</demand-adjust>
                 <market>Europe_Non_EU</market>
                 <linked-policy>GHG</linked-policy>
@@ -2916,7 +2916,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="CH4">
-                <price-adjust fillout="1" year="2035">7.636363636</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">28</demand-adjust>
                 <market>European Free Trade Association</market>
                 <linked-policy>GHG</linked-policy>
@@ -2924,7 +2924,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="N2O">
-                <price-adjust fillout="1" year="2035">72.27272727</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">265</demand-adjust>
                 <market>European Free Trade Association</market>
                 <linked-policy>GHG</linked-policy>
@@ -3111,7 +3111,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="CH4">
-                <price-adjust fillout="1" year="2035">7.636363636</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">8.4</demand-adjust>
                 <market>India</market>
                 <linked-policy>GHG</linked-policy>
@@ -3119,7 +3119,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="N2O">
-                <price-adjust fillout="1" year="2035">72.27272727</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">265</demand-adjust>
                 <market>India</market>
                 <linked-policy>GHG</linked-policy>
@@ -3314,7 +3314,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="CH4">
-                <price-adjust fillout="1" year="2035">7.636363636</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">28</demand-adjust>
                 <market>Indonesia</market>
                 <linked-policy>GHG</linked-policy>
@@ -3322,7 +3322,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="N2O">
-                <price-adjust fillout="1" year="2035">72.27272727</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">265</demand-adjust>
                 <market>Indonesia</market>
                 <linked-policy>GHG</linked-policy>
@@ -3517,7 +3517,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="CH4">
-                <price-adjust fillout="1" year="2035">7.636363636</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">28</demand-adjust>
                 <market>Japan</market>
                 <linked-policy>GHG</linked-policy>
@@ -3525,7 +3525,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="N2O">
-                <price-adjust fillout="1" year="2035">72.27272727</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">265</demand-adjust>
                 <market>Japan</market>
                 <linked-policy>GHG</linked-policy>
@@ -3712,7 +3712,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="CH4">
-                <price-adjust fillout="1" year="2035">7.636363636</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">14</demand-adjust>
                 <market>Mexico</market>
                 <linked-policy>GHG</linked-policy>
@@ -3720,7 +3720,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="N2O">
-                <price-adjust fillout="1" year="2035">72.27272727</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">26.5</demand-adjust>
                 <market>Mexico</market>
                 <linked-policy>GHG</linked-policy>
@@ -3915,7 +3915,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="CH4">
-                <price-adjust fillout="1" year="2035">7.636363636</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">28</demand-adjust>
                 <market>Middle East</market>
                 <linked-policy>GHG</linked-policy>
@@ -3923,7 +3923,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="N2O">
-                <price-adjust fillout="1" year="2035">72.27272727</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">265</demand-adjust>
                 <market>Middle East</market>
                 <linked-policy>GHG</linked-policy>
@@ -4118,7 +4118,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="CH4">
-                <price-adjust fillout="1" year="2035">7.636363636</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">28</demand-adjust>
                 <market>Pakistan</market>
                 <linked-policy>GHG</linked-policy>
@@ -4126,7 +4126,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="N2O">
-                <price-adjust fillout="1" year="2035">72.27272727</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">265</demand-adjust>
                 <market>Pakistan</market>
                 <linked-policy>GHG</linked-policy>
@@ -4356,7 +4356,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="CH4">
-                <price-adjust fillout="1" year="2035">7.636363636</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">28</demand-adjust>
                 <market>South Africa</market>
                 <linked-policy>GHG</linked-policy>
@@ -4364,7 +4364,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="N2O">
-                <price-adjust fillout="1" year="2035">72.27272727</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">265</demand-adjust>
                 <market>South Africa</market>
                 <linked-policy>GHG</linked-policy>
@@ -4559,7 +4559,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="CH4">
-                <price-adjust fillout="1" year="2035">7.636363636</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">28</demand-adjust>
                 <market>South America_Northern</market>
                 <linked-policy>GHG</linked-policy>
@@ -4567,7 +4567,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="N2O">
-                <price-adjust fillout="1" year="2035">72.27272727</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">265</demand-adjust>
                 <market>South America_Northern</market>
                 <linked-policy>GHG</linked-policy>
@@ -4762,7 +4762,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="CH4">
-                <price-adjust fillout="1" year="2035">7.636363636</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">28</demand-adjust>
                 <market>South America_Southern</market>
                 <linked-policy>GHG</linked-policy>
@@ -4770,7 +4770,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="N2O">
-                <price-adjust fillout="1" year="2035">72.27272727</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">265</demand-adjust>
                 <market>South America_Southern</market>
                 <linked-policy>GHG</linked-policy>
@@ -4965,7 +4965,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="CH4">
-                <price-adjust fillout="1" year="2035">7.636363636</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">28</demand-adjust>
                 <market>South Asia</market>
                 <linked-policy>GHG</linked-policy>
@@ -4973,7 +4973,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="N2O">
-                <price-adjust fillout="1" year="2035">72.27272727</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">265</demand-adjust>
                 <market>South Asia</market>
                 <linked-policy>GHG</linked-policy>
@@ -5168,7 +5168,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="CH4">
-                <price-adjust fillout="1" year="2035">7.636363636</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">28</demand-adjust>
                 <market>South Korea</market>
                 <linked-policy>GHG</linked-policy>
@@ -5176,7 +5176,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="N2O">
-                <price-adjust fillout="1" year="2035">72.27272727</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">265</demand-adjust>
                 <market>South Korea</market>
                 <linked-policy>GHG</linked-policy>
@@ -5371,7 +5371,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="CH4">
-                <price-adjust fillout="1" year="2035">7.636363636</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">28</demand-adjust>
                 <market>Southeast Asia</market>
                 <linked-policy>GHG</linked-policy>
@@ -5379,7 +5379,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="N2O">
-                <price-adjust fillout="1" year="2035">72.27272727</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">265</demand-adjust>
                 <market>Southeast Asia</market>
                 <linked-policy>GHG</linked-policy>
@@ -5574,7 +5574,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="CH4">
-                <price-adjust fillout="1" year="2035">7.636363636</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">28</demand-adjust>
                 <market>Taiwan</market>
                 <linked-policy>GHG</linked-policy>
@@ -5582,7 +5582,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="N2O">
-                <price-adjust fillout="1" year="2035">72.27272727</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">265</demand-adjust>
                 <market>Taiwan</market>
                 <linked-policy>GHG</linked-policy>
@@ -5777,7 +5777,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="CH4">
-                <price-adjust fillout="1" year="2035">7.636363636</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">28</demand-adjust>
                 <market>USA</market>
                 <linked-policy>GHG</linked-policy>
@@ -5785,7 +5785,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="N2O">
-                <price-adjust fillout="1" year="2035">72.27272727</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">265</demand-adjust>
                 <market>USA</market>
                 <linked-policy>GHG</linked-policy>
@@ -5958,7 +5958,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="CH4">
-                <price-adjust fillout="1" year="2035">7.636363636</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">28</demand-adjust>
                 <market>EU</market>
                 <linked-policy>GHG</linked-policy>
@@ -5966,7 +5966,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="N2O">
-                <price-adjust fillout="1" year="2035">72.27272727</price-adjust>
+                <price-adjust fillout="1" year="2035">0</price-adjust>
                 <demand-adjust fillout="1" year="2035">265</demand-adjust>
                 <market>EU</market>
                 <linked-policy>GHG</linked-policy>

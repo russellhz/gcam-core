@@ -6952,7 +6952,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="CO2_STEEL_ETS">
-                <price-adjust fillout="0" year="2025">0.35</price-adjust>
+                <price-adjust fillout="0" year="2025">0.45</price-adjust>
                 <demand-adjust fillout="0" year="2025">1</demand-adjust>
                 <market>EU</market>
                 <linked-policy>CO2_ETS</linked-policy>
@@ -6960,7 +6960,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="CO2_STEEL_ETS">
-                <price-adjust fillout="1" year="2030">0.75</price-adjust>
+                <price-adjust fillout="1" year="2030">0.6</price-adjust>
                 <demand-adjust fillout="1" year="2030">1</demand-adjust>
                 <market>EU</market>
                 <linked-policy>CO2_ETS</linked-policy>
@@ -13443,7 +13443,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="CO2_STEEL_ETS">
-                <price-adjust fillout="0" year="2025">0.35</price-adjust>
+                <price-adjust fillout="0" year="2025">0.45</price-adjust>
                 <demand-adjust fillout="0" year="2025">1</demand-adjust>
                 <market>EU</market>
                 <linked-policy>CO2_ETS</linked-policy>
@@ -13451,7 +13451,7 @@
                 <output-unit>NA</output-unit>
             </linked-ghg-policy>
             <linked-ghg-policy name="CO2_STEEL_ETS">
-                <price-adjust fillout="1" year="2030">0.75</price-adjust>
+                <price-adjust fillout="1" year="2030">0.6</price-adjust>
                 <demand-adjust fillout="1" year="2030">1</demand-adjust>
                 <market>EU</market>
                 <linked-policy>CO2_ETS</linked-policy>

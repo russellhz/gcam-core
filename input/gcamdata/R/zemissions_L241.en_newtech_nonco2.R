@@ -27,6 +27,7 @@ module_emissions_L241.en_newtech_nonco2 <- function(command, ...) {
                      FILE = "energy/A22.globaltech_input_driver",
                      FILE = "energy/A23.globaltech_input_driver",
                      FILE = "energy/A25.globaltech_input_driver",
+                     FILE = "energy/A_irnstl_tech_reference",
                      FILE = "emissions/mappings/ind_subsector_revised",
                      "L111.nonghg_tgej_R_en_S_F_Yh_infered_combEF_AP",
                      "L112.ghg_tgej_R_en_S_F_Yh_infered_combEF_AP",
@@ -105,7 +106,12 @@ module_emissions_L241.en_newtech_nonco2 <- function(command, ...) {
     L241.steel_coeff <- L112.ghg_tgej_R_en_S_F_Yh_infered_combEF_AP %>%
       filter(supplysector %in% ind_subsector_revised$sector,
              year == MODEL_FINAL_BASE_YEAR,
-             GCAM_region_ID == EU15_ID)
+             GCAM_region_ID == EU15_ID) %>%
+      right_join(A_irnstl_tech_reference %>%
+                   mutate(reference_tech = if_else(grepl("scrap", technology), "EAF_scrap_fossil_NG_finish", reference_tech)),
+                 by = c("stub.technology" = "reference_tech")) %>%
+      select(-stub.technology) %>%
+      rename(stub.technology = technology)
     # 1d. Combine emissions exceptions --------------------------------------
     # Now replace the missing with the CO and CH4 emission coefficients for
     # technologies with expectations and select for future years.
