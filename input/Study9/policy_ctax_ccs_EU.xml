@@ -3,14 +3,28 @@
         <region name="EU-12">
             <ghgpolicy name="GHG">
                 <market>EU</market>
-                <fixedTax year="2030">1</fixedTax>
+                <fixedTax year="2030">0.1</fixedTax>
             </ghgpolicy>
+            <linked-ghg-policy name="CO2">
+                <price-adjust fillout="1" year="2030">1</price-adjust>
+                <market>EU</market>
+                <linked-policy>GHG</linked-policy>
+                <price-unit>1990$/tC</price-unit>
+                <output-unit>MTC</output-unit>
+            </linked-ghg-policy>
         </region>
         <region name="EU-15">
             <ghgpolicy name="GHG">
                 <market>EU</market>
-                <fixedTax year="2030">1</fixedTax>
+                <fixedTax year="2030">0.1</fixedTax>
             </ghgpolicy>
+            <linked-ghg-policy name="CO2">
+                <price-adjust fillout="1" year="2030">1</price-adjust>
+                <market>EU</market>
+                <linked-policy>GHG</linked-policy>
+                <price-unit>1990$/tC</price-unit>
+                <output-unit>MTC</output-unit>
+            </linked-ghg-policy>
         </region>
     </world>
 </scenario>
