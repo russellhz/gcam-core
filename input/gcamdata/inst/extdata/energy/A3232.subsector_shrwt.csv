@@ -1,0 +1,8 @@
+# File: A3232.subsector_shrwt.csv,,,,
+# Title: Steel default subsector shareweights,,,,
+# Units: Unitless,,,,
+# Column types: ccccn,,,,
+# ----------,,,,
+supplysector,subsector,year.fillout,year,share.weight
+BOF,BOF,start-year,,1
+EAF,EAF,start-year,,1

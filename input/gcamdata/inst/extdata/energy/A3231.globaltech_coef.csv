@@ -1,0 +1,71 @@
+# File: A3231.globaltech_coef.csv,,,,,,,
+# Title: IRONSTL production default coefficients,,,,,,,
+# Units: scrap input is unitless (Mt scrap per Mt IRONSTL); all others are GJ per kg (EJ of energy per Mt of IRONSTL),,,,,,,
+# Comments: charcoal_prop is the proportion of bioenergy that comes from charcoal,,,,,,,
+# Column types: ccccnnnn,,,,,,,
+# ----------,,,,,,,
+supplysector,subsector,technology,minicam.energy.input,charcoal_prop,1971,2010,2100
+BF_coal,BF_coal,BF_coal,elect_td_ind,,0,0,0
+BF_coal,BF_coal,BF_coal,delivered coal industry,,0.021145411,0.021145411,0.021145411
+BF_coal,BF_coal,BF_coal,wholesale gas,,0,0,0
+BF_CCS_73%,BF_CCS_73%,BF_CCS_73%,elect_td_ind,,0.003008526,0.003008526,0.003008526
+BF_CCS_73%,BF_CCS_73%,BF_CCS_73%,delivered coal industry,,0.021145411,0.021145411,0.021145411
+BF_CCS_86%,BF_CCS_86%,BF_CCS_86%,elect_td_ind,,0.003657652,0.003657652,0.003657652
+BF_CCS_86%,BF_CCS_86%,BF_CCS_86%,delivered coal industry,,0.021145411,0.021145411,0.021145411
+BF_BECCSmin,BF_BECCSmin,BF_BECCSmin,elect_td_ind,,0.00302,0.00302,0.00302
+BF_BECCSmin,BF_BECCSmin,BF_BECCSmin,wholesale gas,,0.00058,0.00058,0.00058
+BF_BECCSmin,BF_BECCSmin,BF_BECCSmin,delivered coal industry,,0.014109881,0.014109881,0.014109881
+BF_BECCSmin,BF_BECCSmin,BF_BECCSmin,delivered biomass industry,1,0.006457984,0.006457984,0.006457984
+BF_BECCSmax,BF_BECCSmax,BF_BECCSmax,elect_td_ind,,0.00303,0.00303,0.00303
+BF_BECCSmax,BF_BECCSmax,BF_BECCSmax,wholesale gas,,0.00058,0.00058,0.00058
+BF_BECCSmax,BF_BECCSmax,BF_BECCSmax,delivered coal industry,,0.012959383,0.012959383,0.012959383
+BF_BECCSmax,BF_BECCSmax,BF_BECCSmax,delivered biomass industry,1,0.007619336,0.007619336,0.007619336
+SmeltRed,SmeltRed,SmeltRed,elect_td_ind,,0.00165,0.00165,0.00165
+SmeltRed,SmeltRed,SmeltRed,wholesale gas,,0.00114,0.00114,0.00114
+SmeltRed,SmeltRed,SmeltRed,delivered coal industry,,0.013784268,0.013784268,0.013784268
+SmeltRed_CCS,SmeltRed_CCS,SmeltRed_CCS,elect_td_ind,,0.00252,0.00252,0.00252
+SmeltRed_CCS,SmeltRed_CCS,SmeltRed_CCS,wholesale gas,,0.00114,0.00114,0.00114
+SmeltRed_CCS,SmeltRed_CCS,SmeltRed_CCS,delivered coal industry,,0.013784268,0.013784268,0.013784268
+DRI_SAF_NG,DRI_SAF_NG,DRI_SAF_NG,elect_td_ind,,0.00213,0.00213,0.00213
+DRI_SAF_NG,DRI_SAF_NG,DRI_SAF_NG,wholesale gas,,0.01262,0.01262,0.01262
+DRI_SAF_NG,DRI_SAF_NG,DRI_SAF_NG,delivered coal industry,,1.10E-04,1.10E-04,1.10E-04
+DRI_SAF_H2,DRI_SAF_H2,DRI_SAF_H2,elect_td_ind,,0.00213,0.00213,0.00213
+DRI_SAF_H2,DRI_SAF_H2,DRI_SAF_H2,H2 industrial,,0.01011,0.01011,0.01011
+DRI_SAF_H2,DRI_SAF_H2,DRI_SAF_H2,delivered biomass industry,1,0.001549519,0.001549519,0.001549519
+DRI_SAF_BECCS,DRI_SAF_BECCS,DRI_SAF_BECCS,elect_td_ind,,0.00558,0.00558,0.00558
+DRI_SAF_BECCS,DRI_SAF_BECCS,DRI_SAF_BECCS,delivered biomass industry,0.0377,0.01623,0.01623,0.01623
+DRI_NG,DRI_NG,DRI_NG,elect_td_ind,,0,0,0
+DRI_NG,DRI_NG,DRI_NG,wholesale gas,,0.01328,0.01328,0.01328
+DRI_NG,DRI_NG,DRI_NG,delivered coal industry,,7.96E-05,7.96E-05,7.96E-05
+DRI_NG_CCS,DRI_NG_CCS,DRI_NG_CCS,elect_td_ind,,0.000662079,0.000662079,0.000662079
+DRI_NG_CCS,DRI_NG_CCS,DRI_NG_CCS,wholesale gas,,0.01328,0.01328,0.01328
+DRI_NG_CCS,DRI_NG_CCS,DRI_NG_CCS,delivered coal industry,,7.96E-05,7.96E-05,7.96E-05
+DRI_coal,DRI_coal,DRI_coal,elect_td_ind,,0.002377059,0.002377059,0.002377059
+DRI_coal,DRI_coal,DRI_coal,wholesale gas,,0.00191,0.00191,0.00191
+DRI_coal,DRI_coal,DRI_coal,delivered coal industry,,0.021479927,0.021479927,0.021479927
+DRI_coal_CCS,DRI_coal_CCS,DRI_coal_CCS,elect_td_ind,,0.007749413,0.007749413,0.007749413
+DRI_coal_CCS,DRI_coal_CCS,DRI_coal_CCS,wholesale gas,,0.00191,0.00191,0.00191
+DRI_coal_CCS,DRI_coal_CCS,DRI_coal_CCS,delivered coal industry,,0.021479927,0.021479927,0.021479927
+DRI_BECCS,DRI_BECCS,DRI_BECCS,elect_td_ind,,0.001825194,0.001825194,0.001825194
+DRI_BECCS,DRI_BECCS,DRI_BECCS,delivered biomass industry,0.02073,0.01699,0.01699,0.01699
+DRI_H2,DRI_H2,DRI_H2,elect_td_ind,,0.000656711,0.000656711,0.000656711
+DRI_H2,DRI_H2,DRI_H2,H2 industrial,,0.01087,0.01087,0.01087
+DRI_H2,DRI_H2,DRI_H2,delivered biomass industry,1,5.75E-04,5.75E-04,5.75E-04
+AEL,AEL,AEL,elect_td_ind,,0.014723269,0.014723269,0.014723269
+AEL,AEL,AEL,delivered biomass industry,1,4.07E-04,4.07E-04,4.07E-04
+scrap_fossil_NG_finish,scrap_fossil_NG_finish,scrap_fossil_NG_finish,elect_td_ind,,0.000658978,0.000658978,0.000658978
+scrap_fossil_NG_finish,scrap_fossil_NG_finish,scrap_fossil_NG_finish,wholesale gas,,0.00235,0.00235,0.00235
+scrap_fossil_NG_finish,scrap_fossil_NG_finish,scrap_fossil_NG_finish,delivered coal industry,,4.10E-04,4.10E-04,4.10E-04
+scrap_fossil_NG_finish,scrap_fossil_NG_finish,scrap_fossil_NG_finish,scrap,,1.1,1.1,1.1
+scrap_bio_NG_finish,scrap_bio_NG_finish,scrap_bio_NG_finish,elect_td_ind,,0.001100508,0.001100508,0.001100508
+scrap_bio_NG_finish,scrap_bio_NG_finish,scrap_bio_NG_finish,wholesale gas,,0.00191,0.00191,0.00191
+scrap_bio_NG_finish,scrap_bio_NG_finish,scrap_bio_NG_finish,delivered biomass industry,1,4.10E-04,4.10E-04,4.10E-04
+scrap_bio_NG_finish,scrap_bio_NG_finish,scrap_bio_NG_finish,scrap,,1.1,1.1,1.1
+scrap_fossil_elec_finish,scrap_fossil_elec_finish,scrap_fossil_elec_finish,elect_td_ind,,0.002443269,0.002443269,0.002443269
+scrap_fossil_elec_finish,scrap_fossil_elec_finish,scrap_fossil_elec_finish,wholesale gas,,4.40E-04,4.40E-04,4.40E-04
+scrap_fossil_elec_finish,scrap_fossil_elec_finish,scrap_fossil_elec_finish,delivered coal industry,,4.10E-04,4.10E-04,4.10E-04
+scrap_fossil_elec_finish,scrap_fossil_elec_finish,scrap_fossil_elec_finish,scrap,,1.1,1.1,1.1
+scrap_bio_elec_finish,scrap_bio_elec_finish,scrap_bio_elec_finish,elect_td_ind,,0.002883269,0.002883269,0.002883269
+scrap_bio_elec_finish,scrap_bio_elec_finish,scrap_bio_elec_finish,delivered biomass industry,1,4.10E-04,4.10E-04,4.10E-04
+scrap_bio_elec_finish,scrap_bio_elec_finish,scrap_bio_elec_finish,scrap,,1.1,1.1,1.1
+MOE,MOE,MOE,elect_td_ind,,0.01828,0.01828,0.01828

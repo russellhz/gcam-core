@@ -1,0 +1,28 @@
+# File: A3231.subsector_shrwt.csv,,,,
+# Title: Iron default subsector shareweights,,,,
+# Units: Unitless,,,,
+# Column types: ccccn,,,,
+# ----------,,,,
+supplysector,subsector,year.fillout,year,share.weight
+BF_coal,BF_coal,start-year,,1
+BF_CCS_73%,BF_CCS_73%,start-year,,1
+BF_CCS_86%,BF_CCS_86%,start-year,,1
+BF_BECCSmin,BF_BECCSmin,start-year,,1
+BF_BECCSmax,BF_BECCSmax,start-year,,1
+SmeltRed,SmeltRed,start-year,,1
+SmeltRed_CCS,SmeltRed_CCS,start-year,,1
+DRI_SAF_NG,DRI_SAF_NG,start-year,,1
+DRI_SAF_H2,DRI_SAF_H2,start-year,,1
+DRI_SAF_BECCS,DRI_SAF_BECCS,start-year,,1
+DRI_NG,DRI_NG,start-year,,1
+DRI_NG_CCS,DRI_NG_CCS,start-year,,1
+DRI_coal,DRI_coal,start-year,,1
+DRI_coal_CCS,DRI_coal_CCS,start-year,,1
+DRI_BECCS,DRI_BECCS,start-year,,1
+DRI_H2,DRI_H2,start-year,,1
+AEL,AEL,start-year,,1
+scrap_fossil_NG_finish,scrap_fossil_NG_finish,start-year,,1
+scrap_bio_NG_finish,scrap_bio_NG_finish,start-year,,1
+scrap_fossil_elec_finish,scrap_fossil_elec_finish,start-year,,1
+scrap_bio_elec_finish,scrap_bio_elec_finish,start-year,,1
+MOE_iron,MOE_iron,start-year,,1

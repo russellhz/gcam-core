@@ -1,0 +1,9 @@
+# File: A3232.globaltech_cost.csv,,,,,,,,
+# Title: IRONSTL default costs,,,,,,,,
+# Source: OPEX and CAPEX and material costs from Wuppertal Institute data,,,,,,,,
+# Units: 1975$/kg for supplysector IRONSTL,,,,,,,,
+# Column types: ccccnnnnn,,,,,,,,
+# ----------,,,,,,,,
+supplysector,subsector,technology,minicam.non.energy.input,1971,2020,2030,2050,2100
+BOF,BOF,BOF,non-energy,0.05,0.05,0.05,0.05,0.05
+EAF,EAF,EAF,non-energy,0.05,0.05,0.05,0.05,0.05

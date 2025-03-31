@@ -1,0 +1,28 @@
+# File: A3231.globaltech_shrwt.csv,,,,,,,,,,,
+# Title: Iron and steel default shareweights,,,,,,,,,,,
+# Units: Unitless,,,,,,,,,,,
+# Column types: cccnnnnnnnnn,,,,,,,,,,,
+# ----------,,,,,,,,,,,
+supplysector,subsector,technology,1971,2015,2020,2025,2030,2035,2040,2050,2100
+BF_coal,BF_coal,BF_coal,1,1,1,1,1,1,1,1,1
+BF_CCS_73%,BF_CCS_73%,BF_CCS_73%,1,1,1,1,1,1,1,1,1
+BF_CCS_86%,BF_CCS_86%,BF_CCS_86%,1,1,1,1,1,1,1,1,1
+BF_BECCSmin,BF_BECCSmin,BF_BECCSmin,1,1,1,1,1,1,1,1,1
+BF_BECCSmax,BF_BECCSmax,BF_BECCSmax,1,1,1,1,1,1,1,1,1
+SmeltRed,SmeltRed,SmeltRed,1,1,1,1,1,1,1,1,1
+SmeltRed_CCS,SmeltRed_CCS,SmeltRed_CCS,1,1,1,1,1,1,1,1,1
+DRI_SAF_NG,DRI_SAF_NG,DRI_SAF_NG,1,1,1,1,1,1,1,1,1
+DRI_SAF_H2,DRI_SAF_H2,DRI_SAF_H2,1,1,1,1,1,1,1,1,1
+DRI_SAF_BECCS,DRI_SAF_BECCS,DRI_SAF_BECCS,1,1,1,1,1,1,1,1,1
+DRI_NG,DRI_NG,DRI_NG,1,1,1,1,1,1,1,1,1
+DRI_NG_CCS,DRI_NG_CCS,DRI_NG_CCS,1,1,1,1,1,1,1,1,1
+DRI_coal,DRI_coal,DRI_coal,1,1,1,1,1,1,1,1,1
+DRI_coal_CCS,DRI_coal_CCS,DRI_coal_CCS,1,1,1,1,1,1,1,1,1
+DRI_BECCS,DRI_BECCS,DRI_BECCS,1,1,1,1,1,1,1,1,1
+DRI_H2,DRI_H2,DRI_H2,1,1,1,1,1,1,1,1,1
+AEL,AEL,AEL,1,1,1,1,1,1,1,1,1
+scrap_fossil_NG_finish,scrap_fossil_NG_finish,scrap_fossil_NG_finish,1,1,1,1,1,1,1,1,1
+scrap_bio_NG_finish,scrap_bio_NG_finish,scrap_bio_NG_finish,1,1,1,1,1,1,1,1,1
+scrap_fossil_elec_finish,scrap_fossil_elec_finish,scrap_fossil_elec_finish,1,1,1,1,1,1,1,1,1
+scrap_bio_elec_finish,scrap_bio_elec_finish,scrap_bio_elec_finish,1,1,1,1,1,1,1,1,1
+MOE_iron,MOE_iron,MOE_iron,1,1,1,1,1,1,1,1,1

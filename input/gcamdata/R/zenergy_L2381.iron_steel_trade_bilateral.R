@@ -32,23 +32,24 @@ module_energy_L2381.iron_steel_trade_bilateral <- function(command, ...) {
                      "LB1092.Tradebalance_iron_steel_Mt_R_Y_EU_bilateral",
                      "LB1092.Tradebalance_iron_steel_Mt_R_Y",
                      "L2323.StubTechProd_iron_steel")
+  MODULE_OUTPUTS <- c("L2381.Supplysector_tra",
+                      "L2381.SectorUseTrialMarket_tra",
+                      "L2381.SubsectorAll_tra",
+                      "L2381.TechShrwt_tra",
+                      "L2381.TechCost_tra",
+                      "L2381.TechCoef_tra",
+                      "L2381.Production_tra",
+                      "L2381.Supplysector_reg",
+                      "L2381.SubsectorAll_reg",
+                      "L2381.TechShrwt_reg",
+                      "L2381.TechCoef_reg",
+                      "L2381.Production_reg_imp",
+                      "L2381.Production_reg_dom",
+                      "L2381.TechInterp_imp")
   if(command == driver.DECLARE_INPUTS) {
     return(MODULE_INPUTS)
   } else if(command == driver.DECLARE_OUTPUTS) {
-    return(c("L2381.Supplysector_tra",
-             "L2381.SectorUseTrialMarket_tra",
-             "L2381.SubsectorAll_tra",
-             "L2381.TechShrwt_tra",
-             "L2381.TechCost_tra",
-             "L2381.TechCoef_tra",
-             "L2381.Production_tra",
-             "L2381.Supplysector_reg",
-             "L2381.SubsectorAll_reg",
-             "L2381.TechShrwt_reg",
-             "L2381.TechCoef_reg",
-             "L2381.Production_reg_imp",
-             "L2381.Production_reg_dom",
-             "L2381.TechInterp_imp"))
+    return(MODULE_OUTPUTS)
   } else if(command == driver.MAKE) {
 
     all_data <- list(...)[[1]]
@@ -88,7 +89,11 @@ module_energy_L2381.iron_steel_trade_bilateral <- function(command, ...) {
                                                    c(LEVEL2_DATA_NAMES[["SubsectorAllTo"]], "logit.type"),
                                                    GCAM_region_names_nonEU,
                                                    has_traded = TRUE) %>% mutate(region = gcam.USA_REGION)
-    L2381.SubsectorAll_tra <- bind_rows(L2381.SubsectorAll_tra_EU, L2381.SubsectorAll_tra_nonEU)
+    L2381.SubsectorAll_tra_DRI <- write_to_all_regions(filter(A_irnstl_TradedSubsector_bilateral, grepl("DRI", supplysector)),
+                                                         c(LEVEL2_DATA_NAMES[["SubsectorAllTo"]], "logit.type"),
+                                                         GCAM_region_names,
+                                                         has_traded = TRUE) %>% mutate(region = gcam.USA_REGION)
+    L2381.SubsectorAll_tra <- bind_rows(L2381.SubsectorAll_tra_EU, L2381.SubsectorAll_tra_nonEU, L2381.SubsectorAll_tra_DRI)
 
     # Change traded iron and steel interpolation rule and to.value in countries listed in energy.IRON_STEEL.DOMESTIC_SW
     L2381.SubsectorAll_tra$interpolation.function[which(L2381.SubsectorAll_tra$subsector %in% energy.IRON_STEEL.TRADED_SW)] <- "s-curve"
@@ -141,7 +146,8 @@ module_energy_L2381.iron_steel_trade_bilateral <- function(command, ...) {
 
     L2381.TechShrwt_tra <- A_irnstl_TradedTechnology_bilateral_R_Y %>%
       select(region, supplysector, subsector, technology, minicam.energy.input, year, market.name) %>%
-      left_join_error_no_match(L2381.TechShrwt_regional, by = c("market.name" = "region", "year", "minicam.energy.input" = "technology")) %>%
+      left_join(L2381.TechShrwt_regional, by = c("market.name" = "region", "year", "minicam.energy.input" = "technology")) %>%
+      tidyr::replace_na(list(share.weight = 1)) %>%
       select(LEVEL2_DATA_NAMES[["TechShrwt"]])
 
     # L2381.TechCost_tra: Costs of traded technologies
@@ -179,8 +185,9 @@ module_energy_L2381.iron_steel_trade_bilateral <- function(command, ...) {
 
     L2381.Production_tra <- A_irnstl_TradedTechnology_bilateral_R_Y %>%
       filter(year %in% MODEL_BASE_YEARS) %>%
-      left_join_error_no_match(L2381.GrossExports_Mt_R_Y_carbonType,
+      left_join(L2381.GrossExports_Mt_R_Y_carbonType,
                                by = c(market.name = "region", "year", "minicam.energy.input")) %>%
+      mutate(GrossExp_Mt = if_else(is.na(GrossExp_Mt) & minicam.energy.input == "DRI_H2", 0, GrossExp_Mt)) %>%
       rename(calOutputValue = GrossExp_Mt) %>%
       mutate(calOutputValue = round(calOutputValue, energy.DIGITS_CALOUTPUT),
              share.weight.year = year,
@@ -216,7 +223,8 @@ module_energy_L2381.iron_steel_trade_bilateral <- function(command, ...) {
     L2381.TechShrwt_reg <- A_irnstl_RegionalTechnology_bilateral_R_Y %>%
       filter(grepl("domestic", subsector)) %>%
       select(region, supplysector, subsector, technology, minicam.energy.input, year) %>%
-      left_join_error_no_match(L2381.TechShrwt_regional, by = c("region", "year", "minicam.energy.input" = "technology")) %>%
+      left_join(L2381.TechShrwt_regional, by = c("region", "year", "minicam.energy.input" = "technology")) %>%
+      mutate(share.weight = if_else(is.na(share.weight) & minicam.energy.input == "DRI_H2", 1, share.weight)) %>%
       bind_rows(A_irnstl_RegionalTechnology_bilateral_R_Y %>%
                    filter(!grepl("domestic", subsector))) %>%
       select(LEVEL2_DATA_NAMES[["TechShrwt"]])
@@ -250,8 +258,9 @@ module_energy_L2381.iron_steel_trade_bilateral <- function(command, ...) {
     L2381.Production_reg_imp <- A_irnstl_RegionalTechnology_bilateral_R_Y %>%
       filter(year %in% MODEL_BASE_YEARS,
              grepl( "import", subsector)) %>%
-      left_join_error_no_match(L2381.GrossImports_Mt_R_Y,
+      left_join(L2381.GrossImports_Mt_R_Y,
                                by = c("region", minicam.energy.input = "supplysector", "year")) %>%
+      mutate(GrossImp_Mt = if_else(is.na(GrossImp_Mt) & grepl("DRI_H2", minicam.energy.input), 0, GrossImp_Mt)) %>%
       rename(calOutputValue = GrossImp_Mt) %>%
       mutate(calOutputValue = round(calOutputValue, energy.DIGITS_CALOUTPUT),
              calOutputValue = if_else(grepl("CBAM", technology), 0, calOutputValue),
@@ -263,9 +272,9 @@ module_energy_L2381.iron_steel_trade_bilateral <- function(command, ...) {
       select(LEVEL2_DATA_NAMES[["Production"]])
 
     L2381.TechInterp_imp <- L2381.Production_reg_imp %>%
-      select(region, supplysector, subsector, technology  ) %>%
+      distinct(region, supplysector, subsector, technology  ) %>%
       mutate(apply.to = "share-weight",
-             from.year = MODEL_FINAL_BASE_YEAR,
+             from.year = if_else(grepl("DRI", supplysector), min(MODEL_FUTURE_YEARS), MODEL_FINAL_BASE_YEAR),
              to.year = max(MODEL_FUTURE_YEARS),
              interpolation.function = "fixed")
 
@@ -294,9 +303,10 @@ module_energy_L2381.iron_steel_trade_bilateral <- function(command, ...) {
     L2381.Production_reg_dom <- A_irnstl_RegionalTechnology_bilateral_R_Y %>%
       filter(year %in% MODEL_BASE_YEARS,
              grepl( "domestic", subsector)) %>%
-      left_join_error_no_match(L2381.DomSup_Mt_R_Y,
+      left_join(L2381.DomSup_Mt_R_Y,
                                by = c("region", "supplysector", "subsector", "technology", "year")) %>%
-      mutate(calOutputValue = round(DomSup_Mt, energy.DIGITS_CALOUTPUT),
+      mutate(DomSup_Mt = if_else(is.na(DomSup_Mt) & grepl("DRI_H2", minicam.energy.input), 0, DomSup_Mt),
+             calOutputValue = round(DomSup_Mt, energy.DIGITS_CALOUTPUT),
              share.weight.year = year) %>%
       group_by(supplysector, region, year) %>%
       mutate(subs.share.weight = if_else(any(calOutputValue) > 0, 1, 0)) %>%
@@ -407,20 +417,7 @@ module_energy_L2381.iron_steel_trade_bilateral <- function(command, ...) {
                      "LB1092.Tradebalance_iron_steel_Mt_R_Y") ->
       L2381.Production_reg_dom
 
-    return_data(L2381.Supplysector_tra,
-                L2381.SectorUseTrialMarket_tra,
-                L2381.SubsectorAll_tra,
-                L2381.TechShrwt_tra,
-                L2381.TechCost_tra,
-                L2381.TechCoef_tra,
-                L2381.Production_tra,
-                L2381.Supplysector_reg,
-                L2381.SubsectorAll_reg,
-                L2381.TechShrwt_reg,
-                L2381.TechCoef_reg,
-                L2381.Production_reg_imp,
-                L2381.Production_reg_dom,
-                L2381.TechInterp_imp)
+    return_data(MODULE_OUTPUTS)
   } else {
     stop("Unknown command")
   }

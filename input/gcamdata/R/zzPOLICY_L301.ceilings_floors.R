@@ -35,6 +35,8 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
                      "L2321.StubTech_cement",
                      "L2322.StubTech_Fert",
                      "L2323.StubTech_iron_steel",
+                     "L23231.StubTech_iron",
+                     "L23232.StubTech_steel",
                      "L2324.StubTech_Off_road",
                      "L2325.StubTech_chemical",
                      "L2326.StubTech_aluminum",
@@ -81,6 +83,7 @@ module_policy_L301.ceilings_floors <- function(command, ...) {
       L222.StubTech_en, L223.StubTech_elec, L2233.StubTech_elec_cool, L224.StubTech_heat,
       L225.StubTech_h2, L226.StubTech_en, L232.StubTech_ind, L2321.StubTech_cement,
       L2322.StubTech_Fert, L2323.StubTech_iron_steel, L2324.StubTech_Off_road,
+      L23231.StubTech_iron, L23232.StubTech_steel,
       L2325.StubTech_chemical, L2326.StubTech_aluminum, L244.StubTech_bld,
       L239.PrimaryConsKeyword_en %>% select(-primary.consumption, -year) %>% distinct() %>% rename(stub.technology = technology)
       )

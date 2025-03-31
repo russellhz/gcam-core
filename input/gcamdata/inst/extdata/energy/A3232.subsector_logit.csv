@@ -1,0 +1,8 @@
+# File: A3232.subsector_logit.csv,,,
+# Title: Steel default subsector logit exponents,,,
+# Units: Unitless,,,
+# Column types: ccic ,,,
+# ----------,,,
+supplysector,subsector,logit.exponent,logit.type
+BOF,BOF,-6,
+EAF,EAF,-6,

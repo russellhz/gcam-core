@@ -1,0 +1,9 @@
+# File: A3232.globaltech_coef.csv,,,,,,,
+# Title: Steel production default coefficients,,,,,,,
+# Units: scrap input is unitless (Mt scrap per Mt IRONSTL); all others are GJ per kg (EJ of energy per Mt of IRONSTL),,,,,,,
+# Comments: charcoal_prop is the proportion of bioenergy that comes from charcoal,,,,,,,
+# Column types: ccccnnnn,,,,,,,
+# ----------,,,,,,,
+supplysector,subsector,technology,minicam.energy.input,charcoal_prop,1971,2010,2100
+BOF,BOF,BOF,elect_td_ind,,0.000473,0.000473,0.000473
+EAF,EAF,EAF,elect_td_ind,,0.002046731,0.002046731,0.002046731

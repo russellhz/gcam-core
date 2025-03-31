@@ -41,6 +41,8 @@ module_policy_L3221.CCap <- function(command, ...) {
              "L271.StubTech_desal",
              "L239.PrimaryConsKeyword_en",
              "L254.StubTranTech",
+             "L23231.StubTech_iron",
+             "L23232.StubTech_steel",
              "L201.GDP_Scen"
              ))
   } else if(command == driver.DECLARE_OUTPUTS) {
@@ -79,6 +81,8 @@ module_policy_L3221.CCap <- function(command, ...) {
                                     get_data(all_data, "L2321.StubTech_cement"),
                                     get_data(all_data, "L2322.StubTech_Fert"),
                                     get_data(all_data, "L2323.StubTech_iron_steel"),
+                                    get_data(all_data, "L23231.StubTech_iron"),
+                                    get_data(all_data, "L23232.StubTech_steel"),
                                     get_data(all_data, "L2324.StubTech_Off_road"),
                                     get_data(all_data, "L2325.StubTech_chemical"),
                                     get_data(all_data, "L2326.StubTech_aluminum"),

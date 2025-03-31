@@ -34,3 +34,5 @@ regional iron and steel,domestic iron and steel,BF_BOF_CCS_73%,BF_BOF_CCS_73%,1,
 regional iron and steel,domestic iron and steel,BF_BOF,BF_BOF,1,0,1,regional
 regional iron and steel,domestic iron and steel,SR_BOF,SR_BOF,1,0,1,regional
 regional iron and steel,domestic iron and steel,DRI_EAF_coal,DRI_EAF_coal,1,0,1,regional
+regional DRI_H2,imported DRI_H2,imported DRI_H2,traded DRI_H2,1,0,1,USA
+regional DRI_H2,domestic DRI_H2,DRI_H2,DRI_H2,1,0,1,regional

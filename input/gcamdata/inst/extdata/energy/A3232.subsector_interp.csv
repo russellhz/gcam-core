@@ -1,0 +1,8 @@
+# File: A3231.subsector_interp.csv,,,,,,
+# Title: Iron default subsector shareweight interpolation,,,,,,
+# Units: NA,,,,,,
+# Column types: ccccccc,,,,,,
+# ----------,,,,,,
+supplysector,subsector,apply.to,from.year,to.year,to.value,interpolation.function
+BOF,BOF,share-weight,final-calibration-year,end-year,,linear
+EAF,EAF,share-weight,final-calibration-year,end-year,,linear

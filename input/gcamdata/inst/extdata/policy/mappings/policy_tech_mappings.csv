@@ -368,10 +368,38 @@ RESID_ELEC,resid cooling,electricity,electricity
 RESID_ELEC,resid heating,electricity,electricity
 RESID_ELEC,resid others,electricity,electricity
 ROOFTOP_PV,elect_td_bld,rooftop_pv,rooftop_pv
+SCRAP_STEEL,scrap_fossil_NG_finish,scrap_fossil_NG_finish,scrap_fossil_NG_finish
+SCRAP_STEEL,scrap_bio_NG_finish,scrap_bio_NG_finish,scrap_bio_NG_finish
+SCRAP_STEEL,scrap_fossil_elec_finish,scrap_fossil_elec_finish,scrap_fossil_elec_finish
+SCRAP_STEEL,scrap_bio_elec_finish,scrap_bio_elec_finish,scrap_bio_elec_finish
 SCRAP_STEEL,EAF_scrap_bio_NG_finish,EAF_scrap_bio_NG_finish,EAF_scrap_bio_NG_finish
 SCRAP_STEEL,EAF_scrap_fossil_NG_finish,EAF_scrap_fossil_NG_finish,EAF_scrap_fossil_NG_finish
 SCRAP_STEEL,EAF_scrap_bio_elec_finish,EAF_scrap_bio_elec_finish,EAF_scrap_bio_elec_finish
 SCRAP_STEEL,EAF_scrap_fossil_elec_finish,EAF_scrap_fossil_elec_finish,EAF_scrap_fossil_elec_finish
+STEEL_ALL,BOF,BOF,BOF
+STEEL_ALL,EAF,EAF,EAF
+STEEL_ALL,BF_coal,BF_coal,BF_coal
+STEEL_ALL,BF_CCS_73%,BF_CCS_73%,BF_CCS_73%
+STEEL_ALL,BF_CCS_86%,BF_CCS_86%,BF_CCS_86%
+STEEL_ALL,BF_BECCSmin,BF_BECCSmin,BF_BECCSmin
+STEEL_ALL,BF_BECCSmax,BF_BECCSmax,BF_BECCSmax
+STEEL_ALL,SmeltRed,SmeltRed,SmeltRed
+STEEL_ALL,SmeltRed_CCS,SmeltRed_CCS,SmeltRed_CCS
+STEEL_ALL,DRI_NG,DRI_NG,DRI_NG
+STEEL_ALL,DRI_NG_CCS,DRI_NG_CCS,DRI_NG_CCS
+STEEL_ALL,DRI_coal,DRI_coal,DRI_coal
+STEEL_ALL,DRI_coal_CCS,DRI_coal_CCS,DRI_coal_CCS
+STEEL_ALL,DRI_BECCS,DRI_BECCS,DRI_BECCS
+STEEL_ALL,regional DRI_H2,regional DRI_H3,regional DRI_H4
+STEEL_ALL,DRI_SAF_NG,DRI_SAF_NG,DRI_SAF_NG
+STEEL_ALL,DRI_SAF_H2,DRI_SAF_H3,DRI_SAF_H4
+STEEL_ALL,DRI_SAF_BECCS,DRI_SAF_BECCS,DRI_SAF_BECCS
+STEEL_ALL,AEL,AEL,AEL
+STEEL_ALL,MOE_iron,MOE_iron,MOE_iron
+STEEL_ALL,scrap_fossil_NG_finish,scrap_fossil_NG_finish,scrap_fossil_NG_finish
+STEEL_ALL,scrap_bio_NG_finish,scrap_bio_NG_finish,scrap_bio_NG_finish
+STEEL_ALL,scrap_fossil_elec_finish,scrap_fossil_elec_finish,scrap_fossil_elec_finish
+STEEL_ALL,scrap_bio_elec_finish,scrap_bio_elec_finish,scrap_bio_elec_finish
 STEEL_ALL,BLASTFUR,BLASTFUR,BF_BOF
 STEEL_ALL,BLASTFUR,BLASTFUR,BF_BOF_CCS_73%
 STEEL_ALL,BLASTFUR,BLASTFUR,BF_BOF_CCS_86%
