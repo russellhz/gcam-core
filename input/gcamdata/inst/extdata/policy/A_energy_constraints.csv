@@ -48,8 +48,9 @@ policy_RE_targets_usa,USA,offshore-target,subsidy,,ELEC_WIND_OFFSHORE,,,,0.43,0.
 policy_RE_targets_usa,USA,biodiesel-target-OLD,subsidy,,BIODIESEL,0.25418326,0.3405,0.3405,0.3405,0.3405,0.3405,0.3405,0.3405,0.3405,0.3405,0.3405,0.3405,0.3405,0.3405,0.3405,0.3405,0.3405
 policy_RE_targets_usa,USA,biofuel-target-OLD,subsidy,,BIOFUEL_ALL,1.23772801,1.635,1.635,1.635,1.635,1.635,1.635,1.635,1.635,1.635,1.635,1.635,1.635,1.635,1.635,1.635,1.635
 policy_scrap_limit_global,nonEU_FreeTrade,scrap-limit-RoW,tax,,SCRAP_STEEL,,,523,638,744,861,979,,,,,,,,,,
-policy_scrap_limit_global,EU_FreeTrade,scrap-limit-EU,tax,,SCRAP_STEEL,,,101,104,107,109,111,,,,,,,,,,
+policy_scrap_limit_global,EU_FreeTrade,scrap-limit-EU,tax,,SCRAP_STEEL,,,90.9,93.6,96.3,98.1,99.9,,,,,,,,,,
 policy_scrap_limit_global,World,scrap-limit-global,tax,,SCRAP_STEEL,463,537,,,,,,,,,,,,,,,
 EU_iron_steel_floor,EU,steel_floor,subsidy,,STEEL_ALL,157,157,157,157,157,157,157,,,,,,,,,,
 EU_iron_steel_floor_2020,EU,steel_floor_2020,subsidy,,STEEL_ALL,157,,,,,,,,,,,,,,,,
 resid_calib_world,World,elec-calib,tax,,ELEC_BLD,43.4503,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,

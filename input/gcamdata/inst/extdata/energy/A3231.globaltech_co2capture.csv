@@ -1,0 +1,15 @@
+# File: A3231.globaltech_co2capture.csv,,,,
+# Title: Iron and steel CO2 capture rates,,,,
+# Units: Unitless,,,,
+# Column types: cccnn,,,,
+# ----------,,,,
+supplysector,subsector,technology,1971,2100
+BF_CCS_73%,BF_CCS_73%,BF_CCS_73%,0.73,0.73
+BF_CCS_86%,BF_CCS_86%,BF_CCS_86%,0.86,0.86
+BF_BECCSmin,BF_BECCSmin,BF_BECCSmin,0.86,0.86
+BF_BECCSmax,BF_BECCSmax,BF_BECCSmax,0.86,0.86
+SR_CCS,SR_CCS,SR_CCS,0.86,0.86
+DRI_NG_CCS,DRI_NG_CCS,DRI_NG_CCS,0.73,0.73
+DRI_coal_CCS,DRI_coal_CCS,DRI_coal_CCS,0.86,0.86
+DRI_BECCS,DRI_BECCS,DRI_BECCS,0.73,0.73
+DRI_SAF_BECCS,DRI_SAF_BECCS,DRI_SAF_BECCS,0.73,0.73

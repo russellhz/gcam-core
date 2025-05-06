@@ -23,6 +23,7 @@ module_energy_iron_steel_new_xml <- function(command, ...) {
                      "L23231.GlobalTechTrackCapital_iron",
                      "L23231.GlobalTechSCurve_en",
                      "L23231.GlobalTechProfitShutdown_en",
+                     "L23231.GlobalTechCapture_iron",
                      "L23231.StubTechCost_iron",
                      "L23231.StubTechProd_iron",
                      "L23231.StubTechCoef_iron",
@@ -83,6 +84,7 @@ module_energy_iron_steel_new_xml <- function(command, ...) {
       add_xml_data(L23231.GlobalTechCost_iron, "GlobalTechCost") %>%
       add_xml_data(L23231.GlobalTechSCurve_en, "GlobalTechSCurve") %>%
       add_xml_data(L23231.GlobalTechProfitShutdown_en, "GlobalTechProfitShutdown") %>%
+      add_xml_data(L23231.GlobalTechCapture_iron, "GlobalTechCapture") %>%
       add_xml_data(L23231.StubTechCost_iron, "StubTechCost") %>%
       add_xml_data(L23231.StubTechProd_iron, "StubTechProd") %>%
       add_xml_data(L23231.StubTechCoef_iron, "StubTechCoef") %>%

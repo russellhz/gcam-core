@@ -60,6 +60,8 @@ module_energy_L2381.iron_steel_trade_bilateral <- function(command, ...) {
       NetExp_bm3 <- value <- metric <- flow <- GrossExp <- NULL # silence package check notes
 
     # Load required inputs  ---------------------
+    DRI_EXPORT_REGIONS <- c("Australia_NZ", "Brazil", "Canada", "India", "South Africa")
+
     get_data_list(all_data, MODULE_INPUTS)
     GCAM_region_names_EU <- GCAM_region_names %>%
       semi_join(A_irnstl_regions %>%  filter(sector == "EU"), by = "region")
@@ -91,7 +93,7 @@ module_energy_L2381.iron_steel_trade_bilateral <- function(command, ...) {
                                                    has_traded = TRUE) %>% mutate(region = gcam.USA_REGION)
     L2381.SubsectorAll_tra_DRI <- write_to_all_regions(filter(A_irnstl_TradedSubsector_bilateral, grepl("DRI", supplysector)),
                                                          c(LEVEL2_DATA_NAMES[["SubsectorAllTo"]], "logit.type"),
-                                                         GCAM_region_names,
+                                                         GCAM_region_names %>% filter(region %in% DRI_EXPORT_REGIONS),
                                                          has_traded = TRUE) %>% mutate(region = gcam.USA_REGION)
     L2381.SubsectorAll_tra <- bind_rows(L2381.SubsectorAll_tra_EU, L2381.SubsectorAll_tra_nonEU, L2381.SubsectorAll_tra_DRI)
 
@@ -224,7 +226,9 @@ module_energy_L2381.iron_steel_trade_bilateral <- function(command, ...) {
       filter(grepl("domestic", subsector)) %>%
       select(region, supplysector, subsector, technology, minicam.energy.input, year) %>%
       left_join(L2381.TechShrwt_regional, by = c("region", "year", "minicam.energy.input" = "technology")) %>%
-      mutate(share.weight = if_else(is.na(share.weight) & minicam.energy.input == "DRI_H2", 1, share.weight)) %>%
+      mutate(share.weight = if_else(is.na(share.weight) & minicam.energy.input == "DRI_H2" & region %in% c("EU-12", "EU-15"),
+                                    1, share.weight)) %>%
+      replace_na(list(share.weight = 0))
       bind_rows(A_irnstl_RegionalTechnology_bilateral_R_Y %>%
                    filter(!grepl("domestic", subsector))) %>%
       select(LEVEL2_DATA_NAMES[["TechShrwt"]])

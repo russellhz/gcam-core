@@ -10,7 +10,7 @@
 # Column types: ccccicnnni,,,,,,,,,
 # ----------,,,,,,,,,
 supplysector,subsector,technology,year,lifetime,shutdown.rate,half.life,steepness,median.shutdown.point,profit.shutdown.steepness
-BOF,BOF,BOF,final-calibration-year,25,,12.5,0.3,-0.5,6
-EAF,EAF,EAF,final-calibration-year,25,,12.5,0.3,-0.5,6
-BOF,BOF,BOF,initial-future-year,25,,12.5,0.3,-0.5,6
-EAF,EAF,EAF,initial-future-year,25,,12.5,0.3,-0.5,6
+BOF,BOF,BOF,final-calibration-year,50,,25,0.3,-0.5,6
+EAF,EAF,EAF,final-calibration-year,50,,25,0.3,-0.5,6
+BOF,BOF,BOF,initial-future-year,50,,25,0.3,-0.5,6
+EAF,EAF,EAF,initial-future-year,50,,25,0.3,-0.5,6

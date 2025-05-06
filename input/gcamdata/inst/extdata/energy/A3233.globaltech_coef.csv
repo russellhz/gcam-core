@@ -19,7 +19,7 @@ DRI_EAF_coal_CCS,DRI_EAF_coal_CCS,DRI_EAF_coal_CCS,DRI_coal_CCS,1,1
 DRI_EAF_BECCS,DRI_EAF_BECCS,DRI_EAF_BECCS,DRI_BECCS,1,1
 DRI_EAF_H2,DRI_EAF_H2,DRI_EAF_H2,regional DRI_H2,1,1
 DRI_SAF_BOF_NG,DRI_SAF_BOF_NG,DRI_SAF_BOF_NG,DRI_SAF_NG,1,1
-DRI_SAF_BOF_H2,DRI_SAF_BOF_H2,DRI_SAF_BOF_H2,DRI_SAF_H2,1,1
+DRI_SAF_BOF_H2,DRI_SAF_BOF_H2,DRI_SAF_BOF_H2,regional DRI_H2,1,1
 DRI_SAF_BOF_BECCS,DRI_SAF_BOF_BECCS,DRI_SAF_BOF_BECCS,DRI_SAF_BECCS,1,1
 AEL_EAF,AEL_EAF,AEL_EAF,AEL,1,1
 MOE,MOE,MOE,MOE_iron,1,1
@@ -48,3 +48,4 @@ EAF_scrap_fossil_NG_finish,EAF_scrap_fossil_NG_finish,EAF_scrap_fossil_NG_finish
 EAF_scrap_bio_NG_finish,EAF_scrap_bio_NG_finish,EAF_scrap_bio_NG_finish,EAF,1,1
 EAF_scrap_fossil_elec_finish,EAF_scrap_fossil_elec_finish,EAF_scrap_fossil_elec_finish,EAF,1,1
 EAF_scrap_bio_elec_finish,EAF_scrap_bio_elec_finish,EAF_scrap_bio_elec_finish,EAF,1,1
+DRI_SAF_BOF_H2,DRI_SAF_BOF_H2,DRI_SAF_BOF_H2,delivered biomass industry,0.001549519,0.001549519

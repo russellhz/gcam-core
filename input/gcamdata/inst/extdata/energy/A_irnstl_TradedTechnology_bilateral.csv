@@ -49,5 +49,5 @@ traded med-carbon iron and steel_EU,traded med-carbon iron and steel_EU,DRI_SAF_
 traded med-carbon iron and steel_EU,traded med-carbon iron and steel_EU,BF_BOF_CCS_73%,BF_BOF_CCS_73%,1,0,1,1
 traded high-carbon iron and steel_EU,traded high-carbon iron and steel_EU,BF_BOF,BF_BOF,1,0,1,1
 traded high-carbon iron and steel_EU,traded high-carbon iron and steel_EU,SR_BOF,SR_BOF,1,0,1,1
-traded high-carbon iron and steel_EU,traded high-carbon iron and steel_EU,DRI_EAF_coal,DRI_EAF_coal,1,0,1,1
-traded DRI_H2,traded DRI_H2,DRI_H2,DRI_H2,1,0,1,1
+traded high-carbon iron and steel_EU,traded high-carbon iron and steel_EU,DRI_EAF_coal,DRI_EAF_coal,1,0.00265,1,1
+traded DRI_H2,traded DRI_H2,DRI_H2,DRI_H2,1,0.00265,1,1

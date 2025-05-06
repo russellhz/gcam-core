@@ -26,6 +26,7 @@ module_energy_L23231.iron <- function(command, ...) {
                      FILE = "energy/A3231.globaltech_cost",
                      FILE = "energy/A3231.globaltech_shrwt",
                      FILE = "energy/A3231.globaltech_retirement",
+                     FILE = "energy/A3231.globaltech_co2capture",
                      FILE = "energy/A3232.globaltech_coef",
                      FILE = "energy/A3232.globaltech_cost",
                      "L2323.StubTechProd_iron_steel",
@@ -46,6 +47,7 @@ module_energy_L23231.iron <- function(command, ...) {
                       "L23231.GlobalTechSCurve_en",
                       "L23231.GlobalTechLifetime_en",
                       "L23231.GlobalTechProfitShutdown_en",
+                      "L23231.GlobalTechCapture_iron",
                       "L23231.StubTechProd_iron",
                       "L23231.StubTechCoef_iron",
                       "L23231.StubTechCost_iron",
@@ -131,6 +133,24 @@ module_energy_L23231.iron <- function(command, ...) {
              subsector.name = subsector) %>%
       select(LEVEL2_DATA_NAMES[["GlobalTechCoef"]]) ->
       L23231.GlobalTechCoef_iron
+
+    # Carbon capture rates from technologies with CCS
+    # L23231.GlobalTechCapture_iron: CO2 capture fractions from global iron_steel production technologies with CCS
+    # No need to consider historical periods or intermittent technologies here
+    A3231.globaltech_co2capture %>%
+      gather_years %>%
+      complete(nesting(supplysector, subsector, technology), year = c(year, MODEL_FUTURE_YEARS)) %>%
+      arrange(supplysector, subsector, technology, year) %>%
+      group_by(supplysector, subsector, technology) %>%
+      mutate(remove.fraction = approx_fun(year, value, rule = 1),
+             remove.fraction = round(remove.fraction, energy.DIGITS_REMOVE.FRACTION)) %>%
+      ungroup %>%
+      filter(year %in% MODEL_FUTURE_YEARS) %>%
+      rename(sector.name = supplysector,
+             subsector.name = subsector) %>%
+      select(LEVEL2_DATA_NAMES[["GlobalTechYr"]], "remove.fraction") %>%
+      mutate(storage.market = energy.CO2.STORAGE.MARKET) ->
+      L23231.GlobalTechCapture_iron
 
     # Retirement information
     A3231.globaltech_retirement %>%
@@ -402,13 +422,7 @@ module_energy_L23231.iron <- function(command, ...) {
       add_precursors("energy/calibrated_techs", "L1323.IO_GJkg_R_iron_F_Yh", "common/GCAM_region_names") ->
       L23231.StubTechCoef_iron
 
-    return_data(L23231.Supplysector_iron, L23231.FinalEnergyKeyword_iron, L23231.SubsectorLogit_iron,
-                L23231.SubsectorShrwtFllt_iron,L23231.SubsectorInterp_iron,
-                L23231.StubTech_iron, L23231.GlobalTechShrwt_iron, L23231.GlobalTechCoef_iron,
-                L23231.GlobalTechTrackCapital_iron, L23231.GlobalTechCost_iron, L23231.GlobalTechShutdown_en,
-                L23231.GlobalTechSCurve_en, L23231.GlobalTechLifetime_en, L23231.GlobalTechProfitShutdown_en,
-                L23231.StubTechProd_iron, L23231.StubTechCoef_iron, L23231.StubTechCost_iron, L23231.StubTechShrwt_iron
-                )
+    return_data(MODULE_OUTPUTS)
   } else {
     stop("Unknown command")
   }
