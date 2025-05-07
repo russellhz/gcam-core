@@ -1,29 +1,18 @@
-# File: A3231.globaltech_cost.csv,,,,,,,,
-# Title: IRONSTL default costs,,,,,,,,
-# Source: OPEX and CAPEX and material costs from Wuppertal Institute data,,,,,,,,
-# Units: 1975$/kg for supplysector IRONSTL,,,,,,,,
-# Column types: ccccnnnnn,,,,,,,,
-# ----------,,,,,,,,
-supplysector,subsector,technology,minicam.non.energy.input,1971,2020,2030,2050,2100
-BF_coal,BF_coal,BF_coal,non-energy,0.050094218,0.050094218,0.05067724,0.052691315,0.052691315
-BF_BECCSmin,BF_BECCSmin,BF_BECCSmin,non-energy,0.073945104,0.073945104,0.075376157,0.077390232,0.077390232
-BF_BECCSmax,BF_BECCSmax,BF_BECCSmax,non-energy,0.073945104,0.073945104,0.075111148,0.076833712,0.076833712
-BF_CCS_73%,BF_CCS_73%,BF_CCS_73%,non-energy,0.07195753,0.07195753,0.073123574,0.074846138,0.074846138
-BF_CCS_86%,BF_CCS_86%,BF_CCS_86%,non-energy,0.08487676,0.08487676,0.086307814,0.088321888,0.088321888
-DRI_BECCS,DRI_BECCS,DRI_BECCS,non-energy,0.078291266,0.078291266,0.114094096,0.114942127,0.114942127
-DRI_coal,DRI_coal,DRI_coal,non-energy,0.106117299,0.106117299,0.107839863,0.111284991,0.111284991
-DRI_coal_CCS,DRI_coal_CCS,DRI_coal_CCS,non-energy,0.111417496,0.111417496,0.113431571,0.116876699,0.116876699
-DRI_H2,DRI_H2,DRI_H2,non-energy,0.077628741,0.077628741,0.108979406,0.109853938,0.109853938
-DRI_NG,DRI_NG,DRI_NG,non-energy,0.106117299,0.106117299,0.107839863,0.111284991,0.111284991
-DRI_NG_CCS,DRI_NG_CCS,DRI_NG_CCS,non-energy,0.108104873,0.108104873,0.110118948,0.113564076,0.113564076
-scrap_bio_elec_finish,scrap_bio_elec_finish,scrap_bio_elec_finish,non-energy,0.068273894,0.068273894,0.069996458,0.069996458,0.069996458
-scrap_bio_NG_finish,scrap_bio_NG_finish,scrap_bio_NG_finish,non-energy,0.068273894,0.068273894,0.069996458,0.069996458,0.069996458
-scrap_fossil_elec_finish,scrap_fossil_elec_finish,scrap_fossil_elec_finish,non-energy,0.068273894,0.068273894,0.069996458,0.069996458,0.069996458
-scrap_fossil_NG_finish,scrap_fossil_NG_finish,scrap_fossil_NG_finish,non-energy,0.068273894,0.068273894,0.069996458,0.069996458,0.069996458
-AEL,AEL,AEL,non-energy,0.08837489,0.08837489,0.101598882,0.101598882,0.101598882
-MOE_iron,MOE_iron,MOE_iron,non-energy,0.127443234,0.127443234,0.127443234,0.127443234,0.127443234
-DRI_SAF_BECCS,DRI_SAF_BECCS,DRI_SAF_BECCS,non-energy,0.11205352,0.11205352,0.114942127,0.11608167,0.11608167
-DRI_SAF_H2,DRI_SAF_H2,DRI_SAF_H2,non-energy,0.106355808,0.106355808,0.110383958,0.11125849,0.11125849
-DRI_SAF_NG,DRI_SAF_NG,DRI_SAF_NG,non-energy,0.108078372,0.108078372,0.109244416,0.110092447,0.110092447
-SmeltRed,SmeltRed,SmeltRed,non-energy,0.088056879,0.088056879,0.080437846,0.069174927,0.069174927
-SmeltRed_CCS,SmeltRed_CCS,SmeltRed_CCS,non-energy,0.087725616,0.087725616,0.087725616,0.075800173,0.075800173
+# File: A3231.globaltech_cost.csv,,,,,,,,,,,,
+# Title: IRONSTL default costs,,,,,,,,,,,,
+# Source: OPEX and CAPEX and material costs from Wuppertal Institute data,,,,,,,,,,,,
+# Units: 1975$/kg for supplysector IRONSTL,,,,,,,,,,,,
+# Column types: ccccnnnnn,,,,,,,,,,,,
+# ----------,,,,,,,,,,,,
+supplysector,subsector,technology,minicam.non.energy.input,1971,2020,2030,2050,2100,,,,
+BF_coal,BF_coal,BF_coal,non-energy,0.090,0.090,0.091,0.092,0.092,,,,
+BF_CCS_73%,BF_CCS_73%,BF_CCS_73%,non-energy,0.105,0.105,0.105,0.106,0.106,,,,
+BF_CCS_86%,BF_CCS_86%,BF_CCS_86%,non-energy,0.106,0.106,0.106,0.107,0.107,,,,
+BF_BECCSmin,BF_BECCSmin,BF_BECCSmin,non-energy,0.106,0.106,0.106,0.108,0.108,,,,
+BF_BECCSmax,BF_BECCSmax,BF_BECCSmax,non-energy,0.106,0.106,0.106,0.108,0.108,,,,
+DRI_NG,DRI_NG,DRI_NG,non-energy,0.100,0.100,0.102,0.105,0.105,,,,
+DRI_NG_CCS,DRI_NG_CCS,DRI_NG_CCS,non-energy,0.102,0.102,0.103,0.106,0.106,,,,
+DRI_coal,DRI_coal,DRI_coal,non-energy,0.100,0.100,0.102,0.105,0.105,,,,
+DRI_coal_CCS,DRI_coal_CCS,DRI_coal_CCS,non-energy,0.104,0.104,0.105,0.108,0.108,,,,
+DRI_BECCS,DRI_BECCS,DRI_BECCS,non-energy,0.104,0.104,0.106,0.106,0.106,,,,
+DRI_H2,DRI_H2,DRI_H2,non-energy,0.100,0.100,0.102,0.102,0.102,,,,
