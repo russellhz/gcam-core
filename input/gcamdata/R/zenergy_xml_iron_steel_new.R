@@ -11,6 +11,19 @@
 #' the generated outputs: \code{iron_steel_new.xml}. The corresponding file in the
 #' original data system was \code{batch_iron_steel_new_xml.R} (energy XML).
 module_energy_iron_steel_new_xml <- function(command, ...) {
+  # Some techs aren't split between iron and steel
+  # for these techs, we want to keep the old data, but remove iron and steel techs
+  FULL_IRON_STEEL_TECHS <- c("L2323.GlobalTechCoef_iron_steel",
+                             "L2323.GlobalTechCost_iron_steel",
+                             "L2323.GlobalTechTrackCapital_iron_steel",
+                             "L2323.GlobalTechCapture_iron_steel",
+                             "L2323.GlobalTechShutdown_en",
+                             "L2323.GlobalTechSCurve_en",
+                             "L2323.GlobalTechLifetime_en",
+                             "L2323.GlobalTechProfitShutdown_en",
+                             "L2323.StubTechCoef_iron_steel",
+                             "L2323.StubTechCost_iron_steel")
+
   MODULE_INPUTS <- c("L23231.Supplysector_iron",
                      "L23231.FinalEnergyKeyword_iron",
                      "L23231.SubsectorLogit_iron",
@@ -27,6 +40,7 @@ module_energy_iron_steel_new_xml <- function(command, ...) {
                      "L23231.StubTechCost_iron",
                      "L23231.StubTechProd_iron",
                      "L23231.StubTechCoef_iron",
+                     "L23231.StubTechCoef_steel",
                      "L23231.StubTechShrwt_iron",
 
                      "L23232.Supplysector_steel",
@@ -42,7 +56,6 @@ module_energy_iron_steel_new_xml <- function(command, ...) {
                      "L23232.GlobalTechSCurve_en",
                      "L23232.GlobalTechProfitShutdown_en",
                      "L23232.StubTechProd_steel",
-                     "L23232.StubTechShrwt_steel",
 
                      "L2323.Supplysector_iron_steel",
                      "L2323.FinalEnergyKeyword_iron_steel",
@@ -56,7 +69,20 @@ module_energy_iron_steel_new_xml <- function(command, ...) {
                      "L2323.StubTechProd_iron_steel",
                      "L2323.PerCapitaBased_iron_steel",
                      "L2323.BaseService_iron_steel",
-                     "L2323.PriceElasticity_iron_steel")
+                     "L2323.PriceElasticity_iron_steel",
+
+                     "L2323.GlobalTechCoef_iron_steel",
+                     "L2323.GlobalTechCost_iron_steel",
+                     "L2323.GlobalTechTrackCapital_iron_steel",
+                     "L2323.GlobalTechCapture_iron_steel",
+                     "L2323.GlobalTechShutdown_en",
+                     "L2323.GlobalTechSCurve_en",
+                     "L2323.GlobalTechLifetime_en",
+                     "L2323.GlobalTechProfitShutdown_en",
+                     "L2323.StubTechCoef_iron_steel",
+                     "L2323.StubTechCost_iron_steel",
+
+                     FULL_IRON_STEEL_TECHS)
   if(command == driver.DECLARE_INPUTS) {
     return(MODULE_INPUTS)
   } else if(command == driver.DECLARE_OUTPUTS) {
@@ -67,6 +93,38 @@ module_energy_iron_steel_new_xml <- function(command, ...) {
 
     # Load required inputs
     get_data_list(all_data, MODULE_INPUTS, strip_attributes = T)
+
+    SPLIT_TECHS <- L23233.GlobalTechCoef_iron_steel_new %>% distinct(sector.name) %>%  pull()
+
+    # function to remove SPLIT_TECHS from FULL_IRON_STEEL_TECHS objects
+    filter_sector_names_str <- function(tbl_name_str) {
+      # Get the actual object
+      tbl <- get(tbl_name_str, envir = parent.frame())
+
+      if(is.null(tbl)){
+        assign(tbl_name_str, tbl, envir = parent.frame())
+        return(invisible(NULL))
+      }
+
+      # Check for valid column to filter on
+      filter_col <- intersect(c("sector.name", "supplysector"), colnames(tbl))
+
+      if (length(filter_col) == 1) {
+        # Filter the table
+        tbl_filtered <- tbl %>%
+          dplyr::filter(!.data[[filter_col]] %in% SPLIT_TECHS)
+
+        # Assign back to original name in calling environment
+        assign(tbl_name_str, tbl_filtered, envir = parent.frame())
+      } else {
+        warning(paste("Neither 'sector.name' nor 'supplysector' found in", tbl_name_str))
+      }
+    }
+
+    for (name in FULL_IRON_STEEL_TECHS) {
+      filter_sector_names_str(name)
+    }
+
     # ===================================================
 
     # Produce outputs
@@ -88,6 +146,7 @@ module_energy_iron_steel_new_xml <- function(command, ...) {
       add_xml_data(L23231.StubTechCost_iron, "StubTechCost") %>%
       add_xml_data(L23231.StubTechProd_iron, "StubTechProd") %>%
       add_xml_data(L23231.StubTechCoef_iron, "StubTechCoef") %>%
+      add_xml_data(L23231.StubTechCoef_steel, "StubTechCoef") %>%
       add_xml_data(L23231.StubTechShrwt_iron, "StubTechShrwt") %>%
 
       add_logit_tables_xml(L23232.Supplysector_steel, "Supplysector") %>%
@@ -104,7 +163,6 @@ module_energy_iron_steel_new_xml <- function(command, ...) {
       add_xml_data(L23232.GlobalTechSCurve_en, "GlobalTechSCurve") %>%
       add_xml_data(L23232.GlobalTechProfitShutdown_en, "GlobalTechProfitShutdown") %>%
       add_xml_data(L23232.StubTechProd_steel, "StubTechProd") %>%
-      add_xml_data(L23232.StubTechShrwt_steel, "StubTechShrwt") %>%
 
       add_logit_tables_xml(L2323.Supplysector_iron_steel, "Supplysector") %>%
       add_xml_data(L2323.FinalEnergyKeyword_iron_steel, "FinalEnergyKeyword") %>%
@@ -120,6 +178,18 @@ module_energy_iron_steel_new_xml <- function(command, ...) {
       add_xml_data(L2323.PerCapitaBased_iron_steel, "PerCapitaBased") %>%
       add_xml_data(L2323.BaseService_iron_steel, "BaseService") %>%
       add_xml_data(L2323.PriceElasticity_iron_steel, "PriceElasticity") %>%
+
+      # add_node_equiv_xml("input") %>%
+      add_xml_data(L2323.GlobalTechCoef_iron_steel, "GlobalTechCoef") %>%
+      add_xml_data(L2323.GlobalTechTrackCapital_iron_steel, "GlobalTechTrackCapital") %>%
+      add_xml_data(L2323.GlobalTechCost_iron_steel, "GlobalTechCost") %>%
+      add_xml_data(L2323.GlobalTechCapture_iron_steel, "GlobalTechCapture") %>%
+      add_xml_data(L2323.GlobalTechSCurve_en, "GlobalTechSCurve") %>%
+      add_xml_data(L2323.GlobalTechProfitShutdown_en, "GlobalTechProfitShutdown") %>%
+      # Don't want any stub tech costs
+      add_xml_data(L2323.StubTechCost_iron_steel, "StubTechCost") %>%
+      add_xml_data(L2323.StubTechCoef_iron_steel, "StubTechCoef") %>%
+
       add_precursors(MODULE_INPUTS) ->
       iron_steel_new.xml
     return_data(iron_steel_new.xml)

@@ -1,39 +1,39 @@
-# File: A3231.globaltech_coef.csv,,,,,,,,,
-# Title: IRONSTL production default coefficients,,,,,,,,,
-# Units: scrap input is unitless (Mt scrap per Mt IRONSTL); all others are GJ per kg (EJ of energy per Mt of IRONSTL),,,,,,,,,
-# Comments: charcoal_prop is the proportion of bioenergy that comes from charcoal,,,,,,,,,
-# Column types: ccccnnnn,,,,,,,,,
-# ----------,,,,,,,,,
-supplysector,subsector,technology,minicam.energy.input,charcoal_prop,1971,2010,2100,,
-BF_coal,BF_coal,BF_coal,elect_td_ind,,0,0,0,,
-BF_coal,BF_coal,BF_coal,delivered coal industry,,0.021145411,0.021145411,0.021145411,,
-BF_coal,BF_coal,BF_coal,wholesale gas,,0,0,0,,
-BF_CCS_73%,BF_CCS_73%,BF_CCS_73%,elect_td_ind,,0.00278,0.00278,0.00278,,
-BF_CCS_73%,BF_CCS_73%,BF_CCS_73%,delivered coal industry,,0.021145411,0.021145411,0.021145411,,
-BF_CCS_86%,BF_CCS_86%,BF_CCS_86%,elect_td_ind,,0.00343,0.00343,0.00343,,
-BF_CCS_86%,BF_CCS_86%,BF_CCS_86%,delivered coal industry,,0.021145411,0.021145411,0.021145411,,
-BF_BECCSmin,BF_BECCSmin,BF_BECCSmin,elect_td_ind,,0.00279,0.00279,0.00279,,
-BF_BECCSmin,BF_BECCSmin,BF_BECCSmin,wholesale gas,,0.00058,0.00058,0.00058,,
-BF_BECCSmin,BF_BECCSmin,BF_BECCSmin,delivered coal industry,,0.014109881,0.014109881,0.014109881,,
-BF_BECCSmin,BF_BECCSmin,BF_BECCSmin,delivered biomass industry,1,0.006457984,0.006457984,0.006457984,,
-BF_BECCSmax,BF_BECCSmax,BF_BECCSmax,elect_td_ind,,0.0028,0.0028,0.0028,,
-BF_BECCSmax,BF_BECCSmax,BF_BECCSmax,wholesale gas,,0.00058,0.00058,0.00058,,
-BF_BECCSmax,BF_BECCSmax,BF_BECCSmax,delivered coal industry,,0.012959383,0.012959383,0.012959383,,
-BF_BECCSmax,BF_BECCSmax,BF_BECCSmax,delivered biomass industry,1,0.007619336,0.007619336,0.007619336,,
-DRI_NG,DRI_NG,DRI_NG,elect_td_ind,,0.00019,0.00019,0.00019,,
-DRI_NG,DRI_NG,DRI_NG,wholesale gas,,0.01052,0.01052,0.01052,,
-DRI_NG,DRI_NG,DRI_NG,delivered coal industry,,0.00E+00,0.00E+00,0.00E+00,,
-DRI_NG_CCS,DRI_NG_CCS,DRI_NG_CCS,elect_td_ind,,0.0008,0.0008,0.0008,,
-DRI_NG_CCS,DRI_NG_CCS,DRI_NG_CCS,wholesale gas,,0.01052,0.01052,0.01052,,
-DRI_NG_CCS,DRI_NG_CCS,DRI_NG_CCS,delivered coal industry,,0.00E+00,0.00E+00,0.00E+00,,
-DRI_coal,DRI_coal,DRI_coal,elect_td_ind,,0.00239,0.00239,0.00239,,
-DRI_coal,DRI_coal,DRI_coal,wholesale gas,,0,0,0,,
-DRI_coal,DRI_coal,DRI_coal,delivered coal industry,,0.01982,0.01982,0.01982,,
-DRI_coal_CCS,DRI_coal_CCS,DRI_coal_CCS,elect_td_ind,,0.00736,0.00736,0.00736,,
-DRI_coal_CCS,DRI_coal_CCS,DRI_coal_CCS,wholesale gas,,0,0,0,,
-DRI_coal_CCS,DRI_coal_CCS,DRI_coal_CCS,delivered coal industry,,0.01982,0.01982,0.01982,,
-DRI_BECCS,DRI_BECCS,DRI_BECCS,elect_td_ind,,0.00119,0.00119,0.00119,,
-DRI_BECCS,DRI_BECCS,DRI_BECCS,delivered biomass industry,0,0.01288,0.01288,0.01288,,
-DRI_H2,DRI_H2,DRI_H2,elect_td_ind,,0.00015,0.00015,0.00015,,
-DRI_H2,DRI_H2,DRI_H2,H2 industrial,,0.00829,0.00829,0.00829,,
-DRI_H2,DRI_H2,DRI_H2,delivered biomass industry,0,0.00E+00,0.00E+00,0.00E+00,,
+# File: A3231.globaltech_coef.csv,,,,,,,
+# Title: IRONSTL production default coefficients,,,,,,,
+# Units: scrap input is unitless (Mt scrap per Mt IRONSTL); all others are GJ per kg (EJ of energy per Mt of IRONSTL),,,,,,,
+# Comments: charcoal_prop is the proportion of bioenergy that comes from charcoal,,,,,,,
+# Column types: ccccnnnn,,,,,,,
+# ----------,,,,,,,
+supplysector,subsector,technology,minicam.energy.input,charcoal_prop,1971,2010,2100
+BF_coal,BF_coal,BF_coal,elect_td_ind,,0,0,0
+BF_coal,BF_coal,BF_coal,delivered coal industry,,0.021145411,0.021145411,0.021145411
+BF_coal,BF_coal,BF_coal,wholesale gas,,0,0,0
+BF_CCS_73%,BF_CCS_73%,BF_CCS_73%,elect_td_ind,,0.00278,0.00278,0.00278
+BF_CCS_73%,BF_CCS_73%,BF_CCS_73%,delivered coal industry,,0.021145411,0.021145411,0.021145411
+BF_CCS_86%,BF_CCS_86%,BF_CCS_86%,elect_td_ind,,0.00343,0.00343,0.00343
+BF_CCS_86%,BF_CCS_86%,BF_CCS_86%,delivered coal industry,,0.021145411,0.021145411,0.021145411
+BF_BECCSmin,BF_BECCSmin,BF_BECCSmin,elect_td_ind,,0.00279,0.00279,0.00279
+BF_BECCSmin,BF_BECCSmin,BF_BECCSmin,wholesale gas,,0.00058,0.00058,0.00058
+BF_BECCSmin,BF_BECCSmin,BF_BECCSmin,delivered coal industry,,0.014109881,0.014109881,0.014109881
+BF_BECCSmin,BF_BECCSmin,BF_BECCSmin,delivered biomass industry,1,0.006457984,0.006457984,0.006457984
+BF_BECCSmax,BF_BECCSmax,BF_BECCSmax,elect_td_ind,,0.0028,0.0028,0.0028
+BF_BECCSmax,BF_BECCSmax,BF_BECCSmax,wholesale gas,,0.00058,0.00058,0.00058
+BF_BECCSmax,BF_BECCSmax,BF_BECCSmax,delivered coal industry,,0.012959383,0.012959383,0.012959383
+BF_BECCSmax,BF_BECCSmax,BF_BECCSmax,delivered biomass industry,1,0.007619336,0.007619336,0.007619336
+DRI_NG,DRI_NG,DRI_NG,elect_td_ind,,0.00019,0.00019,0.00019
+DRI_NG,DRI_NG,DRI_NG,wholesale gas,,0.01052,0.01052,0.01052
+DRI_NG,DRI_NG,DRI_NG,delivered coal industry,,0.00E+00,0.00E+00,0.00E+00
+DRI_NG_CCS,DRI_NG_CCS,DRI_NG_CCS,elect_td_ind,,0.0008,0.0008,0.0008
+DRI_NG_CCS,DRI_NG_CCS,DRI_NG_CCS,wholesale gas,,0.01052,0.01052,0.01052
+DRI_NG_CCS,DRI_NG_CCS,DRI_NG_CCS,delivered coal industry,,0.00E+00,0.00E+00,0.00E+00
+DRI_coal,DRI_coal,DRI_coal,elect_td_ind,,0.00239,0.00239,0.00239
+DRI_coal,DRI_coal,DRI_coal,wholesale gas,,0,0,0
+DRI_coal,DRI_coal,DRI_coal,delivered coal industry,,0.01982,0.01982,0.01982
+DRI_coal_CCS,DRI_coal_CCS,DRI_coal_CCS,elect_td_ind,,0.00736,0.00736,0.00736
+DRI_coal_CCS,DRI_coal_CCS,DRI_coal_CCS,wholesale gas,,0,0,0
+DRI_coal_CCS,DRI_coal_CCS,DRI_coal_CCS,delivered coal industry,,0.01982,0.01982,0.01982
+DRI_BECCS,DRI_BECCS,DRI_BECCS,elect_td_ind,,0.00119,0.00119,0.00119
+DRI_BECCS,DRI_BECCS,DRI_BECCS,delivered biomass industry,0,0.01288,0.01288,0.01288
+DRI_H2,DRI_H2,DRI_H2,elect_td_ind,,0.00015,0.00015,0.00015
+DRI_H2,DRI_H2,DRI_H2,H2 industrial,,0.00829,0.00829,0.00829
+DRI_H2,DRI_H2,DRI_H2,delivered biomass industry,0,0.00E+00,0.00E+00,0.00E+00

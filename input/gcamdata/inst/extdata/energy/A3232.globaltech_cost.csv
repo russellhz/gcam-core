@@ -5,5 +5,10 @@
 # Column types: ccccnnnnn,,,,,,,,
 # ----------,,,,,,,,
 supplysector,subsector,technology,minicam.non.energy.input,1971,2020,2030,2050,2100
-BOF,BOF,BOF,non-energy,0.05,0.05,0.05,0.05,0.05
-EAF,EAF,EAF,non-energy,0.05,0.05,0.05,0.05,0.05
+EAF_coal_NG,EAF_coal_NG,EAF_coal_NG,non-energy,0.040071879,0.040071879,0.040269707,0.040566451,0.040566451
+EAF_charcoal_H2,EAF_charcoal_H2,EAF_charcoal_H2,non-energy,0.040071879,0.040071879,0.040269707,0.040566451,0.040566451
+EAF_charcoal_elec,EAF_charcoal_elec,EAF_charcoal_elec,non-energy,0.040071879,0.040071879,0.040269707,0.040566451,0.040566451
+Smelter_NG,Smelter_NG,Smelter_NG,non-energy,0.01957979,0.01957979,0.019004519,0.016415803,0.016415803
+Smelter_H2,Smelter_H2,Smelter_H2,non-energy,0.016721798,0.016721798,0.019004519,0.019004519,0.019004519
+Smelter_Electric,Smelter_Electric,Smelter_Electric,non-energy,0.016721798,0.016721798,0.019004519,0.019004519,0.019004519
+BOF,BOF,BOF,non-energy,0.018880867,0.018880867,0.019064041,0.019338803,0.019338803

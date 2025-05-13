@@ -4,5 +4,10 @@
 # Column types: ccic ,,,
 # ----------,,,
 supplysector,subsector,logit.exponent,logit.type
-BOF,BOF,-6,
-EAF,EAF,-6,
+EAF_coal_NG,EAF_coal_NG,-6,
+EAF_charcoal_H2,EAF_charcoal_H2,-6,
+EAF_charcoal_elec,EAF_charcoal_elec,,
+Smelter_NG,Smelter_NG,,
+Smelter_H2,Smelter_H2,,
+Smelter_Electric,Smelter_Electric,,
+BOF,BOF,,

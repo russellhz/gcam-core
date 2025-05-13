@@ -5,5 +5,20 @@
 # Column types: ccccnnnn,,,,,,,
 # ----------,,,,,,,
 supplysector,subsector,technology,minicam.energy.input,charcoal_prop,1971,2010,2100
-BOF,BOF,BOF,elect_td_ind,,0.000473,0.000473,0.000473
-EAF,EAF,EAF,elect_td_ind,,0.002046731,0.002046731,0.002046731
+EAF_coal_NG,EAF_coal_NG,EAF_coal_NG,elect_td_ind,,0.001844536,0.001844536,0.001844536
+EAF_coal_NG,EAF_coal_NG,EAF_coal_NG,wholesale gas,,0.001911051,0.001911051,0.001911051
+EAF_coal_NG,EAF_coal_NG,EAF_coal_NG,delivered coal industry,,7.95607E-05,7.95607E-05,7.95607E-05
+EAF_charcoal_H2,EAF_charcoal_H2,EAF_charcoal_H2,elect_td_ind,,0.002546536,0.002546536,0.002546536
+EAF_charcoal_H2,EAF_charcoal_H2,EAF_charcoal_H2,H2 industrial,,0.00191,0.00191,0.00191
+EAF_charcoal_H2,EAF_charcoal_H2,EAF_charcoal_H2,delivered biomass industry,1,0.0005724,0.0005724,0.0005724
+EAF_charcoal_elec,EAF_charcoal_elec,EAF_charcoal_elec,elect_td_ind,,0.0043336,0.0043336,0.0043336
+EAF_charcoal_elec,EAF_charcoal_elec,EAF_charcoal_elec,delivered biomass industry,1,0.0005724,0.0005724,0.0005724
+Smelter_NG,Smelter_NG,Smelter_NG,elect_td_ind,,0.002307936,0.002307936,0.002307936
+Smelter_NG,Smelter_NG,Smelter_NG,wholesale gas,,0.001767051,0.001767051,0.001767051
+Smelter_NG,Smelter_NG,Smelter_NG,delivered coal industry,,0.000113,0.000113,0.000113
+Smelter_H2,Smelter_H2,Smelter_H2,elect_td_ind,,0.00184,0.00184,0.00184
+Smelter_H2,Smelter_H2,Smelter_H2,H2 industrial,,0.00177,0.00177,0.00177
+Smelter_H2,Smelter_H2,Smelter_H2,delivered biomass industry,1,0.001585,0.001585,0.001585
+Smelter_Electric,Smelter_Electric,Smelter_Electric,elect_td_ind,,0.0041,0.0041,0.0041
+Smelter_Electric,Smelter_Electric,Smelter_Electric,delivered biomass industry,1,0.00159,0.00159,0.00159
+BOF,BOF,BOF,elect_td_ind,,0.000702976,0.000702976,0.000702976

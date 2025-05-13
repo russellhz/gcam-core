@@ -4,5 +4,10 @@
 # Column types: cccnnnnnnnnn,,,,,,,,,,,
 # ----------,,,,,,,,,,,
 supplysector,subsector,technology,1971,2015,2020,2025,2030,2035,2040,2050,2100
+EAF_coal_NG,EAF_coal_NG,EAF_coal_NG,1,1,1,1,1,1,1,1,1
+EAF_charcoal_H2,EAF_charcoal_H2,EAF_charcoal_H2,1,1,1,1,1,1,1,1,1
+EAF_charcoal_elec,EAF_charcoal_elec,EAF_charcoal_elec,1,1,1,1,1,1,1,1,1
+Smelter_NG,Smelter_NG,Smelter_NG,1,1,1,1,1,1,1,1,1
+Smelter_H2,Smelter_H2,Smelter_H2,1,1,1,1,1,1,1,1,1
+Smelter_Electric,Smelter_Electric,Smelter_Electric,1,1,1,1,1,1,1,1,1
 BOF,BOF,BOF,1,1,1,1,1,1,1,1,1
-EAF,EAF,EAF,1,1,1,1,1,1,1,1,1

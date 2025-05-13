@@ -1,18 +1,18 @@
-# File: A3231.globaltech_cost.csv,,,,,,,,,,,,
-# Title: IRONSTL default costs,,,,,,,,,,,,
-# Source: OPEX and CAPEX and material costs from Wuppertal Institute data,,,,,,,,,,,,
-# Units: 1975$/kg for supplysector IRONSTL,,,,,,,,,,,,
-# Column types: ccccnnnnn,,,,,,,,,,,,
-# ----------,,,,,,,,,,,,
-supplysector,subsector,technology,minicam.non.energy.input,1971,2020,2030,2050,2100,,,,
-BF_coal,BF_coal,BF_coal,non-energy,0.090,0.090,0.091,0.092,0.092,,,,
-BF_CCS_73%,BF_CCS_73%,BF_CCS_73%,non-energy,0.105,0.105,0.105,0.106,0.106,,,,
-BF_CCS_86%,BF_CCS_86%,BF_CCS_86%,non-energy,0.106,0.106,0.106,0.107,0.107,,,,
-BF_BECCSmin,BF_BECCSmin,BF_BECCSmin,non-energy,0.106,0.106,0.106,0.108,0.108,,,,
-BF_BECCSmax,BF_BECCSmax,BF_BECCSmax,non-energy,0.106,0.106,0.106,0.108,0.108,,,,
-DRI_NG,DRI_NG,DRI_NG,non-energy,0.100,0.100,0.102,0.105,0.105,,,,
-DRI_NG_CCS,DRI_NG_CCS,DRI_NG_CCS,non-energy,0.102,0.102,0.103,0.106,0.106,,,,
-DRI_coal,DRI_coal,DRI_coal,non-energy,0.100,0.100,0.102,0.105,0.105,,,,
-DRI_coal_CCS,DRI_coal_CCS,DRI_coal_CCS,non-energy,0.104,0.104,0.105,0.108,0.108,,,,
-DRI_BECCS,DRI_BECCS,DRI_BECCS,non-energy,0.104,0.104,0.106,0.106,0.106,,,,
-DRI_H2,DRI_H2,DRI_H2,non-energy,0.100,0.100,0.102,0.102,0.102,,,,
+# File: A3231.globaltech_cost.csv,,,,,,,,
+# Title: IRONSTL default costs,,,,,,,,
+# Source: OPEX and CAPEX and material costs from Wuppertal Institute data,,,,,,,,
+# Units: 1975$/kg for supplysector IRONSTL,,,,,,,,
+# Column types: ccccnnnnn,,,,,,,,
+# ----------,,,,,,,,
+supplysector,subsector,technology,minicam.non.energy.input,1971,2020,2030,2050,2100
+BF_coal,BF_coal,BF_coal,non-energy,0.09,0.09,0.091,0.092,0.092
+BF_CCS_73%,BF_CCS_73%,BF_CCS_73%,non-energy,0.105,0.105,0.105,0.106,0.106
+BF_CCS_86%,BF_CCS_86%,BF_CCS_86%,non-energy,0.106,0.106,0.106,0.107,0.107
+BF_BECCSmin,BF_BECCSmin,BF_BECCSmin,non-energy,0.106,0.106,0.106,0.108,0.108
+BF_BECCSmax,BF_BECCSmax,BF_BECCSmax,non-energy,0.106,0.106,0.106,0.108,0.108
+DRI_NG,DRI_NG,DRI_NG,non-energy,0.1,0.1,0.102,0.105,0.105
+DRI_NG_CCS,DRI_NG_CCS,DRI_NG_CCS,non-energy,0.102,0.102,0.103,0.106,0.106
+DRI_coal,DRI_coal,DRI_coal,non-energy,0.1,0.1,0.102,0.105,0.105
+DRI_coal_CCS,DRI_coal_CCS,DRI_coal_CCS,non-energy,0.104,0.104,0.105,0.108,0.108
+DRI_BECCS,DRI_BECCS,DRI_BECCS,non-energy,0.104,0.104,0.106,0.106,0.106
+DRI_H2,DRI_H2,DRI_H2,non-energy,0.1,0.1,0.102,0.102,0.102

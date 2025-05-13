@@ -4,5 +4,10 @@
 # Column types: ccccicc,,,,,,
 # ----------,,,,,,
 supplysector,output.unit,input.unit,price.unit,logit.exponent,final.energy,logit.type
+EAF_coal_NG,Mt,EJ,1975$/kg,-3,industry,
+EAF_charcoal_H2,Mt,EJ,1975$/kg,-3,industry,
+EAF_charcoal_elec,Mt,EJ,1975$/kg,-3,industry,
+Smelter_NG,Mt,EJ,1975$/kg,-3,industry,
+Smelter_H2,Mt,EJ,1975$/kg,-3,industry,
+Smelter_Electric,Mt,EJ,1975$/kg,-3,industry,
 BOF,Mt,EJ,1975$/kg,-3,industry,
-EAF,Mt,EJ,1975$/kg,-3,industry,

@@ -4,5 +4,10 @@
 # Column types: ccccn,,,,
 # ----------,,,,
 supplysector,subsector,year.fillout,year,share.weight
+EAF_coal_NG,EAF_coal_NG,start-year,,1
+EAF_charcoal_H2,EAF_charcoal_H2,start-year,,1
+EAF_charcoal_elec,EAF_charcoal_elec,start-year,,1
+Smelter_NG,Smelter_NG,start-year,,1
+Smelter_H2,Smelter_H2,start-year,,1
+Smelter_Electric,Smelter_Electric,start-year,,1
 BOF,BOF,start-year,,1
-EAF,EAF,start-year,,1

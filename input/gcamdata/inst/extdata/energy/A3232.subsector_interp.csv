@@ -4,5 +4,10 @@
 # Column types: ccccccc,,,,,,
 # ----------,,,,,,
 supplysector,subsector,apply.to,from.year,to.year,to.value,interpolation.function
+EAF_coal_NG,EAF_coal_NG,share-weight,final-calibration-year,end-year,,linear
+EAF_charcoal_H2,EAF_charcoal_H2,share-weight,final-calibration-year,end-year,,linear
+EAF_charcoal_elec,EAF_charcoal_elec,share-weight,final-calibration-year,end-year,,linear
+Smelter_NG,Smelter_NG,share-weight,final-calibration-year,end-year,,linear
+Smelter_H2,Smelter_H2,share-weight,final-calibration-year,end-year,,linear
+Smelter_Electric,Smelter_Electric,share-weight,final-calibration-year,end-year,,linear
 BOF,BOF,share-weight,final-calibration-year,end-year,,linear
-EAF,EAF,share-weight,final-calibration-year,end-year,,linear

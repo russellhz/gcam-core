@@ -42,10 +42,7 @@ module_energy_L23232.steel <- function(command, ...) {
                       "L23232.GlobalTechSCurve_en",
                       "L23232.GlobalTechLifetime_en",
                       "L23232.GlobalTechProfitShutdown_en",
-                      "L23232.StubTechProd_steel",
-                      # "L23232.StubTechCoef_steel",
-                      # "L23232.StubTechCost_steel",
-                      "L23232.StubTechShrwt_steel")
+                      "L23232.StubTechProd_steel")
 
   if(command == driver.DECLARE_INPUTS) {
     return(MODULE_INPUTS)
@@ -215,16 +212,19 @@ module_energy_L23232.steel <- function(command, ...) {
 
     # 3a. Calibrated Production --------------------
     # derive iron production from iron and steel production
-    L23232.StubTechProd_steel <- L2323.StubTechProd_iron_steel %>%
-      left_join_error_no_match(A323.sector_mapping, by = c("supplysector" = "iron_and_steel")) %>%
-      select(-supplysector, -steel, -subsector, -stub.technology) %>%
-      rename(supplysector = iron) %>%
-      mutate(subsector = supplysector, stub.technology = supplysector)
-
-    L23232.StubTechShrwt_steel <- L23232.StubTechProd_steel %>%
-      filter(supplysector == "DRI_coal", year == MODEL_FINAL_BASE_YEAR, calOutputValue > 0) %>%
-      distinct(region, supplysector, subsector, stub.technology) %>%
-      repeat_add_columns(tibble(year = MODEL_FUTURE_YEARS, share.weight = 1))
+    L23232.StubTechProd_steel <- L23232.StubTech_steel %>%
+      left_join(A323.sector_mapping %>% distinct(steel, iron_and_steel), by = c("supplysector" = "steel")) %>%
+      left_join(L2323.StubTechProd_iron_steel %>%
+                  distinct(region, iron_and_steel = supplysector, year, calOutputValue)) %>%
+      group_by(region, supplysector, subsector, stub.technology, year) %>%
+      summarise(calOutputValue = sum(calOutputValue)) %>%
+      ungroup %>%
+      complete(nesting(region, supplysector, subsector, stub.technology), year = MODEL_BASE_YEARS) %>%
+      tidyr::replace_na(list(calOutputValue = 0)) %>%
+      filter(!is.na(year)) %>%
+      mutate(share.weight.year = year,
+             subs.share.weight = if_else(calOutputValue > 0 , 1, 0),
+             tech.share.weight = if_else(calOutputValue > 0 , 1, 0))
 
     # Produce outputs ===================================================
     L23232.Supplysector_steel %>%

@@ -29,6 +29,7 @@ module_energy_L23231.iron <- function(command, ...) {
                      FILE = "energy/A3231.globaltech_co2capture",
                      FILE = "energy/A3232.globaltech_coef",
                      FILE = "energy/A3232.globaltech_cost",
+                     FILE = "energy/A3233.globaltech_coef",
                      "L2323.StubTechProd_iron_steel",
                      "L2323.StubTechCoef_iron_steel",
                      "L2323.StubTechCost_iron_steel")
@@ -51,7 +52,8 @@ module_energy_L23231.iron <- function(command, ...) {
                       "L23231.StubTechProd_iron",
                       "L23231.StubTechCoef_iron",
                       "L23231.StubTechCost_iron",
-                      "L23231.StubTechShrwt_iron")
+                      "L23231.StubTechShrwt_iron",
+                      "L23231.StubTechCoef_steel")
 
   if(command == driver.DECLARE_INPUTS) {
     return(MODULE_INPUTS)
@@ -239,9 +241,22 @@ module_energy_L23231.iron <- function(command, ...) {
 
     # 3a. Calibrated Production --------------------
     # derive iron production from iron and steel production
+    prod_coef <- A3233.globaltech_coef %>%
+      gather_years() %>%
+      select(-subsector, -technology) %>%
+      complete(nesting(supplysector, minicam.energy.input), year = MODEL_YEARS) %>%
+      group_by(supplysector, minicam.energy.input) %>%
+      mutate(value = approx_fun(year, value),
+             minicam.energy.input = gsub("regional ", "", minicam.energy.input)) %>%
+      ungroup
+
     L23231.StubTechProd_iron <- L2323.StubTechProd_iron_steel %>%
       left_join_error_no_match(A323.sector_mapping, by = c("supplysector" = "iron_and_steel")) %>%
-      select(-supplysector, -steel, -subsector, -stub.technology) %>%
+      # keep iron techs only
+      semi_join(A3231.sector, by = c("iron" = "supplysector")) %>%
+      left_join_error_no_match(prod_coef, by = c("supplysector", "iron" = "minicam.energy.input", "year")) %>%
+      mutate(calOutputValue = calOutputValue * value) %>%
+      select(-supplysector, -steel, -subsector, -stub.technology, -value) %>%
       rename(supplysector = iron) %>%
       mutate(subsector = supplysector, stub.technology = supplysector)
 
@@ -251,35 +266,78 @@ module_energy_L23231.iron <- function(command, ...) {
       repeat_add_columns(tibble(year = MODEL_FUTURE_YEARS, share.weight = 1))
 
     # 3b. Calibrated coefficients --------------------
-    # Take iron_and_steel coefficients, rewrite to iron, subtract steel coefficients
-    L23231.StubTechCoef_iron <-  L2323.StubTechCoef_iron_steel %>%
+    # Take iron_and_steel coefficients, calculate energy use, rewrite to iron, subtract steel energy use
+    L23231.StubTechCoef_iron_steel <- L2323.StubTechCoef_iron_steel %>%
       # first rewrite to iron
       left_join_error_no_match(A323.sector_mapping, by = c("supplysector" = "iron_and_steel")) %>%
-      select(-supplysector, -subsector, -stub.technology) %>%
+      # keep iron techs only
+      semi_join(A3231.sector, by = c("iron" = "supplysector")) %>%
+      # calculate energy use
+      left_join_error_no_match(L2323.StubTechProd_iron_steel %>% rename(calSteel = calOutputValue),
+                               by = c("region", "supplysector", "subsector", "stub.technology", "year")) %>%
+      filter(calSteel > 0) %>%
+      mutate(energy.input = coefficient * calSteel) %>%
+      select(-supplysector, -subsector, -stub.technology, -share.weight.year, -subs.share.weight, -tech.share.weight) %>%
       rename(supplysector = iron) %>%
+      # add in new calOutput
+      left_join(L23231.StubTechProd_iron %>%  select(region, supplysector, year, calIron = calOutputValue) %>% filter(calIron > 0),
+                by = c("region", "year", "supplysector")) %>%
+      tidyr::replace_na(list(calIron = 0)) %>%
       mutate(subsector = supplysector, stub.technology = supplysector) %>%
-      # now subtract out global tech coefs for steel
+      # now subtract out steel energy consumption, assuming global tech coefs
       left_join(select(A3232.globaltech_coef, steel = supplysector, minicam.energy.input, steel_coef = `2010`),
                 by = c("steel", "minicam.energy.input")) %>%
       tidyr::replace_na(list(steel_coef = 0)) %>%
-      mutate(coefficient = round(coefficient - steel_coef, energy.DIGITS_COEFFICIENT)) %>%
-      select(-steel, -steel_coef)
+      mutate(steel_energy = steel_coef * calSteel,
+             # can't allow steel to consume more energy than total iron and steel calibration
+             steel_energy = pmin(steel_energy, energy.input),
+             iron_energy = energy.input - steel_energy,
+             iron_coef = iron_energy / calIron)
+
+    L23231.StubTechCoef_iron <- L23231.StubTechCoef_iron_steel %>%
+      select(region, supplysector, subsector, stub.technology, minicam.energy.input, year, coefficient = iron_coef, market.name)
 
     stopifnot(all(L23231.StubTechCoef_iron$coefficient >= 0))
 
+    L23231.StubTechCoef_steel <- L23231.StubTechCoef_iron_steel %>%
+      group_by(region, steel, minicam.energy.input, year, market.name) %>%
+      summarise(calSteel = sum(calSteel),
+                steel_energy = sum(steel_energy)) %>%
+      ungroup %>%
+      mutate(coefficient = steel_energy / calSteel,
+             supplysector = steel,
+             subsector = steel,
+             stub.technology = steel) %>%
+      select(region, supplysector, subsector, stub.technology, minicam.energy.input, year, coefficient, market.name) %>%
+      semi_join(A3232.globaltech_coef %>%
+                      distinct(supplysector, subsector, technology, minicam.energy.input),
+                by = c("supplysector", "subsector", "minicam.energy.input"))
+
+    stopifnot(all(L23231.StubTechCoef_steel$coefficient >= 0))
+
     # 3c. Calibrated costs --------------------
-    # Take calibrated iron_and_steel costs, rewrite to iron, subtract steel coefficients
+    # Take relative calibrated iron_and_steel costs to apply to iron costs
+    # Take relative cost from a country with no production
+    RELATIVE_COST_REGION <- "Africa_Eastern"
     L23231.StubTechCost_iron <- L2323.StubTechCost_iron_steel %>%
       # first rewrite to iron
       left_join_error_no_match(A323.sector_mapping, by = c("supplysector" = "iron_and_steel")) %>%
-      select(-supplysector, -subsector, -stub.technology) %>%
+      # keep iron techs only
+      semi_join(A3231.sector, by = c("iron" = "supplysector")) %>%
+      select(-supplysector, -subsector, -stub.technology, -steel) %>%
       rename(supplysector = iron) %>%
       mutate(subsector = supplysector, stub.technology = supplysector) %>%
-      # now subtract out global tech costs for steel
-      left_join(select(A3232.globaltech_cost, steel = supplysector, minicam.non.energy.input, steel_cost = `2020`),
-                by = c("steel", "minicam.non.energy.input")) %>%
-      mutate(input.cost = if_else(is.na(steel_cost), input.cost, round(input.cost - steel_cost, energy.DIGITS_COST))) %>%
-      select(-steel, -steel_cost)
+      group_by(year, minicam.non.energy.input, supplysector) %>%
+      mutate(input.cost.ratio = input.cost / input.cost [region == RELATIVE_COST_REGION]) %>%
+      ungroup %>%
+      select(-input.cost) %>%
+      # now multiply by out global tech costs for iron
+      left_join_error_no_match(L23231.GlobalTechCost_iron,
+                by = c("supplysector" = "sector.name", "subsector" = "subsector.name",
+                       "stub.technology" = "technology", "year",
+                       "minicam.non.energy.input")) %>%
+      mutate(input.cost = round(input.cost * input.cost.ratio, energy.DIGITS_COST)) %>%
+      select(-input.cost.ratio)
 
     stopifnot(all(L23231.StubTechCost_iron$input.cost >= 0))
 
