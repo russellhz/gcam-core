@@ -146,7 +146,6 @@ module_energy_iron_steel_new_xml <- function(command, ...) {
       add_xml_data(L23231.StubTechCost_iron, "StubTechCost") %>%
       add_xml_data(L23231.StubTechProd_iron, "StubTechProd") %>%
       add_xml_data(L23231.StubTechCoef_iron, "StubTechCoef") %>%
-      add_xml_data(L23231.StubTechCoef_steel, "StubTechCoef") %>%
       add_xml_data(L23231.StubTechShrwt_iron, "StubTechShrwt") %>%
 
       add_logit_tables_xml(L23232.Supplysector_steel, "Supplysector") %>%
@@ -163,6 +162,8 @@ module_energy_iron_steel_new_xml <- function(command, ...) {
       add_xml_data(L23232.GlobalTechSCurve_en, "GlobalTechSCurve") %>%
       add_xml_data(L23232.GlobalTechProfitShutdown_en, "GlobalTechProfitShutdown") %>%
       add_xml_data(L23232.StubTechProd_steel, "StubTechProd") %>%
+      add_xml_data(L23231.StubTechCoef_steel, "StubTechCoef") %>%
+
 
       add_logit_tables_xml(L2323.Supplysector_iron_steel, "Supplysector") %>%
       add_xml_data(L2323.FinalEnergyKeyword_iron_steel, "FinalEnergyKeyword") %>%

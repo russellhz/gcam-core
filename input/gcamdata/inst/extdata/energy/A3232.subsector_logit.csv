@@ -6,8 +6,8 @@
 supplysector,subsector,logit.exponent,logit.type
 EAF_coal_NG,EAF_coal_NG,-6,
 EAF_charcoal_H2,EAF_charcoal_H2,-6,
-EAF_charcoal_elec,EAF_charcoal_elec,,
-Smelter_NG,Smelter_NG,,
-Smelter_H2,Smelter_H2,,
-Smelter_Electric,Smelter_Electric,,
-BOF,BOF,,
+EAF_charcoal_elec,EAF_charcoal_elec,-6,
+Smelter_NG,Smelter_NG,-6,
+Smelter_H2,Smelter_H2,-6,
+Smelter_Electric,Smelter_Electric,-6,
+BOF,BOF,-6,

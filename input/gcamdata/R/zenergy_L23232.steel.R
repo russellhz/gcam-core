@@ -223,7 +223,7 @@ module_energy_L23232.steel <- function(command, ...) {
       tidyr::replace_na(list(calOutputValue = 0)) %>%
       filter(!is.na(year)) %>%
       mutate(share.weight.year = year,
-             subs.share.weight = if_else(calOutputValue > 0 , 1, 0),
+             subs.share.weight = if_else(calOutputValue > 0 , 1, 1),
              tech.share.weight = if_else(calOutputValue > 0 , 1, 0))
 
     # Produce outputs ===================================================
@@ -355,8 +355,7 @@ module_energy_L23232.steel <- function(command, ...) {
                 L23232.StubTech_steel, L23232.GlobalTechShrwt_steel, L23232.GlobalTechCoef_steel,
                 L23232.GlobalTechTrackCapital_steel, L23232.GlobalTechCost_steel, L23232.GlobalTechShutdown_en,
                 L23232.GlobalTechSCurve_en, L23232.GlobalTechLifetime_en, L23232.GlobalTechProfitShutdown_en,
-                L23232.StubTechProd_steel, L23232.StubTechShrwt_steel
-    )
+                L23232.StubTechProd_steel)
   } else {
     stop("Unknown command")
   }

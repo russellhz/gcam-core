@@ -258,7 +258,12 @@ module_energy_L23231.iron <- function(command, ...) {
       mutate(calOutputValue = calOutputValue * value) %>%
       select(-supplysector, -steel, -subsector, -stub.technology, -value) %>%
       rename(supplysector = iron) %>%
-      mutate(subsector = supplysector, stub.technology = supplysector)
+      mutate(subsector = supplysector, stub.technology = supplysector) %>%
+      group_by(region, supplysector, subsector, stub.technology, year, share.weight.year) %>%
+      summarise(calOutputValue = sum(calOutputValue)) %>%
+      ungroup %>%
+      mutate(subs.share.weight = if_else(calOutputValue > 0, 1, 1),
+             tech.share.weight = subs.share.weight)
 
     L23231.StubTechShrwt_iron <- L23231.StubTechProd_iron %>%
       filter(supplysector == "DRI_coal", year == MODEL_FINAL_BASE_YEAR, calOutputValue > 0) %>%
