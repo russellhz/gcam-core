@@ -85,3 +85,4 @@ exe/configuration*.xml
 input/*.xml
 *outputs*
 /analysis/*
+*.xlsx
