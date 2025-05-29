@@ -45,7 +45,8 @@ module_energy_L2381.iron_steel_trade_bilateral <- function(command, ...) {
                       "L2381.TechCoef_reg",
                       "L2381.Production_reg_imp",
                       "L2381.Production_reg_dom",
-                      "L2381.TechInterp_imp")
+                      "L2381.TechInterp_imp",
+                      "L2381.TechShwt_imp")
   if(command == driver.DECLARE_INPUTS) {
     return(MODULE_INPUTS)
   } else if(command == driver.DECLARE_OUTPUTS) {
@@ -60,7 +61,9 @@ module_energy_L2381.iron_steel_trade_bilateral <- function(command, ...) {
       NetExp_bm3 <- value <- metric <- flow <- GrossExp <- NULL # silence package check notes
 
     # Load required inputs  ---------------------
-    DRI_EXPORT_REGIONS <- c("Australia_NZ", "Brazil", "Canada", "India", "South Africa")
+    DRI_EXPORT_REGIONS <- c("Australia_NZ", "Brazil", "Canada", "India", "South Africa",
+                            "China", "USA", "Africa_Western",
+                            "Mexico", "South America_Southern")
 
     get_data_list(all_data, MODULE_INPUTS)
     GCAM_region_names_EU <- GCAM_region_names %>%
@@ -226,7 +229,7 @@ module_energy_L2381.iron_steel_trade_bilateral <- function(command, ...) {
       filter(grepl("domestic", subsector)) %>%
       select(region, supplysector, subsector, technology, minicam.energy.input, year) %>%
       left_join(L2381.TechShrwt_regional, by = c("region", "year", "minicam.energy.input" = "technology")) %>%
-      mutate(share.weight = if_else(is.na(share.weight) & minicam.energy.input == "DRI_H2" & region %in% c("EU-12", "EU-15"),
+      mutate(share.weight = if_else(is.na(share.weight) & minicam.energy.input == "DRI_H2",
                                     1, share.weight)) %>%
       replace_na(list(share.weight = 0))
       bind_rows(A_irnstl_RegionalTechnology_bilateral_R_Y %>%
@@ -276,11 +279,19 @@ module_energy_L2381.iron_steel_trade_bilateral <- function(command, ...) {
       select(LEVEL2_DATA_NAMES[["Production"]])
 
     L2381.TechInterp_imp <- L2381.Production_reg_imp %>%
+      filter(!grepl("DRI_H2", technology)) %>%
       distinct(region, supplysector, subsector, technology  ) %>%
       mutate(apply.to = "share-weight",
-             from.year = if_else(grepl("DRI", supplysector), min(MODEL_FUTURE_YEARS), MODEL_FINAL_BASE_YEAR),
+             from.year = MODEL_FINAL_BASE_YEAR,
              to.year = max(MODEL_FUTURE_YEARS),
-             interpolation.function = "fixed")
+             interpolation.function = if_else(grepl("DRI", technology) , "linear", "fixed"))
+
+    L2381.TechShwt_imp <- L2381.Production_reg_imp %>%
+      select(region, supplysector, subsector, technology, year) %>%
+      filter(grepl("DRI_H2", technology), year == 2015) %>%
+      select(-year) %>%
+      repeat_add_columns(tibble(year = MODEL_FUTURE_YEARS)) %>%
+      mutate(share.weight = 1)
 
     # 2c. L2381.Production_reg_dom: Output (flow) of domestic ---------------------
     #### DOMESTIC TECHNOLOGY OUTPUT = iron and steel PRODUCTION - GROSS EXPORTS

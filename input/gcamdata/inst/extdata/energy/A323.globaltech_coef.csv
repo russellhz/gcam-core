@@ -52,7 +52,7 @@ DRI_SAF_BOF_H2,DRI_SAF_BOF_H2,DRI_SAF_BOF_H2,elect_td_ind,,0.002606229,0.0026062
 DRI_SAF_BOF_H2,DRI_SAF_BOF_H2,DRI_SAF_BOF_H2,H2 industrial,,0.01011,0.01011,0.01011
 DRI_SAF_BOF_H2,DRI_SAF_BOF_H2,DRI_SAF_BOF_H2,delivered biomass industry,1,0.001549519,0.001549519,0.001549519
 DRI_SAF_BOF_BECCS,DRI_SAF_BOF_BECCS,DRI_SAF_BOF_BECCS,elect_td_ind,,0.006054223,0.006054223,0.006054223
-DRI_SAF_BOF_BECCS,DRI_SAF_BOF_BECCS,DRI_SAF_BOF_BECCS,delivered biomass industry,0.03770,0.01623,0.01623,0.01623
+DRI_SAF_BOF_BECCS,DRI_SAF_BOF_BECCS,DRI_SAF_BOF_BECCS,delivered biomass industry,0.0377,0.01623,0.01623,0.01623
 AEL_EAF,AEL_EAF,AEL_EAF,elect_td_ind,,0.01677,0.01677,0.01677
 AEL_EAF,AEL_EAF,AEL_EAF,delivered biomass industry,1,4.07E-04,4.07E-04,4.07E-04
 MOE,MOE,MOE,elect_td_ind,,0.01828,0.01828,0.01828
@@ -71,3 +71,7 @@ EAF_scrap_fossil_elec_finish,EAF_scrap_fossil_elec_finish,EAF_scrap_fossil_elec_
 EAF_scrap_bio_elec_finish,EAF_scrap_bio_elec_finish,EAF_scrap_bio_elec_finish,elect_td_ind,,0.00493,0.00493,0.00493
 EAF_scrap_bio_elec_finish,EAF_scrap_bio_elec_finish,EAF_scrap_bio_elec_finish,delivered biomass industry,1,4.10E-04,4.10E-04,4.10E-04
 EAF_scrap_bio_elec_finish,EAF_scrap_bio_elec_finish,EAF_scrap_bio_elec_finish,scrap,,1.1,1.1,1.1
+SR_BOF,SR_BOF,SR_BOF,scrap,,0.21,0.21,0.21
+SR_BOF_CCS,SR_BOF_CCS,SR_BOF_CCS,scrap,,0.21,0.21,0.21
+AEL_EAF,AEL_EAF,AEL_EAF,scrap,,0.21,0.21,0.21
+MOE,MOE,MOE,scrap,,0.21,0.21,0.21

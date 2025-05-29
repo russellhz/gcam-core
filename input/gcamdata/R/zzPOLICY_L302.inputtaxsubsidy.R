@@ -14,10 +14,11 @@
 #' @importFrom dplyr bind_rows distinct filter if_else left_join mutate select
 #' @author RLH April 2023
 module_policy_302.inputtaxsubsidy <- function(command, ...) {
+  MODULE_INPUTS <- c(FILE = "policy/A_InputTaxesSubsidies",
+                     FILE = "policy/A_InputCapitalFCR",
+                     FILE = "policy/mappings/market_region_mappings")
   if(command == driver.DECLARE_INPUTS) {
-    return(c(FILE = "policy/A_InputTaxesSubsidies",
-             FILE = "policy/A_InputCapitalFCR"
-    ))
+    return(MODULE_INPUTS)
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(c("L302.InputTax",
              "L302.InputTranTax",
@@ -26,12 +27,15 @@ module_policy_302.inputtaxsubsidy <- function(command, ...) {
 
     all_data <- list(...)[[1]]
 
+    get_data_list(all_data, MODULE_INPUTS)
     # Load required inputs
-    A_InputTaxesSubsidies <- get_data(all_data, "policy/A_InputTaxesSubsidies") %>%
-      mutate(xml = if_else(grepl(".xml", xml), xml, paste0(xml, ".xml")))
+    A_InputTaxesSubsidies <- A_InputTaxesSubsidies %>%
+      mutate(xml = if_else(grepl(".xml", xml), xml, paste0(xml, ".xml")))  %>%
+      expand_by_region(market_region_mappings)
 
-    A_InputCapitalFCR <- get_data(all_data, "policy/A_InputCapitalFCR") %>%
-      mutate(xml = if_else(grepl(".xml", xml), xml, paste0(xml, ".xml")))
+    A_InputCapitalFCR <- A_InputCapitalFCR %>%
+      mutate(xml = if_else(grepl(".xml", xml), xml, paste0(xml, ".xml")))  %>%
+      expand_by_region(market_region_mappings)
 
     # Convert to long
     L302.InputTax <- A_InputTaxesSubsidies %>%

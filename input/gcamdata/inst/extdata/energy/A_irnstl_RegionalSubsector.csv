@@ -8,5 +8,7 @@
 supplysector,subsector,logit.exponent,year.fillout,share.weight,apply.to,from.year,to.year,to.value,interpolation.function,logit.type
 regional iron and steel,domestic iron and steel,-6,start-year,1,share-weight,final-calibration-year,2100,1,fixed,
 regional iron and steel,imported iron and steel,-6,start-year,1,share-weight,final-calibration-year,2100,1,fixed,
-regional DRI_H2,domestic DRI_H2,-6,start-year,1,share-weight,2020,2100,1,fixed,
-regional DRI_H2,imported DRI_H2,-6,start-year,1,share-weight,2020,2100,1,fixed,
+regional DRI_H2,domestic DRI_H2,-6,start-year,0,share-weight,2020,2100,1,fixed,
+regional DRI_H2,imported DRI_H2,-6,start-year,0,share-weight,2020,2100,1,fixed,
+regional DRI_H2,domestic DRI_H2,-6,2020,1,share-weight,2020,2100,1,fixed,
+regional DRI_H2,imported DRI_H2,-6,2020,1,share-weight,2020,2100,1,fixed,

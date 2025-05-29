@@ -10,21 +10,22 @@
 #' a vector of output names, or (if \code{command} is "MAKE") all
 #' the generated outputs: \code{iron_steel_trade_bilateral.xml}.
 module_energy_iron_steel_trade_bilateral_xml <- function(command, ...) {
+  MODULE_INPUTS <- c("L2381.Supplysector_tra",
+                     "L2381.SectorUseTrialMarket_tra",
+                     "L2381.SubsectorAll_tra",
+                     "L2381.TechShrwt_tra",
+                     "L2381.TechCost_tra",
+                     "L2381.TechCoef_tra",
+                     "L2381.Production_tra",
+                     "L2381.Supplysector_reg",
+                     "L2381.SubsectorAll_reg",
+                     "L2381.TechShrwt_reg",
+                     "L2381.TechCoef_reg",
+                     "L2381.Production_reg_imp",
+                     "L2381.Production_reg_dom",
+                     "L2381.TechShwt_imp")
   if(command == driver.DECLARE_INPUTS) {
-    return(c("L2381.Supplysector_tra",
-             "L2381.SectorUseTrialMarket_tra",
-             "L2381.SubsectorAll_tra",
-             "L2381.TechShrwt_tra",
-             "L2381.TechCost_tra",
-             "L2381.TechCoef_tra",
-             "L2381.Production_tra",
-             "L2381.Supplysector_reg",
-             "L2381.SubsectorAll_reg",
-             "L2381.TechShrwt_reg",
-             "L2381.TechCoef_reg",
-             "L2381.Production_reg_imp",
-             "L2381.Production_reg_dom",
-             "L2381.TechInterp_imp"))
+    return(MODULE_INPUTS)
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(c(XML = "iron_steel_trade_bilateral.xml"))
   } else if(command == driver.MAKE) {
@@ -32,20 +33,7 @@ module_energy_iron_steel_trade_bilateral_xml <- function(command, ...) {
     all_data <- list(...)[[1]]
 
     # Load required inputs
-    L2381.Supplysector_tra <- get_data(all_data, "L2381.Supplysector_tra")
-    L2381.SectorUseTrialMarket_tra <- get_data(all_data, "L2381.SectorUseTrialMarket_tra")
-    L2381.SubsectorAll_tra <- get_data(all_data, "L2381.SubsectorAll_tra")
-    L2381.TechShrwt_tra <- get_data(all_data, "L2381.TechShrwt_tra")
-    L2381.TechCost_tra <- get_data(all_data, "L2381.TechCost_tra")
-    L2381.TechCoef_tra <- get_data(all_data, "L2381.TechCoef_tra")
-    L2381.Production_tra <- get_data(all_data, "L2381.Production_tra")
-    L2381.Supplysector_reg <- get_data(all_data, "L2381.Supplysector_reg")
-    L2381.SubsectorAll_reg <- get_data(all_data, "L2381.SubsectorAll_reg")
-    L2381.TechShrwt_reg <- get_data(all_data, "L2381.TechShrwt_reg")
-    L2381.TechCoef_reg <- get_data(all_data, "L2381.TechCoef_reg")
-    L2381.Production_reg_imp <- get_data(all_data, "L2381.Production_reg_imp")
-    L2381.Production_reg_dom <- get_data(all_data, "L2381.Production_reg_dom")
-    L2381.TechInterp_imp <- get_data(all_data, "L2381.TechInterp_imp")
+    get_data_list(all_data, MODULE_INPUTS)
 
 
     # ===================================================
@@ -66,6 +54,7 @@ module_energy_iron_steel_trade_bilateral_xml <- function(command, ...) {
       add_xml_data(L2381.Production_reg_imp, "Production") %>%
       add_xml_data(L2381.Production_reg_dom, "Production") %>%
       add_xml_data(L2381.TechInterp_imp, "TechInterp") %>%
+      add_xml_data(L2381.TechShwt_imp, "TechShrwt") %>%
 
 
       add_precursors("L2381.Supplysector_tra",
