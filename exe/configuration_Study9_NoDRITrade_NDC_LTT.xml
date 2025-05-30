@@ -266,7 +266,7 @@
 		<Value name="policy-target-file">../input/CP_NDC_LTT/constraint_bio_col.xml</Value>
 
 <!-----------------------------------------STEEL_POLICIES----------------------------------------------------->
-		<Value name="ETS">../input/Study9/policy_ccap_eu_NoCBAM_Study9.xml</Value>
+		<Value name="ETS">../input/Study9/policy_ccap_eu_NoCBAM_Study9_DRI_Trade.xml</Value>
 		<Value name="scrap_limit">../input/gcamdata/xml_policy/policy_scrap_limit_global.xml</Value>
 
 
